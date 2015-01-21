@@ -183,8 +183,6 @@ geo::ShapePtr getHeightMapShape(const tue::filesystem::Path& path, tue::Configur
                         return shape;
                     }
 
-                    std::cout << "Number of triangles: " << result.size() << std::endl << std::endl;
-
                     for(std::list<TPPLPoly>::iterator it = result.begin(); it != result.end(); ++it)
                     {
                         TPPLPoly& cp = *it;

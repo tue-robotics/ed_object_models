@@ -82,9 +82,9 @@ NewEntityPtr create(const TYPE& type, tue::Configuration cfg, const UUID& id)
                         std::cout << model_cfg << std::endl;
                     }
 
-                    double X = 0, Y  = 0, Z = 0;
-                    if (e_data.value("X", X, tue::config::OPTIONAL) ||
-                        e_data.value("Y", Y, tue::config::OPTIONAL) ||
+                    double X = 0, Y = 0, Z = 0;
+                    if (e_data.value("X", X, tue::config::OPTIONAL) |
+                        e_data.value("Y", Y, tue::config::OPTIONAL) |
                         e_data.value("Z", Z, tue::config::OPTIONAL))
                     {
                         e->pose.setRPY(X,Y,Z);

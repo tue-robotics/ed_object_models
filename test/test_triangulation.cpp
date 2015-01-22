@@ -58,6 +58,11 @@ void findContours(const cv::Mat& image, const geo::Vec2i& p, std::vector<geo::Ve
         if ((d + 2) % 4 == d_current)
         {
             // 180 degree turn
+
+            if (x2 == p.x && y2 == p.y) // Edge case: if we returned to the start point and
+                                        // this is a 180 degree angle, return without adding it
+                return;
+
             points.push_back(p_current);
             d_main = d;
             line_piece_min = 1e9;
@@ -68,9 +73,9 @@ void findContours(const cv::Mat& image, const geo::Vec2i& p, std::vector<geo::Ve
         {
             // Not moving in main direction (side step)
 
-            if (n_uninterrupted > 1)
+            if (d != d_main)
             {
-                // If side step is bigger than 1, it means we have taken a turn.
+                // We are not moving back in the main direction
                 // Add the corner to the list and make this our main direction
 
                 points.push_back(p_corner);
@@ -113,19 +118,11 @@ void findContours(const cv::Mat& image, const geo::Vec2i& p, std::vector<geo::Ve
 
         ++n_uninterrupted;
 
+        if (points.size() > 1 && x2 == p.x && y2 == p.y)
+            return;
+
         x2 = x2 + dx[d];
         y2 = y2 + dy[d];
-
-        if (x2 == p.x && y2 == p.y)
-        {
-            if (n_uninterrupted >= 3)
-            {
-                if (p_corner.x != points.back().x || p_corner.y != points.back().y)
-                    points.push_back(p_corner);
-            }
-
-            return;
-        }
 
         d_current = d;
     }

@@ -25,6 +25,7 @@ void findContours(const cv::Mat& image, const geo::Vec2i& p, std::vector<geo::Ve
     points.push_back(p);
 
     int n_uninterrupted = 0;
+    int n_last_uninterrupted = 0;
     std::vector<geo::Vec2i> segment;
     geo::Vec2i p_uninterrupted = p;
 
@@ -51,7 +52,7 @@ void findContours(const cv::Mat& image, const geo::Vec2i& p, std::vector<geo::Ve
 
         if (d_current != d)
         {
-            if (n_uninterrupted >= 3)
+            if (n_uninterrupted >= 10 || (n_uninterrupted >= 2 && n_last_uninterrupted >= 2))
             {
                 if (p_uninterrupted.x != points.back().x || p_uninterrupted.y != points.back().y)
                     points.push_back(p_uninterrupted);
@@ -89,12 +90,11 @@ void findContours(const cv::Mat& image, const geo::Vec2i& p, std::vector<geo::Ve
             }
 
             p_uninterrupted = p_current;
+            n_last_uninterrupted = n_uninterrupted;
             n_uninterrupted = 0;
         }
-        else
-        {
-            ++n_uninterrupted;
-        }
+
+        ++n_uninterrupted;
 
         segment.push_back(p_current);
 
@@ -159,72 +159,77 @@ int main(int argc, char **argv)
 
                     std::cout << std::endl << "Total polygon size: " << points.size() << std::endl;
 
-                    for(unsigned int i = 0; i < num_points; ++i)
+                    if (num_points > 2)
                     {
-                        int k = (i + 1) % num_points;
-                        cv::line(viz, cv::Point(points[i].x, points[i].y),
-                                 cv::Point(points[k].x, points[k].y), cv::Scalar(0, 0, 255));
-                    }
 
-                    TPPLPoly poly;
-                    poly.Init(num_points);
-
-                    geo::Mesh mesh;
-
-                    double min_z = 0;
-                    double max_z = 0;
-
-                    for(unsigned int i = 0; i < num_points; ++i)
-                    {
-                        poly[i].x = points[i].x;
-                        poly[i].y = points[i].y;
-
-                        // Convert to world coordinates
-                        double wx = points[i].x * 0.025;
-                        double wy = points[i].y * 0.025;
-
-                        vertex_index_map.at<int>(points[i].y, points[i].x) = i;
-
-                        mesh.addPoint(geo::Vector3(wx, wy, min_z));
-                        mesh.addPoint(geo::Vector3(wx, wy, max_z));
-                    }
-
-                    // Calculate side triangles
-                    for(int i = 0; i < num_points; ++i)
-                    {
-                        int j = (i + 1) % num_points;
-                        mesh.addTriangle(i * 2, j * 2, i * 2 + 1);
-                        mesh.addTriangle(i * 2 + 1, j * 2, j * 2 + 1);
-                    }
-
-                    TPPLPartition pp;
-                    std::list<TPPLPoly> testpolys, result;
-                    testpolys.push_back(poly);
-
-                    if (!pp.Triangulate_EC(&poly, &result))
-                    {
-                        std::cout << "Error" << std::endl;
-                        return 1;
-                    }
-
-                    std::cout << "Number of triangles: " << result.size() << std::endl << std::endl;
-
-                    for(std::list<TPPLPoly>::iterator it = result.begin(); it != result.end(); ++it)
-                    {
-                        TPPLPoly& cp = *it;
-
-                        int i1 = vertex_index_map.at<int>(cp[0].y, cp[0].x) + 1;
-                        int i2 = vertex_index_map.at<int>(cp[1].y, cp[1].x) + 1;
-                        int i3 = vertex_index_map.at<int>(cp[2].y, cp[2].x) + 1;
-
-                        mesh.addTriangle(i1, i2, i3);
-
-                        // visualize
-                        for(unsigned j = 0; j < cp.GetNumPoints(); ++j)
+                        for(unsigned int i = 0; i < num_points; ++i)
                         {
-                            int k = (j + 1) % cp.GetNumPoints();
-                            cv::line(viz, cv::Point(cp[j].x, cp[j].y), cv::Point(cp[k].x, cp[k].y), cv::Scalar(0, 0, 255));
+                            int k = (i + 1) % num_points;
+                            cv::line(viz, cv::Point(points[i].x, points[i].y),
+                                     cv::Point(points[k].x, points[k].y), cv::Scalar(0, 0, 255));
                         }
+
+                        TPPLPoly poly;
+                        poly.Init(num_points);
+
+                        geo::Mesh mesh;
+
+                        double min_z = 0;
+                        double max_z = 0;
+
+                        for(unsigned int i = 0; i < num_points; ++i)
+                        {
+                            poly[i].x = points[i].x;
+                            poly[i].y = points[i].y;
+
+                            // Convert to world coordinates
+                            double wx = points[i].x * 0.025;
+                            double wy = points[i].y * 0.025;
+
+                            vertex_index_map.at<int>(points[i].y, points[i].x) = i;
+
+                            mesh.addPoint(geo::Vector3(wx, wy, min_z));
+                            mesh.addPoint(geo::Vector3(wx, wy, max_z));
+                        }
+
+                        // Calculate side triangles
+                        for(int i = 0; i < num_points; ++i)
+                        {
+                            int j = (i + 1) % num_points;
+                            mesh.addTriangle(i * 2, j * 2, i * 2 + 1);
+                            mesh.addTriangle(i * 2 + 1, j * 2, j * 2 + 1);
+                        }
+
+                        TPPLPartition pp;
+                        std::list<TPPLPoly> testpolys, result;
+                        testpolys.push_back(poly);
+
+                        if (!pp.Triangulate_EC(&poly, &result))
+                        {
+                            std::cout << "Error" << std::endl;
+                            return 1;
+                        }
+
+                        std::cout << "Number of triangles: " << result.size() << std::endl << std::endl;
+
+                        for(std::list<TPPLPoly>::iterator it = result.begin(); it != result.end(); ++it)
+                        {
+                            TPPLPoly& cp = *it;
+
+                            int i1 = vertex_index_map.at<int>(cp[0].y, cp[0].x) + 1;
+                            int i2 = vertex_index_map.at<int>(cp[1].y, cp[1].x) + 1;
+                            int i3 = vertex_index_map.at<int>(cp[2].y, cp[2].x) + 1;
+
+                            mesh.addTriangle(i1, i2, i3);
+
+                            // visualize
+                            for(unsigned j = 0; j < cp.GetNumPoints(); ++j)
+                            {
+                                int k = (j + 1) % cp.GetNumPoints();
+                                cv::line(viz, cv::Point(cp[j].x, cp[j].y), cv::Point(cp[k].x, cp[k].y), cv::Scalar(0, 0, 255));
+                            }
+                        }
+
                     }
 
                     cv::floodFill(image, cv::Point(x, y), 255);

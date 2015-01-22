@@ -18,23 +18,28 @@ void findContours(const cv::Mat& image, const geo::Vec2i& p, std::vector<geo::Ve
 
     unsigned char v = image.at<unsigned char>(p.y, p.x);
 
-    int d_current = 0;
+    int d_current = 0; // Current direction
     int x2 = p.x;
     int y2 = p.y;
 
+    int line_piece_min = 1e9; // minimum line piece length of current line
+    int line_piece_max = 0; // maximum line piece length of current line
+
+    int d_main = d_current; // The main direction in which we're heading. If we follow a line
+                            // that gradually changes to the side (1-cell side steps), this direction
+                            // denotes the principle axis of the line
+
     points.push_back(p);
 
-    int n_uninterrupted = 0;
-    int n_last_uninterrupted = 0;
-    std::vector<geo::Vec2i> segment;
-    geo::Vec2i p_uninterrupted = p;
+    int n_uninterrupted = 1;
+    geo::Vec2i p_corner = p;
 
     while (true)
     {
         bool found = false;
         int d = (d_current + 3) % 4; // check going left first
 
-        for(int i = 0; i < 4; ++i)
+        for(int i = -1; i < 3; ++i)
         {
             if (image.at<unsigned char>(y2 + dy[d], x2 + dx[d]) == v)
             {
@@ -46,57 +51,67 @@ void findContours(const cv::Mat& image, const geo::Vec2i& p, std::vector<geo::Ve
         }
 
         if (!found)
-            return;
+            return;        
 
         geo::Vec2i p_current(x2, y2);
 
+        if ((d + 2) % 4 == d_current)
+        {
+            // 180 degree turn
+            points.push_back(p_current);
+            d_main = d;
+            line_piece_min = 1e9;
+            line_piece_max = 0;
+
+        }
+        else if (d_current != d_main)
+        {
+            // Not moving in main direction (side step)
+
+            if (n_uninterrupted > 1)
+            {
+                // If side step is bigger than 1, it means we have taken a turn.
+                // Add the corner to the list and make this our main direction
+
+                points.push_back(p_corner);
+                d_main = d_current;
+                line_piece_min = 1e9;
+                line_piece_max = 0;
+            }
+        }
+        else
+        {
+            // Moving in main direction (no side step)
+
+            if (d_current != d)
+            {
+                // Turning 90 degrees
+
+                // Check if the length of the last line piece is OK w.r.t. the other pieces in this line. If it differs to much,
+                // (i.e., the contour has taken a different angle), add the last corner to the list. This way, we introduce a
+                // bend in the contour
+                if (line_piece_max > 0 && (n_uninterrupted < line_piece_max - 2 || n_uninterrupted > line_piece_min + 2))
+                {
+                    // Line is broken, add the corner as bend
+                    points.push_back(p_corner);
+
+                    line_piece_min = 1e9;
+                    line_piece_max = 0;
+                }
+
+                // Update the line piece lenth boundaries with the current found piece
+                line_piece_min = std::min(line_piece_min, n_uninterrupted);
+                line_piece_max = std::max(line_piece_max, n_uninterrupted);
+            }
+        }
+
         if (d_current != d)
         {
-            if (n_uninterrupted >= 10 || (n_uninterrupted >= 2 && n_last_uninterrupted >= 2))
-            {
-                if (p_uninterrupted.x != points.back().x || p_uninterrupted.y != points.back().y)
-                    points.push_back(p_uninterrupted);
-
-                points.push_back(geo::Vec2i(x2, y2));
-                segment.clear();
-            }
-            else
-            {
-                const geo::Vec2i& p_anchor = points.back();
-
-                geo::Vec2i diff = p_current - p_anchor;
-
-                double max_error = 0;
-                for(unsigned int i = 0; i < segment.size(); ++i)
-                {
-                    const geo::Vec2i& q = segment[i];
-
-                    geo::Vec2i a = p_current - q;
-
-                    double error;
-                    if (std::abs(diff.x) > std::abs(diff.y))
-                        error = std::abs((double)a.y - ((double)a.x / diff.x) * diff.y);
-                    else
-                        error = std::abs((double)a.x - ((double)a.y / diff.y) * diff.x);
-
-                    max_error = std::max(error, max_error);
-                }
-
-                if (max_error > 1)
-                {
-                    points.push_back(p_current);
-                    segment.clear();
-                }
-            }
-
-            p_uninterrupted = p_current;
-            n_last_uninterrupted = n_uninterrupted;
+            p_corner = p_current;
             n_uninterrupted = 0;
         }
 
         ++n_uninterrupted;
-
-        segment.push_back(p_current);
 
         x2 = x2 + dx[d];
         y2 = y2 + dy[d];
@@ -105,8 +120,8 @@ void findContours(const cv::Mat& image, const geo::Vec2i& p, std::vector<geo::Ve
         {
             if (n_uninterrupted >= 3)
             {
-                if (p_uninterrupted.x != points.back().x || p_uninterrupted.y != points.back().y)
-                    points.push_back(p_uninterrupted);
+                if (p_corner.x != points.back().x || p_corner.y != points.back().y)
+                    points.push_back(p_corner);
             }
 
             return;
@@ -207,26 +222,27 @@ int main(int argc, char **argv)
                         if (!pp.Triangulate_EC(&poly, &result))
                         {
                             std::cout << "Error" << std::endl;
-                            return 1;
                         }
-
-                        std::cout << "Number of triangles: " << result.size() << std::endl << std::endl;
-
-                        for(std::list<TPPLPoly>::iterator it = result.begin(); it != result.end(); ++it)
+                        else
                         {
-                            TPPLPoly& cp = *it;
+                            std::cout << "Number of triangles: " << result.size() << std::endl << std::endl;
 
-                            int i1 = vertex_index_map.at<int>(cp[0].y, cp[0].x) + 1;
-                            int i2 = vertex_index_map.at<int>(cp[1].y, cp[1].x) + 1;
-                            int i3 = vertex_index_map.at<int>(cp[2].y, cp[2].x) + 1;
-
-                            mesh.addTriangle(i1, i2, i3);
-
-                            // visualize
-                            for(unsigned j = 0; j < cp.GetNumPoints(); ++j)
+                            for(std::list<TPPLPoly>::iterator it = result.begin(); it != result.end(); ++it)
                             {
-                                int k = (j + 1) % cp.GetNumPoints();
-                                cv::line(viz, cv::Point(cp[j].x, cp[j].y), cv::Point(cp[k].x, cp[k].y), cv::Scalar(0, 0, 255));
+                                TPPLPoly& cp = *it;
+
+                                int i1 = vertex_index_map.at<int>(cp[0].y, cp[0].x) + 1;
+                                int i2 = vertex_index_map.at<int>(cp[1].y, cp[1].x) + 1;
+                                int i3 = vertex_index_map.at<int>(cp[2].y, cp[2].x) + 1;
+
+                                mesh.addTriangle(i1, i2, i3);
+
+                                // visualize
+                                for(unsigned j = 0; j < cp.GetNumPoints(); ++j)
+                                {
+                                    int k = (j + 1) % cp.GetNumPoints();
+                                    cv::line(viz, cv::Point(cp[j].x, cp[j].y), cv::Point(cp[k].x, cp[k].y), cv::Scalar(0, 0, 255));
+                                }
                             }
                         }
 

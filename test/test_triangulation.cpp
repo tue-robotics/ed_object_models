@@ -25,7 +25,7 @@ void findContours(const cv::Mat& image, const geo::Vec2i& p, std::vector<geo::Ve
     points.push_back(p);
 
     int n_uninterrupted = 0;
-    int segment_length = 0;
+    std::vector<geo::Vec2i> segment;
     geo::Vec2i p_uninterrupted = p;
 
     while (true)
@@ -47,6 +47,8 @@ void findContours(const cv::Mat& image, const geo::Vec2i& p, std::vector<geo::Ve
         if (!found)
             return;
 
+        geo::Vec2i p_current(x2, y2);
+
         if (d_current != d)
         {
             if (n_uninterrupted >= 3)
@@ -55,15 +57,38 @@ void findContours(const cv::Mat& image, const geo::Vec2i& p, std::vector<geo::Ve
                     points.push_back(p_uninterrupted);
 
                 points.push_back(geo::Vec2i(x2, y2));
-                segment_length = 0;
+                segment.clear();
             }
-            else if (segment_length > 10)
+            else
             {
-                points.push_back(geo::Vec2i(x2, y2));
-                segment_length = 0;
+                const geo::Vec2i& p_anchor = points.back();
+
+                geo::Vec2i diff = p_current - p_anchor;
+
+                double max_error = 0;
+                for(unsigned int i = 0; i < segment.size(); ++i)
+                {
+                    const geo::Vec2i& q = segment[i];
+
+                    geo::Vec2i a = p_current - q;
+
+                    double error;
+                    if (std::abs(diff.x) > std::abs(diff.y))
+                        error = std::abs((double)a.y - ((double)a.x / diff.x) * diff.y);
+                    else
+                        error = std::abs((double)a.x - ((double)a.y / diff.y) * diff.x);
+
+                    max_error = std::max(error, max_error);
+                }
+
+                if (max_error > 1)
+                {
+                    points.push_back(p_current);
+                    segment.clear();
+                }
             }
 
-            p_uninterrupted = geo::Vec2i(x2, y2);
+            p_uninterrupted = p_current;
             n_uninterrupted = 0;
         }
         else
@@ -71,7 +96,7 @@ void findContours(const cv::Mat& image, const geo::Vec2i& p, std::vector<geo::Ve
             ++n_uninterrupted;
         }
 
-        ++segment_length;
+        segment.push_back(p_current);
 
         x2 = x2 + dx[d];
         y2 = y2 + dy[d];

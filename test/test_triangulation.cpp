@@ -49,9 +49,9 @@ void findContours(const cv::Mat& image, const geo::Vec2i& p, std::vector<geo::Ve
 
         if (d_current != d)
         {
-            if (n_uninterrupted > 5)
+            if (n_uninterrupted >= 3)
             {
-                if (p_uninterrupted.x != points.back().x && p_uninterrupted.y != points.back().y)
+                if (p_uninterrupted.x != points.back().x || p_uninterrupted.y != points.back().y)
                     points.push_back(p_uninterrupted);
 
                 points.push_back(geo::Vec2i(x2, y2));
@@ -77,7 +77,15 @@ void findContours(const cv::Mat& image, const geo::Vec2i& p, std::vector<geo::Ve
         y2 = y2 + dy[d];
 
         if (x2 == p.x && y2 == p.y)
+        {
+            if (n_uninterrupted >= 3)
+            {
+                if (p_uninterrupted.x != points.back().x || p_uninterrupted.y != points.back().y)
+                    points.push_back(p_uninterrupted);
+            }
+
             return;
+        }
 
         d_current = d;
     }
@@ -117,7 +125,7 @@ int main(int argc, char **argv)
             {
                 unsigned char v = image.at<unsigned char>(y, x);
 
-                if (v == 0)
+                if (v != 255)
                 {
                     std::vector<geo::Vec2i> points;
                     findContours(image, geo::Vec2i(x, y), points);
@@ -195,10 +203,6 @@ int main(int argc, char **argv)
                     }
 
                     cv::floodFill(image, cv::Point(x, y), 255);
-
-                    geo::Shape shape;
-                    shape.setMesh(mesh);
-                    geo::serialization::toFile(shape, "shape.geo");
                 }
             }
         }        

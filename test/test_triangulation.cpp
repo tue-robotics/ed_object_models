@@ -12,7 +12,7 @@
 // ----------------------------------------------------------------------------------------------------
 
 void findContours(const cv::Mat& image, const geo::Vec2i& p, int d_start, std::vector<geo::Vec2i>& points,
-                  std::vector<geo::Vec2i>& line_starts, cv::Mat& contour_map)
+                  std::vector<geo::Vec2i>& line_starts, cv::Mat& contour_map, bool add_first)
 {
     static int dx[4] = {1,  0, -1,  0 };
     static int dy[4] = {0,  1,  0, -1 };
@@ -30,7 +30,8 @@ void findContours(const cv::Mat& image, const geo::Vec2i& p, int d_start, std::v
                             // that gradually changes to the side (1-cell side steps), this direction
                             // denotes the principle axis of the line
 
-    points.push_back(p - geo::Vec2i(1, 1));
+    if (add_first)
+        points.push_back(p - geo::Vec2i(1, 1));
 
     int n_uninterrupted = 1;
     geo::Vec2i p_corner = p;
@@ -185,7 +186,7 @@ int main(int argc, char **argv)
                 if (v != 255)
                 {
                     std::vector<geo::Vec2i> points, line_starts;
-                    findContours(image, geo::Vec2i(x, y), 0, points, line_starts, contour_map);
+                    findContours(image, geo::Vec2i(x, y), 0, points, line_starts, contour_map, true);
 
                     int num_points = points.size();
 
@@ -246,9 +247,7 @@ int main(int argc, char **argv)
                             {
                                 // found a hole, so find the contours of this hole
                                 std::vector<geo::Vec2i> hole_points;
-                                findContours(image, geo::Vec2i(x2 - 1, y2), 1, hole_points, line_starts, contour_map);
-
-                                std::cout << "Found hole with " << hole_points.size() << " points" << std::endl;
+                                findContours(image, geo::Vec2i(x2 - 1, y2 + 1), 1, hole_points, line_starts, contour_map, false);
 
                                 if (hole_points.size() > 2)
                                 {
@@ -258,8 +257,6 @@ int main(int argc, char **argv)
 
                                     for(unsigned int j = 0; j < hole_points.size(); ++j)
                                     {
-                                        std::cout << "    " << hole_points[j] << std::endl;
-
                                         poly_hole[j].x = hole_points[j].x;
                                         poly_hole[j].y = hole_points[j].y;
 

@@ -267,9 +267,6 @@ int main(int argc, char **argv)
                                         vertex_index_map.at<int>(hole_points[j].y, hole_points[j].x) = mesh.addPoint(geo::Vector3(wx, wy, min_z));
                                         mesh.addPoint(geo::Vector3(wx, wy, max_z));
                                     }
-
-                                    std::cout << "----" << std::endl;
-
                                     testpolys.push_back(poly_hole);
                                 }
                             }

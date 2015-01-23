@@ -11,14 +11,15 @@
 
 // ----------------------------------------------------------------------------------------------------
 
-void findContours(const cv::Mat& image, const geo::Vec2i& p, std::vector<geo::Vec2i>& points)
+void findContours(const cv::Mat& image, const geo::Vec2i& p, int d_start, std::vector<geo::Vec2i>& points,
+                  std::vector<geo::Vec2i>& line_starts, cv::Mat& contour_map)
 {
     static int dx[4] = {1,  0, -1,  0 };
     static int dy[4] = {0,  1,  0, -1 };
 
     unsigned char v = image.at<unsigned char>(p.y, p.x);
 
-    int d_current = 0; // Current direction
+    int d_current = d_start; // Current direction
     int x2 = p.x;
     int y2 = p.y;
 
@@ -29,7 +30,7 @@ void findContours(const cv::Mat& image, const geo::Vec2i& p, std::vector<geo::Ve
                             // that gradually changes to the side (1-cell side steps), this direction
                             // denotes the principle axis of the line
 
-    points.push_back(p);
+    points.push_back(p - geo::Vec2i(1, 1));
 
     int n_uninterrupted = 1;
     geo::Vec2i p_corner = p;
@@ -63,7 +64,14 @@ void findContours(const cv::Mat& image, const geo::Vec2i& p, std::vector<geo::Ve
                                         // this is a 180 degree angle, return without adding it
                 return;
 
-            points.push_back(p_current);
+
+            geo::Vec2i q = p_current;
+            if (d == 0 || d_current == 0) // right
+                --q.y;
+            if (d == 3 || d_current == 3) // up
+                --q.x;
+
+            points.push_back(q);
             d_main = d;
             line_piece_min = 1e9;
             line_piece_max = 0;
@@ -112,9 +120,20 @@ void findContours(const cv::Mat& image, const geo::Vec2i& p, std::vector<geo::Ve
 
         if (d_current != d)
         {
-            p_corner = p_current;
+            geo::Vec2i q = p_current;
+            if (d == 0 || d_current == 0) // right
+                --q.y;
+            if (d == 3 || d_current == 3) // up
+                --q.x;
+
+            p_corner = q;
             n_uninterrupted = 0;
         }
+
+        if ((d_current == 3 && d != 2) || (d == 3 && d != 0)) // up
+            line_starts.push_back(p_current);
+
+        contour_map.at<unsigned char>(p_current.y, p_current.x) = 1;
 
         ++n_uninterrupted;
 
@@ -155,6 +174,7 @@ int main(int argc, char **argv)
         std::cout << "Successfully loaded" << std::endl;
 
         cv::Mat vertex_index_map(image.rows, image.cols, CV_32SC1, -1);
+        cv::Mat contour_map(image.rows, image.cols, CV_8UC1, cv::Scalar(0));
 
         for(int y = 0; y < image.rows; ++y)
         {
@@ -164,8 +184,8 @@ int main(int argc, char **argv)
 
                 if (v != 255)
                 {
-                    std::vector<geo::Vec2i> points;
-                    findContours(image, geo::Vec2i(x, y), points);
+                    std::vector<geo::Vec2i> points, line_starts;
+                    findContours(image, geo::Vec2i(x, y), 0, points, line_starts, contour_map);
 
                     int num_points = points.size();
 
@@ -177,17 +197,19 @@ int main(int argc, char **argv)
                         for(unsigned int i = 0; i < num_points; ++i)
                         {
                             int k = (i + 1) % num_points;
-                            cv::line(viz, cv::Point(points[i].x, points[i].y),
-                                     cv::Point(points[k].x, points[k].y), cv::Scalar(0, 0, 255));
+//                            cv::line(viz, cv::Point(points[i].x, points[i].y),
+//                                     cv::Point(points[k].x, points[k].y), cv::Scalar(0, 0, 255));
                         }
-
-                        TPPLPoly poly;
-                        poly.Init(num_points);
 
                         geo::Mesh mesh;
 
                         double min_z = 0;
                         double max_z = 0;
+
+                        std::list<TPPLPoly> testpolys;
+
+                        TPPLPoly poly;
+                        poly.Init(num_points);
 
                         for(unsigned int i = 0; i < num_points; ++i)
                         {
@@ -198,11 +220,11 @@ int main(int argc, char **argv)
                             double wx = points[i].x * 0.025;
                             double wy = points[i].y * 0.025;
 
-                            vertex_index_map.at<int>(points[i].y, points[i].x) = i;
-
-                            mesh.addPoint(geo::Vector3(wx, wy, min_z));
+                            vertex_index_map.at<int>(points[i].y, points[i].x) = mesh.addPoint(geo::Vector3(wx, wy, min_z));
                             mesh.addPoint(geo::Vector3(wx, wy, max_z));
                         }
+
+                        testpolys.push_back(poly);
 
                         // Calculate side triangles
                         for(int i = 0; i < num_points; ++i)
@@ -212,11 +234,54 @@ int main(int argc, char **argv)
                             mesh.addTriangle(i * 2 + 1, j * 2, j * 2 + 1);
                         }
 
-                        TPPLPartition pp;
-                        std::list<TPPLPoly> testpolys, result;
-                        testpolys.push_back(poly);
+                        for(unsigned int i = 0; i < line_starts.size(); ++i)
+                        {
+                            int x2 = line_starts[i].x;
+                            int y2 = line_starts[i].y;
 
-                        if (!pp.Triangulate_EC(&poly, &result))
+                            while(image.at<unsigned char>(y2, x2) == v)
+                                ++x2;
+
+                            if (contour_map.at<unsigned char>(y2, x2 - 1) == 0)
+                            {
+                                // found a hole, so find the contours of this hole
+                                std::vector<geo::Vec2i> hole_points;
+                                findContours(image, geo::Vec2i(x2 - 1, y2), 1, hole_points, line_starts, contour_map);
+
+                                std::cout << "Found hole with " << hole_points.size() << " points" << std::endl;
+
+                                if (hole_points.size() > 2)
+                                {
+                                    TPPLPoly poly_hole;
+                                    poly_hole.Init(hole_points.size());
+                                    poly_hole.SetHole(true);
+
+                                    for(unsigned int j = 0; j < hole_points.size(); ++j)
+                                    {
+                                        std::cout << "    " << hole_points[j] << std::endl;
+
+                                        poly_hole[j].x = hole_points[j].x;
+                                        poly_hole[j].y = hole_points[j].y;
+
+                                        // Convert to world coordinates
+                                        double wx = hole_points[j].x * 0.025;
+                                        double wy = hole_points[j].y * 0.025;
+
+                                        vertex_index_map.at<int>(hole_points[j].y, hole_points[j].x) = mesh.addPoint(geo::Vector3(wx, wy, min_z));
+                                        mesh.addPoint(geo::Vector3(wx, wy, max_z));
+                                    }
+
+                                    std::cout << "----" << std::endl;
+
+                                    testpolys.push_back(poly_hole);
+                                }
+                            }
+                        }
+
+                        TPPLPartition pp;
+                        std::list<TPPLPoly> result;
+
+                        if (!pp.Triangulate_EC(&testpolys, &result))
                         {
                             std::cout << "Error" << std::endl;
                         }
@@ -243,6 +308,7 @@ int main(int argc, char **argv)
                             }
                         }
 
+
                     }
 
                     cv::floodFill(image, cv::Point(x, y), 255);
@@ -250,6 +316,7 @@ int main(int argc, char **argv)
             }
         }        
 
+        cv::imshow("contours", contour_map * 255);
         cv::imshow("image", viz);
         cv::waitKey();
     }

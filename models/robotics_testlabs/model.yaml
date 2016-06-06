@@ -27,18 +27,18 @@ composition:
           x: 0
           y: 0
           z: 0
-    - type: "robotics_testlabs/plant"
-      id: "plant"
-      pose:
-          x: 3.26
-          y: 5.19
-          z: 0
-    - type: "trashbin"
-      id: "trashbin"
-      pose:
-          x: 3
-          y: 3.6
-          z: 0
+#    - type: "robotics_testlabs/plant"
+#      id: "plant"
+#      pose:
+#          x: 3.26
+#          y: 5.19
+#          z: 0
+#    - type: "trashbin"
+#      id: "trashbin"
+#      pose:
+#          x: 3
+#          y: 3.6
+#          z: 0
     - id: "flight_case"
       pose: {x: -3.156, y: 1.25, z: 0.0}
       shape:

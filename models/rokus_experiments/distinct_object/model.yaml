@@ -1,0 +1,15 @@
+composition:
+    - type: "rokus_experiments/small_block"
+      id: "small_block_1"
+      pose:
+          x: 0
+          y: 0
+          z: 0
+
+    - type: "rokus_experiments/small_block"
+      id: "small_block_2"
+      pose:
+          x: 0
+          y: 0
+          z: 0
+          Z: 1.5707

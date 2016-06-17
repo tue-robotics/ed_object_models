@@ -1,8 +1,47 @@
-type: walls
-shape:
-    path: shape/heightmap.pgm
-    blockheight: 2.0
-    resolution: 0.025000 # m/px
-    origin_x: -13.800000
-    origin_y: -14.300000
-    origin_z:  0.000000
+composition:
+    - type: "rokus_experiment3/walls"
+      id: "walls"
+      pose:
+          x: 0
+          y: 0
+          z: 0
+    - type: "rokus_experiments/small_block"
+      id: "block1"
+      pose:
+          x: 0.875
+          y: -0.5
+          z: 0
+          Z: 1.570796
+    - type: "rokus_experiments/small_block"
+      id: "block2"
+      pose:
+          x: 0.225
+          y: 0.5
+          z: 0
+          Z: 1.570796
+    - type: "rokus_experiments/small_block"
+      id: "block3"
+      pose:
+          x: 0.625
+          y: 0.9
+          z: 0
+          Z: 1.570796
+    - type: "rokus_experiments/small_block"
+      id: "block4"
+      pose:
+          x: 2.175
+          y: 1.85
+          z: 0
+    - type: "rokus_experiments/small_block"
+      id: "block5"
+      pose:
+          x: 0.625
+          y: 2.7
+          z: 0
+          Z: 1.570796
+    - type: "rokus_experiments/small_block"
+      id: "block6"
+      pose:
+          x: -1.025
+          y: 1.85
+          z: 0

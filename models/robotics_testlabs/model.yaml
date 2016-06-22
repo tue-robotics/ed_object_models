@@ -14,6 +14,8 @@ composition:
           y: 5.585
           z: 0
           Z: -1.5707963267948966
+      push_start_waypoint: door_opening_left_start
+      push_destination_waypoint: door_opening_left_dest
     - type: "robotics_testlabs/blue_door_right"
       id: "door2"
       pose:
@@ -21,6 +23,8 @@ composition:
           y: 5.585
           z: 0
           Z: -1.5707963267948966
+      push_start_waypoint: door_opening_right_start
+      push_destination_waypoint: door_opening_right_dest
     - type: "floor"
       id: "floor"
       pose:
@@ -260,6 +264,9 @@ composition:
     - type: "waypoint"
       id: "exit"
       pose: { x: -1.480, y: -0.031, z: 0, rz: 3.1415 }
+    - type: "waypoint"
+      id: "exit_pre"
+      pose: { x: 0, y: 0, z: 0, rz: 3.1415 }
 
 # - - - - - - CHALLENGE_RIPS WAYPOINTS - - - - - - -
 
@@ -289,6 +296,18 @@ composition:
     - type: "waypoint"
       id: "door_navigation"
       pose: { x: -0.168, y: 6.216, z: 0, rz: -1.5708 }
+    - type: "waypoint"
+      id: "door_opening_left_dest"
+      pose: { x: -0.168, y: 6.216, z: 0, rz: 1.5708 }
+    - type: "waypoint"
+      id: "door_opening_right_dest"
+      pose: { x: 0.862, y: 6.216, z: 0, rz: 1.5708 }
+    - type: "waypoint"
+      id: "door_opening_left_start"
+      pose: { x: -0.168, y: 4.8, z: 0, rz: 1.5708 }
+    - type: "waypoint"
+      id: "door_opening_right_start"
+      pose: { x: 0.862, y: 4.8, z: 0, rz: 1.5708 }
 
       # -0,168, 6,216
 
@@ -429,5 +448,5 @@ composition:
         - name: in
           shape:
             - box:
-                min: { x:-0.5, y: -1.0, z: 0 }
+                min: { x: -0.5, y: -1.0, z: 0 }
                 max: { x: 1.1, y: 0.8, z: 0 }

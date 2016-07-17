@@ -1,0 +1,10 @@
+type: walls
+shape:
+    pose: { x: 0, y: 0, z: 0, Z: -1.57}
+    path: heightmap.pgm
+    blockheight: 0.65
+    resolution: 0.025000
+    origin_x: -0.375 #-0.6
+    origin_y: -0.325
+    origin_z: 0
+

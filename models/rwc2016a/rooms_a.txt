@@ -1,0 +1,24 @@
+corridor; min1; -0,009; -1,449
+corridor; max1; 3,433; 3,471
+corridor; min2; -0,009; -1,449
+corridor; max2; 7,997; 1,535
+corridor; center; 2,162; 0,218
+
+office; min1; 0,005; 3,532
+office; max1; 3,418; 5,962
+office; center; 1,734; 4,740
+
+bedroom; min1; 3,433; 1,535
+bedroom; max1; 6,936; 5,947
+bedroom; center; 5,162; 2,608
+
+kitchen; min1; 6,936; 1,520
+kitchen; max1; 11,810; 5,932
+kitchen; center; 8,530; 4,009
+
+living_room; min1; 6,936; -1,476
+living_room; max1; 15,819; 1,520
+living_room; min2; 11.810; -1,476
+living_room; max2; 15,819; 5,947
+living_room; center; 10,885; 1,043
+

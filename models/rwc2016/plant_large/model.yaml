@@ -1,0 +1,5 @@
+shape:
+    cylinder:
+        height: 0.420
+        radius: 0.21
+    pose: { z: 0.21 }

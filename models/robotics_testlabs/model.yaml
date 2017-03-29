@@ -1,6 +1,9 @@
 composition:
     - id: "operator"
       pose: {x: -2.798, y: -1.499, z: 1.0}
+    - type: "waypoint"
+      id: "initial_pose_x80sv"
+      pose: { x: 2.7, y: -0.5, z: 0, rz: 3.1415 }
     - type: "robotics_testlabs/walls"
       id: "walls"
       pose:

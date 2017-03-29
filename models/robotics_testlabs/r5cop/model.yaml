@@ -1,5 +1,5 @@
 composition:
-    - type: "robotics_testlabs/walls"
+    - type: "robotics_testlabs/r5cop/walls"
       id: "walls"
       pose:
           x: 0

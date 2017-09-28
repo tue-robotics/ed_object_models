@@ -81,7 +81,6 @@ Continu with creating your model"""
         #self.indent = "    "
 
         self.data = {'shape': {'compound': []},
-                     'color': {'red': 0.75, 'green': 0.75, 'blue': 0.75},
                      'areas': []}
 
     def write(self):

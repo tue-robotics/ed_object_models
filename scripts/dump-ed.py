@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 
-from ed.srv import SimpleQuery
+from ed_msgs.srv import SimpleQuery
 import rospy
 import PyKDL as kdl
 import sys

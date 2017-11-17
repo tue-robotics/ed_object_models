@@ -44,18 +44,18 @@ composition:
           y: 3.6
           z: 0
     - id: "flight_case"
-      pose: {x: -3.156, y: 1.25, z: 0.0}
+      pose: {x: -3.28, y: 1.23, z: 0.0}
       shape:
           box:
-              size: {x: 0.75, y: 0.665, z: 1.33}
+              size: {x: 0.75, y: 0.70, z: 1.33}
               pose: {x: 0, y: 0, z: 0.665}
       color: {red: 0.1, green: 0.1, blue: 0.1}
     - id: "battery_table"
-      pose: {x: -3.156, y: 1.95, z: 0.0}
+      pose: {x: -3.36, y: 1.99, z: 0.0}
       shape:
           box:
-              size: {x: 0.75, y: 0.665, z: 0.8}
-              pose: {x: 0, y: 0, z: 0.4}
+              size: {x: 0.55, y: 0.80, z: 0.7}
+              pose: {x: 0, y: 0, z: 0.35}
       color: {red: 0.4, green: 0.3, blue: 0.2}
     - type: "ddw/salon"
       id: "couch_table"
@@ -177,8 +177,8 @@ composition:
     - type: "table_120x80x76"
       id: "operator_table"
       pose:
-          x: -2.0
-          y: 3.85
+          x: -1.91
+          y: 4.05
           z: 0.0
           X: 0
           Y: 0
@@ -186,8 +186,8 @@ composition:
     - type: "table_120x80x76"
       id: "operator_table2"
       pose:
-          x: -3.2
-          y: 3.85
+          x: -3.11
+          y: 4.05
           z: 0.0
           X: 0
           Y: 0
@@ -204,8 +204,8 @@ composition:
     - type: "table_120x80x76"
       id: "workbench"
       pose:
-          x: -2.35
-          y: 3.05
+          x: -2.31
+          y: 3.23
           z: 0.0
           X: 0
           Y: 0
@@ -213,8 +213,8 @@ composition:
     - type: "table_120x80x76"
       id: "workbench2"
       pose:
-          x: -3.35
-          y: 2.85
+          x: -3.31
+          y: 3.03
           z: 0.0
           X: 0
           Y: 0

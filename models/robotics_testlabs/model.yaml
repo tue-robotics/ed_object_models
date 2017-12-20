@@ -46,13 +46,9 @@ composition:
     - type: "robotics_testlabs/flight_case"
       id: "flight_case"
       pose: {x: -3.28, y: 1.23, z: 0.0}
-    - id: "battery_table"
+    - type: "robotics_testlabs/battery_table"
+      id: "battery_table"
       pose: {x: -3.36, y: 1.99, z: 0.0}
-      shape:
-          box:
-              size: {x: 0.55, y: 0.80, z: 0.7}
-              pose: {x: 0, y: 0, z: 0.35}
-      color: {red: 0.4, green: 0.3, blue: 0.2}
     - type: "ddw/salon"
       id: "couch_table"
       pose:

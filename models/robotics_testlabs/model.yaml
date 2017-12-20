@@ -130,15 +130,15 @@ composition:
           X: 0
           Y: 0
           Z: 3.14159265359
-#    - type: "ddw/chair"
-#      id: "chair"
-#      pose:
-#          x: 2.0
-#          y: 5.3
-#          z: 0
-#          X: 0
-#          Y: 0
-#          Z: 1.5707963267948966
+    - type: "ddw/chair"
+      id: "chair"
+      pose:
+          x: 2.0
+          y: 5.3
+          z: 0
+          X: 0
+          Y: 0
+          Z: -1.5707963267948966
     - type: "robotics_testlab_B/bed_cabinet"
       id: "nightstand"
       pose:

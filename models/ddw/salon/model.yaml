@@ -18,7 +18,7 @@ areas:
     shape:
       - box:
             min: { x:  0, y: -0.3, z: 0 }
-            max: { x:  0.9, y: 0.3, z: 1 }
+            max: { x:  0.9, y: 0.3, z: 0.01 }
     
     
 

@@ -52,7 +52,7 @@ composition:
     - type: "ddw/salon"
       id: "couch_table"
       pose:
-          x: 3.2
+          x: 3.34
           y: 1.5
           z: 0
           X: 0
@@ -61,7 +61,7 @@ composition:
     - type: "robotics_testlab_B/black_cabinet"
       id: "black_cabinet1"
       pose:
-          x: 2.95
+          x: 2.98
           y: -1.42
           z: 0
           X: 0
@@ -70,7 +70,7 @@ composition:
     - type: "robotics_testlab_B/black_cabinet"
       id: "black_cabinet2"
       pose:
-          x: 2.03
+          x: 2.06
           y: -1.42
           z: 0
           X: 0
@@ -79,7 +79,7 @@ composition:
     - type: "robotics_testlab_B/black_cabinet"
       id: "black_cabinet3"
       pose:
-          x: 1.11
+          x: 1.14
           y: -1.42
           z: 0
           X: 0
@@ -88,7 +88,7 @@ composition:
     - type: "robotics_testlab_B/black_cabinet"
       id: "black_cabinet4"
       pose:
-          x: 0.19
+          x: 0.22
           y: -1.42
           z: 0
           X: 0
@@ -213,7 +213,7 @@ composition:
           Z: 1.5707963267948966
     - type: robotics_testlabs/plastic_cabinet
       id: bookcase
-      pose: { x: 3.18, y: 2.713, z: 0, Z: 3.1415 }
+      pose: { x: 3.24, y: 2.713, z: 0, Z: 3.1415 }
     - type: robotics_testlabs/electro_bar_1
       id: electro_bar_1
       pose: { x: -3.72 , y: 2.96, z: 0.94, Z: 0}

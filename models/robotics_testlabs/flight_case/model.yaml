@@ -1,18 +1,4 @@
 color: {red: 0.1, green: 0.1, blue: 0.1}
-#areas:
-#-   name: near
-    #offset: 0.7
-#-   name: in_front_of
-    #shape:
-    #-   box:
-            #max:
-                #x: 0.975
-                #y: 0.25
-                #z: 0.01
-            #min:
-                #x: 0.775
-                #y: -0.25
-                #z: 0.0
 shape:
     compound:
     -   box:

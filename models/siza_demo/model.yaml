@@ -1,0 +1,94 @@
+composition:
+    - id: "operator"
+      pose: {x: -2.798, y: -1.499, z: 1.0}
+    - type: "siza_demo/walls"
+      id: "walls"
+      pose:
+          x: 0
+          y: 0
+          z: 0
+    - type: "floor"
+      id: "floor"
+      pose:
+          x: 0
+          y: 0
+          z: 0
+    - type: "trashbin"
+      id: "trashbin"
+      pose:
+          x: 3
+          y: 3.6
+          z: 0
+    - type: "robotics_testlab_B/corridor_cabinet"
+      id: "cabinet"
+      pose:
+          x: 3.30
+          y: 4.35
+          z: 0
+          X: 0
+          Y: 0
+          Z: 3.14159265359
+    - type: "table_120x80x76"
+      id: "dinner_table"
+      pose:
+          x: 0.4
+          y: 1.92
+          z: 0.0
+          X: 0
+          Y: 0
+          Z: 0
+
+    - type: "waypoint"
+      id: "corridor"
+      pose:
+          x: 2.7
+          y: 5
+          z: 0
+    - type: "waypoint"
+      id: "hallway"
+      pose:
+          x: 0
+          y: 5.5
+          z: 0
+    - type: "waypoint"
+      id: "bedroom"
+      pose:
+          x: -2.0
+          y: -1.0
+          z: 0
+    - type: "waypoint"
+      id: "battery_point"
+      pose:
+          x: -2.8
+          y: 2.0
+          z: 0
+
+# - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    - type: "waypoint"
+      id: "initial_pose"
+      pose: { x: 0.586, y: 4.259, z: 0, Z: 0 }
+    - type: "waypoint"
+      id: "hero_home"
+      pose: { x: 0.0, y: 0.0, z: 0, rz: 0 }
+
+# - - - - - - ROOMS - - - - - - -
+
+    - type: "room"
+      id: "livingroom"
+      pose: { x: 1.5, y: 1.0, z: 0.0 } #Center of room (z should be 0.0)
+      areas:
+        - name: in
+          shape:
+            - box:
+                min: { x:  -1.4, y: -1.9, z: 0 } #distance from pose position (no map coordinates)
+                max: { x:  1.1, y:  1.7, z: 0 }
+    - type: "room"
+      id: "kitchen"
+      pose: { x: 2.2, y: 4.5, z: 0.0 } #Center of room
+      areas:
+        - name: in
+          shape:
+            - box:
+                min: { x:  -0.4, y:  -0.8, z: 0 }
+                max: { x:  0.8, y:  0.5, z: 0 }

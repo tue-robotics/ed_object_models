@@ -16,27 +16,27 @@ composition:
     - type: "trashbin"
       id: "trashbin"
       pose:
-          x: 3
-          y: 3.6
+          x: 1.33
+          y: 0.833
           z: 0
     - type: "robotics_testlab_B/corridor_cabinet"
       id: "cabinet"
       pose:
-          x: 3.30
-          y: 4.35
+          x: 0.65
+          y: 1.07
           z: 0
           X: 0
           Y: 0
-          Z: 3.14159265359
+          Z: -1.57079632679
     - type: "table_120x80x76"
       id: "dinner_table"
       pose:
-          x: 0.4
-          y: 1.92
+          x: 3.053
+          y: -1.713
           z: 0.0
           X: 0
           Y: 0
-          Z: 0
+          Z: 1.57079632679
 
     - type: "waypoint"
       id: "corridor"

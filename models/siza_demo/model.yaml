@@ -19,6 +19,9 @@ composition:
           x: 1.33
           y: 0.833
           z: 0
+          X: 0
+          Y: 0
+          Z: 0.78539816339
     - type: "robotics_testlab_B/corridor_cabinet"
       id: "cabinet"
       pose:

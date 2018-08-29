@@ -3,3 +3,16 @@ shape:
         height: 0.3
         radius: 0.15
     pose: { z: 0.15 }
+areas:
+  - name: near
+    offset: 0.3
+  - name: in_front_of
+    shape:
+      - box:
+            min: { x:  0.3, y: -0.3, z: 0 }
+            max: { x:  0.7, y: 0.3, z: 0.01 }
+  - name: on_top_of
+    shape:
+      - box:
+            min: { x: -0.1, y: -0.1, z: 0.60 }
+            max: { x:  0.1, y:  0.1, z: 1.00 }

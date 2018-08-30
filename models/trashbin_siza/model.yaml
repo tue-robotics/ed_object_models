@@ -27,8 +27,8 @@ areas:
   - name: in_front_of
     shape:
       - box:
-            min: { x:  -0.165, y: 0.3, z: 0 }
-            max: { x:  0.165, y: 0.5, z: 0.02 }
+            min: { x:  -0.18, y: 0.3, z: 0 }
+            max: { x:  0.18, y: 0.7, z: 0.02 }
   - name: on_top_of
     shape:
       - box:

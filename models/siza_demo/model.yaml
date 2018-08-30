@@ -73,7 +73,7 @@ composition:
       pose: { x: 0.586, y: 4.259, z: 0, Z: 0 }
     - type: "waypoint"
       id: "hero_home"
-      pose: { x: 0.0, y: 0.0, z: 0, rz: 0 }
+      pose: { x: 0.5, y: 0.25, z: 0, rz: 0 }
 
 # - - - - - - ROOMS - - - - - - -
 
@@ -88,10 +88,10 @@ composition:
                 max: { x:  1.1, y:  1.7, z: 0 }
     - type: "room"
       id: "kitchen"
-      pose: { x: 2.2, y: 4.5, z: 0.0 } #Center of room
+      pose: { x: 1.0, y: 0.0, z: 0.0 } #Center of room
       areas:
         - name: in
           shape:
             - box:
-                min: { x:  -0.4, y:  -0.8, z: 0 }
-                max: { x:  0.8, y:  0.5, z: 0 }
+                min: { x:  -1.5, y:  -2.0, z: 0 }
+                max: { x:  1.0, y:  1.0, z: 0 }

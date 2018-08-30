@@ -1,0 +1,30 @@
+shape:
+    box:
+        min: { x:  -0.165, y: -0.1, z: 0 }
+        max: { x:  0.165, y: 0.1, z: 0.02 }
+    box:
+        min: { x:  0.165, y: -0.1, z: 0 }
+        max: { x:  0.17, y: 0.1, z: 0.34 }
+    box:
+        min: { x:  -0.165, y: -0.11, z: 0 }
+        max: { x:  0.165, y: -0.1, z: 0.34 }
+    box:
+        min: { x:  -0.17, y: -0.1, z: 0 }
+        max: { x:  -0.165, y: 0.1, z: 0.34 }
+    box:
+        min: { x:  -0.165, y: 0.1, z: 0 }
+        max: { x:  0.165, y: 0.11, z: 0.34 }
+    pose: { z: 0.15 }
+areas:
+    - name: near
+        offset: 0.3
+    - name: in_front_of
+        shape:
+            - box:
+                min: { x:  -0.165, y: 0.3, z: 0 }
+                max: { x:  0.165, y: 0.5, z: 0.02 }
+    - name: on_top_of
+        shape:
+            - box:
+                min: { x:  -0.165, y: -0.1, z: 0.35 }
+                max: { x:  0.165, y: 0.1, z: 0.6 }

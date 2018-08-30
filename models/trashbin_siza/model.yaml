@@ -4,16 +4,16 @@ shape:
             pose: { x:  0, y: 0, z: 0 }
             size: { x:  0.33, y: 0.2, z: 0.02 }
       - box:
-            pose: { x:  0.165, y: 0, z: 0 }
+            pose: { x:  0.165, y: 0, z: 0.17 }
             size: { x:  0.005, y: 0.2, z: 0.34 }
       - box:
-            pose: { x:  0, y: -0.1, z: 0 }
+            pose: { x:  0, y: -0.1, z: 0.17 }
             size: { x:  0.33, y: 0.005, z: 0.34 }
       - box:
-            pose: { x:  -0.165, y: 0, z: 0 }
+            pose: { x:  -0.165, y: 0, z: 0.17 }
             size: { x:  0.005, y: 0.2, z: 0.34 }
       - box:
-            pose: { x:  0, y: 0.1, z: 0 }
+            pose: { x:  0, y: 0.1, z: 0.17 }
             size: { x:  0.33, y: 0.005, z: 0.34 }
 
 color:

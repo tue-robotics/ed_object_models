@@ -21,7 +21,7 @@ composition:
           z: 0
           X: 0
           Y: 0
-          Z: -2.35619449019
+          Z: -0.78539816339
     - type: "robotics_testlab_B/corridor_cabinet"
       id: "cabinet"
       pose:
@@ -73,7 +73,7 @@ composition:
       pose: { x: 0.586, y: 4.259, z: 0, Z: 0 }
     - type: "waypoint"
       id: "hero_home"
-      pose: { x: 0.5, y: 0.25, z: 0, rz: 0 }
+      pose: { x: 0.0, y: 0.0, z: 0, rz: 0 }
 
 # - - - - - - ROOMS - - - - - - -
 

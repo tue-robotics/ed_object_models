@@ -1,0 +1,42 @@
+type: table
+shape:
+    compound:
+      - box:
+            pose: {x: 0,    y: 0,      z: 0.75}
+            size: {x: 1.60, y: 0.80,   z: 0.02}
+      - box:
+            pose: {x: -0.77, y: -0.37, z: 0.37}
+            size: {x: 0.05,  y: 0.05,  z: 0.74}
+      - box:
+            pose: {x: 0.77,  y: -0.37, z: 0.37}
+            size: {x: 0.05,  y: 0.05,  z: 0.74}
+      - box:
+            pose: {x: -0.77, y: 0.37,  z: 0.37}
+            size: {x: 0.05,  y: 0.05,  z: 0.74}
+      - box:
+            pose: {x: 0.77,  y: 0.37,  z: 0.37}
+            size: {x: 0.05,  y: 0.05,  z: 0.74}
+
+color:
+    red: 0.8
+    green: 0.8
+    blue: 0.8
+
+areas:
+  - name: near
+    offset: 0.7
+  - name: in_front_of
+    shape:
+      - box:
+            min: { x:  0.8, y: -0.3, z: 0 }
+            max: { x:  1.4, y: 0.3, z: 0.01 }
+  - name: on_top_of
+    shape:
+      - box:
+            min: { x: -0.8, y: -0.4, z: 0.78 }
+            max: { x:  0.8, y:  0.4, z: 1.20 }
+  - name: under
+    shape:
+      - box:
+            min: { x: -0.74, y: -0.34, z: 0.01 }
+            max: { x:  0.74, y:  0.34, z: 0.5 }

@@ -1,20 +1,23 @@
 type: table
 shape:
     compound:
-      - box:
-            pose: {x: 0,    y: 0,      z: 0.73}
-            size: {x: 1.16, y: 0.50,   z: 0.04}
-      - box:
-            pose: {x: 0, y: -0.175, z: 0.73}
-            size: {x: 0.50,  y: 0.35,  z: 0.04}
-      - box:
-            pose: {x: 0, y: 0.175, z: 0.73}
-            size: {x: 0.50,  y: 0.35,  z: 0.04}
+      - polygon:
+            points:
+              - { x: -0.25, y: -0.6 }
+              - { x: 0.25, y: -0.6 }
+              - { x: 0.6, y: -0.25 }
+              - { x: 0.6, y: 0.25 }
+              - { x: 0.25, y: 0.6 }
+              - { x: -0.25, y: 0.6 }
+              - { x: -0.6, y: 0.25 }
+              - { x: -0.6, y: -0.25 }
+            height: 0.1
+        pose: {x: 0.0, y: 0.0, z: 0.75}
 
 color:
-    red: 0.5
-    green: 0.8
-    blue: 0.5
+    red: 0.2
+    green: 0.5
+    blue: 0.2
 
 areas:
   - name: near

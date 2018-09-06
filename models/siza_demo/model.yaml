@@ -40,6 +40,33 @@ composition:
           X: 0
           Y: 0
           Z: 1.57079632679
+    - type: "siza_demo/kitchen_counter"
+      id: "counter"
+      pose:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+          X: 0
+          Y: 0
+          Z: 0.0
+    - type: "siza_demo/table_octagonal"
+      id: "dinner_table2"
+      pose:
+          x: -2.0
+          y: 0.0
+          z: 0.0
+          X: 0
+          Y: 0
+          Z: 0.0
+    - type: "siza_demo/tray_table"
+      id: "dingetje"
+      pose:
+          x: -2.0
+          y: 2.0
+          z: 0.0
+          X: 0
+          Y: 0
+          Z: 0.0
 
     - type: "waypoint"
       id: "corridor"

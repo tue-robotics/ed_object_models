@@ -1,0 +1,22 @@
+type: table
+shape:
+    path: shape/shape.xml
+
+color:
+    red: 0.5
+    green: 0.8
+    blue: 0.5
+
+areas:
+  - name: near
+    offset: 0.7
+  - name: in_front_of
+    shape:
+      - box:
+            min: { x:  0.6, y: -0.3, z: 0 }
+            max: { x:  1.2, y: 0.3, z: 0.01 }
+  - name: on_top_of
+    shape:
+      - box:
+            min: { x: -0.6, y: -0.4, z: 0.78 }
+            max: { x:  0.6, y:  0.4, z: 1.20 }

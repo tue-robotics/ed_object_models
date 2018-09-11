@@ -195,15 +195,6 @@ composition:
           Y: 0
           Z: 0
     - type: "table_120x80x76"
-      id: "workbench"
-      pose:
-          x: -2.31
-          y: 3.23
-          z: 0.0
-          X: 0
-          Y: 0
-          Z: 0
-    - type: "table_120x80x76"
       id: "workbench2"
       pose:
           x: -3.31

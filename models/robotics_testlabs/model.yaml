@@ -211,6 +211,25 @@ composition:
           X: 0
           Y: 0
           Z: 1.5707963267948966
+    - type: "wooden_table"
+      id: "field_table1"
+      pose:
+          x: 3.5
+          y: 7.3
+          z: 0.0
+          X: 0
+          Y: 0
+          Z: -1.5707963267948966
+    - type: "wooden_table"
+      id: "field_table2"
+      pose:
+          x: 9.8
+          y: 7.3
+          z: 0.0
+          X: 0
+          Y: 0
+          Z: -1.5707963267948966
+
     - type: robotics_testlabs/plastic_cabinet
       id: bookcase
       pose: { x: 3.24, y: 2.713, z: 0, Z: 3.1415 }

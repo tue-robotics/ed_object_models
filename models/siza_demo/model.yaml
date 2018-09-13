@@ -263,7 +263,7 @@ composition:
       pose: { x: 0.586, y: 4.259, z: 0, Z: 0 }
     - type: "waypoint"
       id: "hero_home"
-      pose: { x: 9.2, y: 3.2, z: 0, Z: 0 }
+      pose: { x: 9.07, y: 5.228, z: 0, Z: 1.5707963267948966}
 #      pose: { x: 2.3, y: 4.3, z: 0, Z: -1.57 }
 
 # - - - - - - ROOMS - - - - - - -

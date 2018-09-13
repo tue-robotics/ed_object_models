@@ -113,7 +113,7 @@ composition:
           Y: 0
           Z: 1.5707963267948966
     - type: "ddw/couch"
-      id: "hallway_table"
+      id: "couch"
       pose:
           x: 0.72
           y: 3.45

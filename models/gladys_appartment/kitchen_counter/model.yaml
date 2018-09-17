@@ -1,7 +1,7 @@
 shape:
     compound:
       - box:
-            pose: {x: 0,    y: 0,      z: 0.80}
+            pose: {x: 0,    y: 0,      z: 0.75}
             size: {x: 0.56, y: 2.80,   z: 0.10}
 
 color:

@@ -4,8 +4,8 @@ composition:
     - type: "gladys_appartment/walls"
       id: "walls"
       pose:
-          x: 0
-          y: 0
+          x: 8 
+          y: 3
           z: 0
     - type: "floor"
       id: "floor"
@@ -16,49 +16,49 @@ composition:
     - type: "trashbin_siza"
       id: "trashbin"
       pose:
-          x: 2.80
-          y: 3.6
+          x: 3.38
+          y: -0.43
           z: 0
-          Z: 0.78539816339
+          Z: 2.3562
     - type: "gladys_appartment/kitchen_counter"
-      id: "kitchen_counter"
+      id: "counter"
       pose:
-          x: 1.80
-          y: 0.6
+          x: 4.0
+          y: -1.3
           z: 0
-          Z: 0.78539816339
+          Z: 3.1415
     - type: "gladys_appartment/table_octagonal"
       id: "table_octagonal"
       pose:
-          x: 5.80
-          y: 2.6
+          x: 1.3
+          y: -1.8
           z: 0
-          Z: 0.78539816339
+          Z: 1.57
     - type: "gladys_appartment/tray_table"
       id: "tray_table"
       pose:
-          x: 8.80
-          y: 1.6
+          x: -0.26
+          y: 0.76
           z: 0
-          Z: 0.78539816339
+          Z: -1.57
 
 # - - - - - - - - - - - - - - - - - - - - - - - - -
 
     - type: "waypoint"
       id: "initial_pose"
-      pose: { x: 0.586, y: 4.259, z: 0, Z: 0 }
+      pose: { x: 2.0, y: 2.0, z: 0, Z: 0 }
     - type: "waypoint"
       id: "hero_home"
-      pose: { x: 9.2, y: 3.2, z: 0, Z: 0 }
+      pose: { x: 5.0, y: 2.0, z: 0, Z: 0 }
 
 # - - - - - - ROOMS - - - - - - -
 
     - type: "room"
       id: "livingroom"
-      pose: { x: 1.5, y: 1.0, z: 0.0 } #Center of room (z should be 0.0)
+      pose: { x: 0.0, y: 1.0, z: 0.0 } #Center of room (z should be 0.0)
       areas:
         - name: in
           shape:
             - box:
-                min: { x:  -1.4, y: -1.9, z: 0 } #distance from pose position (no map coordinates)
-                max: { x:  1.1, y:  1.7, z: 0 }
+                min: { x:  -2.7, y: -1.0, z: 0 } #distance from pose position (no map coordinates)
+                max: { x:  1.0, y:  1.0, z: 0 }

@@ -1,0 +1,36 @@
+shape:
+    compound:
+      - box:
+            pose: { x:  -0.335, y: 0.0, z: 0.015 }
+            size: { x:  0.03, y: 0.3, z: 0.03 }
+      - box:
+            pose: { x:  0.21, y: 0, z: 0.015 }
+            size: { x:  0.03, y: 0.57, z: 0.03 }
+      - box:
+            pose: { x:  -0.0625, y: 0, z: 0.015 }
+            size: { x:  0.57, y: 0.03, z: 0.03 }
+      - box:
+            pose: { x:  0.14, y: 0, z: 0.36 }
+            size: { x:  0.03, y: 0.03, z: 0.72 }
+      - box:
+            pose: { x:  0, y: 0, z: 0.72 }
+            size: { x:  0.87, y: 0.34, z: 0.02 }
+
+color:
+    red: 0.15
+    green: 0
+    blue: 0.15
+
+areas:
+  - name: near
+    offset: 0.6
+  - name: in_front_of
+    shape:
+      - box:
+            min: { x:  -0.935, y: -0.2, z: 0 }
+            max: { x:  -0.435, y: 0.2, z: 0.02 }
+  - name: on_top_of
+    shape:
+      - box:
+           min: { x:  -0.435, y: -0.17, z: 0.735 }
+           max: { x:  0.435, y: 0.17, z: 1.0 }

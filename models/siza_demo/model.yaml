@@ -43,7 +43,7 @@ composition:
           x: 2.80
           y: 3.6
           z: 0
-          Z: 0.78539816339
+          Z: 2.35619449
     - type: "robotics_testlabs/flight_case"
       id: "flight_case"
       pose: {x: -3.28, y: 1.23, z: 0.0}
@@ -114,7 +114,7 @@ composition:
           Y: 0
           Z: 1.5707963267948966
     - type: "ddw/couch"
-      id: "hallway_table"
+      id: "couch"
       pose:
           x: 0.72
           y: 3.45
@@ -189,7 +189,7 @@ composition:
       id: "dinner_table"
       pose:
           x: 0.4
-          y: 1.92
+          y: 2.02
           z: 0.0
           X: 0
           Y: 0
@@ -269,7 +269,7 @@ composition:
 # - - - - - - ROOMS - - - - - - -
 
     - type: "room"
-      id: "livingroom"
+      id: "living_room"
       pose: { x: 1.5, y: 1.0, z: 0.0 } #Center of room (z should be 0.0)
       areas:
         - name: in

@@ -4,6 +4,7 @@ import sys
 import yaml
 import dicttoxml
 from xml.dom.minidom import parseString
+import xml.etree.ElementTree as ET
 
 
 def fill_pose(yaml_dict):
@@ -103,7 +104,7 @@ def main():
     #     sys.exit(1)
 
     # Create an empty dictionary in SDF format, which can later on be exported to XML after filling below.
-    sdf_dict = {'sdf version="1.6"': {}}
+    sdf_dict = {}
 
     # First determine type of model.yaml
     # Raw input can be replaced by fancier read_option in create-model.py
@@ -113,8 +114,6 @@ def main():
     # Temporary replacements of user input
     file_type = "object"
 
-    # print sdf_dict[sdf_dict.keys()[0]][sdf_dict[sdf_dict.keys()[0]].keys()[0]]['link name="link"']
-
     with open("model.yaml", 'r') as stream:
         try:
             x = yaml.load(stream)
@@ -123,21 +122,14 @@ def main():
             print(exc)
     print(x)
 
-    # TEST CODE FOR EXPORTING TO XML, NOT WORKING CORRECTLY
-    # test = {'sdf version="1.6"': {'model name = "couch"': {'pose': [0, 0, 0.5, 0, 0, 0], 'static': 'false'}}}
-    #
-    # xml = dicttoxml.dicttoxml(test)
-    # myfile = open("xmltest.xml", "w")
-    # myfile.write(xml)
-
     # Filling the empty dictionary
     if file_type == "object":
         model_name = 'model name="{}"'.format("couch")
         # Is object, so create a (static) model type SDF dictionary (as opposed to world), with a default pose
-        sdf_dict[sdf_dict.keys()[0]] = {model_name: {'link name="link"': {},
-                                                     'pose': "0 0 0 0 0 0",
-                                                     'static': 'true'}}
-        sdf_dict_model_level = sdf_dict[sdf_dict.keys()[0]][sdf_dict[sdf_dict.keys()[0]].keys()[0]]
+        sdf_dict = {model_name: {'link name="link"': {},
+                                 'pose': "0 0 0 0 0 0",
+                                 'static': 'true'}}
+        sdf_dict_model_level = sdf_dict[sdf_dict.keys()[0]]
         sdf_dict_link_level = sdf_dict_model_level['link name="link"']
 
         if isinstance(x, dict):
@@ -159,9 +151,7 @@ def main():
 
                 print area_items
 
-            # sdf_dict[sdf_dict.keys()[0]][sdf_dict[sdf_dict.keys()[0]].keys()[0]]
-            for key in x:
-                print "Dictionary item:", key
+            # Todo: All custom parameters
 
         elif isinstance(x, list):
             for item in x:
@@ -169,8 +159,8 @@ def main():
     elif file_type == "world":
         world_name = 'world name="{}"'.format("rwc2018")
 
-        sdf_dict[sdf_dict.keys()[0]] = {world_name: {}}
-        sdf_dict_world_level = sdf_dict[sdf_dict.keys()[0]][sdf_dict[sdf_dict.keys()[0]].keys()[0]]
+        sdf_dict = {world_name: {}}
+        sdf_dict_world_level = sdf_dict[sdf_dict.keys()[0]]
 
         for item in x['composition']:
             if item['type'] == 'room':
@@ -182,19 +172,35 @@ def main():
                 # the associated model.sdf files with a pose in a model, so:
                 model_name = 'model name ="{}"'.format(item['id'])
                 sdf_dict_world_level[model_name] = {'pose': fill_pose(item),
-                                                    'include': {'uri': 'model://{}/model.sdf'.format(item['type'])}}
+                                                    'include': {'uri': 'model://{}'.format(item['type'])}}
 
     print "==============\nSDF Dictionary = " + str(sdf_dict)
 
     xml = dicttoxml.dicttoxml(sdf_dict, attr_type=False) # custom_root='sdf_version'  (no spaces)
-    myfile = open("xmltest.xml", "w")
-    myfile.write(xml)
+    print xml
 
-    dom = parseString(xml)
-    teststr = str(dom.toprettyxml())
-    teststr = teststr.replace('"', '').replace("&quot;", '"').replace("key name=", "")\
-        .replace("?xml version=1.0 ?", '?xml version="1.0" ?')
-    print teststr
+    # Replace incorrect keys using ElementTree in xml module
+    # Todo: See PR #25
+    root = ET.fromstring(xml)
+    tree = ET.ElementTree(root)
+
+    # Rename root to sdf
+    root.tag = "sdf"
+    root.set("version", "1.6")
+
+    # Rename wrong keys by correct ones by abusing known string build-up with split
+    for key in root.iter('key'):
+        new_tag = (key.get("name")).split(" name")[0]
+        key.set("name", (key.get("name")).split(' name="')[1].split('"')[0])
+        key.tag = new_tag
+
+    # Create 'pretty' XML file (multiple lines with indentation) to make it more readable
+    dom = parseString(ET.tostring(root))
+    prettyxml = dom.toprettyxml()
+    print "==============\n" + prettyxml
+
+    with open("xmltest.xml", "w") as f:
+        f.write(prettyxml)
 
 
 if __name__ == "__main__":

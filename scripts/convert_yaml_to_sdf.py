@@ -268,7 +268,7 @@ def write_xml_to_file(xml_element, path):
 
 def main(model_name):
     # get model path
-    model_path = get_model_path(model, "yaml")
+    model_path = get_model_path(model_name, "yaml")
     if not model_path:
         print ("no model path found for model: {}".format(model_name))
         return -1

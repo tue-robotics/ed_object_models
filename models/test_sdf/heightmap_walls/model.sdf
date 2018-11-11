@@ -14,7 +14,7 @@
             White corresponds to the full height and black to zero height.
             -->
             <uri>model://test_sdf/heightmap_walls/roboticslab_walls.png</uri>
-            <size>20 20 1</size>  <!-- Width, depth and height of the heightmap in world units. -->
+            <size>25.625 25.625 2</size>  <!-- Width, depth and height of the heightmap in world units. -->
             <pos>0 0 0</pos>  <!-- Position of the center of the heightmap in world units. -->
           </heightmap>
         </geometry>
@@ -35,7 +35,7 @@
             The uri, size and pos should be the same as in the heightmap from collision above.
             -->
             <uri>model://test_sdf/heightmap_walls/roboticslab_walls.png</uri>
-            <size>20 20 1</size>
+            <size>25.625 25.625 2</size>
             <pos>0 0 0</pos>
           </heightmap>
         </geometry>

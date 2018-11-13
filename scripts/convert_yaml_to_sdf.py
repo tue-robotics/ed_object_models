@@ -109,7 +109,7 @@ def read_geometry(shape_item):
             pos_x = yml_box_min["x"] + float(size_x)/2
             pos_y = yml_box_min["y"] + float(size_y)/2
             pos_z = yml_box_min["z"] + float(size_z)/2
-            box_pose_list = [pos_x, pos_y, pos_z]
+            box_pose_list = [pos_x, pos_y, pos_z, 0, 0, 0]
             geometry_pose = " ".join(map(str, box_pose_list))
 
             geometry["box"] = {"size": box_size}

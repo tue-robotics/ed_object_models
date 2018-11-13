@@ -304,8 +304,8 @@ def main(model_name, recursive=False):
             if "type" in item:
                 if recursive:
                     # Todo: If there are multiple objects of the same type, then this type's SDF is created for every
-                    # Todo: instance of the type (for instance ids: table1 and table2 are both type TableA, so it will
-                    # Todo: recreate the SDF and config for TableA twice)
+                    #       instance of the type (for instance ids: table1 and table2 are both type TableA, so it will
+                    #       recreate the SDF and config for TableA twice)
                     main(item["type"], recursive=recursive)
                 include["uri"] = "model://{}".format(item["type"])
             include["pose"] = read_pose(item)

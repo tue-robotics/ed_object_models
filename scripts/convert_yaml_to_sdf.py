@@ -244,10 +244,11 @@ def parse_to_xml(xml, item, list_name=""):
             else:
                 child = ET.SubElement(xml, k)
                 parse_to_xml(child, v)
-    elif isinstance(item, str):
-        xml.text = item
+    elif isinstance(item, str) or isinstance(item, float) or isinstance(item, int):
+        xml.text = str(item)
     else:
         print("Cannot not parse object type: '{}'".format(type(item)))
+        print item
 
 
 def write_xml_to_file(xml_element, path):
@@ -266,7 +267,7 @@ def write_xml_to_file(xml_element, path):
         f.write(pretty_xml_string)
 
 
-def main(model_name):
+def main(model_name, recursive=False):
     # get model path
     model_path = get_model_path(model_name, "yaml")
     if not model_path:
@@ -301,6 +302,11 @@ def main(model_name):
                 return -1
             include = {"name": item["id"]}
             if "type" in item:
+                if recursive:
+                    # Todo: If there are multiple objects of the same type, then this type's SDF is created for every
+                    # Todo: instance of the type (for instance ids: table1 and table2 are both type TableA, so it will
+                    # Todo: recreate the SDF and config for TableA twice)
+                    main(item["type"], recursive=recursive)
                 include["uri"] = "model://{}".format(item["type"])
             include["pose"] = read_pose(item)
             sdf_include.append(include)
@@ -362,7 +368,9 @@ def main(model_name):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Convert custom ED YAML model to SDF")
     parser.add_argument("model", type=str)
+    parser.add_argument("--recursive", default=False, action="store_true")
     arguments = parser.parse_args()
     model = arguments.model
+    recursive = arguments.recursive
 
-    sys.exit(main(model))
+    sys.exit(main(model, recursive=recursive))

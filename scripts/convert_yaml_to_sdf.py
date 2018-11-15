@@ -294,8 +294,6 @@ def main(model_name, recursive=False):
         file_type = "world"
     else:
         file_type = "model"
-        if recursive:
-            print("recursive doesn't apply to 'model' objects, only to 'world' objects.")
 
     if file_type == "world":
         sdf["world"] = {"name": model_name, "include": []}

@@ -12,6 +12,12 @@
             <!-- 
             The uri should refer to a square greyscale png of side length 2^n+1, such as 129, 257, 513.
             White corresponds to the full height and black to zero height.
+            To keep a precision of 2.5cm/pixel:
+            129: 3.225
+            257: 6.425
+            513: 12.825
+            1025: 25.625
+            2049: 51.225
             -->
             <uri>model://test_sdf/heightmap_walls/roboticslab_walls.png</uri>
             <size>25.625 25.625 2</size>  <!-- Width, depth and height of the heightmap in world units. -->

@@ -3,10 +3,13 @@
 import sys
 import os
 import re
+import io
 import argparse
 import yaml
 from xml.dom.minidom import parseString
 import xml.etree.ElementTree as ET
+from subprocess import call
+from PIL import Image
 
 
 def get_model_path(model_name, ext="yaml"):
@@ -114,7 +117,7 @@ def read_geometry(shape_item):
     return geometry, super_pose
 
 
-def read_shape_item(shape_item, link_names, color):
+def read_shape_item(shape_item, link_names, color, model_name):
     """
     Convert shape item to a link with collision and visual elements
     :param shape_item: dict of one shape item
@@ -151,10 +154,41 @@ def read_shape_item(shape_item, link_names, color):
     # pose
     sdf_link_item["pose"] = read_pose(shape_item)
 
+    if "path" in shape_item and "blockheight" in shape_item:
+
+        # If there is a path and a blockheight in the shape_item, then there is a heightmap included in the yaml file
+        image_path = os.getenv("ED_MODEL_PATH") + "/{}".format(model_name) + "/{}".format(shape_item["path"])
+        new_image_path = os.path.dirname(image_path) + "/{}_converted.png"\
+            .format(os.path.splitext(shape_item["path"])[0])
+
+        # Execute Imagemagick command to invert the image
+        call("convert -negate {} {}".format(image_path, new_image_path), shell=True)
+
+        # Import the new png image and get its sizes to determine the physical square length (in meters) of the map
+        with Image.open(new_image_path, "r") as f:
+            width, height = f.size
+        size = "{0} {0} {1}".format(max(width, height)*shape_item["resolution"], shape_item["blockheight"])
+
+        sdf_heightmap = {"heightmap": {"uri": "model://{}".format(os.path.basename(new_image_path)),
+                                       "size": size,
+                                       "pos": "0 0 0"}}
+        sdf_link_item["collision"]["geometry"].update(sdf_heightmap)
+        sdf_link_item["visual"]["geometry"].update(sdf_heightmap)
+
+        print "Gazebo requires that the image used for the heightmap be square and its\nsides be 2^n+1 (n=1,2,3,...) " \
+              "pixels in size. As such, recomended sizes\ninclude 129 x 129, 257 x 257, 513 x 513.\n"
+        resolution = input("What side length should the final image have (in pixels)?:\n")
+
+        # Execute Imagemagick command to resize its canvas with provided resolution, keeping the image centered.
+        call("convert {0} -resize {1}x{1} -background black -compose Copy -gravity center -extent {1}x{1}"
+             " -quality 92 {2}".format(new_image_path, resolution, new_image_path), shell=True)
+
+        print "Successfully created {}.".format(new_image_path)
+
     return sdf_link_item
 
 
-def read_shape(shape, link_names, color):
+def read_shape(shape, link_names, color, model_name):
     """
     Convert (array of) shape(s) to list of SDF links
     :param shape: shape dict
@@ -170,9 +204,9 @@ def read_shape(shape, link_names, color):
     # Check if compound type has name (inserted as comment in yaml)
     if "compound" in shape:
         for item in shape["compound"]:
-            sdf_link.append(read_shape_item(item, link_names, color))
+            sdf_link.append(read_shape_item(item, link_names, color, model_name))
     else:
-        sdf_link.append(read_shape_item(shape, link_names, color))
+        sdf_link.append(read_shape_item(shape, link_names, color, model_name))
 
     return sdf_link
 
@@ -321,7 +355,7 @@ def main(model_name, recursive=False):
 
         link_names = []
         if "shape" in yml:
-            sdf["model"]["link"].extend(read_shape(yml["shape"], link_names, color))
+            sdf["model"]["link"].extend(read_shape(yml["shape"], link_names, color, model_name))
 
         if "areas" in yml:
             sdf["model"]["link"].extend(read_areas(yml["areas"], link_names))

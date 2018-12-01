@@ -200,8 +200,6 @@ def read_shape_item(shape_item, link_names, color, model_name):
                                                           "size": 1}
         sdf_link_item["visual"]["geometry"]["use_terrain_paging"] = "false"
 
-    print sdf_link_item
-
     # pose
     sdf_link_item["pose"] = link_pose
 

@@ -134,6 +134,7 @@ def read_geometry(shape_item, model_name = None):
         # Import the new png image and get its sizes to determine the physical square length (in meters) of the map
         with Image.open(new_image_path, "r") as f:
             width, height = f.size
+        resolution = int(pow(2, (max(width, height)-2).bit_length())+1)
 
         # SDF heightmap origin is the center of the image, while our simulator has its origin at a corner (bottom-left).
         # So the origin (in the yaml) is converted such that the heightmap is placed correctly in SDF
@@ -142,14 +143,13 @@ def read_geometry(shape_item, model_name = None):
                     -round(-shape_item["origin_y"] - map_pose[1], 3),
                     -round(-shape_item["origin_z"] - map_pose[2], 3)]
 
-        size_new = "{0} {0} {1}".format(max(width, height)*shape_item["resolution"], shape_item["blockheight"])
+        size_new = "{0} {0} {1}".format(resolution*shape_item["resolution"], shape_item["blockheight"])
 
         sdf_heightmap = {"heightmap": {"uri": "model://{}/{}".format(model_name, os.path.basename(new_image_path)),
                                        "size": size_new,
                                        "pos": " ".join(map(str, map_pose))}}
         geometry.update(sdf_heightmap)
 
-        resolution = int(pow(2, (max(width, height)-2).bit_length())+1)
 
         # Execute Imagemagick command to resize its canvas with provided resolution, keeping the image centered.
         call("convert {0} -background black -gravity center -extent {1}x{1} {0}".format(new_image_path, resolution),

@@ -10,6 +10,7 @@ from xml.dom.minidom import parseString
 import xml.etree.ElementTree as ET
 from subprocess import call
 from PIL import Image
+from math import pow
 
 
 def get_model_path(model_name, ext="yaml"):
@@ -137,24 +138,22 @@ def read_geometry(shape_item, model_name = None):
         # SDF heightmap origin is the center of the image, while our simulator has its origin at a corner (bottom-left).
         # So the origin (in the yaml) is converted such that the heightmap is placed correctly in SDF
         map_pose = [0.5*width*shape_item["resolution"], 0.5*height*shape_item["resolution"], 0]
-        map_pose = [round(-shape_item["origin_x"] - map_pose[0], 3),
-                    round(-shape_item["origin_y"] - map_pose[1], 3),
-                    round(-shape_item["origin_z"] - map_pose[2], 3)]
+        map_pose = [-round(-shape_item["origin_x"] - map_pose[0], 3),
+                    -round(-shape_item["origin_y"] - map_pose[1], 3),
+                    -round(-shape_item["origin_z"] - map_pose[2], 3)]
 
         size_new = "{0} {0} {1}".format(max(width, height)*shape_item["resolution"], shape_item["blockheight"])
 
-        sdf_heightmap = {"heightmap": {"uri": "model://{}".format(os.path.basename(new_image_path)),
+        sdf_heightmap = {"heightmap": {"uri": "model://{}/{}".format(model_name, os.path.basename(new_image_path)),
                                        "size": size_new,
                                        "pos": " ".join(map(str, map_pose))}}
         geometry.update(sdf_heightmap)
 
-        print "Gazebo requires that the image used for the heightmap be square and its\nsides be 2^n+1 (n=1,2,3,...) " \
-              "pixels in size. As such, recomended sizes\ninclude 129 x 129, 257 x 257, 513 x 513.\n"
-        resolution = input("What side length should the final image have (in pixels)?:\n")
+        resolution = int(pow(2, (max(width, height)-2).bit_length())+1)
 
         # Execute Imagemagick command to resize its canvas with provided resolution, keeping the image centered.
-        call("convert {0} -resize {1}x{1} -background black -compose Copy -gravity center -extent {1}x{1}"
-             " -quality 92 {2}".format(new_image_path, resolution, new_image_path), shell=True)
+        call("convert {0} -background black -gravity center -extent {1}x{1} {0}".format(new_image_path, resolution),
+             shell=True)
 
         print "Successfully created {}.".format(new_image_path)
 
@@ -187,13 +186,21 @@ def read_shape_item(shape_item, link_names, color, model_name):
 
     # Maybe have a default name for collision and visual instead of link name
     sdf_link_item["collision"] = {"name": name, "geometry": geometry}
-    sdf_link_item["visual"] = {"name": name, "geometry": geometry}
+    # Copy to prevent textures in collision
+    sdf_link_item["visual"] = {"name": name, "geometry": geometry.copy()}
     if geometry_pose:
         sdf_link_item["collision"]["pose"] = geometry_pose
         sdf_link_item["visual"]["pose"] = geometry_pose
     if color:
         color_str = " ".join(map(str, color.values()+[1]))
         sdf_link_item["visual"]["material"] = {"ambient": color_str}
+    if "heightmap" in sdf_link_item["visual"]["geometry"]:
+        sdf_link_item["visual"]["geometry"]["texture"] = {"diffuse": "file://media/materials/textures/grey.png",
+                                                          "normal": "file://media/materials/textures/normal.png",
+                                                          "size": 1}
+        sdf_link_item["visual"]["geometry"]["use_terrain_paging"] = "false"
+
+    print sdf_link_item
 
     # pose
     sdf_link_item["pose"] = link_pose

@@ -124,7 +124,7 @@ def read_geometry(shape_item, model_name = None):
     if "path" in shape_item and "blockheight" in shape_item:
 
         # If there is a path and a blockheight in the shape_item, then there is a heightmap included in the yaml file
-        image_path = os.getenv("ED_MODEL_PATH") + "/{}".format(model_name) + "/{}".format(shape_item["path"])
+        image_path = os.getenv("ED_MODEL_PATH") + "/{}/{}".format(model_name, shape_item["path"])
         new_image_path = os.path.dirname(image_path) + "/{}_converted.png"\
             .format(os.path.splitext(shape_item["path"])[0])
 
@@ -134,28 +134,30 @@ def read_geometry(shape_item, model_name = None):
         # Import the new png image and get its sizes to determine the physical square length (in meters) of the map
         with Image.open(new_image_path, "r") as f:
             width, height = f.size
-        resolution = int(pow(2, (max(width, height)-2).bit_length())+1)
+        new_image_size = int(pow(2, (max(width, height)-2).bit_length())+1)
 
         # SDF heightmap origin is the center of the image, while our simulator has its origin at a corner (bottom-left).
         # So the origin (in the yaml) is converted such that the heightmap is placed correctly in SDF
-        map_pose = [0.5*width*shape_item["resolution"], 0.5*height*shape_item["resolution"], 0]
-        map_pose = [-round(-shape_item["origin_x"] - map_pose[0], 3),
-                    -round(-shape_item["origin_y"] - map_pose[1], 3),
-                    -round(-shape_item["origin_z"] - map_pose[2], 3)]
+        resolution = shape_item["resolution"]
+        old_map_center = [0.5 * width * resolution, 0.5 * height * resolution, 0.]
+        map_pos_list = [-round(-shape_item["origin_x"] - old_map_center[0], 3),
+                        -round(-shape_item["origin_y"] - old_map_center[1], 3),
+                        -round(-shape_item["origin_z"] - old_map_center[2], 3)]
+        map_pos = " ".join(map(str, map_pos_list))
 
-        size_new = "{0} {0} {1}".format(resolution*shape_item["resolution"], shape_item["blockheight"])
+        size_new_list = [new_image_size * resolution, new_image_size * resolution, shape_item["blockheight"]] 
+        size_new = " ".join(map(str, size_new_list))
 
-        sdf_heightmap = {"heightmap": {"uri": "model://{}/{}".format(model_name, os.path.basename(new_image_path)),
+        sdf_heightmap = {"uri": "model://{}/{}".format(model_name, os.path.basename(new_image_path)),
                                        "size": size_new,
-                                       "pos": " ".join(map(str, map_pose))}}
-        geometry.update(sdf_heightmap)
-
+                                       "pos": map_pos}
+        geometry["heightmap"] = sdf_heightmap
 
         # Execute Imagemagick command to resize its canvas with provided resolution, keeping the image centered.
         call("convert {0} -background black -gravity center -extent {1}x{1} {0}".format(new_image_path, resolution),
              shell=True)
 
-        print "Successfully created {}.".format(new_image_path)
+        print("Successfully created {}.".format(new_image_path))
 
     return geometry, link_pose, geometry_pose
 
@@ -185,7 +187,7 @@ def read_shape_item(shape_item, link_names, color, model_name):
     geometry, link_pose, geometry_pose = read_geometry(shape_item, model_name)
 
     # Maybe have a default name for collision and visual instead of link name
-    sdf_link_item["collision"] = {"name": name, "geometry": geometry}
+    sdf_link_item["collision"] = {"name": name, "geometry": geometry.copy()}
     # Copy to prevent textures in collision
     sdf_link_item["visual"] = {"name": name, "geometry": geometry.copy()}
     if geometry_pose:

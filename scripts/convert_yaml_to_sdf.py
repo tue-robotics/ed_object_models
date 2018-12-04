@@ -154,8 +154,11 @@ def read_geometry(shape_item, model_name = None):
         geometry["heightmap"] = sdf_heightmap
 
         # Execute Imagemagick command to resize its canvas with provided resolution, keeping the image centered.
-        call("convert {0} -background black -gravity center -extent {1}x{1} {0}".format(new_image_path, resolution),
-             shell=True)
+        call("convert {0} -background black -gravity center -extent {1}x{1} {0}"
+             .format(new_image_path, new_image_size), shell=True)
+
+        # Flatten image layers
+        call("convert {0} -flatten {0}".format(new_image_path, new_image_size), shell=True)
 
         print("Successfully created {}.".format(new_image_path))
 
@@ -197,10 +200,11 @@ def read_shape_item(shape_item, link_names, color, model_name):
         color_str = " ".join(map(str, color.values()+[1]))
         sdf_link_item["visual"]["material"] = {"ambient": color_str}
     if "heightmap" in sdf_link_item["visual"]["geometry"]:
-        sdf_link_item["visual"]["geometry"]["texture"] = {"diffuse": "file://media/materials/textures/grey.png",
-                                                          "normal": "file://media/materials/textures/normal.png",
-                                                          "size": 1}
-        sdf_link_item["visual"]["geometry"]["use_terrain_paging"] = "false"
+        sdf_link_item["visual"]["geometry"]["heightmap"]["texture"] = \
+            {"diffuse": "file://media/materials/textures/grey.png",
+             "normal": "file://media/materials/textures/normal.png",
+             "size": 1}
+        sdf_link_item["visual"]["geometry"]["heightmap"]["use_terrain_paging"] = "false"
 
     # pose
     sdf_link_item["pose"] = link_pose

@@ -140,11 +140,11 @@ def read_geometry(shape_item, model_name):
         image_path = model_folder + "/{}".format(shape_item["path"])
         new_image_path = "{}_converted.png".format(path.splitext(image_path)[0])
 
-        # Execute Imagemagick command to invert the image
+        # Execute ImageMagick command to invert the image
         try:
-            check_call("convert -negate {} {}".format(image_path + "adasdasd", new_image_path), shell=True)
+            check_call("convert -negate {} {}".format(image_path, new_image_path), shell=True)
         except Exception as e:
-            print(bcolors.BOLD + bcolors.FAIL + "[{}] ".format(model_name) + str(e) + bcolors.ENDC)
+            print(bcolors.FAIL + bcolors.BOLD + "[{}] ".format(model_name) + str(e) + bcolors.ENDC)
             raise
 
         # Import the new png image and get its sizes to determine the physical square length (in meters) of the map
@@ -174,23 +174,25 @@ def read_geometry(shape_item, model_name):
             check_call("convert {0} -background black -gravity center -extent {1}x{1} {0}"
                        .format(new_image_path, new_image_size), shell=True)
         except Exception as e:
-            print(bcolors.BOLD + bcolors.FAIL + "[{}] ".format(model_name) + str(e) + bcolors.ENDC)
+            print(bcolors.FAIL + bcolors.BOLD + "[{}] ".format(model_name) + str(e) + bcolors.ENDC)
             raise
 
         # Flatten image layers
         try:
             check_call("convert {0} -flatten {0}".format(new_image_path, new_image_size), shell=True)
         except Exception as e:
-            print(bcolors.BOLD + bcolors.FAIL + "[{}] ".format(model_name) + str(e) + bcolors.ENDC)
+            print(bcolors.FAIL + bcolors.BOLD + "[{}] ".format(model_name) + str(e) + bcolors.ENDC)
             raise
 
-        print(bcolors.OKGREEN + "Successfully created {}.".format(new_image_path) + bcolors.ENDC)
+        print(bcolors.OKGREEN + "[{}] Successfully created new heightmap:".format(model_name))
+        print(new_image_path + bcolors.ENDC)
 
     elif "path" in shape_item and ".xml" in shape_item["path"]:
         print(bcolors.WARNING +
               "[{}] Conversion of XML shapes is not implemented, please convert to yaml manually first"
               .format(model_name)
               + bcolors.ENDC)
+        return None, None, None
 
     return geometry, link_pose, geometry_pose
 
@@ -220,6 +222,11 @@ def read_shape_item(shape_item, link_names, color, model_name):
     sdf_link_item["name"] = name
 
     geometry, link_pose, geometry_pose = read_geometry(shape_item, model_name)
+
+    if geometry is None:
+        print(bcolors.FAIL + "[{}] Error during geometry parsing of shape:".format(model_name))
+        print(str(shape_item) + bcolors.ENDC)
+        return None
 
     # Maybe have a default name for collision and visual instead of link name
     sdf_link_item["collision"] = {"name": name, "geometry": geometry.copy()}
@@ -262,9 +269,17 @@ def read_shape(shape, link_names, color, model_name):
     # Check if compound type has name (inserted as comment in yaml)
     if "compound" in shape:
         for item in shape["compound"]:
-            sdf_link.append(read_shape_item(item, link_names, color, model_name))
+            shape_item = read_shape_item(item, link_names, color, model_name)
+            if shape_item is None:
+                print(bcolors.FAIL + "[{}] Error during compound shape parsing".format(model_name) + bcolors.ENDC)
+                return None
+            sdf_link.append(shape_item)
     else:
-        sdf_link.append(read_shape_item(shape, link_names, color, model_name))
+        shape_item = read_shape_item(shape, link_names, color, model_name)
+        if shape_item is None:
+            print(bcolors.FAIL + "[{}] Error during single shape parsing".format(model_name) + bcolors.ENDC)
+            return None
+        sdf_link.append(shape_item)
 
     return sdf_link
 
@@ -294,11 +309,15 @@ def read_areas(areas, link_names, model_name):
 
         uname = unique_name(name, link_names)
         if not uname == name:
-            print("Name of area has changed from '{}' to '{}'".format(name, uname))
+            print(bcolors.BOLD + "Name of area has changed from '{}' to '{}'".format(name, uname) + bcolors.ENDC)
         sdf_link_item = {"name": uname}
 
         for shape_item in area["shape"]:
             geometry, link_pose, geometry_pose = read_geometry(shape_item, model_name)
+            if geometry is None:
+                print(bcolors.FAIL + "[{}] Error during geometry parsing of area: {}".format(model_name, uname)
+                      + bcolors.ENDC)
+                return None
             shape_name = unique_name(uname, area_names)
             sdf_link_item["virtual_area"] = {"name": shape_name, "geometry": geometry}
             if geometry_pose:
@@ -321,8 +340,8 @@ def parse_to_xml(xml, item, list_name=""):
     """
     if isinstance(item, list):
         if not list_name:
-            print("list_name should be passed on by parent in case of a list")
-            return -1
+            raise Exception(bcolors.FAIL + "(parse_to_xml) list_name should be passed on by parent in case of a list"
+                            + bcolors.ENDC)
         for v in item:
             child = ET.SubElement(xml, list_name)
             parse_to_xml(child, v)
@@ -341,7 +360,8 @@ def parse_to_xml(xml, item, list_name=""):
     elif isinstance(item, str) or isinstance(item, float) or isinstance(item, int):
         xml.text = str(item)
     else:
-        print("Cannot not parse object type: '{}'".format(type(item)))
+        raise Exception(bcolors.WARNING + "(parse_to_xml) Cannot not parse object type: '{}'".format(type(item))
+                        + bcolors.ENDC)
 
 
 def write_xml_to_file(xml_element, path):
@@ -361,11 +381,14 @@ def write_xml_to_file(xml_element, path):
 
 
 def main(model_name, recursive=False):
+    # strip trailing slash
+    if model_name[-1] == "/":
+        model_name = model_name[:-1]
     # get model path
     model_path = get_model_path(model_name, "yaml")
     if not model_path:
-        print ("no model path found for model: {}".format(model_name))
-        return -1
+        print (bcolors.FAIL + bcolors.BOLD + "[{}] No model path found".format(model_name) + bcolors.ENDC)
+        return 1
 
     # declare sdf dict including sdf version
     sdf = {"version": "1.6"}
@@ -387,12 +410,13 @@ def main(model_name, recursive=False):
         sdf["world"] = {"name": model_name, "include": []}
         sdf_include = sdf["world"]["include"]
         if not isinstance(yml["composition"], list):
-            print("composition should be a list")
-            return -1
+            print(bcolors.FAIL + bcolors.BOLD + "[{}] composition should be a list".format(model_name) + bcolors.ENDC)
+            return 1
         for item in yml["composition"]:
             if not isinstance(item, dict):
-                print("items in composition should be a dict")
-                return -1
+                print(bcolors.FAIL + bcolors.BOLD + "[{}] Items in composition should be a dict".format(model_name)
+                      + bcolors.ENDC)
+                return 1
             include = {"name": item["id"]}
             if "type" in item:
                 if recursive:
@@ -414,14 +438,26 @@ def main(model_name, recursive=False):
 
         link_names = []
         if "shape" in yml:
-            sdf["model"]["link"].extend(read_shape(yml["shape"], link_names, color, model_name))
+            shape = read_shape(yml["shape"], link_names, color, model_name)
+            if shape is None:
+                print(bcolors.FAIL + bcolors.BOLD + "[{}] Error during shape parsing".format(model_name) + bcolors.ENDC)
+                return 1
+            sdf["model"]["link"].extend(shape)
 
         if "areas" in yml:
-            sdf["model"]["link"].extend(read_areas(yml["areas"], link_names, model_name))
+            areas = read_areas(yml["areas"], link_names, model_name)
+            if areas is None:
+                print(bcolors.FAIL + bcolors.BOLD + "[{}] Error during areas parsing".format(model_name) + bcolors.ENDC)
+                return 1
+            sdf["model"]["link"].extend(areas)
 
     # convert combination of dicts and lists to ET Elements
     xml = ET.Element("sdf")
-    parse_to_xml(xml, sdf)
+    try:
+        parse_to_xml(xml, sdf)
+    except Exception as e:
+        print(bcolors.FAIL + bcolors.BOLD + "[{}] (XML) ".format(model_name) + str(e) + bcolors.ENDC)
+        return 1
 
     # write to sdf file
     model_sdf_path = path.dirname(model_path) + "/model.sdf"
@@ -431,15 +467,18 @@ def main(model_name, recursive=False):
     # Generate model.config
     test_model_path = get_model_path("test_sdf", "sdf")
     if not test_model_path:
-        print("Can't find 'test_sdf' model. Which is used for generation of 'model.config'")
-        print("model.config not generated. Gazebo will not be able to find the model: '{}'".format(model_name))
-        return -1
+        print(bcolors.FAIL + bcolors.BOLD + "Can't find 'test_sdf' model."
+                                            "Which is used for generation of 'model.config'")
+        print("model.config not generated. Gazebo will not be able to find the model: '{}'".format(model_name)
+              + bcolors.ENDC)
+        return 1
 
     test_config_path = path.dirname(test_model_path) + "/model.config"
     if not path.exists(test_config_path):
-        print("model.config path: '{}' doesn't exist")
-        print("model.config not generated. Gazebo will not be able to find the model: '{}'".format(model_name))
-        return -1
+        print(bcolors.FAIL + bcolors.BOLD + "model.config path: '{}' doesn't exist".format(test_config_path))
+        print("model.config not generated. Gazebo will not be able to find the model: '{}'".format(model_name)
+              + bcolors.ENDC)
+        return 1
 
     # xml parsing doesn't ignore whitespace, so reading the file manually
     with open(test_config_path, "r") as f:
@@ -455,7 +494,7 @@ def main(model_name, recursive=False):
     model_config_path = path.dirname(model_path) + "/model.config"
     write_xml_to_file(config_root, model_config_path)
 
-    print("Successfully converted model '{}' to SDF".format(model_name))
+    print(bcolors.OKGREEN + "[{}] Successfully converted to SDF".format(model_name) + bcolors.ENDC)
     return 0
 
 

@@ -1,16 +1,26 @@
 #!/usr/bin/env python
 
 import sys
-import os
+from os import getenv, path
 import re
-import io
 import argparse
 import yaml
 from xml.dom.minidom import parseString
 import xml.etree.ElementTree as ET
-from subprocess import call
+from subprocess import check_call
 from PIL import Image
 from math import pow
+
+
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
 
 
 def get_model_path(model_name, ext="yaml"):
@@ -23,10 +33,10 @@ def get_model_path(model_name, ext="yaml"):
     :return: absolute model path or empty string
     :rtype: str
     """
-    ed_model_path = os.getenv("ED_MODEL_PATH")
+    ed_model_path = getenv("ED_MODEL_PATH")
     model_path = ed_model_path + "/{}/model.{}".format(model_name, ext)
 
-    if not os.path.isfile(model_path):
+    if not path.isfile(model_path):
         return ""
 
     return model_path
@@ -126,12 +136,16 @@ def read_geometry(shape_item, model_name):
     elif "path" in shape_item and "blockheight" in shape_item:
 
         # If there is a path and a blockheight in the shape_item, then there is a heightmap included in the yaml file
-        image_path = os.getenv("ED_MODEL_PATH") + "/{}/{}".format(model_name, shape_item["path"])
-        new_image_path = os.path.dirname(image_path) + "/{}_converted.png"\
-            .format(os.path.splitext(shape_item["path"])[0])
+        model_folder = path.dirname(get_model_path(model_name))
+        image_path = model_folder + "/{}".format(shape_item["path"])
+        new_image_path = "{}_converted.png".format(path.splitext(image_path)[0])
 
         # Execute Imagemagick command to invert the image
-        call("convert -negate {} {}".format(image_path, new_image_path), shell=True)
+        try:
+            check_call("convert -negate {} {}".format(image_path + "adasdasd", new_image_path), shell=True)
+        except Exception as e:
+            print(bcolors.BOLD + bcolors.FAIL + "[{}] ".format(model_name) + str(e) + bcolors.ENDC)
+            raise
 
         # Import the new png image and get its sizes to determine the physical square length (in meters) of the map
         with Image.open(new_image_path, "r") as f:
@@ -150,22 +164,33 @@ def read_geometry(shape_item, model_name):
         size_new_list = [new_image_size * resolution, new_image_size * resolution, shape_item["blockheight"]] 
         size_new = " ".join(map(str, size_new_list))
 
-        sdf_heightmap = {"uri": "model://{}/{}".format(model_name, os.path.basename(new_image_path)),
-                                       "size": size_new,
-                                       "pos": map_pos}
+        sdf_heightmap = {"uri": "model://{}/{}".format(model_name, path.relpath(new_image_path, model_folder)),
+                         "size": size_new,
+                         "pos": map_pos}
         geometry["heightmap"] = sdf_heightmap
 
         # Execute Imagemagick command to resize its canvas with provided resolution, keeping the image centered.
-        call("convert {0} -background black -gravity center -extent {1}x{1} {0}"
-             .format(new_image_path, new_image_size), shell=True)
+        try:
+            check_call("convert {0} -background black -gravity center -extent {1}x{1} {0}"
+                       .format(new_image_path, new_image_size), shell=True)
+        except Exception as e:
+            print(bcolors.BOLD + bcolors.FAIL + "[{}] ".format(model_name) + str(e) + bcolors.ENDC)
+            raise
 
         # Flatten image layers
-        call("convert {0} -flatten {0}".format(new_image_path, new_image_size), shell=True)
+        try:
+            check_call("convert {0} -flatten {0}".format(new_image_path, new_image_size), shell=True)
+        except Exception as e:
+            print(bcolors.BOLD + bcolors.FAIL + "[{}] ".format(model_name) + str(e) + bcolors.ENDC)
+            raise
 
-        print("Successfully created {}.".format(new_image_path))
+        print(bcolors.OKGREEN + "Successfully created {}.".format(new_image_path) + bcolors.ENDC)
 
     elif "path" in shape_item and ".xml" in shape_item["path"]:
-        print("[{}] Conversion of XML shapes is not possible, please convert to yaml manually first".format(model_name))
+        print(bcolors.WARNING +
+              "[{}] Conversion of XML shapes is not implemented, please convert to yaml manually first"
+              .format(model_name)
+              + bcolors.ENDC)
 
     return geometry, link_pose, geometry_pose
 
@@ -244,13 +269,15 @@ def read_shape(shape, link_names, color, model_name):
     return sdf_link
 
 
-def read_areas(areas, link_names):
+def read_areas(areas, link_names, model_name):
     """
     Convert areas to links with a virtual area
     :param areas: list of areas
     :type areas: list
     :param link_names: list of link names already used
     :type link_names: list
+    :param model_name: name of current model being converted
+    :type model_name: str
     :return: list of links with a virtual area child element
     :rtype: list
     """
@@ -271,7 +298,7 @@ def read_areas(areas, link_names):
         sdf_link_item = {"name": uname}
 
         for shape_item in area["shape"]:
-            geometry, link_pose, geometry_pose = read_geometry(shape_item)
+            geometry, link_pose, geometry_pose = read_geometry(shape_item, model_name)
             shape_name = unique_name(uname, area_names)
             sdf_link_item["virtual_area"] = {"name": shape_name, "geometry": geometry}
             if geometry_pose:
@@ -390,14 +417,14 @@ def main(model_name, recursive=False):
             sdf["model"]["link"].extend(read_shape(yml["shape"], link_names, color, model_name))
 
         if "areas" in yml:
-            sdf["model"]["link"].extend(read_areas(yml["areas"], link_names))
+            sdf["model"]["link"].extend(read_areas(yml["areas"], link_names, model_name))
 
     # convert combination of dicts and lists to ET Elements
     xml = ET.Element("sdf")
     parse_to_xml(xml, sdf)
 
     # write to sdf file
-    model_sdf_path = os.path.dirname(model_path) + "/model.sdf"
+    model_sdf_path = path.dirname(model_path) + "/model.sdf"
     write_xml_to_file(xml, model_sdf_path)
 
     ##
@@ -408,8 +435,8 @@ def main(model_name, recursive=False):
         print("model.config not generated. Gazebo will not be able to find the model: '{}'".format(model_name))
         return -1
 
-    test_config_path = os.path.dirname(test_model_path) + "/model.config"
-    if not os.path.exists(test_config_path):
+    test_config_path = path.dirname(test_model_path) + "/model.config"
+    if not path.exists(test_config_path):
         print("model.config path: '{}' doesn't exist")
         print("model.config not generated. Gazebo will not be able to find the model: '{}'".format(model_name))
         return -1
@@ -425,7 +452,7 @@ def main(model_name, recursive=False):
     config_root.find("description").text = model_name
 
     # write model.config
-    model_config_path = os.path.dirname(model_path) + "/model.config"
+    model_config_path = path.dirname(model_path) + "/model.config"
     write_xml_to_file(config_root, model_config_path)
 
     print("Successfully converted model '{}' to SDF".format(model_name))

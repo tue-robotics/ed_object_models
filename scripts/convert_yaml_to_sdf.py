@@ -75,12 +75,14 @@ def read_pose(yaml_dict):
     return " ".join(map(str, pose))
 
 
-def read_geometry(shape_item, model_name = None):
+def read_geometry(shape_item, model_name):
     """
     Convert a shape item to a SDF geometry. With a possible pose offset. Which should be added to
     visual/collision/virtual_area
     :param shape_item: dict with shape description
     :type shape_item: dict
+    :param model_name: name of current model being converted
+    :type model_name: str
     :return: tuple of geometry, link_pose and geometry_pose
     :rtype: tuple
     """
@@ -177,6 +179,8 @@ def read_shape_item(shape_item, link_names, color, model_name):
     :type link_names: list
     :param color: None or dict of rgb values (0-1.0)
     :type color: dict
+    :param model_name: name of current model being converted
+    :type model_name: str
     :return: dict of SDF link element
     :rtype: dict
     """
@@ -224,6 +228,8 @@ def read_shape(shape, link_names, color, model_name):
     :type link_names: list
     :param color: None or dict of rgb values (0-1.0)
     :type color: dict
+    :param model_name: name of current model being converted
+    :type model_name: str
     :return: list of link elements
     :rtype: list
     """

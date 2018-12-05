@@ -93,7 +93,7 @@ def read_geometry(shape_item, model_name):
     :type shape_item: dict
     :param model_name: name of current model being converted
     :type model_name: str
-    :return: tuple of geometry, link_pose and geometry_pose
+    :return: tuple of geometry, link_pose and geometry_pose OR tuple of 3x None in case of error
     :rtype: tuple
     """
     geometry = {}
@@ -208,7 +208,7 @@ def read_shape_item(shape_item, link_names, color, model_name):
     :type color: dict
     :param model_name: name of current model being converted
     :type model_name: str
-    :return: dict of SDF link element
+    :return: dict of SDF link element OR None in case of error
     :rtype: dict
     """
     sdf_link_item = {}
@@ -262,7 +262,7 @@ def read_shape(shape, link_names, color, model_name):
     :type color: dict
     :param model_name: name of current model being converted
     :type model_name: str
-    :return: list of link elements
+    :return: list of link elements OR None in case of error
     :rtype: list
     """
     sdf_link = []
@@ -293,7 +293,7 @@ def read_areas(areas, link_names, model_name):
     :type link_names: list
     :param model_name: name of current model being converted
     :type model_name: str
-    :return: list of links with a virtual area child element
+    :return: list of links with a virtual area child element OR None in case of error
     :rtype: list
     """
     sdf_link = []
@@ -337,6 +337,7 @@ def parse_to_xml(xml, item, list_name=""):
     :type item: dict or list or str
     :param list_name: name of list, needs to be passed on by parent for each element
     :type list_name: str
+    :raises: Exception: incorrect usage of argument or unknown class type
     """
     if isinstance(item, list):
         if not list_name:
@@ -381,6 +382,15 @@ def write_xml_to_file(xml_element, path):
 
 
 def main(model_name, recursive=False):
+    """
+    Main convertion script
+    :param model_name: Name of the model, model_name/model.yaml should exist in ED_MODEL_PATH
+    :type model_name: str
+    :param recursive: If true all included models are also converted
+    :type recursive: bool
+    :return: Good: 0, Error: 1
+    :rtype: int
+    """
     # strip trailing slash
     if model_name[-1] == "/":
         model_name = model_name[:-1]

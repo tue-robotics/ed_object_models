@@ -121,7 +121,7 @@ def read_geometry(shape_item, model_name = None):
         if "pose" in yml_box:
             link_pose = read_pose(yml_box)
 
-    if "path" in shape_item and "blockheight" in shape_item:
+    elif "path" in shape_item and "blockheight" in shape_item:
 
         # If there is a path and a blockheight in the shape_item, then there is a heightmap included in the yaml file
         image_path = os.getenv("ED_MODEL_PATH") + "/{}/{}".format(model_name, shape_item["path"])
@@ -161,6 +161,9 @@ def read_geometry(shape_item, model_name = None):
         call("convert {0} -flatten {0}".format(new_image_path, new_image_size), shell=True)
 
         print("Successfully created {}.".format(new_image_path))
+
+    elif "path" in shape_item and ".xml" in shape_item["path"]:
+        print("[{}] Conversion of XML shapes is not possible, please convert to yaml manually first".format(model_name))
 
     return geometry, link_pose, geometry_pose
 

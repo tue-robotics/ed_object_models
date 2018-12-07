@@ -194,6 +194,13 @@ def read_geometry(shape_item, model_name):
               + bcolors.ENDC)
         return None, None, None
 
+    else:
+        print(bcolors.FAIL +
+              "[{}] No parsable shapes found"
+              .format(model_name)
+              + bcolors.ENDC)
+        return None, None, None
+
     return geometry, link_pose, geometry_pose
 
 

@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="robotics_testlabs/battery_table">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>0.55 0.8 0.7</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>0.55 0.8 0.7</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.2 0.3 0.4 1</ambient>
+        </material>
+      </visual>
+      <pose>0 0 0.35 0 0 0</pose>
+    </link>
+    <static>true</static>
+  </model>
+</sdf>

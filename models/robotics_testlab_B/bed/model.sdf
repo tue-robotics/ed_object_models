@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="robotics_testlab_B/bed">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>2.1 0.9 0.2</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>2.1 0.9 0.2</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.5 0.7 0.7 1</ambient>
+        </material>
+      </visual>
+      <pose>0.0 0.0 0.6 0 0 0</pose>
+    </link>
+    <link name="2">
+      <collision name="2">
+        <geometry>
+          <box>
+            <size>1.42 0.65 0.28</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="2">
+        <geometry>
+          <box>
+            <size>1.42 0.65 0.28</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.5 0.7 0.7 1</ambient>
+        </material>
+      </visual>
+      <pose>0.0 0.0 0.14 0 0 0</pose>
+    </link>
+    <link name="3">
+      <collision name="3">
+        <geometry>
+          <box>
+            <size>0.06 1.0 0.45</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="3">
+        <geometry>
+          <box>
+            <size>0.06 1.0 0.45</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.5 0.7 0.7 1</ambient>
+        </material>
+      </visual>
+      <pose>1.08 0.0 0.7 0 0 0</pose>
+    </link>
+    <link name="4">
+      <collision name="4">
+        <geometry>
+          <box>
+            <size>0.06 1.0 0.45</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="4">
+        <geometry>
+          <box>
+            <size>0.06 1.0 0.45</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.5 0.7 0.7 1</ambient>
+        </material>
+      </visual>
+      <pose>1.08 0.0 0.7 0 0 0</pose>
+    </link>
+    <link name="in_front_of">
+      <virtual_area name="in_front_of">
+        <geometry>
+          <box>
+            <size>2 0.6 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.0 -0.9 0.005 0 0 0</pose>
+      </virtual_area>
+    </link>
+    <static>true</static>
+  </model>
+</sdf>

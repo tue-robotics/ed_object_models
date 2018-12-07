@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="ddw/couch">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>0.4 1.25 0.75</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.0 0.375 0 0 0</pose>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>0.4 1.25 0.75</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.8 0.8 0.8 1</ambient>
+        </material>
+        <pose>0.0 0.0 0.375 0 0 0</pose>
+      </visual>
+      <pose>0 0 0 0 0 0</pose>
+    </link>
+    <link name="in_front_of">
+      <virtual_area name="in_front_of">
+        <geometry>
+          <box>
+            <size>0.9 0.6 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.45 0.0 0.005 0 0 0</pose>
+      </virtual_area>
+    </link>
+    <link name="on_top_of">
+      <virtual_area name="on_top_of">
+        <geometry>
+          <box>
+            <size>0.4 1.25 0.43</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.0 0.985 0 0 0</pose>
+      </virtual_area>
+    </link>
+    <static>true</static>
+  </model>
+</sdf>

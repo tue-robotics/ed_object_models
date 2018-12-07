@@ -1,0 +1,256 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="robotics_testlabs/plastic_cabinet">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>0.414 0.043 1.761</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>0.414 0.043 1.761</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+      </visual>
+      <pose>0 -0.3035 0.8805 0 0 0</pose>
+    </link>
+    <link name="2">
+      <collision name="2">
+        <geometry>
+          <box>
+            <size>0.414 0.043 1.761</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="2">
+        <geometry>
+          <box>
+            <size>0.414 0.043 1.761</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+      </visual>
+      <pose>0 0.3035 0.8805 0 0 0</pose>
+    </link>
+    <link name="3">
+      <collision name="3">
+        <geometry>
+          <box>
+            <size>0.043 0.65 1.761</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="3">
+        <geometry>
+          <box>
+            <size>0.043 0.65 1.761</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+      </visual>
+      <pose>-0.1855 0 0.8805 0 0 0</pose>
+    </link>
+    <link name="4">
+      <collision name="4">
+        <geometry>
+          <box>
+            <size>0.371 0.564 0.034</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="4">
+        <geometry>
+          <box>
+            <size>0.371 0.564 0.034</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+      </visual>
+      <pose>0.0215 0 1.744 0 0 0</pose>
+    </link>
+    <link name="5">
+      <collision name="5">
+        <geometry>
+          <box>
+            <size>0.371 0.564 0.031</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="5">
+        <geometry>
+          <box>
+            <size>0.371 0.564 0.031</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+      </visual>
+      <pose>0.0215 0 0.0155 0 0 0</pose>
+    </link>
+    <link name="6">
+      <collision name="6">
+        <geometry>
+          <box>
+            <size>0.371 0.564 0.031</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="6">
+        <geometry>
+          <box>
+            <size>0.371 0.564 0.031</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+      </visual>
+      <pose>0.0215 0 0.3555 0 0 0</pose>
+    </link>
+    <link name="7">
+      <collision name="7">
+        <geometry>
+          <box>
+            <size>0.371 0.564 0.031</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="7">
+        <geometry>
+          <box>
+            <size>0.371 0.564 0.031</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+      </visual>
+      <pose>0.0215 0 0.7065 0 0 0</pose>
+    </link>
+    <link name="8">
+      <collision name="8">
+        <geometry>
+          <box>
+            <size>0.371 0.564 0.031</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="8">
+        <geometry>
+          <box>
+            <size>0.371 0.564 0.031</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+      </visual>
+      <pose>0.0215 0 1.0575 0 0 0</pose>
+    </link>
+    <link name="9">
+      <collision name="9">
+        <geometry>
+          <box>
+            <size>0.371 0.564 0.031</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="9">
+        <geometry>
+          <box>
+            <size>0.371 0.564 0.031</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+      </visual>
+      <pose>0.0215 0 1.4135 0 0 0</pose>
+    </link>
+    <link name="in_front_of">
+      <virtual_area name="in_front_of">
+        <geometry>
+          <box>
+            <size>0.2 0.45 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.707 0.0 0.005 0 0 0</pose>
+      </virtual_area>
+    </link>
+    <link name="shelf1">
+      <virtual_area name="shelf1">
+        <geometry>
+          <box>
+            <size>0.311 0.504 0.27</size>
+          </box>
+        </geometry>
+        <pose>0.0215 0.0 0.186 0 0 0</pose>
+      </virtual_area>
+    </link>
+    <link name="shelf2">
+      <virtual_area name="shelf2">
+        <geometry>
+          <box>
+            <size>0.311 0.504 0.27</size>
+          </box>
+        </geometry>
+        <pose>0.0215 0.0 0.526 0 0 0</pose>
+      </virtual_area>
+    </link>
+    <link name="shelf3">
+      <virtual_area name="shelf3">
+        <geometry>
+          <box>
+            <size>0.311 0.504 0.27</size>
+          </box>
+        </geometry>
+        <pose>0.0215 0.0 0.877 0 0 0</pose>
+      </virtual_area>
+    </link>
+    <link name="on_top_of">
+      <virtual_area name="on_top_of">
+        <geometry>
+          <box>
+            <size>0.311 0.504 0.27</size>
+          </box>
+        </geometry>
+        <pose>0.0215 0.0 0.877 0 0 0</pose>
+      </virtual_area>
+    </link>
+    <link name="shelf4">
+      <virtual_area name="shelf4">
+        <geometry>
+          <box>
+            <size>0.311 0.504 0.27</size>
+          </box>
+        </geometry>
+        <pose>0.0215 0.0 1.228 0 0 0</pose>
+      </virtual_area>
+    </link>
+    <link name="shelf5">
+      <virtual_area name="shelf5">
+        <geometry>
+          <box>
+            <size>0.311 0.504 0.27</size>
+          </box>
+        </geometry>
+        <pose>0.0215 0.0 1.584 0 0 0</pose>
+      </virtual_area>
+    </link>
+    <static>true</static>
+  </model>
+</sdf>

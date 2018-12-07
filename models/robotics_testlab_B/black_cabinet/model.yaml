@@ -1,6 +1,14 @@
 type: cabinet
 shape:
-    path: shape/shape.xml
+    box:
+        pose:
+            x: 0
+            y: 0
+            z: 0.5
+        size:
+            x: 0.42
+            y: 0.92
+            z: 1.00
 areas:
   - name: near
     offset: 0.7

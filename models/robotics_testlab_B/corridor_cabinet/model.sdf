@@ -1,0 +1,146 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="robotics_testlab_B/corridor_cabinet">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>0.395 0.05 0.79</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>0.395 0.05 0.79</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+        </material>
+      </visual>
+      <pose>0 -0.37 0.395 0 0 0</pose>
+    </link>
+    <link name="2">
+      <collision name="2">
+        <geometry>
+          <box>
+            <size>0.395 0.05 0.79</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="2">
+        <geometry>
+          <box>
+            <size>0.395 0.05 0.79</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+        </material>
+      </visual>
+      <pose>0 0.37 0.395 0 0 0</pose>
+    </link>
+    <link name="3">
+      <collision name="3">
+        <geometry>
+          <box>
+            <size>0.395 0.69 0.05</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="3">
+        <geometry>
+          <box>
+            <size>0.395 0.69 0.05</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+        </material>
+      </visual>
+      <pose>0 0 0.765 0 0 0</pose>
+    </link>
+    <link name="4">
+      <collision name="4">
+        <geometry>
+          <box>
+            <size>0.395 0.69 0.05</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="4">
+        <geometry>
+          <box>
+            <size>0.395 0.69 0.05</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+        </material>
+      </visual>
+      <pose>0 0 0.025 0 0 0</pose>
+    </link>
+    <link name="5">
+      <collision name="5">
+        <geometry>
+          <box>
+            <size>0.395 0.69 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="5">
+        <geometry>
+          <box>
+            <size>0.395 0.69 0.02</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+        </material>
+      </visual>
+      <pose>0 0 0.395 0 0 0</pose>
+    </link>
+    <link name="6">
+      <collision name="6">
+        <geometry>
+          <box>
+            <size>0.395 0.02 0.69</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="6">
+        <geometry>
+          <box>
+            <size>0.395 0.02 0.69</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+        </material>
+      </visual>
+      <pose>0 0 0.395 0 0 0</pose>
+    </link>
+    <link name="in_front_of">
+      <virtual_area name="in_front_of">
+        <geometry>
+          <box>
+            <size>0.7 0.79 0</size>
+          </box>
+        </geometry>
+        <pose>0.35 0.0 0.0 0 0 0</pose>
+      </virtual_area>
+    </link>
+    <link name="on_top_of">
+      <virtual_area name="on_top_of">
+        <geometry>
+          <box>
+            <size>0.34 0.74 0.39</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.0 1.005 0 0 0</pose>
+      </virtual_area>
+    </link>
+    <static>true</static>
+  </model>
+</sdf>

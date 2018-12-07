@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="robotics_testlabs/electro_bar_2">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>0.095 7.07 0.15</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>0.095 7.07 0.15</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+      </visual>
+      <pose>0.0 -0.9925 0.075 0 0 0</pose>
+    </link>
+    <static>true</static>
+  </model>
+</sdf>

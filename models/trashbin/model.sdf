@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="trashbin">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <cylinder>
+            <length>0.3</length>
+            <radius>0.15</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <cylinder>
+            <length>0.3</length>
+            <radius>0.15</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+      <pose>0 0 0.15 0 0 0</pose>
+    </link>
+    <static>true</static>
+  </model>
+</sdf>

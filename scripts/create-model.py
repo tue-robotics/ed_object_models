@@ -6,6 +6,8 @@ import sys
 import yaml
 import os
 
+from ed_object_models.conversion_sdf import main as convert_main
+
 ROOT = os.environ['ED_MODEL_PATH']
 DEFAULT_BOTTOM_CLEARANCE = 0.02  # The 'onTopOff' area will start DEFAULT_BOTTOM_CLEARANCE above an object
 DEFAULT_SIDE_CLEARANCE = 0.03  # The 'onTopOff' area will be DEFAULT_SIDE_CLEARANCE smaller than an object in side dir
@@ -357,6 +359,8 @@ All lengths / distances are in meters, unless specified otherwise.""")
                       round(shelf_thickness[0]+(pl_height / 2), ROUND_LEVEL), "vertical %s" % (vertical_i+1))
 
     s.write()
+
+    convert_main(room + "/" + model_name)
 
 
 if __name__ == "__main__":

@@ -11,5 +11,6 @@ catkin_add_env_hooks(99.ed_object_models SHELLS bash DIRECTORY ${CMAKE_CURRENT_S
 ###################################
 ## catkin specific configuration ##
 ###################################
-catkin_package(
-)
+catkin_python_setup()
+
+catkin_package()

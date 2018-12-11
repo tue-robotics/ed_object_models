@@ -354,12 +354,12 @@ def parse_to_xml(xml, item, list_name=""):
     elif isinstance(item, dict):
         for k, v in item.items():
             # attributes
-            if k == "name" or k == "version":
+            if k == "name" or k == "version" or k == "type":
                 xml.set(k, v)
 
                 # Names in includes are elements, not attributes. Using below code generates names as attributes AND as
                 # elements:
-                if k == "version":
+                if not k == "name":
                     continue
 
                 # Another solution to above would be to input an extra argument to the parse_to_xml function to check if
@@ -430,7 +430,11 @@ def main(model_name, recursive=False):
         file_type = "model"
 
     if file_type == "world":
-        sdf["world"] = {"name": model_name, "include": []}
+        sdf["world"] = {"name": model_name, "include": [],
+                        "light": {"type": "directional", "name": "sun",
+                                  "cast_shadows": "true", "pose": "0 0 10 0 0 0", "diffuse": "0.8 0.8 0.8 1",
+                                  "specular": "0.2 0.2 0.2 1", "direction": "0.5 0.1 -0.9",
+                                  "attenuation": {"range": 1000, "constant": 0.9, "linear": 0.01, "quadratic": 0.001}}}
         sdf_include = sdf["world"]["include"]
         if not isinstance(yml["composition"], list):
             print(bcolors.FAIL + bcolors.BOLD + "[{}] composition should be a list".format(model_name) + bcolors.ENDC)

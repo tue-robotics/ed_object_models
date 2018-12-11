@@ -10,6 +10,7 @@ import xml.etree.ElementTree as ET
 from subprocess import check_call
 from PIL import Image
 from math import pow
+from collections import OrderedDict
 
 
 class bcolors:
@@ -444,7 +445,7 @@ def main(model_name, recursive=False):
 
     elif file_type == "model":
         sdf["model"] = {"name": model_name, "static": "true", "link": []}  # All default parameters should be added here
-        color = {}
+        color = OrderedDict()
         if "color" in yml:
             color["red"] = yml["color"]["red"]
             color["green"] = yml["color"]["green"]

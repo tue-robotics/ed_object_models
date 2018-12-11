@@ -1,9 +1,5 @@
-#!/usr/bin/env python
-
-import sys
 from os import getenv, path
 import re
-import argparse
 import yaml
 from xml.dom.minidom import parseString
 import xml.etree.ElementTree as ET
@@ -523,14 +519,3 @@ def main(model_name, recursive=False):
 
     print(bcolors.OKGREEN + "[{}] Successfully converted to SDF".format(model_name) + bcolors.ENDC)
     return 0
-
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Convert custom ED YAML model to SDF")
-    parser.add_argument("model", type=str)
-    parser.add_argument("--recursive", default=False, action="store_true")
-    arguments = parser.parse_args()
-    model = arguments.model
-    recursive = arguments.recursive
-
-    sys.exit(main(model, recursive=recursive))

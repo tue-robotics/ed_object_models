@@ -10,6 +10,7 @@ import xml.etree.ElementTree as ET
 from subprocess import check_call
 from PIL import Image
 from math import pow
+from collections import OrderedDict
 
 
 class bcolors:
@@ -353,9 +354,17 @@ def parse_to_xml(xml, item, list_name=""):
     elif isinstance(item, dict):
         for k, v in item.items():
             # attributes
-            if k == "name" or k == "version":
+            if k == "name" or k == "version" or k == "type":
                 xml.set(k, v)
-                continue
+
+                # Names in includes are elements, not attributes. Using below code generates names as attributes AND as
+                # elements:
+                if not k == "name":
+                    continue
+
+                # Another solution to above would be to input an extra argument to the parse_to_xml function to check if
+                # the file that is parsed is a world or a model. For models the names can then be set as attributes, for
+                # worlds as elements.
 
             if isinstance(v, list):
                 parse_to_xml(xml, v, k)
@@ -421,7 +430,11 @@ def main(model_name, recursive=False):
         file_type = "model"
 
     if file_type == "world":
-        sdf["world"] = {"name": model_name, "include": []}
+        sdf["world"] = {"name": model_name, "include": [],
+                        "light": {"type": "directional", "name": "sun",
+                                  "cast_shadows": "true", "pose": "0 0 10 0 0 0", "diffuse": "0.8 0.8 0.8 1",
+                                  "specular": "0.2 0.2 0.2 1", "direction": "0.5 0.1 -0.9",
+                                  "attenuation": {"range": 1000, "constant": 0.9, "linear": 0.01, "quadratic": 0.001}}}
         sdf_include = sdf["world"]["include"]
         if not isinstance(yml["composition"], list):
             print(bcolors.FAIL + bcolors.BOLD + "[{}] composition should be a list".format(model_name) + bcolors.ENDC)
@@ -444,7 +457,7 @@ def main(model_name, recursive=False):
 
     elif file_type == "model":
         sdf["model"] = {"name": model_name, "static": "true", "link": []}  # All default parameters should be added here
-        color = {}
+        color = OrderedDict()
         if "color" in yml:
             color["red"] = yml["color"]["red"]
             color["green"] = yml["color"]["green"]

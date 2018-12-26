@@ -8,6 +8,7 @@
             <size>0.4 0.4 1.0</size>
           </box>
         </geometry>
+        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -15,8 +16,10 @@
             <size>0.4 0.4 1.0</size>
           </box>
         </geometry>
+        <name>1</name>
       </visual>
       <pose>0 0 0.5 0 0 0</pose>
+      <name>1</name>
     </link>
     <link name="in_front_of">
       <virtual_area name="in_front_of">
@@ -26,8 +29,11 @@
           </box>
         </geometry>
         <pose>0.7 0.0 0.005 0 0 0</pose>
+        <name>in_front_of</name>
       </virtual_area>
+      <name>in_front_of</name>
     </link>
     <static>true</static>
+    <name>ddw/chair</name>
   </model>
 </sdf>

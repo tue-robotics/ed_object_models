@@ -9,6 +9,7 @@
           </box>
         </geometry>
         <pose>0.0 0.0 0.375 0 0 0</pose>
+        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -20,8 +21,10 @@
           <ambient>0.8 0.8 0.8 1</ambient>
         </material>
         <pose>0.0 0.0 0.375 0 0 0</pose>
+        <name>1</name>
       </visual>
       <pose>0 0 0 0 0 0</pose>
+      <name>1</name>
     </link>
     <link name="in_front_of">
       <virtual_area name="in_front_of">
@@ -31,7 +34,9 @@
           </box>
         </geometry>
         <pose>0.45 0.0 0.005 0 0 0</pose>
+        <name>in_front_of</name>
       </virtual_area>
+      <name>in_front_of</name>
     </link>
     <link name="on_top_of">
       <virtual_area name="on_top_of">
@@ -41,8 +46,11 @@
           </box>
         </geometry>
         <pose>0.0 0.0 0.985 0 0 0</pose>
+        <name>on_top_of</name>
       </virtual_area>
+      <name>on_top_of</name>
     </link>
     <static>true</static>
+    <name>ddw/couch</name>
   </model>
 </sdf>

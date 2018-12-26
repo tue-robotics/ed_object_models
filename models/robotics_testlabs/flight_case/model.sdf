@@ -8,6 +8,7 @@
             <size>0.75 0.7 1.33</size>
           </box>
         </geometry>
+        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -18,9 +19,12 @@
         <material>
           <ambient>0.1 0.1 0.1 1</ambient>
         </material>
+        <name>1</name>
       </visual>
       <pose>0 0 0.665 0 0 0</pose>
+      <name>1</name>
     </link>
     <static>true</static>
+    <name>robotics_testlabs/flight_case</name>
   </model>
 </sdf>

@@ -8,6 +8,7 @@
             <size>0.55 0.8 0.7</size>
           </box>
         </geometry>
+        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -16,11 +17,14 @@
           </box>
         </geometry>
         <material>
-          <ambient>0.2 0.3 0.4 1</ambient>
+          <ambient>0.4 0.3 0.2 1</ambient>
         </material>
+        <name>1</name>
       </visual>
       <pose>0 0 0.35 0 0 0</pose>
+      <name>1</name>
     </link>
     <static>true</static>
+    <name>robotics_testlabs/battery_table</name>
   </model>
 </sdf>

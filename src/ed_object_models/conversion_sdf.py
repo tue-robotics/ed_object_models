@@ -399,7 +399,7 @@ def write_xml_to_file(xml_element, path):
 
 def main(model_name, recursive=False):
     """
-    Main convertion script
+    Main conversion script
     :param model_name: Name of the model, model_name/model.yaml should exist in ED_MODEL_PATH
     :type model_name: str
     :param recursive: If true all included models are also converted

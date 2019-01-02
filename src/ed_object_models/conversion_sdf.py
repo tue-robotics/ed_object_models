@@ -1,4 +1,5 @@
 from os import getenv, path
+import glob
 import re
 import yaml
 from xml.dom.minidom import parseString
@@ -31,12 +32,18 @@ def get_model_path(model_name, ext="yaml"):
     :rtype: str
     """
     ed_model_path = getenv("ED_MODEL_PATH")
-    model_path = ed_model_path + "/{}/model.{}".format(model_name, ext)
+    if ext == "sdf":
+        model_path = ed_model_path + "/{}/model*.{}".format(model_name, ext)
+        files = glob.glob(model_path)
+        if len(files) == 0:
+            return ""
+        return files[-1]
 
-    if not path.isfile(model_path):
-        return ""
-
-    return model_path
+    else:
+        model_path = ed_model_path + "/{}/model.{}".format(model_name, ext)
+        if not path.isfile(model_path):
+            return ""
+        return model_path
 
 
 def unique_name(name, names):
@@ -410,7 +417,8 @@ def main(model_name, recursive=False):
         return 1
 
     # declare sdf dict including sdf version
-    sdf = {"version": "1.6"}
+    sdf_version = 1.6
+    sdf = {"version": str(sdf_version)}
 
     # read yaml file
     with open(model_path, "r") as stream:
@@ -483,7 +491,8 @@ def main(model_name, recursive=False):
         return 1
 
     # write to sdf file
-    model_sdf_path = path.dirname(model_path) + "/model.sdf"
+    sdf_filename = "model-" + str(sdf_version).replace(".","_") + ".sdf"
+    model_sdf_path = path.join(path.dirname(model_path), sdf_filename)
     write_xml_to_file(xml, model_sdf_path)
 
     ##
@@ -512,6 +521,9 @@ def main(model_name, recursive=False):
     # set name and description
     config_root.find("name").text = model_name
     config_root.find("description").text = model_name
+    config_sdf = config_root.find("sdf")
+    config_sdf.attrib['version'] = str(sdf_version)
+    config_sdf.text = sdf_filename
 
     # write model.config
     model_config_path = path.dirname(model_path) + "/model.config"

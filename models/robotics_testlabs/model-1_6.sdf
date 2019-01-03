@@ -111,7 +111,7 @@
       <uri>model://robotics_testlab_B/bed</uri>
     </include>
     <include name="tubing">
-      <pose>-3.4 -0.34 0 0 0 1.57079632679</pose>
+      <pose>-3.4 -0.34 0 0 0 -1.57079632679</pose>
       <name>tubing</name>
       <uri>model://robotics_testlab_B/tubing</uri>
     </include>

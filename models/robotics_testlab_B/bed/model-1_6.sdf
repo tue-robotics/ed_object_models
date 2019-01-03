@@ -90,7 +90,7 @@
         </material>
         <name>4</name>
       </visual>
-      <pose>1.08 0.0 0.7 0 0 0</pose>
+      <pose>-1.08 0.0 0.7 0 0 0</pose>
       <name>4</name>
     </link>
     <link name="in_front_of">

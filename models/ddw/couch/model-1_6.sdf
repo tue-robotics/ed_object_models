@@ -1,46 +1,56 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
-  <model name="ddw/table">
+  <model name="ddw/couch">
     <link name="1">
       <collision name="1">
         <geometry>
           <box>
-            <size>0.4 1.5 0.75</size>
+            <size>0.4 1.25 0.75</size>
           </box>
         </geometry>
+        <pose>0.0 0.0 0.375 0 0 0</pose>
+        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
           <box>
-            <size>0.4 1.5 0.75</size>
+            <size>0.4 1.25 0.75</size>
           </box>
         </geometry>
         <material>
           <ambient>0.8 0.8 0.8 1</ambient>
         </material>
+        <pose>0.0 0.0 0.375 0 0 0</pose>
+        <name>1</name>
       </visual>
-      <pose>0 0 0.375 0 0 0</pose>
+      <pose>0 0 0 0 0 0</pose>
+      <name>1</name>
     </link>
     <link name="in_front_of">
       <virtual_area name="in_front_of">
         <geometry>
           <box>
-            <size>0.5 1.0 0.01</size>
+            <size>0.9 0.6 0.01</size>
           </box>
         </geometry>
-        <pose>0.5 0.0 0.005 0 0 0</pose>
+        <pose>0.45 0.0 0.005 0 0 0</pose>
+        <name>in_front_of</name>
       </virtual_area>
+      <name>in_front_of</name>
     </link>
     <link name="on_top_of">
       <virtual_area name="on_top_of">
         <geometry>
           <box>
-            <size>0.38 1.48 0.3</size>
+            <size>0.4 1.25 0.43</size>
           </box>
         </geometry>
-        <pose>0.0 0.0 0.92 0 0 0</pose>
+        <pose>0.0 0.0 0.985 0 0 0</pose>
+        <name>on_top_of</name>
       </virtual_area>
+      <name>on_top_of</name>
     </link>
     <static>true</static>
+    <name>ddw/couch</name>
   </model>
 </sdf>

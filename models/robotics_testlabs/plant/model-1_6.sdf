@@ -1,25 +1,29 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
-  <model name="trashbin">
+  <model name="robotics_testlabs/plant">
     <link name="1">
       <collision name="1">
         <geometry>
           <cylinder>
-            <length>0.3</length>
-            <radius>0.15</radius>
+            <length>0.375</length>
+            <radius>0.2</radius>
           </cylinder>
         </geometry>
+        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
           <cylinder>
-            <length>0.3</length>
-            <radius>0.15</radius>
+            <length>0.375</length>
+            <radius>0.2</radius>
           </cylinder>
         </geometry>
+        <name>1</name>
       </visual>
-      <pose>0 0 0.15 0 0 0</pose>
+      <pose>0 0 0.1875 0 0 0</pose>
+      <name>1</name>
     </link>
     <static>true</static>
+    <name>robotics_testlabs/plant</name>
   </model>
 </sdf>

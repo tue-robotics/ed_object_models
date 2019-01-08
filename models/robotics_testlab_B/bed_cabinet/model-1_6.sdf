@@ -8,6 +8,7 @@
             <size>0.48 0.48 0.73</size>
           </box>
         </geometry>
+        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -15,9 +16,12 @@
             <size>0.48 0.48 0.73</size>
           </box>
         </geometry>
+        <name>1</name>
       </visual>
       <pose>0 0 0.365 0 0 0</pose>
+      <name>1</name>
     </link>
     <static>true</static>
+    <name>robotics_testlab_B/bed_cabinet</name>
   </model>
 </sdf>

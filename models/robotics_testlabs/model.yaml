@@ -165,7 +165,7 @@ composition:
           z: 0
           X: 0
           Y: 0
-          Z: 1.5707963267948966
+          Z: -1.5707963267948966
     - type: "table_120x80x76"
       id: "operator_table"
       pose:

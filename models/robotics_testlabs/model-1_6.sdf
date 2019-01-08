@@ -1,320 +1,410 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
   <world name="robotics_testlabs">
-    <include name="operator">
-      <pose>-2.798 -1.499 1.0 0 0 0</pose>
-    </include>
+    <light name="sun" type="directional">
+      <direction>0.5 0.1 -0.9</direction>
+      <pose>0 0 10 0 0 0</pose>
+      <name>sun</name>
+      <specular>0.2 0.2 0.2 1</specular>
+      <cast_shadows>true</cast_shadows>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <attenuation>
+        <range>1000</range>
+        <quadratic>0.001</quadratic>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+      </attenuation>
+    </light>
     <include name="walls">
       <pose>0 0 0 0 0 0</pose>
+      <name>walls</name>
       <uri>model://robotics_testlabs/walls</uri>
     </include>
     <include name="door2">
       <pose>1.31 5.585 0 0 0 -1.57079632679</pose>
+      <name>door2</name>
       <uri>model://robotics_testlabs/blue_door_right</uri>
     </include>
     <include name="floor">
       <pose>0 0 0 0 0 0</pose>
+      <name>floor</name>
       <uri>model://floor</uri>
     </include>
     <include name="plant">
       <pose>3.26 5.19 0 0 0 0</pose>
+      <name>plant</name>
       <uri>model://robotics_testlabs/plant</uri>
     </include>
     <include name="trashbin">
       <pose>3 3.6 0 0 0 0</pose>
+      <name>trashbin</name>
       <uri>model://trashbin</uri>
     </include>
     <include name="flight_case">
       <pose>-3.28 1.23 0.0 0 0 0</pose>
+      <name>flight_case</name>
       <uri>model://robotics_testlabs/flight_case</uri>
     </include>
     <include name="battery_table">
       <pose>-3.36 1.99 0.0 0 0 0</pose>
+      <name>battery_table</name>
       <uri>model://robotics_testlabs/battery_table</uri>
     </include>
     <include name="couch_table">
       <pose>3.34 1.5 0 0 0 3.14159265359</pose>
+      <name>couch_table</name>
       <uri>model://ddw/salon</uri>
     </include>
     <include name="black_cabinet1">
       <pose>2.98 -1.42 0 0 0 1.57079632679</pose>
+      <name>black_cabinet1</name>
       <uri>model://robotics_testlab_B/black_cabinet</uri>
     </include>
     <include name="black_cabinet2">
       <pose>2.06 -1.42 0 0 0 1.57079632679</pose>
+      <name>black_cabinet2</name>
       <uri>model://robotics_testlab_B/black_cabinet</uri>
     </include>
     <include name="black_cabinet3">
       <pose>1.14 -1.42 0 0 0 1.57079632679</pose>
+      <name>black_cabinet3</name>
       <uri>model://robotics_testlab_B/black_cabinet</uri>
     </include>
     <include name="black_cabinet4">
       <pose>0.22 -1.42 0 0 0 1.57079632679</pose>
+      <name>black_cabinet4</name>
       <uri>model://robotics_testlab_B/black_cabinet</uri>
     </include>
     <include name="black_cabinet5">
       <pose>-0.92 -1.42 0 0 0 1.57079632679</pose>
+      <name>black_cabinet5</name>
       <uri>model://robotics_testlab_B/black_cabinet</uri>
     </include>
     <include name="bar">
       <pose>2.65 0.3 0 0 0 1.57079632679</pose>
+      <name>bar</name>
       <uri>model://ddw/table</uri>
     </include>
     <include name="hallway_table">
       <pose>0.72 3.45 0.02 0 0 1.57079632679</pose>
+      <name>hallway_table</name>
       <uri>model://ddw/couch</uri>
     </include>
     <include name="cabinet">
       <pose>3.3 4.35 0 0 0 3.14159265359</pose>
+      <name>cabinet</name>
       <uri>model://robotics_testlab_B/corridor_cabinet</uri>
     </include>
     <include name="chair">
       <pose>2.0 5.3 0 0 0 -1.57079632679</pose>
+      <name>chair</name>
       <uri>model://ddw/chair</uri>
     </include>
     <include name="nightstand">
       <pose>-1.92 -1.42 0 0 0 1.57079632679</pose>
+      <name>nightstand</name>
       <uri>model://robotics_testlab_B/bed_cabinet</uri>
     </include>
     <include name="bed">
       <pose>-2.725 -0.52 0 0 0 1.57079632679</pose>
+      <name>bed</name>
       <uri>model://robotics_testlab_B/bed</uri>
     </include>
     <include name="tubing">
-      <pose>-3.4 -0.34 0 0 0 1.57079632679</pose>
+      <pose>-3.4 -0.34 0 0 0 -1.57079632679</pose>
+      <name>tubing</name>
       <uri>model://robotics_testlab_B/tubing</uri>
     </include>
     <include name="operator_table">
       <pose>-1.91 4.05 0.0 0 0 0</pose>
+      <name>operator_table</name>
       <uri>model://table_120x80x76</uri>
     </include>
     <include name="operator_table2">
       <pose>-3.11 4.05 0.0 0 0 0</pose>
+      <name>operator_table2</name>
       <uri>model://table_120x80x76</uri>
     </include>
     <include name="dinner_table">
       <pose>0.4 1.92 0.0 0 0 0</pose>
+      <name>dinner_table</name>
       <uri>model://table_120x80x76</uri>
     </include>
     <include name="workbench">
       <pose>-2.31 3.23 0.0 0 0 0</pose>
+      <name>workbench</name>
       <uri>model://table_120x80x76</uri>
     </include>
     <include name="workbench2">
       <pose>-3.31 3.03 0.0 0 0 1.57079632679</pose>
+      <name>workbench2</name>
       <uri>model://table_120x80x76</uri>
     </include>
     <include name="bookcase">
       <pose>3.24 2.713 0 0 0 3.1415</pose>
+      <name>bookcase</name>
       <uri>model://robotics_testlabs/plastic_cabinet</uri>
     </include>
     <include name="electro_bar_1">
       <pose>-3.72 2.96 0.94 0 0 0</pose>
+      <name>electro_bar_1</name>
       <uri>model://robotics_testlabs/electro_bar_1</uri>
     </include>
     <include name="electro_bar_2">
       <pose>3.5 2.96 0.94 0 0 0</pose>
+      <name>electro_bar_2</name>
       <uri>model://robotics_testlabs/electro_bar_2</uri>
     </include>
     <include name="corridor">
       <pose>2.7 5 0 0 0 0</pose>
+      <name>corridor</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="hallway">
       <pose>0 5.5 0 0 0 0</pose>
+      <name>hallway</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="bedroom">
       <pose>-2.0 -1.0 0 0 0 0</pose>
+      <name>bedroom</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="battery_point">
       <pose>-2.8 2.0 0 0 0 0</pose>
+      <name>battery_point</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="initial_pose">
       <pose>0.586 4.259 0 0 0 0</pose>
+      <name>initial_pose</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="robonurse_initial">
       <pose>0.586 4.259 0 0 0 0</pose>
+      <name>robonurse_initial</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="bookcase_waypoint">
       <pose>2.58 2.66 0 0 0 0</pose>
+      <name>bookcase_waypoint</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="entry_point">
       <pose>1.897 4.295 0 0 0 0</pose>
+      <name>entry_point</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="exit">
       <pose>-1.48 -0.031 0 0 0 3.1415</pose>
+      <name>exit</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="exit_pre">
       <pose>0 0 0 0 0 3.1415</pose>
+      <name>exit_pre</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="registration_table1">
       <pose>2.0 1.5 0 0 0 3.1415</pose>
+      <name>registration_table1</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="registration_table2">
       <pose>2.0 1.5 0 0 0 3.1415</pose>
+      <name>registration_table2</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="registration_table3">
       <pose>2.0 1.5 0 0 0 3.1415</pose>
+      <name>registration_table3</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="exit_1_rips">
       <pose>-1.48 -0.031 0 0 0 3.1415</pose>
+      <name>exit_1_rips</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="exit_2_rips">
       <pose>-1.48 -0.031 0 0 0 3.1415</pose>
+      <name>exit_2_rips</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="exit_3_rips">
       <pose>-1.48 -0.031 0 0 0 3.1415</pose>
+      <name>exit_3_rips</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="exit_4_rips">
       <pose>-1.48 -0.031 0 0 0 3.1415</pose>
+      <name>exit_4_rips</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="door_navigation">
       <pose>-0.168 6.216 0 0 0 -1.5708</pose>
+      <name>door_navigation</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="door_opening_left_dest">
       <pose>-0.168 6.216 0 0 0 1.5708</pose>
+      <name>door_opening_left_dest</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="door_opening_right_dest">
       <pose>0.862 6.216 0 0 0 1.5708</pose>
+      <name>door_opening_right_dest</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="door_opening_left_start">
       <pose>-0.168 4.8 0 0 0 1.5708</pose>
+      <name>door_opening_left_start</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="door_opening_right_start">
       <pose>0.862 4.8 0 0 0 1.5708</pose>
+      <name>door_opening_right_start</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="help_me_carry_starting_point">
       <pose>1.65 2.0 0 0 0 1.5708</pose>
+      <name>help_me_carry_starting_point</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="avoid_that_start">
       <pose>2.2 2.2 0 0 0 -2.459</pose>
+      <name>avoid_that_start</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="avoid_that_wp1">
       <pose>2.648 -0.579 0 0 0 -3.137</pose>
+      <name>avoid_that_wp1</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="avoid_that_wp2">
       <pose>0.347 -0.665 0 0 0 1.008</pose>
+      <name>avoid_that_wp2</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="avoid_that_wp3">
       <pose>2.648 -0.579 0 0 0 -3.137</pose>
+      <name>avoid_that_wp3</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="what_did_you_say_start">
       <pose>0.347 -0.665 0 0 0 1.008</pose>
+      <name>what_did_you_say_start</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="person_rec_learning">
       <pose>2.661 4.052 0 0 0 3.139</pose>
+      <name>person_rec_learning</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="person_rec_living_room_1">
       <pose>2.016 3.025 0 0 0 -1.572</pose>
+      <name>person_rec_living_room_1</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="person_rec_living_room_2">
       <pose>2.482 2.27 0 0 0 -1.899</pose>
+      <name>person_rec_living_room_2</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="person_rec_living_room_3">
       <pose>1.51 2.22 0 0 0 -0.971</pose>
+      <name>person_rec_living_room_3</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="gpsr_meeting_point">
       <pose>2.2 1.5 0 0 0 3.1415</pose>
+      <name>gpsr_meeting_point</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="operator_pose">
       <pose>0.0 0.0 0 0 0 0.0</pose>
+      <name>operator_pose</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="explore1">
       <pose>2.0 4.0 0 0 0 0.0</pose>
+      <name>explore1</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="explore2">
       <pose>2.0 2.5 0 0 0 0.0</pose>
+      <name>explore2</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="explore3">
       <pose>2.0 2.0 0 0 0 3.14</pose>
+      <name>explore3</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="explore4">
       <pose>2.0 1.5 0 0 0 0.0</pose>
+      <name>explore4</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="explore5">
       <pose>1.0 0.3 0 0 0 0.0</pose>
+      <name>explore5</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="explore6">
       <pose>1.5 -0.5 0 0 0 -1.57</pose>
+      <name>explore6</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="explore7">
       <pose>-1.5 0.0 0 0 0 3.14</pose>
+      <name>explore7</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="explore8">
       <pose>-1.5 2.0 0 0 0 2.36</pose>
+      <name>explore8</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="explore9">
       <pose>-0.5 4.0 0 0 0 3.14</pose>
+      <name>explore9</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="explore10">
       <pose>0.5 4.5 0 0 0 -1.57</pose>
+      <name>explore10</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="wp_test_nav1">
       <pose>2.032 1.03 0 0 0 3.138</pose>
+      <name>wp_test_nav1</name>
       <uri>model://waypoint</uri>
     </include>
     <include name="livingroom">
       <pose>1.5 1.0 0.0 0 0 0</pose>
+      <name>livingroom</name>
       <uri>model://room</uri>
     </include>
     <include name="kitchen">
       <pose>2.2 4.5 0.0 0 0 0</pose>
+      <name>kitchen</name>
       <uri>model://room</uri>
     </include>
     <include name="bedroom">
       <pose>-2.0 -0.5 0.0 0 0 0</pose>
+      <name>bedroom</name>
       <uri>model://room</uri>
     </include>
     <include name="workshop">
       <pose>-2.0 3.0 0.0 0 0 0</pose>
+      <name>workshop</name>
       <uri>model://room</uri>
     </include>
     <include name="hallway">
       <pose>0.0 4.5 0.0 0 0 0</pose>
+      <name>hallway</name>
       <uri>model://room</uri>
     </include>
+    <name>robotics_testlabs</name>
   </world>
 </sdf>

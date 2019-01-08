@@ -30,7 +30,7 @@ shape:
                 z: 0.45
         - box:
             pose:
-                x: 1.08
+                x: -1.08
                 y: 0.0
                 z: 0.70
             size:

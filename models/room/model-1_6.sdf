@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
-  <model name="waypoint">
+  <model name="room">
     <static>true</static>
+    <name>room</name>
   </model>
 </sdf>

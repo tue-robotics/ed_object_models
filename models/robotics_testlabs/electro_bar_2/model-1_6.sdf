@@ -1,26 +1,30 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
-  <model name="robotics_testlabs/flight_case">
+  <model name="robotics_testlabs/electro_bar_2">
     <link name="1">
       <collision name="1">
         <geometry>
           <box>
-            <size>0.75 0.7 1.33</size>
+            <size>0.095 7.07 0.15</size>
           </box>
         </geometry>
+        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
           <box>
-            <size>0.75 0.7 1.33</size>
+            <size>0.095 7.07 0.15</size>
           </box>
         </geometry>
         <material>
-          <ambient>0.1 0.1 0.1 1</ambient>
+          <ambient>0.75 0.75 0.75 1</ambient>
         </material>
+        <name>1</name>
       </visual>
-      <pose>0 0 0.665 0 0 0</pose>
+      <pose>0.0 -0.9925 0.075 0 0 0</pose>
+      <name>1</name>
     </link>
     <static>true</static>
+    <name>robotics_testlabs/electro_bar_2</name>
   </model>
 </sdf>

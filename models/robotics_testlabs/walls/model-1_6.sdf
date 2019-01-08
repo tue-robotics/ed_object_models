@@ -16,6 +16,7 @@
             <size>51.225 51.225 2.0</size>
           </heightmap>
         </geometry>
+        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -31,9 +32,12 @@
             <size>51.225 51.225 2.0</size>
           </heightmap>
         </geometry>
+        <name>1</name>
       </visual>
       <pose>0 0 0 0 0 0</pose>
+      <name>1</name>
     </link>
     <static>true</static>
+    <name>robotics_testlabs/walls</name>
   </model>
 </sdf>

@@ -27,7 +27,7 @@
       <name>1</name>
     </link>
     <link name="in_front_of">
-      <virtual_area name="in_front_of">
+      <virtual_volume name="in_front_of">
         <geometry>
           <box>
             <size>0.9 0.6 0.01</size>
@@ -35,11 +35,11 @@
         </geometry>
         <pose>0.45 0.0 0.005 0 0 0</pose>
         <name>in_front_of</name>
-      </virtual_area>
+      </virtual_volume>
       <name>in_front_of</name>
     </link>
     <link name="on_top_of">
-      <virtual_area name="on_top_of">
+      <virtual_volume name="on_top_of">
         <geometry>
           <box>
             <size>0.4 1.25 0.43</size>
@@ -47,7 +47,7 @@
         </geometry>
         <pose>0.0 0.0 0.985 0 0 0</pose>
         <name>on_top_of</name>
-      </virtual_area>
+      </virtual_volume>
       <name>on_top_of</name>
     </link>
     <static>true</static>

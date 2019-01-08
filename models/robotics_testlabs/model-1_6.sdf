@@ -18,7 +18,7 @@
     <model name="livingroom">
       <pose>1.5 1.0 0.0 0 0 0</pose>
       <link name="in">
-        <virtual_area name="in">
+        <virtual_volume name="in">
           <geometry>
             <box>
               <size>2.5 3.6 0</size>
@@ -26,7 +26,7 @@
           </geometry>
           <pose>-0.15 -0.1 0.0 0 0 0</pose>
           <name>in</name>
-        </virtual_area>
+        </virtual_volume>
         <name>in</name>
       </link>
       <name>livingroom</name>
@@ -34,7 +34,7 @@
     <model name="kitchen">
       <pose>2.2 4.5 0.0 0 0 0</pose>
       <link name="in">
-        <virtual_area name="in">
+        <virtual_volume name="in">
           <geometry>
             <box>
               <size>1.2 1.3 0</size>
@@ -42,7 +42,7 @@
           </geometry>
           <pose>0.2 -0.15 0.0 0 0 0</pose>
           <name>in</name>
-        </virtual_area>
+        </virtual_volume>
         <name>in</name>
       </link>
       <name>kitchen</name>
@@ -50,7 +50,7 @@
     <model name="bedroom">
       <pose>-2.0 -0.5 0.0 0 0 0</pose>
       <link name="in">
-        <virtual_area name="in">
+        <virtual_volume name="in">
           <geometry>
             <box>
               <size>1.5 1.2 0</size>
@@ -58,7 +58,7 @@
           </geometry>
           <pose>0.55 0.1 0.0 0 0 0</pose>
           <name>in</name>
-        </virtual_area>
+        </virtual_volume>
         <name>in</name>
       </link>
       <name>bedroom</name>
@@ -66,7 +66,7 @@
     <model name="workshop">
       <pose>-2.0 3.0 0.0 0 0 0</pose>
       <link name="in">
-        <virtual_area name="in">
+        <virtual_volume name="in">
           <geometry>
             <box>
               <size>2.0 3.8 0</size>
@@ -74,7 +74,7 @@
           </geometry>
           <pose>0.2 0.1 0.0 0 0 0</pose>
           <name>in</name>
-        </virtual_area>
+        </virtual_volume>
         <name>in</name>
       </link>
       <name>workshop</name>
@@ -82,7 +82,7 @@
     <model name="hallway">
       <pose>0.0 4.5 0.0 0 0 0</pose>
       <link name="in">
-        <virtual_area name="in">
+        <virtual_volume name="in">
           <geometry>
             <box>
               <size>1.6 1.8 0</size>
@@ -90,7 +90,7 @@
           </geometry>
           <pose>0.3 -0.1 0.0 0 0 0</pose>
           <name>in</name>
-        </virtual_area>
+        </virtual_volume>
         <name>in</name>
       </link>
       <name>hallway</name>
@@ -463,31 +463,6 @@
       <pose>2.032 1.03 0 0 0 3.138</pose>
       <name>wp_test_nav1</name>
       <uri>model://waypoint</uri>
-    </include>
-    <include name="livingroom">
-      <pose>1.5 1.0 0.0 0 0 0</pose>
-      <name>livingroom</name>
-      <uri>model://room</uri>
-    </include>
-    <include name="kitchen">
-      <pose>2.2 4.5 0.0 0 0 0</pose>
-      <name>kitchen</name>
-      <uri>model://room</uri>
-    </include>
-    <include name="bedroom">
-      <pose>-2.0 -0.5 0.0 0 0 0</pose>
-      <name>bedroom</name>
-      <uri>model://room</uri>
-    </include>
-    <include name="workshop">
-      <pose>-2.0 3.0 0.0 0 0 0</pose>
-      <name>workshop</name>
-      <uri>model://room</uri>
-    </include>
-    <include name="hallway">
-      <pose>0.0 4.5 0.0 0 0 0</pose>
-      <name>hallway</name>
-      <uri>model://room</uri>
     </include>
     <name>robotics_testlabs</name>
   </world>

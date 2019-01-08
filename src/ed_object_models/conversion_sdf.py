@@ -92,7 +92,7 @@ def read_pose(yaml_dict):
 def read_geometry(shape_item, model_name):
     """
     Convert a shape item to a SDF geometry. With a possible pose offset. Which should be added to
-    visual/collision/virtual_area
+    visual/collision/virtual_volume
     :param shape_item: dict with shape description
     :type shape_item: dict
     :param model_name: name of current model being converted
@@ -327,9 +327,9 @@ def read_areas(areas, link_names, model_name):
                       + bcolors.ENDC)
                 return None
             shape_name = unique_name(uname, area_names)
-            sdf_link_item["virtual_area"] = {"name": shape_name, "geometry": geometry}
+            sdf_link_item["virtual_volume"] = {"name": shape_name, "geometry": geometry}
             if geometry_pose:
-                sdf_link_item["virtual_area"]["pose"] = geometry_pose
+                sdf_link_item["virtual_volume"]["pose"] = geometry_pose
 
             sdf_link.append(sdf_link_item)
 

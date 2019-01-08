@@ -94,7 +94,7 @@
       <name>4</name>
     </link>
     <link name="in_front_of">
-      <virtual_volume name="in_front_of">
+      <virtual_area name="in_front_of">
         <geometry>
           <box>
             <size>2 0.6 0.01</size>
@@ -102,7 +102,7 @@
         </geometry>
         <pose>0.0 -0.9 0.005 0 0 0</pose>
         <name>in_front_of</name>
-      </virtual_volume>
+      </virtual_area>
       <name>in_front_of</name>
     </link>
     <static>true</static>

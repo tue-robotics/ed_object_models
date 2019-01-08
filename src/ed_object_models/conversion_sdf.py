@@ -434,12 +434,13 @@ def main(model_name, recursive=False):
         file_type = "model"
 
     if file_type == "world":
-        sdf["world"] = {"name": model_name, "include": [],
+        sdf["world"] = {"name": model_name, "include": [], "model": [],
                         "light": {"type": "directional", "name": "sun",
                                   "cast_shadows": "true", "pose": "0 0 10 0 0 0", "diffuse": "0.8 0.8 0.8 1",
                                   "specular": "0.2 0.2 0.2 1", "direction": "0.5 0.1 -0.9",
                                   "attenuation": {"range": 1000, "constant": 0.9, "linear": 0.01, "quadratic": 0.001}}}
         sdf_include = sdf["world"]["include"]
+        sdf_model = sdf["world"]["model"]
         if not isinstance(yml["composition"], list):
             print(bcolors.FAIL + bcolors.BOLD + "[{}] composition should be a list".format(model_name) + bcolors.ENDC)
             return 1
@@ -455,6 +456,11 @@ def main(model_name, recursive=False):
                     #       instance of the type (for instance ids: table1 and table2 are both type TableA, so it will
                     #       recreate the SDF and config for TableA twice)
                     main(item["type"], recursive=recursive)
+                if item["type"] == "room":
+                    model = {"name": item["id"], "pose": read_pose(item), "link": []}
+                    model["link"].extend(read_areas(item["areas"], [], model_name))
+                    sdf_model.append(model)
+                    continue
                 include["uri"] = "model://{}".format(item["type"])
             include["pose"] = read_pose(item)
             sdf_include.append(include)

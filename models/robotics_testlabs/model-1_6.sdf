@@ -16,7 +16,6 @@
       </attenuation>
     </light>
     <model name="livingroom">
-      <pose>1.5 1.0 0.0 0 0 0</pose>
       <link name="in">
         <virtual_volume name="in">
           <geometry>
@@ -29,10 +28,11 @@
         </virtual_volume>
         <name>in</name>
       </link>
+      <pose>1.5 1.0 0.0 0 0 0</pose>
+      <static>true</static>
       <name>livingroom</name>
     </model>
     <model name="kitchen">
-      <pose>2.2 4.5 0.0 0 0 0</pose>
       <link name="in">
         <virtual_volume name="in">
           <geometry>
@@ -45,10 +45,11 @@
         </virtual_volume>
         <name>in</name>
       </link>
+      <pose>2.2 4.5 0.0 0 0 0</pose>
+      <static>true</static>
       <name>kitchen</name>
     </model>
     <model name="bedroom">
-      <pose>-2.0 -0.5 0.0 0 0 0</pose>
       <link name="in">
         <virtual_volume name="in">
           <geometry>
@@ -61,10 +62,11 @@
         </virtual_volume>
         <name>in</name>
       </link>
+      <pose>-2.0 -0.5 0.0 0 0 0</pose>
+      <static>true</static>
       <name>bedroom</name>
     </model>
     <model name="workshop">
-      <pose>-2.0 3.0 0.0 0 0 0</pose>
       <link name="in">
         <virtual_volume name="in">
           <geometry>
@@ -77,10 +79,11 @@
         </virtual_volume>
         <name>in</name>
       </link>
+      <pose>-2.0 3.0 0.0 0 0 0</pose>
+      <static>true</static>
       <name>workshop</name>
     </model>
     <model name="hallway">
-      <pose>0.0 4.5 0.0 0 0 0</pose>
       <link name="in">
         <virtual_volume name="in">
           <geometry>
@@ -93,6 +96,8 @@
         </virtual_volume>
         <name>in</name>
       </link>
+      <pose>0.0 4.5 0.0 0 0 0</pose>
+      <static>true</static>
       <name>hallway</name>
     </model>
     <include name="operator">

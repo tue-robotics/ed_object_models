@@ -397,6 +397,89 @@ def write_xml_to_file(xml_element, path):
         f.write(pretty_xml_string)
 
 
+def convert_world(yml, model_name, recursive=False):
+    """
+    convert world yaml to sdf world dict
+    :param yml: yaml object of a world ed yaml
+    :type yml: dict
+    :param model_name: Name of the world
+    :type model_name: str
+    :param recursive: If true all included models are also converted
+    :type recursive: bool
+    :return: sdf dict of the model
+    :rtype: dict
+    """
+    world = {"name": model_name, "include": [], "model": [],
+             "light": {"type": "directional", "name": "sun",
+                       "cast_shadows": "true", "pose": "0 0 10 0 0 0", "diffuse": "0.8 0.8 0.8 1",
+                       "specular": "0.2 0.2 0.2 1", "direction": "0.5 0.1 -0.9",
+                       "attenuation": {"range": 1000, "constant": 0.9, "linear": 0.01, "quadratic": 0.001}}}
+
+    world_include = world["include"]
+    world_model = world["model"]
+    if not isinstance(yml["composition"], list):
+        print(bcolors.FAIL + bcolors.BOLD + "[{}] composition should be a list".format(model_name) + bcolors.ENDC)
+        return 1
+    for item in yml["composition"]:
+        if not isinstance(item, dict):
+            print(bcolors.FAIL + bcolors.BOLD + "[{}] Items in composition should be a dict".format(model_name)
+                  + bcolors.ENDC)
+            return 1
+        include = {"name": item["id"]}
+        if "type" in item:
+            if recursive:
+                # Todo: If there are multiple objects of the same type, then this type's SDF is created for every
+                #       instance of the type (for instance ids: table1 and table2 are both type TableA, so it will
+                #       recreate the SDF and config for TableA twice)
+                main(item["type"], recursive=recursive)
+            if item["type"] == "room":
+                model = convert_model(item, item["id"])
+                model["name"] = item["id"]
+                model["pose"] = read_pose(item)
+                world_model.append(model)
+                continue
+            include["uri"] = "model://{}".format(item["type"])
+        include["pose"] = read_pose(item)
+        world_include.append(include)
+
+    return world
+
+
+def convert_model(yml, model_name):
+    """
+        convert model yaml to sdf model dict
+        :param yml: yaml object of a world ed yaml
+        :type yml: dict
+        :param model_name: Name of the model
+        :type model_name: str
+        :return: sdf dict of the model
+        :rtype: dict
+        """
+    model = {"name": model_name, "static": "true", "link": []}  # All default parameters should be added here
+    color = OrderedDict()
+    if "color" in yml:
+        color["red"] = yml["color"]["red"]
+        color["green"] = yml["color"]["green"]
+        color["blue"] = yml["color"]["blue"]
+
+    link_names = []
+    if "shape" in yml:
+        shape = read_shape(yml["shape"], link_names, color, model_name)
+        if shape is None:
+            print(bcolors.FAIL + bcolors.BOLD + "[{}] Error during shape parsing".format(model_name) + bcolors.ENDC)
+            return 1
+        model["link"].extend(shape)
+
+    if "areas" in yml:
+        areas = read_areas(yml["areas"], link_names, model_name)
+        if areas is None:
+            print(bcolors.FAIL + bcolors.BOLD + "[{}] Error during areas parsing".format(model_name) + bcolors.ENDC)
+            return 1
+        model["link"].extend(areas)
+
+    return model
+
+
 def main(model_name, recursive=False):
     """
     Main conversion script
@@ -429,64 +512,9 @@ def main(model_name, recursive=False):
 
     # determine file_type
     if "composition" in yml:
-        file_type = "world"
+        sdf["world"] = convert_world(yml, model_name, recursive)
     else:
-        file_type = "model"
-
-    if file_type == "world":
-        sdf["world"] = {"name": model_name, "include": [], "model": [],
-                        "light": {"type": "directional", "name": "sun",
-                                  "cast_shadows": "true", "pose": "0 0 10 0 0 0", "diffuse": "0.8 0.8 0.8 1",
-                                  "specular": "0.2 0.2 0.2 1", "direction": "0.5 0.1 -0.9",
-                                  "attenuation": {"range": 1000, "constant": 0.9, "linear": 0.01, "quadratic": 0.001}}}
-        sdf_include = sdf["world"]["include"]
-        sdf_model = sdf["world"]["model"]
-        if not isinstance(yml["composition"], list):
-            print(bcolors.FAIL + bcolors.BOLD + "[{}] composition should be a list".format(model_name) + bcolors.ENDC)
-            return 1
-        for item in yml["composition"]:
-            if not isinstance(item, dict):
-                print(bcolors.FAIL + bcolors.BOLD + "[{}] Items in composition should be a dict".format(model_name)
-                      + bcolors.ENDC)
-                return 1
-            include = {"name": item["id"]}
-            if "type" in item:
-                if recursive:
-                    # Todo: If there are multiple objects of the same type, then this type's SDF is created for every
-                    #       instance of the type (for instance ids: table1 and table2 are both type TableA, so it will
-                    #       recreate the SDF and config for TableA twice)
-                    main(item["type"], recursive=recursive)
-                if item["type"] == "room":
-                    model = {"name": item["id"], "pose": read_pose(item), "link": []}
-                    model["link"].extend(read_areas(item["areas"], [], model_name))
-                    sdf_model.append(model)
-                    continue
-                include["uri"] = "model://{}".format(item["type"])
-            include["pose"] = read_pose(item)
-            sdf_include.append(include)
-
-    elif file_type == "model":
-        sdf["model"] = {"name": model_name, "static": "true", "link": []}  # All default parameters should be added here
-        color = OrderedDict()
-        if "color" in yml:
-            color["red"] = yml["color"]["red"]
-            color["green"] = yml["color"]["green"]
-            color["blue"] = yml["color"]["blue"]
-
-        link_names = []
-        if "shape" in yml:
-            shape = read_shape(yml["shape"], link_names, color, model_name)
-            if shape is None:
-                print(bcolors.FAIL + bcolors.BOLD + "[{}] Error during shape parsing".format(model_name) + bcolors.ENDC)
-                return 1
-            sdf["model"]["link"].extend(shape)
-
-        if "areas" in yml:
-            areas = read_areas(yml["areas"], link_names, model_name)
-            if areas is None:
-                print(bcolors.FAIL + bcolors.BOLD + "[{}] Error during areas parsing".format(model_name) + bcolors.ENDC)
-                return 1
-            sdf["model"]["link"].extend(areas)
+        sdf["model"] = convert_model(yml, model_name)
 
     # convert combination of dicts and lists to ET Elements
     xml = ET.Element("sdf")

@@ -525,7 +525,7 @@ def main(model_name, recursive=False):
         return 1
 
     # write to sdf file
-    sdf_filename = "model-" + str(sdf_version).replace(".","_") + ".sdf"
+    sdf_filename = "model-" + str(sdf_version).replace(".", "_") + ".sdf"
     model_sdf_path = path.join(path.dirname(model_path), sdf_filename)
     write_xml_to_file(xml, model_sdf_path)
 

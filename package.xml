@@ -22,4 +22,6 @@
   <run_depend>tue_config</run_depend>
   <run_depend>yaml-cpp</run_depend>
   <run_depend>ed_msgs</run_depend>
+  <run_depend>gazebo_models</run_depend>
+
 </package>

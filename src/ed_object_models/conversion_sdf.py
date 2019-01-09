@@ -439,22 +439,25 @@ def convert_world(yml, model_name, recursive=False):
                 world_model.append(model)
                 continue
             include["uri"] = "model://{}".format(item["type"])
-        include["pose"] = read_pose(item)
-        world_include.append(include)
+            include["pose"] = read_pose(item)
+            world_include.append(include)
+        else:
+            model = {"name": item["id"], "pose": read_pose(item)}
+            world_model.append(model)
 
     return world
 
 
 def convert_model(yml, model_name):
     """
-        convert model yaml to sdf model dict
-        :param yml: yaml object of a world ed yaml
-        :type yml: dict
-        :param model_name: Name of the model
-        :type model_name: str
-        :return: sdf dict of the model
-        :rtype: dict
-        """
+    convert model yaml to sdf model dict
+    :param yml: yaml object of a world ed yaml
+    :type yml: dict
+    :param model_name: Name of the model
+    :type model_name: str
+    :return: sdf dict of the model
+    :rtype: dict
+    """
     model = {"name": model_name, "static": "true", "link": []}  # All default parameters should be added here
     color = OrderedDict()
     if "color" in yml:

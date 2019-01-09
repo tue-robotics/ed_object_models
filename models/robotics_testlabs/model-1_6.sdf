@@ -15,6 +15,10 @@
         <linear>0.01</linear>
       </attenuation>
     </light>
+    <model name="operator">
+      <pose>-2.798 -1.499 1.0 0 0 0</pose>
+      <name>operator</name>
+    </model>
     <model name="livingroom">
       <link name="in">
         <virtual_volume name="in">
@@ -100,10 +104,6 @@
       <static>true</static>
       <name>hallway</name>
     </model>
-    <include name="operator">
-      <pose>-2.798 -1.499 1.0 0 0 0</pose>
-      <name>operator</name>
-    </include>
     <include name="walls">
       <pose>0 0 0 0 0 0</pose>
       <name>walls</name>

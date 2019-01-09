@@ -434,15 +434,15 @@ def convert_world(yml, model_name, recursive=False):
                 main(item["type"], recursive=recursive)
             if item["type"] == "room":
                 model = convert_model(item, item["id"])
-                model["name"] = item["id"]
                 model["pose"] = read_pose(item)
                 world_model.append(model)
-                continue
-            include["uri"] = "model://{}".format(item["type"])
-            include["pose"] = read_pose(item)
-            world_include.append(include)
+            else:
+                include["uri"] = "model://{}".format(item["type"])
+                include["pose"] = read_pose(item)
+                world_include.append(include)
         else:
-            model = {"name": item["id"], "pose": read_pose(item)}
+            model = convert_model(item, item["id"])
+            model["pose"] = read_pose(item)
             world_model.append(model)
 
     return world

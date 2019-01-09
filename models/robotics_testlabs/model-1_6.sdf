@@ -17,6 +17,7 @@
     </light>
     <model name="operator">
       <pose>-2.798 -1.499 1.0 0 0 0</pose>
+      <static>true</static>
       <name>operator</name>
     </model>
     <model name="livingroom">

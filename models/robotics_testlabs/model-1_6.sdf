@@ -15,6 +15,96 @@
         <linear>0.01</linear>
       </attenuation>
     </light>
+    <model name="operator">
+      <pose>-2.798 -1.499 1.0 0 0 0</pose>
+      <static>true</static>
+      <name>operator</name>
+    </model>
+    <model name="livingroom">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>2.5 3.6 0</size>
+            </box>
+          </geometry>
+          <pose>-0.15 -0.1 0.0 0 0 0</pose>
+          <name>in</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>1.5 1.0 0.0 0 0 0</pose>
+      <static>true</static>
+      <name>livingroom</name>
+    </model>
+    <model name="kitchen">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>1.2 1.3 0</size>
+            </box>
+          </geometry>
+          <pose>0.2 -0.15 0.0 0 0 0</pose>
+          <name>in</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>2.2 4.5 0.0 0 0 0</pose>
+      <static>true</static>
+      <name>kitchen</name>
+    </model>
+    <model name="bedroom">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>1.5 1.2 0</size>
+            </box>
+          </geometry>
+          <pose>0.55 0.1 0.0 0 0 0</pose>
+          <name>in</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>-2.0 -0.5 0.0 0 0 0</pose>
+      <static>true</static>
+      <name>bedroom</name>
+    </model>
+    <model name="workshop">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>2.0 3.8 0</size>
+            </box>
+          </geometry>
+          <pose>0.2 0.1 0.0 0 0 0</pose>
+          <name>in</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>-2.0 3.0 0.0 0 0 0</pose>
+      <static>true</static>
+      <name>workshop</name>
+    </model>
+    <model name="hallway">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>1.6 1.8 0</size>
+            </box>
+          </geometry>
+          <pose>0.3 -0.1 0.0 0 0 0</pose>
+          <name>in</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>0.0 4.5 0.0 0 0 0</pose>
+      <static>true</static>
+      <name>hallway</name>
+    </model>
     <include name="walls">
       <pose>0 0 0 0 0 0</pose>
       <name>walls</name>
@@ -379,31 +469,6 @@
       <pose>2.032 1.03 0 0 0 3.138</pose>
       <name>wp_test_nav1</name>
       <uri>model://waypoint</uri>
-    </include>
-    <include name="livingroom">
-      <pose>1.5 1.0 0.0 0 0 0</pose>
-      <name>livingroom</name>
-      <uri>model://room</uri>
-    </include>
-    <include name="kitchen">
-      <pose>2.2 4.5 0.0 0 0 0</pose>
-      <name>kitchen</name>
-      <uri>model://room</uri>
-    </include>
-    <include name="bedroom">
-      <pose>-2.0 -0.5 0.0 0 0 0</pose>
-      <name>bedroom</name>
-      <uri>model://room</uri>
-    </include>
-    <include name="workshop">
-      <pose>-2.0 3.0 0.0 0 0 0</pose>
-      <name>workshop</name>
-      <uri>model://room</uri>
-    </include>
-    <include name="hallway">
-      <pose>0.0 4.5 0.0 0 0 0</pose>
-      <name>hallway</name>
-      <uri>model://room</uri>
     </include>
     <name>robotics_testlabs</name>
   </world>

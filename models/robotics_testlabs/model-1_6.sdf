@@ -20,7 +20,232 @@
       <static>true</static>
       <name>operator</name>
     </model>
-    <model name="livingroom">
+    <model name="corridor" type="waypoint">
+      <pose>2.7 5 0 0 0 0</pose>
+      <static>true</static>
+      <name>corridor</name>
+    </model>
+    <model name="hallway" type="waypoint">
+      <pose>0 5.5 0 0 0 0</pose>
+      <static>true</static>
+      <name>hallway</name>
+    </model>
+    <model name="bedroom" type="waypoint">
+      <pose>-2.0 -1.0 0 0 0 0</pose>
+      <static>true</static>
+      <name>bedroom</name>
+    </model>
+    <model name="battery_point" type="waypoint">
+      <pose>-2.8 2.0 0 0 0 0</pose>
+      <static>true</static>
+      <name>battery_point</name>
+    </model>
+    <model name="initial_pose" type="waypoint">
+      <pose>0.586 4.259 0 0 0 0</pose>
+      <static>true</static>
+      <name>initial_pose</name>
+    </model>
+    <model name="robonurse_initial" type="waypoint">
+      <pose>0.586 4.259 0 0 0 0</pose>
+      <static>true</static>
+      <name>robonurse_initial</name>
+    </model>
+    <model name="bookcase_waypoint" type="waypoint">
+      <pose>2.58 2.66 0 0 0 0</pose>
+      <static>true</static>
+      <name>bookcase_waypoint</name>
+    </model>
+    <model name="entry_point" type="waypoint">
+      <pose>1.897 4.295 0 0 0 0</pose>
+      <static>true</static>
+      <name>entry_point</name>
+    </model>
+    <model name="exit" type="waypoint">
+      <pose>-1.48 -0.031 0 0 0 3.1415</pose>
+      <static>true</static>
+      <name>exit</name>
+    </model>
+    <model name="exit_pre" type="waypoint">
+      <pose>0 0 0 0 0 3.1415</pose>
+      <static>true</static>
+      <name>exit_pre</name>
+    </model>
+    <model name="registration_table1" type="waypoint">
+      <pose>2.0 1.5 0 0 0 3.1415</pose>
+      <static>true</static>
+      <name>registration_table1</name>
+    </model>
+    <model name="registration_table2" type="waypoint">
+      <pose>2.0 1.5 0 0 0 3.1415</pose>
+      <static>true</static>
+      <name>registration_table2</name>
+    </model>
+    <model name="registration_table3" type="waypoint">
+      <pose>2.0 1.5 0 0 0 3.1415</pose>
+      <static>true</static>
+      <name>registration_table3</name>
+    </model>
+    <model name="exit_1_rips" type="waypoint">
+      <pose>-1.48 -0.031 0 0 0 3.1415</pose>
+      <static>true</static>
+      <name>exit_1_rips</name>
+    </model>
+    <model name="exit_2_rips" type="waypoint">
+      <pose>-1.48 -0.031 0 0 0 3.1415</pose>
+      <static>true</static>
+      <name>exit_2_rips</name>
+    </model>
+    <model name="exit_3_rips" type="waypoint">
+      <pose>-1.48 -0.031 0 0 0 3.1415</pose>
+      <static>true</static>
+      <name>exit_3_rips</name>
+    </model>
+    <model name="exit_4_rips" type="waypoint">
+      <pose>-1.48 -0.031 0 0 0 3.1415</pose>
+      <static>true</static>
+      <name>exit_4_rips</name>
+    </model>
+    <model name="door_navigation" type="waypoint">
+      <pose>-0.168 6.216 0 0 0 -1.5708</pose>
+      <static>true</static>
+      <name>door_navigation</name>
+    </model>
+    <model name="door_opening_left_dest" type="waypoint">
+      <pose>-0.168 6.216 0 0 0 1.5708</pose>
+      <static>true</static>
+      <name>door_opening_left_dest</name>
+    </model>
+    <model name="door_opening_right_dest" type="waypoint">
+      <pose>0.862 6.216 0 0 0 1.5708</pose>
+      <static>true</static>
+      <name>door_opening_right_dest</name>
+    </model>
+    <model name="door_opening_left_start" type="waypoint">
+      <pose>-0.168 4.8 0 0 0 1.5708</pose>
+      <static>true</static>
+      <name>door_opening_left_start</name>
+    </model>
+    <model name="door_opening_right_start" type="waypoint">
+      <pose>0.862 4.8 0 0 0 1.5708</pose>
+      <static>true</static>
+      <name>door_opening_right_start</name>
+    </model>
+    <model name="help_me_carry_starting_point" type="waypoint">
+      <pose>1.65 2.0 0 0 0 1.5708</pose>
+      <static>true</static>
+      <name>help_me_carry_starting_point</name>
+    </model>
+    <model name="avoid_that_start" type="waypoint">
+      <pose>2.2 2.2 0 0 0 -2.459</pose>
+      <static>true</static>
+      <name>avoid_that_start</name>
+    </model>
+    <model name="avoid_that_wp1" type="waypoint">
+      <pose>2.648 -0.579 0 0 0 -3.137</pose>
+      <static>true</static>
+      <name>avoid_that_wp1</name>
+    </model>
+    <model name="avoid_that_wp2" type="waypoint">
+      <pose>0.347 -0.665 0 0 0 1.008</pose>
+      <static>true</static>
+      <name>avoid_that_wp2</name>
+    </model>
+    <model name="avoid_that_wp3" type="waypoint">
+      <pose>2.648 -0.579 0 0 0 -3.137</pose>
+      <static>true</static>
+      <name>avoid_that_wp3</name>
+    </model>
+    <model name="what_did_you_say_start" type="waypoint">
+      <pose>0.347 -0.665 0 0 0 1.008</pose>
+      <static>true</static>
+      <name>what_did_you_say_start</name>
+    </model>
+    <model name="person_rec_learning" type="waypoint">
+      <pose>2.661 4.052 0 0 0 3.139</pose>
+      <static>true</static>
+      <name>person_rec_learning</name>
+    </model>
+    <model name="person_rec_living_room_1" type="waypoint">
+      <pose>2.016 3.025 0 0 0 -1.572</pose>
+      <static>true</static>
+      <name>person_rec_living_room_1</name>
+    </model>
+    <model name="person_rec_living_room_2" type="waypoint">
+      <pose>2.482 2.27 0 0 0 -1.899</pose>
+      <static>true</static>
+      <name>person_rec_living_room_2</name>
+    </model>
+    <model name="person_rec_living_room_3" type="waypoint">
+      <pose>1.51 2.22 0 0 0 -0.971</pose>
+      <static>true</static>
+      <name>person_rec_living_room_3</name>
+    </model>
+    <model name="gpsr_meeting_point" type="waypoint">
+      <pose>2.2 1.5 0 0 0 3.1415</pose>
+      <static>true</static>
+      <name>gpsr_meeting_point</name>
+    </model>
+    <model name="operator_pose" type="waypoint">
+      <pose>0.0 0.0 0 0 0 0.0</pose>
+      <static>true</static>
+      <name>operator_pose</name>
+    </model>
+    <model name="explore1" type="waypoint">
+      <pose>2.0 4.0 0 0 0 0.0</pose>
+      <static>true</static>
+      <name>explore1</name>
+    </model>
+    <model name="explore2" type="waypoint">
+      <pose>2.0 2.5 0 0 0 0.0</pose>
+      <static>true</static>
+      <name>explore2</name>
+    </model>
+    <model name="explore3" type="waypoint">
+      <pose>2.0 2.0 0 0 0 3.14</pose>
+      <static>true</static>
+      <name>explore3</name>
+    </model>
+    <model name="explore4" type="waypoint">
+      <pose>2.0 1.5 0 0 0 0.0</pose>
+      <static>true</static>
+      <name>explore4</name>
+    </model>
+    <model name="explore5" type="waypoint">
+      <pose>1.0 0.3 0 0 0 0.0</pose>
+      <static>true</static>
+      <name>explore5</name>
+    </model>
+    <model name="explore6" type="waypoint">
+      <pose>1.5 -0.5 0 0 0 -1.57</pose>
+      <static>true</static>
+      <name>explore6</name>
+    </model>
+    <model name="explore7" type="waypoint">
+      <pose>-1.5 0.0 0 0 0 3.14</pose>
+      <static>true</static>
+      <name>explore7</name>
+    </model>
+    <model name="explore8" type="waypoint">
+      <pose>-1.5 2.0 0 0 0 2.36</pose>
+      <static>true</static>
+      <name>explore8</name>
+    </model>
+    <model name="explore9" type="waypoint">
+      <pose>-0.5 4.0 0 0 0 3.14</pose>
+      <static>true</static>
+      <name>explore9</name>
+    </model>
+    <model name="explore10" type="waypoint">
+      <pose>0.5 4.5 0 0 0 -1.57</pose>
+      <static>true</static>
+      <name>explore10</name>
+    </model>
+    <model name="wp_test_nav1" type="waypoint">
+      <pose>2.032 1.03 0 0 0 3.138</pose>
+      <static>true</static>
+      <name>wp_test_nav1</name>
+    </model>
+    <model name="livingroom" type="room">
       <link name="in">
         <virtual_volume name="in">
           <geometry>
@@ -37,7 +262,7 @@
       <static>true</static>
       <name>livingroom</name>
     </model>
-    <model name="kitchen">
+    <model name="kitchen" type="room">
       <link name="in">
         <virtual_volume name="in">
           <geometry>
@@ -54,7 +279,7 @@
       <static>true</static>
       <name>kitchen</name>
     </model>
-    <model name="bedroom">
+    <model name="bedroom" type="room">
       <link name="in">
         <virtual_volume name="in">
           <geometry>
@@ -71,7 +296,7 @@
       <static>true</static>
       <name>bedroom</name>
     </model>
-    <model name="workshop">
+    <model name="workshop" type="room">
       <link name="in">
         <virtual_volume name="in">
           <geometry>
@@ -88,7 +313,7 @@
       <static>true</static>
       <name>workshop</name>
     </model>
-    <model name="hallway">
+    <model name="hallway" type="room">
       <link name="in">
         <virtual_volume name="in">
           <geometry>
@@ -239,231 +464,6 @@
       <pose>3.5 2.96 0.94 0 0 0</pose>
       <name>electro_bar_2</name>
       <uri>model://robotics_testlabs/electro_bar_2</uri>
-    </include>
-    <include name="corridor">
-      <pose>2.7 5 0 0 0 0</pose>
-      <name>corridor</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="hallway">
-      <pose>0 5.5 0 0 0 0</pose>
-      <name>hallway</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="bedroom">
-      <pose>-2.0 -1.0 0 0 0 0</pose>
-      <name>bedroom</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="battery_point">
-      <pose>-2.8 2.0 0 0 0 0</pose>
-      <name>battery_point</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="initial_pose">
-      <pose>0.586 4.259 0 0 0 0</pose>
-      <name>initial_pose</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="robonurse_initial">
-      <pose>0.586 4.259 0 0 0 0</pose>
-      <name>robonurse_initial</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="bookcase_waypoint">
-      <pose>2.58 2.66 0 0 0 0</pose>
-      <name>bookcase_waypoint</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="entry_point">
-      <pose>1.897 4.295 0 0 0 0</pose>
-      <name>entry_point</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="exit">
-      <pose>-1.48 -0.031 0 0 0 3.1415</pose>
-      <name>exit</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="exit_pre">
-      <pose>0 0 0 0 0 3.1415</pose>
-      <name>exit_pre</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="registration_table1">
-      <pose>2.0 1.5 0 0 0 3.1415</pose>
-      <name>registration_table1</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="registration_table2">
-      <pose>2.0 1.5 0 0 0 3.1415</pose>
-      <name>registration_table2</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="registration_table3">
-      <pose>2.0 1.5 0 0 0 3.1415</pose>
-      <name>registration_table3</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="exit_1_rips">
-      <pose>-1.48 -0.031 0 0 0 3.1415</pose>
-      <name>exit_1_rips</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="exit_2_rips">
-      <pose>-1.48 -0.031 0 0 0 3.1415</pose>
-      <name>exit_2_rips</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="exit_3_rips">
-      <pose>-1.48 -0.031 0 0 0 3.1415</pose>
-      <name>exit_3_rips</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="exit_4_rips">
-      <pose>-1.48 -0.031 0 0 0 3.1415</pose>
-      <name>exit_4_rips</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="door_navigation">
-      <pose>-0.168 6.216 0 0 0 -1.5708</pose>
-      <name>door_navigation</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="door_opening_left_dest">
-      <pose>-0.168 6.216 0 0 0 1.5708</pose>
-      <name>door_opening_left_dest</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="door_opening_right_dest">
-      <pose>0.862 6.216 0 0 0 1.5708</pose>
-      <name>door_opening_right_dest</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="door_opening_left_start">
-      <pose>-0.168 4.8 0 0 0 1.5708</pose>
-      <name>door_opening_left_start</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="door_opening_right_start">
-      <pose>0.862 4.8 0 0 0 1.5708</pose>
-      <name>door_opening_right_start</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="help_me_carry_starting_point">
-      <pose>1.65 2.0 0 0 0 1.5708</pose>
-      <name>help_me_carry_starting_point</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="avoid_that_start">
-      <pose>2.2 2.2 0 0 0 -2.459</pose>
-      <name>avoid_that_start</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="avoid_that_wp1">
-      <pose>2.648 -0.579 0 0 0 -3.137</pose>
-      <name>avoid_that_wp1</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="avoid_that_wp2">
-      <pose>0.347 -0.665 0 0 0 1.008</pose>
-      <name>avoid_that_wp2</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="avoid_that_wp3">
-      <pose>2.648 -0.579 0 0 0 -3.137</pose>
-      <name>avoid_that_wp3</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="what_did_you_say_start">
-      <pose>0.347 -0.665 0 0 0 1.008</pose>
-      <name>what_did_you_say_start</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="person_rec_learning">
-      <pose>2.661 4.052 0 0 0 3.139</pose>
-      <name>person_rec_learning</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="person_rec_living_room_1">
-      <pose>2.016 3.025 0 0 0 -1.572</pose>
-      <name>person_rec_living_room_1</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="person_rec_living_room_2">
-      <pose>2.482 2.27 0 0 0 -1.899</pose>
-      <name>person_rec_living_room_2</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="person_rec_living_room_3">
-      <pose>1.51 2.22 0 0 0 -0.971</pose>
-      <name>person_rec_living_room_3</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="gpsr_meeting_point">
-      <pose>2.2 1.5 0 0 0 3.1415</pose>
-      <name>gpsr_meeting_point</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="operator_pose">
-      <pose>0.0 0.0 0 0 0 0.0</pose>
-      <name>operator_pose</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="explore1">
-      <pose>2.0 4.0 0 0 0 0.0</pose>
-      <name>explore1</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="explore2">
-      <pose>2.0 2.5 0 0 0 0.0</pose>
-      <name>explore2</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="explore3">
-      <pose>2.0 2.0 0 0 0 3.14</pose>
-      <name>explore3</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="explore4">
-      <pose>2.0 1.5 0 0 0 0.0</pose>
-      <name>explore4</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="explore5">
-      <pose>1.0 0.3 0 0 0 0.0</pose>
-      <name>explore5</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="explore6">
-      <pose>1.5 -0.5 0 0 0 -1.57</pose>
-      <name>explore6</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="explore7">
-      <pose>-1.5 0.0 0 0 0 3.14</pose>
-      <name>explore7</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="explore8">
-      <pose>-1.5 2.0 0 0 0 2.36</pose>
-      <name>explore8</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="explore9">
-      <pose>-0.5 4.0 0 0 0 3.14</pose>
-      <name>explore9</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="explore10">
-      <pose>0.5 4.5 0 0 0 -1.57</pose>
-      <name>explore10</name>
-      <uri>model://waypoint</uri>
-    </include>
-    <include name="wp_test_nav1">
-      <pose>2.032 1.03 0 0 0 3.138</pose>
-      <name>wp_test_nav1</name>
-      <uri>model://waypoint</uri>
     </include>
     <name>robotics_testlabs</name>
   </world>

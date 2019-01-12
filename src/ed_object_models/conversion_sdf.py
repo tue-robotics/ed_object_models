@@ -432,9 +432,10 @@ def convert_world(yml, model_name, recursive=False):
                 #       instance of the type (for instance ids: table1 and table2 are both type TableA, so it will
                 #       recreate the SDF and config for TableA twice)
                 main(item["type"], recursive=recursive)
-            if item["type"] == "room":
+            if item["type"] in ["room", "waypoint"]:
                 model = convert_model(item, item["id"])
                 model["pose"] = read_pose(item)
+                model["type"] = item["type"]
                 world_model.append(model)
             else:
                 include["uri"] = "model://{}".format(item["type"])

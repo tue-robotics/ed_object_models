@@ -115,11 +115,6 @@
       <name>door2</name>
       <uri>model://robotics_testlabs/blue_door_right</uri>
     </include>
-    <include name="floor">
-      <pose>0 0 0 0 0 0</pose>
-      <name>floor</name>
-      <uri>model://floor</uri>
-    </include>
     <include name="plant">
       <pose>3.26 5.19 0 0 0 0</pose>
       <name>plant</name>

@@ -11,11 +11,10 @@ function ed_object_models_setup {
             # You want to have the main model path at the end
             continue
         fi
-        model_paths_string="$model_paths_string:$dir"
+        model_paths_string="${model_paths_string:+${model_paths_string}:}$dir"
     done
 
-    model_paths_string="$model_paths_string:$model_path"
-    model_paths_string=${model_paths_string:1} # remove leading colon, which is always there
+    model_paths_string="${model_paths_string:+${model_paths_string}:}$model_path"
 
     if [ -z $GAZEBO_MODEL_PATH ]
     then

@@ -16,18 +16,8 @@ function ed_object_models_setup {
 
     model_paths_string="${model_paths_string:+${model_paths_string}:}$model_path"
 
-    if [ -z $GAZEBO_MODEL_PATH ]
-    then
-        export GAZEBO_MODEL_PATH=$model_paths_string
-    else
-        export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:$model_paths_string
-    fi
-    if [ -z $GAZEBO_RESOURCE_PATH ]
-    then
-        export GAZEBO_RESOURCE_PATH=$model_paths_string
-    else
-        export GAZEBO_RESOURCE_PATH=$GAZEBO_RESOURCE_PATH:$model_paths_string
-    fi
+    export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH:+${GAZEBO_MODEL_PATH}:}$model_paths_string
+    export GAZEBO_RESOURCE_PATH=${GAZEBO_RESOURCE_PATH:+${GAZEBO_RESOURCE_PATH}:}$model_paths_string
 }
 
 ed_object_models_setup

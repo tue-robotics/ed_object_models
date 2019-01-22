@@ -25,9 +25,9 @@ def from_yaml(yaml_file):
 
     # Load yaml with list of objects that need to be loaded
     yaml_file_path = None
-    if os.path.isfile(yaml_file):
+    if os.path.isfile(yaml_file):   # Check if yaml_file is path to a file
         yaml_file_path = yaml_file
-    else:
+    else:   # Check if yaml_file is path to a file in fast_simulator_data
         package_path = RosPack().get_path('fast_simulator_data')
         if os.path.isfile(package_path + yaml_file):
             yaml_file_path = package_path + yaml_file

@@ -11,9 +11,11 @@ from geometry_msgs.msg import Pose
 
 
 def from_yaml(yaml_file):
-    ''' Spawns a list of sdf files from a yaml file into Gazebo.
-    :param yaml_file:
-    :return:
+    '''
+    Spawns a list of sdf files from a yaml file into Gazebo.
+    :param yaml_file: path to a yaml file.
+    :type yaml_file: str
+    :return: Spawns the sdf models.
     '''
 
     # Initialize ROS node

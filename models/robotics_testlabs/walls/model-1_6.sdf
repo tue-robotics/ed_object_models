@@ -4,33 +4,17 @@
     <link name="1">
       <collision name="1">
         <geometry>
-          <heightmap>
-            <use_terrain_paging>false</use_terrain_paging>
-            <pos>6.2 1.0 0.0</pos>
-            <uri>model://robotics_testlabs/walls/shape/heightmap_converted.png</uri>
-            <texture>
-              <size>1</size>
-              <diffuse>file://media/materials/textures/grey.png</diffuse>
-              <normal>file://media/materials/textures/normal.png</normal>
-            </texture>
-            <size>51.225 51.225 2.0</size>
-          </heightmap>
+          <mesh>
+            <uri>model://robotics_testlabs/walls/shape/heightmap.stl</uri>
+          </mesh>
         </geometry>
         <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
-          <heightmap>
-            <use_terrain_paging>false</use_terrain_paging>
-            <pos>6.2 1.0 0.0</pos>
-            <uri>model://robotics_testlabs/walls/shape/heightmap_converted.png</uri>
-            <texture>
-              <size>1</size>
-              <diffuse>file://media/materials/textures/grey.png</diffuse>
-              <normal>file://media/materials/textures/normal.png</normal>
-            </texture>
-            <size>51.225 51.225 2.0</size>
-          </heightmap>
+          <mesh>
+            <uri>model://robotics_testlabs/walls/shape/heightmap.stl</uri>
+          </mesh>
         </geometry>
         <name>1</name>
       </visual>

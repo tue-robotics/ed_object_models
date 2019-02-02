@@ -40,12 +40,9 @@ def from_yaml(yaml_path):
         # Define object pose
         object_pose = Pose()
         object_pose.position = Point(item['x'], item['y'], item['z'])
-        if not 'roll' in item:     # Check if roll is defined.
-        	item['roll'] = 0
-        if not 'pitch' in item:    # Check if pitch is defined.
-        	item['pitch'] = 0
-        if not 'yaw' in item:      # Check if yaw is defined.
-        	item['yaw'] = 0
+        for angle in ['roll', 'pitch', 'yaw']:    # Check if each euler angle exists
+        	if not angle in item:
+        		item[angle] = 0
         object_pose.orientation = Quaternion(*quaternion_from_euler(item['roll'], item['pitch'], item['yaw']))
 
         # Search for model folder in $GAZEBO_MODEL_PATH

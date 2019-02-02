@@ -6,8 +6,8 @@ import os
 import glob
 
 from gazebo_msgs.srv import SpawnModel
-from geometry_msgs.msg import *
-from tf.transformations import quaternion_from_euler as eul2quat
+from geometry_msgs.msg import Pose, Point, Quaternion
+from tf.transformations import quaternion_from_euler
 
 def from_yaml(yaml_path):
     '''
@@ -40,8 +40,13 @@ def from_yaml(yaml_path):
         # Define object pose
         object_pose = Pose()
         object_pose.position = Point(item['x'], item['y'], item['z'])
-        if {'roll', 'pitch', 'yaw'} <= set(item):    # Check if euler angle fields exist
-            object_pose.orientation = Quaternion(*eul2quat(item['roll'], item['pitch'], item['yaw']))
+        if not 'roll' in item:     # Check if roll is defined.
+        	item['roll'] = 0
+        if not 'pitch' in item:    # Check if pitch is defined.
+        	item['pitch'] = 0
+        if not 'yaw' in item:      # Check if yaw is defined.
+        	item['yaw'] = 0
+        object_pose.orientation = Quaternion(*quaternion_from_euler(item['roll'], item['pitch'], item['yaw']))
 
         # Search for model folder in $GAZEBO_MODEL_PATH
         model_path = None

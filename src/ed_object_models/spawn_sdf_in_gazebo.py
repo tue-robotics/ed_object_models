@@ -5,18 +5,15 @@ import yaml
 import os
 import glob
 
-from rospkg import RosPack
 from gazebo_msgs.srv import SpawnModel
-from geometry_msgs.msg import Pose
+from geometry_msgs.msg import *
+from tf.transformations import quaternion_from_euler as eul2quat
 
-
-def from_yaml(yaml_file, package_name='fast_simulator_data'):
+def from_yaml(yaml_path):
     '''
     Spawns a list of sdf files from a yaml file into Gazebo.
-    :param yaml_file: path to a yaml file.
-    :type yaml_file: str
-    :param package_name: name of a package from which the yaml file should be loaded.
-    :type package_name: str
+    :param yaml_path: path to a yaml file.
+    :type yaml_path: str
     :return: Spawns the sdf models.
     '''
 
@@ -28,14 +25,11 @@ def from_yaml(yaml_file, package_name='fast_simulator_data'):
     spawn_model_prox = rospy.ServiceProxy('gazebo/spawn_sdf_model', SpawnModel)
 
     # Load yaml with list of objects that need to be loaded
-    package_path = RosPack().get_path(package_name)
-    if os.path.isfile(package_path + yaml_file):   # Check if package_path + yaml_file is a path to a file.
-        yaml_file_path = package_path + yaml_file
-    else:
-        print('Warning: Could not find yaml file.')
+    if not os.path.isfile(yaml_path):   # Check if yaml_path is a path to a file.
+        print('Warning: Could not find ' + yaml_path)
         return
 
-    with open(yaml_file_path, 'r') as f:
+    with open(yaml_path, 'r') as f:
         items = yaml.safe_load(f)
 
     # Get paths in $GAZEBO_MODEL_PATH
@@ -45,9 +39,9 @@ def from_yaml(yaml_file, package_name='fast_simulator_data'):
     for item in items:
         # Define object pose
         object_pose = Pose()
-        object_pose.position.x = item['x']
-        object_pose.position.y = item['y']
-        object_pose.position.z = item['z']
+        object_pose.position = Point(item['x'], item['y'], item['z'])
+        if ('roll' in item) & ('pitch' in item) & ('yaw' in item):    # Check if euler angle fields exist
+            object_pose.orientation = Quaternion(*eul2quat(item['roll'], item['pitch'], item['yaw']))
 
         # Search for model folder in $GAZEBO_MODEL_PATH
         model_path = None
@@ -57,7 +51,7 @@ def from_yaml(yaml_file, package_name='fast_simulator_data'):
 
         # Return error when folder could not be found
         if not model_path:
-            print('Warning: Could not find model with the specified name in GAZEBO_MODEL_PATH.')
+            print('Warning: Could not find model with the name' + item['type'] + 'in GAZEBO_MODEL_PATH.')
             continue
 
         # Search for sdf file

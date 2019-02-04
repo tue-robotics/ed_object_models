@@ -61,9 +61,9 @@ def from_yaml(yaml_path):
         else:
             # If is no model.sdf exists and there are one or more sdf files, return
             # the last alphabetically which is assumed to be for the highest sdf version.
-            sdf_list = sorted(glob.glob(model_path + '/*.sdf'), reverse = True)
+            sdf_list = glob.glob(model_path + '/*.sdf')
             if sdf_list:
-                sdf_model_path = sdf_list[0]
+                sdf_model_path = max(sdf_list)
             else:
                 # Return error when no sdf file could be found
                 print('Warning: No sdf file was found.')

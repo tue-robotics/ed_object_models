@@ -15,6 +15,16 @@ def from_yaml(yaml_path):
     :param yaml_path: path to a yaml file.
     :type yaml_path: str
     :return: Spawns the sdf models.
+
+    The yaml file that yaml_path points to should be a list of dictionaries.
+    Each dictionary should at least contain the keys id, type, x, y and z,
+    additional optional keys are roll, pitch and yaw. The meaning of the keys are:
+    - id: a string which defines the name given to the loaded model in gazebo.
+    - type: a string which refers to a sdf model name contained within GAZEBO_MODEL_PATH.
+    - x, y, z: floats representing the coordinates at which the model is spawned.
+    - roll, pitch, yaw: floats representing Euler angles, if not used they are set to zero.
+    An example of such a dictionary list item is given below:
+    - {id: "coke-1", type: "coke_can", x: 3.196, y: 4.652, z: 0.87, roll: 0.5, pitch: 1.57}
     '''
 
     # Initialize ROS node

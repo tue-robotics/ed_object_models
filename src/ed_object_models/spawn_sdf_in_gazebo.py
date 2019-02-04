@@ -47,8 +47,8 @@ def from_yaml(yaml_path):
         # Search for model folder in $GAZEBO_MODEL_PATH
         model_path = None
         for path in model_paths:
-            if os.path.isdir(path + '/' + item['type']):
-                model_path = path + '/' + item['type']
+            if os.path.isdir(os.path.join(path, item['type'])):
+                model_path = os.path.join(path, item['type'])
 
         # Return error when folder could not be found
         if not model_path:
@@ -56,12 +56,12 @@ def from_yaml(yaml_path):
             continue
 
         # Search for sdf file
-        if os.path.isfile(model_path + '/model.sdf'):
-            sdf_model_path = model_path + '/model.sdf'
+        if os.path.isfile(os.path.join(model_path, 'model.sdf')):
+            sdf_model_path = os.path.join(model_path, 'model.sdf')
         else:
             # If is no model.sdf exists and there are one or more sdf files, return
             # the last alphabetically which is assumed to be for the highest sdf version.
-            sdf_list = glob.glob(model_path + '/*.sdf')
+            sdf_list = glob.glob(os.path.join(model_path, '*.sdf'))
             if sdf_list:
                 sdf_model_path = max(sdf_list)
             else:

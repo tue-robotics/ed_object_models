@@ -142,54 +142,25 @@ def read_geometry(shape_item, model_name):
         # If there is a path and a blockheight in the shape_item, then there is a heightmap included in the yaml file
         model_folder = path.dirname(get_model_path(model_name))
         image_path = model_folder + "/{}".format(shape_item["path"])
-        new_image_path = "{}_converted.png".format(path.splitext(image_path)[0])
+        mesh_path = "{}.stl".format(path.splitext(image_path)[0])
 
         # Execute ImageMagick command to invert the image
         try:
-            check_call("convert -negate {} {}".format(image_path, new_image_path), shell=True)
+            check_call("rosrun ed ed_heightmap_to_mesh {} {} {} {} {} {}".
+                       format(image_path,
+                              mesh_path,
+                              shape_item["resolution"],
+                              shape_item["blockheight"],
+                              shape_item["origin_x"],
+                              shape_item["origin_y"]),
+                       executable="/bin/bash",
+                       shell=True)
         except Exception as e:
             print(bcolors.FAIL + bcolors.BOLD + "[{}] ".format(model_name) + str(e) + bcolors.ENDC)
             raise
 
-        # Import the new png image and get its sizes to determine the physical square length (in meters) of the map
-        with Image.open(new_image_path, "r") as f:
-            width, height = f.size
-        new_image_size = int(pow(2, (max(width, height)-2).bit_length())+1)
-
-        # SDF heightmap origin is the center of the image, while our simulator has its origin at a corner (bottom-left).
-        # So the origin (in the yaml) is converted such that the heightmap is placed correctly in SDF
-        resolution = shape_item["resolution"]
-        old_map_center = [0.5 * width * resolution, 0.5 * height * resolution, 0.]
-        map_pos_list = [-round(-shape_item["origin_x"] - old_map_center[0], 3),
-                        -round(-shape_item["origin_y"] - old_map_center[1], 3),
-                        -round(-shape_item["origin_z"] - old_map_center[2], 3)]
-        map_pos = " ".join(map(str, map_pos_list))
-
-        size_new_list = [new_image_size * resolution, new_image_size * resolution, shape_item["blockheight"]] 
-        size_new = " ".join(map(str, size_new_list))
-
-        sdf_heightmap = {"uri": "model://{}/{}".format(model_name, path.relpath(new_image_path, model_folder)),
-                         "size": size_new,
-                         "pos": map_pos}
-        geometry["heightmap"] = sdf_heightmap
-
-        # Execute Imagemagick command to resize its canvas with provided resolution, keeping the image centered.
-        try:
-            check_call("convert {0} -background black -gravity center -extent {1}x{1} {0}"
-                       .format(new_image_path, new_image_size), shell=True)
-        except Exception as e:
-            print(bcolors.FAIL + bcolors.BOLD + "[{}] ".format(model_name) + str(e) + bcolors.ENDC)
-            raise
-
-        # Flatten image layers
-        try:
-            check_call("convert {0} -flatten {0}".format(new_image_path, new_image_size), shell=True)
-        except Exception as e:
-            print(bcolors.FAIL + bcolors.BOLD + "[{}] ".format(model_name) + str(e) + bcolors.ENDC)
-            raise
-
-        print(bcolors.OKGREEN + "[{}] Successfully created new heightmap:".format(model_name))
-        print(new_image_path + bcolors.ENDC)
+        sdf_mesh = {"uri": "model://{}/{}".format(model_name, path.relpath(mesh_path, model_folder))}
+        geometry["mesh"] = sdf_mesh
 
     elif "path" in shape_item and ".xml" in shape_item["path"]:
         print(bcolors.WARNING +
@@ -409,11 +380,13 @@ def convert_world(yml, model_name, recursive=False):
     :return: sdf dict of the model
     :rtype: dict
     """
-    world = {"name": model_name, "include": [], "model": [],
-             "light": {"type": "directional", "name": "sun",
-                       "cast_shadows": "true", "pose": "0 0 10 0 0 0", "diffuse": "0.8 0.8 0.8 1",
-                       "specular": "0.2 0.2 0.2 1", "direction": "0.5 0.1 -0.9",
-                       "attenuation": {"range": 1000, "constant": 0.9, "linear": 0.01, "quadratic": 0.001}}}
+    light = {"type": "directional", "name": "sun",
+             "cast_shadows": "true", "pose": "0 0 10 0 0 0", "diffuse": "0.8 0.8 0.8 1",
+             "specular": "0.2 0.2 0.2 1", "direction": "0.5 0.1 -0.9",
+             "attenuation": {"range": 1000, "constant": 0.9, "linear": 0.01, "quadratic": 0.001}}
+    physics = {"type": "ode", "real_time_update_rate": 333.0, "max_step_size": 0.003,
+               "ode": {"solver": {"type": "quick", "iters": 100}, "constraints": {"cfm": 0.0001}}}
+    world = {"name": model_name, "include": [], "model": [], "light": light, "physics": physics}
 
     world_include = world["include"]
     world_model = world["model"]

@@ -446,13 +446,8 @@
       <uri>model://table_120x80x76</uri>
     </include>
     <include name="workbench">
-      <pose>-2.31 3.23 0.0 0 0 0</pose>
-      <name>workbench</name>
-      <uri>model://table_120x80x76</uri>
-    </include>
-    <include name="workbench2">
       <pose>-3.31 3.03 0.0 0 0 1.57079632679</pose>
-      <name>workbench2</name>
+      <name>workbench</name>
       <uri>model://table_120x80x76</uri>
     </include>
     <include name="bookcase">

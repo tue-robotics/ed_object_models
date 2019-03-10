@@ -9,20 +9,21 @@
   <license>TODO</license>
 
   <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>ed_msgs</build_depend>
   <build_depend>geolib2</build_depend>
   <build_depend>roslib</build_depend>
-  <build_depend>tue_filesystem</build_depend>
   <build_depend>tue_config</build_depend>
+  <build_depend>tue_filesystem</build_depend>
   <build_depend>yaml-cpp</build_depend>
-  <build_depend>ed_msgs</build_depend>
 
-  <run_depend>geolib2</run_depend>
-  <run_depend>roslib</run_depend>
-  <run_depend>tue_filesystem</run_depend>
-  <run_depend>tue_config</run_depend>
-  <run_depend>yaml-cpp</run_depend>
   <run_depend>ed</run_depend>
   <run_depend>ed_msgs</run_depend>
+  <run_depend>geolib2</run_depend>
+  <run_depend>roslib</run_depend>
+  <run_depend>tue_config</run_depend>
+  <run_depend>tue_filesystem</run_depend>
+  <run_depend>yaml-cpp</run_depend>
   <run_depend>gazebo_models</run_depend>
 
 </package>

@@ -5,8 +5,6 @@ import yaml
 from xml.dom.minidom import parseString
 import xml.etree.ElementTree as ET
 from subprocess import check_call
-from PIL import Image
-from math import pow
 from collections import OrderedDict
 
 

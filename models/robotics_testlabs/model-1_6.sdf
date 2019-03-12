@@ -351,8 +351,13 @@
       <uri>model://robotics_testlabs/plant</uri>
     </include>
     <include name="trashbin">
-      <pose>2.5 2.0 0 0 0 0</pose>
+      <pose>2.0 2.0 0 0 0 0</pose>
       <name>trashbin</name>
+      <uri>model://trashbin</uri>
+    </include>
+    <include name="trashbin2">
+      <pose>-1.5 2.0 0 0 0 0</pose>
+      <name>trashbin2</name>
       <uri>model://trashbin</uri>
     </include>
     <include name="flight_case">

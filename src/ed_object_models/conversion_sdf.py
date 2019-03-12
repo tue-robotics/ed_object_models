@@ -469,9 +469,9 @@ def main(model_name, recursive=False):
     if model_name[-1] == "/":
         model_name = model_name[:-1]
     # get model path
-    model_path = get_model_path(model_name, "yaml")
-    if not model_path:
-        print (bcolors.FAIL + bcolors.BOLD + "[{}] No model path found".format(model_name) + bcolors.ENDC)
+    yaml_model_path = get_model_path(model_name, "yaml")
+    if not yaml_model_path:
+        print (bcolors.FAIL + bcolors.BOLD + "[{}] No model path found".format(yaml_model_path) + bcolors.ENDC)
         return 1
 
     # declare sdf dict including sdf version
@@ -479,7 +479,7 @@ def main(model_name, recursive=False):
     sdf = {"version": str(sdf_version)}
 
     # read yaml file
-    with open(model_path, "r") as stream:
+    with open(yaml_model_path, "r") as stream:
         try:
             yml = yaml.load(stream)
         except yaml.YAMLError as e:
@@ -500,43 +500,54 @@ def main(model_name, recursive=False):
         return 1
 
     # write to sdf file
-    sdf_filename = "model-" + str(sdf_version).replace(".", "_") + ".sdf"
-    model_sdf_path = path.join(path.dirname(model_path), sdf_filename)
+    sdf_filename = "model.sdf"
+    model_sdf_path = path.join(path.dirname(yaml_model_path), sdf_filename)
     write_xml_to_file(xml, model_sdf_path)
 
     ##
     # Generate model.config
-    test_model_path = get_model_path("test_sdf", "sdf")
-    if not test_model_path:
-        print(bcolors.FAIL + bcolors.BOLD + "Can't find 'test_sdf' model."
-                                            "Which is used for generation of 'model.config'")
-        print("model.config not generated. Gazebo will not be able to find the model: '{}'".format(model_name)
-              + bcolors.ENDC)
-        return 1
+    model_config_path = path.join(path.dirname(yaml_model_path), "model.config")
+    if path.isfile(model_config_path):
+        with open(model_config_path, "r") as f:
+            config_string = "".join(line.strip() for line in f)
 
-    test_config_path = path.dirname(test_model_path) + "/model.config"
-    if not path.exists(test_config_path):
-        print(bcolors.FAIL + bcolors.BOLD + "model.config path: '{}' doesn't exist".format(test_config_path))
-        print("model.config not generated. Gazebo will not be able to find the model: '{}'".format(model_name)
-              + bcolors.ENDC)
-        return 1
+        config_root = ET.fromstring(config_string)
 
-    # xml parsing doesn't ignore whitespace, so reading the file manually
-    with open(test_config_path, "r") as f:
-        config_string = "".join(line.strip() for line in f)
+        # set name and description
+        config_sdfs = config_root.findall("sdf")
+        if all([config_sdf.attrib['version'] != str(sdf_version) for config_sdf in config_sdfs]):
+                config_sdf.text = sdf_filename
+    else:
+        test_model_path = get_model_path("test_sdf", "sdf")
+        if not test_model_path:
+            print(bcolors.FAIL + bcolors.BOLD + "Can't find 'test_sdf' model."
+                                                "Which is used for generation of 'model.config'")
+            print("model.config not generated. Gazebo will not be able to find the model: '{}'".format(model_name)
+                  + bcolors.ENDC)
+            return 1
 
-    config_root = ET.fromstring(config_string)
+        test_config_path = path.join(path.dirname(test_model_path), "model.config")
+        if not path.exists(test_config_path):
+            print(bcolors.FAIL + bcolors.BOLD + "model.config path: '{}' doesn't exist".format(test_config_path))
+            print("model.config not generated. Gazebo will not be able to find the model: '{}'".format(model_name)
+                  + bcolors.ENDC)
+            return 1
 
-    # set name and description
-    config_root.find("name").text = model_name
-    config_root.find("description").text = model_name
-    config_sdf = config_root.find("sdf")
-    config_sdf.attrib['version'] = str(sdf_version)
-    config_sdf.text = sdf_filename
+            # xml parsing doesn't ignore whitespace, so reading the file manually
+        with open(test_config_path, "r") as f:
+            config_string = "".join(line.strip() for line in f)
 
-    # write model.config
-    model_config_path = path.dirname(model_path) + "/model.config"
-    write_xml_to_file(config_root, model_config_path)
+        config_root = ET.fromstring(config_string)
+
+        # set name and description
+        config_root.find("name").text = model_name
+        config_root.find("description").text = model_name
+        config_sdf = config_root.find("sdf")
+        config_sdf.attrib['version'] = str(sdf_version)
+        config_sdf.text = sdf_filename
+
+        # write model.config
+        write_xml_to_file(config_root, model_config_path)
 
     print(bcolors.OKGREEN + "[{}] Successfully converted to SDF".format(model_name) + bcolors.ENDC)
     return 0

@@ -507,7 +507,7 @@ def main(model_name, recursive=False):
     ##
     # Generate model.config
     model_config_path = path.join(model_dir, "model.config")
-    if path.isfile(model_config_path):
+    if path.isfile(model_config_path):  # SDF model already exist, edit model.config and rename sdf files if needed
         with open(model_config_path, "r") as f:
             config_string = "".join(line.strip() for line in f)
 
@@ -553,7 +553,7 @@ def main(model_name, recursive=False):
 
         write_xml_to_file(config_root, model_config_path)
 
-    else:
+    else:  # SDF model doesn't exist yet
         test_model_path = get_model_path("test_sdf", "sdf")
         if not test_model_path:
             print(bcolors.FAIL + bcolors.BOLD + "Can't find 'test_sdf' model."
@@ -569,7 +569,7 @@ def main(model_name, recursive=False):
                   + bcolors.ENDC)
             return 1
 
-            # xml parsing doesn't ignore whitespace, so reading the file manually
+        # xml parsing doesn't ignore whitespace, so reading the file manually
         with open(test_config_path, "r") as f:
             config_string = "".join(line.strip() for line in f)
 

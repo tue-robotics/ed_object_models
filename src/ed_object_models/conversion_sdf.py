@@ -1,4 +1,4 @@
-from os import getenv, path
+from os import getenv, path, rename
 import glob
 import re
 import yaml
@@ -501,8 +501,7 @@ def main(model_name, recursive=False):
 
     # write to sdf file
     sdf_filename = "model.sdf"
-    model_sdf_path = path.join(path.dirname(yaml_model_path), sdf_filename)
-    write_xml_to_file(xml, model_sdf_path)
+    sdf_model_path = path.join(path.dirname(yaml_model_path), sdf_filename)
 
     ##
     # Generate model.config
@@ -515,8 +514,44 @@ def main(model_name, recursive=False):
 
         # set name and description
         config_sdfs = config_root.findall("sdf")
-        if all([config_sdf.attrib['version'] != str(sdf_version) for config_sdf in config_sdfs]):
-                config_sdf.text = sdf_filename
+        # if all([config_sdf.attrib['version'] != str(sdf_version) for config_sdf in config_sdfs]):
+        #         config_sdf.text = sdf_filename
+        newest_sdf = sorted(config_sdfs, key=lambda x: x.attrib['version'], reverse=True)[0]
+        newest_sdf_version = float(newest_sdf.attrib['version'])
+        if sdf_version > newest_sdf_version:
+            if newest_sdf.text == sdf_filename:
+                newest_sdf_filename = "model-{}.sdf".format(str(newest_sdf_version).replace('.', '_'))
+                rename(sdf_model_path, path.join(path.dirname(yaml_model_path), newest_sdf_filename))
+                newest_sdf.text = newest_sdf_filename
+            new_sdf = ET.Element("sdf")
+            config_root.insert(config_root.getchildren().index(newest_sdf)+1, new_sdf)
+            new_sdf.set("version", str(sdf_version))
+            new_sdf.text = sdf_filename
+        elif sdf_version == newest_sdf_version:
+            if newest_sdf.text != sdf_filename:
+                rename(path.join(path.dirname(yaml_model_path), newest_sdf.text),
+                       sdf_model_path)
+                newest_sdf.text = sdf_filename
+        else:  # Converting not to the newest version
+            sdf_filename = "model-{}.sdf".format(str(sdf_version).replace('.', '_'))
+            sdf_model_path = path.join(path.dirname(yaml_model_path), sdf_filename)
+            # Check if older version exists in model.config
+            current_sdf = next((x for x in config_sdfs if x.attrib['version'] == str(sdf_version)), None)
+            if current_sdf is None:  # Version doesn't exist yet, so add it
+                current_sdf = ET.Element("sdf")
+                current_sdf.attrib['version'] = str(sdf_version)
+                current_sdf.text = sdf_filename
+                # Add tag before the first newer version, old index of newer version
+                first_newer_version_sdf = [sdf for sdf in config_sdfs if (float(sdf.attrib['version']) > sdf_version)][-1]
+                index_of_newer_vesion = config_root.getchildren().index(first_newer_version_sdf)
+                config_root.insert(index_of_newer_vesion, current_sdf)
+            if current_sdf.text != sdf_filename:
+                rename(path.join(path.dirname(yaml_model_path), current_sdf.text),
+                       sdf_model_path)
+                current_sdf.text = sdf_filename
+
+        write_xml_to_file(config_root, model_config_path)
+
     else:
         test_model_path = get_model_path("test_sdf", "sdf")
         if not test_model_path:
@@ -548,6 +583,9 @@ def main(model_name, recursive=False):
 
         # write model.config
         write_xml_to_file(config_root, model_config_path)
+
+    # Write SDF file
+    write_xml_to_file(xml, sdf_model_path)
 
     print(bcolors.OKGREEN + "[{}] Successfully converted to SDF".format(model_name) + bcolors.ENDC)
     return 0

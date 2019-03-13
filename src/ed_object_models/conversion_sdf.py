@@ -1,4 +1,4 @@
-from os import getenv, path
+from os import getenv, path, rename
 import glob
 import re
 import yaml
@@ -469,17 +469,18 @@ def main(model_name, recursive=False):
     if model_name[-1] == "/":
         model_name = model_name[:-1]
     # get model path
-    model_path = get_model_path(model_name, "yaml")
-    if not model_path:
-        print (bcolors.FAIL + bcolors.BOLD + "[{}] No model path found".format(model_name) + bcolors.ENDC)
+    yaml_model_path = get_model_path(model_name, "yaml")
+    if not yaml_model_path:
+        print (bcolors.FAIL + bcolors.BOLD + "[{}] No model path found".format(yaml_model_path) + bcolors.ENDC)
         return 1
+    model_dir = path.dirname(yaml_model_path)
 
     # declare sdf dict including sdf version
     sdf_version = 1.6
     sdf = {"version": str(sdf_version)}
 
     # read yaml file
-    with open(model_path, "r") as stream:
+    with open(yaml_model_path, "r") as stream:
         try:
             yml = yaml.load(stream)
         except yaml.YAMLError as e:
@@ -500,43 +501,92 @@ def main(model_name, recursive=False):
         return 1
 
     # write to sdf file
-    sdf_filename = "model-" + str(sdf_version).replace(".", "_") + ".sdf"
-    model_sdf_path = path.join(path.dirname(model_path), sdf_filename)
-    write_xml_to_file(xml, model_sdf_path)
+    sdf_filename = "model.sdf"
+    sdf_model_path = path.join(model_dir, sdf_filename)
 
     ##
     # Generate model.config
-    test_model_path = get_model_path("test_sdf", "sdf")
-    if not test_model_path:
-        print(bcolors.FAIL + bcolors.BOLD + "Can't find 'test_sdf' model."
-                                            "Which is used for generation of 'model.config'")
-        print("model.config not generated. Gazebo will not be able to find the model: '{}'".format(model_name)
-              + bcolors.ENDC)
-        return 1
+    model_config_path = path.join(model_dir, "model.config")
+    if path.isfile(model_config_path):  # SDF model already exist, edit model.config and rename sdf files if needed
+        with open(model_config_path, "r") as f:
+            config_string = "".join(line.strip() for line in f)
 
-    test_config_path = path.dirname(test_model_path) + "/model.config"
-    if not path.exists(test_config_path):
-        print(bcolors.FAIL + bcolors.BOLD + "model.config path: '{}' doesn't exist".format(test_config_path))
-        print("model.config not generated. Gazebo will not be able to find the model: '{}'".format(model_name)
-              + bcolors.ENDC)
-        return 1
+        config_root = ET.fromstring(config_string)
 
-    # xml parsing doesn't ignore whitespace, so reading the file manually
-    with open(test_config_path, "r") as f:
-        config_string = "".join(line.strip() for line in f)
+        # set name and description
+        config_sdfs = config_root.findall("sdf")
+        # if all([config_sdf.attrib['version'] != str(sdf_version) for config_sdf in config_sdfs]):
+        #         config_sdf.text = sdf_filename
+        newest_sdf = sorted(config_sdfs, key=lambda x: x.attrib['version'], reverse=True)[0]
+        newest_sdf_version = float(newest_sdf.attrib['version'])
+        if sdf_version > newest_sdf_version:  # Converting a newer version
+            if newest_sdf.text == sdf_filename:   # Rename current newest version, if the same
+                newest_sdf_filename = "model-{}.sdf".format(str(newest_sdf_version).replace('.', '_'))
+                rename(sdf_model_path, path.join(model_dir, newest_sdf_filename))
+                newest_sdf.text = newest_sdf_filename
+            new_sdf = ET.Element("sdf")
+            config_root.insert(config_root.getchildren().index(newest_sdf)+1, new_sdf)
+            new_sdf.set("version", str(sdf_version))
+            new_sdf.text = sdf_filename
+        elif sdf_version == newest_sdf_version:  # Converting the same version, just make sure the path is correct
+            if newest_sdf.text != sdf_filename:
+                rename(path.join(model_dir, newest_sdf.text),
+                       sdf_model_path)
+                newest_sdf.text = sdf_filename
+        else:  # Converting not to the newest version
+            sdf_filename = "model-{}.sdf".format(str(sdf_version).replace('.', '_'))
+            sdf_model_path = path.join(model_dir, sdf_filename)
+            # Check if older version exists in model.config
+            current_sdf = next((x for x in config_sdfs if x.attrib['version'] == str(sdf_version)), None)
+            if current_sdf is None:  # Version doesn't exist yet, so add it
+                current_sdf = ET.Element("sdf")
+                current_sdf.attrib['version'] = str(sdf_version)
+                current_sdf.text = sdf_filename
+                # Add tag before the first newer version, so at old index of the first newer version
+                first_newer_version_sdf = [sdf for sdf in config_sdfs if (float(sdf.attrib['version']) > sdf_version)][-1]
+                index_of_newer_vesion = config_root.getchildren().index(first_newer_version_sdf)
+                config_root.insert(index_of_newer_vesion, current_sdf)
+            elif current_sdf.text != sdf_filename:
+                rename(path.join(model_dir, current_sdf.text),
+                       sdf_model_path)
+                current_sdf.text = sdf_filename
 
-    config_root = ET.fromstring(config_string)
+        write_xml_to_file(config_root, model_config_path)
 
-    # set name and description
-    config_root.find("name").text = model_name
-    config_root.find("description").text = model_name
-    config_sdf = config_root.find("sdf")
-    config_sdf.attrib['version'] = str(sdf_version)
-    config_sdf.text = sdf_filename
+    else:  # SDF model doesn't exist yet
+        test_model_path = get_model_path("test_sdf", "sdf")
+        if not test_model_path:
+            print(bcolors.FAIL + bcolors.BOLD + "Can't find 'test_sdf' model."
+                                                "Which is used for generation of 'model.config'")
+            print("model.config not generated. Gazebo will not be able to find the model: '{}'".format(model_name)
+                  + bcolors.ENDC)
+            return 1
 
-    # write model.config
-    model_config_path = path.dirname(model_path) + "/model.config"
-    write_xml_to_file(config_root, model_config_path)
+        test_config_path = path.join(path.dirname(test_model_path), "model.config")
+        if not path.exists(test_config_path):
+            print(bcolors.FAIL + bcolors.BOLD + "model.config path: '{}' doesn't exist".format(test_config_path))
+            print("model.config not generated. Gazebo will not be able to find the model: '{}'".format(model_name)
+                  + bcolors.ENDC)
+            return 1
+
+        # xml parsing doesn't ignore whitespace, so reading the file manually
+        with open(test_config_path, "r") as f:
+            config_string = "".join(line.strip() for line in f)
+
+        config_root = ET.fromstring(config_string)
+
+        # set name and description
+        config_root.find("name").text = model_name
+        config_root.find("description").text = model_name
+        config_sdf = config_root.find("sdf")
+        config_sdf.attrib['version'] = str(sdf_version)
+        config_sdf.text = sdf_filename
+
+        # write model.config
+        write_xml_to_file(config_root, model_config_path)
+
+    # Write SDF file
+    write_xml_to_file(xml, sdf_model_path)
 
     print(bcolors.OKGREEN + "[{}] Successfully converted to SDF".format(model_name) + bcolors.ENDC)
     return 0

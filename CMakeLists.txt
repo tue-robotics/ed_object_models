@@ -23,11 +23,7 @@ MODEL_YAML_DIRECTORIES_REC(MODELS ${PROJECT_SOURCE_DIR}/models)
 find_program(PYTHON python REQUIRED)
 add_custom_target(SDF_CONVERSION ALL)
 add_custom_command(TARGET SDF_CONVERSION
-                   COMMAND ${PYTHON} ${PROJECT_SOURCE_DIR}/scripts/convert_yaml_to_sdf ${MODELS} WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/scripts)# RESULT_VARIABLE conversion_result)
-#if(NOT ${conversion_result} EQUAL 0)
-  #message(FATAL_ERROR "Conversion failed")
-#endif()
-
+                   COMMAND ${PYTHON} ${PROJECT_SOURCE_DIR}/scripts/convert_yaml_to_sdf ${MODELS} WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/scripts)
 
 ###################################
 ## catkin specific configuration ##
@@ -35,3 +31,15 @@ add_custom_command(TARGET SDF_CONVERSION
 catkin_python_setup()
 
 catkin_package()
+
+if (CATKIN_ENABLE_TESTING)
+  find_program(GIT git REQUIRED)
+  execute_process(COMMAND ${GIT} diff ${PROJECT_SOURCE_DIR}/models WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/scripts OUTPUT_VARIABLE output RESULT_VARIABLE result)
+  if(NOT ${result} EQUAL 0)
+    message(FATAL_ERROR "Error during: git diff")
+  endif()
+  if(NOT ${output} STREQUAL "")
+    message(SEND_ERROR ${output})
+    message(FATAL_ERROR "Difference in the models folder after SDF conversion, make sure the SDF version of yaml files are committed")
+  endif()
+endif()

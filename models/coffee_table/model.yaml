@@ -1,6 +1,24 @@
 type: table
 shape:
-    path: shape/shape.xml
+    compound:
+        # Table Top
+        - box:
+            pose: {x: 0, y: 0, z: 0.32}
+            size: {x: 0.50, y: 0.80, z: 0.04}
+        # Legs
+        - box:
+            pose: {x: -0.21, y: -0.36, z: 0.15}
+            size: {x: 0.08, y: 0.08, z: 0.30}
+        - box:
+            pose: {x: -0.21, y: 0.36, z: 0.15}
+            size: {x: 0.08, y: 0.08, z: 0.30}
+        - box:
+            pose: {x: 0.21, y: 0.36, z: 0.15}
+            size: {x: 0.08, y: 0.08, z: 0.30}
+        - box:
+            pose: {x: 0.21, y: -0.36, z: 0.15}
+            size: {x: 0.08, y: 0.08, z: 0.30}
+
 color:
     red: 0.7 # 0.545
     green: 0.4 # 0.271

@@ -1,15 +1,13 @@
+areas:
+- {name: near, offset: 0.7}
+- name: in_front_of
+  shape:
+  - box:
+      max: {x: 0.15, y: 0.0, z: 1}
+      min: {x: -0.15, y: -1.3, z: 0}
+color: {blue: 0.5, green: 0.5, red: 0.5}
 localizable: 1.0
 shape:
-    path: shape/shape.xml
-color:
-    red: 0.5
-    green: 0.5
-    blue: 0.5
-areas:
-  - name: near
-    offset: 0.7
-  - name: in_front_of
-    shape:
-      - box:
-            min: { x: -0.15, y: -1.3, z: 0 }
-            max: { x:  0.15, y:  0.0, z: 1 }
+  box:
+    pose: {x: 0.0, y: 0.0, z: 0.21}
+    size: {x: 0.6, y: 1.2, z: 0.42}

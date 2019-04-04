@@ -1,14 +1,25 @@
-shape:
-    path: shape/shape.xml
-color:
-    red: 0.5
-    green: 0.5
-    blue: 0.5
 areas:
-  - name: near
-    offset: 0.7
-  - name: in_front_of
-    shape:
-      - box:
-            min: { x:  0.3, y: -0.15, z: 0 }
-            max: { x:  1, y: 0.15, z: 1 }
+- {name: near, offset: 0.7}
+- name: in_front_of
+  shape:
+  - box:
+      max: {x: 1, y: 0.15, z: 1}
+      min: {x: 0.3, y: -0.15, z: 0}
+color: {blue: 0.5, green: 0.5, red: 0.5}
+shape:
+  compound:
+  - box:
+      pose: {x: 0.0, y: 0.0, z: 0.7275}
+      size: {x: 0.55, y: 1.1, z: 0.015}
+  - box:
+      pose: {x: -0.19, y: -0.395, z: 0.36375}
+      size: {x: 0.03, y: 0.03, z: 0.7275}
+  - box:
+      pose: {x: 0.19, y: -0.395, z: 0.36375}
+      size: {x: 0.03, y: 0.03, z: 0.7275}
+  - box:
+      pose: {x: -0.19, y: 0.395, z: 0.36375}
+      size: {x: 0.03, y: 0.03, z: 0.7275}
+  - box:
+      pose: {x: 0.19, y: 0.395, z: 0.36375}
+      size: {x: 0.03, y: 0.03, z: 0.7275}

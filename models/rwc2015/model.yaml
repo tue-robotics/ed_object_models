@@ -76,7 +76,7 @@ composition:
           x: 2.555    # 0.625 + 1.38 (meas) + 1.1/2
           y: 2.175    # 2.45 - 0.55/2
           Z: -1.571
-    # - type: "rwc2015/cupboard" # CUPBOARD HAS EEN UPDATED, do not uncomment 
+    # - type: "rwc2015/cupboard" # CUPBOARD HAS EEN UPDATED, do not uncomment
     #   id: "bar"
     #   pose:
     #       x: 5.57     # 5.4 + 0.34/2
@@ -122,13 +122,13 @@ composition:
           Z: 1.571
     # - type: "rwc2015/kitchen_counter"
     #   id: "cupboard"
-    #   pose: 
+    #   pose:
     #       x: 3.875      # 5.35 - 0.73 (meas) - 1.49/2
     #       y: 2.28       # 2.45 - 0.34/2
     #       Z: 1.571
     - type: "rwc2015/cupboard"
       id: "cupboard"
-      pose: 
+      pose:
           x: 3.875      # 5.35 - 0.73 (meas) - 1.49/2
           y: 2.28       # 2.45 - 0.34/2
           Z: 1.571
@@ -303,7 +303,7 @@ composition:
 
     - type: "waypoint"
       id: "person_rec_learning"
-      pose: { x: 7.316, y:-3.636, z: 0, rz: -1.578}
+      pose: { x: 7.316, y: -3.636, z: 0, rz: -1.578}
 
     - type: "waypoint"
       id: "person_rec_living_room_1"

@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="reo2016/kitchencounter">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>0.59 3.0 0.95</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>0.59 3.0 0.95</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </visual>
+      <pose>0.0 0.0 0.475 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of">
+        <geometry>
+          <box>
+            <size>0.58 3.0 0.31</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.0 1.145 0 0 0</pose>
+        <name>on_top_of</name>
+      </virtual_volume>
+      <name>on_top_of</name>
+    </link>
+    <link name="left_of_sink">
+      <virtual_volume name="left_of_sink">
+        <geometry>
+          <box>
+            <size>0.58 0.75 0.32</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.875 1.15 0 0 0</pose>
+        <name>left_of_sink</name>
+      </virtual_volume>
+      <name>left_of_sink</name>
+    </link>
+    <link name="right_of_sink">
+      <virtual_volume name="right_of_sink">
+        <geometry>
+          <box>
+            <size>0.58 0.75 0.32</size>
+          </box>
+        </geometry>
+        <pose>0.0 -0.875 1.15 0 0 0</pose>
+        <name>right_of_sink</name>
+      </virtual_volume>
+      <name>right_of_sink</name>
+    </link>
+    <link name="in_front_of_left_sink">
+      <virtual_volume name="in_front_of_left_sink">
+        <geometry>
+          <box>
+            <size>0.6 0.75 0.01</size>
+          </box>
+        </geometry>
+        <pose>-1.1 0.875 0.005 0 0 0</pose>
+        <name>in_front_of_left_sink</name>
+      </virtual_volume>
+      <name>in_front_of_left_sink</name>
+    </link>
+    <link name="in_front_of_right_sink">
+      <virtual_volume name="in_front_of_right_sink">
+        <geometry>
+          <box>
+            <size>0.6 0.75 0.01</size>
+          </box>
+        </geometry>
+        <pose>-1.1 -0.875 0.005 0 0 0</pose>
+        <name>in_front_of_right_sink</name>
+      </virtual_volume>
+      <name>in_front_of_right_sink</name>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of">
+        <geometry>
+          <box>
+            <size>0.6 3.0 0.01</size>
+          </box>
+        </geometry>
+        <pose>-1.1 0.0 0.005 0 0 0</pose>
+        <name>in_front_of</name>
+      </virtual_volume>
+      <name>in_front_of</name>
+    </link>
+    <static>true</static>
+    <name>reo2016/kitchencounter</name>
+  </model>
+</sdf>

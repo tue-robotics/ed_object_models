@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="robotics_testlab_B/plastic_cabinet.shelf">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>0.39 0.65 0.04</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>0.39 0.65 0.04</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.6 0.6 0.6 1</ambient>
+        </material>
+        <name>1</name>
+      </visual>
+      <pose>0 0 0 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of">
+        <geometry>
+          <box>
+            <size>0.15 0.65 1.76</size>
+          </box>
+        </geometry>
+        <pose>-0.91 0.0 0.88 0 0 0</pose>
+        <name>in_front_of</name>
+      </virtual_volume>
+      <name>in_front_of</name>
+    </link>
+    <link name="in">
+      <virtual_volume name="in">
+        <geometry>
+          <box>
+            <size>0.65 0.42 1.76</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.0 0.88 0 0 0</pose>
+        <name>in</name>
+      </virtual_volume>
+      <name>in</name>
+    </link>
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of">
+        <geometry>
+          <box>
+            <size>0.34 0.55 0.25</size>
+          </box>
+        </geometry>
+        <pose>-0.02 0.0 0.175 0 0 0</pose>
+        <name>on_top_of</name>
+      </virtual_volume>
+      <name>on_top_of</name>
+    </link>
+    <static>true</static>
+    <name>robotics_testlab_B/plastic_cabinet.shelf</name>
+  </model>
+</sdf>

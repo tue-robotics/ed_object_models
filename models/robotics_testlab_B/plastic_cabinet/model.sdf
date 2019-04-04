@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="robotics_testlab_B/plastic_cabinet">
+    <light name="sun" type="directional">
+      <direction>0.5 0.1 -0.9</direction>
+      <pose>0 0 10 0 0 0</pose>
+      <name>sun</name>
+      <specular>0.2 0.2 0.2 1</specular>
+      <cast_shadows>true</cast_shadows>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <attenuation>
+        <range>1000</range>
+        <quadratic>0.001</quadratic>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+      </attenuation>
+    </light>
+    <include name="frame">
+      <pose>0 0 0 0 0 0</pose>
+      <name>frame</name>
+      <uri>model://robotics_testlab_B.plastic_cabinet.frame</uri>
+    </include>
+    <include name="bottom">
+      <pose>0 0 0 0 0 0</pose>
+      <name>bottom</name>
+      <uri>model://robotics_testlab_B.plastic_cabinet.shelf</uri>
+    </include>
+    <include name="shelf1">
+      <pose>0 0 0.35 0 0 0</pose>
+      <name>shelf1</name>
+      <uri>model://robotics_testlab_B.plastic_cabinet.shelf</uri>
+    </include>
+    <include name="shelf2">
+      <pose>0 0 0.7 0 0 0</pose>
+      <name>shelf2</name>
+      <uri>model://robotics_testlab_B.plastic_cabinet.shelf</uri>
+    </include>
+    <include name="shelf3">
+      <pose>0 0 1.055 0 0 0</pose>
+      <name>shelf3</name>
+      <uri>model://robotics_testlab_B.plastic_cabinet.shelf</uri>
+    </include>
+    <include name="shelf4">
+      <pose>0 0 1.41 0 0 0</pose>
+      <name>shelf4</name>
+      <uri>model://robotics_testlab_B.plastic_cabinet.shelf</uri>
+    </include>
+    <include name="top">
+      <pose>0 0 1.74 0 0 0</pose>
+      <name>top</name>
+      <uri>model://robotics_testlab_B.plastic_cabinet.shelf</uri>
+    </include>
+    <physics type="ode">
+      <real_time_update_rate>400.0</real_time_update_rate>
+      <max_step_size>0.0025</max_step_size>
+      <ode>
+        <constraints>
+          <cfm>0.0001</cfm>
+        </constraints>
+        <solver type="quick">
+          <iters>100</iters>
+        </solver>
+      </ode>
+    </physics>
+    <name>robotics_testlab_B/plastic_cabinet</name>
+  </world>
+</sdf>

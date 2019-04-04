@@ -1,6 +1,18 @@
 localizable: 1.0
 shape:
-    path: shape/shape.xml
+    compound:
+        # Left plank
+        - box:
+            pose: {x: 0, y: -0.325, z: 0.8775} # 0.325 = xyz.y / 2 and 0.8775 = 1.755 / 2
+            size: {x: 0.41, y: 0.03, z: 1.755}
+        # Right plank
+        - box:
+            pose: {x: 0, y: 0.325, z: 0.8775}
+            size: {x: 0.41, y: 0.02, z: 1.755}
+        # Backside
+        - box:
+            pose: {x: 0.205, y: 0, z: 0.8775} # 0.205 = box.size.x / 2
+            size: {x: 0.02, y: 0.65, z: 1.755}
 color:
     red: 0.6
     green: 0.6

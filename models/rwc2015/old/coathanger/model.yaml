@@ -1,9 +1,11 @@
-shape:
-    path: shape/shape.xml
-color:
-    red: 0.9
-    green: 0.9
-    blue: 0.9
 areas:
-- name: near
-  offset: 0.5
+- {name: near, offset: 0.5}
+color: {blue: 0.9, green: 0.9, red: 0.9}
+shape:
+  compound:
+  - box:
+      pose: {x: 0.0, y: 0.0, z: 0.0275}
+      size: {x: 0.35, y: 0.35, z: 0.055}
+  - box:
+      pose: {x: 0.0, y: 0.0, z: 0.645}
+      size: {x: 0.05, y: 0.05, z: 1.29}

@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="tue.library/cartographics">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>3.82 1.525 1.2</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>3.82 1.525 1.2</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </visual>
+      <pose>0 0 0.6 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <link name="2">
+      <collision name="2">
+        <geometry>
+          <box>
+            <size>1.42 1.86 1.2</size>
+          </box>
+        </geometry>
+        <name>2</name>
+      </collision>
+      <visual name="2">
+        <geometry>
+          <box>
+            <size>1.42 1.86 1.2</size>
+          </box>
+        </geometry>
+        <name>2</name>
+      </visual>
+      <pose>1.2 4.26 0.6 0 0 0</pose>
+      <name>2</name>
+    </link>
+    <link name="3">
+      <collision name="3">
+        <geometry>
+          <box>
+            <size>1.42 1.86 1.2</size>
+          </box>
+        </geometry>
+        <name>3</name>
+      </collision>
+      <visual name="3">
+        <geometry>
+          <box>
+            <size>1.42 1.86 1.2</size>
+          </box>
+        </geometry>
+        <name>3</name>
+      </visual>
+      <pose>-1.2 4.26 0.6 0 0 0</pose>
+      <name>3</name>
+    </link>
+    <static>true</static>
+    <name>tue.library/cartographics</name>
+  </model>
+</sdf>

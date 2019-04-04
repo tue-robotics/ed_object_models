@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rwc2013/kitchen_countertop">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>0.642 2.989 0.95</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>0.642 2.989 0.95</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.8 0.8 0.8 1</ambient>
+        </material>
+        <name>1</name>
+      </visual>
+      <pose>0.0 0.0 0.475 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <static>true</static>
+    <name>rwc2013/kitchen_countertop</name>
+  </model>
+</sdf>

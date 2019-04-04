@@ -1,2 +1,17 @@
 shape:
-    path: shape.xml
+    compound:
+        - box:
+            pose: {x: 0, y: 0, z: 0.6}
+            size: {x: 3.62, y: 0.625, z: 1.20}
+        - box:
+            pose: {x: 0, y: -2.0, z: 0.6}
+            size: {x: 3.62, y: 0.405, z: 1.20}
+        - box:
+            pose: {x: 0, y: -4.05, z: 0.6}
+            size: {x: 3.62, y: 0.81, z: 1.20}
+        - box:
+            pose: {x: 0, y: -6.31, z: 0.6}
+            size: {x: 3.62, y: 0.81, z: 1.20}
+        - box:
+            pose: {x: 0, y: -8.36, z: 0.6}
+            size: {x: 3.62, y: 0.405, z: 1.20}

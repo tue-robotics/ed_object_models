@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="ddw/walls">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <mesh>
+            <uri>model://ddw/walls/shape/heightmap.stl</uri>
+          </mesh>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <mesh>
+            <uri>model://ddw/walls/shape/heightmap.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1.0 0.0 0.0 1</ambient>
+        </material>
+        <name>1</name>
+      </visual>
+      <pose>0 0 0 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <static>true</static>
+    <name>ddw/walls</name>
+  </model>
+</sdf>

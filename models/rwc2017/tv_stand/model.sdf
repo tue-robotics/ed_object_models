@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rwc2017/tv_stand">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>0.39 1.01 0.135</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>0.39 1.01 0.135</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </visual>
+      <pose>0 0.425 0.2325 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <link name="2">
+      <collision name="2">
+        <geometry>
+          <box>
+            <size>0.39 1.05 0.15</size>
+          </box>
+        </geometry>
+        <name>2</name>
+      </collision>
+      <visual name="2">
+        <geometry>
+          <box>
+            <size>0.39 1.05 0.15</size>
+          </box>
+        </geometry>
+        <name>2</name>
+      </visual>
+      <pose>0 -0.45 0.375 0 0 0</pose>
+      <name>2</name>
+    </link>
+    <link name="3">
+      <collision name="3">
+        <geometry>
+          <box>
+            <size>0.01 1.8 0.3</size>
+          </box>
+        </geometry>
+        <name>3</name>
+      </collision>
+      <visual name="3">
+        <geometry>
+          <box>
+            <size>0.01 1.8 0.3</size>
+          </box>
+        </geometry>
+        <name>3</name>
+      </visual>
+      <pose>-0.19 0.0 0.15 0 0 0</pose>
+      <name>3</name>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of">
+        <geometry>
+          <box>
+            <size>0.3 2.0 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.55 0.0 0.005 0 0 0</pose>
+        <name>in_front_of</name>
+      </virtual_volume>
+      <name>in_front_of</name>
+    </link>
+    <static>true</static>
+    <name>rwc2017/tv_stand</name>
+  </model>
+</sdf>

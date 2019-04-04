@@ -1,8 +1,5 @@
+color: {blue: 0.0, green: 0.6, red: 0.0}
 shape:
-    path: shape/shape.xml
-color:
-    red: 0.0
-    green: 0.6
-    blue: 0.0
-
-
+  box:
+    pose: {x: 0.0, y: 0.0, z: 1.0}
+    size: {x: 0.7, y: 0.7, z: 2.0}

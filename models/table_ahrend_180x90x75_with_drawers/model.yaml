@@ -1,7 +1,22 @@
-type: table
+color: {blue: 0.8, green: 0.8, red: 0.8}
 shape:
-    path: shape/shape.xml
-color:
-    red: 0.8
-    green: 0.8
-    blue: 0.8
+  compound:
+  - box:
+      pose: {x: 0.0, y: 0.0, z: 0.725}
+      size: {x: 1.8, y: 0.9, z: 0.05}
+  - box:
+      pose: {x: -0.9, y: -0.45, z: 0.37}
+      size: {x: 0.05, y: 0.05, z: 0.74}
+  - box:
+      pose: {x: -0.9, y: 0.45, z: 0.37}
+      size: {x: 0.05, y: 0.05, z: 0.74}
+  - box:
+      pose: {x: 0.9, y: -0.45, z: 0.37}
+      size: {x: 0.05, y: 0.05, z: 0.74}
+  - box:
+      pose: {x: 0.9, y: 0.45, z: 0.37}
+      size: {x: 0.05, y: 0.05, z: 0.74}
+  - box:
+      pose: {x: 0.705, y: 0.09, z: 0.465}
+      size: {x: 0.39, y: 0.72, z: 0.53}
+type: table

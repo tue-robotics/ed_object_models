@@ -1,0 +1,107 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="robotics_testlabs_empty">
+    <light name="sun" type="directional">
+      <direction>0.5 0.1 -0.9</direction>
+      <pose>0 0 10 0 0 0</pose>
+      <name>sun</name>
+      <specular>0.2 0.2 0.2 1</specular>
+      <cast_shadows>true</cast_shadows>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <attenuation>
+        <range>1000</range>
+        <quadratic>0.001</quadratic>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+      </attenuation>
+    </light>
+    <model name="initial_pose" type="waypoint">
+      <pose>0.586 4.259 0 0 0 0</pose>
+      <static>true</static>
+      <name>initial_pose</name>
+    </model>
+    <model name="exit" type="waypoint">
+      <pose>-1.48 -0.031 0 0 0 3.1415</pose>
+      <static>true</static>
+      <name>exit</name>
+    </model>
+    <model name="operator_pose" type="waypoint">
+      <pose>0.0 0.0 0 0 0 0.0</pose>
+      <static>true</static>
+      <name>operator_pose</name>
+    </model>
+    <model name="explore1" type="waypoint">
+      <pose>2.0 4.0 0 0 0 0.0</pose>
+      <static>true</static>
+      <name>explore1</name>
+    </model>
+    <model name="explore2" type="waypoint">
+      <pose>2.0 2.5 0 0 0 0.0</pose>
+      <static>true</static>
+      <name>explore2</name>
+    </model>
+    <model name="explore3" type="waypoint">
+      <pose>2.0 2.0 0 0 0 3.14</pose>
+      <static>true</static>
+      <name>explore3</name>
+    </model>
+    <model name="explore4" type="waypoint">
+      <pose>2.0 1.5 0 0 0 0.0</pose>
+      <static>true</static>
+      <name>explore4</name>
+    </model>
+    <model name="explore5" type="waypoint">
+      <pose>1.0 0.3 0 0 0 0.0</pose>
+      <static>true</static>
+      <name>explore5</name>
+    </model>
+    <model name="explore6" type="waypoint">
+      <pose>1.5 -0.5 0 0 0 -1.57</pose>
+      <static>true</static>
+      <name>explore6</name>
+    </model>
+    <model name="explore7" type="waypoint">
+      <pose>-1.5 0.0 0 0 0 3.14</pose>
+      <static>true</static>
+      <name>explore7</name>
+    </model>
+    <model name="explore8" type="waypoint">
+      <pose>-1.5 2.0 0 0 0 2.36</pose>
+      <static>true</static>
+      <name>explore8</name>
+    </model>
+    <model name="explore9" type="waypoint">
+      <pose>-0.5 4.0 0 0 0 3.14</pose>
+      <static>true</static>
+      <name>explore9</name>
+    </model>
+    <model name="explore10" type="waypoint">
+      <pose>0.5 4.5 0 0 0 -1.57</pose>
+      <static>true</static>
+      <name>explore10</name>
+    </model>
+    <include name="walls">
+      <pose>0 0 0 0 0 0</pose>
+      <name>walls</name>
+      <uri>model://robotics_testlabs/walls</uri>
+    </include>
+    <include name="floor">
+      <pose>0 0 0 0 0 0</pose>
+      <name>floor</name>
+      <uri>model://floor</uri>
+    </include>
+    <physics type="ode">
+      <real_time_update_rate>400.0</real_time_update_rate>
+      <max_step_size>0.0025</max_step_size>
+      <ode>
+        <constraints>
+          <cfm>0.0001</cfm>
+        </constraints>
+        <solver type="quick">
+          <iters>100</iters>
+        </solver>
+      </ode>
+    </physics>
+    <name>robotics_testlabs_empty</name>
+  </world>
+</sdf>

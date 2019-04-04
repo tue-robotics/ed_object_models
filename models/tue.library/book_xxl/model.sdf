@@ -1,0 +1,107 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="tue.library/book_xxl">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>3.62 0.625 1.2</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>3.62 0.625 1.2</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </visual>
+      <pose>0 0 0.6 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <link name="2">
+      <collision name="2">
+        <geometry>
+          <box>
+            <size>3.62 0.405 1.2</size>
+          </box>
+        </geometry>
+        <name>2</name>
+      </collision>
+      <visual name="2">
+        <geometry>
+          <box>
+            <size>3.62 0.405 1.2</size>
+          </box>
+        </geometry>
+        <name>2</name>
+      </visual>
+      <pose>0 -2.0 0.6 0 0 0</pose>
+      <name>2</name>
+    </link>
+    <link name="3">
+      <collision name="3">
+        <geometry>
+          <box>
+            <size>3.62 0.81 1.2</size>
+          </box>
+        </geometry>
+        <name>3</name>
+      </collision>
+      <visual name="3">
+        <geometry>
+          <box>
+            <size>3.62 0.81 1.2</size>
+          </box>
+        </geometry>
+        <name>3</name>
+      </visual>
+      <pose>0 -4.05 0.6 0 0 0</pose>
+      <name>3</name>
+    </link>
+    <link name="4">
+      <collision name="4">
+        <geometry>
+          <box>
+            <size>3.62 0.81 1.2</size>
+          </box>
+        </geometry>
+        <name>4</name>
+      </collision>
+      <visual name="4">
+        <geometry>
+          <box>
+            <size>3.62 0.81 1.2</size>
+          </box>
+        </geometry>
+        <name>4</name>
+      </visual>
+      <pose>0 -6.31 0.6 0 0 0</pose>
+      <name>4</name>
+    </link>
+    <link name="5">
+      <collision name="5">
+        <geometry>
+          <box>
+            <size>3.62 0.405 1.2</size>
+          </box>
+        </geometry>
+        <name>5</name>
+      </collision>
+      <visual name="5">
+        <geometry>
+          <box>
+            <size>3.62 0.405 1.2</size>
+          </box>
+        </geometry>
+        <name>5</name>
+      </visual>
+      <pose>0 -8.36 0.6 0 0 0</pose>
+      <name>5</name>
+    </link>
+    <static>true</static>
+    <name>tue.library/book_xxl</name>
+  </model>
+</sdf>

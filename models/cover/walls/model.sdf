@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="cover/walls">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <mesh>
+            <uri>model://cover/walls/covered.stl</uri>
+          </mesh>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <mesh>
+            <uri>model://cover/walls/covered.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.4 0.4 0.0 1</ambient>
+        </material>
+        <name>1</name>
+      </visual>
+      <pose>0 0 0 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <static>true</static>
+    <name>cover/walls</name>
+  </model>
+</sdf>

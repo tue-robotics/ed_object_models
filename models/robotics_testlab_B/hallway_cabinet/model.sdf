@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="robotics_testlab_B/hallway_cabinet">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>0.4 0.8 0.81</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.0 0.405 0 0 0</pose>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>0.4 0.8 0.81</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.0 0.405 0 0 0</pose>
+        <name>1</name>
+      </visual>
+      <pose>0 0 0 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of">
+        <geometry>
+          <box>
+            <size>0.4 0.8 0.38</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.0 1.01 0 0 0</pose>
+        <name>on_top_of</name>
+      </virtual_volume>
+      <name>on_top_of</name>
+    </link>
+    <static>true</static>
+    <name>robotics_testlab_B/hallway_cabinet</name>
+  </model>
+</sdf>

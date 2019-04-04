@@ -1,15 +1,10 @@
+affordances:
+  navigate-to:
+    position_constraint: {constraint: x^2 + y^2 < 0.8^2}
+  place: {height: 0.75}
+color: {blue: 0.8, green: 0.8, red: 0.8}
 localizable: 1.0
 shape:
-    path: shape/shape.xml
-color:
-    red: 0.8
-    green: 0.8
-    blue: 0.8
-affordances:
-    place:
-        height: 0.75
-    navigate-to:
-        position_constraint:
-            constraint: "x^2 + y^2 < 0.8^2"
-    
-
+  box:
+    pose: {x: 0.0, y: 0.0, z: 0.39}
+    size: {x: 1.18, y: 0.7, z: 0.78}

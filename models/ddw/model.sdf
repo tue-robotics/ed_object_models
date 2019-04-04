@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="ddw">
+    <light name="sun" type="directional">
+      <direction>0.5 0.1 -0.9</direction>
+      <pose>0 0 10 0 0 0</pose>
+      <name>sun</name>
+      <specular>0.2 0.2 0.2 1</specular>
+      <cast_shadows>true</cast_shadows>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <attenuation>
+        <range>1000</range>
+        <quadratic>0.001</quadratic>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+      </attenuation>
+    </light>
+    <include name="walls">
+      <pose>0 0 0 0 0 0</pose>
+      <name>walls</name>
+      <uri>model://ddw/walls</uri>
+    </include>
+    <include name="floor">
+      <pose>0 0 0 0 0 0</pose>
+      <name>floor</name>
+      <uri>model://floor</uri>
+    </include>
+    <include name="couch">
+      <pose>-0.4 -1.3 0 0 0 0</pose>
+      <name>couch</name>
+      <uri>model://ddw/couch</uri>
+    </include>
+    <include name="chair">
+      <pose>2.5 1.05 0 0 0 0</pose>
+      <name>chair</name>
+      <uri>model://ddw/chair</uri>
+    </include>
+    <include name="table">
+      <pose>0.9 1.22 0 0 0 0</pose>
+      <name>table</name>
+      <uri>model://ddw/table</uri>
+    </include>
+    <include name="sidetable">
+      <pose>0.2 3.25 0 0 0 0</pose>
+      <name>sidetable</name>
+      <uri>model://ddw/sidetable</uri>
+    </include>
+    <include name="couchtable">
+      <pose>1.56 -1.18 0 0 0 0</pose>
+      <name>couchtable</name>
+      <uri>model://ddw/salon</uri>
+    </include>
+    <include name="desk">
+      <pose>2.85 3.35 0 0 0 0</pose>
+      <name>desk</name>
+      <uri>model://ddw/desk</uri>
+    </include>
+    <physics type="ode">
+      <real_time_update_rate>400.0</real_time_update_rate>
+      <max_step_size>0.0025</max_step_size>
+      <ode>
+        <constraints>
+          <cfm>0.0001</cfm>
+        </constraints>
+        <solver type="quick">
+          <iters>100</iters>
+        </solver>
+      </ode>
+    </physics>
+    <name>ddw</name>
+  </world>
+</sdf>

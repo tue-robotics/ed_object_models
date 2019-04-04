@@ -1,6 +1,8 @@
 type: door
 shape:
-    path: shape/shape.xml
+    box:
+        pose: {x: 0, y: 0, z: 0.025}
+        size: {x: 0.02, y: 0.335, z: 0.335}
 color:
     red: 0.6
     green: 0.0

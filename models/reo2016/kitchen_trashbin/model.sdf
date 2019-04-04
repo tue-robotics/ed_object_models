@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="reo2016/kitchen_trashbin">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <cylinder>
+            <length>0.71</length>
+            <radius>0.17</radius>
+          </cylinder>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <cylinder>
+            <length>0.71</length>
+            <radius>0.17</radius>
+          </cylinder>
+        </geometry>
+        <name>1</name>
+      </visual>
+      <pose>0 0 0 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <static>true</static>
+    <name>reo2016/kitchen_trashbin</name>
+  </model>
+</sdf>

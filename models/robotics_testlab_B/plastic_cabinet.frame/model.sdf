@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="robotics_testlab_B/plastic_cabinet.frame">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>0.41 0.03 1.755</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>0.41 0.03 1.755</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.6 0.6 0.6 1</ambient>
+        </material>
+        <name>1</name>
+      </visual>
+      <pose>0 -0.325 0.8775 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <link name="2">
+      <collision name="2">
+        <geometry>
+          <box>
+            <size>0.41 0.02 1.755</size>
+          </box>
+        </geometry>
+        <name>2</name>
+      </collision>
+      <visual name="2">
+        <geometry>
+          <box>
+            <size>0.41 0.02 1.755</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.6 0.6 0.6 1</ambient>
+        </material>
+        <name>2</name>
+      </visual>
+      <pose>0 0.325 0.8775 0 0 0</pose>
+      <name>2</name>
+    </link>
+    <link name="3">
+      <collision name="3">
+        <geometry>
+          <box>
+            <size>0.02 0.65 1.755</size>
+          </box>
+        </geometry>
+        <name>3</name>
+      </collision>
+      <visual name="3">
+        <geometry>
+          <box>
+            <size>0.02 0.65 1.755</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.6 0.6 0.6 1</ambient>
+        </material>
+        <name>3</name>
+      </visual>
+      <pose>0.205 0 0.8775 0 0 0</pose>
+      <name>3</name>
+    </link>
+    <static>true</static>
+    <name>robotics_testlab_B/plastic_cabinet.frame</name>
+  </model>
+</sdf>

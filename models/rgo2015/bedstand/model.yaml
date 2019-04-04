@@ -1,6 +1,8 @@
 localizable: 1.0
 shape:
-    path: shape/shape.xml
+    box:
+        pose: {x: 0.0, y: 0.0, z: 0.315}
+        size: {x: 0.34, y: 0.435, z: 0.63}
 color:
     red: 0.9
     green: 0.9

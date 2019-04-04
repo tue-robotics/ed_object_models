@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rgo2015/thrashbin">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>0.29 0.365 0.55</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>0.29 0.365 0.55</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.8 0.8 0.8 1</ambient>
+        </material>
+        <name>1</name>
+      </visual>
+      <pose>0 0 0.275 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <static>true</static>
+    <name>rgo2015/thrashbin</name>
+  </model>
+</sdf>

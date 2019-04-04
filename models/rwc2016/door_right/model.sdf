@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rwc2016/door_right">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>0.04 0.84 2</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>0.04 0.84 2</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.8 0.8 0.8 1</ambient>
+        </material>
+        <name>1</name>
+      </visual>
+      <pose>0.02 -0.42 1 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <static>true</static>
+    <name>rwc2016/door_right</name>
+  </model>
+</sdf>

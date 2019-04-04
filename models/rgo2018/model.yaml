@@ -28,7 +28,7 @@ composition:
   type: rgo2018/table_salon
 - id: tv
   pose: {Z: 1.570796, x: 5.0, y: 4.08, z: 0.0}
-  type: rgo2018/tv
+  type: rgo2015/tv
 - id: tv_table
   pose: {Z: 0.7854000000000001, x: 5.045754, y: 5.106661, z: 0.0}
   type: rgo2018/table_salon

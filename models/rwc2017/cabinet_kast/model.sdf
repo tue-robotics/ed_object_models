@@ -1,0 +1,169 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rwc2017/cabinet_kast">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>0.393 0.034 0.764</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>0.393 0.034 0.764</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>1.0 1.0 1.0 1</ambient>
+        </material>
+        <name>1</name>
+      </visual>
+      <pose>0 -0.366 0.382 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <link name="2">
+      <collision name="2">
+        <geometry>
+          <box>
+            <size>0.393 0.034 0.764</size>
+          </box>
+        </geometry>
+        <name>2</name>
+      </collision>
+      <visual name="2">
+        <geometry>
+          <box>
+            <size>0.393 0.034 0.764</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>1.0 1.0 1.0 1</ambient>
+        </material>
+        <name>2</name>
+      </visual>
+      <pose>0 0.366 0.382 0 0 0</pose>
+      <name>2</name>
+    </link>
+    <link name="3">
+      <collision name="3">
+        <geometry>
+          <box>
+            <size>0.393 0.764 0.034</size>
+          </box>
+        </geometry>
+        <name>3</name>
+      </collision>
+      <visual name="3">
+        <geometry>
+          <box>
+            <size>0.393 0.764 0.034</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>1.0 1.0 1.0 1</ambient>
+        </material>
+        <name>3</name>
+      </visual>
+      <pose>0 0 0.747 0 0 0</pose>
+      <name>3</name>
+    </link>
+    <link name="4">
+      <collision name="4">
+        <geometry>
+          <box>
+            <size>0.393 0.764 0.034</size>
+          </box>
+        </geometry>
+        <name>4</name>
+      </collision>
+      <visual name="4">
+        <geometry>
+          <box>
+            <size>0.393 0.764 0.034</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>1.0 1.0 1.0 1</ambient>
+        </material>
+        <name>4</name>
+      </visual>
+      <pose>0 0 0.025 0 0 0</pose>
+      <name>4</name>
+    </link>
+    <link name="5">
+      <collision name="5">
+        <geometry>
+          <box>
+            <size>0.393 0.69 0.02</size>
+          </box>
+        </geometry>
+        <name>5</name>
+      </collision>
+      <visual name="5">
+        <geometry>
+          <box>
+            <size>0.393 0.69 0.02</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>1.0 1.0 1.0 1</ambient>
+        </material>
+        <name>5</name>
+      </visual>
+      <pose>0 0 0.382 0 0 0</pose>
+      <name>5</name>
+    </link>
+    <link name="6">
+      <collision name="6">
+        <geometry>
+          <box>
+            <size>0.393 0.02 0.69</size>
+          </box>
+        </geometry>
+        <name>6</name>
+      </collision>
+      <visual name="6">
+        <geometry>
+          <box>
+            <size>0.393 0.02 0.69</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>1.0 1.0 1.0 1</ambient>
+        </material>
+        <name>6</name>
+      </visual>
+      <pose>0 0 0.382 0 0 0</pose>
+      <name>6</name>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of">
+        <geometry>
+          <box>
+            <size>0.4 0.7 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.5 0.0 0.005 0 0 0</pose>
+        <name>in_front_of</name>
+      </virtual_volume>
+      <name>in_front_of</name>
+    </link>
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of">
+        <geometry>
+          <box>
+            <size>0.4 0.86 0.48</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.0 1.46 0 0 0</pose>
+        <name>on_top_of</name>
+      </virtual_volume>
+      <name>on_top_of</name>
+    </link>
+    <static>true</static>
+    <name>rwc2017/cabinet_kast</name>
+  </model>
+</sdf>

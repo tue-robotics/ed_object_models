@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="rein_experiment">
+    <light name="sun" type="directional">
+      <direction>0.5 0.1 -0.9</direction>
+      <pose>0 0 10 0 0 0</pose>
+      <name>sun</name>
+      <specular>0.2 0.2 0.2 1</specular>
+      <cast_shadows>true</cast_shadows>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <attenuation>
+        <range>1000</range>
+        <quadratic>0.001</quadratic>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+      </attenuation>
+    </light>
+    <model name="corridor_start" type="waypoint">
+      <pose>7.3 5.6 0 0 0 0</pose>
+      <static>true</static>
+      <name>corridor_start</name>
+    </model>
+    <model name="corridor_end" type="waypoint">
+      <pose>7.3 -5.8 0 0 0 0</pose>
+      <static>true</static>
+      <name>corridor_end</name>
+    </model>
+    <model name="chillout_corner" type="waypoint">
+      <pose>5.5 -1.0 0 0 0 0</pose>
+      <static>true</static>
+      <name>chillout_corner</name>
+    </model>
+    <model name="bedroom" type="waypoint">
+      <pose>3.1 5.6 0 0 0 0</pose>
+      <static>true</static>
+      <name>bedroom</name>
+    </model>
+    <model name="living_room" type="waypoint">
+      <pose>0 -5.0 0 0 0 0</pose>
+      <static>true</static>
+      <name>living_room</name>
+    </model>
+    <include name="walls">
+      <pose>0 0 0 0 0 0</pose>
+      <name>walls</name>
+      <uri>model://rein_experiment/walls</uri>
+    </include>
+    <include name="floor">
+      <pose>0 0 0 0 0 0</pose>
+      <name>floor</name>
+      <uri>model://floor</uri>
+    </include>
+    <physics type="ode">
+      <real_time_update_rate>400.0</real_time_update_rate>
+      <max_step_size>0.0025</max_step_size>
+      <ode>
+        <constraints>
+          <cfm>0.0001</cfm>
+        </constraints>
+        <solver type="quick">
+          <iters>100</iters>
+        </solver>
+      </ode>
+    </physics>
+    <name>rein_experiment</name>
+  </world>
+</sdf>

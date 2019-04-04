@@ -1,0 +1,123 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rwc2015/sofa">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>0.72 1.25 0.08</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>0.72 1.25 0.08</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+        </material>
+        <name>1</name>
+      </visual>
+      <pose>0.0 0.9 0.15 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <link name="2">
+      <collision name="2">
+        <geometry>
+          <box>
+            <size>0.72 1.25 0.08</size>
+          </box>
+        </geometry>
+        <name>2</name>
+      </collision>
+      <visual name="2">
+        <geometry>
+          <box>
+            <size>0.72 1.25 0.08</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+        </material>
+        <name>2</name>
+      </visual>
+      <pose>0.0 -0.9 0.15 0 0 0</pose>
+      <name>2</name>
+    </link>
+    <link name="3">
+      <collision name="3">
+        <geometry>
+          <box>
+            <size>0.72 3.6 0.175</size>
+          </box>
+        </geometry>
+        <name>3</name>
+      </collision>
+      <visual name="3">
+        <geometry>
+          <box>
+            <size>0.72 3.6 0.175</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+        </material>
+        <name>3</name>
+      </visual>
+      <pose>0.0 0.0 0.2775 0 0 0</pose>
+      <name>3</name>
+    </link>
+    <link name="4">
+      <collision name="4">
+        <geometry>
+          <box>
+            <size>0.17 3.6 0.48</size>
+          </box>
+        </geometry>
+        <name>4</name>
+      </collision>
+      <visual name="4">
+        <geometry>
+          <box>
+            <size>0.17 3.6 0.48</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+        </material>
+        <name>4</name>
+      </visual>
+      <pose>0.29 0.0 0.605 0 0 0</pose>
+      <name>4</name>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of">
+        <geometry>
+          <box>
+            <size>1.2 0.64 1</size>
+          </box>
+        </geometry>
+        <pose>-0.6 -1.22 0.5 0 0 0</pose>
+        <name>in_front_of</name>
+      </virtual_volume>
+      <name>in_front_of</name>
+    </link>
+    <link name="in_front_of_pos2">
+      <virtual_volume name="in_front_of_pos2">
+        <geometry>
+          <box>
+            <size>1.2 0.64 1</size>
+          </box>
+        </geometry>
+        <pose>-0.6 1.22 0.5 0 0 0</pose>
+        <name>in_front_of_pos2</name>
+      </virtual_volume>
+      <name>in_front_of_pos2</name>
+    </link>
+    <static>true</static>
+    <name>rwc2015/sofa</name>
+  </model>
+</sdf>

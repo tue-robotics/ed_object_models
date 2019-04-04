@@ -1,7 +1,7 @@
 type: walls
 shape:
-    heightmap:
-        image: $(file heightmap_arenaa.pgm)
-        height: 2.48
-        resolution: 0.025
-        pose: { x: -17.0, y: -14.2, z: 0 }
+    path: heightmap_arenaa.pgm
+    blockheight: 2.48
+    resolution: 0.025
+    origin_x: -17.0
+    origin_y: -14.2

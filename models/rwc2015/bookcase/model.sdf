@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="rwc2015/bookcase">
+    <light name="sun" type="directional">
+      <direction>0.5 0.1 -0.9</direction>
+      <pose>0 0 10 0 0 0</pose>
+      <name>sun</name>
+      <specular>0.2 0.2 0.2 1</specular>
+      <cast_shadows>true</cast_shadows>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <attenuation>
+        <range>1000</range>
+        <quadratic>0.001</quadratic>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+      </attenuation>
+    </light>
+    <include name="bookcase_frame">
+      <pose>0 0 0 0 0 0</pose>
+      <name>bookcase_frame</name>
+      <uri>model://rwc2015/bookcase/bookcase_frame</uri>
+    </include>
+    <include name="shelf1">
+      <pose>0 0.4225 0.285 0 0 0</pose>
+      <name>shelf1</name>
+      <uri>model://rwc2015/bookcase/shelf</uri>
+    </include>
+    <include name="shelf2">
+      <pose>0 0.4225 0.645 0 0 0</pose>
+      <name>shelf2</name>
+      <uri>model://rwc2015/bookcase/shelf</uri>
+    </include>
+    <include name="shelf3">
+      <pose>0 0.4225 1.005 0 0 0</pose>
+      <name>shelf3</name>
+      <uri>model://rwc2015/bookcase/shelf</uri>
+    </include>
+    <include name="shelf4">
+      <pose>0 0.4225 1.365 0 0 0</pose>
+      <name>shelf4</name>
+      <uri>model://rwc2015/bookcase/shelf</uri>
+    </include>
+    <include name="shelf5">
+      <pose>0 -0.4225 0.285 0 0 0</pose>
+      <name>shelf5</name>
+      <uri>model://rwc2015/bookcase/shelf</uri>
+    </include>
+    <include name="shelf6">
+      <pose>0 -0.4225 0.645 0 0 0</pose>
+      <name>shelf6</name>
+      <uri>model://rwc2015/bookcase/shelf</uri>
+    </include>
+    <include name="shelf7">
+      <pose>0 -0.4225 1.005 0 0 0</pose>
+      <name>shelf7</name>
+      <uri>model://rwc2015/bookcase/shelf</uri>
+    </include>
+    <include name="shelf8">
+      <pose>0 -0.4225 1.365 0 0 0</pose>
+      <name>shelf8</name>
+      <uri>model://rwc2015/bookcase/shelf</uri>
+    </include>
+    <physics type="ode">
+      <real_time_update_rate>400.0</real_time_update_rate>
+      <max_step_size>0.0025</max_step_size>
+      <ode>
+        <constraints>
+          <cfm>0.0001</cfm>
+        </constraints>
+        <solver type="quick">
+          <iters>100</iters>
+        </solver>
+      </ode>
+    </physics>
+    <name>rwc2015/bookcase</name>
+  </world>
+</sdf>

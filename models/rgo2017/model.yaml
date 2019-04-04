@@ -54,7 +54,7 @@ composition:
   type: rgo2017/table_bureau
   pose: { x: 9.331, y: 4.896, z: 0.0, Z: 3.141592 }
 - id: tv
-  type: rgo2017/tv
+  type: rgo2015/tv
   pose: { x: 6.720, y: 4.08, z: 0.0, Z: 1.570796 }
 
 # - - - - - - - - - Rooms - - - - - - - - - - - - -
@@ -144,8 +144,8 @@ composition:
   pose: { x: 1.50, y: 4.25, z: 0, Z: 0 }
 - type: "waypoint"
   id: "gpsr_exit_door_2"
-  pose: { x: -1.00, y: 0.00, z: 0, Z: --3.1415 }
-  
+  pose: { x: -1.00, y: 0.00, z: 0, Z: -3.1415 }
+
 
 # - - - - - - CHALLENGE_EEGPSR WAYPOINTS - - - - - -
 

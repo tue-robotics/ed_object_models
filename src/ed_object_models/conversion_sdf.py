@@ -137,6 +137,12 @@ def read_geometry(shape_item, model_name):
         if "pose" in yml_box:
             link_pose = read_pose(yml_box)
 
+    elif "polygon" in shape_item:
+        yml_polygon = shape_item["polygon"]
+        points = [" ".join(map(str, point.values())) for point in yml_polygon["points"]]
+        geometry["polyline"] = {"point": points,
+                                "height": yml_polygon["height"]}
+
     elif "path" in shape_item and "blockheight" in shape_item:
 
         # If there is a path and a blockheight in the shape_item, then there is a heightmap included in the yaml file
@@ -391,13 +397,11 @@ def convert_world(yml, model_name, recursive=False):
     world_include = world["include"]
     world_model = world["model"]
     if not isinstance(yml["composition"], list):
-        print(bcolors.FAIL + bcolors.BOLD + "[{}] composition should be a list".format(model_name) + bcolors.ENDC)
-        return 1
+        raise Exception(bcolors.FAIL + bcolors.BOLD + "[{}] composition should be a list".format(model_name) + bcolors.ENDC)
     for item in yml["composition"]:
         if not isinstance(item, dict):
-            print(bcolors.FAIL + bcolors.BOLD + "[{}] Items in composition should be a dict".format(model_name)
+            raise Exception(bcolors.FAIL + bcolors.BOLD + "[{}] Items in composition should be a dict".format(model_name)
                   + bcolors.ENDC)
-            return 1
         include = {"name": item["id"]}
         if "type" in item:
             if recursive:
@@ -443,15 +447,13 @@ def convert_model(yml, model_name):
     if "shape" in yml:
         shape = read_shape(yml["shape"], link_names, color, model_name)
         if shape is None:
-            print(bcolors.FAIL + bcolors.BOLD + "[{}] Error during shape parsing".format(model_name) + bcolors.ENDC)
-            return 1
+            raise Exception(bcolors.FAIL + bcolors.BOLD + "[{}] Error during shape parsing".format(model_name) + bcolors.ENDC)
         model["link"].extend(shape)
 
     if "areas" in yml:
         areas = read_areas(yml["areas"], link_names, model_name)
         if areas is None:
-            print(bcolors.FAIL + bcolors.BOLD + "[{}] Error during areas parsing".format(model_name) + bcolors.ENDC)
-            return 1
+            raise Exception(bcolors.FAIL + bcolors.BOLD + "[{}] Error during areas parsing".format(model_name) + bcolors.ENDC)
         model["link"].extend(areas)
 
     return model
@@ -486,13 +488,18 @@ def main(model_name, recursive=False):
         try:
             yml = yaml.load(stream)
         except yaml.YAMLError as e:
-            raise e
+            print(bcolors.FAIL + bcolors.BOLD + "[{}] (YAML) ".format(model_name) + str(e) + bcolors.ENDC)
+            return 1
 
     # determine file_type
-    if "composition" in yml:
-        sdf["world"] = convert_world(yml, model_name, recursive)
-    else:
-        sdf["model"] = convert_model(yml, model_name)
+    try:
+        if "composition" in yml:
+            sdf["world"] = convert_world(yml, model_name, recursive)
+        else:
+            sdf["model"] = convert_model(yml, model_name)
+    except Exception as e:
+        print(bcolors.FAIL + bcolors.BOLD + "[{}] (CONVERSION) ".format(model_name) + str(e) + bcolors.ENDC)
+        return 1
 
     # convert combination of dicts and lists to ET Elements
     xml = ET.Element("sdf")

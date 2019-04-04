@@ -1,4 +1,4 @@
-from os import getenv, path, rename
+from os import getenv, path, rename, pathsep
 import glob
 import re
 import yaml
@@ -29,19 +29,21 @@ def get_model_path(model_name, ext="yaml"):
     :return: absolute model path or empty string
     :rtype: str
     """
-    ed_model_path = getenv("ED_MODEL_PATH")
+    ed_model_paths = getenv("ED_MODEL_PATH").split(pathsep)
     if ext == "sdf":
-        model_path = ed_model_path + "/{}/model*.{}".format(model_name, ext)
-        files = glob.glob(model_path)
-        if len(files) == 0:
-            return ""
-        return files[-1]
+        for ed_model_path in ed_model_paths:
+            model_path = ed_model_path + "/{}/model*.{}".format(model_name, ext)
+            files = glob.glob(model_path)
+            if len(files) != 0:
+                return files[-1]
 
     else:
-        model_path = ed_model_path + "/{}/model.{}".format(model_name, ext)
-        if not path.isfile(model_path):
-            return ""
-        return model_path
+        for ed_model_path in ed_model_paths:
+            model_path = ed_model_path + "/{}/model.{}".format(model_name, ext)
+            if path.isfile(model_path):
+                return model_path
+
+    return ""
 
 
 def unique_name(name, names):
@@ -471,7 +473,7 @@ def main(model_name, recursive=False):
     # get model path
     yaml_model_path = get_model_path(model_name, "yaml")
     if not yaml_model_path:
-        print (bcolors.FAIL + bcolors.BOLD + "[{}] No model path found".format(yaml_model_path) + bcolors.ENDC)
+        print (bcolors.FAIL + bcolors.BOLD + "[{}] No model path found".format(model_name) + bcolors.ENDC)
         return 1
     model_dir = path.dirname(yaml_model_path)
 
@@ -556,7 +558,7 @@ def main(model_name, recursive=False):
     else:  # SDF model doesn't exist yet
         test_model_path = get_model_path("test_sdf", "sdf")
         if not test_model_path:
-            print(bcolors.FAIL + bcolors.BOLD + "Can't find 'test_sdf' model."
+            print(bcolors.FAIL + bcolors.BOLD + "Can't find 'test_sdf' model. "
                                                 "Which is used for generation of 'model.config'")
             print("model.config not generated. Gazebo will not be able to find the model: '{}'".format(model_name)
                   + bcolors.ENDC)

@@ -7,6 +7,13 @@ find_package(catkin REQUIRED COMPONENTS
 
 catkin_add_env_hooks(99.ed_object_models SHELLS bash DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/env-hooks)
 
+###################################
+## catkin specific configuration ##
+###################################
+catkin_python_setup()
+
+catkin_package()
+
 MACRO(MODEL_YAML_DIRECTORIES_REC return_list curdir)
     FILE(GLOB_RECURSE children ${curdir} model.yaml)
     SET(dir_list "")
@@ -25,12 +32,6 @@ add_custom_target(SDF_CONVERSION ALL)
 add_custom_command(TARGET SDF_CONVERSION
                    COMMAND ${PYTHON} ${PROJECT_SOURCE_DIR}/scripts/convert_yaml_to_sdf ${MODELS} WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/scripts)
 
-###################################
-## catkin specific configuration ##
-###################################
-catkin_python_setup()
-
-catkin_package()
 
 if (CATKIN_ENABLE_TESTING)
   find_program(GIT git REQUIRED)

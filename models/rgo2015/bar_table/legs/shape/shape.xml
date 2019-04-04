@@ -1,9 +1,0 @@
-<model>
-    
-    <!-- Pole -->
-    <box>
-        <xyz>-0 0 0.545</xyz>
-        <size>0.12 0.12 1.09</size>
-    </box>
-    
-</model>

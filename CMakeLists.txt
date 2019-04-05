@@ -31,7 +31,7 @@ find_program(PYTHON python REQUIRED)
 find_program(BASH bash REQUIRED)
 add_custom_target(SDF_CONVERSION ALL)
 add_custom_command(TARGET SDF_CONVERSION
-                   COMMAND ${BASH} -ic 'export ED_MODEL_PATH=${PROJECT_SOURCE_DIR}/models && ${PYTHON} ${PROJECT_SOURCE_DIR}/src/${PROJECT_NAME}/conversion_sdf.py ${MODELS}' WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
+                   COMMAND ${BASH} -c 'export ED_MODEL_PATH=${PROJECT_SOURCE_DIR}/models && ${PYTHON} ${PROJECT_SOURCE_DIR}/src/${PROJECT_NAME}/conversion_sdf.py ${MODELS}' WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
 
 
 if (CATKIN_ENABLE_TESTING)

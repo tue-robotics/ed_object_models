@@ -27,6 +27,9 @@ ENDMACRO()
 
 MODEL_YAML_DIRECTORIES_REC(MODELS ${PROJECT_SOURCE_DIR}/models)
 
+execute_process(COMMAND printenv OUTPUT_VARIABLE env_output)
+message(SEND_ERROR ${env_output})
+
 find_program(PYTHON python REQUIRED)
 add_custom_target(SDF_CONVERSION ALL)
 add_custom_command(TARGET SDF_CONVERSION

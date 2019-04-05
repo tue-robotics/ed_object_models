@@ -30,6 +30,7 @@ MODEL_YAML_DIRECTORIES_REC(MODELS ${PROJECT_SOURCE_DIR}/models)
 find_program(PYTHON python REQUIRED)
 add_custom_target(SDF_CONVERSION ALL)
 add_custom_command(TARGET SDF_CONVERSION
+                   POST_BUILD
                    COMMAND ${PYTHON} ${PROJECT_SOURCE_DIR}/scripts/convert_yaml_to_sdf ${MODELS} WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/scripts)
 
 

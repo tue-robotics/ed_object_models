@@ -33,7 +33,7 @@ message(SEND_ERROR ${env_output})
 find_program(PYTHON python REQUIRED)
 add_custom_target(SDF_CONVERSION ALL)
 add_custom_command(TARGET SDF_CONVERSION
-                   COMMAND ${PYTHON} ${PROJECT_SOURCE_DIR}/src/${PROJECT_NAME}/conversion_sdf.py ${MODELS} WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
+                   COMMAND ED_MODEL_PATH=${PROJECT_SOURCE_DIR}/models && ${PYTHON} ${PROJECT_SOURCE_DIR}/src/${PROJECT_NAME}/conversion_sdf.py ${MODELS} WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
 
 
 if (CATKIN_ENABLE_TESTING)

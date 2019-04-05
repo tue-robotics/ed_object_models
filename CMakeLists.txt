@@ -31,7 +31,7 @@ find_program(PYTHON python REQUIRED)
 add_custom_target(SDF_CONVERSION ALL)
 add_custom_command(TARGET SDF_CONVERSION
                    POST_BUILD
-                   COMMAND ${PYTHON} ${PROJECT_SOURCE_DIR}/scripts/convert_yaml_to_sdf ${MODELS} WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/scripts)
+                   COMMAND ${PYTHON} ${PROJECT_SOURCE_DIR}/src/${PROJECT_NAME}/conversion_sdf.py ${MODELS} WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
 
 
 if (CATKIN_ENABLE_TESTING)

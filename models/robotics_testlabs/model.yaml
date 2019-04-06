@@ -40,9 +40,16 @@ composition:
     - type: "trashbin"
       id: "trashbin"
       pose:
-          x: 3
+          x: 1.8
+          y: 4.8
+          z: 0
+    - type: "paperbin"
+      id: "paperbin"
+      pose:
+          x: 2.8
           y: 3.6
           z: 0
+          Z: 2.35619449
     - type: "robotics_testlabs/flight_case"
       id: "flight_case"
       pose: {x: -3.28, y: 1.23, z: 0.0}

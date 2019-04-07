@@ -283,8 +283,8 @@ def read_areas(areas, link_names, model_name):
     """
     sdf_link = []
     if not isinstance(areas, list):
-        print("areas should be a list")
-        return sdf_link
+        print(bcolors.FAIL + "[{}] Areas should be a list".format(model_name) + bcolors.ENDC)
+        return None
 
     area_names = []
     for area in areas:
@@ -603,6 +603,7 @@ def main(model_name, recursive=False):
 
 if __name__ == "__main__":
     import argparse
+    import sys
     parser = argparse.ArgumentParser(description="Convert custom ED YAML model to SDF")
     parser.add_argument("models", type=str, nargs="+")
     parser.add_argument("--recursive", default=False, action="store_true")

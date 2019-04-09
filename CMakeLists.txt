@@ -41,7 +41,8 @@ add_custom_command(TARGET SDF_CONVERSION
 
 if (CATKIN_ENABLE_TESTING)
   find_program(GIT git REQUIRED)
-  execute_process(COMMAND ${GIT} diff ${PROJECT_SOURCE_DIR}/models WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/scripts OUTPUT_VARIABLE output RESULT_VARIABLE result)
+  execute_process(COMMAND ${GIT} add -A WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
+  execute_process(COMMAND ${GIT} diff HEAD ${PROJECT_SOURCE_DIR}/models WORKING_DIRECTORY ${PROJECT_SOURCE_DIR} OUTPUT_VARIABLE output RESULT_VARIABLE result)
   if(NOT ${result} EQUAL 0)
     message(FATAL_ERROR "Error during: git diff")
   endif()

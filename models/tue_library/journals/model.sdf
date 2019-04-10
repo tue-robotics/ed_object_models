@@ -1,0 +1,127 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="tue_library/journals">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>3.82 0.61 1.2</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>3.82 0.61 1.2</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </visual>
+      <pose>0 0 0.6 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <link name="2">
+      <collision name="2">
+        <geometry>
+          <box>
+            <size>3.82 0.61 1.2</size>
+          </box>
+        </geometry>
+        <name>2</name>
+      </collision>
+      <visual name="2">
+        <geometry>
+          <box>
+            <size>3.82 0.61 1.2</size>
+          </box>
+        </geometry>
+        <name>2</name>
+      </visual>
+      <pose>0 1.65 0.6 0 0 0</pose>
+      <name>2</name>
+    </link>
+    <link name="3">
+      <collision name="3">
+        <geometry>
+          <box>
+            <size>3.82 0.61 1.2</size>
+          </box>
+        </geometry>
+        <name>3</name>
+      </collision>
+      <visual name="3">
+        <geometry>
+          <box>
+            <size>3.82 0.61 1.2</size>
+          </box>
+        </geometry>
+        <name>3</name>
+      </visual>
+      <pose>0 3.4 0.6 0 0 0</pose>
+      <name>3</name>
+    </link>
+    <link name="4">
+      <collision name="4">
+        <geometry>
+          <box>
+            <size>3.82 0.61 1.2</size>
+          </box>
+        </geometry>
+        <name>4</name>
+      </collision>
+      <visual name="4">
+        <geometry>
+          <box>
+            <size>3.82 0.61 1.2</size>
+          </box>
+        </geometry>
+        <name>4</name>
+      </visual>
+      <pose>0 5.15 0.6 0 0 0</pose>
+      <name>4</name>
+    </link>
+    <link name="5">
+      <collision name="5">
+        <geometry>
+          <box>
+            <size>3.82 0.61 1.2</size>
+          </box>
+        </geometry>
+        <name>5</name>
+      </collision>
+      <visual name="5">
+        <geometry>
+          <box>
+            <size>3.82 0.61 1.2</size>
+          </box>
+        </geometry>
+        <name>5</name>
+      </visual>
+      <pose>0 6.8 0.6 0 0 0</pose>
+      <name>5</name>
+    </link>
+    <link name="6">
+      <collision name="6">
+        <geometry>
+          <box>
+            <size>3.82 0.305 1.2</size>
+          </box>
+        </geometry>
+        <name>6</name>
+      </collision>
+      <visual name="6">
+        <geometry>
+          <box>
+            <size>3.82 0.305 1.2</size>
+          </box>
+        </geometry>
+        <name>6</name>
+      </visual>
+      <pose>0 8.4 0.6 0 0 0</pose>
+      <name>6</name>
+    </link>
+    <static>true</static>
+    <name>tue_library/journals</name>
+  </model>
+</sdf>

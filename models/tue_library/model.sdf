@@ -1,0 +1,137 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="tue_library">
+    <light name="sun" type="directional">
+      <direction>0.5 0.1 -0.9</direction>
+      <pose>0 0 10 0 0 0</pose>
+      <name>sun</name>
+      <specular>0.2 0.2 0.2 1</specular>
+      <cast_shadows>true</cast_shadows>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <attenuation>
+        <range>1000</range>
+        <quadratic>0.001</quadratic>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+      </attenuation>
+    </light>
+    <include name="floor">
+      <pose>0 0 0 0 0 0</pose>
+      <name>floor</name>
+      <uri>model://floor</uri>
+    </include>
+    <include name="walls">
+      <pose>0 0 0 0 0 0</pose>
+      <name>walls</name>
+      <uri>model://tue_library/walls</uri>
+    </include>
+    <include name="desks-support">
+      <pose>0 0 0 0 0 0</pose>
+      <name>desks-support</name>
+      <uri>model://tue_library/desks.support</uri>
+    </include>
+    <include name="desks-top">
+      <pose>0 0 0.695 0 0 0</pose>
+      <name>desks-top</name>
+      <uri>model://tue_library/desks.top</uri>
+    </include>
+    <include name="relax-room-1">
+      <pose>-27.97 3.212 0 0 0 0</pose>
+      <name>relax-room-1</name>
+      <uri>model://tue_library/relax_room</uri>
+    </include>
+    <include name="relax-room-2">
+      <pose>-27.97 -2.652 0 0 0 0</pose>
+      <name>relax-room-2</name>
+      <uri>model://tue_library/relax_room</uri>
+    </include>
+    <include name="relax-room-3">
+      <pose>21.65 3.212 0 0 0 0</pose>
+      <name>relax-room-3</name>
+      <uri>model://tue_library/relax_room</uri>
+    </include>
+    <include name="relax-room-4">
+      <pose>21.65 -2.652 0 0 0 0</pose>
+      <name>relax-room-4</name>
+      <uri>model://tue_library/relax_room</uri>
+    </include>
+    <include name="book_xxl">
+      <pose>-27.97 16.4 0 0 0 0</pose>
+      <name>book_xxl</name>
+      <uri>model://tue_library/book_xxl</uri>
+    </include>
+    <include name="theses">
+      <pose>21.65 16.7 0 0 0 0</pose>
+      <name>theses</name>
+      <uri>model://tue_library/theses</uri>
+    </include>
+    <include name="cartographics">
+      <pose>21.65 -15.29 0 0 0 0</pose>
+      <name>cartographics</name>
+      <uri>model://tue_library/cartographics</uri>
+    </include>
+    <include name="journals">
+      <pose>-27.97 -15.97 0 0 0 0</pose>
+      <name>journals</name>
+      <uri>model://tue_library/journals</uri>
+    </include>
+    <include name="elevator">
+      <pose>-10.5 8.0 0 0 0 0</pose>
+      <name>elevator</name>
+      <uri>model://tue_library/door</uri>
+    </include>
+    <include name="lecture_room_1">
+      <pose>-6.8 8.0 0 0 0 0</pose>
+      <name>lecture_room_1</name>
+      <uri>model://tue_library/door</uri>
+    </include>
+    <include name="lecture_room_2">
+      <pose>0.5 8.0 0 0 0 0</pose>
+      <name>lecture_room_2</name>
+      <uri>model://tue_library/door</uri>
+    </include>
+    <include name="copier">
+      <pose>4.2 8.0 0 0 0 0</pose>
+      <name>copier</name>
+      <uri>model://tue_library/door</uri>
+    </include>
+    <include name="stairway">
+      <pose>-1.0 0.1 0 0 0 1.57</pose>
+      <name>stairway</name>
+      <uri>model://tue_library/door</uri>
+    </include>
+    <include name="meeting_room_1">
+      <pose>9.3 -16.5 0 0 0 1.57</pose>
+      <name>meeting_room_1</name>
+      <uri>model://tue_library/door</uri>
+    </include>
+    <include name="meeting_room_4">
+      <pose>-15.5 -16.5 0 0 0 1.57</pose>
+      <name>meeting_room_4</name>
+      <uri>model://tue_library/door</uri>
+    </include>
+    <include name="amigo_case">
+      <pose>-3.7 7.3 0.0 0 0 1.57</pose>
+      <name>amigo_case</name>
+      <uri>model://amigo_case</uri>
+    </include>
+    <include name="laptop_case">
+      <pose>-2.7 7.3 0.0 0 0 1.57</pose>
+      <name>laptop_case</name>
+      <uri>model://laptop_case</uri>
+    </include>
+    <physics type="ode">
+      <real_time_update_rate>400.0</real_time_update_rate>
+      <max_step_size>0.0025</max_step_size>
+      <ode>
+        <constraints>
+          <cfm>0.0001</cfm>
+        </constraints>
+        <solver type="quick">
+          <iters>100</iters>
+        </solver>
+      </ode>
+    </physics>
+    <name>tue_library</name>
+  </world>
+</sdf>

@@ -14,6 +14,10 @@ catkin_python_setup()
 
 catkin_package()
 
+###########
+## Build ##
+###########
+
 MACRO(MODEL_YAML_DIRECTORIES_RECURSIVE return_models return_files curdir)
     FILE(GLOB_RECURSE children ${curdir} model.yaml)
     SET(dir_list "")
@@ -38,21 +42,23 @@ add_custom_command(TARGET SDF_CONVERSION
                    COMMAND ${BASH} -c 'export ED_MODEL_PATH=${PROJECT_SOURCE_DIR}/models && ${PYTHON} ${PROJECT_SOURCE_DIR}/src/${PROJECT_NAME}/conversion_sdf.py ${MODEL_NAMES}'
                    DEPENDS ${MODEL_FILES})
 
+#############
+## Testing ##
+#############
 
 if (CATKIN_ENABLE_TESTING)
+  enable_testing()
   find_program(GIT git REQUIRED)
   execute_process(COMMAND ${GIT} add ${PROJECT_SOURCE_DIR}/models WORKING_DIRECTORY ${PROJECT_SOURCE_DIR} OUTPUT_VARIABLE add_output RESULT_VARIABLE add_result)
-  message(STATUS "add:\n${add_output}")
   execute_process(COMMAND ${GIT} diff HEAD ${PROJECT_SOURCE_DIR}/models WORKING_DIRECTORY ${PROJECT_SOURCE_DIR} OUTPUT_VARIABLE diff_output RESULT_VARIABLE diff_result)
-  message(STATUS "diff:\n${diff_output}")
   execute_process(COMMAND ${GIT} reset WORKING_DIRECTORY ${PROJECT_SOURCE_DIR} OUTPUT_VARIABLE reset_output RESULT_VARIABLE reset_result)
-  message(STATUS "reset:\n${reset_output}")
+
   if(NOT ${diff_result} EQUAL 0)
-    message(STATUS "output:\n${diff_output}")
-    message(FATAL_ERROR "Error during: git diff")
+    message(STATUS "diff output:\n${diff_output}")
+    message(FATAL_ERROR "Error during: git diff models")
   endif()
   if(NOT ${diff_output} STREQUAL "")
-    message(STATUS "output:\n${diff_output}")
+    message(STATUS "diff output:\n${diff_output}")
     message(FATAL_ERROR "Difference in the models folder after SDF conversion, make sure the SDF version of yaml files are committed")
   endif()
 endif()

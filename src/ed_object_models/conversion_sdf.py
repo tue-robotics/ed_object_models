@@ -560,6 +560,10 @@ def main(model_name, recursive=False):
                        sdf_model_path)
                 current_sdf.text = sdf_filename
 
+        # Always write model name for the case a model has been moved, so its name needs to changed.
+        config_root.find("name").text = model_name
+        config_root.find("description").text = model_name
+
         write_xml_to_file(config_root, model_config_path)
 
     else:  # SDF model doesn't exist yet

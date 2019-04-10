@@ -51,13 +51,13 @@ if (CATKIN_ENABLE_TESTING)
   find_program(GIT git REQUIRED)
   add_custom_command(TARGET run_tests_${PROJECT_NAME}
                      COMMAND ${GIT} add ${PROJECT_SOURCE_DIR}/models WORKING_DIRECTORY ${PROJECT_SOURCE_DIR} OUTPUT_VARIABLE add_output RESULT_VARIABLE add_result)
-  message(STATUS ${add_output})
+  message(STATUS "add:\n"${add_output})
   add_custom_command(TARGET run_tests_${PROJECT_NAME}
                      COMMAND ${GIT} diff HEAD ${PROJECT_SOURCE_DIR}/models WORKING_DIRECTORY ${PROJECT_SOURCE_DIR} OUTPUT_VARIABLE diff_output RESULT_VARIABLE diff_result)
-  message(STATUS ${diff_output})
+  message(STATUS "diff:\n"${diff_output})
   add_custom_command(TARGET run_tests_${PROJECT_NAME}
                      COMMAND ${GIT} reset WORKING_DIRECTORY ${PROJECT_SOURCE_DIR} OUTPUT_VARIABLE reset_output RESULT_VARIABLE reset_result)
-  message(STATUS ${reset_output})
+  message(STATUS "reset:\n"${reset_output})
   if(NOT ${diff_result} EQUAL 0)
     message(STATUS "diff output:\n${diff_output}")
     message(FATAL_ERROR "Error during: git diff models")

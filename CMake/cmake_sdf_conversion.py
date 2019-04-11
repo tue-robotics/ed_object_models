@@ -13,7 +13,7 @@ def model_files(model_path):
     mfiles = []
     for root, dirs, files in os.walk(model_path):
         for filename in files:
-            if file.endswith("model.yaml"):
+            if filename.endswith("model.yaml"):
                 mfiles.append(os.path.relpath(os.path.join(root, filename), model_path))
     return mfiles
 

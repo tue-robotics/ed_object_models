@@ -603,19 +603,3 @@ def main(model_name, recursive=False):
 
     print(bcolors.OKGREEN + "[{}] Successfully converted to SDF".format(model_name) + bcolors.ENDC)
     return 0
-
-
-if __name__ == "__main__":
-    import argparse
-    import sys
-    parser = argparse.ArgumentParser(description="Convert custom ED YAML model to SDF")
-    parser.add_argument("models", type=str, nargs="+")
-    parser.add_argument("--recursive", default=False, action="store_true")
-    arguments = parser.parse_args()
-    models = arguments.models
-    recursive = arguments.recursive
-
-    for model in models:
-        errc = main(model, recursive=recursive)
-        if errc != 0:
-            sys.exit(errc)

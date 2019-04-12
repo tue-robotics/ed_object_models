@@ -10,6 +10,13 @@ import sys
 
 def model_files(model_path):
     # type: (str) -> ([str])
+    """
+    Collect all model.yaml in all sub-directories of model_path
+    :param model_path: root path
+    :type model_path: str
+    :return: all found model paths relative to model_path
+    :rtype: list
+    """
     mfiles = []
     for root, dirs, files in os.walk(model_path):
         for filename in files:
@@ -20,6 +27,17 @@ def model_files(model_path):
 
 def modified_model_files(model_path, hash_path):
     # type: (str, str) -> ([str])
+    """
+    Get all modified model files in all sub-directories of model_path. Models are checked against a hash stored in files
+    in the hash_path. If no corresponding hash file is found, a model is also marked as modified.
+    Model is marked as modified if
+    :param model_path: root path of the models
+    :type model_path: str
+    :param hash_path: path of the hash files folder
+    :type hash_path: str
+    :return: all found modified model paths relative to model_path
+    :rtype: list
+    """
     all_models = model_files(model_path)
     mod_models = []
     for model in all_models:
@@ -41,11 +59,25 @@ def modified_model_files(model_path, hash_path):
 
 def hash_filename(model_file):
     # type: (str) -> str
+    """
+    convert model path to filename used to store hash
+    :param model_file: file path
+    :type model_file: str
+    :return: file path to store hash
+    :rtype: string
+    """
     return re.sub("[/.]", "_", model_file)
 
 
 def file_hash(file_path):
     # type: (str) -> str
+    """
+    Calculate hash of file
+    :param file_path: Absolute or relative to cwd file path
+    :type file_path: str
+    :return: hash of file contents
+    :rtype: str
+    """
     with open(file_path, "r") as f:
         file_content = f.read()
     h = hashlib.sha1()
@@ -53,7 +85,15 @@ def file_hash(file_path):
     return h.hexdigest()
 
 
-def write_model_hash(model_file, model_path, hash_path):
+def write_model_hash(model_file, hash_path):
+    # type: (str, str) -> None
+    """
+    Write hash of model_file to a file in the hash_path folder
+    :param model_file: model file path, Absolute or relative to cwd
+    :type model_file: str
+    :param hash_path: path of the hash files folder
+    :type hash_path: str
+    """
     model_hash = file_hash(os.path.join(model_path, model_file))
     hash_file_path = os.path.join(hash_path, hash_filename(model_file))
     if not os.path.exists(os.path.dirname(hash_file_path)):
@@ -83,6 +123,6 @@ if __name__ == "__main__":
         errc = main(model_name)
         if errc != 0:
             sys.exit(errc)
-        write_model_hash(model_file, model_path, hash_path)
+        write_model_hash(os.path.join(model_path, model_file), hash_path)
 
     sys.exit(0)

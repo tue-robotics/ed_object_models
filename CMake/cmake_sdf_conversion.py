@@ -88,7 +88,7 @@ def file_hash(file_path):
 def write_model_hash(model_file, model_path, hash_path):
     # type: (str, str, str) -> None
     """
-     Write hash of model_file in model_path to a file in the hash_path folder
+    Write hash of model_file in model_path to a file in the hash_path folder
     :param model_file: model file path, Absolute or relative to cwd
     :type model_file: str
     :param model_path: root path of the models

@@ -85,12 +85,14 @@ def file_hash(file_path):
     return h.hexdigest()
 
 
-def write_model_hash(model_file, hash_path):
-    # type: (str, str) -> None
+def write_model_hash(model_file, model_path, hash_path):
+    # type: (str, str, str) -> None
     """
-    Write hash of model_file to a file in the hash_path folder
+     Write hash of model_file in model_path to a file in the hash_path folder
     :param model_file: model file path, Absolute or relative to cwd
     :type model_file: str
+    :param model_path: root path of the models
+    :type model_path: str
     :param hash_path: path of the hash files folder
     :type hash_path: str
     """
@@ -123,6 +125,6 @@ if __name__ == "__main__":
         errc = main(model_name)
         if errc != 0:
             sys.exit(errc)
-        write_model_hash(os.path.join(model_path, model_file), hash_path)
+        write_model_hash(model_file, model_path, hash_path)
 
     sys.exit(0)

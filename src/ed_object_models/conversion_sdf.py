@@ -1,4 +1,4 @@
-from os import getenv, path, rename
+from os import getenv, path, rename, pathsep
 import glob
 import re
 import yaml
@@ -29,19 +29,21 @@ def get_model_path(model_name, ext="yaml"):
     :return: absolute model path or empty string
     :rtype: str
     """
-    ed_model_path = getenv("ED_MODEL_PATH")
+    ed_model_paths = getenv("ED_MODEL_PATH").split(pathsep)
     if ext == "sdf":
-        model_path = ed_model_path + "/{}/model*.{}".format(model_name, ext)
-        files = glob.glob(model_path)
-        if len(files) == 0:
-            return ""
-        return files[-1]
+        for ed_model_path in ed_model_paths:
+            model_path = ed_model_path + "/{}/model*.{}".format(model_name, ext)
+            files = glob.glob(model_path)
+            if len(files) != 0:
+                return files[-1]
 
     else:
-        model_path = ed_model_path + "/{}/model.{}".format(model_name, ext)
-        if not path.isfile(model_path):
-            return ""
-        return model_path
+        for ed_model_path in ed_model_paths:
+            model_path = ed_model_path + "/{}/model.{}".format(model_name, ext)
+            if path.isfile(model_path):
+                return model_path
+
+    return ""
 
 
 def unique_name(name, names):
@@ -134,6 +136,12 @@ def read_geometry(shape_item, model_name):
 
         if "pose" in yml_box:
             link_pose = read_pose(yml_box)
+
+    elif "polygon" in shape_item:
+        yml_polygon = shape_item["polygon"]
+        points = [" ".join(map(str, point.values())) for point in yml_polygon["points"]]
+        geometry["polyline"] = {"point": points,
+                                "height": yml_polygon["height"]}
 
     elif "path" in shape_item and "blockheight" in shape_item:
 
@@ -275,8 +283,8 @@ def read_areas(areas, link_names, model_name):
     """
     sdf_link = []
     if not isinstance(areas, list):
-        print("areas should be a list")
-        return sdf_link
+        print(bcolors.FAIL + "[{}] Areas should be a list".format(model_name) + bcolors.ENDC)
+        return None
 
     area_names = []
     for area in areas:
@@ -389,13 +397,11 @@ def convert_world(yml, model_name, recursive=False):
     world_include = world["include"]
     world_model = world["model"]
     if not isinstance(yml["composition"], list):
-        print(bcolors.FAIL + bcolors.BOLD + "[{}] composition should be a list".format(model_name) + bcolors.ENDC)
-        return 1
+        raise Exception(bcolors.FAIL + bcolors.BOLD + "[{}] composition should be a list".format(model_name) + bcolors.ENDC)
     for item in yml["composition"]:
         if not isinstance(item, dict):
-            print(bcolors.FAIL + bcolors.BOLD + "[{}] Items in composition should be a dict".format(model_name)
+            raise Exception(bcolors.FAIL + bcolors.BOLD + "[{}] Items in composition should be a dict".format(model_name)
                   + bcolors.ENDC)
-            return 1
         include = {"name": item["id"]}
         if "type" in item:
             if recursive:
@@ -441,15 +447,13 @@ def convert_model(yml, model_name):
     if "shape" in yml:
         shape = read_shape(yml["shape"], link_names, color, model_name)
         if shape is None:
-            print(bcolors.FAIL + bcolors.BOLD + "[{}] Error during shape parsing".format(model_name) + bcolors.ENDC)
-            return 1
+            raise Exception(bcolors.FAIL + bcolors.BOLD + "[{}] Error during shape parsing".format(model_name) + bcolors.ENDC)
         model["link"].extend(shape)
 
     if "areas" in yml:
         areas = read_areas(yml["areas"], link_names, model_name)
         if areas is None:
-            print(bcolors.FAIL + bcolors.BOLD + "[{}] Error during areas parsing".format(model_name) + bcolors.ENDC)
-            return 1
+            raise Exception(bcolors.FAIL + bcolors.BOLD + "[{}] Error during areas parsing".format(model_name) + bcolors.ENDC)
         model["link"].extend(areas)
 
     return model
@@ -471,7 +475,7 @@ def main(model_name, recursive=False):
     # get model path
     yaml_model_path = get_model_path(model_name, "yaml")
     if not yaml_model_path:
-        print (bcolors.FAIL + bcolors.BOLD + "[{}] No model path found".format(yaml_model_path) + bcolors.ENDC)
+        print (bcolors.FAIL + bcolors.BOLD + "[{}] No model path found".format(model_name) + bcolors.ENDC)
         return 1
     model_dir = path.dirname(yaml_model_path)
 
@@ -484,13 +488,18 @@ def main(model_name, recursive=False):
         try:
             yml = yaml.load(stream)
         except yaml.YAMLError as e:
-            raise e
+            print(bcolors.FAIL + bcolors.BOLD + "[{}] (YAML) ".format(model_name) + str(e) + bcolors.ENDC)
+            return 1
 
     # determine file_type
-    if "composition" in yml:
-        sdf["world"] = convert_world(yml, model_name, recursive)
-    else:
-        sdf["model"] = convert_model(yml, model_name)
+    try:
+        if "composition" in yml:
+            sdf["world"] = convert_world(yml, model_name, recursive)
+        else:
+            sdf["model"] = convert_model(yml, model_name)
+    except Exception as e:
+        print(bcolors.FAIL + bcolors.BOLD + "[{}] (CONVERSION) ".format(model_name) + str(e) + bcolors.ENDC)
+        return 1
 
     # convert combination of dicts and lists to ET Elements
     xml = ET.Element("sdf")
@@ -551,12 +560,16 @@ def main(model_name, recursive=False):
                        sdf_model_path)
                 current_sdf.text = sdf_filename
 
+        # Always write model name for the case a model has been moved, so its name needs to changed.
+        config_root.find("name").text = model_name
+        config_root.find("description").text = model_name
+
         write_xml_to_file(config_root, model_config_path)
 
     else:  # SDF model doesn't exist yet
         test_model_path = get_model_path("test_sdf", "sdf")
         if not test_model_path:
-            print(bcolors.FAIL + bcolors.BOLD + "Can't find 'test_sdf' model."
+            print(bcolors.FAIL + bcolors.BOLD + "Can't find 'test_sdf' model. "
                                                 "Which is used for generation of 'model.config'")
             print("model.config not generated. Gazebo will not be able to find the model: '{}'".format(model_name)
                   + bcolors.ENDC)

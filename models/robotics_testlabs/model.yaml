@@ -407,7 +407,7 @@ composition:
           shape:
             - box:
                 min: { x:  -1.78, y: -2.71, z: 0 } #distance from pose position (no map coordinates)
-                max: { x:  2.05 , y:  2.04, z: 0 }
+                max: { x:  2.05 , y:  2.04, z: 2.5 }
     - type: "room"
       id: "kitchen"
       pose: { x: 2.2, y: 4.5, z: 0.0 } #Center of room
@@ -416,7 +416,7 @@ composition:
           shape:
             - box:
                 min: { x:  -0.66, y:  -1.30, z: 0 }
-                max: { x:  1.39, y:  1.01, z: 0 }
+                max: { x:  1.39, y:  1.01, z: 2.5 }
     - type: "room"
       id: "bedroom"
       pose: { x: -2.0, y: -0.5, z: 0.0 } #Center of room
@@ -425,7 +425,7 @@ composition:
           shape:
             - box:
                 min: { x: -1.76, y: -1.23, z: 0 }
-                max: { x: 1.59, y:  1.15, z: 0 }
+                max: { x: 1.59, y:  1.15, z: 2.5 }
     - type: "room"
       id: "workshop"
       pose: { x: -2.0, y: 3.0, z: 0.0 } #Center of room
@@ -434,7 +434,7 @@ composition:
           shape:
             - box:
                 min: { x: -1.76, y:  -2.21, z: 0 }
-                max: { x: 1.58, y:  2.51, z: 0 }
+                max: { x: 1.58, y:  2.51, z: 2.5 }
     - type: "room"
       id: "hallway"
       pose: { x: 0.0, y: 4.5, z: 0.0 } #Center of room
@@ -443,4 +443,4 @@ composition:
           shape:
             - box:
                 min: { x: -0.5, y: -1.28, z: 0 }
-                max: { x: 1.39, y: 1.01, z: 0 }
+                max: { x: 1.39, y: 1.01, z: 2.5 }

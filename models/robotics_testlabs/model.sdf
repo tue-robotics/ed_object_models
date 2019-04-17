@@ -250,10 +250,10 @@
         <virtual_volume name="in">
           <geometry>
             <box>
-              <size>3.83 4.75 0</size>
+              <size>3.83 4.75 2.5</size>
             </box>
           </geometry>
-          <pose>0.135 -0.335 0.0 0 0 0</pose>
+          <pose>0.135 -0.335 1.25 0 0 0</pose>
           <name>in</name>
         </virtual_volume>
         <name>in</name>
@@ -267,10 +267,10 @@
         <virtual_volume name="in">
           <geometry>
             <box>
-              <size>2.05 2.31 0</size>
+              <size>2.05 2.31 2.5</size>
             </box>
           </geometry>
-          <pose>0.365 -0.145 0.0 0 0 0</pose>
+          <pose>0.365 -0.145 1.25 0 0 0</pose>
           <name>in</name>
         </virtual_volume>
         <name>in</name>
@@ -284,10 +284,10 @@
         <virtual_volume name="in">
           <geometry>
             <box>
-              <size>3.35 2.38 0</size>
+              <size>3.35 2.38 2.5</size>
             </box>
           </geometry>
-          <pose>-0.085 -0.04 0.0 0 0 0</pose>
+          <pose>-0.085 -0.04 1.25 0 0 0</pose>
           <name>in</name>
         </virtual_volume>
         <name>in</name>
@@ -301,10 +301,10 @@
         <virtual_volume name="in">
           <geometry>
             <box>
-              <size>3.34 4.72 0</size>
+              <size>3.34 4.72 2.5</size>
             </box>
           </geometry>
-          <pose>-0.09 0.15 0.0 0 0 0</pose>
+          <pose>-0.09 0.15 1.25 0 0 0</pose>
           <name>in</name>
         </virtual_volume>
         <name>in</name>
@@ -318,10 +318,10 @@
         <virtual_volume name="in">
           <geometry>
             <box>
-              <size>1.89 2.29 0</size>
+              <size>1.89 2.29 2.5</size>
             </box>
           </geometry>
-          <pose>0.445 -0.135 0.0 0 0 0</pose>
+          <pose>0.445 -0.135 1.25 0 0 0</pose>
           <name>in</name>
         </virtual_volume>
         <name>in</name>

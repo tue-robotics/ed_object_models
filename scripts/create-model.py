@@ -6,9 +6,10 @@ import sys
 import yaml
 import os
 
+import rospkg
 from ed_object_models.conversion_sdf import main as convert_main
 
-ROOT = os.environ['ED_MODEL_PATH']
+ROOT = os.path.join(rospkg.RosPack().get_path("ed_object_models"), "models")
 DEFAULT_BOTTOM_CLEARANCE = 0.02  # The 'onTopOff' area will start DEFAULT_BOTTOM_CLEARANCE above an object
 DEFAULT_SIDE_CLEARANCE = 0.03  # The 'onTopOff' area will be DEFAULT_SIDE_CLEARANCE smaller than an object in side dir
 DEFAULT_FRONT_CLEARANCE = 0.01  # The 'onTopOff' area will be DEFAULT_SIDE_CLEARANCE smaller than an object in front

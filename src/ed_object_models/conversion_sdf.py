@@ -20,6 +20,7 @@ class bcolors:
 
 
 def get_model_path(model_name, ext="yaml"):
+    # type: (str, str) -> str
     """
     Checks for model file in ED_MODEL_PATH
     :param model_name: name of the model
@@ -47,6 +48,7 @@ def get_model_path(model_name, ext="yaml"):
 
 
 def unique_name(name, names):
+    # type: (str, list) -> str
     """
     Provide a unique name based on name. If name already in names, the name is changed.
     If the name ends with digits, this number is increased. If the name doesn't end with a digit, the name is append
@@ -71,6 +73,7 @@ def unique_name(name, names):
 
 
 def read_pose(yaml_dict):
+    # type: (dict) -> str
     """
     converts pose in yaml dict to string of 6 coordinates.
     :param yaml_dict: dict with possible pose as key on first level in dict
@@ -90,6 +93,7 @@ def read_pose(yaml_dict):
 
 
 def read_geometry(shape_item, model_name):
+    # type: (dict, str) -> (dict, str, str)
     """
     Convert a shape item to a SDF geometry. With a possible pose offset. Which should be added to
     visual/collision/virtual_volume
@@ -183,6 +187,7 @@ def read_geometry(shape_item, model_name):
 
 
 def read_shape_item(shape_item, link_names, color, model_name):
+    # type: (dict, list[str], OrderedDict, str) -> dict
     """
     Convert shape item to a link with collision and visual elements
     :param shape_item: dict of one shape item
@@ -237,6 +242,7 @@ def read_shape_item(shape_item, link_names, color, model_name):
 
 
 def read_shape(shape, link_names, color, model_name):
+    # type: (dict, list[str], OrderedDict, str) -> list
     """
     Convert (array of) shape(s) to list of SDF links
     :param shape: shape dict
@@ -244,7 +250,7 @@ def read_shape(shape, link_names, color, model_name):
     :param link_names: list of link names already used
     :type link_names: list
     :param color: None or dict of rgb values (0-1.0)
-    :type color: dict
+    :type color: OrderedDict
     :param model_name: name of current model being converted
     :type model_name: str
     :return: list of link elements OR None in case of error
@@ -270,6 +276,7 @@ def read_shape(shape, link_names, color, model_name):
 
 
 def read_areas(areas, link_names, model_name):
+    # type: (list, list[str], str) -> list
     """
     Convert areas to links with a virtual area
     :param areas: list of areas
@@ -314,6 +321,7 @@ def read_areas(areas, link_names, model_name):
 
 
 def parse_to_xml(xml, item, list_name=""):
+    # type: (ET.Element, Union[list, dict, str, float, int], str) -> None
     """
     Extend XML with elements from a dict, list or a string
     :param xml: xml element
@@ -359,6 +367,7 @@ def parse_to_xml(xml, item, list_name=""):
 
 
 def write_xml_to_file(xml_element, path):
+    # type: (ET.Element, str) -> None
     """
     write xml element to a file
     :param xml_element: xml element
@@ -375,6 +384,7 @@ def write_xml_to_file(xml_element, path):
 
 
 def convert_world(yml, model_name, recursive=False):
+    # type: (dict, str, bool) -> dict
     """
     convert world yaml to sdf world dict
     :param yml: yaml object of a world ed yaml
@@ -427,6 +437,7 @@ def convert_world(yml, model_name, recursive=False):
 
 
 def convert_model(yml, model_name):
+    # type: (dict, str) -> dict
     """
     convert model yaml to sdf model dict
     :param yml: yaml object of a world ed yaml
@@ -460,6 +471,7 @@ def convert_model(yml, model_name):
 
 
 def main(model_name, recursive=False):
+    # type: (str, bool) -> int
     """
     Main conversion script
     :param model_name: Name of the model, model_name/model.yaml should exist in ED_MODEL_PATH

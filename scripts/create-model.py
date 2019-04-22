@@ -95,18 +95,15 @@ class ShapeCreator:
     def __init__(self, room, model_name):
         # type: (str, str) -> None
         folderpath = os.path.join(ROOT, room, model_name)
-        filepath = os.path.join(folderpath, 'model.yaml')
-        if os.path.exists(filepath):
-            print("Model name already used in this room")
-            sys.exit()
+        self.filepath = os.path.join(folderpath, 'model.yaml')
+        if os.path.exists(self.filepath):
+            sys.exit("Model name already used in this room")
         if not os.path.exists(folderpath):
             os.makedirs(folderpath)
         else:
             print("""
             Folder name is already used, no model found. Keep directory clean!
             Continue with creating your model""")
-
-        self.f = open(filepath, "w")
 
         self.data = {'shape': {'compound': []},
                      'areas': []}
@@ -116,7 +113,9 @@ class ShapeCreator:
         writing the dict in self.data to the yaml file.
         :return: no return
         """
-        self.f.write(yaml.safe_dump(self.data, default_flow_style=False, indent=4))
+
+        with open(self.filepath, 'w') as f:
+            f.write(yaml.safe_dump(self.data, default_flow_style=False, indent=4))
 
     # def set_type(self, t):
     #     """

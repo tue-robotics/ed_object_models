@@ -1,9 +1,11 @@
-from os import getenv, path, rename, pathsep
+from os import getenv, path, rename, pathsep, makedirs
 import glob
 import re
 import yaml
+
 from xml.dom.minidom import parseString
 import xml.etree.ElementTree as ET
+
 from subprocess import check_call
 from collections import OrderedDict
 
@@ -27,7 +29,7 @@ def get_model_path(model_name, ext="yaml"):
     :type model_name: str
     :param ext: extension of the file: yaml/sdf
     :type ext: str
-    :return: absolute model path or empty string
+    :return: absolute model path or empty string if not found
     :rtype: str
     """
     ed_model_paths = getenv("ED_MODEL_PATH").split(pathsep)
@@ -187,19 +189,19 @@ def read_geometry(shape_item, model_name):
 
 
 def read_shape_item(shape_item, link_names, color, model_name):
-    # type: (dict, list[str], OrderedDict, str) -> dict
+    # type: (dict, list[str], OrderedDict, str) -> Union[dict, None]
     """
     Convert shape item to a link with collision and visual elements
     :param shape_item: dict of one shape item
     :type shape_item: dict
     :param link_names: list of link names already used
-    :type link_names: list
+    :type link_names: list[str]
     :param color: None or dict of rgb values (0-1.0)
     :type color: dict
     :param model_name: name of current model being converted
     :type model_name: str
     :return: dict of SDF link element OR None in case of error
-    :rtype: dict
+    :rtype: Union[dict, None]
     """
     sdf_link_item = {}
 
@@ -242,7 +244,7 @@ def read_shape_item(shape_item, link_names, color, model_name):
 
 
 def read_shape(shape, link_names, color, model_name):
-    # type: (dict, list[str], OrderedDict, str) -> list
+    # type: (dict, list[str], OrderedDict, str) -> Union[list, None]
     """
     Convert (array of) shape(s) to list of SDF links
     :param shape: shape dict
@@ -254,7 +256,7 @@ def read_shape(shape, link_names, color, model_name):
     :param model_name: name of current model being converted
     :type model_name: str
     :return: list of link elements OR None in case of error
-    :rtype: list
+    :rtype: Union[list, None]
     """
     sdf_link = []
     # Check if compound type has name (inserted as comment in yaml)
@@ -276,7 +278,7 @@ def read_shape(shape, link_names, color, model_name):
 
 
 def read_areas(areas, link_names, model_name):
-    # type: (list, list[str], str) -> list
+    # type: (list, list[str], str) -> Union[list, None]
     """
     Convert areas to links with a virtual area
     :param areas: list of areas
@@ -286,7 +288,7 @@ def read_areas(areas, link_names, model_name):
     :param model_name: name of current model being converted
     :type model_name: str
     :return: list of links with a virtual area child element OR None in case of error
-    :rtype: list
+    :rtype: Union[list, None]
     """
     sdf_link = []
     if not isinstance(areas, list):
@@ -327,7 +329,7 @@ def parse_to_xml(xml, item, list_name=""):
     :param xml: xml element
     :type xml: xml.etree.ElementTree.Element
     :param item: dict, list or str
-    :type item: dict or list or str
+    :type item: Union[list, dict, str, float, int]
     :param list_name: name of list, needs to be passed on by parent for each element
     :type list_name: str
     :raises: Exception: incorrect usage of argument or unknown class type
@@ -366,20 +368,24 @@ def parse_to_xml(xml, item, list_name=""):
                         + bcolors.ENDC)
 
 
-def write_xml_to_file(xml_element, path):
+def write_xml_to_file(xml_element, filepath):
     # type: (ET.Element, str) -> None
     """
     write xml element to a file
     :param xml_element: xml element
     :type xml_element: xml.etree.ElementTree.Element
-    :param path: full path of file, which to write
-    :type path: str
+    :param filepath: full path of file, which to write
+    :type filepath: str
     """
     # generate xml string with indentation
     xml_dom = parseString(ET.tostring(xml_element, encoding="utf-8"))
     pretty_xml_string = xml_dom.toprettyxml(indent="  ")
 
-    with open(path, "w") as f:
+    dirpath = path.dirname(filepath)
+    if not path.isdir(dirpath):
+        makedirs(dirpath)
+
+    with open(filepath, "w") as f:
         f.write(pretty_xml_string)
 
 
@@ -407,18 +413,19 @@ def convert_world(yml, model_name, recursive=False):
     world_include = world["include"]
     world_model = world["model"]
     if not isinstance(yml["composition"], list):
-        raise Exception(bcolors.FAIL + bcolors.BOLD + "[{}] composition should be a list".format(model_name) + bcolors.ENDC)
+        raise Exception(bcolors.FAIL + bcolors.BOLD + "[{}] composition should be a list".format(model_name)
+                        + bcolors.ENDC)
     for item in yml["composition"]:
         if not isinstance(item, dict):
-            raise Exception(bcolors.FAIL + bcolors.BOLD + "[{}] Items in composition should be a dict".format(model_name)
-                  + bcolors.ENDC)
+            raise Exception(bcolors.FAIL + bcolors.BOLD +
+                            "[{}] Items in composition should be a dict".format(model_name) + bcolors.ENDC)
         include = {"name": item["id"]}
         if "type" in item:
             if recursive:
                 # Todo: If there are multiple objects of the same type, then this type's SDF is created for every
                 #       instance of the type (for instance ids: table1 and table2 are both type TableA, so it will
                 #       recreate the SDF and config for TableA twice)
-                main(item["type"], recursive=recursive)
+                convert_model_name(item["type"], recursive=recursive)
             if item["type"] in ["room", "waypoint"]:
                 model = convert_model(item, item["id"])
                 model["pose"] = read_pose(item)
@@ -458,57 +465,46 @@ def convert_model(yml, model_name):
     if "shape" in yml:
         shape = read_shape(yml["shape"], link_names, color, model_name)
         if shape is None:
-            raise Exception(bcolors.FAIL + bcolors.BOLD + "[{}] Error during shape parsing".format(model_name) + bcolors.ENDC)
+            raise Exception(bcolors.FAIL + bcolors.BOLD + "[{}] Error during shape parsing".format(model_name)
+                            + bcolors.ENDC)
         model["link"].extend(shape)
 
     if "areas" in yml:
         areas = read_areas(yml["areas"], link_names, model_name)
         if areas is None:
-            raise Exception(bcolors.FAIL + bcolors.BOLD + "[{}] Error during areas parsing".format(model_name) + bcolors.ENDC)
+            raise Exception(bcolors.FAIL + bcolors.BOLD + "[{}] Error during areas parsing".format(model_name)
+                            + bcolors.ENDC)
         model["link"].extend(areas)
 
     return model
 
 
-def main(model_name, recursive=False):
-    # type: (str, bool) -> int
+def convert_model_data(model_data, model_name, model_dir, recursive=False):
+    # type: (Union[dict, list], str, str, bool) -> int
     """
-    Main conversion script
-    :param model_name: Name of the model, model_name/model.yaml should exist in ED_MODEL_PATH
+    Convert model data to SDF with the name 'model_name' in directory 'model_dir'.
+    Most of the times model_dir=ROOT/model_name for a ROOT in ED_MODEL_PATH
+    :param model_data: yaml data of the model
+    :type model_data: Union[dict, list]
+    :param model_name: Name of the model
     :type model_name: str
+    :param model_dir: Directory of the model.
+    :type model_dir: str
     :param recursive: If true all included models are also converted
     :type recursive: bool
     :return: Good: 0, Error: 1
     :rtype: int
     """
-    # strip trailing slash
-    if model_name[-1] == "/":
-        model_name = model_name[:-1]
-    # get model path
-    yaml_model_path = get_model_path(model_name, "yaml")
-    if not yaml_model_path:
-        print (bcolors.FAIL + bcolors.BOLD + "[{}] No model path found".format(model_name) + bcolors.ENDC)
-        return 1
-    model_dir = path.dirname(yaml_model_path)
-
     # declare sdf dict including sdf version
     sdf_version = 1.6
     sdf = {"version": str(sdf_version)}
 
-    # read yaml file
-    with open(yaml_model_path, "r") as stream:
-        try:
-            yml = yaml.load(stream)
-        except yaml.YAMLError as e:
-            print(bcolors.FAIL + bcolors.BOLD + "[{}] (YAML) ".format(model_name) + str(e) + bcolors.ENDC)
-            return 1
-
     # determine file_type
     try:
-        if "composition" in yml:
-            sdf["world"] = convert_world(yml, model_name, recursive)
+        if "composition" in model_data:
+            sdf["world"] = convert_world(model_data, model_name, recursive)
         else:
-            sdf["model"] = convert_model(yml, model_name)
+            sdf["model"] = convert_model(model_data, model_name)
     except Exception as e:
         print(bcolors.FAIL + bcolors.BOLD + "[{}] (CONVERSION) ".format(model_name) + str(e) + bcolors.ENDC)
         return 1
@@ -615,3 +611,52 @@ def main(model_name, recursive=False):
 
     print(bcolors.OKGREEN + "[{}] Successfully converted to SDF".format(model_name) + bcolors.ENDC)
     return 0
+
+
+def convert_model_file(model_name, model_file, recursive=False):
+    # type: (str, str, bool) -> int
+    """
+    Convert a model to SDF based on a model file
+    :param model_name: name of the model
+    :type model_name: str
+    :param model_file: path of the model file
+    :type model_file: str
+    :param recursive: If true all included models are also converted
+    :type recursive: bool
+    :return: Good: 0, Error: 1
+    :rtype: int
+    """
+    model_dir = path.dirname(model_file)
+
+    # read yaml file
+    with open(model_file, "r") as stream:
+        try:
+            yml = yaml.load(stream)
+        except yaml.YAMLError as e:
+            print(bcolors.FAIL + bcolors.BOLD + "[{}] (YAML) ".format(model_name) + str(e) + bcolors.ENDC)
+            return 1
+
+    return convert_model_data(yml, model_name, model_dir, recursive)
+
+
+def convert_model_name(model_name, recursive=False):
+    # type: (str, bool) -> int
+    """
+    Convert a model to SDF based on the model name.
+    :param model_name: Name of the model, model_name/model.yaml should exist in ED_MODEL_PATH
+    :param recursive: If true all included models are also converted
+    :type recursive: bool
+    :return: Good: 0, Error: 1
+    :rtype: int
+    """
+    # strip trailing slash
+    if model_name[-1] == "/":
+        model_name = model_name[:-1]
+
+    # get model path
+    model_file = get_model_path(model_name, "yaml")
+    if not model_file:
+        print (bcolors.FAIL + bcolors.BOLD + "[{}] No model path found".format(model_name) + bcolors.ENDC)
+        return 1
+
+    return convert_model_file(model_name, model_file, recursive)

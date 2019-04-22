@@ -7,7 +7,7 @@ import yaml
 import os
 
 import rospkg
-from ed_object_models.conversion_sdf import main as convert_main
+from ed_object_models.conversion_sdf import convert_model_data as convert_sdf
 
 ROOT = os.path.join(rospkg.RosPack().get_path("ed_object_models"), "models")
 DEFAULT_BOTTOM_CLEARANCE = 0.02  # The 'onTopOff' area will start DEFAULT_BOTTOM_CLEARANCE above an object
@@ -160,9 +160,9 @@ class ShapeCreator:
         """
         add an area to an object
         :param name: name of the area, e.g. offset, shape
-        :param area_type: str
+        :type area_type: str
         :param data: data of the area
-        :param data: dict/float/list/str
+        :type data: Union[dict, float, list, str]
         :return: no return
         """
         assert(isinstance(name, str))
@@ -270,7 +270,13 @@ class ShapeCreator:
 
 
 # ----------------------------------------------------------------------------------------------------
-def main():
+def main(create_yaml):
+    # type: (bool) -> None
+    """
+    Main creator function
+    :param create_yaml: create yaml as well
+    :type create_yaml: bool
+    """
     print("")
     print("""Answer the questions given. If you do not understand, give '?' as input.
 A 'model.yaml' file will be created which can be used as ED model.
@@ -390,10 +396,16 @@ All lengths / distances are in meters, unless specified otherwise.""")
                       round(-width / 2 + verticals[vertical_i] + vertical_thickness[vertical_i] / 2, ROUND_LEVEL),
                       round(shelf_thickness[0] + (pl_height / 2), ROUND_LEVEL), "vertical %s" % (vertical_i + 1))
 
-    s.write()
-
-    convert_main(room + "/" + model_name)
+    if create_yaml:
+        s.write()
+    else:
+        convert_sdf(s.data, os.path.join(room, model_name), os.path.join(ROOT, room, model_name))
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    import argparse
+    parser = argparse.ArgumentParser(description="Create ED models")
+    parser.add_argument("--yaml", default=False, action="store_true", help="Create yaml instead of SDF")
+    arguments = parser.parse_args()
+    create_yaml = arguments.yaml
+    sys.exit(main(create_yaml))

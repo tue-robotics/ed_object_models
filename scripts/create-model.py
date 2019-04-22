@@ -145,19 +145,30 @@ class ShapeCreator:
         :type comment: str
         :return: no return
         """
+        assert(isinstance(l, float))
+        assert(isinstance(w, float))
+        assert(isinstance(h, float))
+        assert(isinstance(x, float))
+        assert(isinstance(y, float))
+        assert(isinstance(z, float))
+
         self.data['shape']['compound'].append({'box': {'#': comment, 'pose': {'x': x, 'y': y, 'z': z},
                                                        'size': {'x': l, 'y': w, 'z': h}}})
 
     def add_area(self, name, area_type, data):
-        # type: (str, str, Union[list, dict]) -> None
+        # type: (str, str, Union[dict, float, list, str]) -> None
         """
         add an area to an object
         :param name: name of the area, e.g. offset, shape
         :param area_type: str
         :param data: data of the area
-        :param data: dict/list
+        :param data: dict/float/list/str
         :return: no return
         """
+        assert(isinstance(name, str))
+        assert(isinstance(area_type, str))
+        assert(isinstance(data, (dict, float, list, str)))
+
         self.data['areas'].append({'name': name,
                                    area_type: data})
 
@@ -179,6 +190,11 @@ class ShapeCreator:
         :type size: float
         :return: no return
         """
+        assert(isinstance(depth, float))
+        assert(isinstance(width, float))
+        assert(isinstance(side_clearance, float))
+        assert(isinstance(distance, float))
+        assert(isinstance(size, float))
 
         boxmin = {'x': round(depth / 2 + distance, ROUND_LEVEL),
                   'y': round(-width / 2 + side_clearance, ROUND_LEVEL),
@@ -209,27 +225,36 @@ class ShapeCreator:
         :type height: float
         :return: no return
         """
+        assert(isinstance(name, str))
+        assert(isinstance(bottom_clearance, float))
+        assert(isinstance(side_clearance, float))
+        assert(isinstance(front_clearence, float))
+        assert(isinstance(back_clearence, float))
+        assert(isinstance(height, float))
 
         if not name:
             name = 'on_top_of'
         if len(self.data['shape']['compound']) == 0:
-            print("No shapes yet, cannot add ontopoff")
+            print("No shapes yet, cannot add OnTopOff")
             return
         else:
             shape = self.data['shape']['compound'][-1]
         if 'box' not in shape:
-            print("No box in this shape, cannot add ontopoff")
+            print("No box in this shape, cannot add OnTopOff")
             return
 
-        pose = shape['box']['pose']
-        size = shape['box']['size']
+        pose = shape['box']['pose']  # type: dict
+        size = shape['box']['size']  # type: dict
 
-        boxmin = {'x': round(pose['x'] - size['x'] / 2.0 + back_clearence, ROUND_LEVEL),
-                  'y': round(pose['y'] - size['y'] / 2.0 + side_clearance, ROUND_LEVEL),
-                  'z': round(pose['z'] + size['z'] / 2.0 + bottom_clearance, ROUND_LEVEL)}
-        boxmax = {'x': round(pose['x'] + size['x'] / 2.0 - front_clearence, ROUND_LEVEL),
-                  'y': round(pose['y'] + size['y'] / 2.0 - side_clearance, ROUND_LEVEL),
-                  'z': round(pose['z'] + size['z'] / 2.0 + bottom_clearance + height, ROUND_LEVEL)}
+        for item in pose.values() + size.values():
+            assert(isinstance(item, float))
+
+        boxmin = {'x': round(pose['x'] - size['x'] / 2 + back_clearence, ROUND_LEVEL),
+                  'y': round(pose['y'] - size['y'] / 2 + side_clearance, ROUND_LEVEL),
+                  'z': round(pose['z'] + size['z'] / 2 + bottom_clearance, ROUND_LEVEL)}
+        boxmax = {'x': round(pose['x'] + size['x'] / 2 - front_clearence, ROUND_LEVEL),
+                  'y': round(pose['y'] + size['y'] / 2 - side_clearance, ROUND_LEVEL),
+                  'z': round(pose['z'] + size['z'] / 2 + bottom_clearance + height, ROUND_LEVEL)}
 
         self.add_area(name, "shape", [{'box': {'min': boxmin, 'max': boxmax}}])
 
@@ -271,12 +296,12 @@ All lengths / distances are in meters, unless specified otherwise.""")
 
         print("")
         lt = read_float("Leg thickness: ", help="We assume square legs. How wide / thick are the legs?")
-        lx_offset = read_float("Optional: Leg offset (length) [m]: ", 0,
+        lx_offset = read_float("Optional: Leg offset (length) [m]: ", 0.0,
                                help="(Optional) How far are the legs places inwards w.r.t. the table top (in the length direction)")
         ly_offset = read_float("Optional: Leg offset (width) [m]:  ", lx_offset,
                                help="(Optional) How far are the legs places inwards w.r.t. the table top (in the width direction)")
 
-        s.add_box(length, width, table_top_thickness, 0, 0, round(height - table_top_thickness / 2, ROUND_LEVEL),
+        s.add_box(length, width, table_top_thickness, 0.0, 0.0, round(height - table_top_thickness / 2, ROUND_LEVEL),
                   "Table top")
         s.add_on_top_of()
 
@@ -298,7 +323,7 @@ All lengths / distances are in meters, unless specified otherwise.""")
         width = read_float("Width [m]: ", help="Box width")
         depth = read_float("Depth [m]: ", help="Box depth")
 
-        s.add_box(depth, width, height, 0, 0, round(height / 2, 3), "Main object")
+        s.add_box(depth, width, height, 0.0, 0.0, round(height / 2, ROUND_LEVEL), "Main object")
         s.add_on_top_of()
         s.add_in_front_of(depth, width)
 
@@ -339,11 +364,11 @@ All lengths / distances are in meters, unless specified otherwise.""")
         for vertical_i in range(0, len(vertical_thickness)):
             vertical_thickness[vertical_i] = read_float("Thickness of vertical %s: " % (vertical_i + 1))
 
-        s.add_box(depth, thickness, height, 0, round(-(width - thickness) / 2, ROUND_LEVEL),
+        s.add_box(depth, thickness, height, 0.0, round(-(width - thickness) / 2, ROUND_LEVEL),
                   round(height / 2, ROUND_LEVEL), "Left side")
-        s.add_box(depth, thickness, height, 0, round((width - thickness) / 2, ROUND_LEVEL),
+        s.add_box(depth, thickness, height, 0.0, round((width - thickness) / 2, ROUND_LEVEL),
                   round(height / 2, ROUND_LEVEL), "Right side")
-        s.add_box(thickness, width, height, round(-(depth - thickness) / 2, ROUND_LEVEL), 0,
+        s.add_box(thickness, width, height, round(-(depth - thickness) / 2, ROUND_LEVEL), 0.0,
                   round(height / 2, ROUND_LEVEL), "Back side")
         s.add_in_front_of(depth, width)
 
@@ -352,10 +377,10 @@ All lengths / distances are in meters, unless specified otherwise.""")
         pl_height = round(height - thickness - shelf_heights[0] - shelf_thickness[0], ROUND_LEVEL)
         pl_x = round((thickness / 2), ROUND_LEVEL)
 
-        s.add_box(pl_depth, pl_width, top_thickness, pl_x, 0, round(height - (top_thickness / 2), ROUND_LEVEL), "Top")
+        s.add_box(pl_depth, pl_width, top_thickness, pl_x, 0.0, round(height - (top_thickness / 2), ROUND_LEVEL), "Top")
 
         for shelf_i in range(0, len(shelf_heights)):
-            s.add_box(pl_depth, pl_width, shelf_thickness[shelf_i], pl_x, 0,
+            s.add_box(pl_depth, pl_width, shelf_thickness[shelf_i], pl_x, 0.0,
                       round(shelf_heights[shelf_i] + (shelf_thickness[shelf_i] / 2), ROUND_LEVEL),
                       "Shelf %s" % (shelf_i + 1))
             if not verticals:

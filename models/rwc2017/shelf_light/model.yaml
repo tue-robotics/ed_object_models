@@ -1,0 +1,143 @@
+areas:
+-   name: near
+    offset: 0.7
+-   name: in_front_of
+    shape:
+    -   box:
+            max:
+                x: 0.765
+                y: 0.4
+                z: 0.01
+            min:
+                x: 0.565
+                y: -0.4
+                z: 0.0
+-   name: on_top_of
+    shape:
+    -   box:
+            max:
+                x: 0.13
+                y: 0.32
+                z: 0.85
+            min:
+                x: -0.13
+                y: -0.32
+                z: 0.51
+#color:
+    #blue: 0.75
+    #green: 0.75
+    #red: 0.75
+shape:
+    compound:
+    -   box:
+            '#': back
+            pose:
+                x: -0.145
+                y: 0.0
+                z: 0.33
+            size:
+                x: 0.01
+                y: 1.0
+                z: 0.66
+    -   box:
+            '#': Shelf 1
+            pose:
+                x: 0.0
+                y: 0
+                z: 0.105
+            size:
+                x: 0.28
+                y: 1.0
+                z: 0.03
+    -   box:
+            '#': Shelf 2
+            pose:
+                x: 0.0
+                y: 0
+                z: 0.475
+            size:
+                x: 0.28
+                y: 1.0
+                z: 0.03
+    -   box:
+            '#': vertical 1 back
+            pose:
+                x: -0.1525
+                y: -0.3475
+                z: 0.33
+            size:
+                x: 0.025
+                y: 0.025
+                z: 0.66
+    -   box:
+            '#': vertical 1 front
+            pose:
+                x: 0.1525
+                y: -0.3475
+                z: 0.33
+            size:
+                x: 0.025
+                y: 0.025
+                z: 0.66
+    -   box:
+            '#': vertical 1 top
+            pose:
+                x: 0.0
+                y: -0.3475
+                z: 0.005
+            size:
+                x: 0.33
+                y: 0.025
+                z: 0.01
+                
+    -   box:
+            '#': vertical 1 low
+            pose:
+                x: 0.0
+                y: -0.3475
+                z: 0.655
+            size:
+                x: 0.33
+                y: 0.025
+                z: 0.01
+    -   box:
+            '#': vertical 2 back
+            pose:
+                x: -0.1525
+                y: 0.3475
+                z: 0.33
+            size:
+                x: 0.025
+                y: 0.025
+                z: 0.66
+    -   box:
+            '#': vertical 2 front
+            pose:
+                x: 0.1525
+                y: 0.3475
+                z: 0.33
+            size:
+                x: 0.025
+                y: 0.025
+                z: 0.66
+    -   box:
+            '#': vertical 2 top
+            pose:
+                x: 0.0
+                y: 0.3475
+                z: 0.005
+            size:
+                x: 0.33
+                y: 0.025
+                z: 0.01
+                
+    -   box:
+            '#': vertical 2 low
+            pose:
+                x: 0.0
+                y: 0.3475
+                z: 0.655
+            size:
+                x: 0.33
+                y: 0.025
+                z: 0.01

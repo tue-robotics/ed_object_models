@@ -1,0 +1,16 @@
+composition:
+    - type: "rgo2015/bar_table/top"
+      id: "top"
+      pose:
+          x: 0
+          y: 0
+          z: 1.07
+    - type: "rgo2015/bar_table/legs"
+      id: "legs"
+      pose:
+          x: 0
+          y: 0
+          z: 0
+areas:
+  - name: near
+    offset: 0.8

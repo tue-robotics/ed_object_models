@@ -1,0 +1,44 @@
+shape:
+    compound:
+      - box:
+            # Bottom box
+            pose: {x: 0, y: 0, z: 0.4975}
+            size: {x: 1.00, y: 0.6, z: 0.995}
+      - box:
+            # Left plank
+            pose: {x: -0.489, y: 0.1, z: 1.545}
+            size: {x: 0.022, y: 0.40, z: 1.1}
+      - box:
+            # Middle plank
+            pose: {x: 0.0, y: 0.1, z: 1.545}
+            size: {x: 0.022, y: 0.40, z: 1.1}
+      - box:
+            # Right plank
+            pose: {x: 0.489, y: 0.1, z: 1.545}
+            size: {x: 0.022, y: 0.40, z: 1.1}
+      - box:
+            # Middle shelf
+            pose: {x: 0.0, y: 0.1, z: 1.541}
+            size: {x: 1.0, y: 0.4, z: 0.022}
+      - box:
+            # Middle shelf
+            pose: {x: 0.0, y: 0.1, z: 2.084}
+            size: {x: 1.0, y: 0.4, z: 0.022}
+      - box:
+            # Back plate
+            pose: {x: 0.0, y: 0.289, z: 1.0475}
+            size: {x: 1.00, y: 0.022, z: 2.095}
+
+areas:
+  - name: on_top_of
+    shape:
+      - box:
+            min: { x: -0.5, y: -0.25, z: 1.035 }
+            max: { x:  0.5, y:  0.30, z: 1.25 }
+  - name: in_front_of
+    shape:
+      - box:
+            min: { x: -0.5, y: -1.1, z: 0.0 }
+            max: { x:  0.5, y:  -0.9, z: 0.01 }
+  - name: near
+    offset: 0.7

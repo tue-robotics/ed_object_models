@@ -1,0 +1,17 @@
+localizable: 1.0
+shape:
+    box:
+        pose: {x: 0, y: 0, z: 0.225}
+        size: {x: 0.51, y: 1.31, z: 0.45}
+color:
+    red: 0.05
+    green: 0.05
+    blue: 0.05
+affordances:
+    place:
+        height: 0.45
+    navigate-to:
+        position_constraint:
+            constraint: "x^2 + y^2 < 0.7^2"
+
+

@@ -1,0 +1,177 @@
+areas:
+-   name: near
+    offset: 0.7
+-   name: in_front_of
+    shape:
+    -   box:
+            max:
+                x: 0.807
+                y: 0.225
+                z: 0.01
+            min:
+                x: 0.607
+                y: -0.225
+                z: 0.0
+-   name: shelf1
+    shape:
+    -   box:
+            max:
+                x: 0.177
+                y: 0.252
+                z: 0.321
+            min:
+                x: -0.134
+                y: -0.252
+                z: 0.051
+-   name: shelf2
+    shape:
+    -   box:
+            max:
+                x: 0.177
+                y: 0.252
+                z: 0.661
+            min:
+                x: -0.134
+                y: -0.252
+                z: 0.391
+-   name: shelf3
+    shape:
+    -   box:
+            max:
+                x: 0.177
+                y: 0.252
+                z: 1.012
+            min:
+                x: -0.134
+                y: -0.252
+                z: 0.742
+
+-   name: on_top_of
+    shape:
+    -   box:
+            max:
+                x: 0.177
+                y: 0.252
+                z: 1.012
+            min:
+                x: -0.134
+                y: -0.252
+                z: 0.742
+-   name: shelf4
+    shape:
+    -   box:
+            max:
+                x: 0.177
+                y: 0.252
+                z: 1.363
+            min:
+                x: -0.134
+                y: -0.252
+                z: 1.093
+-   name: shelf5
+    shape:
+    -   box:
+            max:
+                x: 0.177
+                y: 0.252
+                z: 1.719
+            min:
+                x: -0.134
+                y: -0.252
+                z: 1.449
+color:
+    blue: 0.75
+    green: 0.75
+    red: 0.75
+shape:
+    compound:
+    -   box:
+            '#': Left side
+            pose:
+                x: 0
+                y: -0.3035
+                z: 0.8805
+            size:
+                x: 0.414
+                y: 0.043
+                z: 1.761
+    -   box:
+            '#': Right side
+            pose:
+                x: 0
+                y: 0.3035
+                z: 0.8805
+            size:
+                x: 0.414
+                y: 0.043
+                z: 1.761
+    -   box:
+            '#': Back side
+            pose:
+                x: -0.1855
+                y: 0
+                z: 0.8805
+            size:
+                x: 0.043
+                y: 0.65
+                z: 1.761
+    -   box:
+            '#': Top
+            pose:
+                x: 0.0215
+                y: 0
+                z: 1.744
+            size:
+                x: 0.371
+                y: 0.564
+                z: 0.034
+    -   box:
+            '#': Shelf 1
+            pose:
+                x: 0.0215
+                y: 0
+                z: 0.0155
+            size:
+                x: 0.371
+                y: 0.564
+                z: 0.031
+    -   box:
+            '#': Shelf 2
+            pose:
+                x: 0.0215
+                y: 0
+                z: 0.3555
+            size:
+                x: 0.371
+                y: 0.564
+                z: 0.031
+    -   box:
+            '#': Shelf 3
+            pose:
+                x: 0.0215
+                y: 0
+                z: 0.7065
+            size:
+                x: 0.371
+                y: 0.564
+                z: 0.031
+    -   box:
+            '#': Shelf 4
+            pose:
+                x: 0.0215
+                y: 0
+                z: 1.0575
+            size:
+                x: 0.371
+                y: 0.564
+                z: 0.031
+    -   box:
+            '#': Shelf 5
+            pose:
+                x: 0.0215
+                y: 0
+                z: 1.4135
+            size:
+                x: 0.371
+                y: 0.564
+                z: 0.031

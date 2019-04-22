@@ -1,0 +1,8 @@
+affordances:
+    navigate-to:
+        position_constraint:
+            constraint: "x^2 + y^2 < 0.5^2"
+color:
+    red: 1.0
+    green: 0.0
+    blue: 0.0

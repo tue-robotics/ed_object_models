@@ -1,0 +1,8 @@
+type: walls
+shape:
+    path: shape/disc.pgm
+    blockheight: 0.1
+    resolution: 0.025000
+    origin_x: -0.5
+    origin_y: -0.5
+    origin_z:  0.000000

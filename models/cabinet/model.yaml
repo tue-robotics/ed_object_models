@@ -1,0 +1,7 @@
+localizable: 1.0
+affordances:
+    navigate-to:
+        position_constraint:
+            constraint: "x^2 + y^2 < 1^2"
+    place:
+        height: 0.8

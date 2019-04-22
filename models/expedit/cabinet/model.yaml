@@ -1,0 +1,31 @@
+type: cabinet
+shape:
+    compound:
+    # Bottom
+    - box:
+        pose: {x: 0, y: 0, z: 0.025}
+        size: {x: 0.40, y: 0.79, z: 0.05}
+    # Middle
+    - box:
+        pose: {x: 0, y: 0, z: 0.41}
+        size: {x: 0.40, y: 0.79, z: 0.02}
+    # Top
+    - box:
+        pose: {x: 0, y: 0, z: 0.765}
+        size: {x: 0.40, y: 0.79, z: 0.05}
+    # Left
+    - box:
+        pose: {x: 0, y: 0.37, z: 0.395}
+        size: {x: 0.40, y: 0.05, z: 0.79}
+    # Middle
+    - box:
+        pose: {x: 0, y: 0, z: 0.395}
+        size: {x: 0.40, y: 0.05, z: 0.79}
+    # Right
+    - box:
+        pose: {x: 0, y: -0.37, z: 0.395}
+        size: {x: 0.40, y: 0.05, z: 0.79}
+color:
+    red: 0.4 #0.545
+    green: 0.2 #0.271
+    blue: 0.0745

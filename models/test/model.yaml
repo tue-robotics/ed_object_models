@@ -1,0 +1,27 @@
+shape:
+    compound:
+      - polygon:
+            points:
+              - { x: 0, y: 0 }
+              - { x: 1, y: 0 }
+              - { x: 0.8, y: 0.5 }
+              - { x: 1, y: 1 }
+              - { x: 0, y: 1 }
+              - { x: 0.2, y: 0.5 }
+            height: 0.1
+      - polygon:
+            points:
+              - { x: 0, y: 0 }
+              - { x: 1, y: 0 }
+              - { x: 0.8, y: 0.5 }
+              - { x: 1, y: 1 }
+              - { x: 0, y: 1 }
+              - { x: 0.2, y: 0.5 }
+            height: 0.1
+        pose: { z: 0.1, Z: 3.1415, X: 1.54 }
+      - cylinder:
+            height: 0.6
+            radius: 0.1
+      - cylinder:
+            height: 1.0
+            radius: 0.05

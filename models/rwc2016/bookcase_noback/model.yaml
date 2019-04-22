@@ -1,0 +1,155 @@
+areas:
+-   name: near
+    offset: 0.7
+-   name: in_front_of
+    shape:
+    -   box:
+            max:
+                x: 0.775
+                y: 0.1
+                z: 0.01
+            min:
+                x: 0.575
+                y: -0.1
+                z: 0.0
+-   name: shelf1
+    shape:
+    -   box:
+            max:
+                x: 0.145
+                y: 0.35
+                z: 0.319
+            min:
+                x: -0.125
+                y: -0.35
+                z: 0.145
+-   name: shelf2
+    shape:
+    -   box:
+            max:
+                x: 0.145
+                y: 0.35
+                z: 0.668
+            min:
+                x: -0.125
+                y: -0.35
+                z: 0.41
+-   name: shelf3
+    shape:
+    -   box:
+            max:
+                x: 0.145
+                y: 0.35
+                z: 1.015
+            min:
+                x: -0.125
+                y: -0.35
+                z: 0.76
+-   name: shelf4
+    shape:
+    -   box:
+            max:
+                x: 0.145
+                y: 0.35
+                z: 1.357
+            min:
+                x: -0.125
+                y: -0.35
+                z: 1.11
+-   name: shelf5
+    shape:
+    -   box:
+            max:
+                x: 0.145
+                y: 0.35
+                z: 1.703
+            min:
+                x: -0.125
+                y: -0.35
+                z: 1.461
+color:
+    blue: 0.75
+    green: 0.75
+    red: 0.75
+shape:
+    compound:
+    -   box:
+            '#': Left side
+            pose:
+                x: 0
+                y: -0.39
+                z: 0.899
+            size:
+                x: 0.35
+                y: 0.02
+                z: 1.798
+    -   box:
+            '#': Right side
+            pose:
+                x: 0
+                y: 0.39
+                z: 0.899
+            size:
+                x: 0.35
+                y: 0.02
+                z: 1.798
+    -   box:
+            '#': Top
+            pose:
+                x: 0
+                y: 0
+                z: 1.788
+            size:
+                x: 0.35
+                y: 0.76
+                z: 0.02
+    -   box:
+            '#': Shelf 1
+            pose:
+                x: 0
+                y: 0
+                z: 0.0625
+            size:
+                x: 0.35
+                y: 0.76
+                z: 0.125
+    -   box:
+            '#': Shelf 2
+            pose:
+                x: 0
+                y: 0
+                z: 0.38
+            size:
+                x: 0.35
+                y: 0.76
+                z: 0.02
+    -   box:
+            '#': Shelf 3
+            pose:
+                x: 0
+                y: 0
+                z: 0.731
+            size:
+                x: 0.35
+                y: 0.76
+                z: 0.02
+    -   box:
+            '#': Shelf 4
+            pose:
+                x: 0
+                y: 0
+                z: 1.081
+            size:
+                x: 0.35
+                y: 0.76
+                z: 0.02
+    -   box:
+            '#': Shelf 5
+            pose:
+                x: 0
+                y: 0
+                z: 1.431
+            size:
+                x: 0.35
+                y: 0.76
+                z: 0.02

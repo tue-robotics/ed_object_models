@@ -1,0 +1,18 @@
+shape:
+    compound:
+      - box:
+            pose: {x: 0.0, y: 0.0,  z: 0.235}
+            size: {x: 2.0, y: 1.435,  z: 0.47}
+areas:
+  - name: on_top_of
+    shape:
+      - box:
+            min: { x: -1.0, y: -0.71, z: 0.51 }
+            max: { x:  1.0, y:  0.71, z: 0.72 }
+  - name: in_front_of
+    shape:
+      - box:
+            min: { x: -1.8, y: -0.71, z: 0.0 }
+            max: { x: -1.6, y:  0.71, z: 0.01 }
+  - name: near
+    offset: 0.7

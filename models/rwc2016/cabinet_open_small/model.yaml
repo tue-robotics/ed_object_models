@@ -1,0 +1,44 @@
+shape:
+    compound:
+      - box:
+            # Left side
+            pose: {x: 0, y: -0.366, z: 0.382}
+            size: {x: 0.393, y: 0.034, z: 0.764}
+      - box:
+            # Right side
+            pose: {x: 0, y: 0.366, z: 0.382}
+            size: {x: 0.393, y: 0.034, z: 0.764}
+      - box:
+            # Top
+            pose: {x: 0, y: 0, z: 0.747}
+            size: {x: 0.393, y: 0.764, z: 0.034}
+      - box:
+            # Bottom
+            pose: {x: 0, y: 0, z: 0.025}
+            size: {x: 0.393, y: 0.764, z: 0.034}
+      - box:
+            # Shelf
+            pose: {x: 0, y: 0, z: 0.382}
+            size: {x: 0.393, y: 0.69, z: 0.02}
+      - box:
+            # Shelf
+            pose: {x: 0, y: 0, z: 0.382}
+            size: {x: 0.393, y: 0.02, z: 0.69}
+color:
+    red: 1.0
+    green: 1.0
+    blue: 1.0
+
+areas:
+  - name: near
+    offset: 0.7
+  - name: in_front_of
+    shape:
+      - box:
+            min: { x: 0.2, y: -0.395, z: 0 }
+            max: { x: 0.7,   y:  0.395, z: 0 }
+  - name: on_top_of
+    shape:
+      - box:
+            min: { x: -0.17, y: -0.37, z: 0.775 }
+            max: { x:  0.17, y:  0.37, z: 1.2 }

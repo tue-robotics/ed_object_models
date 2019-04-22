@@ -1,0 +1,146 @@
+composition:
+    - type: "rwc2013/walls"
+      id: "walls"
+    - type: "floor"
+      id: "floor"
+      pose:
+          x: 0
+          y: 0
+          z: 0
+    - type: "rwc2013/kitchen_table"
+      id: "kitchen_table"
+      pose:
+          x: 3.105
+          y: -6.331
+          z: 0
+          X: 0
+          Y: 0
+          Z: 0
+    - type: "rwc2013/kitchen_countertop"
+      id: "kitchen_countertop"
+      pose:
+          x: 0.654
+          y: -6.9815
+          z: 0
+          X: 0
+          Y: 0
+          Z: 0
+    - type: "rwc2013/fridge"
+      id: "fridge"
+      pose:
+          x: 0.795
+          y: -5.02
+          z: 0
+          X: 0
+          Y: 0
+          Z: 0
+    - type: "rwc2013/trashbin"
+      id: "trashbin"
+      pose:
+          x: 3.297
+          y: -8.183
+          z: 0
+          X: 0
+          Y: 0
+          Z: 0
+    - type: "rwc2013/kitchen_cabinet"
+      id: "kitchen_cabinet"
+      pose:
+          x: 2.705
+          y: -8.1965
+          z: 0
+          X: 0
+          Y: 0
+          Z: 0
+    - type: "rwc2013/bedroom_cabinet"
+      id: "bedroom_cabinet"
+      pose:
+          x: 6.078
+          y: -6.841
+          z: 0
+          X: 0
+          Y: 0
+          Z: 0
+    - type: "rwc2013/nightstand1"
+      id: "nightstand1"
+      pose:
+          x: 10.223
+          y: -5.419
+          z: 0
+          X: 0
+          Y: 0
+          Z: 0
+    - type: "rwc2013/nightstand2"
+      id: "nightstand2"
+      pose:
+          x: 10.2305
+          y: -7.6205
+          z: 0
+          X: 0
+          Y: 0
+          Z: 0
+    - type: "rwc2013/bed"
+      id: "bed"
+      pose:
+          x: 9.3415
+          y: -6.519
+          z: 0
+          X: 0
+          Y: 0
+          Z: 0
+    - type: "rwc2013/tv_cabinet"
+      id: "tv_cabinet"
+      pose:
+          x: 8.943
+          y: -4.0365
+          z: 0
+          X: 0
+          Y: 0
+          Z: 0
+    - type: "rwc2013/tv"
+      id: "tv"
+      pose:
+          x: 8.943
+          y: -4.0365
+          z: 0
+          X: 0
+          Y: 0
+          Z: 0
+    - type: "rwc2013/couch_table"
+      id: "couch_table"
+      pose:
+          x: 8.718
+          y: -1.2
+          z: 0
+          X: 0
+          Y: 0
+          Z: 0
+    - type: "rwc2013/armchair"
+      id: "armchair"
+      pose:
+          x: 8.748
+          y: 0.7515
+          z: 0
+          X: 0
+          Y: 0
+          Z: 0
+    - type: "rwc2013/couch"
+      id: "couch"
+      pose:
+          x: 9.919
+          y: -1.112
+          z: 0
+          X: 0
+          Y: 0
+          Z: 0
+    - type: "rwc2013/book_case"
+      id: "book_case"
+      pose:
+          x: 3.5355
+          y: -1.428
+          z: 0
+          X: 0
+          Y: 0
+          Z: 0
+
+

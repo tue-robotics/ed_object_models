@@ -1,0 +1,36 @@
+shape:
+    compound:
+      - box:
+            # Table top
+            pose: {x: 0, y: 0, z: 0.745}
+            size: {x: 2.41, y: 0.98, z: 0.03}
+      - box:
+            # Leg
+            pose: {x: -1.1035, y: -0.4275, z: 0.365}
+            size: {x: 0.085, y: 0.085, z: 0.73}
+      - box:
+            # Leg
+            pose: {x: 1.1035, y: -0.4275, z: 0.365}
+            size: {x: 0.085, y: 0.085, z: 0.73}
+      - box:
+            # Leg
+            pose: {x: -1.1035, y: 0.4275, z: 0.365}
+            size: {x: 0.085, y: 0.085, z: 0.73}
+      - box:
+            # Leg
+            pose: {x: 1.1035, y: 0.4275, z: 0.365}
+            size: {x: 0.085, y: 0.085, z: 0.73}
+
+areas:
+  - name: on_top_of
+    shape:
+      - box:
+            min: { x: -1.2, y: -0.49, z: 0.8 }
+            max: { x: -0.7, y:  0.49, z: 1.05 }
+  - name: in_front_of
+    shape:
+      - box:
+            min: { x: -2.0, y: -0.4, z: 0.0 }
+            max: { x: -1.8, y:  0.4, z: 0.01 }
+  - name: near
+    offset: 0.7

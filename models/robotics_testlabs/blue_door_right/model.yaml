@@ -1,0 +1,10 @@
+type: right_door
+shape:
+    compound:
+      - box:
+            pose: {x: 0.025, y: -0.473,  z: 1.06} # turning point on (0,0,0) distance 5mm in x, 10mm in y
+            size: {x: 0.04, y: 0.926,  z: 2.12}
+color:
+    red: 0
+    green: 0
+    blue: 1

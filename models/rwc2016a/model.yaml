@@ -1,0 +1,251 @@
+composition:
+- type: "floor"
+  id: "floor"
+  pose: { x: 0, y: 0, z: 0 }
+- type: "rwc2016a/walls"
+  id: "walls"
+  pose: { x: 0, y: 0, z: 0 }
+- id: sideshelf
+  type: rwc2016/cabinet_2slides
+  pose: { x: 9.59961999631, y: 2.06445025401, z: 0.0, Z: 0.0 }
+- id: living_shelf
+  type: rwc2016/cabinet_open_large
+  pose: { x: 15.6340824996, y: 3.45558782257, z: 0.0, Z: 3.14159265359 }
+- id: bedside
+  type: rwc2016/bookcase_noback
+  pose: { x: 3.73294564725, y: 3.89240622111, z: 0.0, Z: 0.0 }
+- id: tv_stand
+  type: rwc2016/cabinet_open_small
+  pose: { x: 14.3957248256, y: 5.65555181602, z: 0.0, Z: -1.57079632679 }
+- id: couch
+  type: rwc2016/couch
+  pose: { x: 14.1010391014, y: 0.15676969619, z: 0.0, Z: 2.409 }
+- id: sink
+  type: rwc2016/kitchen_counter
+  pose: { x: 8.9216065439, y: 1.83933155327, z: 0.0, Z: 1.57079632679 }
+- id: living_table
+  type: rwc2016/table_salon
+  pose: { x: 13.3500255193, y: 0.826244757613, z: 0.0, Z: 0.840 }
+- id: dining_table
+  type: rwc2016/table_black
+  pose: { x: 10.7336615904, y: 3.82007082986, z: 0.0, Z: 3.14159265359 }
+- id: cupboard
+  type: rwc2016/cabinet_2doors
+  pose: { x: 7.9878231138, y: 1.79059577037, z: 0.0, Z: 1.57079632679 }
+- id: desk
+  type: rwc2016/table_bureau
+  pose: { x: 3.10, y: 5.23, z: 0.0, Z: -3.14159265359 }
+- id: bed
+  type: rwc2016/bed_frame
+  pose: { x: 5.54312696294, y: 4.87689963252, z: 0.0, Z: -3.14159265359 }
+- id: night_stand
+  type: rwc2016/ikea_table_red
+  pose: { x: 6.45, y: 5.70, z: 0.0, Z: -1.57079632679}
+- id: bar
+  type: rwc2016/bookcase_noback
+  pose: { x: 7.2199743991, y: 4.46354844791, z: 0.0, Z: 0.0 }
+- id: cabinet
+  type: rwc2016/cabinet_open_small
+  pose: { x: 4.5, y: -1.23109049803, z: 0.0, Z: 1.57079632679 }
+- id: drawer
+  type: rwc2016/cabinet_2doors
+  pose: { x: 0.22226426908, y: 4.60318484157, z: 0.0, Z: 0.0 }
+- id: bookcase
+  type: rwc2016/bookcase_noback
+  pose: { x: 9.40963771231, y: 5.78810856047, z: 0.0, Z: -1.57079632679 }
+- id: plant_large
+  type: rwc2016/plant_large
+  pose: { x: 3.89536812137, y: 5.36803348769, z: 0.0, Z: 0 }
+- id: plant_small_1
+  type: rwc2016/plant
+  pose: { x: 7.01406275975, y: 0.90587587781, z: 0.0, Z: 0 }
+- id: plant_small_2
+  type: rwc2016/plant
+  pose: { x: 5.18986582633, y: -1.13721106556, z: 0.0, Z: 0 }
+- id: armchair_1
+  type: rwc2016/armchair
+  pose: { x: 14.2507327613, y: 1.50372431334, z: 0.0, Z: 0.840 }
+- id: armchair_3
+  type: rwc2016/armchair
+  pose: { x: 12.7034840389, y: -0.11283179921, z: 0.0, Z: 2.41079632679 }
+- id: armchair_2
+  type: rwc2016/armchair
+  pose: { x: 12.5876395892, y: 1.47201037758, z: 0.0, Z: 0.840 }
+- id: ikea_table_high
+  type: rwc2016/ikea_table_black
+  pose: { x: 11.3, y: -0.9, z: 0.0, Z: 1.57079632679}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - -
+
+- type: "room"
+  id: "kitchen"
+  pose: { x: 8.53, y: 4.01, z: 0 }
+  areas:
+  - name: in
+    shape:
+    - box:
+        min: { x: -1.59, y: -2.49, z: 0 }
+        max: { x: 3.28, y: 1.92, z: 0.01 }
+- type: "room"
+  id: "living_room"
+  pose: { x: 10.88, y: 1.04, z: 0 }
+  areas:
+  - name: in
+    shape:
+    - box:
+        min: { x: -3.95, y: -2.52, z: 0 }
+        max: { x: 4.93, y: 0.48, z: 0.01 }
+    - box:
+        min: { x: 0.93, y: -2.52, z: 0 }
+        max: { x: 4.93, y: 4.90, z: 0.01 }
+- type: "room"
+  id: "office"
+  pose: { x: 1.73, y: 4.74, z: 0 }
+  areas:
+  - name: in
+    shape:
+    - box:
+        min: { x: -1.73, y: -1.21, z: 0 }
+        max: { x: 1.68, y: 1.22, z: 0.01 }
+- type: "room"
+  id: "corridor"
+  pose: { x: 2.16, y: 0.22, z: 0 }
+  areas:
+  - name: in
+    shape:
+    - box:
+        min: { x: -2.17, y: -1.67, z: 0 }
+        max: { x: 1.27, y: 3.25, z: 0.01 }
+    - box:
+        min: { x: -2.17, y: -1.67, z: 0 }
+        max: { x: 5.83, y: 1.32, z: 0.01 }
+- type: "room"
+  id: "bedroom"
+  pose: { x: 5.16, y: 2.61, z: 0 }
+  areas:
+  - name: in
+    shape:
+    - box:
+        min: { x: -1.73, y: -1.07, z: 0 }
+        max: { x: 1.77, y: 3.34, z: 0.01 }
+
+# - - - - - - - - - - - - - - - - - - - - - - - - -
+
+- type: "waypoint"
+  id: "initial_pose_door_a"
+  pose: { x: -0.5, y: 0.0, z: 0, rz: 0.0 }
+- type: "waypoint"
+  id: "initial_pose_door_b"
+  pose: { x: -0.5, y: 3.0, z: 0, rz: 0.0 }
+- type: "waypoint"
+  id: "initial_pose_door_c"
+  pose: { x: 12.44, y: 6.5, z: 0, rz: -1.57 }
+- type: "waypoint"
+  id: "entry_door_a"
+  pose: { x: 1.0, y: 0.0, z: 0, rz: 0.0 }
+- type: "waypoint"
+  id: "entry_door_b"
+  pose: { x: 1.0, y: 2.5, z: 0, rz: 0.0 }
+- type: "waypoint"
+  id: "entry_door_c"
+  pose: { x: 12.45, y: 4.9, z: 0, rz: -1.57 }
+
+- type: "waypoint"
+  id: "exit_door_a"
+  pose: { x: -1.5, y: 0.0, z: 0, rz: 3.14 }
+- type: "waypoint"
+  id: "exit_door_b"
+  pose: { x: -1.5, y: 3.0, z: 0, rz: 3.14 }
+- type: "waypoint"
+  id: "exit_door_c"
+  pose: { x: 12.5, y: 7.5, z: 0, rz: 1.57 }
+
+# - - - - - - CHALLENGE_RIPS WAYPOINTS - - - - - - -
+
+- type: "waypoint"
+  id: "registration_table1"
+  pose: { x: 9.7, y: -0.6, z: 0, rz: 0 }
+- type: "waypoint"
+  id: "registration_table2"
+  pose: { x: 9.0, y: -1.4, z: 0, rz: 0 }
+- type: "waypoint"
+  id: "registration_table3"
+  pose: { x: 8.4, y: -0.6, z: 0, rz: 0 }
+- type: "waypoint"
+  id: "exit_1_rips"
+  pose: { x: 12.45, y: 6.7, z: 0, rz: 1.57 }
+- type: "waypoint"
+  id: "exit_2_rips"
+  pose: { x: 12.45, y: 7.7, z: 0, rz: 1.57 }
+- type: "waypoint"
+  id: "exit_3_rips"
+  pose: { x: 12.45, y: 4.4, z: 0, rz: 1.57 }
+- type: "waypoint"
+  id: "exit_4_rips"
+  pose: { x: 12.45, y: 6.7, z: 0, rz: 1.57 }
+
+# - - - - - - CHALLENGE_NAVIGATION WAYPOINTS - - - - - - -
+
+- type: "waypoint"
+  id: "navigation_target1"
+  pose: { x: 5.0, y: 2.6, z: 0, rz: 3.14 }
+- type: "waypoint"
+  id: "navigation_target2_pre"
+  pose: { x: 4.4, y: 0.6, z: 0, rz: -1.57 }
+- type: "waypoint"
+  id: "navigation_target2"
+  pose: { x: 4.5, y: -0.5, z: 0, rz: -1.57 }
+- type: "waypoint"
+  id: "navigation_target3"
+  pose: { x: 2.0, y: 1.0, z: 0, rz: 3.14 }
+- type: "waypoint"
+  id: "navigation_door"
+  pose: { x: -0.7, y: 0.0, z: 0, rz: 0.0 }
+- type: "waypoint"
+  id: "navigation_door_1"
+  pose: { x: -0.7, y: 0.0, z: 0, rz: 0.0 }
+- type: "waypoint"
+  id: "navigation_door_2"
+  pose: { x: -0.7, y: 2.5, z: 0, rz: 0.0 }
+- type: "waypoint"
+  id: "navigation_reentrance_door_1"
+  pose: { x: 0.0, y: 0.0, z: 0, rz: 0.0 }
+- type: "waypoint"
+  id: "navigation_reentrance_door_2"
+  pose: { x: 0.0, y: 2.5, z: 0, rz: 0.0 }
+- type: "waypoint"
+  id: "navigation_target4"
+  pose: { x: 2.0, y: 1.0, z: 0, rz: 0.0 }
+- type: "waypoint"
+  id: "navigation_exit1"
+  pose: { x: -1.0, y: 0.0, z: 0, rz: 3.1415 }
+- type: "waypoint"
+  id: "navigation_exit2"
+  pose: { x: -1.0, y: 2.5, z: 0, rz: 3.1415 }
+- type: "waypoint"
+  id: "navigation_exit3"
+  pose: { x: -2.0, y: 4.0, z: 0, rz: 3.1415 }
+- type: "waypoint"
+  id: "navigation_exit4"
+  pose: { x: -2.0, y: -1.0, z: 0, rz: 3.1415 }
+- type: "waypoint"
+  id: "door_opening_start_1"
+  pose: { x: -0.5, y: 0.0, z: 0, rz: 0 }
+- type: "waypoint"
+  id: "door_opening_dest"
+  pose: { x: 0.65, y: 0.0, z: 0, rz: 0 }
+- type: "waypoint"
+  id: "door_opening_dest_1"
+  pose: { x: 0.90, y: 0.0, z: 0, rz: 0 }
+- type: "waypoint"
+  id: "door_opening_start_2"
+  pose: { x: -0.5, y: 2.5, z: 0, rz: 0 }
+- type: "waypoint"
+  id: "door_opening_dest_2"
+  pose: { x: 0.90, y: 2.5, z: 0, rz: 0 }
+
+# - - - - - - CHALLENGE_GPSR WAYPOINTS - - - - - - -
+
+- type: "waypoint"
+  id: "gpsr_meeting_point"
+  pose: { x: 15.236, y: 2.356, z: 0, rz: 3.14 }

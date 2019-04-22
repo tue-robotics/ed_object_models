@@ -1,0 +1,32 @@
+areas:
+-   name: near
+    offset: 0.7
+-   name: in_front_of
+    shape:
+    -   box:
+            max:
+                x: 0.9
+                y: 0.3
+                z: 0.01
+            min:
+                x: 0.5
+                y: -0.3
+                z: 0
+-   name: on_top_of
+    shape:
+    -   box:
+            max:
+                x: 0.3
+                y: 0.3
+                z: 1.1
+            min:
+                x: -0.3
+                y: -0.3
+                z: 0.725
+shape:
+    compound:
+    -   cylinder:
+                height: 0.1
+                radius: 0.3
+        pose:
+            z: 0.65

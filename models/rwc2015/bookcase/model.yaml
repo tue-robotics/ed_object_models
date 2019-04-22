@@ -1,0 +1,91 @@
+composition:
+    - type: "rwc2015/bookcase/bookcase_frame"
+      id: "bookcase_frame"
+      pose:
+          x: 0
+          y: 0
+          z: 0
+    # Entire shelves
+    # - type: "rwc2015/bookcase/shelf"
+    #   id: "shelf1"
+    #   pose:
+    #       x: 0
+    #       y: 0
+    #       z: 0.285
+    # - type: "rwc2015/bookcase/shelf"
+    #   id: "shelf2"
+    #   pose:
+    #       x: 0
+    #       y: 0
+    #       z: 0.645
+    # - type: "rwc2015/bookcase/shelf"
+    #   id: "shelf3"
+    #   pose:
+    #       x: 0
+    #       y: 0
+    #       z: 1.005
+    # - type: "rwc2015/bookcase/shelf"
+    #   id: "shelf4"
+    #   pose:
+    #       x: 0
+    #       y: 0
+    #       z: 1.365
+
+    # Half shelves
+    - type: "rwc2015/bookcase/shelf"
+      id: "shelf1"
+      pose:
+          x: 0
+          y: 0.4225
+          z: 0.285
+    - type: "rwc2015/bookcase/shelf"
+      id: "shelf2"
+      pose:
+          x: 0
+          y: 0.4225
+          z: 0.645
+    - type: "rwc2015/bookcase/shelf"
+      id: "shelf3"
+      pose:
+          x: 0
+          y: 0.4225
+          z: 1.005
+    - type: "rwc2015/bookcase/shelf"
+      id: "shelf4"
+      pose:
+          x: 0
+          y: 0.4225
+          z: 1.365
+    - type: "rwc2015/bookcase/shelf"
+      id: "shelf5"
+      pose:
+          x: 0
+          y: -0.4225
+          z: 0.285
+    - type: "rwc2015/bookcase/shelf"
+      id: "shelf6"
+      pose:
+          x: 0
+          y: -0.4225
+          z: 0.645
+    - type: "rwc2015/bookcase/shelf"
+      id: "shelf7"
+      pose:
+          x: 0
+          y: -0.4225
+          z: 1.005
+    - type: "rwc2015/bookcase/shelf"
+      id: "shelf8"
+      pose:
+          x: 0
+          y: -0.4225
+          z: 1.365
+
+areas:
+  - name: near
+    offset: 0.7
+  - name: in_front_of
+    shape:
+      - box:
+            min: { x:  0.84, y: -0.4, z: 0 }
+            max: { x:  0.99, y: 0.4, z: 1 }

@@ -1,0 +1,11 @@
+shape:
+    compound:
+        - box:
+            pose: {x: 0, y: 0, z: 0.6}
+            size: {x: 3.82, y: 1.525, z: 1.20}
+        - box:
+            pose: {x: 1.20, y: 4.26, z: 0.6}
+            size: {x: 1.42, y: 1.86, z: 1.20}
+        - box:
+            pose: {x: -1.20, y: 4.26, z: 0.6}
+            size: {x: 1.42, y: 1.86, z: 1.20}

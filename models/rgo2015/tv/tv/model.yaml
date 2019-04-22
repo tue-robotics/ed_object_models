@@ -1,0 +1,8 @@
+shape:
+    box:
+        pose: {x: 0, y: 0, z: 0.46}
+        size: {x: 0.10, y: 1.50, z: 0.92}
+color:
+    red: 0.1
+    green: 0.1
+    blue: 0.1

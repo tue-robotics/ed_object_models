@@ -1,0 +1,91 @@
+areas:
+-   name: near
+    offset: 0.7
+-   name: on_top_of
+    shape:
+    -   box:
+            max:
+                x: 0.18
+                y: 0.32
+                z: 0.75
+            min:
+                x: -0.18
+                y: -0.32
+                z: 0.5
+-   name: in_front_of
+    shape:
+    -   box:
+            max:
+                x: 0.81
+                y: 0.25
+                z: 0.01
+            min:
+                x: 0.61
+                y: -0.25
+                z: 0.0
+color:
+    blue: 0.3
+    green: 0.3
+    red: 0.75
+shape:
+    compound:
+    -   box:
+            '#': Table top
+            pose:
+                x: 0
+                y: 0
+                z: 0.46
+            size:
+                x: 0.42
+                y: 0.7
+                z: 0.04
+    -   box:
+            '#': Table lower flat
+            pose:
+                x: 0
+                y: 0
+                z: 0.16
+            size:
+                x: 0.42
+                y: 0.7
+                z: 0.04
+    -   box:
+            '#': Leg
+            pose:
+                x: -0.19
+                y: -0.33
+                z: 0.22
+            size:
+                x: 0.04
+                y: 0.04
+                z: 0.44
+    -   box:
+            '#': Leg
+            pose:
+                x: 0.19
+                y: -0.33
+                z: 0.22
+            size:
+                x: 0.04
+                y: 0.04
+                z: 0.44
+    -   box:
+            '#': Leg
+            pose:
+                x: -0.19
+                y: 0.33
+                z: 0.22
+            size:
+                x: 0.04
+                y: 0.04
+                z: 0.44
+    -   box:
+            '#': Leg
+            pose:
+                x: 0.19
+                y: 0.33
+                z: 0.22
+            size:
+                x: 0.04
+                y: 0.04
+                z: 0.44

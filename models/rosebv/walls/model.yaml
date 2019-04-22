@@ -1,0 +1,8 @@
+type: walls
+shape:
+    path: shape/rosebv.pgm
+    blockheight: 2.0
+    resolution: 0.025000
+    origin_x: -23.7500000 
+    origin_y: -27.0000000
+    origin_z:  0.000000

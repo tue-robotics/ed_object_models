@@ -1,0 +1,15 @@
+composition:
+    - type: "rwc2017/cabinet_simple_no_areas"
+      id: "lower_part"
+      pose:
+          x: 0
+          y: -0.45
+          z: 0.225
+          X: -1.57079632679
+    - type: "rwc2017/cabinet_simple_no_areas"
+      id: "top_part"
+      pose:
+          x: 0
+          y: -0.45
+          z: 0.675
+          X: -1.57079632679

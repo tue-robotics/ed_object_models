@@ -1,0 +1,99 @@
+areas:
+-   name: near
+    offset: 0.7
+-   name: on_top_of
+    shape:
+    -   box:
+            max:
+                x: 0.265
+                y: 0.255
+                z: 0.72
+            min:
+                x: -0.265
+                y: -0.255
+                z: 0.47
+-   name: in_front_of
+    shape:
+    -   box:
+            max:
+                x: 0.95
+                y: 0.35
+                z: 0.01
+            min:
+                x: 0.675
+                y: -0.35
+                z: 0.0
+-   name: on_right_of
+    shape:
+    -   box:
+            max:
+                x: 0.95
+                y: 0.35
+                z: 0.01
+            min:
+                x: 0.675
+                y: -0.35
+                z: 0.0
+-   name: in_back_of
+    shape:
+    -   box:
+            max:
+                x: 0.95
+                y: 0.35
+                z: 0.01
+            min:
+                x: 0.675
+                y: -0.35
+                z: 0.0
+shape:
+    compound:
+    -   box:
+            '#': Table top
+            pose:
+                x: 0
+                y: 0
+                z: 0.425
+            size:
+                x: 0.55
+                y: 0.55
+                z: 0.05
+    -   box:
+            '#': Leg
+            pose:
+                x: -0.25
+                y: -0.25
+                z: 0.2
+            size:
+                x: 0.05
+                y: 0.05
+                z: 0.4
+    -   box:
+            '#': Leg
+            pose:
+                x: 0.25
+                y: -0.25
+                z: 0.2
+            size:
+                x: 0.05
+                y: 0.05
+                z: 0.4
+    -   box:
+            '#': Leg
+            pose:
+                x: -0.25
+                y: 0.25
+                z: 0.2
+            size:
+                x: 0.05
+                y: 0.05
+                z: 0.4
+    -   box:
+            '#': Leg
+            pose:
+                x: 0.25
+                y: 0.25
+                z: 0.2
+            size:
+                x: 0.05
+                y: 0.05
+                z: 0.4

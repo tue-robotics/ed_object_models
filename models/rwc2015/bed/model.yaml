@@ -1,0 +1,30 @@
+areas:
+- {name: near, offset: 0.8}
+- name: in_front_of
+  shape:
+  - box:
+      max: {x: -1.0, y: 0.2, z: 1}
+      min: {x: -1.9, y: -0.2, z: 0}
+- name: in_front_of_pos2
+  shape:
+  - box:
+      max: {x: -0.4, y: 1.5, z: 1}
+      min: {x: -0.8, y: 0.7, z: 0}
+- name: at_bedside
+  shape:
+  - box:
+      max: {x: 1.0, y: 1.4, z: 1}
+      min: {x: -1.0, y: -1.4, z: 0}
+color: {blue: 0.9, green: 0.9, red: 0.9}
+localizable: 1.0
+shape:
+  compound:
+  - box:
+      pose: {x: 0.0, y: 0.0, z: 0.41}
+      size: {x: 2.18, y: 1.5, z: 0.21}
+  - box:
+      pose: {x: -1.075, y: 0.0, z: 0.255}
+      size: {x: 0.03, y: 1.5, z: 0.51}
+  - box:
+      pose: {x: 1.01, y: 0.0, z: 0.68}
+      size: {x: 0.2, y: 1.5, z: 0.75}

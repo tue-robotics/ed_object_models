@@ -1,0 +1,18 @@
+composition:
+    - type: "wonderland/walls"
+      id: "walls"
+    - type: "floor"
+      id: "floor"
+      pose:
+          x: 0
+          y: 0
+          z: 0
+    - type: "table_120x80x76"
+      id: "table"
+      pose:
+          x: 10
+          y: 9
+          z: 0
+          X: 0
+          Y: 0
+          Z: 1.57

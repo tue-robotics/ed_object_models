@@ -1,0 +1,10 @@
+affordances:
+  navigate-to:
+    position_constraint: {constraint: x^2 + y^2 < 0.64^2}
+  place: {height: 0.75}
+color: {blue: 0.8, green: 0.8, red: 0.8}
+localizable: 1.0
+shape:
+  box:
+    pose: {x: 0.0, y: 0.0, z: 0.475}
+    size: {x: 0.642, y: 2.989, z: 0.95}

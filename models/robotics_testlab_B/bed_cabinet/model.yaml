@@ -1,0 +1,11 @@
+type: cabinet
+shape:
+    box:
+        pose:
+            x: 0
+            y: 0
+            z: 0.365
+        size:
+            x: 0.48
+            y: 0.48
+            z: 0.73

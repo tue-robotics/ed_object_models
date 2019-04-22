@@ -1,0 +1,39 @@
+composition:
+    - type: "rgo2015/cupboard/frame"
+      id: "frame"
+      pose:
+          x: 0
+          y: 0
+          z: 0
+    - type: "rgo2015/cupboard/shelf"
+      id: "shelf1"
+      pose:
+          x: 0
+          y: 0
+          z: 0.91
+    - type: "rgo2015/cupboard/shelf"
+      id: "shelf2"
+      pose:
+          x: 0
+          y: 0
+          z: 1.265
+    - type: "rgo2015/cupboard/shelf"
+      id: "shelf3"
+      pose:
+          x: 0
+          y: 0
+          z: 1.555
+    - type: "rgo2015/cupboard/shelf"
+      id: "shelf4"
+      pose:
+          x: 0
+          y: 0
+          z: 1.795
+areas:
+- name: near
+  offset: 0.8
+- name: in_front_of
+  shape:
+    - box:  
+          min: { x: 0.9, y: -0.25, z: 0 }
+          max: { x: 1.5, y: 0.25, z: 1 }

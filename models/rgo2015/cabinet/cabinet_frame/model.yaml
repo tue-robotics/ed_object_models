@@ -1,0 +1,13 @@
+localizable: 1.0
+shape:
+    compound:
+        - box:
+            pose: {x: 0.0, y: -0.39, z: 1.01}
+            size: {x: 0.28, y: 0.02, z: 2.02}
+        - box:
+            pose: {x: 0.0, y: 0.39, z: 1.01}
+            size: {x: 0.28, y: 0.02, z: 2.02}
+color:
+    red: 0.9
+    green: 0.9
+    blue: 0.9

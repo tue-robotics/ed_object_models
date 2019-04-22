@@ -1,0 +1,41 @@
+areas:
+-   name: near
+    offset: 0.7
+-   name: on_top_of
+    shape:
+    -   box:
+            max:
+                y: 0.35
+                x: 0.37
+                z: 0.6
+            min:
+                y: -0.35
+                x: -0.37
+                z: 0.35
+-   name: in_front_of
+    shape:
+    -   box:
+            max:
+                y: 1.1
+                x: 0.4
+                z: 0.01
+            min:
+                y: 0.7
+                x: -0.4
+                z: 0.0
+#color:
+    #blue: 0.75
+    #green: 0.75
+    #red: 0.75
+shape:
+    compound:
+    -   box:
+            '#': Main object
+            pose:
+                y: 0
+                x: 0
+                z: 0.165
+            size:
+                y: 0.76
+                x: 0.8
+                z: 0.33

@@ -1,0 +1,17 @@
+shape:
+    compound:
+    # Foot
+    - box:
+        pose: {x: 0, y: 0, z: 0.0275}
+        size: {x: 0.35, y: 0.35, z: 0.055}
+    # Pole
+    - box:
+        pose: {x: 0, y: 0, z: 0.645}
+        size: {x: 0.05, y: 0.05, z: 1.29}
+color:
+    red: 0.9
+    green: 0.9
+    blue: 0.9
+areas:
+- name: near
+  offset: 0.5

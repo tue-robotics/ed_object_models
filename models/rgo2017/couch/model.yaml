@@ -1,0 +1,31 @@
+shape:
+    compound:
+      - box:  # Bottom
+            pose: {x: 0.0, y: 0.0, z: 0.21}
+            size: {x: 0.85, y: 1.8, z: 0.42}
+      - box:  # Back
+            pose: {x: -0.275, y: 0.0, z: 0.5325}  
+            size: {x: 0.30, y: 1.8, z: 0.225}
+      - box:  # Left
+            pose: {x: 0.0, y: -0.812, z: 0.5325}
+            size: {x: 0.85, y: 0.175, z: 0.225}
+      - box:  # Right
+            pose: {x: 0.0, y: 0.812, z: 0.5325}
+            size: {x: 0.85, y: 0.175, z: 0.225}
+color:
+    red: 0.1
+    green: 0.1
+    blue: 0.1
+areas:
+  - name: on_top_of
+    shape:
+      - box:
+            min: {x: 0.0, y: -0.68, z: 0.44}
+            max: {x: 0.35, y:  0.68, z: 0.76}
+  - name: in_front_of
+    shape:
+      - box:
+            min: {x: 0.95, y: -0.3, z: 0.0}
+            max: {x:  1.15, y:  0.3, z: 0.01}
+  - name: near
+    offset: 0.7

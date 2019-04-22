@@ -1,0 +1,39 @@
+composition:
+    - type: "rein_experiment/walls"
+      id: "walls"
+    - type: "floor"
+      id: "floor"
+      pose:
+          x: 0
+          y: 0
+          z: 0
+    - type: "waypoint"
+      id: "corridor_start"
+      pose:
+          x: 7.3
+          y: 5.6
+          z: 0
+    - type: "waypoint"
+      id: "corridor_end"
+      pose:
+          x: 7.3
+          y: -5.8
+          z: 0
+    - type: "waypoint"
+      id: "chillout_corner"
+      pose:
+          x: 5.5
+          y: -1.0
+          z: 0
+    - type: "waypoint"
+      id: "bedroom"
+      pose:
+          x: 3.1
+          y: 5.6
+          z: 0
+    - type: "waypoint"
+      id: "living_room"
+      pose:
+          x: 0
+          y: -5.0
+          z: 0

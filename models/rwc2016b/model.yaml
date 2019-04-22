@@ -1,0 +1,221 @@
+composition:
+- type: "floor"
+  id: "floor"
+  pose: { x: 0, y: 0, z: 0 }
+- type: "rwc2016b/walls"
+  id: "walls"
+  pose: { x: 0, y: 0, z: 0 }
+- id: bed
+  type: rwc2016/bed_frame
+  pose: { x: 4.2350414095, y: 3.61956635071, z: 0.0, Z: -1.57079632679 }
+- id: bedside
+  type: rwc2016/cabinet_2doors
+  pose: { x: 7.20064872224, y: 3.07295793463, z: 0.0, Z: 3.14159265359 }
+- id: plant_small_bedroom
+  type: rwc2016/plant
+  pose: { x: 3.44435067195, y: 5.07663793686, z: 0.0, Z: 0.0 }
+- id: plant_small_hall_1
+  type: rwc2016/plant
+  pose: { x: 7.34685494228, y: -0.0256348198448, z: 0.0, Z: 0.0 }
+- id: sink
+  type: rwc2016/kitchen_counter
+  pose: { x: 7.79068520743, y: 2.35834741039, z: 0.0, Z: 0.0 }
+- id: cupboard
+  type: rwc2016/cabinet_2slides
+  pose: { x: 9.50542128925, y: 5.24257608022, z: 0.0, Z: -1.57079632679 }
+- id: bar
+  type: rwc2016/bookcase_noback
+  pose: { x: 7.6934243492, y: 3.89551713301, z: 0.0, Z: 0.0 }
+- id: cabinet
+  type: rwc2016/cabinet_2doors
+  pose: { x: 4.03141751655, y: 0.320342320845, z: 0.0, Z: -1.57079632679 }
+- id: plant_small_hall_2
+  type: rwc2016/plant
+  pose: { x: 2.843662104, y: 0.322526422217, z: 0.0, Z: 0.0 }
+- id: sideshelf
+  type: rwc2016/cabinet_2doors
+  pose: { x: 10.6916059274, y: 2.94276122472, z: 0.0, Z: 3.14159265359 }
+
+
+#---------- final---------------------
+
+- id: table1
+  type: rwc2016/table_bureau
+  pose: { x: 14.8, y: 3.1, z: 0.0, Z: 3.14159265359 }
+- id: table2
+  type: rwc2016/table_bureau
+  pose: { x: 14.8, y: 0.2, z: 0.0, Z: 3.14159265359 }
+- id: table3
+  type: rwc2016/table_bureau
+  pose: { x: 12.0, y: -1.0, z: 0.0, Z: 1.57079632679 }
+- id: bar
+  type: rwc2016/cabinet_open_small
+  pose: { x: 12.0, y: 5.21299446298, z: 0.0, Z: -1.57079632679 }
+
+# - - - - - - - - - - - - - - - - - - - - - - - - -
+
+- type: "room"
+  id: "dining_room"
+  pose: { x: 13.45, y: 2.25, z: 0 }
+  areas:
+  - name: in
+    shape:
+    - box:
+        min: { x: -2.56, y: -0.69, z: 0 }
+        max: { x: 2.44, y: 3.23, z: 0.01 }
+- type: "room"
+  id: "kitchen"
+  pose: { x: 9.31, y: 2.96, z: 0 }
+  areas:
+  - name: in
+    shape:
+    - box:
+        min: { x: -1.85, y: -2.39, z: 0 }
+        max: { x: 1.58, y: 2.54, z: 0.01 }
+- type: "room"
+  id: "living_room"
+  pose: { x: 12.85, y: -0.39, z: 0 }
+  areas:
+  - name: in
+    shape:
+    - box:
+        min: { x: -1.94, y: -1.60, z: 0 }
+        max: { x: 3.06, y: 2.89, z: 0.01 }
+- type: "room"
+  id: "corridor"
+  pose: { x: 1.76, y: -0.64, z: 0 }
+  areas:
+  - name: in
+    shape:
+    - box:
+        min: { x: -1.75, y: -1.35, z: 0 }
+        max: { x: 9.10, y: 1.18, z: 0.01 }
+    - box:
+        min: { x: -1.77, y: -1.35, z: 0 }
+        max: { x: 1.24, y: 6.12, z: 0.01 }
+- type: "room"
+  id: "bedroom"
+  pose: { x: 5.35, y: 2.25, z: 0 }
+  areas:
+  - name: in
+    shape:
+    - box:
+        min: { x: -2.35, y: -1.69, z: 0 }
+        max: { x: 2.10, y: 3.23, z: 0.01 }
+
+# - - - - - - - - - - - - - - - - - - - - - - - - -
+
+- type: "waypoint"
+  id: "initial_pose_door_a"
+  pose: { x: -0.5, y: 0.0, z: 0, rz: 0.0 }
+- type: "waypoint"
+  id: "initial_pose_door_b"
+  pose: { x: -0.5, y: 3.0, z: 0, rz: 0.0 }
+- type: "waypoint"
+  id: "initial_pose_door_c"
+  pose: { x: 14.66, y: 5.56, z: 0, rz: -1.57 }
+- type: "waypoint"
+  id: "entry_door_a"
+  pose: { x: 1.0, y: 0.0, z: 0, rz: 0.0 }
+- type: "waypoint"
+  id: "entry_door_b"
+  pose: { x: 1.0, y: 3.0, z: 0, rz: 0.0 }
+- type: "waypoint"
+  id: "entry_door_c"
+  pose: { x: 14.7, y: 4.0, z: 0, rz: -1.57 }
+- type: "waypoint"
+  id: "exit_door_a"
+  pose: { x: -1.5, y: 0.0, z: 0, rz: 3.14 }
+- type: "waypoint"
+  id: "exit_door_b"
+  pose: { x: -1.5, y: 3.0, z: 0, rz: 3.14 }
+- type: "waypoint"
+  id: "exit_door_c"
+  pose: { x: 14.7, y: 6.5, z: 0, rz: 1.57 }
+
+# - - - - - - CHALLENGE_RIPS WAYPOINTS - - - - - - -
+
+- type: "waypoint"
+  id: "registration_table1"
+  pose: { x: 9.7, y: -0.6, z: 0, rz: 0 }
+- type: "waypoint"
+  id: "registration_table2"
+  pose: { x: 9.0, y: -1.4, z: 0, rz: 0 }
+- type: "waypoint"
+  id: "registration_table3"
+  pose: { x: 8.4, y: -0.6, z: 0, rz: 0 }
+- type: "waypoint"
+  id: "exit_1_rips"
+  pose: { x: 14.7, y: 6.4, z: 0, rz: 1.57 }
+- type: "waypoint"
+  id: "exit_2_rips"
+  pose: { x: 14.7, y: 7.5, z: 0, rz: 1.57 }
+- type: "waypoint"
+  id: "exit_3_rips"
+  pose: { x: 14.7, y: 4.3, z: 0, rz: 1.57 }
+- type: "waypoint"
+  id: "exit_4_rips"
+  pose: { x: 14.7, y: 6.4, z: 0, rz: 1.57 }
+
+# - - - - - - CHALLENGE_NAVIGATION WAYPOINTS - - - - - - -
+
+- type: "waypoint"
+  id: "navigation_target1"
+  pose: { x: 9.5, y: -0.5, z: 0, rz: -1.57 }
+- type: "waypoint"
+  id: "navigation_target2_pre"
+  pose: { x: 12.0, y: -0.6, z: 0, rz: -0.87 }
+- type: "waypoint"
+  id: "navigation_target2"
+  pose: { x: 13.0, y: -1.0, z: 0, rz: -1.57 }
+- type: "waypoint"
+  id: "navigation_target3"
+  pose: { x: 2.0, y: 1.5, z: 0, rz: 3.14 }
+- type: "waypoint"
+  id: "navigation_door"
+  pose: { x: -0.7, y: 0.0, z: 0, rz: 0.0 }
+- type: "waypoint"
+  id: "navigation_door_1"
+  pose: { x: -0.7, y: 0.0, z: 0, rz: 0.0 }
+- type: "waypoint"
+  id: "navigation_door_2"
+  pose: { x: -0.7, y: 3.0, z: 0, rz: 0.0 }
+- type: "waypoint"
+  id: "navigation_reentrance_door_1"
+  pose: { x: 0.0, y: 0.0, z: 0, rz: 0.0 }
+- type: "waypoint"
+  id: "navigation_reentrance_door_2"
+  pose: { x: 0.0, y: 3.0, z: 0, rz: 0.0 }
+- type: "waypoint"
+  id: "navigation_target4"
+  pose: { x: 2.0, y: 1.5, z: 0, rz: 0.0 }
+- type: "waypoint"
+  id: "navigation_exit1"
+  pose: { x: -1.0, y: 0.0, z: 0, rz: 3.1415 }
+- type: "waypoint"
+  id: "navigation_exit2"
+  pose: { x: -1.0, y: 3.0, z: 0, rz: 3.1415 }
+- type: "waypoint"
+  id: "navigation_exit3"
+  pose: { x: -2.0, y: 4.5, z: 0, rz: 3.1415 }
+- type: "waypoint"
+  id: "navigation_exit4"
+  pose: { x: -2.0, y: -1.0, z: 0, rz: 3.1415 }
+- type: "waypoint"
+  id: "door_opening_start_1"
+  pose: { x: -0.5, y: 0.0, z: 0, rz: 0 }
+- type: "waypoint"
+  id: "door_opening_dest_1"
+  pose: { x: 0.90, y: 0.0, z: 0, rz: 0 }
+- type: "waypoint"
+  id: "door_opening_start_2"
+  pose: { x: -0.5, y: 3.0, z: 0, rz: 0 }
+- type: "waypoint"
+  id: "door_opening_dest_2"
+  pose: { x: 0.90, y: 3.0, z: 0, rz: 0 }
+
+# - - - - - - CHALLENGE_GPSR WAYPOINTS - - - - - - -
+
+- type: "waypoint"
+  id: "gpsr_meeting_point"
+  pose: { x: 2.006, y: -1.280, z: 0, rz: 1.57 }

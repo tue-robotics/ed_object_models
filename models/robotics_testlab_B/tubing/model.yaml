@@ -1,0 +1,61 @@
+#type: tubing
+shape:
+    compound:
+        - box:
+            pose:
+                x: 0.0
+                y: 0.0
+                z: 1.04
+            size:
+                x: 1.80
+                y: 0.36
+                z: 0.36
+        - box:
+            pose:
+                x: 0.72
+                y: 0.0
+                z: 1.72
+            size:
+                x: 0.36
+                y: 0.36
+                z: 1.00
+        - box:
+            pose:
+                x: 1.16
+                y: 0.0
+                z: 1.50
+            size:
+                x: 0.36
+                y: 0.36
+                z: 1.44
+        - box:
+            pose:
+                x: 0.64
+                y: 0.0
+                z: 0.40
+            size:
+                x: 1.40
+                y: 0.36
+                z: 0.80
+        - box:
+            pose:
+                x: 0.72
+                y: 0.0
+                z: 0.50
+            size:
+                x: 0.36
+                y: 0.36
+                z: 1.00
+color:
+    red: 0.5
+    green: 0.5
+    blue: 0.5
+
+areas:
+  - name: near
+    offset: 0.7
+  - name: in_front_of
+    shape:
+      - box:
+            min: { x:  0, y: -0.3, z: 0 }
+            max: { x:  1.2, y: 0.3, z: 1 }

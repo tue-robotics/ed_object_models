@@ -1,0 +1,174 @@
+composition:
+- type: "reo2016/walls"
+  id: "walls"
+  pose: { x: 0, y: 0, z: 0 }
+- type: "reo2016/dinnertable"
+  id: "dinnertable"
+  pose: {x: 4.192, y: -5.189, z: 0.0}  # x: 5.397 - 2.41/2, y: −7.139+ 1.46+0.98÷2
+- type: "reo2016/sideboard"
+  id: "sideboard"
+  pose: {x: 5.202, y: -3.1665, z: 0.0}  # x: 5.397 - 0.39/2, y: -7.139 + 1.46 + 0.98 + 0.8 + 1.465/2
+- type: "reo2016/bookcase"
+  id: "bookcase"
+  pose: {x: 0.893, y: -4.712, z: 0.0, X: 0.0, Y: 0.0, Z: 3.75}
+- type: "reo2016/tv_stand"
+  id: "tv_stand"
+  pose: {x: 3.278, y: -1.37, z: 0.0, Z: 1.57075}  # x: 5.398 - 1.22 - 1.8/2 , y: -1,173 - 0.4/2
+- type: "reo2016/couch"
+  id: "couch"
+  pose: {x: 3.151, y: -3.216, z: 0.0, Z: 3.1415}  # x: 2.351 + 1.6/2, y:  -2.866 - 0.7/2
+- type: "reo2016/kitchencounter"
+  id: "kitchencounter"
+  pose: {x: 5.105, y: 3.052, z: 0.0}  # x: 5.4 - 0.59/2, y: 5.207 -0.655 - 3.0/2
+- type: "reo2016/sink"
+  id: "sink"
+  pose: {x: 5.105, y: 3.052, z: 0.86}  # {x: 0.59, y: 3.00,  z: 0.95} (size of counter)
+- type: "reo2016/kitchen_trashbin"
+  id: "kitchen_trashbin"
+  pose: {x: 4.558, y: 4.882, z: 0.0}
+- type: "reo2016/fridge"
+  id: "fridge"
+  pose: {x: 3.92, y: 4.872, z: 0.0, Z: 1.57075}  # x: 5.4 - 1.18 - 0.6/2, y: 5.207 - 0.67/2
+- type: "reo2016/bed"
+  id: "bed"
+  pose: {x: 2.6725, y: 3.216, z: 0.0, Z: 1.57075}  # x: 1.955 + 1.435/2, y: 2.216 + 2.0/2
+- type: "reo2016/nightstand"
+  id: "nightstand"
+  pose: {x: 1.5, y: 3.0, z: 0.0, Z: 1.57075}  # ToDo: estimated
+- type: "reo2016/closet"
+  id: "closet"
+  pose: {x: 0.712, y: 1.769, z: 0.0, Z: 1.25}  #0,662 1,669 -0,339
+- type: "reo2016/hallway_trashbin"
+  id: "hallway_trashbin"
+  pose: {x: 5.131, y: 1.033, z: 0.0}
+- type: "reo2016/suitcase"
+  id: "suitcase"
+  pose: {x: 0.437, y: -1.21, z: 0.0}
+
+##### ROOMS #####
+- type: "room"
+  id: "kitchen"
+  pose: { x: 4.5, y: 2.5, z: 0 }
+  areas:
+    - name: in
+      shape:
+        - box:
+            min: { x: -1.0, y: -1.0, z: 0 }
+            max: { x:  1.0, y:  2.5, z: 0.01 }  # ToDo: check right side
+- type: "room"
+  id: "livingroom"
+  pose: { x: 4.0, y: -4.0, z: 0.0 }
+  areas:
+    - name: in
+      shape:
+        - box:
+            min: { x: -4.0, y: -3.1, z: 0 }
+            max: { x:  1.5, y:  2.5, z: 0.01 }
+- type: "room"
+  id: "bedroom"
+  pose: { x: 2.0, y: 2.0, z: 0 }
+  areas:
+    - name: in
+      shape:
+        - box:
+            min: { x: -1.5, y: -2.0, z: 0 }
+            max: { x:  1.5, y:  2.0, z: 0.01 }
+- type: "room"
+  id: "entrance"
+  pose: { x: 0.1, y: 0.0, z: 0 }
+  areas:
+    - name: in
+      shape:
+        - box:
+            min: { x: -1.0, y: -1.0, z: 0 }
+            max: { x:  1.0, y:  1.0, z: 0.01 }
+- type: "room"
+  id: "exit"
+  pose: { x: 0.1, y: -1.8, z: 0 }
+  areas:
+    - name: in
+      shape:
+        - box:
+            min: { x: -1.0, y: -1.0, z: 0 }
+            max: { x:  1.0, y:  1.0, z: 0.01 }
+
+
+##### Waypoints #####
+# # # General   # # #
+- type: "waypoint"
+  id: "navigation_waypoint_1"
+  pose: {x: 2.45, y: -5.22, z: 0, Z: 0}
+- type: "waypoint"
+  id: "navigation_waypoint_2_pre"
+  pose: {x: 4.3, y: 0.4, z: 0, Z: 1.57}
+- type: "waypoint"
+  id: "navigation_waypoint_2"
+  pose: {x: 4.36, y: 3.91, z: 0, Z: 0}
+- type: "waypoint"
+  id: "navigation_waypoint_3"
+  pose: {x: 0.507, y: -1.84, z: 0, Z: 3.1415}
+- type: "waypoint"
+  id: "initial_pose"
+  pose: {x: -0.5, y: 0, z: 0, Z: 0}
+- type: "waypoint"
+  id: "initial_pose_door_A"
+  pose: {x: -0.5, y: 0, z: 0, Z: 0}
+- type: "waypoint"
+  id: "initial_pose_door_B"
+  pose: {x: -0.485, y: -1.85, z: 0, Z: 0}
+- type: "waypoint"
+  id: "entry_point_A"
+  pose: { x: 1.0, y: 0.0, z: 0, rz: 0 }
+- type: "waypoint"
+  id: "entry_point_B"
+  pose: { x: 1.0, y: -2.0, z: 0, rz: 0 }
+- type: "waypoint"
+  id: "exit_door_A1"
+  pose: { x: -1.0, y: 0.0, z: 0, rz: 3.1415 }
+- type: "waypoint"
+  id: "exit_door_A2"
+  pose: { x: -2.0, y: 0.5, z: 0, rz: 3.1415 } # Arena A
+- type: "waypoint"
+  id: "exit_door_A3"
+  pose: { x: 0.5, y: 0.0, z: 0, rz: 3.1415 } # Arena A
+- type: "waypoint"
+  id: "exit_door_B1"
+  pose: { x: -1.0, y: -1.85, z: 0, rz: 3.1415 }
+- type: "waypoint"
+  id: "exit_door_B2"
+  pose: { x: -1.0, y: -2.35, z: 0, rz: 3.1415 }
+- type: "waypoint"
+  id: "exit_door_B3"
+  pose: { x: 0.5, y: -1.85, z: 0, rz: 3.1415 }
+
+# # # RIPS      # # #
+- type: "waypoint"
+  id: "rips1"
+  pose: { x: 4.8, y: -2.0, z: 0, Z: 1.2 }
+- type: "waypoint"
+  id: "rips2"
+  pose: { x: 2.5, y: -2.25, z: 0, Z: 0.0 }
+- type: "waypoint"
+  id: "rips3"
+  pose: { x: 2.5, y: 0.0, z: 0, Z: 3.14 }
+
+# - - - - - - CHALLENGE PERSON RECOGNITION - - - - - - -
+
+- type: "waypoint"
+  id: "person_rec_learning"
+  pose: { x: 3.6, y: -3.6, z: 0, rz: 0.0}
+
+- type: "waypoint"
+  id: "person_rec_living_room_1"
+  pose: { x: 3.6, y: -3.6, z: 0, rz: 3.1415}
+
+# - - - - - - CHALLENGE GPSR - - - - - - -
+- type: "waypoint"
+  id: "gpsr_starting_pose"
+  pose: { x: 1.755, y: 1.4386, z: 0, rz: -1.57}
+
+
+# - - - - - - CHALLENGE EEGPSR - - - - - - -
+- type: "waypoint"
+  id: "eegpsr_starting_pose"
+  pose: { x: 0.760, y: -3.98, z: 0, rz: 2.0}

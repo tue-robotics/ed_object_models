@@ -1,0 +1,7 @@
+composition:
+    - type: "floor"
+      id: "infinite_table"
+      pose:
+          x: 0
+          y: 0
+          z: 0.74

@@ -1,0 +1,61 @@
+areas:
+-   name: near
+    offset: 0.7
+#-   name: on_top_of
+#    shape:
+#    -   box:
+#            max:
+#                x: 0.456
+#                y: 1.0015
+#                z: 1.07
+#            min:
+#                x: -0.456
+#                y: -1.0015
+#                z: 0.82
+-   name: in_front_of
+    shape:
+    -   box:
+            max:
+                x: 1.1
+                y: 1.6
+                z: 0.01
+            min:
+                x: -1.1
+                y: -0.5
+                z: 0.0
+color:
+    blue: 0.75
+    green: 0.75
+    red: 0.75
+shape:
+    compound:
+    -   box:
+            '#': Main object
+            pose:
+                x: 0
+                y: 0
+                z: 0.23
+            size:
+                x: 1.02
+                y: 2.12
+                z: 0.46
+    -   box:
+            '#': bed head
+            pose:
+                x: 0
+                y: -1.0225
+                z: 0.555
+            size:
+                x: 1.02
+                y: 0.075
+                z: 0.19
+    -   box:
+            '#': foot end
+            pose:
+                x: 0
+                y: 1.0225
+                z: 0.555
+            size:
+                x: 1.02
+                y: 0.075
+                z: 0.19

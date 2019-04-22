@@ -1,0 +1,30 @@
+areas:
+- {name: near, offset: 0.7}
+- name: in_front_of
+  shape:
+  - box:
+      max: {x: 0.15, y: 0.6, z: 1}
+      min: {x: -0.15, y: -1.25, z: 0}
+- name: in_front_of_pos2
+  shape:
+  - box:
+      max: {x: 0.15, y: 1.25, z: 1}
+      min: {x: -0.15, y: -0.6, z: 0}
+color: {blue: 0.9, green: 0.9, red: 0.9}
+shape:
+  compound:
+  - box:
+      pose: {x: 0.0, y: 0.0, z: 0.76}
+      size: {x: 0.7, y: 1.2, z: 0.02}
+  - box:
+      pose: {x: -0.305, y: -0.5425, z: 0.38}
+      size: {x: 0.05, y: 0.075, z: 0.76}
+  - box:
+      pose: {x: -0.305, y: 0.5425, z: 0.38}
+      size: {x: 0.05, y: 0.075, z: 0.76}
+  - box:
+      pose: {x: 0.305, y: -0.5425, z: 0.38}
+      size: {x: 0.05, y: 0.075, z: 0.76}
+  - box:
+      pose: {x: 0.305, y: 0.5425, z: 0.38}
+      size: {x: 0.05, y: 0.075, z: 0.76}

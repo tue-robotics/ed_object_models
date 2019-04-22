@@ -1,0 +1,33 @@
+localizable: 1.0
+shape:
+    box:
+        pose: {x: 0, y: 0, z: 0}
+        size: {x: 0.39, y: 0.65, z: 0.04}
+color:
+    red: 0.6
+    green: 0.6
+    blue: 0.6
+affordances:
+    place:
+        height: 0.0
+    navigate-to:
+        position_constraint:
+            constraint: "x^2 + y^2 < 0.7^2"
+areas:
+  - name: in_front_of
+    shape:
+      - box:
+            min: {x: -0.985, y: -0.325, z: 0}  #-0.21-0.7-0.075
+            max:  { x: -0.835, y: 0.325, z: 1.76 }
+  - name: in
+    shape:
+      - box:
+            min: { x: -0.325, y: -0.21, z: 0 }
+            max: { x:  0.325, y:  0.21, z: 1.76 }
+  - name: near
+    offset: 0.2
+  - name: on_top_of
+    shape:
+      - box:  #<size>0.39 0.65 0.04</size>
+            min: { x: -0.19, y: -0.275, z: 0.05 }
+            max: { x: 0.15, y: 0.275, z: 0.3 }

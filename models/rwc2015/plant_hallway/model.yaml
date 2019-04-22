@@ -1,0 +1,5 @@
+color: {blue: 0.0, green: 0.6, red: 0.0}
+shape:
+  box:
+    pose: {x: 0.0, y: 0.0, z: 0.75}
+    size: {x: 0.2, y: 0.2, z: 1.5}

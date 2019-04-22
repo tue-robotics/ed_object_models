@@ -1,0 +1,13 @@
+shape:
+  compound:
+    - cylinder:
+            height: 0.18
+            radius: 0.19
+areas:
+  - name: in_front_of
+    shape:
+      - box:
+            min: { x: -1.4, y: -0.5, z: -0.87 }
+            max: { x: -0.8, y:  0.5, z: -0.86 }
+  - name: near
+    offset: 0.7            

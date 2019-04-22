@@ -1,0 +1,8 @@
+shape:
+    path: shape/heightmap.pgm
+    resolution: 0.025000
+    origin_x: -45
+    origin_y: -30.2
+    origin_z: 0.000000
+    blockheight: 0.06
+

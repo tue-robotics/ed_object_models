@@ -1,0 +1,16 @@
+composition:
+    - type: "floor"
+      id: "floor"
+      pose:
+          x: 0
+          y: 0
+          z: 0
+    - type: "table_120x80x76"
+      id: "table"
+      pose:
+          x: 0.1
+          y: 1.7
+          z: 0
+          X: 0
+          Y: 0
+          Z: 0

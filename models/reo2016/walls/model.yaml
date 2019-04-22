@@ -1,0 +1,9 @@
+type: walls
+shape:
+    path: heightmap.pgm
+    blockheight: 2.0
+    resolution: 0.025000
+    origin_x: -10.899
+    origin_y: -20.945
+    origin_z: 0.000000
+

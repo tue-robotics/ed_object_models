@@ -1,0 +1,58 @@
+composition:
+    - type: "rosebv/walls"
+      id: "walls"
+      pose:
+          x: 0
+          y: 0
+          z: 0
+    - type: "floor"
+      id: "floor"
+      pose:
+          x: 0
+          y: 0
+          z: 0
+    - type: "table_200x100x76"
+      id: "office_table1"
+      pose:
+          x: 3
+          y: 0
+          z: 0
+          X: 0
+          Y: 0
+          Z: 0
+    - type: "table_ahrend_180x90x75_with_drawers"
+      id: "desk1"
+      pose:
+          x: -0.2
+          y: -1.1
+          z: 0
+          X: 0
+          Y: 0
+          Z: -1.57
+    - type: "table_ahrend_180x90x75_with_drawers"
+      id: "desk2"
+      pose:
+          x: -0.2
+          y: -2.9
+          z: 0
+          X: 0
+          Y: 0
+          Z: -1.57
+    - type: "table_2legs_180x80x76"
+      id: "desk3"
+      pose:
+          x: 1.7
+          y: -3.3
+          z: 0
+          X: 0
+          Y: 0
+          Z: 1.57
+    - type: "table_2legs_180x80x76"
+      id: "desk4"
+      pose:
+          x: 2.5
+          y: -3.3
+          z: 0
+          X: 0
+          Y: 0
+          Z: 1.57

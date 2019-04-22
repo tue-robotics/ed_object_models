@@ -1,0 +1,108 @@
+shape:
+    compound:
+      - box:
+            # Left side
+            pose: {x: 0, y: -0.391, z: 1.0125}
+            size: {x: 0.28, y: 0.018, z: 2.025}
+      - box:
+            # Right side
+            pose: {x: 0, y: 0.391, z: 1.0125}
+            size: {x: 0.28, y: 0.018, z: 2.025}
+      - box:
+            # Back side
+            pose: {x: 0.131, y: 0, z: 1.0125}
+            size: {x: 0.018, y: 0.8, z: 2.025}
+      - box:
+            # Top
+            pose: {x: -0.009, y: 0, z: 2.016}
+            size: {x: 0.262, y: 0.764, z: 0.018}
+      - box:
+            # Shelf 1
+            pose: {x: -0.009, y: 0, z: 0.081}
+            size: {x: 0.262, y: 0.764, z: 0.018}
+      - box:
+            # Shelf 2
+            pose: {x: -0.009, y: 0, z: 0.408}
+            size: {x: 0.262, y: 0.764, z: 0.018}
+      - box:
+            # Shelf 3
+            pose: {x: -0.009, y: 0, z: 0.729}
+            size: {x: 0.262, y: 0.764, z: 0.018}
+      - box:
+            # Shelf 4
+            pose: {x: -0.009, y: 0, z: 1.053}
+            size: {x: 0.262, y: 0.764, z: 0.018}
+      - box:
+            # Shelf 5
+            pose: {x: -0.009, y: 0, z: 1.368}
+            size: {x: 0.262, y: 0.764, z: 0.018}
+      - box:
+            # Shelf 6
+            pose: {x: -0.009, y: 0, z: 1.689}
+            size: {x: 0.262, y: 0.764, z: 0.018}
+      # - box:
+      #       # Shelf 7
+      #       pose: {x: -0.009, y: 0, z: 2.013}
+      #       size: {x: 0.262, y: 0.764, z: 0.018}
+
+areas:
+  - name: on_top_of
+    shape:
+        # - box: # Shelf 1
+        #       min: { x: -0.13, y: -0.35, z: 0.12 }
+        #       max: { x:  0.13, y:  0.35, z: 0.37 }
+        # - box: # Shelf 2
+        #       min: { x: -0.13, y: -0.35, z: 0.44 }
+        #       max: { x:  0.13, y:  0.35, z: 0.69 }
+        - box: # Shelf 3
+              min: { x: -0.13, y: -0.35, z: 0.77 }
+              max: { x:  0.1, y:  0.35, z: 1.02 }
+        # - box: # Shelf 4
+        #       min: { x: -0.13, y: -0.35, z: 1.09 }
+        #       max: { x:  0.13, y:  0.35, z: 1.34 }
+        # - box: # Shelf 5
+        #       min: { x: -0.13, y: -0.35, z: 1.41 }
+        #       max: { x:  0.13, y:  0.35, z: 1.66 }
+        # - box: # Shelf 6
+        #       min: { x: -0.13, y: -0.35, z: 1.73 }
+        #       max: { x:  0.13, y:  0.35, z: 1.98 }
+      # - box: # Shelf 6
+      #       min: { x: -0.13, y: -0.35, z: 0.12 }
+      #       max: { x:  0.13, y:  0.35, z: 0.37 }
+  - name: shelf1
+    shape:
+      - box: # Shelf 1
+            min: { x: -0.13, y: -0.35, z: 0.12 }
+            max: { x:  0.1, y:  0.35, z: 0.37 }
+  - name: shelf2
+    shape:
+      - box: # Shelf 2
+            min: { x: -0.13, y: -0.25, z: 0.44 }
+            max: { x:  0.0, y:  0.25, z: 0.69 }
+  - name: shelf3
+    shape:
+      - box: # Shelf 3
+            min: { x: -0.13, y: -0.35, z: 0.77 }
+            max: { x:  0.1, y:  0.35, z: 1.02 }
+  - name: shelf4
+    shape:
+      - box: # Shelf 4
+            min: { x: -0.13, y: -0.35, z: 1.09 }
+            max: { x:  0.1, y:  0.35, z: 1.34 }
+  - name: shelf5
+    shape:
+      - box: # Shelf 5
+            min: { x: -0.13, y: -0.35, z: 1.41 }
+            max: { x:  0.1, y:  0.35, z: 1.66 }
+  - name: shelf6
+    shape:
+      - box: # Shelf 6
+            min: { x: -0.13, y: -0.35, z: 1.73 }
+            max: { x:  0.1, y:  0.35, z: 1.98 }      
+  - name: in_front_of
+    shape:
+      - box:
+            min: { x: -0.93, y: -0.2, z: 0.0 }
+            max: { x: -0.73, y:  0.2, z: 0.01 }
+  - name: near
+    offset: 0.7

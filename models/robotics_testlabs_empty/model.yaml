@@ -1,0 +1,53 @@
+composition:
+    - type: "robotics_testlabs/walls"
+      id: "walls"
+      pose:
+          x: 0
+          y: 0
+          z: 0
+    - type: "floor"
+      id: "floor"
+      pose:
+          x: 0
+          y: 0
+          z: 0
+
+    - type: "waypoint"
+      id: "initial_pose"
+      pose: { x: 0.586, y: 4.259, z: 0, rz: 0 }
+    - type: "waypoint"
+      id: "exit"
+      pose: { x: -1.480, y: -0.031, z: 0, rz: 3.1415 }
+    - type: "waypoint"
+      id: "operator_pose"
+      pose: { x: 0.0, y: 0.0, z: 0, rz: 0.0}
+    - type: "waypoint"
+      id: "explore1"
+      pose: { x: 2.0, y: 4.0, z: 0, rz: 0.0}
+    - type: "waypoint"
+      id: "explore2"
+      pose: { x: 2.0, y: 2.5, z: 0, rz: 0.0}
+    - type: "waypoint"
+      id: "explore3"
+      pose: { x: 2.0, y: 2.0, z: 0, rz: 3.14}
+    - type: "waypoint"
+      id: "explore4"
+      pose: { x: 2.0, y: 1.5, z: 0, rz: 0.0}
+    - type: "waypoint"
+      id: "explore5"
+      pose: { x: 1.0, y: 0.3, z: 0, rz: 0.0}
+    - type: "waypoint"
+      id: "explore6"
+      pose: { x: 1.5, y: -0.5, z: 0, rz: -1.57}
+    - type: "waypoint"
+      id: "explore7"
+      pose: { x: -1.5, y: 0.0, z: 0, rz: 3.14}
+    - type: "waypoint"
+      id: "explore8"
+      pose: { x: -1.5, y: 2.0, z: 0, rz: 2.36}
+    - type: "waypoint"
+      id: "explore9"
+      pose: { x: -0.5, y: 4.0, z: 0, rz: 3.14}
+    - type: "waypoint"
+      id: "explore10"
+      pose: { x: 0.5, y: 4.5, z: 0, rz: -1.57}

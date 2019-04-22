@@ -1,0 +1,155 @@
+composition:
+    - type: "rgo2015/walls"
+      id: "walls"
+      pose:
+          x: 0
+          y: 0
+          z: 0
+    - type: "floor"
+      id: "floor"
+      pose:
+          x: 0
+          y: 0
+          z: 0
+    - type: "rgo2015/bed"
+      id: "bed"
+      pose: 
+          x: 1.555          # 0.525 + 2.06/2
+          y: 1.775          # 0.4 + 0.6 + 1.55/2
+          z: 0
+          X: 0
+          Y: 0
+          Z: 0
+    - type: "rgo2015_final/tv"
+      id: "tv"
+      pose: 
+          x: 6.025          # 5.525 + 1.0/2
+          y: 4.1          # 3.6 + 0.5
+          z: 0 
+          X: 0
+          Y: 0
+          Z: 0
+# - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    - type: "waypoint"
+      id: "initial_pose_door_A"
+      pose: { x: 0.0, y: 0.0, z: 0, rz: 0 }
+    - type: "waypoint"
+      id: "initial_pose_door_B"
+      pose: { x: 2.0, y: 8.9, z: 0, rz: -1.57 }
+    - type: "waypoint"
+      id: "initial_pose"
+      pose: { x: 0.0, y: 0.0, z: 0, rz: 0 }
+    - type: "waypoint"
+      id: "entry_point"
+      pose: { x: 1.897, y: 4.295, z: 0, rz: 0 }
+    - type: "waypoint"
+      id: "exit_door_A"
+      pose: { x: -1.480, y: -0.031, z: 0, rz: 3.1415 }
+    - type: "waypoint"
+      id: "exit_door_B"
+      pose: { x: 2.0, y: 10.5, z: 0, rz: 1.57 }
+
+# - - - - - - CHALLENGE FINAL - - - - - - -
+
+#part 1
+    - type: "waypoint"
+      id: "final_cupboard"
+      pose: { x: 6.0, y: 7.0, z: 0, rz: 1.57}
+    - type: "waypoint"
+      id: "final_dinnertable"
+      pose: { x: 3.6, y: 6.5, z: 0, rz: 1.54}
+    - type: "waypoint"
+      id: "final_desk"
+      pose: { x: 4.6, y: 6.800, z: 0, rz: -1.57}
+
+#location to ask operator
+    - type: "waypoint"
+      id: "task_location_sergio"
+      pose: { x: 7.982, y: 5.026, z: 0, rz: 2.854}
+
+#part 2
+    - type: "waypoint"  
+      id: "final_tv"
+      pose: { x: 7.702, y: 4.224, z: 0, rz: 3.14}
+    - type: "waypoint"
+      id: "final_kitchencounter"
+      pose: { x: 7.2, y: 2.0, z: 0, rz: 3.127}
+    - type: "waypoint"
+      id: "final_cabinet"
+      pose: { x: 7.255, y: 1.284, z: 0, rz: 0.768}
+    - type: "waypoint"
+      id: "final_bartable"
+      pose: { x: 7.496, y: 0.436, z: 0, rz: -0.8}
+    - type: "waypoint"
+      id: "final_small_table_1"
+      pose: { x: 4.069, y: 0.891, z: 0, rz: -1.078}
+    - type: "waypoint"
+      id: "final_small_table_2"
+      pose: { x: 4.069, y: 0.891, z: 0, rz: -1.819}
+    - type: "waypoint"
+      id: "final_coathanger"
+      pose: { x: 2.886, y: 0.256, z: 0, rz: -2.367}
+    - type: "waypoint"
+      id: "final_left_bedside_table"
+      pose: { x: 2.153, y: -0.252, z: 0, rz: 2.328}
+    - type: "waypoint"
+      id: "final_right_bedside_table"
+      pose: { x: 3.107, y: 3.042, z: 0, rz: -3.125}
+
+#final position for sergio and amigo
+    - type: "waypoint"
+      id: "final_last_position_sergio"
+      pose: { x: 7.667, y: 0.894, z: 0, rz: 0.478}
+    - type: "waypoint"
+      id: "final_last_position_amigo"
+      pose: { x: 7.290, y: 2.139, z: 0, rz: 0.195}
+
+
+# - - - - - - ROOMS - - - - - - -
+
+    - type: "room"
+      id: "office"
+      pose: { x: 3.0, y: 6.25, z: 0 }
+      areas:
+        - name: in
+          shape:
+            - box:
+                min: { x:  -1.8, y: -1.55, z: 0 }
+                max: { x:  1.8, y: 1.55, z: 0 }
+    - type: "room"
+      id: "kitchen"
+      pose: { x: 7.5, y: 1.0, z: 0 }
+      areas:
+        - name: in
+          shape:
+            - box:
+                min: { x: -1.3, y: -1.8, z: 0 }
+                max: { x:  1.3, y:  1.8, z: 0 }
+    - type: "room"
+      id: "livingroom"
+      pose: { x: 7.5, y: 5.5, z: 0 }
+      areas:
+        - name: in
+          shape:
+            - box:
+                min: { x:  1.3, y:  2.3, z: 0 }
+                max: { x: -1.3, y: -2.3, z: 0 }
+    - type: "room"
+      id: "bedroom"
+      pose: { x: 3.0, y: 2.0, z: 0 }
+      areas:
+        - name: in
+          shape:
+            - box:
+                min: { x: -1.8, y: -1.2, z: 0 }
+                max: { x:  1.8, y:  1.2, z: 0 }
+    - type: "room"
+      id: "hall"
+      pose: { x: 3.0, y: 0.0, z: 0 }
+      areas:
+        - name: in
+          shape:
+            - box:
+                min: { x: -1.8, y: -0.8, z: 0 }
+                max: { x:  1.8, y:  0.8, z: 0 }

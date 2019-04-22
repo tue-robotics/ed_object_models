@@ -1,0 +1,125 @@
+composition:
+    - type: "rwc2015/walls"
+      id: "walls"
+      pose:
+          x: 0
+          y: 0
+    - type: "floor"
+      id: "floor"
+      pose:
+          x: 0
+          y: 0
+
+##### Waypoints #####
+# # # General   # # #
+
+    - type: "waypoint"
+      id: "initial_pose"
+      pose: {x: 0, y: 0, z: 0, Z: 0}
+    - type: "waypoint"
+      id: "initial_pose_door_B"
+      pose: {x: 0, y: 0, z: 0, Z: 0}
+    - type: "waypoint"
+      id: "initial_pose_door_A"
+      pose: { x: 0, y: -6.15, z: 0, rz: 0.0 }
+    - type: "waypoint"
+      id: "exit_door_B1"
+      pose: { x: -1.0, y: 0, z: 0, rz: 3.1415 }
+    - type: "waypoint"
+      id: "exit_door_B2"
+      pose: { x: -2.0, y: 0, z: 0, rz: 3.1415 }
+    - type: "waypoint"
+      id: "exit_door_B3"
+      pose: { x: 1.0, y: 0, z: 0, rz: 3.1415 }
+    - type: "waypoint"
+      id: "exit_door_A1"
+      pose: { x: -1.0, y: -6.15, z: 0, rz: 3.1415 }
+    - type: "waypoint"
+      id: "exit_door_A2"
+      pose: { x: -2.0, y: -6.15, z: 0, rz: 3.1415 }
+    - type: "waypoint"
+      id: "exit_door_A3"
+      pose: { x: 1.0, y: -6.15, z: 0, rz: 3.1415 }
+    - type: "waypoint"
+      id: "entry_point_B"
+      pose: { x: 1.0, y: 0, z: 0, rz: 0 }
+    - type: "waypoint"
+      id: "entry_point_A"
+      pose: { x: 1.0, y: -6.15, z: 0, rz: 0 }
+
+# # # Open Challenge # # #
+    - type: "waypoint"
+      id: "operator_pose"
+      pose: { x: 9.0, y: -1.0, rz: 0.0}
+    - type: "waypoint"
+      id: "explore1"
+      pose: { x: 2.0, y: 0.0, rz: 1.57}
+    - type: "waypoint"
+      id: "explore2"
+      pose: { x: 3.0, y: 0.0, rz: -1.57}
+    - type: "waypoint"
+      id: "explore3"
+      pose: { x: 5.0, y: 0.0, rz: 0.0}
+    - type: "waypoint"
+      id: "explore4"
+      pose: { x: 7.0, y: -1.0, rz: -1.57}
+    - type: "waypoint"
+      id: "explore5"
+      pose: { x: 8.0, y: -2.0, rz: 0.0}
+    - type: "waypoint"
+      id: "explore6"
+      pose: { x: 8.0, y: -3.0, rz: 3.14}
+    - type: "waypoint"
+      id: "explore7"
+      pose: { x: 8.5, y: -4.0, rz: -1.57}
+    - type: "waypoint"
+      id: "explore8"
+      pose: { x: 8.0, y: -7.0, rz: 0.0}
+    - type: "waypoint"
+      id: "explore9"
+      pose: { x: 8.0, y: -8.0, rz: -1.57}
+    - type: "waypoint"
+      id: "explore10"
+      pose: { x: 3.0, y: -8.0, rz: 3.14}
+    - type: "waypoint"
+      id: "explore11"
+      pose: { x: 3.0, y: -8.0, rz: 1.57}
+
+##### ROOMS #####
+    - type: "room"
+      id: "kitchen"
+      pose: { x: 2.95, y: 0, z: 0 }
+      areas:
+        - name: in
+          shape:
+            - box:
+                min: { x: -2.35, y: -2.4, z: 0 }
+                max: { x:  2.35, y:  2.4, z: 0 }
+    - type: "room"
+      id: "livingroom"
+      pose: { x: 8.5, y: -1.825, z: 0 }
+      areas:
+        - name: in
+          shape:
+            - box:
+                min: { x:  3.1, y:  4.225, z: 0 }
+                max: { x: -3.1, y: -4.225, z: 0 }
+    - type: "room"
+      id: "bedroom"
+      pose: { x: 8.5, y: -7.825, z: 0 }
+      areas:
+        - name: in
+          shape:
+            - box:
+                min: { x: -3.1, y: -1.725, z: 0 }
+                max: { x:  3.1, y:  1.725, z: 0 }
+    - type: "room"
+      id: "hallway"
+      pose: { x: 2.975, y: -6.175, z: 0 }
+      areas:
+        - name: in
+          shape:
+            - box:
+                min: { x: -2.375, y: -3.775, z: 0 }
+                max: { x:  2.375, y:  3.775, z: 0 }
+

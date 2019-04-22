@@ -1,7 +1,0 @@
-type: walls
-shape:
-    path: heightmap_arenaa.pgm
-    blockheight: 2.48
-    resolution: 0.025
-    origin_x: -17.0
-    origin_y: -14.2

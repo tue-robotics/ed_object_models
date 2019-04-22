@@ -1,8 +1,0 @@
-type: walls
-shape:
-    path: shape/top.pgm
-    blockheight: 0.03
-    resolution: 0.025000
-    origin_x: -0.425
-    origin_y: -0.425
-    origin_z:  0.000000

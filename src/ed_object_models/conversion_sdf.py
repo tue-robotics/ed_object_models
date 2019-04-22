@@ -145,7 +145,10 @@ def read_geometry(shape_item, model_name):
 
     elif "polygon" in shape_item:
         yml_polygon = shape_item["polygon"]
-        points = [" ".join(map(str, point.values())) for point in yml_polygon["points"]]
+        points = []
+        for point in yml_polygon["points"]:
+            point = OrderedDict(sorted(point.items()))
+            points.append(" ".join(map(str, point.values())))
         geometry["polyline"] = {"point": points,
                                 "height": yml_polygon["height"]}
 

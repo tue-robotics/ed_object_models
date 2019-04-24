@@ -1,8 +1,0 @@
-<model name="door">
-
-    <box>
-        <xyz>0 0 1.0</xyz>
-        <size>1.0 0.05 2.0</size>
-    </box>
-
-</model>

@@ -3,7 +3,7 @@
 import sys
 import argparse
 
-from ed_object_models.conversion_sdf import main
+from ed_object_models.conversion_sdf import convert_model_name
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Convert custom ED YAML model to SDF")
@@ -13,4 +13,4 @@ if __name__ == "__main__":
     model = arguments.model
     recursive = arguments.recursive
 
-    sys.exit(main(model, recursive=recursive))
+    sys.exit(convert_model_name(model, recursive=recursive))

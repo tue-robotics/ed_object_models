@@ -1,7 +1,0 @@
-type: table
-shape:
-    path: shape/shape.xml
-color:
-    red: 0.7 # 0.545
-    green: 0.4 # 0.271
-    blue: 0.25 #.0745

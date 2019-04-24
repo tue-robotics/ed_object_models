@@ -1,8 +1,0 @@
-<model>
-    
-    <box>
-        <xyz>0 0 0.05</xyz>
-        <size>0.5 0.6 0.01</size>
-    </box> 
-    
-</model>

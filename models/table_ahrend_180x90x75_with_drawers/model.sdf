@@ -1,0 +1,145 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="table_ahrend_180x90x75_with_drawers">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>1.8 0.9 0.05</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>1.8 0.9 0.05</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.8 0.8 0.8 1</ambient>
+        </material>
+        <name>1</name>
+      </visual>
+      <pose>0.0 0.0 0.725 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <link name="2">
+      <collision name="2">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.74</size>
+          </box>
+        </geometry>
+        <name>2</name>
+      </collision>
+      <visual name="2">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.74</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.8 0.8 0.8 1</ambient>
+        </material>
+        <name>2</name>
+      </visual>
+      <pose>-0.9 -0.45 0.37 0 0 0</pose>
+      <name>2</name>
+    </link>
+    <link name="3">
+      <collision name="3">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.74</size>
+          </box>
+        </geometry>
+        <name>3</name>
+      </collision>
+      <visual name="3">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.74</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.8 0.8 0.8 1</ambient>
+        </material>
+        <name>3</name>
+      </visual>
+      <pose>-0.9 0.45 0.37 0 0 0</pose>
+      <name>3</name>
+    </link>
+    <link name="4">
+      <collision name="4">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.74</size>
+          </box>
+        </geometry>
+        <name>4</name>
+      </collision>
+      <visual name="4">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.74</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.8 0.8 0.8 1</ambient>
+        </material>
+        <name>4</name>
+      </visual>
+      <pose>0.9 -0.45 0.37 0 0 0</pose>
+      <name>4</name>
+    </link>
+    <link name="5">
+      <collision name="5">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.74</size>
+          </box>
+        </geometry>
+        <name>5</name>
+      </collision>
+      <visual name="5">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.74</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.8 0.8 0.8 1</ambient>
+        </material>
+        <name>5</name>
+      </visual>
+      <pose>0.9 0.45 0.37 0 0 0</pose>
+      <name>5</name>
+    </link>
+    <link name="6">
+      <collision name="6">
+        <geometry>
+          <box>
+            <size>0.39 0.72 0.53</size>
+          </box>
+        </geometry>
+        <name>6</name>
+      </collision>
+      <visual name="6">
+        <geometry>
+          <box>
+            <size>0.39 0.72 0.53</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.8 0.8 0.8 1</ambient>
+        </material>
+        <name>6</name>
+      </visual>
+      <pose>0.705 0.09 0.465 0 0 0</pose>
+      <name>6</name>
+    </link>
+    <static>true</static>
+    <name>table_ahrend_180x90x75_with_drawers</name>
+  </model>
+</sdf>

@@ -1,0 +1,349 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="rgo2018">
+    <light name="sun" type="directional">
+      <direction>0.5 0.1 -0.9</direction>
+      <pose>0 0 10 0 0 0</pose>
+      <name>sun</name>
+      <specular>0.2 0.2 0.2 1</specular>
+      <cast_shadows>true</cast_shadows>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <attenuation>
+        <range>1000</range>
+        <quadratic>0.001</quadratic>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+      </attenuation>
+    </light>
+    <model name="living_room" type="room">
+      <link name="in">
+        <virtual_volume name="in1">
+          <geometry>
+            <box>
+              <size>3.0 2.5 0.01</size>
+            </box>
+          </geometry>
+          <pose>2.5 -1.25 0.005 0 0 0</pose>
+          <name>in1</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <link name="in">
+        <virtual_volume name="in1">
+          <geometry>
+            <box>
+              <size>3.0 2.5 0.01</size>
+            </box>
+          </geometry>
+          <pose>2.5 -1.25 0.005 0 0 0</pose>
+          <name>in1</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>3.0 6.0 0 0 0 0</pose>
+      <static>true</static>
+      <name>living_room</name>
+    </model>
+    <model name="bedroom" type="room">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>5.0 5.0 0.01</size>
+            </box>
+          </geometry>
+          <pose>-0.5 0.0 0.005 0 0 0</pose>
+          <name>in</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>8.0 1.0 0 0 0 0</pose>
+      <static>true</static>
+      <name>bedroom</name>
+    </model>
+    <model name="dining_room" type="room">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>5 4.8 0.01</size>
+            </box>
+          </geometry>
+          <pose>-0.5 1.05 0.005 0 0 0</pose>
+          <name>in</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>3.0 0.0 0 0 0 0</pose>
+      <static>true</static>
+      <name>dining_room</name>
+    </model>
+    <model name="kitchen" type="room">
+      <link name="in">
+        <virtual_volume name="in1">
+          <geometry>
+            <box>
+              <size>5.7 2.5 0.01</size>
+            </box>
+          </geometry>
+          <pose>-0.15 0.25 0.005 0 0 0</pose>
+          <name>in1</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <link name="in">
+        <virtual_volume name="in1">
+          <geometry>
+            <box>
+              <size>5.7 2.5 0.01</size>
+            </box>
+          </geometry>
+          <pose>-0.15 0.25 0.005 0 0 0</pose>
+          <name>in1</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>7.0 7.0 0 0 0 0</pose>
+      <static>true</static>
+      <name>kitchen</name>
+    </model>
+    <model name="initial_pose" type="waypoint">
+      <pose>-0.4 0.0 0 0 0 0</pose>
+      <static>true</static>
+      <name>initial_pose</name>
+    </model>
+    <model name="initial_pose_2">
+      <pose>8.48 -1.9 0 0 0 1.571</pose>
+      <static>true</static>
+      <name>initial_pose_2</name>
+    </model>
+    <model name="lars" type="waypoint">
+      <pose>8.0 6.5 0 0 0 1.5708</pose>
+      <static>true</static>
+      <name>lars</name>
+    </model>
+    <model name="waypoint_door_final" type="waypoint">
+      <pose>1.0 0.0 0 0 0 3.141592</pose>
+      <static>true</static>
+      <name>waypoint_door_final</name>
+    </model>
+    <model name="bedroom_waypoint" type="waypoint">
+      <pose>8.0 3.0 0 0 0 -2.3562</pose>
+      <static>true</static>
+      <name>bedroom_waypoint</name>
+    </model>
+    <model name="kitchen_waypoint" type="waypoint">
+      <pose>8.0 5.0 0 0 0 2.3562</pose>
+      <static>true</static>
+      <name>kitchen_waypoint</name>
+    </model>
+    <model name="living_room_waypoint" type="waypoint">
+      <pose>1.0 5.0 0 0 0 0.7854</pose>
+      <static>true</static>
+      <name>living_room_waypoint</name>
+    </model>
+    <model name="dining_room_waypoint" type="waypoint">
+      <pose>1.5 3.0 0 0 0 -0.7854</pose>
+      <static>true</static>
+      <name>dining_room_waypoint</name>
+    </model>
+    <model name="registration_table1" type="waypoint">
+      <pose>5.0 7.0 0 0 0 0</pose>
+      <static>true</static>
+      <name>registration_table1</name>
+    </model>
+    <model name="registration_table2" type="waypoint">
+      <pose>3.0 7.0 0 0 0 0</pose>
+      <static>true</static>
+      <name>registration_table2</name>
+    </model>
+    <model name="registration_table3" type="waypoint">
+      <pose>7.0 7.0 0 0 0 0</pose>
+      <static>true</static>
+      <name>registration_table3</name>
+    </model>
+    <model name="exit_1_rips" type="waypoint">
+      <pose>8.45 -2.8 0 0 0 -1.571</pose>
+      <static>true</static>
+      <name>exit_1_rips</name>
+    </model>
+    <model name="exit_2_rips" type="waypoint">
+      <pose>8.45 -2.24 0 0 0 -1.571</pose>
+      <static>true</static>
+      <name>exit_2_rips</name>
+    </model>
+    <model name="exit_3_rips" type="waypoint">
+      <pose>8.45 -1.4 0 0 0 -1.571</pose>
+      <static>true</static>
+      <name>exit_3_rips</name>
+    </model>
+    <model name="exit_4_rips" type="waypoint">
+      <pose>8.45 0.0 0 0 0 -1.571</pose>
+      <static>true</static>
+      <name>exit_4_rips</name>
+    </model>
+    <model name="gpsr_meeting_point" type="waypoint">
+      <pose>5.0 6.6 0 0 0 -3.141592</pose>
+      <static>true</static>
+      <name>gpsr_meeting_point</name>
+    </model>
+    <model name="gpsr_exit_door_1" type="waypoint">
+      <pose>8.45 -2.8 0 0 0 -1.571</pose>
+      <static>true</static>
+      <name>gpsr_exit_door_1</name>
+    </model>
+    <model name="gpsr_meeting_point_2" type="waypoint">
+      <pose>1.5 4.25 0 0 0 0</pose>
+      <static>true</static>
+      <name>gpsr_meeting_point_2</name>
+    </model>
+    <model name="gpsr_exit_door_2" type="waypoint">
+      <pose>-1.0 0.0 0 0 0 -3.1415</pose>
+      <static>true</static>
+      <name>gpsr_exit_door_2</name>
+    </model>
+    <model name="challenge_open_ask_waypoint" type="waypoint">
+      <pose>4.0 6.0 0 0 0 3.1415</pose>
+      <static>true</static>
+      <name>challenge_open_ask_waypoint</name>
+    </model>
+    <model name="final_meeting_point" type="waypoint">
+      <pose>5.0 7.0 0 0 0 -1.57</pose>
+      <static>true</static>
+      <name>final_meeting_point</name>
+    </model>
+    <model name="help_me_carry_starting_point" type="waypoint">
+      <pose>8.0 4.5 0 0 0 1.5708</pose>
+      <static>true</static>
+      <name>help_me_carry_starting_point</name>
+    </model>
+    <model name="eegpsr_pose_1" type="waypoint">
+      <pose>0.4 4.5 0 0 0 0.0</pose>
+      <static>true</static>
+      <name>eegpsr_pose_1</name>
+    </model>
+    <model name="eegpsr_exit_door_1" type="waypoint">
+      <pose>-1.0 0.0 0 0 0 3.1415</pose>
+      <static>true</static>
+      <name>eegpsr_exit_door_1</name>
+    </model>
+    <model name="eegpsr_pose_2" type="waypoint">
+      <pose>6.6 4.2 0 0 0 1.571</pose>
+      <static>true</static>
+      <name>eegpsr_pose_2</name>
+    </model>
+    <model name="eegpsr_exit_door_2" type="waypoint">
+      <pose>8.45 -2.8 0 0 0 -1.571</pose>
+      <static>true</static>
+      <name>eegpsr_exit_door_2</name>
+    </model>
+    <include name="floor">
+      <pose>0 0 0 0 0 0</pose>
+      <name>floor</name>
+      <uri>model://floor</uri>
+    </include>
+    <include name="walls">
+      <pose>0 0 0 0 0 0</pose>
+      <name>walls</name>
+      <uri>model://rgo2018/walls</uri>
+    </include>
+    <include name="dining_table">
+      <pose>2.53 1.08 0.0 0 0 3.141585</pose>
+      <name>dining_table</name>
+      <uri>model://rgo2018/table_dinner</uri>
+    </include>
+    <include name="display_case">
+      <pose>3.02732 -1.283567 0.0 0 0 1.5708</pose>
+      <name>display_case</name>
+      <uri>model://rgo2018/bookcase</uri>
+    </include>
+    <include name="cabinet">
+      <pose>0.144 3.274 0.0 0 0 0.0</pose>
+      <name>cabinet</name>
+      <uri>model://rgo2018/bookcase</uri>
+    </include>
+    <include name="storage_shelf">
+      <pose>4.8 2.5 0.0 0 0 3.141592</pose>
+      <name>storage_shelf</name>
+      <uri>model://rgo2018/bookcase</uri>
+    </include>
+    <include name="couch">
+      <pose>0.930263 7.469865 0.0 0 0 -0.7854</pose>
+      <name>couch</name>
+      <uri>model://rgo2018/couch</uri>
+    </include>
+    <include name="couch_table">
+      <pose>1.630305 6.87455 0.0 0 0 -2.35619265359</pose>
+      <name>couch_table</name>
+      <uri>model://rgo2018/table_salon_double</uri>
+    </include>
+    <include name="cupboard">
+      <pose>3.262123 8.183156 0.0 0 0 -1.5708</pose>
+      <name>cupboard</name>
+      <uri>model://rgo2018/table_salon</uri>
+    </include>
+    <include name="tv">
+      <pose>5.0 4.08 0.0 0 0 1.570796</pose>
+      <name>tv</name>
+      <uri>model://rgo2015/tv</uri>
+    </include>
+    <include name="tv_table">
+      <pose>5.045754 5.106661 0.0 0 0 0.7854</pose>
+      <name>tv_table</name>
+      <uri>model://rgo2018/table_salon</uri>
+    </include>
+    <include name="kitchen_table">
+      <pose>5.922403 8.027883 0.0 0 0 3.14159</pose>
+      <name>kitchen_table</name>
+      <uri>model://rgo2018/table_dinner2</uri>
+    </include>
+    <include name="bar">
+      <pose>9.22352 7.158925 0.0 0 0 2.3562</pose>
+      <name>bar</name>
+      <uri>model://rgo2018/bar</uri>
+    </include>
+    <include name="kitchen_cabinet">
+      <pose>9.53186 4.334334 0.0 0 0 3.141585</pose>
+      <name>kitchen_cabinet</name>
+      <uri>model://rgo2018/kitchen_sink</uri>
+    </include>
+    <include name="sink">
+      <pose>9.537166 5.509867 0.0 0 0 3.141585</pose>
+      <name>sink</name>
+      <uri>model://rgo2018/kitchen_sink</uri>
+    </include>
+    <include name="bed">
+      <pose>6.076955 -0.96774 0.0 0 0 -1.5708</pose>
+      <name>bed</name>
+      <uri>model://rgo2018/bed_frame</uri>
+    </include>
+    <include name="side_table">
+      <pose>5.334368 -0.139128 0.0 0 0 1.5708</pose>
+      <name>side_table</name>
+      <uri>model://rgo2018/table_salon</uri>
+    </include>
+    <include name="bookcase">
+      <pose>9.7 2.0 0.0 0 0 3.141592</pose>
+      <name>bookcase</name>
+      <uri>model://rgo2018/bookcase</uri>
+    </include>
+    <include name="desk">
+      <pose>5.768366 2.87248 0.0 0 0 -0.7854</pose>
+      <name>desk</name>
+      <uri>model://rgo2018/table_party</uri>
+    </include>
+    <physics type="ode">
+      <real_time_update_rate>400.0</real_time_update_rate>
+      <max_step_size>0.0025</max_step_size>
+      <ode>
+        <constraints>
+          <cfm>0.0001</cfm>
+        </constraints>
+        <solver type="quick">
+          <iters>100</iters>
+        </solver>
+      </ode>
+    </physics>
+    <name>rgo2018</name>
+  </world>
+</sdf>

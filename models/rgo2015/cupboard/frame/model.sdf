@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rgo2015/cupboard/frame">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>0.32 0.75 0.93</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>0.32 0.75 0.93</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+        </material>
+        <name>1</name>
+      </visual>
+      <pose>0.0 0.0 0.465 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <link name="2">
+      <collision name="2">
+        <geometry>
+          <box>
+            <size>0.3 0.02 1.815</size>
+          </box>
+        </geometry>
+        <name>2</name>
+      </collision>
+      <visual name="2">
+        <geometry>
+          <box>
+            <size>0.3 0.02 1.815</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+        </material>
+        <name>2</name>
+      </visual>
+      <pose>-0.01 -0.365 0.9075 0 0 0</pose>
+      <name>2</name>
+    </link>
+    <link name="3">
+      <collision name="3">
+        <geometry>
+          <box>
+            <size>0.3 0.02 1.815</size>
+          </box>
+        </geometry>
+        <name>3</name>
+      </collision>
+      <visual name="3">
+        <geometry>
+          <box>
+            <size>0.3 0.02 1.815</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+        </material>
+        <name>3</name>
+      </visual>
+      <pose>-0.01 0.365 0.9075 0 0 0</pose>
+      <name>3</name>
+    </link>
+    <static>true</static>
+    <name>rgo2015/cupboard/frame</name>
+  </model>
+</sdf>

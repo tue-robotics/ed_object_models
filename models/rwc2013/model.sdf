@@ -1,0 +1,117 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="rwc2013">
+    <light name="sun" type="directional">
+      <direction>0.5 0.1 -0.9</direction>
+      <pose>0 0 10 0 0 0</pose>
+      <name>sun</name>
+      <specular>0.2 0.2 0.2 1</specular>
+      <cast_shadows>true</cast_shadows>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <attenuation>
+        <range>1000</range>
+        <quadratic>0.001</quadratic>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+      </attenuation>
+    </light>
+    <include name="walls">
+      <pose>0 0 0 0 0 0</pose>
+      <name>walls</name>
+      <uri>model://rwc2013/walls</uri>
+    </include>
+    <include name="floor">
+      <pose>0 0 0 0 0 0</pose>
+      <name>floor</name>
+      <uri>model://floor</uri>
+    </include>
+    <include name="kitchen_table">
+      <pose>3.105 -6.331 0 0 0 0</pose>
+      <name>kitchen_table</name>
+      <uri>model://rwc2013/kitchen_table</uri>
+    </include>
+    <include name="kitchen_countertop">
+      <pose>0.654 -6.9815 0 0 0 0</pose>
+      <name>kitchen_countertop</name>
+      <uri>model://rwc2013/kitchen_countertop</uri>
+    </include>
+    <include name="fridge">
+      <pose>0.795 -5.02 0 0 0 0</pose>
+      <name>fridge</name>
+      <uri>model://rwc2013/fridge</uri>
+    </include>
+    <include name="trashbin">
+      <pose>3.297 -8.183 0 0 0 0</pose>
+      <name>trashbin</name>
+      <uri>model://rwc2013/trashbin</uri>
+    </include>
+    <include name="kitchen_cabinet">
+      <pose>2.705 -8.1965 0 0 0 0</pose>
+      <name>kitchen_cabinet</name>
+      <uri>model://rwc2013/kitchen_cabinet</uri>
+    </include>
+    <include name="bedroom_cabinet">
+      <pose>6.078 -6.841 0 0 0 0</pose>
+      <name>bedroom_cabinet</name>
+      <uri>model://rwc2013/bedroom_cabinet</uri>
+    </include>
+    <include name="nightstand1">
+      <pose>10.223 -5.419 0 0 0 0</pose>
+      <name>nightstand1</name>
+      <uri>model://rwc2013/nightstand1</uri>
+    </include>
+    <include name="nightstand2">
+      <pose>10.2305 -7.6205 0 0 0 0</pose>
+      <name>nightstand2</name>
+      <uri>model://rwc2013/nightstand2</uri>
+    </include>
+    <include name="bed">
+      <pose>9.3415 -6.519 0 0 0 0</pose>
+      <name>bed</name>
+      <uri>model://rwc2013/bed</uri>
+    </include>
+    <include name="tv_cabinet">
+      <pose>8.943 -4.0365 0 0 0 0</pose>
+      <name>tv_cabinet</name>
+      <uri>model://rwc2013/tv_cabinet</uri>
+    </include>
+    <include name="tv">
+      <pose>8.943 -4.0365 0 0 0 0</pose>
+      <name>tv</name>
+      <uri>model://rwc2013/tv</uri>
+    </include>
+    <include name="couch_table">
+      <pose>8.718 -1.2 0 0 0 0</pose>
+      <name>couch_table</name>
+      <uri>model://rwc2013/couch_table</uri>
+    </include>
+    <include name="armchair">
+      <pose>8.748 0.7515 0 0 0 0</pose>
+      <name>armchair</name>
+      <uri>model://rwc2013/armchair</uri>
+    </include>
+    <include name="couch">
+      <pose>9.919 -1.112 0 0 0 0</pose>
+      <name>couch</name>
+      <uri>model://rwc2013/couch</uri>
+    </include>
+    <include name="book_case">
+      <pose>3.5355 -1.428 0 0 0 0</pose>
+      <name>book_case</name>
+      <uri>model://rwc2013/book_case</uri>
+    </include>
+    <physics type="ode">
+      <real_time_update_rate>400.0</real_time_update_rate>
+      <max_step_size>0.0025</max_step_size>
+      <ode>
+        <constraints>
+          <cfm>0.0001</cfm>
+        </constraints>
+        <solver type="quick">
+          <iters>100</iters>
+        </solver>
+      </ode>
+    </physics>
+    <name>rwc2013</name>
+  </world>
+</sdf>

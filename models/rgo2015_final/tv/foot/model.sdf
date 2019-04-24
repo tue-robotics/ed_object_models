@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rgo2015_final/tv/foot">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <mesh>
+            <uri>model://rgo2015_final/tv/foot/shape/disc.stl</uri>
+          </mesh>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <mesh>
+            <uri>model://rgo2015_final/tv/foot/shape/disc.stl</uri>
+          </mesh>
+        </geometry>
+        <name>1</name>
+      </visual>
+      <pose>0 0 0 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <static>true</static>
+    <name>rgo2015_final/tv/foot</name>
+  </model>
+</sdf>

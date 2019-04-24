@@ -1,0 +1,263 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rwc2016/bookcase_noback">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>0.35 0.02 1.798</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>0.35 0.02 1.798</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+        <name>1</name>
+      </visual>
+      <pose>0 -0.39 0.899 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <link name="2">
+      <collision name="2">
+        <geometry>
+          <box>
+            <size>0.35 0.02 1.798</size>
+          </box>
+        </geometry>
+        <name>2</name>
+      </collision>
+      <visual name="2">
+        <geometry>
+          <box>
+            <size>0.35 0.02 1.798</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+        <name>2</name>
+      </visual>
+      <pose>0 0.39 0.899 0 0 0</pose>
+      <name>2</name>
+    </link>
+    <link name="3">
+      <collision name="3">
+        <geometry>
+          <box>
+            <size>0.35 0.76 0.02</size>
+          </box>
+        </geometry>
+        <name>3</name>
+      </collision>
+      <visual name="3">
+        <geometry>
+          <box>
+            <size>0.35 0.76 0.02</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+        <name>3</name>
+      </visual>
+      <pose>0 0 1.788 0 0 0</pose>
+      <name>3</name>
+    </link>
+    <link name="4">
+      <collision name="4">
+        <geometry>
+          <box>
+            <size>0.35 0.76 0.125</size>
+          </box>
+        </geometry>
+        <name>4</name>
+      </collision>
+      <visual name="4">
+        <geometry>
+          <box>
+            <size>0.35 0.76 0.125</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+        <name>4</name>
+      </visual>
+      <pose>0 0 0.0625 0 0 0</pose>
+      <name>4</name>
+    </link>
+    <link name="5">
+      <collision name="5">
+        <geometry>
+          <box>
+            <size>0.35 0.76 0.02</size>
+          </box>
+        </geometry>
+        <name>5</name>
+      </collision>
+      <visual name="5">
+        <geometry>
+          <box>
+            <size>0.35 0.76 0.02</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+        <name>5</name>
+      </visual>
+      <pose>0 0 0.38 0 0 0</pose>
+      <name>5</name>
+    </link>
+    <link name="6">
+      <collision name="6">
+        <geometry>
+          <box>
+            <size>0.35 0.76 0.02</size>
+          </box>
+        </geometry>
+        <name>6</name>
+      </collision>
+      <visual name="6">
+        <geometry>
+          <box>
+            <size>0.35 0.76 0.02</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+        <name>6</name>
+      </visual>
+      <pose>0 0 0.731 0 0 0</pose>
+      <name>6</name>
+    </link>
+    <link name="7">
+      <collision name="7">
+        <geometry>
+          <box>
+            <size>0.35 0.76 0.02</size>
+          </box>
+        </geometry>
+        <name>7</name>
+      </collision>
+      <visual name="7">
+        <geometry>
+          <box>
+            <size>0.35 0.76 0.02</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+        <name>7</name>
+      </visual>
+      <pose>0 0 1.081 0 0 0</pose>
+      <name>7</name>
+    </link>
+    <link name="8">
+      <collision name="8">
+        <geometry>
+          <box>
+            <size>0.35 0.76 0.02</size>
+          </box>
+        </geometry>
+        <name>8</name>
+      </collision>
+      <visual name="8">
+        <geometry>
+          <box>
+            <size>0.35 0.76 0.02</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+        <name>8</name>
+      </visual>
+      <pose>0 0 1.431 0 0 0</pose>
+      <name>8</name>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of">
+        <geometry>
+          <box>
+            <size>0.2 0.2 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.675 0.0 0.005 0 0 0</pose>
+        <name>in_front_of</name>
+      </virtual_volume>
+      <name>in_front_of</name>
+    </link>
+    <link name="shelf1">
+      <virtual_volume name="shelf1">
+        <geometry>
+          <box>
+            <size>0.27 0.7 0.174</size>
+          </box>
+        </geometry>
+        <pose>0.01 0.0 0.232 0 0 0</pose>
+        <name>shelf1</name>
+      </virtual_volume>
+      <name>shelf1</name>
+    </link>
+    <link name="shelf2">
+      <virtual_volume name="shelf2">
+        <geometry>
+          <box>
+            <size>0.27 0.7 0.258</size>
+          </box>
+        </geometry>
+        <pose>0.01 0.0 0.539 0 0 0</pose>
+        <name>shelf2</name>
+      </virtual_volume>
+      <name>shelf2</name>
+    </link>
+    <link name="shelf3">
+      <virtual_volume name="shelf3">
+        <geometry>
+          <box>
+            <size>0.27 0.7 0.255</size>
+          </box>
+        </geometry>
+        <pose>0.01 0.0 0.8875 0 0 0</pose>
+        <name>shelf3</name>
+      </virtual_volume>
+      <name>shelf3</name>
+    </link>
+    <link name="shelf4">
+      <virtual_volume name="shelf4">
+        <geometry>
+          <box>
+            <size>0.27 0.7 0.247</size>
+          </box>
+        </geometry>
+        <pose>0.01 0.0 1.2335 0 0 0</pose>
+        <name>shelf4</name>
+      </virtual_volume>
+      <name>shelf4</name>
+    </link>
+    <link name="shelf5">
+      <virtual_volume name="shelf5">
+        <geometry>
+          <box>
+            <size>0.27 0.7 0.242</size>
+          </box>
+        </geometry>
+        <pose>0.01 0.0 1.582 0 0 0</pose>
+        <name>shelf5</name>
+      </virtual_volume>
+      <name>shelf5</name>
+    </link>
+    <static>true</static>
+    <name>rwc2016/bookcase_noback</name>
+  </model>
+</sdf>

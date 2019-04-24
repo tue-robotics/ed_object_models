@@ -1,0 +1,225 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="rwc2015_empty">
+    <light name="sun" type="directional">
+      <direction>0.5 0.1 -0.9</direction>
+      <pose>0 0 10 0 0 0</pose>
+      <name>sun</name>
+      <specular>0.2 0.2 0.2 1</specular>
+      <cast_shadows>true</cast_shadows>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <attenuation>
+        <range>1000</range>
+        <quadratic>0.001</quadratic>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+      </attenuation>
+    </light>
+    <model name="initial_pose" type="waypoint">
+      <pose>0 0 0 0 0 0</pose>
+      <static>true</static>
+      <name>initial_pose</name>
+    </model>
+    <model name="initial_pose_door_B" type="waypoint">
+      <pose>0 0 0 0 0 0</pose>
+      <static>true</static>
+      <name>initial_pose_door_B</name>
+    </model>
+    <model name="initial_pose_door_A" type="waypoint">
+      <pose>0 -6.15 0 0 0 0.0</pose>
+      <static>true</static>
+      <name>initial_pose_door_A</name>
+    </model>
+    <model name="exit_door_B1" type="waypoint">
+      <pose>-1.0 0 0 0 0 3.1415</pose>
+      <static>true</static>
+      <name>exit_door_B1</name>
+    </model>
+    <model name="exit_door_B2" type="waypoint">
+      <pose>-2.0 0 0 0 0 3.1415</pose>
+      <static>true</static>
+      <name>exit_door_B2</name>
+    </model>
+    <model name="exit_door_B3" type="waypoint">
+      <pose>1.0 0 0 0 0 3.1415</pose>
+      <static>true</static>
+      <name>exit_door_B3</name>
+    </model>
+    <model name="exit_door_A1" type="waypoint">
+      <pose>-1.0 -6.15 0 0 0 3.1415</pose>
+      <static>true</static>
+      <name>exit_door_A1</name>
+    </model>
+    <model name="exit_door_A2" type="waypoint">
+      <pose>-2.0 -6.15 0 0 0 3.1415</pose>
+      <static>true</static>
+      <name>exit_door_A2</name>
+    </model>
+    <model name="exit_door_A3" type="waypoint">
+      <pose>1.0 -6.15 0 0 0 3.1415</pose>
+      <static>true</static>
+      <name>exit_door_A3</name>
+    </model>
+    <model name="entry_point_B" type="waypoint">
+      <pose>1.0 0 0 0 0 0</pose>
+      <static>true</static>
+      <name>entry_point_B</name>
+    </model>
+    <model name="entry_point_A" type="waypoint">
+      <pose>1.0 -6.15 0 0 0 0</pose>
+      <static>true</static>
+      <name>entry_point_A</name>
+    </model>
+    <model name="operator_pose" type="waypoint">
+      <pose>9.0 -1.0 0 0 0 0.0</pose>
+      <static>true</static>
+      <name>operator_pose</name>
+    </model>
+    <model name="explore1" type="waypoint">
+      <pose>2.0 0.0 0 0 0 1.57</pose>
+      <static>true</static>
+      <name>explore1</name>
+    </model>
+    <model name="explore2" type="waypoint">
+      <pose>3.0 0.0 0 0 0 -1.57</pose>
+      <static>true</static>
+      <name>explore2</name>
+    </model>
+    <model name="explore3" type="waypoint">
+      <pose>5.0 0.0 0 0 0 0.0</pose>
+      <static>true</static>
+      <name>explore3</name>
+    </model>
+    <model name="explore4" type="waypoint">
+      <pose>7.0 -1.0 0 0 0 -1.57</pose>
+      <static>true</static>
+      <name>explore4</name>
+    </model>
+    <model name="explore5" type="waypoint">
+      <pose>8.0 -2.0 0 0 0 0.0</pose>
+      <static>true</static>
+      <name>explore5</name>
+    </model>
+    <model name="explore6" type="waypoint">
+      <pose>8.0 -3.0 0 0 0 3.14</pose>
+      <static>true</static>
+      <name>explore6</name>
+    </model>
+    <model name="explore7" type="waypoint">
+      <pose>8.5 -4.0 0 0 0 -1.57</pose>
+      <static>true</static>
+      <name>explore7</name>
+    </model>
+    <model name="explore8" type="waypoint">
+      <pose>8.0 -7.0 0 0 0 0.0</pose>
+      <static>true</static>
+      <name>explore8</name>
+    </model>
+    <model name="explore9" type="waypoint">
+      <pose>8.0 -8.0 0 0 0 -1.57</pose>
+      <static>true</static>
+      <name>explore9</name>
+    </model>
+    <model name="explore10" type="waypoint">
+      <pose>3.0 -8.0 0 0 0 3.14</pose>
+      <static>true</static>
+      <name>explore10</name>
+    </model>
+    <model name="explore11" type="waypoint">
+      <pose>3.0 -8.0 0 0 0 1.57</pose>
+      <static>true</static>
+      <name>explore11</name>
+    </model>
+    <model name="kitchen" type="room">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>4.7 4.8 0</size>
+            </box>
+          </geometry>
+          <pose>0.0 0.0 0.0 0 0 0</pose>
+          <name>in</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>2.95 0 0 0 0 0</pose>
+      <static>true</static>
+      <name>kitchen</name>
+    </model>
+    <model name="livingroom" type="room">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>-6.2 -8.45 0</size>
+            </box>
+          </geometry>
+          <pose>0.0 0.0 0.0 0 0 0</pose>
+          <name>in</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>8.5 -1.825 0 0 0 0</pose>
+      <static>true</static>
+      <name>livingroom</name>
+    </model>
+    <model name="bedroom" type="room">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>6.2 3.45 0</size>
+            </box>
+          </geometry>
+          <pose>0.0 0.0 0.0 0 0 0</pose>
+          <name>in</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>8.5 -7.825 0 0 0 0</pose>
+      <static>true</static>
+      <name>bedroom</name>
+    </model>
+    <model name="hallway" type="room">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>4.75 7.55 0</size>
+            </box>
+          </geometry>
+          <pose>0.0 0.0 0.0 0 0 0</pose>
+          <name>in</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>2.975 -6.175 0 0 0 0</pose>
+      <static>true</static>
+      <name>hallway</name>
+    </model>
+    <include name="walls">
+      <pose>0 0 0 0 0 0</pose>
+      <name>walls</name>
+      <uri>model://rwc2015/walls</uri>
+    </include>
+    <include name="floor">
+      <pose>0 0 0 0 0 0</pose>
+      <name>floor</name>
+      <uri>model://floor</uri>
+    </include>
+    <physics type="ode">
+      <real_time_update_rate>400.0</real_time_update_rate>
+      <max_step_size>0.0025</max_step_size>
+      <ode>
+        <constraints>
+          <cfm>0.0001</cfm>
+        </constraints>
+        <solver type="quick">
+          <iters>100</iters>
+        </solver>
+      </ode>
+    </physics>
+    <name>rwc2015_empty</name>
+  </world>
+</sdf>

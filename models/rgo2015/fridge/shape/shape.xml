@@ -1,9 +1,0 @@
-<model>
-    
-    <!-- Block -->
-    <box>
-        <xyz>0 0 0.51</xyz>
-        <size>0.69 0.6 1.02</size>
-    </box> 
-    
-</model>

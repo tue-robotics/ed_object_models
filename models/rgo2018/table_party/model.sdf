@@ -1,0 +1,115 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rgo2018/table_party">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <cylinder>
+            <length>0.03</length>
+            <radius>0.4</radius>
+          </cylinder>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <cylinder>
+            <length>0.03</length>
+            <radius>0.4</radius>
+          </cylinder>
+        </geometry>
+        <name>1</name>
+      </visual>
+      <pose>0 0 1.085 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <link name="2">
+      <collision name="2">
+        <geometry>
+          <cylinder>
+            <length>1.08</length>
+            <radius>0.0725</radius>
+          </cylinder>
+        </geometry>
+        <name>2</name>
+      </collision>
+      <visual name="2">
+        <geometry>
+          <cylinder>
+            <length>1.08</length>
+            <radius>0.0725</radius>
+          </cylinder>
+        </geometry>
+        <name>2</name>
+      </visual>
+      <pose>0 0 0.54 0 0 0</pose>
+      <name>2</name>
+    </link>
+    <link name="3">
+      <collision name="3">
+        <geometry>
+          <box>
+            <size>0.775 0.035 0.045</size>
+          </box>
+        </geometry>
+        <name>3</name>
+      </collision>
+      <visual name="3">
+        <geometry>
+          <box>
+            <size>0.775 0.035 0.045</size>
+          </box>
+        </geometry>
+        <name>3</name>
+      </visual>
+      <pose>0 0 0.0225 0 0 0</pose>
+      <name>3</name>
+    </link>
+    <link name="4">
+      <collision name="4">
+        <geometry>
+          <box>
+            <size>0.035 0.775 0.045</size>
+          </box>
+        </geometry>
+        <name>4</name>
+      </collision>
+      <visual name="4">
+        <geometry>
+          <box>
+            <size>0.035 0.775 0.045</size>
+          </box>
+        </geometry>
+        <name>4</name>
+      </visual>
+      <pose>0 0 0.0225 0 0 0</pose>
+      <name>4</name>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of">
+        <geometry>
+          <box>
+            <size>0.25 0.6 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.775 0.0 0.005 0 0 0</pose>
+        <name>in_front_of</name>
+      </virtual_volume>
+      <name>in_front_of</name>
+    </link>
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of">
+        <geometry>
+          <box>
+            <size>0.52 0.52 0.15</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.0 1.195 0 0 0</pose>
+        <name>on_top_of</name>
+      </virtual_volume>
+      <name>on_top_of</name>
+    </link>
+    <static>true</static>
+    <name>rgo2018/table_party</name>
+  </model>
+</sdf>

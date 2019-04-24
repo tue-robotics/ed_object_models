@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rein_experiment/walls">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <mesh>
+            <uri>model://rein_experiment/walls/shape/heightmap.stl</uri>
+          </mesh>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <mesh>
+            <uri>model://rein_experiment/walls/shape/heightmap.stl</uri>
+          </mesh>
+        </geometry>
+        <name>1</name>
+      </visual>
+      <pose>0 0 0 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <static>true</static>
+    <name>rein_experiment/walls</name>
+  </model>
+</sdf>

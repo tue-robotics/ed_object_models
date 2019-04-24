@@ -1,7 +1,0 @@
-type: walls
-shape:
-    heightmap:
-        image: $(file heightmap_arenaa.pgm)
-        height: 2.48
-        resolution: 0.025
-        pose: { x: -17.0, y: -14.2, z: 0 }

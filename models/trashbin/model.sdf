@@ -23,6 +23,18 @@
       <pose>0 0 0.15 0 0 0</pose>
       <name>1</name>
     </link>
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of">
+        <geometry>
+          <box>
+            <size>0.1 0.1 0.1</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.0 0.35 0 0 0</pose>
+        <name>on_top_of</name>
+      </virtual_volume>
+      <name>on_top_of</name>
+    </link>
     <static>true</static>
     <name>trashbin</name>
   </model>

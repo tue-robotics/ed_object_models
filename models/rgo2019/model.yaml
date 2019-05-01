@@ -5,3 +5,31 @@ composition:
   - id: walls
     pose: {x: 0, y: 0, z: 0}
     type: rgo2019/walls
+
+
+
+  # Waypoints
+  - id: initial_pose
+    pose: {x: -0.4, y: 0.0, z: 0, Z: 0}
+    type: waypoint
+
+  - id: registration_table1
+    pose: {x: 6.5, y: -1.0, z: 0, Z: -0.8}
+    type: waypoint
+  - id: registration_table2
+    pose: {x: 6.0, y: -0.5, z: 0, Z: -0.4}
+    type: waypoint
+  - id: registration_table3
+    pose: {x: 5.0, y: 0.5, z: 0, Z: 0}
+    type: waypoint
+
+
+  - id: exit_1_rips
+    pose: {x: 6.95, y: -6.45, z: 0, Z: -1.571}
+    type: waypoint
+  - id: exit_2_rips
+    pose: {x: 6.95, y: -5.95, z: 0, Z: -1.571}
+    type: waypoint
+  - id: exit_3_rips
+    pose: {x: 6.95, y: -5.45, z: 0, Z: -1.571}
+    type: waypoint

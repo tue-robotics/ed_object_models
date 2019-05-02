@@ -35,6 +35,12 @@ composition:
   - id: kitchen_table
     pose: {x: 7.92, y: 2.45, z: 0, Z: 3.141592}
     type: rgo2019/kitchentable
+  - id: trashbin_small
+    pose: {x: 9.6, y: 0.95, z: 0}
+    type: rgo2019/trashbin_small
+  - id: trashbin_large
+    pose: {x: 9.65, y: 4.25, z: 0}
+    type: rgo2019/trashbin_large
 
 
 

@@ -190,6 +190,16 @@
       <name>kitchen_table</name>
       <uri>model://rgo2019/kitchentable</uri>
     </include>
+    <include name="trashbin_small">
+      <pose>9.6 0.95 0 0 0 0</pose>
+      <name>trashbin_small</name>
+      <uri>model://rgo2019/trashbin_small</uri>
+    </include>
+    <include name="trashbin_large">
+      <pose>9.65 4.25 0 0 0 0</pose>
+      <name>trashbin_large</name>
+      <uri>model://rgo2019/trashbin_large</uri>
+    </include>
     <physics type="ode">
       <real_time_update_rate>400.0</real_time_update_rate>
       <max_step_size>0.0025</max_step_size>

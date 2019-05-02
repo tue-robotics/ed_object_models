@@ -8,13 +8,23 @@ composition:
   - id: bed
     pose: {x: 1.10, y: 3.07, z: 0, Z: -1.571}
     type: rgo2019/bed_frame
+  - id: side_table
+    pose: {x: 0.315, y: 2.285, z: 0}
+    type: rgo2019/sidetable
   - id: desk
     pose: {x: 3.26, y: 4.15, z: 0, Z: -3.141592}
     type: rgo2019/desk
 
+  - id: couch
+    pose: {x: 8.9, y: -4.2, z: 0, Z: 2.4}
+    type: rgo2019/couch
+  - id: right_armchair
+    pose: {x: 8.73, y: -2.78, z: 0, Z: 0.75}
+    type: rgo2019/armchair
 
 
-  # Waypoints
+
+# Waypoints
   - id: initial_pose
     pose: {x: -0.4, y: 0.0, z: 0, Z: 0}
     type: waypoint
@@ -39,3 +49,53 @@ composition:
   - id: exit_3_rips
     pose: {x: 6.95, y: -5.45, z: 0, Z: -1.571}
     type: waypoint
+
+
+# Rooms
+
+  - type: "room"
+    id: "hallway"
+    pose: { x: 2.05, y: -0.50, z: 0 }
+    areas:
+    - name: in
+      shape:
+      - box:
+          min: { x: -2.01, y: -0.95, z: 0 }
+          max: { x: 2.01, y: 1.00, z: 2.0 }
+  - type: "room"
+    id: "bedroom"
+    pose: { x: 2.60, y: 2.50, z: 0 }
+    areas:
+    - name: in
+      shape:
+      - box:
+          min: { x: -2.56, y: -1.90, z: 0 }
+          max: { x: 2.36, y: 2.05, z: 2.0 }
+  - type: "room"
+    id: "living_room"
+    pose: { x: 7.00, y: -3.00, z: 0 }
+    areas:
+    - name: in
+      shape:
+      - box:
+          min: { x: -2.94, y: -2.45, z: 0 }
+          max: { x: 2.96, y: 3.50, z: 2.0 }
+  - type: "room"
+    id: "kitchen"
+    pose: { x: 7.55, y: 2.50, z: 0 }
+    areas:
+    - name: in
+      shape:
+      - box:
+          min: { x: -2.54, y: -1.90, z: 0 }
+          max: { x: 2.41, y: 2.05, z: 2.0 }
+  - type: "room"
+    id: "bar"
+    pose: { x: 2.00, y: -3.50, z: 0 }
+    areas:
+    - name: in
+      shape:
+      - box:
+          min: { x: -1.96, y: -1.95, z: 0 }
+          max: { x: 2.01, y: 2.00, z: 2.0 }
+

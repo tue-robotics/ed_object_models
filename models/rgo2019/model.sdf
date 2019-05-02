@@ -50,6 +50,91 @@
       <static>true</static>
       <name>exit_3_rips</name>
     </model>
+    <model name="hallway" type="room">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>4.02 1.95 2.0</size>
+            </box>
+          </geometry>
+          <pose>0.0 0.025 1.0 0 0 0</pose>
+          <name>in</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>2.05 -0.5 0 0 0 0</pose>
+      <static>true</static>
+      <name>hallway</name>
+    </model>
+    <model name="bedroom" type="room">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>4.92 3.95 2.0</size>
+            </box>
+          </geometry>
+          <pose>-0.1 0.075 1.0 0 0 0</pose>
+          <name>in</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>2.6 2.5 0 0 0 0</pose>
+      <static>true</static>
+      <name>bedroom</name>
+    </model>
+    <model name="living_room" type="room">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>5.9 5.95 2.0</size>
+            </box>
+          </geometry>
+          <pose>0.01 0.525 1.0 0 0 0</pose>
+          <name>in</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>7.0 -3.0 0 0 0 0</pose>
+      <static>true</static>
+      <name>living_room</name>
+    </model>
+    <model name="kitchen" type="room">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>4.95 3.95 2.0</size>
+            </box>
+          </geometry>
+          <pose>-0.065 0.075 1.0 0 0 0</pose>
+          <name>in</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>7.55 2.5 0 0 0 0</pose>
+      <static>true</static>
+      <name>kitchen</name>
+    </model>
+    <model name="bar" type="room">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>3.97 3.95 2.0</size>
+            </box>
+          </geometry>
+          <pose>0.025 0.025 1.0 0 0 0</pose>
+          <name>in</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>2.0 -3.5 0 0 0 0</pose>
+      <static>true</static>
+      <name>bar</name>
+    </model>
     <include name="floor">
       <pose>0 0 0 0 0 0</pose>
       <name>floor</name>
@@ -65,10 +150,25 @@
       <name>bed</name>
       <uri>model://rgo2019/bed_frame</uri>
     </include>
+    <include name="side_table">
+      <pose>0.315 2.285 0 0 0 0</pose>
+      <name>side_table</name>
+      <uri>model://rgo2019/sidetable</uri>
+    </include>
     <include name="desk">
       <pose>3.26 4.15 0 0 0 -3.141592</pose>
       <name>desk</name>
       <uri>model://rgo2019/desk</uri>
+    </include>
+    <include name="couch">
+      <pose>8.9 -4.2 0 0 0 2.4</pose>
+      <name>couch</name>
+      <uri>model://rgo2019/couch</uri>
+    </include>
+    <include name="right_armchair">
+      <pose>8.73 -2.78 0 0 0 0.75</pose>
+      <name>right_armchair</name>
+      <uri>model://rgo2019/armchair</uri>
     </include>
     <physics type="ode">
       <real_time_update_rate>400.0</real_time_update_rate>

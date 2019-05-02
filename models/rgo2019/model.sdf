@@ -185,6 +185,11 @@
       <name>side_table</name>
       <uri>model://rgo2019/sidetable</uri>
     </include>
+    <include name="bookcase">
+      <pose>4.54 0.39 0 0 0 -1.571</pose>
+      <name>bookcase</name>
+      <uri>model://rgo2018/bookcase</uri>
+    </include>
     <include name="kitchen_table">
       <pose>7.92 2.45 0 0 0 3.141592</pose>
       <name>kitchen_table</name>
@@ -204,6 +209,16 @@
       <pose>9.65 4.25 0 0 0 0</pose>
       <name>trashbin_large</name>
       <uri>model://rgo2019/trashbin_large</uri>
+    </include>
+    <include name="cupboard">
+      <pose>0.18 -2.05 0 0 0 0</pose>
+      <name>cupboard</name>
+      <uri>model://rgo2018/bookcase</uri>
+    </include>
+    <include name="sofa">
+      <pose>0.74 -3.5 0 0 0 3.141592</pose>
+      <name>sofa</name>
+      <uri>model://rgo2019/armchair</uri>
     </include>
     <physics type="ode">
       <real_time_update_rate>400.0</real_time_update_rate>

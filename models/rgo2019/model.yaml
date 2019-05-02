@@ -30,6 +30,9 @@ composition:
   - id: side_table
     pose: {x: 0.315, y: 2.285, z: 0}
     type: rgo2019/sidetable
+  - id: bookcase
+    pose: {x: 4.54, y: 0.39, z: 0, Z: -1.571}
+    type: rgo2018/bookcase
 
 # kitchen furniture
   - id: kitchen_table
@@ -45,7 +48,13 @@ composition:
     pose: {x: 9.65, y: 4.25, z: 0}
     type: rgo2019/trashbin_large
 
-
+# bar furniture
+  - id: cupboard
+    pose: {x: 0.18, y: -2.05, z: 0}
+    type: rgo2018/bookcase
+  - id: sofa
+    pose: {x: 0.74, y: -3.5, z: 0, Z: 3.141592}
+    type: rgo2019/armchair
 
 # Waypoints
   - id: initial_pose

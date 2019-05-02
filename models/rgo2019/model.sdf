@@ -60,6 +60,16 @@
       <name>walls</name>
       <uri>model://rgo2019/walls</uri>
     </include>
+    <include name="bed">
+      <pose>1.1 3.07 0 0 0 -1.571</pose>
+      <name>bed</name>
+      <uri>model://rgo2019/bed_frame</uri>
+    </include>
+    <include name="desk">
+      <pose>3.26 4.15 0 0 0 -3.141592</pose>
+      <name>desk</name>
+      <uri>model://rgo2019/desk</uri>
+    </include>
     <physics type="ode">
       <real_time_update_rate>400.0</real_time_update_rate>
       <max_step_size>0.0025</max_step_size>

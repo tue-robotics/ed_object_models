@@ -21,7 +21,7 @@
       <uri>model://floor</uri>
     </include>
     <include name="hero_case">
-      <pose>0 -1 0 0 0 0</pose>
+      <pose>0 -1 0 0 0 1.57</pose>
       <name>hero_case</name>
       <uri>model://hero_case</uri>
     </include>

@@ -156,7 +156,7 @@
       <uri>model://rgo2019/sidetable</uri>
     </include>
     <include name="desk">
-      <pose>3.26 4.15 0 0 0 -3.141592</pose>
+      <pose>3.26 4.15 0 0 0 3.141592</pose>
       <name>desk</name>
       <uri>model://rgo2019/desk</uri>
     </include>
@@ -169,6 +169,21 @@
       <pose>8.73 -2.78 0 0 0 0.75</pose>
       <name>right_armchair</name>
       <uri>model://rgo2019/armchair</uri>
+    </include>
+    <include name="right_armchair">
+      <pose>8.73 -2.78 0 0 0 0.75</pose>
+      <name>right_armchair</name>
+      <uri>model://rgo2019/armchair</uri>
+    </include>
+    <include name="side_table">
+      <pose>0.315 2.285 0 0 0 0</pose>
+      <name>side_table</name>
+      <uri>model://rgo2019/sidetable</uri>
+    </include>
+    <include name="kitchen_table">
+      <pose>7.92 2.45 0 0 0 3.141592</pose>
+      <name>kitchen_table</name>
+      <uri>model://rgo2019/kitchentable</uri>
     </include>
     <physics type="ode">
       <real_time_update_rate>400.0</real_time_update_rate>

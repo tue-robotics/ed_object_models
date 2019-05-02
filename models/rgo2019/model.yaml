@@ -5,6 +5,8 @@ composition:
   - id: walls
     pose: {x: 0, y: 0, z: 0}
     type: rgo2019/walls
+
+# bedroom furniture
   - id: bed
     pose: {x: 1.10, y: 3.07, z: 0, Z: -1.571}
     type: rgo2019/bed_frame
@@ -12,15 +14,27 @@ composition:
     pose: {x: 0.315, y: 2.285, z: 0}
     type: rgo2019/sidetable
   - id: desk
-    pose: {x: 3.26, y: 4.15, z: 0, Z: -3.141592}
+    pose: {x: 3.26, y: 4.15, z: 0, Z: 3.141592}
     type: rgo2019/desk
 
+# living_room furniture
   - id: couch
     pose: {x: 8.9, y: -4.2, z: 0, Z: 2.4}
     type: rgo2019/couch
   - id: right_armchair
     pose: {x: 8.73, y: -2.78, z: 0, Z: 0.75}
     type: rgo2019/armchair
+  - id: right_armchair
+    pose: {x: 8.73, y: -2.78, z: 0, Z: 0.75}
+    type: rgo2019/armchair
+  - id: side_table
+    pose: {x: 0.315, y: 2.285, z: 0}
+    type: rgo2019/sidetable
+
+# kitchen furniture
+  - id: kitchen_table
+    pose: {x: 7.92, y: 2.45, z: 0, Z: 3.141592}
+    type: rgo2019/kitchentable
 
 
 
@@ -39,7 +53,6 @@ composition:
     pose: {x: 5.0, y: -0.5, z: 0, Z: 0}
     type: waypoint
 
-
   - id: exit_1_rips
     pose: {x: 6.95, y: -6.45, z: 0, Z: -1.571}
     type: waypoint
@@ -52,7 +65,6 @@ composition:
 
 
 # Rooms
-
   - type: "room"
     id: "hallway"
     pose: { x: 2.05, y: -0.50, z: 0 }

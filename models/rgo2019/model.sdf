@@ -190,6 +190,11 @@
       <name>kitchen_table</name>
       <uri>model://rgo2019/kitchentable</uri>
     </include>
+    <include name="kitchen_cabinet">
+      <pose>5.63 4.21 0 0 0 -1.571</pose>
+      <name>kitchen_cabinet</name>
+      <uri>model://rgo2019/kitchen_counter</uri>
+    </include>
     <include name="trashbin_small">
       <pose>9.6 0.95 0 0 0 0</pose>
       <name>trashbin_small</name>

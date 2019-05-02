@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
-  <model name="rgo2018/kitchen_counter">
+  <model name="rgo2019/kitchen_counter">
     <link name="1">
       <collision name="1">
         <geometry>
@@ -348,6 +348,6 @@
       <name>on_top_of</name>
     </link>
     <static>true</static>
-    <name>rgo2018/kitchen_counter</name>
+    <name>rgo2019/kitchen_counter</name>
   </model>
 </sdf>

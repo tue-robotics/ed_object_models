@@ -270,6 +270,11 @@
       <name>bar_table</name>
       <uri>model://rgo2017/table_party</uri>
     </include>
+    <include name="drop_area">
+      <pose>0.5 -1.0 0 0 0 0</pose>
+      <name>drop_area</name>
+      <uri>model://rgo2019/drop_area</uri>
+    </include>
     <physics type="ode">
       <real_time_update_rate>400.0</real_time_update_rate>
       <max_step_size>0.0025</max_step_size>

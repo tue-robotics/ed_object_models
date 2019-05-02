@@ -83,6 +83,11 @@ composition:
     pose: {x: 2.54, y: -4.0, z: 0, Z: -1.571}
     type: rgo2017/table_party
 
+# Hallway drop zone
+  - id: drop_area
+    pose: {x: 0.5, y: -1.0, z: 0}
+    type: rgo2019/drop_area
+
 # Waypoints
   - id: initial_pose
     pose: {x: -0.4, y: 0.0, z: 0, Z: 0}

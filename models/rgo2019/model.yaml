@@ -63,6 +63,10 @@ composition:
     pose: {x: 6.95, y: -5.65, z: 0, Z: -1.571}
     type: waypoint
 
+  - id: find_my_mates_1
+    pose: {x: 7.0, y: 0.4, z: 0, Z: -1.571}
+    type: waypoint
+
 
 # Rooms
   - type: "room"

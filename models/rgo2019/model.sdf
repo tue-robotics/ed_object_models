@@ -50,6 +50,11 @@
       <static>true</static>
       <name>exit_3_rips</name>
     </model>
+    <model name="find_my_mates_1" type="waypoint">
+      <pose>7.0 0.4 0 0 0 -1.571</pose>
+      <static>true</static>
+      <name>find_my_mates_1</name>
+    </model>
     <model name="hallway" type="room">
       <link name="in">
         <virtual_volume name="in">

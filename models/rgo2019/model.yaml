@@ -54,13 +54,13 @@ composition:
     type: waypoint
 
   - id: exit_1_rips
-    pose: {x: 6.95, y: -6.45, z: 0, Z: -1.571}
+    pose: {x: 6.95, y: -6.75, z: 0, Z: -1.571}
     type: waypoint
   - id: exit_2_rips
-    pose: {x: 6.95, y: -5.95, z: 0, Z: -1.571}
+    pose: {x: 6.95, y: -6.15, z: 0, Z: -1.571}
     type: waypoint
   - id: exit_3_rips
-    pose: {x: 6.95, y: -5.45, z: 0, Z: -1.571}
+    pose: {x: 6.95, y: -5.65, z: 0, Z: -1.571}
     type: waypoint
 
 

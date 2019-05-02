@@ -36,17 +36,17 @@
       <name>registration_table3</name>
     </model>
     <model name="exit_1_rips" type="waypoint">
-      <pose>6.95 -6.45 0 0 0 -1.571</pose>
+      <pose>6.95 -6.75 0 0 0 -1.571</pose>
       <static>true</static>
       <name>exit_1_rips</name>
     </model>
     <model name="exit_2_rips" type="waypoint">
-      <pose>6.95 -5.95 0 0 0 -1.571</pose>
+      <pose>6.95 -6.15 0 0 0 -1.571</pose>
       <static>true</static>
       <name>exit_2_rips</name>
     </model>
     <model name="exit_3_rips" type="waypoint">
-      <pose>6.95 -5.45 0 0 0 -1.571</pose>
+      <pose>6.95 -5.65 0 0 0 -1.571</pose>
       <static>true</static>
       <name>exit_3_rips</name>
     </model>

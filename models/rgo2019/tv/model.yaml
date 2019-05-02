@@ -8,12 +8,12 @@ composition:
   - id: left_pole
     shape:
       box:
-        pose: {x: -0.09, y: -0.085, z: 0.9}
+        pose: {x: -0.11, y: -0.085, z: 0.9}
         size: {x: 0.1, y: 0.06, z: 1.8}
   - id: right_pole
     shape:
       box:
-        pose: {x: -0.09, y: 0.085, z: 0.9}
+        pose: {x: -0.11, y: 0.085, z: 0.9}
         size: {x: 0.1, y: 0.06, z: 1.8}
 
   - id: tv

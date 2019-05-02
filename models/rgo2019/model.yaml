@@ -25,7 +25,7 @@ composition:
     pose: {x: 8.73, y: -2.78, z: 0, Z: 0.75}
     type: rgo2019/armchair
   - id: right_armchair
-    pose: {x: 8.73, y: -2.78, z: 0, Z: 0.75}
+    pose: {x: 8.78, y: -2.73, z: 0, Z: 0.75}
     type: rgo2019/armchair
   - id: side_table
     pose: {x: 0.315, y: 2.285, z: 0}
@@ -36,6 +36,9 @@ composition:
   - id: tv
     pose: {x: 4.40, y: -3.45, z: 0}
     type: rgo2019/tv
+  - id: trash_bin
+    pose: {x: 4.45, y: -5.1, z: 0}
+    type: rgo2019/trashbin_small
 
 # kitchen furniture
   - id: kitchen_table
@@ -44,11 +47,8 @@ composition:
   - id: kitchen_cabinet
     pose: {x: 5.63, y: 4.21, z: 0, Z: -1.571}
     type: rgo2019/kitchen_counter
-  - id: trash_bin
-    pose: {x: 9.6, y: 0.95, z: 0}
-    type: rgo2019/trashbin_small
   - id: trash_can
-    pose: {x: 9.65, y: 4.25, z: 0}
+    pose: {x: 5.41, y: 1.0, z: 0}
     type: rgo2019/trashbin_large
 
 # bar furniture

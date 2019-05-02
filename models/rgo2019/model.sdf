@@ -176,7 +176,7 @@
       <uri>model://rgo2019/armchair</uri>
     </include>
     <include name="right_armchair">
-      <pose>8.73 -2.78 0 0 0 0.75</pose>
+      <pose>8.78 -2.73 0 0 0 0.75</pose>
       <name>right_armchair</name>
       <uri>model://rgo2019/armchair</uri>
     </include>
@@ -195,6 +195,11 @@
       <name>tv</name>
       <uri>model://rgo2019/tv</uri>
     </include>
+    <include name="trash_bin">
+      <pose>4.45 -5.1 0 0 0 0</pose>
+      <name>trash_bin</name>
+      <uri>model://rgo2019/trashbin_small</uri>
+    </include>
     <include name="kitchen_table">
       <pose>7.92 2.45 0 0 0 3.141592</pose>
       <name>kitchen_table</name>
@@ -205,13 +210,8 @@
       <name>kitchen_cabinet</name>
       <uri>model://rgo2019/kitchen_counter</uri>
     </include>
-    <include name="trash_bin">
-      <pose>9.6 0.95 0 0 0 0</pose>
-      <name>trash_bin</name>
-      <uri>model://rgo2019/trashbin_small</uri>
-    </include>
     <include name="trash_can">
-      <pose>9.65 4.25 0 0 0 0</pose>
+      <pose>5.41 1.0 0 0 0 0</pose>
       <name>trash_can</name>
       <uri>model://rgo2019/trashbin_large</uri>
     </include>

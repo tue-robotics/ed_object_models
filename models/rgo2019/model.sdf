@@ -176,11 +176,6 @@
       <uri>model://rgo2019/couch</uri>
     </include>
     <include name="right_armchair">
-      <pose>8.73 -2.78 0 0 0 0.75</pose>
-      <name>right_armchair</name>
-      <uri>model://rgo2019/armchair</uri>
-    </include>
-    <include name="right_armchair">
       <pose>8.78 -2.73 0 0 0 0.75</pose>
       <name>right_armchair</name>
       <uri>model://rgo2019/armchair</uri>
@@ -205,6 +200,31 @@
       <name>trash_bin</name>
       <uri>model://rgo2019/trashbin_small</uri>
     </include>
+    <include name="coffee_table">
+      <pose>8.1 -3.5 0 0 0 -2.321</pose>
+      <name>coffee_table</name>
+      <uri>model://rgo2018/table_salon</uri>
+    </include>
+    <include name="tv_table">
+      <pose>4.35 -4.5 0 0 0 0.0</pose>
+      <name>tv_table</name>
+      <uri>model://rgo2018/table_salon</uri>
+    </include>
+    <include name="sideboard">
+      <pose>4.35 -2.0 0 0 0 0.0</pose>
+      <name>sideboard</name>
+      <uri>model://rgo2018/table_salon</uri>
+    </include>
+    <include name="left_armchair">
+      <pose>7.5 -4.2 0 0 0 -2.321</pose>
+      <name>left_armchair</name>
+      <uri>model://rgo2019/armchair</uri>
+    </include>
+    <include name="high_table">
+      <pose>9.0 -0.39 0 0 0 -1.571</pose>
+      <name>high_table</name>
+      <uri>model://rgo2017/table_party</uri>
+    </include>
     <include name="kitchen_table">
       <pose>7.92 2.45 0 0 0 3.141592</pose>
       <name>kitchen_table</name>
@@ -220,6 +240,21 @@
       <name>trash_can</name>
       <uri>model://rgo2019/trashbin_large</uri>
     </include>
+    <include name="dishwasher">
+      <pose>6.55 4.21 0 0 0 -1.571</pose>
+      <name>dishwasher</name>
+      <uri>model://rgo2019/dishwasher</uri>
+    </include>
+    <include name="white_drawer">
+      <pose>9.85 1.25 0 0 0 -3.1415</pose>
+      <name>white_drawer</name>
+      <uri>model://rgo2019/white_drawer</uri>
+    </include>
+    <include name="cabinet">
+      <pose>9.85 3.5 0 0 0 -1.571</pose>
+      <name>cabinet</name>
+      <uri>model://rgo2019/cabinet</uri>
+    </include>
     <include name="cupboard">
       <pose>0.18 -2.05 0 0 0 0</pose>
       <name>cupboard</name>
@@ -229,6 +264,11 @@
       <pose>0.74 -3.5 0 0 0 3.141592</pose>
       <name>sofa</name>
       <uri>model://rgo2019/armchair</uri>
+    </include>
+    <include name="bar_table">
+      <pose>2.54 -4.0 0 0 0 -1.571</pose>
+      <name>bar_table</name>
+      <uri>model://rgo2017/table_party</uri>
     </include>
     <physics type="ode">
       <real_time_update_rate>400.0</real_time_update_rate>

@@ -22,9 +22,6 @@ composition:
     pose: {x: 8.9, y: -4.2, z: 0, Z: 2.4}
     type: rgo2019/couch
   - id: right_armchair
-    pose: {x: 8.73, y: -2.78, z: 0, Z: 0.75}
-    type: rgo2019/armchair
-  - id: right_armchair
     pose: {x: 8.78, y: -2.73, z: 0, Z: 0.75}
     type: rgo2019/armchair
   - id: side_table
@@ -39,6 +36,21 @@ composition:
   - id: trash_bin
     pose: {x: 4.45, y: -5.1, z: 0}
     type: rgo2019/trashbin_small
+  - id: coffee_table
+    pose: {x: 8.1, y: -3.5, z: 0, Z: -2.321}
+    type: rgo2018/table_salon
+  - id: tv_table
+    pose: {x: 4.35, y: -4.5, z: 0, Z: 0.0}
+    type: rgo2018/table_salon
+  - id: sideboard
+    pose: {x: 4.35, y: -2.0, z: 0, Z: 0.0}
+    type: rgo2018/table_salon
+  - id: left_armchair
+    pose: {x: 7.5, y: -4.2, z: 0, Z: -2.321} 
+    type: rgo2019/armchair
+  - id: high_table
+    pose: {x: 9.0, y: -0.39, z: 0, Z: -1.571}
+    type: rgo2017/table_party
 
 # kitchen furniture
   - id: kitchen_table
@@ -50,6 +62,15 @@ composition:
   - id: trash_can
     pose: {x: 5.41, y: 1.0, z: 0}
     type: rgo2019/trashbin_large
+  - id: dishwasher
+    pose: {x: 6.55, y: 4.21, z: 0, Z: -1.571}
+    type: rgo2019/dishwasher
+  - id: white_drawer
+    pose: {x: 9.85, y: 1.25, z: 0, Z: -3.1415}
+    type: rgo2019/white_drawer
+  - id: cabinet
+    pose: {x: 9.85, y: 3.5, z: 0, Z: -1.571}
+    type: rgo2019/cabinet
 
 # bar furniture
   - id: cupboard
@@ -58,6 +79,9 @@ composition:
   - id: sofa
     pose: {x: 0.74, y: -3.5, z: 0, Z: 3.141592}
     type: rgo2019/armchair
+  - id: bar_table
+    pose: {x: 2.54, y: -4.0, z: 0, Z: -1.571}
+    type: rgo2017/table_party
 
 # Waypoints
   - id: initial_pose

@@ -114,7 +114,7 @@ composition:
     type: waypoint
 
   - id: find_my_mates_initial
-    pose: {x: 4.0, y: -0.5, z: 0, Z: -1.571}
+    pose: {x: 4.0, y: -0.5, z: 0, Z: 0.0}
     type: waypoint
   - id: find_my_mates_1
     pose: {x: 7.5, y: 0.4, z: 0, Z: -1.571}

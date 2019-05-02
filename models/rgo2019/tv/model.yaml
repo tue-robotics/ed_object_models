@@ -2,8 +2,8 @@ composition:
   - id: foot
     shape:
       box:
-        pose: {x: 0, y: 0, z: 0.005}
-        size: {x: 0.54, y: 0.9, z: 0.01}
+        pose: {x: 0, y: 0, z: 0.015}
+        size: {x: 0.54, y: 0.9, z: 0.03}
 
   - id: left_pole
     shape:

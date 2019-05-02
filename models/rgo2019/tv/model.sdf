@@ -20,7 +20,7 @@
         <collision name="1">
           <geometry>
             <box>
-              <size>0.54 0.9 0.01</size>
+              <size>0.54 0.9 0.03</size>
             </box>
           </geometry>
           <name>1</name>
@@ -28,12 +28,12 @@
         <visual name="1">
           <geometry>
             <box>
-              <size>0.54 0.9 0.01</size>
+              <size>0.54 0.9 0.03</size>
             </box>
           </geometry>
           <name>1</name>
         </visual>
-        <pose>0 0 0.005 0 0 0</pose>
+        <pose>0 0 0.015 0 0 0</pose>
         <name>1</name>
       </link>
       <pose>0 0 0 0 0 0</pose>

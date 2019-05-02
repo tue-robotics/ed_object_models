@@ -23,8 +23,8 @@
       <pose>0 0 0.1475 0 0 0</pose>
       <name>1</name>
     </link>
-    <link name="on_top_off">
-      <virtual_volume name="on_top_off">
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of">
         <geometry>
           <cylinder>
             <length>0.25</length>

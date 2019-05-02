@@ -124,6 +124,10 @@ composition:
     pose: {x: 2.5, y: -0.5, z: 0, Z: 0.0}
     type: waypoint
 
+  - id: cleanup_initial
+    pose: {x: 2.5, y: -0.5, z: 0, Z: 0.0}
+    type: waypoint
+
   - id: receptionist_initial
     pose: {x: 1.5, y: -0.5, z: 0, Z: -1.571}
     type: waypoint

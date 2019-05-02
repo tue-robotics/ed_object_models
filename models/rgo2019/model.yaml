@@ -41,10 +41,10 @@ composition:
   - id: kitchen_cabinet
     pose: {x: 5.63, y: 4.21, z: 0, Z: -1.571}
     type: rgo2019/kitchen_counter
-  - id: trashbin_small
+  - id: trash_bin
     pose: {x: 9.6, y: 0.95, z: 0}
     type: rgo2019/trashbin_small
-  - id: trashbin_large
+  - id: trash_can
     pose: {x: 9.65, y: 4.25, z: 0}
     type: rgo2019/trashbin_large
 

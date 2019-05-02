@@ -200,14 +200,14 @@
       <name>kitchen_cabinet</name>
       <uri>model://rgo2019/kitchen_counter</uri>
     </include>
-    <include name="trashbin_small">
+    <include name="trash_bin">
       <pose>9.6 0.95 0 0 0 0</pose>
-      <name>trashbin_small</name>
+      <name>trash_bin</name>
       <uri>model://rgo2019/trashbin_small</uri>
     </include>
-    <include name="trashbin_large">
+    <include name="trash_can">
       <pose>9.65 4.25 0 0 0 0</pose>
-      <name>trashbin_large</name>
+      <name>trash_can</name>
       <uri>model://rgo2019/trashbin_large</uri>
     </include>
     <include name="cupboard">

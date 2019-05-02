@@ -33,6 +33,9 @@ composition:
   - id: bookcase
     pose: {x: 4.54, y: 0.39, z: 0, Z: -1.571}
     type: rgo2018/bookcase
+  - id: tv
+    pose: {x: 4.40, y: -3.45, z: 0}
+    type: rgo2019/tv
 
 # kitchen furniture
   - id: kitchen_table

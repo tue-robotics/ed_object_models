@@ -190,6 +190,11 @@
       <name>bookcase</name>
       <uri>model://rgo2018/bookcase</uri>
     </include>
+    <include name="tv">
+      <pose>4.4 -3.45 0 0 0 0</pose>
+      <name>tv</name>
+      <uri>model://rgo2019/tv</uri>
+    </include>
     <include name="kitchen_table">
       <pose>7.92 2.45 0 0 0 3.141592</pose>
       <name>kitchen_table</name>

@@ -88,6 +88,9 @@ composition:
     pose: {x: 7.0, y: 0.4, z: 0, Z: -1.571}
     type: waypoint
 
+  - id: gpsr_meeting_point
+    pose: {x: 7.5, y: -2.5, z: 0, Z: 0}
+    type: waypoint
 
 # Rooms
   - type: "room"

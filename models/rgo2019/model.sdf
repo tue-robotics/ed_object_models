@@ -55,6 +55,11 @@
       <static>true</static>
       <name>find_my_mates_1</name>
     </model>
+    <model name="gpsr_meeting_point" type="waypoint">
+      <pose>7.5 -2.5 0 0 0 0</pose>
+      <static>true</static>
+      <name>gpsr_meeting_point</name>
+    </model>
     <model name="hallway" type="room">
       <link name="in">
         <virtual_volume name="in">

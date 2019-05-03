@@ -93,7 +93,7 @@
       <pose>0.0 0.812 0.5325 0 0 0</pose>
       <name>4</name>
     </link>
-    <link name="on_top_of">
+     <link name="on_top_of">
       <virtual_volume name="on_top_of">
         <geometry>
           <box>
@@ -116,7 +116,7 @@
         <name>in_front_of</name>
       </virtual_volume>
       <name>in_front_of</name>
-    </link>
+   </link>
     <static>true</static>
     <name>rgo2019/couch</name>
   </model>

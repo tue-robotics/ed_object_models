@@ -46,7 +46,7 @@ composition:
     pose: {x: 4.35, y: -2.0, z: 0, Z: 0.0}
     type: rgo2018/table_salon
   - id: left_armchair
-    pose: {x: 7.5, y: -4.2, z: 0, Z: -2.321} 
+    pose: {x: 7.5, y: -4.2, z: 0, Z: -2.321}
     type: rgo2019/armchair
   - id: high_table
     pose: {x: 9.0, y: -0.39, z: 0, Z: -1.571}
@@ -66,10 +66,10 @@ composition:
     pose: {x: 6.55, y: 4.21, z: 0, Z: -1.571}
     type: rgo2019/dishwasher
   - id: white_drawer
-    pose: {x: 9.85, y: 1.25, z: 0, Z: -3.1415}
+    pose: {x: 9.79, y: 1.25, z: 0, Z: -3.1415}
     type: rgo2019/white_drawer
   - id: cabinet
-    pose: {x: 9.85, y: 3.5, z: 0, Z: -1.571}
+    pose: {x: 9.79, y: 3.5, z: 0, Z: -1.571}
     type: rgo2019/cabinet
 
 # bar furniture

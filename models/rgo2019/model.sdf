@@ -266,12 +266,12 @@
       <uri>model://rgo2019/dishwasher</uri>
     </include>
     <include name="white_drawer">
-      <pose>9.85 1.25 0 0 0 -3.1415</pose>
+      <pose>9.79 1.25 0 0 0 -3.1415</pose>
       <name>white_drawer</name>
       <uri>model://rgo2019/white_drawer</uri>
     </include>
     <include name="cabinet">
-      <pose>9.85 3.5 0 0 0 -1.571</pose>
+      <pose>9.79 3.5 0 0 0 -1.571</pose>
       <name>cabinet</name>
       <uri>model://rgo2019/cabinet</uri>
     </include>

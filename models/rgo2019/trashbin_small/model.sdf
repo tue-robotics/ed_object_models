@@ -31,10 +31,10 @@
             <radius>0.15</radius>
           </cylinder>
         </geometry>
-        <name>on_top_off</name>
+        <name>on_top_of</name>
       </virtual_volume>
       <pose>0 0 0.435 0 0 0</pose>
-      <name>on_top_off</name>
+      <name>on_top_of</name>
     </link>
     <link name="in_front_of">
       <virtual_volume name="in_front_of">

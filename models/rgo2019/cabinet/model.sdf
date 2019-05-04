@@ -5,7 +5,7 @@
       <collision name="1">
         <geometry>
           <box>
-            <size>0.62 0.3 0.65</size>
+            <size></size>
           </box>
         </geometry>
         <name>1</name>
@@ -13,7 +13,7 @@
       <visual name="1">
         <geometry>
           <box>
-            <size>0.62 0.3 0.65</size>
+            <size>0.3 0.62 0.65</size>
           </box>
         </geometry>
         <name>1</name>
@@ -38,7 +38,7 @@
         </geometry>
         <name>2</name>
       </visual>
-      <pose>-0.3 -0.14 0.025 0 0 0</pose>
+      <pose>-0.14 -0.3 0.025 0 0 0</pose>
       <name>2</name>
     </link>
     <link name="3">
@@ -58,7 +58,7 @@
         </geometry>
         <name>3</name>
       </visual>
-      <pose>0.3 -0.14 0.025 0 0 0</pose>
+      <pose>-0.14 0.3 0.025 0 0 0</pose>
       <name>3</name>
     </link>
     <link name="4">
@@ -78,7 +78,7 @@
         </geometry>
         <name>4</name>
       </visual>
-      <pose>-0.3 0.14 0.025 0 0 0</pose>
+      <pose>0.14 -0.3 0.025 0 0 0</pose>
       <name>4</name>
     </link>
     <link name="5">
@@ -98,14 +98,14 @@
         </geometry>
         <name>5</name>
       </visual>
-      <pose>0.3 0.14 0.025 0 0 0</pose>
+      <pose>0.14 0.3 0.025 0 0 0</pose>
       <name>5</name>
     </link>
     <link name="on_top_of">
       <virtual_volume name="on_top_of">
         <geometry>
           <box>
-            <size>0.6 0.24 0.25</size>
+            <size>0.24 0.6 0.25</size>
           </box>
         </geometry>
         <pose>0.0 0.0 0.845 0 0 0</pose>
@@ -117,10 +117,10 @@
       <virtual_volume name="in_front_of">
         <geometry>
           <box>
-            <size>0.2 0.1 0.01</size>
+            <size>0.2 0.2 0.01</size>
           </box>
         </geometry>
-        <pose>0.81 0.0 0.005 0 0 0</pose>
+        <pose>0.4 0.0 0.005 0 0 0</pose>
         <name>in_front_of</name>
       </virtual_volume>
       <name>in_front_of</name>

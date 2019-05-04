@@ -37,7 +37,7 @@ composition:
     pose: {x: 4.45, y: -5.1, z: 0}
     type: rgo2019/trashbin_small
   - id: coffee_table
-    pose: {x: 8.1, y: -3.5, z: 0, Z: -2.321}
+    pose: {x: 8.1, y: -3.5, z: 0, Z: 2.321}
     type: rgo2018/table_salon
   - id: tv_table
     pose: {x: 4.35, y: -4.5, z: 0, Z: 0.0}
@@ -66,10 +66,10 @@ composition:
     pose: {x: 6.55, y: 4.21, z: 0, Z: -1.571}
     type: rgo2019/dishwasher
   - id: white_drawer
-    pose: {x: 9.79, y: 1.25, z: 0, Z: -3.1415}
+    pose: {x: 9.79, y: 1.25, z: 0, Z: -3.141592}
     type: rgo2019/white_drawer
   - id: cabinet
-    pose: {x: 9.79, y: 3.5, z: 0, Z: -1.571}
+    pose: {x: 9.79, y: 3.5, z: 0, Z: 3.141592}
     type: rgo2019/cabinet
 
 # bar furniture
@@ -80,7 +80,7 @@ composition:
     pose: {x: 0.74, y: -3.5, z: 0, Z: 3.141592}
     type: rgo2019/armchair
   - id: bar_table
-    pose: {x: 2.54, y: -4.0, z: 0, Z: -1.571}
+    pose: {x: 2.54, y: -4.0, z: 0, Z: 1.571}
     type: rgo2017/table_party
 
 # Hallway drop zone

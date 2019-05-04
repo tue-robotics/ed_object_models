@@ -1,27 +1,24 @@
-composition:
-  - id: foot
-    shape:
-      box:
+shape:
+  compound:
+    - box:
         pose: {x: 0, y: 0, z: 0.015}
         size: {x: 0.54, y: 0.9, z: 0.03}
-
-  - id: left_pole
-    shape:
-      box:
+    - box:
         pose: {x: -0.11, y: -0.085, z: 0.9}
         size: {x: 0.1, y: 0.06, z: 1.8}
-  - id: right_pole
-    shape:
-      box:
+    - box:
         pose: {x: -0.11, y: 0.085, z: 0.9}
         size: {x: 0.1, y: 0.06, z: 1.8}
-
-  - id: tv
-    shape:
-      box:
+    - box:
         pose: {x: 0.06, y: 0.0, z: 1.67, Y: 0.04}
         size: {x: 0.1, y: 1.55, z: 0.82}
 
 areas:
 - name: near
   offset: 0.5
+
+- name: in_front_of
+  shape:
+  - box:
+        min: {x: 0.5, y: -0.4, z: 0.0}
+        max: {x: 0.7, y: 0.4, z: 0.01}

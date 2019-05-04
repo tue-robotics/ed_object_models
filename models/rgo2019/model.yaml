@@ -52,6 +52,10 @@ composition:
     pose: {x: 9.0, y: -0.39, z: 0, Z: -1.571}
     type: rgo2017/table_party
 
+  - id: coathanger
+    pose: {x: 6.0, y: -5.2, z: 0, Z: 1.571}
+    type: rgo2019/coathanger
+
 # kitchen furniture
   - id: kitchen_table
     pose: {x: 7.92, y: 2.45, z: 0, Z: 3.141592}

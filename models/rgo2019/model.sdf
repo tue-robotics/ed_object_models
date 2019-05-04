@@ -245,6 +245,11 @@
       <name>high_table</name>
       <uri>model://rgo2017/table_party</uri>
     </include>
+    <include name="coathanger">
+      <pose>6.0 -5.2 0 0 0 1.571</pose>
+      <name>coathanger</name>
+      <uri>model://rgo2019/coathanger</uri>
+    </include>
     <include name="kitchen_table">
       <pose>7.92 2.45 0 0 0 3.141592</pose>
       <name>kitchen_table</name>

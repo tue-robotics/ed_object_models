@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rgo2019/trashbin_large">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <cylinder>
+            <length>0.45</length>
+            <radius>0.195</radius>
+          </cylinder>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <cylinder>
+            <length>0.45</length>
+            <radius>0.195</radius>
+          </cylinder>
+        </geometry>
+        <name>1</name>
+      </visual>
+      <pose>0 0 0.225 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of">
+        <geometry>
+          <cylinder>
+            <length>0.25</length>
+            <radius>0.19</radius>
+          </cylinder>
+        </geometry>
+        <name>on_top_of</name>
+      </virtual_volume>
+      <pose>0 0 0.585 0 0 0</pose>
+      <name>on_top_of</name>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of">
+        <geometry>
+          <box>
+            <size>1.0 1.0 0.01</size>
+          </box>
+        </geometry>
+        <name>in_front_of</name>
+      </virtual_volume>
+      <pose>0 0 0 0 0 0</pose>
+      <name>in_front_of</name>
+    </link>
+    <static>true</static>
+    <name>rgo2019/trashbin_large</name>
+  </model>
+</sdf>

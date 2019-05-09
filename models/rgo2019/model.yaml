@@ -1,0 +1,189 @@
+composition:
+  - id: floor
+    pose: {x: 0, y: 0, z: 0}
+    type: floor
+  - id: walls
+    pose: {x: 0, y: 0, z: 0}
+    type: rgo2019/walls
+
+# bedroom furniture
+  - id: bed
+    pose: {x: 1.10, y: 3.07, z: 0, Z: -1.571}
+    type: rgo2019/bed_frame
+  - id: side_table
+    pose: {x: 0.315, y: 2.285, z: 0}
+    type: rgo2019/sidetable
+  - id: desk
+    pose: {x: 3.26, y: 4.15, z: 0, Z: 3.141592}
+    type: rgo2019/desk
+
+# living_room furniture
+  - id: couch
+    pose: {x: 8.9, y: -4.2, z: 0, Z: 2.4}
+    type: rgo2019/couch
+  - id: right_armchair
+    pose: {x: 8.78, y: -2.73, z: 0, Z: 0.75}
+    type: rgo2019/armchair
+  - id: side_table
+    pose: {x: 0.315, y: 2.285, z: 0}
+    type: rgo2019/sidetable
+  - id: bookcase
+    pose: {x: 4.54, y: 0.39, z: 0, Z: -1.571}
+    type: rgo2018/bookcase
+  - id: tv
+    pose: {x: 4.40, y: -3.45, z: 0}
+    type: rgo2019/tv
+  - id: trash_bin
+    pose: {x: 4.45, y: -5.1, z: 0}
+    type: rgo2019/trashbin_small
+  - id: coffee_table
+    pose: {x: 8.1, y: -3.5, z: 0, Z: 2.321}
+    type: rgo2018/table_salon
+  - id: tv_table
+    pose: {x: 4.35, y: -4.5, z: 0, Z: 0.0}
+    type: rgo2018/table_salon
+  - id: sideboard
+    pose: {x: 4.35, y: -2.0, z: 0, Z: 0.0}
+    type: rgo2018/table_salon
+  - id: left_armchair
+    pose: {x: 7.5, y: -4.2, z: 0, Z: -2.321}
+    type: rgo2019/armchair
+  - id: high_table
+    pose: {x: 9.0, y: -0.39, z: 0, Z: -1.571}
+    type: rgo2017/table_party
+
+  - id: coathanger
+    pose: {x: 6.0, y: -5.2, z: 0, Z: 1.571}
+    type: rgo2019/coathanger
+
+# kitchen furniture
+  - id: kitchen_table
+    pose: {x: 7.92, y: 2.45, z: 0, Z: 3.141592}
+    type: rgo2019/kitchentable
+  - id: kitchen_cabinet
+    pose: {x: 5.63, y: 4.21, z: 0, Z: -1.571}
+    type: rgo2019/kitchen_counter
+  - id: trash_can
+    pose: {x: 5.41, y: 1.0, z: 0}
+    type: rgo2019/trashbin_large
+  - id: dishwasher
+    pose: {x: 6.55, y: 4.21, z: 0, Z: -1.571}
+    type: rgo2019/dishwasher
+  - id: white_drawer
+    pose: {x: 9.79, y: 1.25, z: 0, Z: -3.141592}
+    type: rgo2019/white_drawer
+  - id: cabinet
+    pose: {x: 9.79, y: 3.5, z: 0, Z: 3.141592}
+    type: rgo2019/cabinet
+
+# bar furniture
+  - id: cupboard
+    pose: {x: 0.18, y: -2.05, z: 0}
+    type: rgo2018/bookcase
+  - id: sofa
+    pose: {x: 0.74, y: -3.5, z: 0, Z: 3.141592}
+    type: rgo2019/armchair
+  - id: bar_table
+    pose: {x: 2.54, y: -4.0, z: 0, Z: 1.571}
+    type: rgo2017/table_party
+
+# Hallway drop zone
+  - id: drop_area
+    pose: {x: 0.5, y: -1.0, z: 0}
+    type: rgo2019/drop_area
+
+# Waypoints
+  - id: initial_pose
+    pose: {x: -0.4, y: 0.0, z: 0, Z: 0}
+    type: waypoint
+
+  - id: registration_table1
+    pose: {x: 6.5, y: -1.0, z: 0, Z: -0.8}
+    type: waypoint
+  - id: registration_table2
+    pose: {x: 6.0, y: -0.5, z: 0, Z: -0.4}
+    type: waypoint
+  - id: registration_table3
+    pose: {x: 5.0, y: -0.5, z: 0, Z: 0}
+    type: waypoint
+
+  - id: exit_1_rips
+    pose: {x: 6.95, y: -6.75, z: 0, Z: -1.571}
+    type: waypoint
+  - id: exit_2_rips
+    pose: {x: 6.95, y: -6.15, z: 0, Z: -1.571}
+    type: waypoint
+  - id: exit_3_rips
+    pose: {x: 6.95, y: -5.65, z: 0, Z: -1.571}
+    type: waypoint
+
+  - id: find_my_mates_initial
+    pose: {x: 4.0, y: -0.5, z: 0, Z: 0.0}
+    type: waypoint
+  - id: find_my_mates_1
+    pose: {x: 7.5, y: 0.4, z: 0, Z: -1.571}
+    type: waypoint
+
+  - id: serving_drinks_initial
+    pose: {x: 2.5, y: -0.5, z: 0, Z: 0.0}
+    type: waypoint
+
+  - id: cleanup_initial
+    pose: {x: 2.5, y: -0.5, z: 0, Z: 0.0}
+    type: waypoint
+
+  - id: receptionist_initial
+    pose: {x: 1.5, y: -0.5, z: 0, Z: -1.571}
+    type: waypoint
+
+  - id: gpsr_meeting_point
+    pose: {x: 7.5, y: -2.5, z: 0, Z: 0}
+    type: waypoint
+
+# Rooms
+  - type: "room"
+    id: "hallway"
+    pose: { x: 2.05, y: -0.50, z: 0 }
+    areas:
+    - name: in
+      shape:
+      - box:
+          min: { x: -2.01, y: -0.95, z: 0 }
+          max: { x: 2.01, y: 1.00, z: 2.0 }
+  - type: "room"
+    id: "bedroom"
+    pose: { x: 2.60, y: 2.50, z: 0 }
+    areas:
+    - name: in
+      shape:
+      - box:
+          min: { x: -2.56, y: -1.90, z: 0 }
+          max: { x: 2.36, y: 2.05, z: 2.0 }
+  - type: "room"
+    id: "living_room"
+    pose: { x: 7.00, y: -3.00, z: 0 }
+    areas:
+    - name: in
+      shape:
+      - box:
+          min: { x: -2.94, y: -2.45, z: 0 }
+          max: { x: 2.96, y: 3.50, z: 2.0 }
+  - type: "room"
+    id: "kitchen"
+    pose: { x: 7.55, y: 2.50, z: 0 }
+    areas:
+    - name: in
+      shape:
+      - box:
+          min: { x: -2.54, y: -1.90, z: 0 }
+          max: { x: 2.41, y: 2.05, z: 2.0 }
+  - type: "room"
+    id: "bar"
+    pose: { x: 2.00, y: -3.50, z: 0 }
+    areas:
+    - name: in
+      shape:
+      - box:
+          min: { x: -1.96, y: -1.95, z: 0 }
+          max: { x: 2.01, y: 2.00, z: 2.0 }
+

@@ -1,0 +1,123 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rgo2019/couch">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>0.85 1.8 0.42</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>0.85 1.8 0.42</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+        </material>
+        <name>1</name>
+      </visual>
+      <pose>0.0 0.0 0.21 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <link name="2">
+      <collision name="2">
+        <geometry>
+          <box>
+            <size>0.3 1.8 0.225</size>
+          </box>
+        </geometry>
+        <name>2</name>
+      </collision>
+      <visual name="2">
+        <geometry>
+          <box>
+            <size>0.3 1.8 0.225</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+        </material>
+        <name>2</name>
+      </visual>
+      <pose>-0.275 0.0 0.5325 0 0 0</pose>
+      <name>2</name>
+    </link>
+    <link name="3">
+      <collision name="3">
+        <geometry>
+          <box>
+            <size>0.85 0.175 0.225</size>
+          </box>
+        </geometry>
+        <name>3</name>
+      </collision>
+      <visual name="3">
+        <geometry>
+          <box>
+            <size>0.85 0.175 0.225</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+        </material>
+        <name>3</name>
+      </visual>
+      <pose>0.0 -0.812 0.5325 0 0 0</pose>
+      <name>3</name>
+    </link>
+    <link name="4">
+      <collision name="4">
+        <geometry>
+          <box>
+            <size>0.85 0.175 0.225</size>
+          </box>
+        </geometry>
+        <name>4</name>
+      </collision>
+      <visual name="4">
+        <geometry>
+          <box>
+            <size>0.85 0.175 0.225</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1</ambient>
+        </material>
+        <name>4</name>
+      </visual>
+      <pose>0.0 0.812 0.5325 0 0 0</pose>
+      <name>4</name>
+    </link>
+     <link name="on_top_of">
+      <virtual_volume name="on_top_of">
+        <geometry>
+          <box>
+            <size>0.35 1.36 0.32</size>
+          </box>
+        </geometry>
+        <pose>0.175 0.0 0.6 0 0 0</pose>
+        <name>on_top_of</name>
+      </virtual_volume>
+      <name>on_top_of</name>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of">
+        <geometry>
+          <box>
+            <size>0.2 0.6 0.01</size>
+          </box>
+        </geometry>
+        <pose>1.05 0.0 0.005 0 0 0</pose>
+        <name>in_front_of</name>
+      </virtual_volume>
+      <name>in_front_of</name>
+   </link>
+    <static>true</static>
+    <name>rgo2019/couch</name>
+  </model>
+</sdf>

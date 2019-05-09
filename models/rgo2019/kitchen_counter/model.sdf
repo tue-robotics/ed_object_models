@@ -1,0 +1,353 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rgo2019/kitchen_counter">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>0.59 0.018 1.02</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>0.59 0.018 1.02</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+        <name>1</name>
+      </visual>
+      <pose>0.078 -0.5935 0.51 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <link name="2">
+      <collision name="2">
+        <geometry>
+          <box>
+            <size>0.59 0.018 1.02</size>
+          </box>
+        </geometry>
+        <name>2</name>
+      </collision>
+      <visual name="2">
+        <geometry>
+          <box>
+            <size>0.59 0.018 1.02</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+        <name>2</name>
+      </visual>
+      <pose>0.078 0.5935 0.51 0 0 0</pose>
+      <name>2</name>
+    </link>
+    <link name="3">
+      <collision name="3">
+        <geometry>
+          <box>
+            <size>0.078 1.205 2.002</size>
+          </box>
+        </geometry>
+        <name>3</name>
+      </collision>
+      <visual name="3">
+        <geometry>
+          <box>
+            <size>0.078 1.205 2.002</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+        <name>3</name>
+      </visual>
+      <pose>-0.256 0 1.001 0 0 0</pose>
+      <name>3</name>
+    </link>
+    <link name="4">
+      <collision name="4">
+        <geometry>
+          <box>
+            <size>0.6 1.169 0.038</size>
+          </box>
+        </geometry>
+        <name>4</name>
+      </collision>
+      <visual name="4">
+        <geometry>
+          <box>
+            <size>0.6 1.169 0.038</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+        <name>4</name>
+      </visual>
+      <pose>0.083 0 1.001 0 0 0</pose>
+      <name>4</name>
+    </link>
+    <link name="5">
+      <collision name="5">
+        <geometry>
+          <box>
+            <size>0.59 1.169 0.138</size>
+          </box>
+        </geometry>
+        <name>5</name>
+      </collision>
+      <visual name="5">
+        <geometry>
+          <box>
+            <size>0.59 1.169 0.138</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+        <name>5</name>
+      </visual>
+      <pose>0.078 0 0.069 0 0 0</pose>
+      <name>5</name>
+    </link>
+    <link name="6">
+      <collision name="6">
+        <geometry>
+          <box>
+            <size>0.572 1.169 0.018</size>
+          </box>
+        </geometry>
+        <name>6</name>
+      </collision>
+      <visual name="6">
+        <geometry>
+          <box>
+            <size>0.572 1.169 0.018</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+        <name>6</name>
+      </visual>
+      <pose>0.069 0 0.544 0 0 0</pose>
+      <name>6</name>
+    </link>
+    <link name="7">
+      <collision name="7">
+        <geometry>
+          <box>
+            <size>0.572 0.018 1.0</size>
+          </box>
+        </geometry>
+        <name>7</name>
+      </collision>
+      <visual name="7">
+        <geometry>
+          <box>
+            <size>0.572 0.018 1.0</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+        <name>7</name>
+      </visual>
+      <pose>0.069 0 0.5 0 0 0</pose>
+      <name>7</name>
+    </link>
+    <link name="8">
+      <collision name="8">
+        <geometry>
+          <box>
+            <size>0.35 0.018 0.482</size>
+          </box>
+        </geometry>
+        <name>8</name>
+      </collision>
+      <visual name="8">
+        <geometry>
+          <box>
+            <size>0.35 0.018 0.482</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+        <name>8</name>
+      </visual>
+      <pose>-0.042 -0.5935 1.76 0 0 0</pose>
+      <name>8</name>
+    </link>
+    <link name="9">
+      <collision name="9">
+        <geometry>
+          <box>
+            <size>0.35 0.018 0.482</size>
+          </box>
+        </geometry>
+        <name>9</name>
+      </collision>
+      <visual name="9">
+        <geometry>
+          <box>
+            <size>0.35 0.018 0.482</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+        <name>9</name>
+      </visual>
+      <pose>-0.042 0.5935 1.76 0 0 0</pose>
+      <name>9</name>
+    </link>
+    <link name="10">
+      <collision name="10">
+        <geometry>
+          <box>
+            <size>0.35 1.169 0.018</size>
+          </box>
+        </geometry>
+        <name>10</name>
+      </collision>
+      <visual name="10">
+        <geometry>
+          <box>
+            <size>0.35 1.169 0.018</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+        <name>10</name>
+      </visual>
+      <pose>-0.042 0 1.993 0 0 0</pose>
+      <name>10</name>
+    </link>
+    <link name="11">
+      <collision name="11">
+        <geometry>
+          <box>
+            <size>0.35 1.169 0.018</size>
+          </box>
+        </geometry>
+        <name>11</name>
+      </collision>
+      <visual name="11">
+        <geometry>
+          <box>
+            <size>0.35 1.169 0.018</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+        <name>11</name>
+      </visual>
+      <pose>-0.042 0 1.529 0 0 0</pose>
+      <name>11</name>
+    </link>
+    <link name="12">
+      <collision name="12">
+        <geometry>
+          <box>
+            <size>0.35 1.169 0.018</size>
+          </box>
+        </geometry>
+        <name>12</name>
+      </collision>
+      <visual name="12">
+        <geometry>
+          <box>
+            <size>0.35 1.169 0.018</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+        <name>12</name>
+      </visual>
+      <pose>-0.042 0 1.754 0 0 0</pose>
+      <name>12</name>
+    </link>
+    <link name="13">
+      <collision name="13">
+        <geometry>
+          <box>
+            <size>0.35 0.036 0.482</size>
+          </box>
+        </geometry>
+        <name>13</name>
+      </collision>
+      <visual name="13">
+        <geometry>
+          <box>
+            <size>0.35 0.036 0.482</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+        <name>13</name>
+      </visual>
+      <pose>-0.042 0 1.76 0 0 0</pose>
+      <name>13</name>
+    </link>
+    <link name="14">
+      <collision name="14">
+        <geometry>
+          <box>
+            <size>0.018 1.2 1.0</size>
+          </box>
+        </geometry>
+        <name>14</name>
+      </collision>
+      <visual name="14">
+        <geometry>
+          <box>
+            <size>0.018 1.2 1.0</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+        <name>14</name>
+      </visual>
+      <pose>0.365 0.0 0.50 0 0 0</pose>
+      <name>14</name>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of">
+        <geometry>
+          <box>
+            <size>0.2 1.005 0.01</size>
+          </box>
+        </geometry>
+        <pose>1.3 0.0 0.005 0 0 0</pose>
+        <name>in_front_of</name>
+      </virtual_volume>
+      <name>in_front_of</name>
+    </link>
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of">
+        <geometry>
+          <box>
+            <size>0.53 1.14 0.3</size>
+          </box>
+        </geometry>
+        <pose>0.078 0.0 1.19 0 0 0</pose>
+        <name>on_top_of</name>
+      </virtual_volume>
+      <name>on_top_of</name>
+    </link>
+    <static>true</static>
+    <name>rgo2019/kitchen_counter</name>
+  </model>
+</sdf>

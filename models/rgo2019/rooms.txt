@@ -1,0 +1,19 @@
+living_room; min1; 4,06; -5.45
+living_room; max1; 9,96; 0.5
+living_room; center; 7,00; -3,00
+
+hallway; min1; 0,04; -1,45
+hallway; max1; 4,06; 0,5
+hallway; center; 2,05; -0,5
+
+bar; min1; 0,04; -5,45
+bar; max1; 4,01; -1,5
+bar; center; 2,0; -3,5
+
+bedroom; min1; 0,04; 0,6
+bedroom; max1; 4,96; 4,55
+bedroom; center; 2,6; 2,5
+
+kitchen; min1; 5,01; 0,6
+kitchen; max1; 9,96; 4,55
+kitchen; center; 7,55; 2,5

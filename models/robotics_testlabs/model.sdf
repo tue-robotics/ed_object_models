@@ -363,7 +363,7 @@
     <include name="paperbin">
       <pose>2.8 3.6 0 0 0 2.35619449</pose>
       <name>paperbin</name>
-      <uri>model://paperbin</uri>
+      <uri>model://robotics_testlabs/paperbin</uri>
     </include>
     <include name="flight_case">
       <pose>-3.28 1.23 0.0 0 0 0</pose>

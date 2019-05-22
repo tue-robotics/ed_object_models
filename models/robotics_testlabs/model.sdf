@@ -135,6 +135,11 @@
       <static>true</static>
       <name>help_me_carry_starting_point</name>
     </model>
+    <model name="serving_drinks_initial" type="waypoint">
+      <pose>0.586 4.259 0 0 0 0</pose>
+      <static>true</static>
+      <name>serving_drinks_initial</name>
+    </model>
     <model name="avoid_that_start" type="waypoint">
       <pose>2.2 2.2 0 0 0 -2.459</pose>
       <static>true</static>

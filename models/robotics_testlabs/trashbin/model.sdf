@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
-  <model name="trashbin">
+  <model name="robotics_testlabs/trashbin">
     <link name="1">
       <collision name="1">
         <geometry>
@@ -24,7 +24,7 @@
       <name>1</name>
     </link>
     <static>true</static>
-    <name>trashbin</name>
+    <name>robotics_testlabs/trashbin</name>
     <link name="on_top_of">
       <virtual_volume name="on_top_of">
         <geometry>

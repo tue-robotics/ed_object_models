@@ -358,7 +358,7 @@
     <include name="trashbin">
       <pose>1.8 4.8 0 0 0 0</pose>
       <name>trashbin</name>
-      <uri>model://trashbin</uri>
+      <uri>model://robotics_testlabs/trashbin</uri>
     </include>
     <include name="paperbin">
       <pose>2.8 3.6 0 0 0 2.35619449</pose>
@@ -368,7 +368,7 @@
     <include name="trashbin2">
       <pose>-1.5 2.0 0 0 0 0</pose>
       <name>trashbin2</name>
-      <uri>model://trashbin</uri>
+      <uri>model://robotics_testlabs/trashbin</uri>
     </include>
     <include name="flight_case">
       <pose>-3.28 1.23 0.0 0 0 0</pose>

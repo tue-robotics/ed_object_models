@@ -135,6 +135,11 @@
       <static>true</static>
       <name>help_me_carry_starting_point</name>
     </model>
+    <model name="serving_drinks_initial" type="waypoint">
+      <pose>0.586 4.259 0 0 0 0</pose>
+      <static>true</static>
+      <name>serving_drinks_initial</name>
+    </model>
     <model name="avoid_that_start" type="waypoint">
       <pose>2.2 2.2 0 0 0 -2.459</pose>
       <static>true</static>
@@ -353,17 +358,12 @@
     <include name="trashbin">
       <pose>1.8 4.8 0 0 0 0</pose>
       <name>trashbin</name>
-      <uri>model://trashbin</uri>
+      <uri>model://robotics_testlabs/trashbin</uri>
     </include>
     <include name="paperbin">
       <pose>2.8 3.6 0 0 0 2.35619449</pose>
       <name>paperbin</name>
-      <uri>model://paperbin</uri>
-    </include>
-    <include name="trashbin2">
-      <pose>-1.5 2.0 0 0 0 0</pose>
-      <name>trashbin2</name>
-      <uri>model://trashbin</uri>
+      <uri>model://robotics_testlabs/paperbin</uri>
     </include>
     <include name="flight_case">
       <pose>-3.28 1.23 0.0 0 0 0</pose>

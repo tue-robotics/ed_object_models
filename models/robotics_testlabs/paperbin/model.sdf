@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
-  <model name="paperbin">
+  <model name="robotics_testlabs/paperbin">
     <link name="1">
       <collision name="1">
         <geometry>
@@ -141,6 +141,6 @@
       <name>on_top_of</name>
     </link>
     <static>true</static>
-    <name>paperbin</name>
+    <name>robotics_testlabs/paperbin</name>
   </model>
 </sdf>

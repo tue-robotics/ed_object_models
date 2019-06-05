@@ -409,7 +409,7 @@ def convert_world(yml, model_name, recursive=False):
              "cast_shadows": "true", "pose": "0 0 10 0 0 0", "diffuse": "0.8 0.8 0.8 1",
              "specular": "0.2 0.2 0.2 1", "direction": "0.5 0.1 -0.9",
              "attenuation": {"range": 1000, "constant": 0.9, "linear": 0.01, "quadratic": 0.001}}
-    physics = {"type": "ode", "real_time_update_rate": 400.0, "max_step_size": 0.0025,
+    physics = {"type": "ode", "real_time_update_rate": 333.0, "max_step_size": 0.003,
                "ode": {"solver": {"type": "quick", "iters": 100}, "constraints": {"cfm": 0.0001}}}
     world = {"name": model_name, "include": [], "model": [], "light": light, "physics": physics}
 

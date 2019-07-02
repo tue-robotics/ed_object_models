@@ -223,9 +223,9 @@
       <name>kitchen_cabinet</name>
       <uri>model://rwc2019/kitchen_cabinet</uri>
     </include>
-    <include name="trashbin">
+    <include name="trash_bin">
       <pose>8.0 2.8 0.0 0 0 -1.5707963267948966</pose>
-      <name>trashbin</name>
+      <name>trash_bin</name>
       <uri>model://rwc2019/trashbin</uri>
     </include>
     <!--

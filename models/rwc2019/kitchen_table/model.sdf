@@ -125,6 +125,90 @@
       </virtual_volume>
       <name>in_front_of</name>
     </link>
+    <link name="behind">
+      <virtual_volume name="behind">
+        <geometry>
+          <box>
+            <size>0.2 0.6 0.01</size>
+          </box>
+        </geometry>
+        <pose>-0.9 0.0 0.005 0 0 0</pose>
+        <name>behind</name>
+      </virtual_volume>
+      <name>behind</name>
+    </link>
+    <link name="left_of">
+      <virtual_volume name="left_of">
+        <geometry>
+          <box>
+            <size>0.2 0.6 0.01</size>
+          </box>
+        </geometry>
+        <pose>0 -0.9 0.005 0 0 1.57</pose>
+        <name>left_of</name>
+      </virtual_volume>
+      <name>left_of</name>
+    </link>
+    <link name="right_of">
+      <virtual_volume name="right_of">
+        <geometry>
+          <box>
+            <size>0.2 0.6 0.01</size>
+          </box>
+        </geometry>
+        <pose>0 0.9 0.005 0 0 1.57</pose>
+        <name>right_of</name>
+      </virtual_volume>
+      <name>right_of</name>
+    </link>
+    <link name="in_front_of_close">
+      <virtual_volume name="in_front_of_close">
+        <geometry>
+          <box>
+            <size>0.2 0.2 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.7 0.0 0.005 0 0 0</pose>
+        <name>in_front_of_clos</name>
+      </virtual_volume>
+      <name>in_front_of_close</name>
+    </link>
+    <link name="behind_close">
+      <virtual_volume name="behind_close">
+        <geometry>
+          <box>
+            <size>0.2 0.2 0.01</size>
+          </box>
+        </geometry>
+        <pose>-0.7 0.0 0.005 0 0 0</pose>
+        <name>behind_clos</name>
+      </virtual_volume>
+      <name>behind_close</name>
+    </link>
+    <link name="left_of_close">
+      <virtual_volume name="left_of_close">
+        <geometry>
+          <box>
+            <size>0.2 0.2 0.01</size>
+          </box>
+        </geometry>
+        <pose>0 -0.7 0.005 0 0 1.57</pose>
+        <name>left_of_clos</name>
+      </virtual_volume>
+      <name>left_of_close</name>
+    </link>
+    <link name="right_of_close">
+      <virtual_volume name="right_of_close">
+        <geometry>
+          <box>
+            <size>0.2 0.2 0.01</size>
+          </box>
+        </geometry>
+        <pose>0 0.7 0.005 0 0 1.57</pose>
+        <name>right_of_clos</name>
+      </virtual_volume>
+      <name>right_of_close</name>
+    </link>
     <static>true</static>
     <name>rwc2019/kitchen_table</name>
   </model>

@@ -143,7 +143,56 @@
       <name>desk</name>
       <uri>model://rwc2019/desk</uri>
     </include>
-
+    <include name="shelf">
+      <pose>3.65 5.1 0.0 0 0 3.141592653589793</pose>
+      <name>shelf</name>
+      <uri>model://rwc2019/shelf</uri>
+    </include>
+    <include name="coffee_table">
+      <pose>6.0 0.0 0.0 0 0 3.141592653589793</pose>
+      <name>coffee_table</name>
+      <uri>model://rwc2019/coffee_table</uri>
+    </include>
+    <include name="couch">
+      <pose>6.0 -1.0 0.0 0 0 1.5707963267948966</pose>
+      <name>couch</name>
+      <uri>model://rwc2019/couch</uri>
+    </include>
+    <include name="armchair">
+      <pose>7.7 0.0 0.0 0 0 3.141592653589793</pose>
+      <name>armchair</name>
+      <uri>model://rwc2019/armchair</uri>
+    </include>
+    <include name="sideboard">
+      <pose>4.25 2.0 0.0 0 0 0.0</pose>
+      <name>sideboard</name>
+      <uri>model://rwc2019/sideboard</uri>
+    </include>
+    <include name="display_cabinet">
+      <pose>7.35 2.07 0.0 0 0 -1.5707963267948966</pose>
+      <name>display_cabinet</name>
+      <uri>model://rwc2019/display_cabinet</uri>
+    </include>
+    <include name="kitchen_table">
+      <pose>6.35 4.07 0.0 0 0 -1.5707963267948966</pose>
+      <name>kitchen_table</name>
+      <uri>model://rwc2019/kitchen_table</uri>
+    </include>
+    <include name="sink">
+      <pose>4.25 4.0 0.0 0 0 0.0</pose>
+      <name>sink</name>
+      <uri>model://rwc2019/sink</uri>
+    </include>
+    <include name="fridge">
+      <pose>4.35 5.57 0.0 0 0 0.0</pose>
+      <name>fridge</name>
+      <uri>model://rwc2019/fridge</uri>
+    </include>
+    <include name="island">
+      <pose>5.9 5.62 0.0 0 0 -1.5707963267948966</pose>
+      <name>island</name>
+      <uri>model://rwc2019/island</uri>
+    </include>
     <!--
     Office:
     * shoe_rack (a)
@@ -152,21 +201,21 @@
     * desk (a)
     Bedroom:
     * bed
-    * shelf
+    * shelf (a)
     * sidetable
     * bedroom_chest
     Living room:
-    * coffee_table
-    * couch
-    * armchair
-    * sideboard
-    * display_cabinet
+    * coffee_table (a)
+    * couch (a)
+    * armchair (a)
+    * sideboard (a)
+    * display_cabinet (a)
     Kitchen:
-    * kitchen_table
-    * sink
+    * kitchen_table (a)
+    * sink (a)
     * dishwasher
-    * fridge
-    * island
+    * fridge (a)
+    * island (a)
     * kitchen_cabinet
     * thrashbin
     -->

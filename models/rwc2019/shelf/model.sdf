@@ -1,0 +1,291 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rwc2019/shelf">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>0.28 0.018 2.02</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>0.28 0.018 2.02</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </visual>
+      <pose>0.0 -0.391 1.01 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <link name="2">
+      <collision name="2">
+        <geometry>
+          <box>
+            <size>0.28 0.018 2.02</size>
+          </box>
+        </geometry>
+        <name>2</name>
+      </collision>
+      <visual name="2">
+        <geometry>
+          <box>
+            <size>0.28 0.018 2.02</size>
+          </box>
+        </geometry>
+        <name>2</name>
+      </visual>
+      <pose>0.0 0.391 1.01 0 0 0</pose>
+      <name>2</name>
+    </link>
+    <link name="3">
+      <collision name="3">
+        <geometry>
+          <box>
+            <size>0.018 0.8 2.02</size>
+          </box>
+        </geometry>
+        <name>3</name>
+      </collision>
+      <visual name="3">
+        <geometry>
+          <box>
+            <size>0.018 0.8 2.02</size>
+          </box>
+        </geometry>
+        <name>3</name>
+      </visual>
+      <pose>-0.131 0.0 1.01 0 0 0</pose>
+      <name>3</name>
+    </link>
+    <link name="4">
+      <collision name="4">
+        <geometry>
+          <box>
+            <size>0.262 0.764 0.018</size>
+          </box>
+        </geometry>
+        <name>4</name>
+      </collision>
+      <visual name="4">
+        <geometry>
+          <box>
+            <size>0.262 0.764 0.018</size>
+          </box>
+        </geometry>
+        <name>4</name>
+      </visual>
+      <pose>0.009 0.0 2.011 0 0 0</pose>
+      <name>4</name>
+    </link>
+    <link name="5">
+      <collision name="5">
+        <geometry>
+          <box>
+            <size>0.262 0.764 0.018</size>
+          </box>
+        </geometry>
+        <name>5</name>
+      </collision>
+      <visual name="5">
+        <geometry>
+          <box>
+            <size>0.262 0.764 0.018</size>
+          </box>
+        </geometry>
+        <name>5</name>
+      </visual>
+      <pose>0.009 0.0 0.109 0 0 0</pose>
+      <name>5</name>
+    </link>
+    <link name="6">
+      <collision name="6">
+        <geometry>
+          <box>
+            <size>0.262 0.764 0.018</size>
+          </box>
+        </geometry>
+        <name>6</name>
+      </collision>
+      <visual name="6">
+        <geometry>
+          <box>
+            <size>0.262 0.764 0.018</size>
+          </box>
+        </geometry>
+        <name>6</name>
+      </visual>
+      <pose>0.009 0.0 0.489 0 0 0</pose>
+      <name>6</name>
+    </link>
+    <link name="7">
+      <collision name="7">
+        <geometry>
+          <box>
+            <size>0.262 0.764 0.018</size>
+          </box>
+        </geometry>
+        <name>7</name>
+      </collision>
+      <visual name="7">
+        <geometry>
+          <box>
+            <size>0.262 0.764 0.018</size>
+          </box>
+        </geometry>
+        <name>7</name>
+      </visual>
+      <pose>0.009 0.0 0.749 0 0 0</pose>
+      <name>7</name>
+    </link>
+    <link name="8">
+      <collision name="8">
+        <geometry>
+          <box>
+            <size>0.262 0.764 0.018</size>
+          </box>
+        </geometry>
+        <name>8</name>
+      </collision>
+      <visual name="8">
+        <geometry>
+          <box>
+            <size>0.262 0.764 0.018</size>
+          </box>
+        </geometry>
+        <name>8</name>
+      </visual>
+      <pose>0.009 0.0 1.071 0 0 0</pose>
+      <name>8</name>
+    </link>
+    <link name="9">
+      <collision name="9">
+        <geometry>
+          <box>
+            <size>0.262 0.764 0.018</size>
+          </box>
+        </geometry>
+        <name>9</name>
+      </collision>
+      <visual name="9">
+        <geometry>
+          <box>
+            <size>0.262 0.764 0.018</size>
+          </box>
+        </geometry>
+        <name>9</name>
+      </visual>
+      <pose>0.009 0.0 1.389 0 0 0</pose>
+      <name>9</name>
+    </link>
+    <link name="10">
+      <collision name="10">
+        <geometry>
+          <box>
+            <size>0.262 0.764 0.018</size>
+          </box>
+        </geometry>
+        <name>10</name>
+      </collision>
+      <visual name="10">
+        <geometry>
+          <box>
+            <size>0.262 0.764 0.018</size>
+          </box>
+        </geometry>
+        <name>10</name>
+      </visual>
+      <pose>0.009 0.0 1.679 0 0 0</pose>
+      <name>10</name>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of">
+        <geometry>
+          <box>
+            <size>0.2 0.6 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.64 0.0 0.005 0 0 0</pose>
+        <name>in_front_of</name>
+      </virtual_volume>
+      <name>in_front_of</name>
+    </link>
+    <link name="shelf1">
+      <virtual_volume name="shelf1">
+        <geometry>
+          <box>
+            <size>0.242 0.704 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.009 0.0 0.263 0 0 0</pose>
+        <name>shelf1</name>
+      </virtual_volume>
+      <name>shelf1</name>
+    </link>
+    <link name="shelf2">
+      <virtual_volume name="shelf2">
+        <geometry>
+          <box>
+            <size>0.242 0.704 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.009 0.0 0.643 0 0 0</pose>
+        <name>shelf2</name>
+      </virtual_volume>
+      <name>shelf2</name>
+    </link>
+    <link name="shelf3">
+      <virtual_volume name="shelf3">
+        <geometry>
+          <box>
+            <size>0.242 0.704 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.009 0.0 0.903 0 0 0</pose>
+        <name>shelf3</name>
+      </virtual_volume>
+      <name>shelf3</name>
+    </link>
+    <link name="shelf4">
+      <virtual_volume name="shelf4">
+        <geometry>
+          <box>
+            <size>0.242 0.704 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.009 0.0 1.225 0 0 0</pose>
+        <name>shelf4</name>
+      </virtual_volume>
+      <name>shelf4</name>
+    </link>
+    <link name="shelf5">
+      <virtual_volume name="shelf5">
+        <geometry>
+          <box>
+            <size>0.242 0.704 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.009 0.0 1.543 0 0 0</pose>
+        <name>shelf5</name>
+      </virtual_volume>
+      <name>shelf5</name>
+    </link>
+    <link name="shelf6">
+      <virtual_volume name="shelf6">
+        <geometry>
+          <box>
+            <size>0.242 0.704 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.009 0.0 1.833 0 0 0</pose>
+        <name>shelf6</name>
+      </virtual_volume>
+      <name>shelf6</name>
+    </link>
+    <static>true</static>
+    <name>rwc2019/shelf</name>
+  </model>
+</sdf>

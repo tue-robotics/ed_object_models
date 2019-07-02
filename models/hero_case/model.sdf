@@ -32,6 +32,8 @@
         <name>on_top_of</name>
       </virtual_volume>
       <name>on_top_of</name>
+    </link>
+    <link name="on_top_of">
       <virtual_volume name="in_studio">
         <geometry>
           <box>

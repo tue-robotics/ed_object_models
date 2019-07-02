@@ -47,10 +47,10 @@
         <virtual_volume name="in">
           <geometry>
             <box>
-              <size>4.389 3.3936 2.0</size>
+              <size>4.389 3.8936 2.0</size>
             </box>
           </geometry>
-          <pose>0.0 0.0 1.0 0 0 0</pose>
+          <pose>0.0 0.25 1.0 0 0 0</pose>
           <name>in</name>
         </virtual_volume>
         <name>in</name>
@@ -59,24 +59,24 @@
       <static>true</static>
       <name>living_room</name>
     </model>
-    <model name="bedroom" type="room">
+    <model name="kitchen" type="room">
       <link name="in">
         <virtual_volume name="in">
           <geometry>
             <box>
-              <size>4.389 3.90932 2.0</size>
+              <size>4.389 3.40932 2.0</size>
             </box>
           </geometry>
-          <pose>0.0 0.0 1.0 0 0 0</pose>
+          <pose>0.0 0.25 1.0 0 0 0</pose>
           <name>in</name>
         </virtual_volume>
         <name>in</name>
       </link>
       <pose>6.13249 3.92289 0 0 0 0</pose>
       <static>true</static>
-      <name>bedroom</name>
+      <name>kitchen</name>
     </model>
-    <model name="kitchen" type="room">
+    <model name="bedroom" type="room">
       <link name="in">
         <virtual_volume name="in">
           <geometry>
@@ -91,7 +91,7 @@
       </link>
       <pose>2.15542 3.692984223365 0 0 0 0</pose>
       <static>true</static>
-      <name>kitchen</name>
+      <name>bedroom</name>
     </model>
     <model name="initial_pose" type="waypoint">
       <pose>0.0 0.0 0 0 0 0</pose>

@@ -1,0 +1,129 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="rwc2019">
+    <light name="sun" type="directional">
+      <direction>0.5 0.1 -0.9</direction>
+      <pose>0 0 10 0 0 0</pose>
+      <name>sun</name>
+      <specular>0.2 0.2 0.2 1</specular>
+      <cast_shadows>true</cast_shadows>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <attenuation>
+        <range>1000</range>
+        <quadratic>0.001</quadratic>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+      </attenuation>
+    </light>
+    <include name="floor">
+      <pose>0 0 0 0 0 0</pose>
+      <name>floor</name>
+      <uri>model://floor</uri>
+    </include>
+    <include name="walls">
+      <pose>0 0 0 0 0 0</pose>
+      <name>walls</name>
+      <uri>model://rwc2019/walls</uri>
+    </include>
+    <!--
+    <model name="hallway" type="room">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>4.02 1.95 2.0</size>
+            </box>
+          </geometry>
+          <pose>0.0 0.025 1.0 0 0 0</pose>
+          <name>in</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>2.05 -0.5 0 0 0 0</pose>
+      <static>true</static>
+      <name>hallway</name>
+    </model>
+    <model name="bedroom" type="room">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>4.92 3.95 2.0</size>
+            </box>
+          </geometry>
+          <pose>-0.1 0.075 1.0 0 0 0</pose>
+          <name>in</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>2.6 2.5 0 0 0 0</pose>
+      <static>true</static>
+      <name>bedroom</name>
+    </model>
+    <model name="living_room" type="room">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>5.9 5.95 2.0</size>
+            </box>
+          </geometry>
+          <pose>0.01 0.525 1.0 0 0 0</pose>
+          <name>in</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>7.0 -3.0 0 0 0 0</pose>
+      <static>true</static>
+      <name>living_room</name>
+    </model>
+    <model name="kitchen" type="room">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>4.95 3.95 2.0</size>
+            </box>
+          </geometry>
+          <pose>-0.065 0.075 1.0 0 0 0</pose>
+          <name>in</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>7.55 2.5 0 0 0 0</pose>
+      <static>true</static>
+      <name>kitchen</name>
+    </model>
+    <model name="bar" type="room">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>3.97 3.95 2.0</size>
+            </box>
+          </geometry>
+          <pose>0.025 0.025 1.0 0 0 0</pose>
+          <name>in</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>2.0 -3.5 0 0 0 0</pose>
+      <static>true</static>
+      <name>bar</name>
+    </model>
+  -->
+    <physics type="ode">
+      <real_time_update_rate>333.0</real_time_update_rate>
+      <max_step_size>0.003</max_step_size>
+      <ode>
+        <constraints>
+          <cfm>0.0001</cfm>
+        </constraints>
+        <solver type="quick">
+          <iters>100</iters>
+        </solver>
+      </ode>
+    </physics>
+    <name>rwc2019</name>
+  </world>
+</sdf>

@@ -128,6 +128,48 @@
       <static>true</static>
       <name>exit_3_rips</name>
     </model>
+    <include name="shoe_rack">
+      <pose>0.68 -1.0 0.0 0 0 0.0</pose>
+      <name>shoe_rack</name>
+      <uri>model://rwc2019/shoe_rack</uri>
+    </include>
+    <include name="safe">
+      <pose>0.68 1.0 0.0 0 0 0.0</pose>
+      <name>safe</name>
+      <uri>model://rwc2019/safe</uri>
+    </include>
+    <include name="desk">
+      <pose>2.0 -1.0 0.0 0 0 0.0</pose>
+      <name>desk</name>
+      <uri>model://rwc2019/desk</uri>
+    </include>
+
+    <!--
+    Office:
+    * shoe_rack (a)
+    * safe (a)
+    * coat_hanger
+    * desk (a)
+    Bedroom:
+    * bed
+    * shelf
+    * sidetable
+    * bedroom_chest
+    Living room:
+    * coffee_table
+    * couch
+    * armchair
+    * sideboard
+    * display_cabinet
+    Kitchen:
+    * kitchen_table
+    * sink
+    * dishwasher
+    * fridge
+    * island
+    * kitchen_cabinet
+    * thrashbin
+    -->
     <physics type="ode">
       <real_time_update_rate>333.0</real_time_update_rate>
       <max_step_size>0.003</max_step_size>

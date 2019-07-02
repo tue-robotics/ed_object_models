@@ -148,6 +148,11 @@
       <name>shelf</name>
       <uri>model://rwc2019/shelf</uri>
     </include>
+    <include name="bedroom_chest">
+      <pose>3.5 2.0 0.0 0 0 3.141592653589793</pose>
+      <name>bedroom_chest</name>
+      <uri>model://rwc2019/bedroom_chest</uri>
+    </include>
     <include name="coffee_table">
       <pose>6.0 0.0 0.0 0 0 3.141592653589793</pose>
       <name>coffee_table</name>
@@ -179,9 +184,14 @@
       <uri>model://rwc2019/kitchen_table</uri>
     </include>
     <include name="sink">
-      <pose>4.25 4.0 0.0 0 0 0.0</pose>
+      <pose>4.25 4.05 0.0 0 0 0.0</pose>
       <name>sink</name>
       <uri>model://rwc2019/sink</uri>
+    </include>
+    <include name="dishwasher">
+      <pose>4.35 4.9 0.0 0 0 0.0</pose>
+      <name>dishwasher</name>
+      <uri>model://rwc2019/dishwasher</uri>
     </include>
     <include name="fridge">
       <pose>4.35 5.57 0.0 0 0 0.0</pose>
@@ -193,6 +203,11 @@
       <name>island</name>
       <uri>model://rwc2019/island</uri>
     </include>
+    <include name="kitchen_cabinet">
+      <pose>7.77 5.15 0.0 0 0 -1.5707963267948966</pose>
+      <name>kitchen_cabinet</name>
+      <uri>model://rwc2019/kitchen_cabinet</uri>
+    </include>
     <!--
     Office:
     * shoe_rack (a)
@@ -203,7 +218,7 @@
     * bed
     * shelf (a)
     * sidetable
-    * bedroom_chest
+    * bedroom_chest (a)
     Living room:
     * coffee_table (a)
     * couch (a)
@@ -213,10 +228,10 @@
     Kitchen:
     * kitchen_table (a)
     * sink (a)
-    * dishwasher
+    * dishwasher (a)
     * fridge (a)
     * island (a)
-    * kitchen_cabinet
+    * kitchen_cabinet (a)
     * thrashbin
     -->
     <physics type="ode">

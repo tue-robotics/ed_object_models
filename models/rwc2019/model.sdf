@@ -234,6 +234,16 @@
     * kitchen_cabinet (a)
     * thrashbin
     -->
+    <model name="receptionist_start" type="waypoint"><!-- ToDo: verify -->
+      <pose>3.0 0.0 0 0 0 -1.5707963267948966</pose>
+      <static>true</static>
+      <name>receptionist_start</name>
+    </model>
+    <model name="look_at_entry_door_wp" type="waypoint"><!-- ToDo: verify -->
+      <pose>1.5 0.0 0 0 0 -1.5707963267948966</pose>
+      <static>true</static>
+      <name>look_at_entry_door_wp</name>
+    </model>
     <physics type="ode">
       <real_time_update_rate>333.0</real_time_update_rate>
       <max_step_size>0.003</max_step_size>

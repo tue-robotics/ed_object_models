@@ -128,6 +128,11 @@
       <static>true</static>
       <name>exit_3_rips</name>
     </model>
+    <include name="coat_hanger">
+      <pose>1.28 1.1 0.0 0 0 0.0</pose>
+      <name>coat_hanger</name>
+      <uri>model://rwc2019/coat_hanger</uri>
+    </include>
     <include name="shoe_rack">
       <pose>0.68 -1.0 0.0 0 0 0.0</pose>
       <name>shoe_rack</name>
@@ -143,10 +148,20 @@
       <name>desk</name>
       <uri>model://rwc2019/desk</uri>
     </include>
+    <include name="bed">
+      <pose>0.9 4.6 0.0 0 0 0.0</pose>
+      <name>bed</name>
+      <uri>model://rwc2019/bed</uri>
+    </include>
     <include name="shelf">
       <pose>3.65 5.1 0.0 0 0 3.141592653589793</pose>
       <name>shelf</name>
       <uri>model://rwc2019/shelf</uri>
+    </include>
+    <include name="sidetable">
+      <pose>3.6 4.05 0.0 0 0 3.141592653589793</pose>
+      <name>sidetable</name>
+      <uri>model://rwc2019/sidetable</uri>
     </include>
     <include name="bedroom_chest">
       <pose>3.5 2.0 0.0 0 0 3.141592653589793</pose>
@@ -208,16 +223,21 @@
       <name>kitchen_cabinet</name>
       <uri>model://rwc2019/kitchen_cabinet</uri>
     </include>
+    <include name="trashbin">
+      <pose>8.0 2.8 0.0 0 0 -1.5707963267948966</pose>
+      <name>trashbin</name>
+      <uri>model://rwc2019/trashbin</uri>
+    </include>
     <!--
     Office:
     * shoe_rack (a)
     * safe (a)
-    * coat_hanger
+    * coat_hanger (a)
     * desk (a)
     Bedroom:
-    * bed
+    * bed (a)
     * shelf (a)
-    * sidetable
+    * sidetable (a)
     * bedroom_chest (a)
     Living room:
     * coffee_table (a)
@@ -232,7 +252,7 @@
     * fridge (a)
     * island (a)
     * kitchen_cabinet (a)
-    * thrashbin
+    * thrashbin (a)
     -->
     <model name="receptionist_start" type="waypoint"><!-- ToDo: verify -->
       <pose>3.0 0.0 0 0 0 -1.5707963267948966</pose>

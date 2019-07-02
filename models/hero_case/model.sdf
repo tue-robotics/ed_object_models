@@ -32,6 +32,16 @@
         <name>on_top_of</name>
       </virtual_volume>
       <name>on_top_of</name>
+      <virtual_volume name="in_studio">
+        <geometry>
+          <box>
+            <size>0.38 0.38 0.4</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.0 1.25 0 0 0</pose>
+        <name>on_top_of</name>
+      </virtual_volume>
+      <name>on_top_of</name>
     </link>
     <static>true</static>
     <name>floor</name>

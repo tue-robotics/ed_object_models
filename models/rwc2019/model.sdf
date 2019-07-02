@@ -229,8 +229,8 @@
       <uri>model://rwc2019/trashbin</uri>
     </include>
     <include name="trash_bin1">
-      <pose>4.1 1.2 0.0 0 0 -1.5707963267948966</pose>
-      <name>trash_bin</name>
+      <pose>4.1 1.2 0.0 0 0 1.5707963267948966</pose>
+      <name>trash_bin1</name>
       <uri>model://rwc2019/trashbin</uri>
     </include>
     <!--

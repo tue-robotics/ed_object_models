@@ -138,6 +138,12 @@
       <name>serving_drinks_initial</name>
     </model>
 
+    <model name="cleanup_initial" type="waypoint">
+      <pose>2.0 0 0 0 0 0</pose>
+      <static>true</static>
+      <name>cleanup_initial</name>
+    </model>
+
     <model name="receptionist_start" type="waypoint"><!-- ToDo: verify -->
       <pose>3.0 0.0 0 0 0 -3.1415</pose>
       <static>true</static>

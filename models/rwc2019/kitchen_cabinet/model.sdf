@@ -206,17 +206,17 @@
         </geometry>
         <pose>0.029 0.0 1.573 0 0 0</pose>
         <name>shelf3</name>
-      </virtual_volume>
+      </virtual_volume>r
       <name>shelf3</name>
     </link>
     <link name="shelf4">
       <virtual_volume name="shelf4">
         <geometry>
           <box>
-            <size>0.282 0.804 0.18</size>
+            <size>0.282 0.804 0.17</size>
           </box>
         </geometry>
-        <pose>0.029 0.0 1.87 0 0 0</pose>
+        <pose>0.029 0.0 1.82 0 0 0</pose>
         <name>shelf4</name>
       </virtual_volume>
       <name>shelf4</name>

@@ -25,6 +25,8 @@
       <name>walls</name>
       <uri>model://rwc2019/walls</uri>
     </include>
+
+    <!-- ROOMS -->
     <model name="office" type="room">
       <link name="in">
         <virtual_volume name="in">
@@ -93,6 +95,8 @@
       <static>true</static>
       <name>bedroom</name>
     </model>
+
+    <!-- WAYPOINTS -->
     <model name="initial_pose" type="waypoint">
       <pose>0.0 0.0 0 0 0 0</pose>
       <static>true</static>
@@ -134,6 +138,19 @@
       <name>serving_drinks_initial</name>
     </model>
 
+    <model name="receptionist_start" type="waypoint"><!-- ToDo: verify -->
+      <pose>3.0 0.0 0 0 0 -1.5707963267948966</pose>
+      <static>true</static>
+      <name>receptionist_start</name>
+    </model>
+    <model name="look_at_entry_door_wp" type="waypoint"><!-- ToDo: verify -->
+      <pose>1.5 0.0 0 0 0 -1.5707963267948966</pose>
+      <static>true</static>
+      <name>look_at_entry_door_wp</name>
+    </model>
+
+    <!-- FURNITURE -->
+    <!-- OFFICE -->
     <include name="coat_hanger">
       <pose>1.28 1.1 0.0 0 0 0.0</pose>
       <name>coat_hanger</name>
@@ -150,17 +167,19 @@
       <uri>model://rwc2019/safe</uri>
     </include>
     <include name="desk">
-      <pose>2.0 -1.0 0.0 0 0 0.0</pose>
+      <pose>2.6 -1.16 0.0 0 0 0.0</pose>
       <name>desk</name>
       <uri>model://rwc2019/desk</uri>
     </include>
+
+    <!-- BEDROOM -->
     <include name="bed">
-      <pose>0.9 4.6 0.0 0 0 0.0</pose>
+      <pose>0.8 4.6 0.0 0 0 0.0</pose>
       <name>bed</name>
       <uri>model://rwc2019/bed</uri>
     </include>
     <include name="shelf">
-      <pose>3.65 5.1 0.0 0 0 3.141592653589793</pose>
+      <pose>3.70 5.1 0.0 0 0 3.141592653589793</pose>
       <name>shelf</name>
       <uri>model://rwc2019/shelf</uri>
     </include>
@@ -170,27 +189,29 @@
       <uri>model://rwc2019/sidetable</uri>
     </include>
     <include name="bedroom_chest">
-      <pose>3.5 2.0 0.0 0 0 3.141592653589793</pose>
+      <pose>3.6 2.0 0.0 0 0 3.141592653589793</pose>
       <name>bedroom_chest</name>
       <uri>model://rwc2019/bedroom_chest</uri>
     </include>
+
+    <!-- LIVING ROOM -->
     <include name="coffee_table">
       <pose>6.0 0.0 0.0 0 0 3.141592653589793</pose>
       <name>coffee_table</name>
       <uri>model://rwc2019/coffee_table</uri>
     </include>
     <include name="couch">
-      <pose>6.0 -1.0 0.0 0 0 1.5707963267948966</pose>
+      <pose>6.0 -0.97 0 0 0 1.5707963267948966</pose>
       <name>couch</name>
       <uri>model://rwc2019/couch</uri>
     </include>
     <include name="armchair">
-      <pose>7.7 0.0 0.0 0 0 3.141592653589793</pose>
+      <pose>7.75 0.0 0.0 0 0 3.141592653589793</pose>
       <name>armchair</name>
       <uri>model://rwc2019/armchair</uri>
     </include>
     <include name="sideboard">
-      <pose>4.25 2.0 0.0 0 0 0.0</pose>
+      <pose>4.18 2.0 0.0 0 0 0.0</pose>
       <name>sideboard</name>
       <uri>model://rwc2019/sideboard</uri>
     </include>
@@ -199,23 +220,25 @@
       <name>display_cabinet</name>
       <uri>model://rwc2019/display_cabinet</uri>
     </include>
+
+    <!-- KITCHEN -->
     <include name="kitchen_table">
       <pose>6.35 3.72 0.0 0 0 -1.5707963267948966</pose>
       <name>kitchen_table</name>
       <uri>model://rwc2019/kitchen_table</uri>
     </include>
     <include name="sink">
-      <pose>4.25 4.05 0.0 0 0 0.0</pose>
+      <pose>4.17 4.05 0.0 0 0 0.0</pose>
       <name>sink</name>
       <uri>model://rwc2019/sink</uri>
     </include>
     <include name="dishwasher">
-      <pose>4.35 4.9 0.0 0 0 0.0</pose>
+      <pose>4.24 4.9 0.0 0 0 0.0</pose>
       <name>dishwasher</name>
       <uri>model://rwc2019/dishwasher</uri>
     </include>
     <include name="fridge">
-      <pose>4.35 5.57 0.0 0 0 0.0</pose>
+      <pose>4.27 5.57 0.0 0 0 0.0</pose>
       <name>fridge</name>
       <uri>model://rwc2019/fridge</uri>
     </include>
@@ -225,7 +248,7 @@
       <uri>model://rwc2019/island</uri>
     </include>
     <include name="kitchen_cabinet">
-      <pose>7.77 5.15 0.0 0 0 -1.5707963267948966</pose>
+      <pose>7.8 5.18 0.0 0 0 -1.5707963267948966</pose>
       <name>kitchen_cabinet</name>
       <uri>model://rwc2019/kitchen_cabinet</uri>
     </include>
@@ -265,16 +288,6 @@
     * kitchen_cabinet (a)
     * thrashbin (a)
     -->
-    <model name="receptionist_start" type="waypoint"><!-- ToDo: verify -->
-      <pose>3.0 0.0 0 0 0 -1.5707963267948966</pose>
-      <static>true</static>
-      <name>receptionist_start</name>
-    </model>
-    <model name="look_at_entry_door_wp" type="waypoint"><!-- ToDo: verify -->
-      <pose>1.5 0.0 0 0 0 -1.5707963267948966</pose>
-      <static>true</static>
-      <name>look_at_entry_door_wp</name>
-    </model>
     <physics type="ode">
       <real_time_update_rate>333.0</real_time_update_rate>
       <max_step_size>0.003</max_step_size>

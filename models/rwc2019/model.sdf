@@ -148,6 +148,17 @@
       <static>true</static>
       <name>look_at_entry_door_wp</name>
     </model>
+     <model name="helper_take_out_garbage" type="waypoint"><!-- ToDo: verify -->
+      <pose>5 0.70 0 0 0 2.7</pose>
+      <static>true</static>
+      <name>helper_take_out_garbage</name>
+    </model>
+     <model name="take_out_garbage_drop_zone" type="waypoint"><!-- ToDo: verify -->
+      <pose>5.5 1.25 0 0 0 -0.78539816339</pose>
+      <static>true</static>
+      <name>take_out_garbage_drop_zone</name>
+    </model>
+
 
     <!-- FURNITURE -->
     <!-- OFFICE -->

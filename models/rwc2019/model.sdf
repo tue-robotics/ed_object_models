@@ -154,7 +154,7 @@
       <name>helper_take_out_garbage</name>
     </model>
      <model name="take_out_garbage_drop_zone" type="waypoint"><!-- ToDo: verify -->
-      <pose>5.5 1.25 0 0 0 -0.78539816339</pose>
+      <pose>6 6.55555 0 0 0 3.1415926535</pose>
       <static>true</static>
       <name>take_out_garbage_drop_zone</name>
     </model>

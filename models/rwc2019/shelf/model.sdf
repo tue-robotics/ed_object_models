@@ -217,10 +217,10 @@
       <virtual_volume name="shelf1">
         <geometry>
           <box>
-            <size>0.242 0.704 0.25</size>
+            <size>0.222 0.704 0.25</size>
           </box>
         </geometry>
-        <pose>0.009 0.0 0.263 0 0 0</pose>
+        <pose>0.029 0.0 0.263 0 0 0</pose>
         <name>shelf1</name>
       </virtual_volume>
       <name>shelf1</name>
@@ -229,10 +229,10 @@
       <virtual_volume name="shelf2">
         <geometry>
           <box>
-            <size>0.242 0.704 0.25</size>
+            <size>0.222 0.704 0.25</size>
           </box>
         </geometry>
-        <pose>0.009 0.0 0.643 0 0 0</pose>
+        <pose>0.029 0.0 0.643 0 0 0</pose>
         <name>shelf2</name>
       </virtual_volume>
       <name>shelf2</name>
@@ -241,10 +241,10 @@
       <virtual_volume name="shelf3">
         <geometry>
           <box>
-            <size>0.242 0.704 0.25</size>
+            <size>0.222 0.704 0.25</size>
           </box>
         </geometry>
-        <pose>0.009 0.0 0.903 0 0 0</pose>
+        <pose>0.029 0.0 0.903 0 0 0</pose>
         <name>shelf3</name>
       </virtual_volume>
       <name>shelf3</name>
@@ -253,10 +253,10 @@
       <virtual_volume name="shelf4">
         <geometry>
           <box>
-            <size>0.242 0.704 0.25</size>
+            <size>0.222 0.704 0.25</size>
           </box>
         </geometry>
-        <pose>0.009 0.0 1.225 0 0 0</pose>
+        <pose>0.029 0.0 1.225 0 0 0</pose>
         <name>shelf4</name>
       </virtual_volume>
       <name>shelf4</name>
@@ -265,10 +265,10 @@
       <virtual_volume name="shelf5">
         <geometry>
           <box>
-            <size>0.242 0.704 0.25</size>
+            <size>0.222 0.704 0.25</size>
           </box>
         </geometry>
-        <pose>0.009 0.0 1.543 0 0 0</pose>
+        <pose>0.029 0.0 1.543 0 0 0</pose>
         <name>shelf5</name>
       </virtual_volume>
       <name>shelf5</name>
@@ -277,10 +277,10 @@
       <virtual_volume name="shelf6">
         <geometry>
           <box>
-            <size>0.242 0.704 0.25</size>
+            <size>0.222 0.704 0.25</size>
           </box>
         </geometry>
-        <pose>0.009 0.0 1.833 0 0 0</pose>
+        <pose>0.029 0.0 1.833 0 0 0</pose>
         <name>shelf6</name>
       </virtual_volume>
       <name>shelf6</name>

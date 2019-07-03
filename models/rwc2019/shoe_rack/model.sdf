@@ -25,10 +25,10 @@
       <virtual_volume name="on_top_of">
         <geometry>
           <box>
-            <size>0.476 0.931 0.25</size>
+            <size>0.456 0.931 0.25</size>
           </box>
         </geometry>
-        <pose>0.0 0.0 0.897 0 0 0</pose>
+        <pose>0.02 0.0 0.897 0 0 0</pose>
         <name>on_top_of</name>
       </virtual_volume>
       <name>on_top_of</name>

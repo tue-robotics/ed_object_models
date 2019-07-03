@@ -145,7 +145,7 @@
     </model>
 
     <model name="receptionist_start" type="waypoint"><!-- ToDo: verify -->
-      <pose>3.0 0.0 0 0 0 -3.1415</pose>
+      <pose>3.0 1.0 0 0 0 -3.1415</pose>
       <static>true</static>
       <name>receptionist_start</name>
     </model>

@@ -165,6 +165,18 @@
       <name>take_out_garbage_drop_zone</name>
     </model>
 
+    <model name="find_mates_search" type="waypoint"><!-- ToDo: verify -->
+      <pose>4.5 0 0 0 0 0</pose>
+      <static>true</static>
+      <name>find_mates_search</name>
+    </model>
+
+    <model name="find_mates_operator_point" type="waypoint"><!-- ToDo: verify -->
+      <pose>1.76876688004 0.547140717506 0 0 0 0</pose>
+      <static>true</static>
+      <name>find_mates_operator_point</name>
+    </model>
+
 
     <!-- FURNITURE -->
     <!-- OFFICE -->

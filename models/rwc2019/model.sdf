@@ -133,7 +133,7 @@
       <name>exit_3_rips</name>
     </model>
     <model name="serving_drinks_initial" type="waypoint">
-      <pose>1.45 -1.0 0 0 0 1.5707963267948966</pose>
+      <pose>5.5 1.25 0 0 0 1.5707963267948966</pose>
       <static>true</static>
       <name>serving_drinks_initial</name>
     </model>
@@ -177,6 +177,11 @@
       <name>find_mates_operator_point</name>
     </model>
 
+    <model name="where_is_this_information_point" type="waypoint"><!-- ToDo: verify -->
+      <pose>2.5 0.0 0 0 0 1.5707963267948966</pose>
+      <static>true</static>
+      <name>where_is_this_information_point</name>
+    </model>
 
     <!-- FURNITURE -->
     <!-- OFFICE -->

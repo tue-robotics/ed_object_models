@@ -183,6 +183,12 @@
       <name>where_is_this_information_point</name>
     </model>
 
+    <model name="set_the_table_inspect" type="waypoint"><!-- ToDo: verify -->
+      <pose>5 3 0 0 0 0</pose>
+      <static>true</static>
+      <name>set_the_table_inspect</name>
+    </model>
+
     <!-- FURNITURE -->
     <!-- OFFICE -->
     <include name="coat_hanger">

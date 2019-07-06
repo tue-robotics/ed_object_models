@@ -190,7 +190,7 @@
     </model>
 
     <model name="hand_that_home_location" type="waypoint">
-      <pose>5.0 0.0 0 0 0 0</pose>
+      <pose>5.0 1.0 0 0 0  0.8539816339</pose>
       <static>true</static>
       <name>hand_that_home_location</name>
     </model>

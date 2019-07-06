@@ -189,6 +189,12 @@
       <name>set_the_table_inspect</name>
     </model>
 
+     <model name="find_people_waypoint" type="waypoint">
+      <pose> 6.0 1.2 0.0 0.0 0.0 -1.5707963267948966</pose>
+      <static>true</static>
+      <name>find_people_waypoint</name>
+    </model>
+
     <model name="hand_that_home_location" type="waypoint">
       <pose>5.0 1.0 0 0 0  0.8539816339</pose>
       <static>true</static>

@@ -61,6 +61,7 @@
       <pose>-0.1225 0.0 0.385 0 0 0</pose>
       <name>3</name>
     </link>
+<!--
     <link name="4">
       <collision name="4">
         <geometry>
@@ -81,6 +82,7 @@
       <pose>0.0075 0.0 0.77 0 0 0</pose>
       <name>4</name>
     </link>
+-->
     <link name="5">
       <collision name="5">
         <geometry>

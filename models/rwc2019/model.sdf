@@ -255,7 +255,7 @@
 
     <!-- LIVING ROOM -->
     <include name="rack">
-      <pose>4.15 1.27 0.0 0 0 1.5707963267948966</pose>
+      <pose>4.15 1.1 0.0 0 0 0</pose>
       <name>rack</name>
       <uri>model://rwc2019/rack</uri>
     </include>

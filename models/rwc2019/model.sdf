@@ -201,6 +201,13 @@
       <name>hand_that_home_location</name>
     </model>
 
+    <!-- final -->
+    <model name="final_fridge_waypoint" type="waypoint">
+      <pose>5.295 4.560 0 0 0 1.848</pose>
+      <static>true</static>
+      <name>final_fridge_waypoint</name>
+    </model>
+
     <!-- FURNITURE -->
     <!-- OFFICE -->
     <include name="coat_hanger">

@@ -254,6 +254,11 @@
     </include>
 
     <!-- LIVING ROOM -->
+    <include name="rack">
+      <pose>4.15 1.27 0.0 0 0 1.5707963267948966</pose>
+      <name>rack</name>
+      <uri>model://rwc2019/rack</uri>
+    </include>
     <include name="coffee_table">
       <pose>6.0 0.0 0.0 0 0 3.141592653589793</pose>
       <name>coffee_table</name>
@@ -316,11 +321,14 @@
       <name>trash_bin</name>
       <uri>model://rwc2019/trashbin</uri>
     </include>
+    </include>
+    <!--
     <include name="trash_bin1">
       <pose>4.15 1.27 0.0 0 0 1.5707963267948966</pose>
       <name>trash_bin1</name>
       <uri>model://rwc2019/trashbin</uri>
     </include>
+    -->
     <!--
     Office:
     * shoe_rack (a)
@@ -333,6 +341,7 @@
     * sidetable (a)
     * bedroom_chest (a)
     Living room:
+    * rack (a)
     * coffee_table (a)
     * couch (a)
     * armchair (a)

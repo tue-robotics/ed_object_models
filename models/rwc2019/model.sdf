@@ -287,7 +287,7 @@
 
     <!-- KITCHEN -->
     <include name="kitchen_table">
-      <pose>6.35 3.72 0.0 0 0 -1.5707963267948966</pose>
+      <pose>6.75 2.75 0.0 0 0 -1.5707963267948966</pose>
       <name>kitchen_table</name>
       <uri>model://rwc2019/kitchen_table</uri>
     </include>

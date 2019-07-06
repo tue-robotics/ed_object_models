@@ -254,13 +254,11 @@
     </include>
 
     <!-- LIVING ROOM -->
-<!--
     <include name="rack">
       <pose>4.15 1.1 0.0 0 0 0</pose>
       <name>rack</name>
       <uri>model://rwc2019/rack</uri>
     </include>
--->
     <include name="coffee_table">
       <pose>6.0 0.0 0.0 0 0 3.141592653589793</pose>
       <name>coffee_table</name>

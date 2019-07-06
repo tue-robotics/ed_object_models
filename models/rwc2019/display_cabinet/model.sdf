@@ -37,10 +37,10 @@
       <virtual_volume name="in_front_of">
         <geometry>
           <box>
-            <size>0.2 1.8 0.01</size>
+            <size>0.2 0.4 0.01</size>
           </box>
         </geometry>
-        <pose>0.7565 0.0 0.005 0 0 0</pose>
+        <pose>0.7565 -0.8 0.005 0 0 0</pose>
         <name>in_front_of</name>
       </virtual_volume>
       <name>in_front_of</name>

@@ -321,7 +321,6 @@
       <name>trash_bin</name>
       <uri>model://rwc2019/trashbin</uri>
     </include>
-    </include>
     <!--
     <include name="trash_bin1">
       <pose>4.15 1.27 0.0 0 0 1.5707963267948966</pose>

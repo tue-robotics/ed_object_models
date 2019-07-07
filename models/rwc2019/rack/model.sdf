@@ -165,10 +165,10 @@
       <virtual_volume name="in_front_of">
         <geometry>
           <box>
-            <size>0.2 0.28 0.01</size>
+            <size>0.2 0.15 0.01</size> <!-- SIZE -->
           </box>
         </geometry>
-        <pose>0.63 0.0 0.005 0 0 0</pose>
+        <pose>0.63 0.05 0.005 0 0 0</pose> <!-- POSE -->
         <name>in_front_of</name>
       </virtual_volume>
       <name>in_front_of</name>

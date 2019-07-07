@@ -1153,6 +1153,86 @@ solid AssimpScene
 
  facet normal 0 0 1
   outer loop
+  vertex 14.175 -10.15 0
+  vertex 14.175 -10.15 0.117647
+  vertex 14.175 -11.6 0
+  endloop
+ endfacet
+
+ facet normal 0 -0.447214 0.894427
+  outer loop
+  vertex 14.175 -10.15 0.117647
+  vertex 14.175 -11.6 0.117647
+  vertex 14.175 -11.6 0
+  endloop
+ endfacet
+
+ facet normal -0.57735 -0.57735 0.57735
+  outer loop
+  vertex 14.175 -11.6 0
+  vertex 14.175 -11.6 0.117647
+  vertex 14.1 -11.6 0
+  endloop
+ endfacet
+
+ facet normal -0.447214 0 0.894427
+  outer loop
+  vertex 14.175 -11.6 0.117647
+  vertex 14.1 -11.6 0.117647
+  vertex 14.1 -11.6 0
+  endloop
+ endfacet
+
+ facet normal -0.57735 0.57735 0.57735
+  outer loop
+  vertex 14.1 -11.6 0
+  vertex 14.1 -11.6 0.117647
+  vertex 14.1 -10.15 0
+  endloop
+ endfacet
+
+ facet normal 0 0.447214 0.894427
+  outer loop
+  vertex 14.1 -11.6 0.117647
+  vertex 14.1 -10.15 0.117647
+  vertex 14.1 -10.15 0
+  endloop
+ endfacet
+
+ facet normal 0 0.894427 0.447214
+  outer loop
+  vertex 14.1 -10.15 0
+  vertex 14.1 -10.15 0.117647
+  vertex 14.175 -10.15 0
+  endloop
+ endfacet
+
+ facet normal 0 0.447214 0.894427
+  outer loop
+  vertex 14.1 -10.15 0.117647
+  vertex 14.175 -10.15 0.117647
+  vertex 14.175 -10.15 0
+  endloop
+ endfacet
+
+ facet normal 0 0 1
+  outer loop
+  vertex 14.1 -10.15 0.117647
+  vertex 14.175 -11.6 0.117647
+  vertex 14.175 -10.15 0.117647
+  endloop
+ endfacet
+
+ facet normal 0 0 1
+  outer loop
+  vertex 14.1 -10.15 0.117647
+  vertex 14.1 -11.6 0.117647
+  vertex 14.175 -11.6 0.117647
+  endloop
+ endfacet
+
+ facet normal 0 0 1
+  outer loop
   vertex 15.25 -13.65 0
   vertex 15.25 -13.65 0.117647
   vertex 15.25 -16.9 0

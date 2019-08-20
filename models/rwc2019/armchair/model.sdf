@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rwc2019/armchair">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>0.5 0.66 0.44</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>0.5 0.66 0.44</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </visual>
+      <pose>0.0 0.0 0.22 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <link name="back">
+      <collision name="back">
+        <geometry>
+          <box>
+            <size>0.25 0.66 0.75</size>
+          </box>
+        </geometry>
+        <name>back</name>
+      </collision>
+      <visual name="back">
+        <geometry>
+          <box>
+            <size>0.25 0.66 0.75</size>
+          </box>
+        </geometry>
+        <name>back</name>
+      </visual>
+      <pose>-0.375 0.0 0.375 0 0 0</pose>
+      <name>back</name>
+    </link>
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of">
+        <geometry>
+          <box>
+            <size>0.46 0.6 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.02 0.0 0.685 0 0 0</pose>
+        <name>on_top_of</name>
+      </virtual_volume>
+      <name>on_top_of</name>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of">
+        <geometry>
+          <box>
+            <size>0.2 0.46 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.75 0.0 0.005 0 0 0</pose>
+        <name>in_front_of</name>
+      </virtual_volume>
+      <name>in_front_of</name>
+    </link>
+    <static>true</static>
+    <name>rwc2019/armchair</name>
+  </model>
+</sdf>

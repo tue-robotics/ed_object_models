@@ -1,0 +1,179 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rack/rack">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>0.015 0.015 0.77</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>0.015 0.015 0.77</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </visual>
+      <pose>0.12 -0.2325 0.385 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <link name="1_1">
+      <collision name="1_1">
+        <geometry>
+          <box>
+            <size>0.015 0.015 0.77</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1_1">
+        <geometry>
+          <box>
+            <size>0.015 0.015 0.77</size>
+          </box>
+        </geometry>
+        <name>1_1</name>
+      </visual>
+      <pose>-0.12 -0.2325 0.385 0 0 0</pose>
+      <name>1_1</name>
+    </link>
+    <link name="1_2">
+      <collision name="1_2">
+        <geometry>
+          <box>
+            <size>0.24 0.015 0.015</size>
+          </box>
+        </geometry>
+        <name>1_2</name>
+      </collision>
+      <visual name="1_2">
+        <geometry>
+          <box>
+            <size>0.24 0.015 0.015</size>
+          </box>
+        </geometry>
+        <name>1_2</name>
+      </visual>
+      <pose>0 -0.2325 0.7625 0 0 0</pose>
+      <name>1_2</name>
+    </link>
+    <link name="2">
+      <collision name="2">
+        <geometry>
+          <box>
+            <size>0.015 0.015 0.77</size>
+          </box>
+        </geometry>
+        <name>2</name>
+      </collision>
+      <visual name="2">
+        <geometry>
+          <box>
+            <size>0.015 0.015 0.77</size>
+          </box>
+        </geometry>
+        <name>2</name>
+      </visual>
+      <pose>0.12 0.2325 0.385 0 0 0</pose>
+      <name>2</name>
+    </link>
+    <link name="2_2">
+      <collision name="2_2">
+        <geometry>
+          <box>
+            <size>0.015 0.015 0.77</size>
+          </box>
+        </geometry>
+        <name>2_2</name>
+      </collision>
+      <visual name="2_2">
+        <geometry>
+          <box>
+            <size>0.015 0.015 0.77</size>
+          </box>
+        </geometry>
+        <name>2_2</name>
+      </visual>
+      <pose>-0.12 0.2325 0.385 0 0 0</pose>
+      <name>2_2</name>
+    </link>
+    <link name="2_3">
+      <collision name="2_3">
+        <geometry>
+          <box>
+            <size>0.24 0.015 0.015</size>
+          </box>
+        </geometry>
+        <name>2_3</name>
+      </collision>
+      <visual name="2_3">
+        <geometry>
+          <box>
+            <size>0.24 0.015 0.015</size>
+          </box>
+        </geometry>
+        <name>2_3</name>
+      </visual>
+      <pose>0 0.2325 0.7625 0 0 0</pose>
+      <name>2_3</name>
+    </link>
+    <link name="6">
+      <collision name="6">
+        <geometry>
+          <box>
+            <size>0.245 0.45 0.05</size>
+          </box>
+        </geometry>
+        <name>6</name>
+      </collision>
+      <visual name="6">
+        <geometry>
+          <box>
+            <size>0.245 0.45 0.05</size>
+          </box>
+        </geometry>
+        <name>6</name>
+      </visual>
+      <pose>0.0 0.0 0.445 0 0 0</pose>
+      <name>6</name>
+    </link>
+    <link name="7">
+      <collision name="7">
+        <geometry>
+          <box>
+            <size>0.245 0.45 0.05</size>
+          </box>
+        </geometry>
+        <name>7</name>
+      </collision>
+      <visual name="7">
+        <geometry>
+          <box>
+            <size>0.245 0.45 0.05</size>
+          </box>
+        </geometry>
+        <name>7</name>
+      </visual>
+      <pose>0.0 0.0 0.655 0 0 0</pose>
+      <name>7</name>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of">
+        <geometry>
+          <box>
+            <size>0.2 0.15 0.01</size> <!-- SIZE -->
+          </box>
+        </geometry>
+        <pose>0.63 0.05 0.005 0 0 0</pose> <!-- POSE -->
+        <name>in_front_of</name>
+      </virtual_volume>
+      <name>in_front_of</name>
+    </link>
+    <static>true</static>
+    <name>rack/rack</name>
+  </model>
+</sdf>

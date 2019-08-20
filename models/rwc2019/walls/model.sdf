@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rwc2019/walls">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <mesh>
+            <uri>model://rwc2019/walls/shape/heightmap2.stl</uri>
+          </mesh>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <mesh>
+            <uri>model://rwc2019/walls/shape/heightmap2.stl</uri>
+          </mesh>
+        </geometry>
+        <name>1</name>
+      </visual>
+      <pose>14.0 15.625 0 0 0 -1.5707963267948966</pose>
+      <name>1</name>
+    </link>
+    <static>true</static>
+    <name>rwc2019/walls</name>
+  </model>
+</sdf>

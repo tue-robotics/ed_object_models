@@ -1,0 +1,372 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="rwc2019">
+    <light name="sun" type="directional">
+      <direction>0.5 0.1 -0.9</direction>
+      <pose>0 0 10 0 0 0</pose>
+      <name>sun</name>
+      <specular>0.2 0.2 0.2 1</specular>
+      <cast_shadows>true</cast_shadows>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <attenuation>
+        <range>1000</range>
+        <quadratic>0.001</quadratic>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+      </attenuation>
+    </light>
+    <include name="floor">
+      <pose>0 0 0 0 0 0</pose>
+      <name>floor</name>
+      <uri>model://floor</uri>
+    </include>
+    <include name="walls">
+      <pose>0 0 0 0 0 0</pose>
+      <name>walls</name>
+      <uri>model://rwc2019/walls</uri>
+    </include>
+
+    <!-- ROOMS -->
+    <model name="office" type="room">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>3.42404 2.90583 2.0</size>
+            </box>
+          </geometry>
+          <pose>0.0 0.0 1.0 0 0 0</pose>
+          <name>in</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>2.15542 -0.0369384 0 0 0 0</pose>
+      <static>true</static>
+      <name>office</name>
+    </model>
+    <model name="living_room" type="room">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>4.389 3.8936 2.0</size>
+            </box>
+          </geometry>
+          <pose>0.0 0.25 1.0 0 0 0</pose>
+          <name>in</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>6.13249 0.196431 0 0 0 0</pose>
+      <static>true</static>
+      <name>living_room</name>
+    </model>
+    <model name="kitchen" type="room">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>4.389 3.40932 2.0</size>
+            </box>
+          </geometry>
+          <pose>0.0 0.25 1.0 0 0 0</pose>
+          <name>in</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>6.13249 3.92289 0 0 0 0</pose>
+      <static>true</static>
+      <name>kitchen</name>
+    </model>
+    <model name="bedroom" type="room">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>3.42404 4.36912894249 2.0</size>
+            </box>
+          </geometry>
+          <pose>0.0 0.0 1.0 0 0 0</pose>
+          <name>in</name>
+        </virtual_volume>
+        <name>in</name>
+      </link>
+      <pose>2.15542 3.692984223365 0 0 0 0</pose>
+      <static>true</static>
+      <name>bedroom</name>
+    </model>
+
+    <!-- WAYPOINTS -->
+    <model name="initial_pose" type="waypoint">
+      <pose>0.0 0.0 0 0 0 0</pose>
+      <static>true</static>
+      <name>initial_pose</name>
+    </model>
+    <model name="registration_table1" type="waypoint"><!-- ToDo: verify -->
+      <pose>5.5 2.0 0 0 0 1.5707963267948966</pose>
+      <static>true</static>
+      <name>registration_table1</name>
+    </model>
+    <model name="registration_table2" type="waypoint"><!-- ToDo: verify -->
+      <pose>5.5 1.25 0 0 0 1.5707963267948966</pose>
+      <static>true</static>
+      <name>registration_table2</name>
+    </model>
+    <model name="registration_table3" type="waypoint"><!-- ToDo: verify -->
+      <pose>5.5 2.75 0 0 0 1.5707963267948966</pose>
+      <static>true</static>
+      <name>registration_table3</name>
+    </model>
+    <model name="exit_1_rips" type="waypoint"><!-- ToDo: verify -->
+      <pose>7.0 7.5 0 0 0 1.5707963267948966</pose>
+      <static>true</static>
+      <name>exit_1_rips</name>
+    </model>
+    <model name="exit_2_rips" type="waypoint"><!-- ToDo: verify -->
+      <pose>7.0 6.5 0 0 0 1.5707963267948966</pose>
+      <static>true</static>
+      <name>exit_2_rips</name>
+    </model>
+    <model name="exit_3_rips" type="waypoint"><!-- ToDo: verify -->
+      <pose>7.0 6.0 0 0 0 1.5707963267948966</pose>
+      <static>true</static>
+      <name>exit_3_rips</name>
+    </model>
+    <model name="serving_drinks_initial" type="waypoint">
+      <pose>5.5 1.25 0 0 0 1.5707963267948966</pose>
+      <static>true</static>
+      <name>serving_drinks_initial</name>
+    </model>
+
+    <model name="cleanup_initial" type="waypoint">
+      <pose>2.0 0 0 0 0 0</pose>
+      <static>true</static>
+      <name>cleanup_initial</name>
+    </model>
+
+    <model name="receptionist_start" type="waypoint"><!-- ToDo: verify -->
+      <pose>3.0 1.0 0 0 0 -3.1415</pose>
+      <static>true</static>
+      <name>receptionist_start</name>
+    </model>
+    <model name="look_at_entry_door_wp" type="waypoint"><!-- ToDo: verify -->
+      <pose>1.5 0.0 0 0 0 -3.1415</pose>
+      <static>true</static>
+      <name>look_at_entry_door_wp</name>
+    </model>
+     <model name="helper_take_out_garbage" type="waypoint"><!-- ToDo: verify -->
+      <pose>5 0.70 0 0 0 2.7</pose>
+      <static>true</static>
+      <name>helper_take_out_garbage</name>
+    </model>
+     <model name="take_out_garbage_drop_zone" type="waypoint"><!-- ToDo: verify -->
+      <pose>6 6.55555 0 0 0 3.1415926535</pose>
+      <static>true</static>
+      <name>take_out_garbage_drop_zone</name>
+    </model>
+
+    <model name="find_mates_search" type="waypoint"><!-- ToDo: verify -->
+      <pose>4.5 0 0 0 0 0</pose>
+      <static>true</static>
+      <name>find_mates_search</name>
+    </model>
+
+    <model name="find_mates_operator_point" type="waypoint"><!-- ToDo: verify -->
+      <pose>1.76876688004 0.547140717506 0 0 0 0</pose>
+      <static>true</static>
+      <name>find_mates_operator_point</name>
+    </model>
+
+    <model name="where_is_this_information_point" type="waypoint"><!-- ToDo: verify -->
+      <pose>2.5 0.0 0 0 0 1.5707963267948966</pose>
+      <static>true</static>
+      <name>where_is_this_information_point</name>
+    </model>
+
+    <model name="set_the_table_inspect" type="waypoint"><!-- ToDo: verify -->
+      <pose>5 3 0 0 0 0</pose>
+      <static>true</static>
+      <name>set_the_table_inspect</name>
+    </model>
+
+     <model name="find_people_waypoint" type="waypoint">
+      <pose> 6.0 1.2 0.0 0.0 0.0 -1.5707963267948966</pose>
+      <static>true</static>
+      <name>find_people_waypoint</name>
+    </model>
+
+    <model name="hand_that_home_location" type="waypoint">
+      <pose>5.0 1.0 0 0 0  0.8539816339</pose>
+      <static>true</static>
+      <name>hand_that_home_location</name>
+    </model>
+
+    <!-- final -->
+    <model name="final_fridge_waypoint" type="waypoint">
+      <pose>5.75 4.65 0 0 0 2.3</pose>
+      <static>true</static>
+      <name>final_fridge_waypoint</name>
+    </model>
+
+    <!-- FURNITURE -->
+    <!-- OFFICE -->
+    <include name="coat_hanger">
+      <pose>1.28 1.1 0.0 0 0 0.0</pose>
+      <name>coat_hanger</name>
+      <uri>model://rwc2019/coat_hanger</uri>
+    </include>
+    <include name="shoe_rack">
+      <pose>0.68 -1.0 0.0 0 0 0.0</pose>
+      <name>shoe_rack</name>
+      <uri>model://rwc2019/shoe_rack</uri>
+    </include>
+    <include name="safe">
+      <pose>0.68 1.0 0.0 0 0 0.0</pose>
+      <name>safe</name>
+      <uri>model://rwc2019/safe</uri>
+    </include>
+    <include name="desk">
+      <pose>2.6 -1.16 0.0 0 0 0.0</pose>
+      <name>desk</name>
+      <uri>model://rwc2019/desk</uri>
+    </include>
+
+    <!-- BEDROOM -->
+    <include name="bed">
+      <pose>0.8 4.6 0.0 0 0 0.0</pose>
+      <name>bed</name>
+      <uri>model://rwc2019/bed</uri>
+    </include>
+    <include name="shelf">
+      <pose>3.70 5.1 0.0 0 0 3.141592653589793</pose>
+      <name>shelf</name>
+      <uri>model://rwc2019/shelf</uri>
+    </include>
+    <include name="sidetable">
+      <pose>3.6 4.05 0.0 0 0 3.141592653589793</pose>
+      <name>sidetable</name>
+      <uri>model://rwc2019/sidetable</uri>
+    </include>
+    <include name="bedroom_chest">
+      <pose>3.6 2.0 0.0 0 0 3.141592653589793</pose>
+      <name>bedroom_chest</name>
+      <uri>model://rwc2019/bedroom_chest</uri>
+    </include>
+
+    <!-- LIVING ROOM -->
+    <include name="rack">
+      <pose>4.15 1.1 0.0 0 0 0</pose>
+      <name>rack</name>
+      <uri>model://rwc2019/rack</uri>
+    </include>
+    <include name="coffee_table">
+      <pose>6.0 0.0 0.0 0 0 3.141592653589793</pose>
+      <name>coffee_table</name>
+      <uri>model://rwc2019/coffee_table</uri>
+    </include>
+    <include name="couch">
+      <pose>6.0 -0.97 0 0 0 1.5707963267948966</pose>
+      <name>couch</name>
+      <uri>model://rwc2019/couch</uri>
+    </include>
+    <include name="armchair">
+      <pose>7.75 0.0 0.0 0 0 3.141592653589793</pose>
+      <name>armchair</name>
+      <uri>model://rwc2019/armchair</uri>
+    </include>
+    <include name="sideboard">
+      <pose>4.18 2.0 0.0 0 0 0.0</pose>
+      <name>sideboard</name>
+      <uri>model://rwc2019/sideboard</uri>
+    </include>
+    <include name="display_cabinet">
+      <pose>7.35 2.07 0.0 0 0 -1.5707963267948966</pose>
+      <name>display_cabinet</name>
+      <uri>model://rwc2019/display_cabinet</uri>
+    </include>
+
+    <!-- KITCHEN -->
+    <include name="kitchen_table">
+      <pose>6.75 2.75 0.0 0 0 -1.5707963267948966</pose>
+      <name>kitchen_table</name>
+      <uri>model://rwc2019/kitchen_table</uri>
+    </include>
+    <include name="sink">
+      <pose>4.17 4.05 0.0 0 0 0.0</pose>
+      <name>sink</name>
+      <uri>model://rwc2019/sink</uri>
+    </include>
+    <include name="dishwasher">
+      <pose>4.24 4.9 0.0 0 0 0.0</pose>
+      <name>dishwasher</name>
+      <uri>model://rwc2019/dishwasher</uri>
+    </include>
+    <include name="fridge">
+      <pose>4.27 5.57 0.0 0 0 0.0</pose>
+      <name>fridge</name>
+      <uri>model://rwc2019/fridge</uri>
+    </include>
+    <include name="island">
+      <pose>5.9 5.62 0.0 0 0 -1.5707963267948966</pose>
+      <name>island</name>
+      <uri>model://rwc2019/island</uri>
+    </include>
+    <include name="kitchen_cabinet">
+      <pose>7.8 5.18 0.0 0 0 -1.5707963267948966</pose>
+      <name>kitchen_cabinet</name>
+      <uri>model://rwc2019/kitchen_cabinet</uri>
+    </include>
+    <include name="trash_bin">
+      <pose>8.0 2.6 0.0 0 0 -1.5707963267948966</pose>
+      <name>trash_bin</name>
+      <uri>model://rwc2019/trashbin</uri>
+    </include>
+    <!--
+    <include name="trash_bin1">
+      <pose>4.15 1.27 0.0 0 0 1.5707963267948966</pose>
+      <name>trash_bin1</name>
+      <uri>model://rwc2019/trashbin</uri>
+    </include>
+    -->
+    <!--
+    Office:
+    * shoe_rack (a)
+    * safe (a)
+    * coat_hanger (a)
+    * desk (a)
+    Bedroom:
+    * bed (a)
+    * shelf (a)
+    * sidetable (a)
+    * bedroom_chest (a)
+    Living room:
+    * rack (a)
+    * coffee_table (a)
+    * couch (a)
+    * armchair (a)
+    * sideboard (a)
+    * display_cabinet (a)
+    Kitchen:
+    * kitchen_table (a)
+    * sink (a)
+    * dishwasher (a)
+    * fridge (a)
+    * island (a)
+    * kitchen_cabinet (a)
+    * thrashbin (a)
+    -->
+    <physics type="ode">
+      <real_time_update_rate>333.0</real_time_update_rate>
+      <max_step_size>0.003</max_step_size>
+      <ode>
+        <constraints>
+          <cfm>0.0001</cfm>
+        </constraints>
+        <solver type="quick">
+          <iters>100</iters>
+        </solver>
+      </ode>
+    </physics>
+    <name>rwc2019</name>
+  </world>
+</sdf>

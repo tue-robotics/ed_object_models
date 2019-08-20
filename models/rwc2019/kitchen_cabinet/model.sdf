@@ -1,0 +1,239 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rwc2019/kitchen_cabinet">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>0.34 0.018 1.98</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>0.34 0.018 1.98</size>
+          </box>
+        </geometry>
+        <name>1</name>
+      </visual>
+      <pose>0.0 -0.441 0.99 0 0 0</pose>
+      <name>1</name>
+    </link>
+    <link name="2">
+      <collision name="2">
+        <geometry>
+          <box>
+            <size>0.34 0.018 1.98</size>
+          </box>
+        </geometry>
+        <name>2</name>
+      </collision>
+      <visual name="2">
+        <geometry>
+          <box>
+            <size>0.34 0.018 1.98</size>
+          </box>
+        </geometry>
+        <name>2</name>
+      </visual>
+      <pose>0.0 0.441 0.99 0 0 0</pose>
+      <name>2</name>
+    </link>
+    <link name="3">
+      <collision name="3">
+        <geometry>
+          <box>
+            <size>0.018 0.9 1.98</size>
+          </box>
+        </geometry>
+        <name>3</name>
+      </collision>
+      <visual name="3">
+        <geometry>
+          <box>
+            <size>0.018 0.9 1.98</size>
+          </box>
+        </geometry>
+        <name>3</name>
+      </visual>
+      <pose>-0.161 0.0 0.99 0 0 0</pose>
+      <name>3</name>
+    </link>
+    <link name="4">
+      <collision name="4">
+        <geometry>
+          <box>
+            <size>0.322 0.864 0.07</size>
+          </box>
+        </geometry>
+        <name>4</name>
+      </collision>
+      <visual name="4">
+        <geometry>
+          <box>
+            <size>0.322 0.864 0.07</size>
+          </box>
+        </geometry>
+        <name>4</name>
+      </visual>
+      <pose>0.009 0.0 1.945 0 0 0</pose>
+      <name>4</name>
+    </link>
+    <link name="5">
+      <collision name="5">
+        <geometry>
+          <box>
+            <size>0.322 0.864 0.7</size>
+          </box>
+        </geometry>
+        <name>5</name>
+      </collision>
+      <visual name="5">
+        <geometry>
+          <box>
+            <size>0.322 0.864 0.7</size>
+          </box>
+        </geometry>
+        <name>5</name>
+      </visual>
+      <pose>0.009 0.0 0.47 0 0 0</pose>
+      <name>5</name>
+    </link>
+    <link name="6">
+      <collision name="6">
+        <geometry>
+          <box>
+            <size>0.322 0.864 0.018</size>
+          </box>
+        </geometry>
+        <name>6</name>
+      </collision>
+      <visual name="6">
+        <geometry>
+          <box>
+            <size>0.322 0.864 0.018</size>
+          </box>
+        </geometry>
+        <name>6</name>
+      </visual>
+      <pose>0.009 0.0 1.143 0 0 0</pose>
+      <name>6</name>
+    </link>
+    <link name="7">
+      <collision name="7">
+        <geometry>
+          <box>
+            <size>0.322 0.864 0.018</size>
+          </box>
+        </geometry>
+        <name>7</name>
+      </collision>
+      <visual name="7">
+        <geometry>
+          <box>
+            <size>0.322 0.864 0.018</size>
+          </box>
+        </geometry>
+        <name>7</name>
+      </visual>
+      <pose>0.009 0.0 1.419 0 0 0</pose>
+      <name>7</name>
+    </link>
+    <link name="8">
+      <collision name="8">
+        <geometry>
+          <box>
+            <size>0.322 0.864 0.018</size>
+          </box>
+        </geometry>
+        <name>8</name>
+      </collision>
+      <visual name="8">
+        <geometry>
+          <box>
+            <size>0.322 0.864 0.018</size>
+          </box>
+        </geometry>
+        <name>8</name>
+      </visual>
+      <pose>0.009 0.0 1.716 0 0 0</pose>
+      <name>8</name>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of">
+        <geometry>
+          <box>
+            <size>0.2 0.6 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.67 0.0 0.005 0 0 0</pose>
+        <name>in_front_of</name>
+      </virtual_volume>
+      <name>in_front_of</name>
+    </link>
+    <link name="shelf1">
+      <virtual_volume name="shelf1">
+        <geometry>
+          <box>
+            <size>0.282 0.804 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.029 0.0 0.965 0 0 0</pose>
+        <name>shelf1</name>
+      </virtual_volume>
+      <name>shelf1</name>
+    </link>
+    <link name="shelf2">
+      <virtual_volume name="shelf2">
+        <geometry>
+          <box>
+            <size>0.282 0.804 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.029 0.0 1.297 0 0 0</pose>
+        <name>shelf2</name>
+      </virtual_volume>
+      <name>shelf2</name>
+    </link>
+    <link name="shelf3">
+      <virtual_volume name="shelf3">
+        <geometry>
+          <box>
+            <size>0.282 0.804 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.029 0.0 1.573 0 0 0</pose>
+        <name>shelf3</name>
+      </virtual_volume>r
+      <name>shelf3</name>
+    </link>
+    <link name="shelf4">
+      <virtual_volume name="shelf4">
+        <geometry>
+          <box>
+            <size>0.282 0.804 0.17</size>
+          </box>
+        </geometry>
+        <pose>0.029 0.0 1.82 0 0 0</pose>
+        <name>shelf4</name>
+      </virtual_volume>
+      <name>shelf4</name>
+    </link>
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of">
+        <geometry>
+          <box>
+            <size>0.282 0.804 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.029 0.0 0.965 0 0 0</pose>
+        <name>on_top_of</name>
+      </virtual_volume>
+      <name>on_top_of</name>
+    </link>
+    <static>true</static>
+    <name>rwc2019/kitchen_cabinet</name>
+  </model>
+</sdf>

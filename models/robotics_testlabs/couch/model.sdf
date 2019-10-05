@@ -1,31 +1,11 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
   <model name="rwc2019/couch">
-    <link name="1">
-      <collision name="1">
-        <geometry>
-          <box>
-            <size>0.5 1.36 0.44</size>
-          </box>
-        </geometry>
-        <name>1</name>
-      </collision>
-      <visual name="1">
-        <geometry>
-          <box>
-            <size>0.5 1.36 0.44</size>
-          </box>
-        </geometry>
-        <name>1</name>
-      </visual>
-      <pose>0.0 0.0 0.22 0 0 0</pose>
-      <name>1</name>
-    </link>
     <link name="back">
       <collision name="back">
         <geometry>
           <box>
-            <size>0.25 1.36 0.75</size>
+            <size>0.27 1.73 0.75</size>
           </box>
         </geometry>
         <name>back</name>
@@ -33,13 +13,73 @@
       <visual name="back">
         <geometry>
           <box>
-            <size>0.25 1.36 0.75</size>
+            <size>0.27 1.73 0.75</size>
           </box>
         </geometry>
         <name>back</name>
       </visual>
-      <pose>-0.375 0.0 0.375 0 0 0</pose>
+      <pose>-0.4 0 0.37 0 0 0</pose>
       <name>back</name>
+    </link>
+    <link name="side_left">
+      <collision name="side_left">
+        <geometry>
+          <box>
+            <size>0.57 0.18 0.57</size>
+          </box>
+        </geometry>
+        <name>side_left</name>
+      </collision>
+      <visual name="side_left">
+        <geometry>
+          <box>
+            <size>0.57 0.18 0.57</size>
+          </box>
+        </geometry>
+        <name>side_left</name>
+      </visual>
+      <pose>0 -0.77 0.28 0 0 0</pose>
+      <name>side_left</name>
+    </link>
+    <link name="side_right">
+      <collision name="side_right">
+        <geometry>
+          <box>
+            <size>0.57 0.18 0.57</size>
+          </box>
+        </geometry>
+        <name>side_right</name>
+      </collision>
+      <visual name="side_right">
+        <geometry>
+          <box>
+            <size>0.57 0.18 0.57</size>
+          </box>
+        </geometry>
+        <name>side_right</name>
+      </visual>
+      <pose>0 0.77 0.28 0 0 0</pose>
+      <name>side_right</name>
+    </link>
+    <link name="seat">
+      <collision name="seat">
+        <geometry>
+          <box>
+            <size>0.62 1.36 0.17</size>
+          </box>
+        </geometry>
+        <name>seat</name>
+      </collision>
+      <visual name="seat">
+        <geometry>
+          <box>
+            <size>0.62 1.36 0.17</size>
+          </box>
+        </geometry>
+        <name>seat</name>
+      </visual>
+      <pose>0.05 0 0.26 0 0 0</pose>
+      <name>seat</name>
     </link>
     <link name="on_top_of">
       <virtual_volume name="on_top_of">
@@ -48,7 +88,7 @@
             <size>0.46 1.3 0.25</size>
           </box>
         </geometry>
-        <pose>0.02 0.0 0.685 0 0 0</pose>
+        <pose>0.02 0.0 0.44 0 0 0</pose>
         <name>on_top_of</name>
       </virtual_volume>
       <name>on_top_of</name>

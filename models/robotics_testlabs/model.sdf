@@ -351,7 +351,7 @@
       <uri>model://floor</uri>
     </include>
     <include name="trashbin">
-      <pose>1.5 5.3 0 0 0 0</pose>
+      <pose>1.32 5.3 0 0 0 0</pose>
       <name>trashbin</name>
       <uri>model://robotics_testlabs/trashbin</uri>
     </include>
@@ -365,10 +365,10 @@
       <name>flight_case</name>
       <uri>model://robotics_testlabs/flight_case</uri>
     </include>
-<!--    <include name="battery_table">
+<!--    <include name="sergio">
       <pose>-3.36 1.99 0 0 0 0</pose>
-      <name>battery_table</name>
-      <uri>model://robotics_testlabs/battery_table</uri>
+      <name>sergio</name>
+      <uri>model://robotics_testlabs/sergio</uri>
     </include> -->
     <include name="black_cabinet1">
       <pose>-0.19 -1.48 0 0 0 1.57079632679</pose>
@@ -401,7 +401,7 @@
       <uri>model://ddw/table</uri>
     </include>
     <include name="hallway_table">
-      <pose>-0.65 1.45 0 0 0 0.0</pose>
+      <pose>-0.65 1.45 0 0 0 3.14159265359</pose>
       <name>hallway_table</name>
       <uri>model://ddw/couch</uri>
     </include>
@@ -411,12 +411,12 @@
       <uri>model://robotics_testlab_B/corridor_cabinet</uri>
     </include>
     <include name="rack">
-      <pose>3.32 5.15 0 0 0 0</pose>
+      <pose>3.37 5.15 0 0 0 0</pose>
       <name>rack</name>
       <uri>model://robotics_testlabs/rack</uri>
     </include>
     <include name="couch">
-      <pose>2.45 5.0 0 0 0 -1.5707963267948966</pose>
+      <pose>2.35 5.0 0 0 0 -1.5707963267948966</pose>
       <name>couch</name>
       <uri>model://robotics_testlabs/couch</uri>
     </include>

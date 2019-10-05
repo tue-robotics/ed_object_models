@@ -116,7 +116,7 @@
       <pose>0.72 0.0 0.5 0 0 0</pose>
       <name>5</name>
     </link>
-    <link name="in_front_of">
+<!--    <link name="in_front_of">
       <virtual_volume name="in_front_of">
         <geometry>
           <box>
@@ -127,7 +127,7 @@
         <name>in_front_of</name>
       </virtual_volume>
       <name>in_front_of</name>
-    </link>
+    </link> -->
     <static>true</static>
     <name>robotics_testlab_B/tubing</name>
   </model>

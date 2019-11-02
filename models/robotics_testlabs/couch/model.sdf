@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
-  <model name="rwc2019/couch">
+  <model name="couch">
     <link name="back">
       <collision name="back">
         <geometry>
@@ -106,6 +106,6 @@
       <name>in_front_of</name>
     </link>
     <static>true</static>
-    <name>rwc2019/couch</name>
+    <name>couch</name>
   </model>
 </sdf>

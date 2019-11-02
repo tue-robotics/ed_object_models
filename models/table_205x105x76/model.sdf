@@ -1,11 +1,11 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
-  <model name="robotics_testlab_B/tubing">
+  <model name="table_205x105x76">
     <link name="1">
       <collision name="1">
         <geometry>
           <box>
-            <size>1.8 0.36 0.36</size>
+            <size>2.05 1.05 0.02</size>
           </box>
         </geometry>
         <name>1</name>
@@ -13,22 +13,22 @@
       <visual name="1">
         <geometry>
           <box>
-            <size>1.8 0.36 0.36</size>
+            <size>2.05 1.05 0.02</size>
           </box>
         </geometry>
         <material>
-          <ambient>0.5 0.5 0.5 1</ambient>
+          <ambient>0.8 0.8 0.8 1</ambient>
         </material>
         <name>1</name>
       </visual>
-      <pose>0.0 0.0 1.04 0 0 0</pose>
+      <pose>0.0 0.0 0.75 0 0 0</pose>
       <name>1</name>
     </link>
     <link name="2">
       <collision name="2">
         <geometry>
           <box>
-            <size>0.36 0.36 1.0</size>
+            <size>0.05 0.05 0.74</size>
           </box>
         </geometry>
         <name>2</name>
@@ -36,22 +36,22 @@
       <visual name="2">
         <geometry>
           <box>
-            <size>0.36 0.36 1.0</size>
+            <size>0.05 0.05 0.74</size>
           </box>
         </geometry>
         <material>
-          <ambient>0.5 0.5 0.5 1</ambient>
+          <ambient>0.8 0.8 0.8 1</ambient>
         </material>
         <name>2</name>
       </visual>
-      <pose>0.72 0.0 1.72 0 0 0</pose>
+      <pose>-1.0 -0.5 0.37 0 0 0</pose>
       <name>2</name>
     </link>
     <link name="3">
       <collision name="3">
         <geometry>
           <box>
-            <size>0.36 0.36 1.44</size>
+            <size>0.05 0.05 0.74</size>
           </box>
         </geometry>
         <name>3</name>
@@ -59,22 +59,22 @@
       <visual name="3">
         <geometry>
           <box>
-            <size>0.36 0.36 1.44</size>
+            <size>0.05 0.05 0.74</size>
           </box>
         </geometry>
         <material>
-          <ambient>0.5 0.5 0.5 1</ambient>
+          <ambient>0.8 0.8 0.8 1</ambient>
         </material>
         <name>3</name>
       </visual>
-      <pose>1.16 0.0 1.5 0 0 0</pose>
+      <pose>1.0 -0.5 0.37 0 0 0</pose>
       <name>3</name>
     </link>
     <link name="4">
       <collision name="4">
         <geometry>
           <box>
-            <size>1.4 0.36 0.8</size>
+            <size>0.05 0.05 0.74</size>
           </box>
         </geometry>
         <name>4</name>
@@ -82,22 +82,22 @@
       <visual name="4">
         <geometry>
           <box>
-            <size>1.4 0.36 0.8</size>
+            <size>0.05 0.05 0.74</size>
           </box>
         </geometry>
         <material>
-          <ambient>0.5 0.5 0.5 1</ambient>
+          <ambient>0.8 0.8 0.8 1</ambient>
         </material>
         <name>4</name>
       </visual>
-      <pose>0.64 0.0 0.4 0 0 0</pose>
+      <pose>-1.0 0.5 0.37 0 0 0</pose>
       <name>4</name>
     </link>
     <link name="5">
       <collision name="5">
         <geometry>
           <box>
-            <size>0.36 0.36 1.0</size>
+            <size>0.05 0.05 0.74</size>
           </box>
         </geometry>
         <name>5</name>
@@ -105,30 +105,18 @@
       <visual name="5">
         <geometry>
           <box>
-            <size>0.36 0.36 1.0</size>
+            <size>0.05 0.05 0.74</size>
           </box>
         </geometry>
         <material>
-          <ambient>0.5 0.5 0.5 1</ambient>
+          <ambient>0.8 0.8 0.8 1</ambient>
         </material>
         <name>5</name>
       </visual>
-      <pose>0.72 0.0 0.5 0 0 0</pose>
+      <pose>1.0 0.5 0.37 0 0 0</pose>
       <name>5</name>
     </link>
-<!--    <link name="in_front_of">
-      <virtual_volume name="in_front_of">
-        <geometry>
-          <box>
-            <size>1.2 0.6 1</size>
-          </box>
-        </geometry>
-        <pose>0.6 0.0 0.5 0 0 0</pose>
-        <name>in_front_of</name>
-      </virtual_volume>
-      <name>in_front_of</name>
-    </link> -->
     <static>true</static>
-    <name>robotics_testlab_B/tubing</name>
+    <name>table_205x105x76</name>
   </model>
 </sdf>

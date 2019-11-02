@@ -350,90 +350,75 @@
       <name>floor</name>
       <uri>model://floor</uri>
     </include>
-    <include name="plant">
-      <pose>3.26 5.19 0 0 0 0</pose>
-      <name>plant</name>
-      <uri>model://robotics_testlabs/plant</uri>
-    </include>
     <include name="trashbin">
-      <pose>1.8 4.8 0 0 0 0</pose>
+      <pose>1.32 5.3 0 0 0 0</pose>
       <name>trashbin</name>
       <uri>model://robotics_testlabs/trashbin</uri>
     </include>
     <include name="paperbin">
-      <pose>2.8 3.6 0 0 0 2.35619449</pose>
+      <pose>-0.26 3.45 0 0 0 3.14159</pose>
       <name>paperbin</name>
       <uri>model://robotics_testlabs/paperbin</uri>
     </include>
     <include name="flight_case">
-      <pose>-3.28 1.23 0.0 0 0 0</pose>
+      <pose>-3.28 1.23 0 0 0 0</pose>
       <name>flight_case</name>
       <uri>model://robotics_testlabs/flight_case</uri>
     </include>
-    <include name="battery_table">
-      <pose>-3.36 1.99 0.0 0 0 0</pose>
-      <name>battery_table</name>
-      <uri>model://robotics_testlabs/battery_table</uri>
-    </include>
-    <include name="couch_table">
-      <pose>3.34 1.5 0 0 0 3.14159265359</pose>
-      <name>couch_table</name>
-      <uri>model://ddw/salon</uri>
-    </include>
+<!--    <include name="sergio">
+      <pose>-3.36 1.99 0 0 0 0</pose>
+      <name>sergio</name>
+      <uri>model://robotics_testlabs/sergio</uri>
+    </include> -->
     <include name="black_cabinet1">
-      <pose>2.98 -1.42 0 0 0 1.57079632679</pose>
-      <name>black_cabinet1</name>
-      <uri>model://robotics_testlab_B/black_cabinet</uri>
-    </include>
-    <include name="black_cabinet2">
-      <pose>2.06 -1.42 0 0 0 1.57079632679</pose>
-      <name>black_cabinet2</name>
-      <uri>model://robotics_testlab_B/black_cabinet</uri>
-    </include>
-    <include name="black_cabinet3">
-      <pose>1.14 -1.42 0 0 0 1.57079632679</pose>
-      <name>black_cabinet3</name>
-      <uri>model://robotics_testlab_B/black_cabinet</uri>
-    </include>
-    <include name="black_cabinet4">
-      <pose>0.22 -1.42 0 0 0 1.57079632679</pose>
+      <pose>-0.19 -1.48 0 0 0 1.57079632679</pose>
       <name>black_cabinet4</name>
       <uri>model://robotics_testlab_B/black_cabinet</uri>
     </include>
-    <include name="black_cabinet5">
-      <pose>-0.92 -1.42 0 0 0 1.57079632679</pose>
+    <include name="black_cabinet2">
+      <pose>-1.31 -1.48 0 0 0 1.57079632679</pose>
       <name>black_cabinet5</name>
       <uri>model://robotics_testlab_B/black_cabinet</uri>
     </include>
+    <include name="black_cabinet3">
+      <pose>-2.23 -1.48 0 0 0 1.57079632679</pose>
+      <name>black_cabinet1</name>
+      <uri>model://robotics_testlab_B/black_cabinet</uri>
+    </include>
+    <include name="black_cabinet4">
+      <pose>-2.9 -0.81 0 0 0 0.0</pose>
+      <name>black_cabinet2</name>
+      <uri>model://robotics_testlab_B/black_cabinet</uri>
+    </include>
+    <include name="black_cabinet5">
+      <pose>-2.9 0.11 0 0 0 0.0</pose>
+      <name>black_cabinet3</name>
+      <uri>model://robotics_testlab_B/black_cabinet</uri>
+    </include>
     <include name="bar">
-      <pose>2.65 0.3 0 0 0 1.57079632679</pose>
+      <pose>0.6 3.45 0 0 0 1.57079632679</pose>
       <name>bar</name>
       <uri>model://ddw/table</uri>
     </include>
     <include name="hallway_table">
-      <pose>0.72 3.45 0.02 0 0 1.57079632679</pose>
+      <pose>-0.65 1.45 0 0 0 3.14159265359</pose>
       <name>hallway_table</name>
       <uri>model://ddw/couch</uri>
     </include>
     <include name="cabinet">
-      <pose>3.3 4.35 0 0 0 3.14159265359</pose>
+      <pose>3.28 4.15 0 0 0 3.14159265359</pose>
       <name>cabinet</name>
       <uri>model://robotics_testlab_B/corridor_cabinet</uri>
     </include>
-    <include name="chair">
-      <pose>2.0 5.3 0 0 0 -1.57079632679</pose>
-      <name>chair</name>
-      <uri>model://ddw/chair</uri>
+    <include name="rack">
+      <pose>3.37 5.15 0 0 0 0</pose>
+      <name>rack</name>
+      <uri>model://robotics_testlabs/rack</uri>
     </include>
-    <include name="nightstand">
-      <pose>-1.92 -1.42 0 0 0 1.57079632679</pose>
-      <name>nightstand</name>
-      <uri>model://robotics_testlab_B/bed_cabinet</uri>
-    </include>
-    <include name="bed">
-      <pose>-2.725 -0.52 0 0 0 1.57079632679</pose>
-      <name>bed</name>
-      <uri>model://robotics_testlab_B/bed</uri>
+    <include name="couch">
+      <pose>2.35 5.0 0 0 0 -1.5707963267948966</pose>
+      <name>couch</name>
+      <uri>model://robotics_testlabs/couch</uri>
     </include>
     <include name="tubing">
       <pose>-3.4 -0.34 0 0 0 -1.57079632679</pose>
@@ -446,17 +431,17 @@
       <uri>model://table_120x80x76</uri>
     </include>
     <include name="operator_table2">
-      <pose>-3.11 4.05 0.0 0 0 0</pose>
+      <pose>-3.11 4.05 0 0 0 0</pose>
       <name>operator_table2</name>
       <uri>model://table_120x80x76</uri>
     </include>
     <include name="dinner_table">
-      <pose>0.4 1.92 0.0 0 0 0</pose>
+      <pose>0.4 1.92 0 0 0 0</pose>
       <name>dinner_table</name>
       <uri>model://table_120x80x76</uri>
     </include>
     <include name="workbench">
-      <pose>-3.31 3.03 0.0 0 0 1.57079632679</pose>
+      <pose>-3.31 3.03 0 0 0 1.57079632679</pose>
       <name>workbench</name>
       <uri>model://table_120x80x76</uri>
     </include>
@@ -464,6 +449,21 @@
       <pose>3.24 2.713 0 0 0 3.1415</pose>
       <name>bookcase</name>
       <uri>model://robotics_testlabs/plastic_cabinet</uri>
+    </include>
+    <include name="chair">
+      <pose>3.24 2.19 0 0 0 3.1415</pose>
+      <name>chair</name>
+      <uri>model://ddw/chair</uri>
+    </include>
+    <include name="couch_table">
+      <pose>3.34 1.39 0 0 0 3.14159265359</pose>
+      <name>couch_table</name>
+      <uri>model://ddw/salon</uri>
+    </include>
+    <include name="panda_table">
+      <pose>2.0 -0.3 0 0 0 3.14159265359</pose>
+      <name>panda_table</name>
+      <uri>model://table_205x105x76</uri>
     </include>
     <include name="electro_bar_1">
       <pose>-3.72 2.96 0.94 0 0 0</pose>

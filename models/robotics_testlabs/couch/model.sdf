@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="couch">
+    <link name="back">
+      <collision name="back">
+        <geometry>
+          <box>
+            <size>0.27 1.73 0.75</size>
+          </box>
+        </geometry>
+        <name>back</name>
+      </collision>
+      <visual name="back">
+        <geometry>
+          <box>
+            <size>0.27 1.73 0.75</size>
+          </box>
+        </geometry>
+        <name>back</name>
+      </visual>
+      <pose>-0.4 0 0.37 0 0 0</pose>
+      <name>back</name>
+    </link>
+    <link name="side_left">
+      <collision name="side_left">
+        <geometry>
+          <box>
+            <size>0.57 0.18 0.57</size>
+          </box>
+        </geometry>
+        <name>side_left</name>
+      </collision>
+      <visual name="side_left">
+        <geometry>
+          <box>
+            <size>0.57 0.18 0.57</size>
+          </box>
+        </geometry>
+        <name>side_left</name>
+      </visual>
+      <pose>0 -0.77 0.28 0 0 0</pose>
+      <name>side_left</name>
+    </link>
+    <link name="side_right">
+      <collision name="side_right">
+        <geometry>
+          <box>
+            <size>0.57 0.18 0.57</size>
+          </box>
+        </geometry>
+        <name>side_right</name>
+      </collision>
+      <visual name="side_right">
+        <geometry>
+          <box>
+            <size>0.57 0.18 0.57</size>
+          </box>
+        </geometry>
+        <name>side_right</name>
+      </visual>
+      <pose>0 0.77 0.28 0 0 0</pose>
+      <name>side_right</name>
+    </link>
+    <link name="seat">
+      <collision name="seat">
+        <geometry>
+          <box>
+            <size>0.62 1.36 0.17</size>
+          </box>
+        </geometry>
+        <name>seat</name>
+      </collision>
+      <visual name="seat">
+        <geometry>
+          <box>
+            <size>0.62 1.36 0.17</size>
+          </box>
+        </geometry>
+        <name>seat</name>
+      </visual>
+      <pose>0.05 0 0.26 0 0 0</pose>
+      <name>seat</name>
+    </link>
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of">
+        <geometry>
+          <box>
+            <size>0.46 1.3 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.02 0.0 0.44 0 0 0</pose>
+        <name>on_top_of</name>
+      </virtual_volume>
+      <name>on_top_of</name>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of">
+        <geometry>
+          <box>
+            <size>0.2 1.16 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.75 0.0 0.005 0 0 0</pose>
+        <name>in_front_of</name>
+      </virtual_volume>
+      <name>in_front_of</name>
+    </link>
+    <static>true</static>
+    <name>couch</name>
+  </model>
+</sdf>

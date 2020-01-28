@@ -350,16 +350,6 @@
       <name>floor</name>
       <uri>model://floor</uri>
     </include>
-    <include name="trashbin">
-      <pose>1.32 5.3 0 0 0 0</pose>
-      <name>trashbin</name>
-      <uri>model://robotics_testlabs/trashbin</uri>
-    </include>
-    <include name="paperbin">
-      <pose>-0.26 3.45 0 0 0 3.14159</pose>
-      <name>paperbin</name>
-      <uri>model://robotics_testlabs/paperbin</uri>
-    </include>
     <include name="flight_case">
       <pose>-3.28 1.23 0 0 0 0</pose>
       <name>flight_case</name>

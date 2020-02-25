@@ -81,6 +81,18 @@
       </virtual_volume>
       <name>right_seat</name>
     </link>
+    <link name="left_seat">
+      <virtual_volume name="left_seat">
+        <geometry>
+          <box>
+            <size>0.2 0.65 1</size>
+          </box>
+        </geometry>
+        <pose>0.045 0.325 0.65 0 0 0</pose>
+        <name>left_seat</name>
+      </virtual_volume>
+      <name>left_seat</name>
+    </link>
     <link name="on_top_of">
       <virtual_volume name="on_top_of">
         <geometry>

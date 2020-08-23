@@ -25,6 +25,7 @@ def get_model_path(model_name, ext="yaml"):
     # type: (str, str) -> str
     """
     Checks for model file in ED_MODEL_PATH
+
     :param model_name: name of the model
     :type model_name: str
     :param ext: extension of the file: yaml/sdf
@@ -55,6 +56,7 @@ def unique_name(name, names):
     Provide a unique name based on name. If name already in names, the name is changed.
     If the name ends with digits, this number is increased. If the name doesn't end with a digit, the name is append
     with '1'. This continues until a unique name is found.
+
     :param name: name you want to be unique
     :type name: str
     :param names: list of names which are already used
@@ -78,6 +80,7 @@ def read_pose(yaml_dict):
     # type: (dict) -> str
     """
     converts pose in yaml dict to string of 6 coordinates.
+
     :param yaml_dict: dict with possible pose as key on first level in dict
     :type yaml_dict: dict
     :return: string with 6 coordinates
@@ -99,6 +102,7 @@ def read_geometry(shape_item, model_name):
     """
     Convert a shape item to a SDF geometry. With a possible pose offset. Which should be added to
     visual/collision/virtual_volume
+
     :param shape_item: dict with shape description
     :type shape_item: dict
     :param model_name: name of current model being converted
@@ -195,6 +199,7 @@ def read_shape_item(shape_item, link_names, color, model_name):
     # type: (dict, list[str], OrderedDict, str) -> Union[dict, None]
     """
     Convert shape item to a link with collision and visual elements
+
     :param shape_item: dict of one shape item
     :type shape_item: dict
     :param link_names: list of link names already used
@@ -250,6 +255,7 @@ def read_shape(shape, link_names, color, model_name):
     # type: (dict, list[str], OrderedDict, str) -> Union[list, None]
     """
     Convert (array of) shape(s) to list of SDF links
+
     :param shape: shape dict
     :type shape: dict
     :param link_names: list of link names already used
@@ -284,6 +290,7 @@ def read_areas(areas, link_names, model_name):
     # type: (list, list[str], str) -> Union[list, None]
     """
     Convert areas to links with a virtual area
+
     :param areas: list of areas
     :type areas: list
     :param link_names: list of link names already used
@@ -329,6 +336,7 @@ def parse_to_xml(xml, item, list_name=""):
     # type: (ET.Element, Union[list, dict, str, float, int], str) -> None
     """
     Extend XML with elements from a dict, list or a string
+
     :param xml: xml element
     :type xml: xml.etree.ElementTree.Element
     :param item: dict, list or str
@@ -374,7 +382,8 @@ def parse_to_xml(xml, item, list_name=""):
 def write_xml_to_file(xml_element, filepath):
     # type: (ET.Element, str) -> None
     """
-    write xml element to a file
+    Write xml element to a file
+
     :param xml_element: xml element
     :type xml_element: xml.etree.ElementTree.Element
     :param filepath: full path of file, which to write
@@ -395,7 +404,8 @@ def write_xml_to_file(xml_element, filepath):
 def convert_world(yml, model_name, recursive=False):
     # type: (dict, str, bool) -> dict
     """
-    convert world yaml to sdf world dict
+    Convert world yaml to sdf world dict
+
     :param yml: yaml object of a world ed yaml
     :type yml: dict
     :param model_name: Name of the world
@@ -449,7 +459,8 @@ def convert_world(yml, model_name, recursive=False):
 def convert_model(yml, model_name):
     # type: (dict, str) -> dict
     """
-    convert model yaml to sdf model dict
+    Convert model yaml to sdf model dict
+
     :param yml: yaml object of a world ed yaml
     :type yml: dict
     :param model_name: Name of the model
@@ -487,6 +498,7 @@ def convert_model_data(model_data, model_name, model_dir, recursive=False):
     """
     Convert model data to SDF with the name 'model_name' in directory 'model_dir'.
     Most of the times model_dir=ROOT/model_name for a ROOT in ED_MODEL_PATH
+
     :param model_data: yaml data of the model
     :type model_data: Union[dict, list]
     :param model_name: Name of the model
@@ -620,6 +632,7 @@ def convert_model_file(model_name, model_file, recursive=False):
     # type: (str, str, bool) -> int
     """
     Convert a model to SDF based on a model file
+
     :param model_name: name of the model
     :type model_name: str
     :param model_file: path of the model file
@@ -646,6 +659,7 @@ def convert_model_name(model_name, recursive=False):
     # type: (str, bool) -> int
     """
     Convert a model to SDF based on the model name.
+
     :param model_name: Name of the model, model_name/model.yaml should exist in ED_MODEL_PATH
     :param recursive: If true all included models are also converted
     :type recursive: bool

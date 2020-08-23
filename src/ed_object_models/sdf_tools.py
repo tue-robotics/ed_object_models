@@ -12,6 +12,7 @@ from tf.transformations import quaternion_from_euler
 def get_sdf_string(model_type):
     """
     Get sdf string of a specific model. Searching in GAZEBO_MODEL_PATH
+
     :param model_type: name of the model
     :type model_type: str
     :return: xml string, empty in case of error
@@ -53,9 +54,9 @@ def get_sdf_string(model_type):
 def spawn_sdf_from_yaml(yaml_path):
     """
     Spawns a list of sdf models from a yaml file into Gazebo.
+
     :param yaml_path: path to a yaml file.
     :type yaml_path: str
-
     The yaml file that yaml_path points to should be a dictonary or a list of dictionaries.
     Each dictionary should at least contain the keys id, type, x, y and z,
     additional optional keys are roll, pitch and yaw. The meaning of the keys are:

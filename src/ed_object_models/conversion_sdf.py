@@ -355,17 +355,12 @@ def parse_to_xml(xml, item, list_name=""):
     elif isinstance(item, dict):
         for k, v in item.items():
             # attributes
-            if k == "name" or k == "version" or k == "type":
+            attributes = ["version", "type"]
+            if xml.tag != "include":
+                attributes.append("name")
+            if k in attributes:
                 xml.set(k, v)
-
-                # Names in includes are elements, not attributes. Using below code generates names as attributes AND as
-                # elements:
-                if not k == "name":
-                    continue
-
-                # Another solution to above would be to input an extra argument to the parse_to_xml function to check if
-                # the file that is parsed is a world or a model. For models the names can then be set as attributes, for
-                # worlds as elements.
+                continue
 
             if isinstance(v, list):
                 parse_to_xml(xml, v, k)

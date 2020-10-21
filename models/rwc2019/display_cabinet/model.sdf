@@ -8,7 +8,6 @@
             <size>0.513 2.0 0.75</size>
           </box>
         </geometry>
-        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -16,10 +15,8 @@
             <size>0.513 2.0 0.75</size>
           </box>
         </geometry>
-        <name>1</name>
       </visual>
       <pose>0.0 0.0 0.375 0 0 0</pose>
-      <name>1</name>
     </link>
     <link name="on_top_of">
       <virtual_volume name="on_top_of">
@@ -29,9 +26,7 @@
           </box>
         </geometry>
         <pose>0.0 -0.48 0.895 0 0 0</pose>
-        <name>on_top_of</name>
       </virtual_volume>
-      <name>on_top_of</name>
     </link>
     <link name="in_front_of">
       <virtual_volume name="in_front_of">
@@ -41,11 +36,8 @@
           </box>
         </geometry>
         <pose>0.7565 -0.8 0.005 0 0 0</pose>
-        <name>in_front_of</name>
       </virtual_volume>
-      <name>in_front_of</name>
     </link>
     <static>true</static>
-    <name>rwc2019/display_cabinet</name>
   </model>
 </sdf>

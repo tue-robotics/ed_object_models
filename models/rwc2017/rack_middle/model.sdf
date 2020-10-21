@@ -4,7 +4,6 @@
     <light name="sun" type="directional">
       <direction>0.5 0.1 -0.9</direction>
       <pose>0 0 10 0 0 0</pose>
-      <name>sun</name>
       <specular>0.2 0.2 0.2 1</specular>
       <cast_shadows>true</cast_shadows>
       <diffuse>0.8 0.8 0.8 1</diffuse>
@@ -15,12 +14,12 @@
         <linear>0.01</linear>
       </attenuation>
     </light>
-    <include name="lower_part">
+    <include>
       <pose>0 -0.45 0.225 -1.57079632679 0 0</pose>
       <name>lower_part</name>
       <uri>model://rwc2017/cabinet_simple_no_areas</uri>
     </include>
-    <include name="top_part">
+    <include>
       <pose>0 -0.45 0.675 -1.57079632679 0 0</pose>
       <name>top_part</name>
       <uri>model://rwc2017/cabinet_simple_no_areas</uri>
@@ -37,6 +36,5 @@
         </solver>
       </ode>
     </physics>
-    <name>rwc2017/rack_middle</name>
   </world>
 </sdf>

@@ -18,7 +18,6 @@
             <point>-0.65 0.025</point>
           </polyline>
         </geometry>
-        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -36,12 +35,9 @@
             <point>-0.65 0.025</point>
           </polyline>
         </geometry>
-        <name>1</name>
       </visual>
       <pose>0 0 0 0 0 0</pose>
-      <name>1</name>
     </link>
     <static>true</static>
-    <name>tue_library/desk.corner</name>
   </model>
 </sdf>

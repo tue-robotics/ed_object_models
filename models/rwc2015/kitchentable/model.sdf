@@ -9,7 +9,6 @@
           </box>
         </geometry>
         <pose>0.0 0.0 0.76 0 0 0</pose>
-        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -21,10 +20,8 @@
           <ambient>0.9 0.9 0.9 1</ambient>
         </material>
         <pose>0.0 0.0 0.76 0 0 0</pose>
-        <name>1</name>
       </visual>
       <pose>0 0 0 0 0 0</pose>
-      <name>1</name>
     </link>
     <link name="2">
       <collision name="2">
@@ -33,7 +30,6 @@
             <size>0.05 0.075 0.76</size>
           </box>
         </geometry>
-        <name>2</name>
       </collision>
       <visual name="2">
         <geometry>
@@ -44,10 +40,8 @@
         <material>
           <ambient>0.9 0.9 0.9 1</ambient>
         </material>
-        <name>2</name>
       </visual>
       <pose>-0.305 -0.5425 0.38 0 0 0</pose>
-      <name>2</name>
     </link>
     <link name="3">
       <collision name="3">
@@ -56,7 +50,6 @@
             <size>0.05 0.075 0.76</size>
           </box>
         </geometry>
-        <name>3</name>
       </collision>
       <visual name="3">
         <geometry>
@@ -67,10 +60,8 @@
         <material>
           <ambient>0.9 0.9 0.9 1</ambient>
         </material>
-        <name>3</name>
       </visual>
       <pose>-0.305 0.5425 0.38 0 0 0</pose>
-      <name>3</name>
     </link>
     <link name="4">
       <collision name="4">
@@ -79,7 +70,6 @@
             <size>0.05 0.075 0.76</size>
           </box>
         </geometry>
-        <name>4</name>
       </collision>
       <visual name="4">
         <geometry>
@@ -90,10 +80,8 @@
         <material>
           <ambient>0.9 0.9 0.9 1</ambient>
         </material>
-        <name>4</name>
       </visual>
       <pose>0.305 -0.5425 0.38 0 0 0</pose>
-      <name>4</name>
     </link>
     <link name="5">
       <collision name="5">
@@ -102,7 +90,6 @@
             <size>0.05 0.075 0.76</size>
           </box>
         </geometry>
-        <name>5</name>
       </collision>
       <visual name="5">
         <geometry>
@@ -113,10 +100,8 @@
         <material>
           <ambient>0.9 0.9 0.9 1</ambient>
         </material>
-        <name>5</name>
       </visual>
       <pose>0.305 0.5425 0.38 0 0 0</pose>
-      <name>5</name>
     </link>
     <link name="in_front_of">
       <virtual_volume name="in_front_of">
@@ -126,11 +111,8 @@
           </box>
         </geometry>
         <pose>0.0 0.95 0.5 0 0 0</pose>
-        <name>in_front_of</name>
       </virtual_volume>
-      <name>in_front_of</name>
     </link>
     <static>true</static>
-    <name>rwc2015/kitchentable</name>
   </model>
 </sdf>

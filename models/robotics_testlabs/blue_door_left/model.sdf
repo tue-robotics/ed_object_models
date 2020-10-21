@@ -8,7 +8,6 @@
             <size>0.04 0.926 2.12</size>
           </box>
         </geometry>
-        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -19,12 +18,9 @@
         <material>
           <ambient>0 0 1 1</ambient>
         </material>
-        <name>1</name>
       </visual>
       <pose>0.025 0.473 1.06 0 0 0</pose>
-      <name>1</name>
     </link>
     <static>true</static>
-    <name>robotics_testlabs/blue_door_left</name>
   </model>
 </sdf>

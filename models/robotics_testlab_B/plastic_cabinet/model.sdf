@@ -4,7 +4,6 @@
     <light name="sun" type="directional">
       <direction>0.5 0.1 -0.9</direction>
       <pose>0 0 10 0 0 0</pose>
-      <name>sun</name>
       <specular>0.2 0.2 0.2 1</specular>
       <cast_shadows>true</cast_shadows>
       <diffuse>0.8 0.8 0.8 1</diffuse>
@@ -15,37 +14,37 @@
         <linear>0.01</linear>
       </attenuation>
     </light>
-    <include name="frame">
+    <include>
       <pose>0 0 0 0 0 0</pose>
       <name>frame</name>
       <uri>model://robotics_testlab_B.plastic_cabinet.frame</uri>
     </include>
-    <include name="bottom">
+    <include>
       <pose>0 0 0 0 0 0</pose>
       <name>bottom</name>
       <uri>model://robotics_testlab_B.plastic_cabinet.shelf</uri>
     </include>
-    <include name="shelf1">
+    <include>
       <pose>0 0 0.35 0 0 0</pose>
       <name>shelf1</name>
       <uri>model://robotics_testlab_B.plastic_cabinet.shelf</uri>
     </include>
-    <include name="shelf2">
+    <include>
       <pose>0 0 0.7 0 0 0</pose>
       <name>shelf2</name>
       <uri>model://robotics_testlab_B.plastic_cabinet.shelf</uri>
     </include>
-    <include name="shelf3">
+    <include>
       <pose>0 0 1.055 0 0 0</pose>
       <name>shelf3</name>
       <uri>model://robotics_testlab_B.plastic_cabinet.shelf</uri>
     </include>
-    <include name="shelf4">
+    <include>
       <pose>0 0 1.41 0 0 0</pose>
       <name>shelf4</name>
       <uri>model://robotics_testlab_B.plastic_cabinet.shelf</uri>
     </include>
-    <include name="top">
+    <include>
       <pose>0 0 1.74 0 0 0</pose>
       <name>top</name>
       <uri>model://robotics_testlab_B.plastic_cabinet.shelf</uri>
@@ -62,6 +61,5 @@
         </solver>
       </ode>
     </physics>
-    <name>robotics_testlab_B/plastic_cabinet</name>
   </world>
 </sdf>

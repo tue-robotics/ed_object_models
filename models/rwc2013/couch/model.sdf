@@ -8,7 +8,6 @@
             <size>0.716 1.966 0.51</size>
           </box>
         </geometry>
-        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -19,12 +18,9 @@
         <material>
           <ambient>0.8 0.8 0.8 1</ambient>
         </material>
-        <name>1</name>
       </visual>
       <pose>0.0 0.0 0.255 0 0 0</pose>
-      <name>1</name>
     </link>
     <static>true</static>
-    <name>rwc2013/couch</name>
   </model>
 </sdf>

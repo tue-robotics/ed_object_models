@@ -8,7 +8,6 @@
             <size>0.6 0.845 0.05</size>
           </box>
         </geometry>
-        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -19,10 +18,8 @@
         <material>
           <ambient>0.9 0.9 0.9 1</ambient>
         </material>
-        <name>1</name>
       </visual>
       <pose>0.0 0.0 0.0 0 0 0</pose>
-      <name>1</name>
     </link>
     <link name="in_front_of">
       <virtual_volume name="in_front_of">
@@ -32,9 +29,7 @@
           </box>
         </geometry>
         <pose>0.91 0.0 0.88 0 0 0</pose>
-        <name>in_front_of</name>
       </virtual_volume>
-      <name>in_front_of</name>
     </link>
     <link name="in">
       <virtual_volume name="in">
@@ -44,11 +39,8 @@
           </box>
         </geometry>
         <pose>0.0 0.0 0.1 0 0 0</pose>
-        <name>in</name>
       </virtual_volume>
-      <name>in</name>
     </link>
     <static>true</static>
-    <name>rwc2015/cabinet/shelf</name>
   </model>
 </sdf>

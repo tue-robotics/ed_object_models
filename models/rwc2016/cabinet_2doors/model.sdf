@@ -8,7 +8,6 @@
             <size>0.401 0.8 0.8</size>
           </box>
         </geometry>
-        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -19,10 +18,8 @@
         <material>
           <ambient>0.75 0.75 0.75 1</ambient>
         </material>
-        <name>1</name>
       </visual>
       <pose>0 0 0.4 0 0 0</pose>
-      <name>1</name>
     </link>
     <link name="on_top_of">
       <virtual_volume name="on_top_of">
@@ -32,9 +29,7 @@
           </box>
         </geometry>
         <pose>0.0 0.0 0.945 0 0 0</pose>
-        <name>on_top_of</name>
       </virtual_volume>
-      <name>on_top_of</name>
     </link>
     <link name="in_front_of">
       <virtual_volume name="in_front_of">
@@ -44,11 +39,8 @@
           </box>
         </geometry>
         <pose>0.7005 0.0 0.005 0 0 0</pose>
-        <name>in_front_of</name>
       </virtual_volume>
-      <name>in_front_of</name>
     </link>
     <static>true</static>
-    <name>rwc2016/cabinet_2doors</name>
   </model>
 </sdf>

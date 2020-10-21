@@ -8,7 +8,6 @@
             <size>0.51 0.29 0.01</size>
           </box>
         </geometry>
-        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -19,12 +18,9 @@
         <material>
           <ambient>0.1 0.1 0.1 1</ambient>
         </material>
-        <name>1</name>
       </visual>
       <pose>0.0 0.0 0.05 0 0 0</pose>
-      <name>1</name>
     </link>
     <static>true</static>
-    <name>rgo2015/stove</name>
   </model>
 </sdf>

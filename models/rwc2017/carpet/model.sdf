@@ -9,7 +9,6 @@
             <radius>0.9</radius>
           </cylinder>
         </geometry>
-        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -18,12 +17,9 @@
             <radius>0.9</radius>
           </cylinder>
         </geometry>
-        <name>1</name>
       </visual>
       <pose>0 0 0.015 0 0 0</pose>
-      <name>1</name>
     </link>
     <static>true</static>
-    <name>rwc2017/carpet</name>
   </model>
 </sdf>

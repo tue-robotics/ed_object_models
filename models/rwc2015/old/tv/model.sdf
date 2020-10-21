@@ -4,7 +4,6 @@
     <light name="sun" type="directional">
       <direction>0.5 0.1 -0.9</direction>
       <pose>0 0 10 0 0 0</pose>
-      <name>sun</name>
       <specular>0.2 0.2 0.2 1</specular>
       <cast_shadows>true</cast_shadows>
       <diffuse>0.8 0.8 0.8 1</diffuse>
@@ -15,17 +14,17 @@
         <linear>0.01</linear>
       </attenuation>
     </light>
-    <include name="foot">
+    <include>
       <pose>0 0 0 0 0 0</pose>
       <name>foot</name>
       <uri>model://rwc2015/tv/foot</uri>
     </include>
-    <include name="pole">
+    <include>
       <pose>0 0 0 0 0 0</pose>
       <name>pole</name>
       <uri>model://rwc2015/tv/pole</uri>
     </include>
-    <include name="tv">
+    <include>
       <pose>0.23 0 1.67 0 0.1 0</pose>
       <name>tv</name>
       <uri>model://rwc2015/tv/tv</uri>
@@ -42,6 +41,5 @@
         </solver>
       </ode>
     </physics>
-    <name>rwc2015/old/tv</name>
   </world>
 </sdf>

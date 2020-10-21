@@ -8,7 +8,6 @@
             <uri>model://rgo2019/armchair/heightmap.stl</uri>
           </mesh>
         </geometry>
-        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -16,12 +15,10 @@
             <uri>model://rgo2019/armchair/heightmap.stl</uri>
           </mesh>
         </geometry>
-        <name>1</name>
       </visual>
       <pose>0 0 0 0 0 -1.57</pose>
-      <name>1</name>
     </link>
-     <link name="on_top_of">
+    <link name="on_top_of">
       <virtual_volume name="on_top_of">
         <geometry>
           <box>
@@ -29,9 +26,7 @@
           </box>
         </geometry>
         <pose>-0.07 0.0 0.51 0 0 0</pose>
-        <name>on_top_of</name>
       </virtual_volume>
-      <name>on_top_of</name>
     </link>
     <link name="in_front_of">
       <virtual_volume name="in_front_of">
@@ -41,11 +36,8 @@
           </box>
         </geometry>
         <pose>-0.60 0.0 0.005 0 0 0</pose>
-        <name>in_front_of</name>
       </virtual_volume>
-      <name>in_front_of</name>
-   </link>
+    </link>
     <static>true</static>
-    <name>rgo2019/armchair</name>
   </model>
 </sdf>

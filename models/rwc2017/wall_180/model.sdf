@@ -8,7 +8,6 @@
             <size>1.8 0.1 0.6</size>
           </box>
         </geometry>
-        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -19,12 +18,9 @@
         <material>
           <ambient>0.75 0.75 0.75 1</ambient>
         </material>
-        <name>1</name>
       </visual>
       <pose>0 0 0.3 0 0 0</pose>
-      <name>1</name>
     </link>
     <static>true</static>
-    <name>rwc2017/wall_180</name>
   </model>
 </sdf>

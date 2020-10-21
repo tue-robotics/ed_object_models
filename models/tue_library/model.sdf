@@ -4,7 +4,6 @@
     <light name="sun" type="directional">
       <direction>0.5 0.1 -0.9</direction>
       <pose>0 0 10 0 0 0</pose>
-      <name>sun</name>
       <specular>0.2 0.2 0.2 1</specular>
       <cast_shadows>true</cast_shadows>
       <diffuse>0.8 0.8 0.8 1</diffuse>
@@ -15,107 +14,107 @@
         <linear>0.01</linear>
       </attenuation>
     </light>
-    <include name="floor">
+    <include>
       <pose>0 0 0 0 0 0</pose>
       <name>floor</name>
       <uri>model://floor</uri>
     </include>
-    <include name="walls">
+    <include>
       <pose>0 0 0 0 0 0</pose>
       <name>walls</name>
       <uri>model://tue_library/walls</uri>
     </include>
-    <include name="desks-support">
+    <include>
       <pose>0 0 0 0 0 0</pose>
       <name>desks-support</name>
       <uri>model://tue_library/desks.support</uri>
     </include>
-    <include name="desks-top">
+    <include>
       <pose>0 0 0.695 0 0 0</pose>
       <name>desks-top</name>
       <uri>model://tue_library/desks.top</uri>
     </include>
-    <include name="relax-room-1">
+    <include>
       <pose>-27.97 3.212 0 0 0 0</pose>
       <name>relax-room-1</name>
       <uri>model://tue_library/relax_room</uri>
     </include>
-    <include name="relax-room-2">
+    <include>
       <pose>-27.97 -2.652 0 0 0 0</pose>
       <name>relax-room-2</name>
       <uri>model://tue_library/relax_room</uri>
     </include>
-    <include name="relax-room-3">
+    <include>
       <pose>21.65 3.212 0 0 0 0</pose>
       <name>relax-room-3</name>
       <uri>model://tue_library/relax_room</uri>
     </include>
-    <include name="relax-room-4">
+    <include>
       <pose>21.65 -2.652 0 0 0 0</pose>
       <name>relax-room-4</name>
       <uri>model://tue_library/relax_room</uri>
     </include>
-    <include name="book_xxl">
+    <include>
       <pose>-27.97 16.4 0 0 0 0</pose>
       <name>book_xxl</name>
       <uri>model://tue_library/book_xxl</uri>
     </include>
-    <include name="theses">
+    <include>
       <pose>21.65 16.7 0 0 0 0</pose>
       <name>theses</name>
       <uri>model://tue_library/theses</uri>
     </include>
-    <include name="cartographics">
+    <include>
       <pose>21.65 -15.29 0 0 0 0</pose>
       <name>cartographics</name>
       <uri>model://tue_library/cartographics</uri>
     </include>
-    <include name="journals">
+    <include>
       <pose>-27.97 -15.97 0 0 0 0</pose>
       <name>journals</name>
       <uri>model://tue_library/journals</uri>
     </include>
-    <include name="elevator">
+    <include>
       <pose>-10.5 8.0 0 0 0 0</pose>
       <name>elevator</name>
       <uri>model://tue_library/door</uri>
     </include>
-    <include name="lecture_room_1">
+    <include>
       <pose>-6.8 8.0 0 0 0 0</pose>
       <name>lecture_room_1</name>
       <uri>model://tue_library/door</uri>
     </include>
-    <include name="lecture_room_2">
+    <include>
       <pose>0.5 8.0 0 0 0 0</pose>
       <name>lecture_room_2</name>
       <uri>model://tue_library/door</uri>
     </include>
-    <include name="copier">
+    <include>
       <pose>4.2 8.0 0 0 0 0</pose>
       <name>copier</name>
       <uri>model://tue_library/door</uri>
     </include>
-    <include name="stairway">
+    <include>
       <pose>-1.0 0.1 0 0 0 1.57</pose>
       <name>stairway</name>
       <uri>model://tue_library/door</uri>
     </include>
-    <include name="meeting_room_1">
+    <include>
       <pose>9.3 -16.5 0 0 0 1.57</pose>
       <name>meeting_room_1</name>
       <uri>model://tue_library/door</uri>
     </include>
-    <include name="meeting_room_4">
+    <include>
       <pose>-15.5 -16.5 0 0 0 1.57</pose>
       <name>meeting_room_4</name>
       <uri>model://tue_library/door</uri>
     </include>
-    <include name="amigo_case">
+    <include>
       <pose>-3.7 7.3 0.0 0 0 1.57</pose>
       <name>amigo_case</name>
       <uri>model://amigo_case</uri>
     </include>
-    <include name="laptop_case">
+    <include>
       <pose>-2.7 7.3 0.0 0 0 1.57</pose>
       <name>laptop_case</name>
       <uri>model://laptop_case</uri>
@@ -132,6 +131,5 @@
         </solver>
       </ode>
     </physics>
-    <name>tue_library</name>
   </world>
 </sdf>

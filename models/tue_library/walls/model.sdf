@@ -8,7 +8,6 @@
             <uri>model://tue_library/walls/heightmap.stl</uri>
           </mesh>
         </geometry>
-        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -16,12 +15,9 @@
             <uri>model://tue_library/walls/heightmap.stl</uri>
           </mesh>
         </geometry>
-        <name>1</name>
       </visual>
       <pose>0 0 0 0 0 0</pose>
-      <name>1</name>
     </link>
     <static>true</static>
-    <name>tue_library/walls</name>
   </model>
 </sdf>

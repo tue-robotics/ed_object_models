@@ -9,7 +9,6 @@
           </box>
         </geometry>
         <pose>0.0 0.0 0.405 0 0 0</pose>
-        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -18,10 +17,8 @@
           </box>
         </geometry>
         <pose>0.0 0.0 0.405 0 0 0</pose>
-        <name>1</name>
       </visual>
       <pose>0 0 0 0 0 0</pose>
-      <name>1</name>
     </link>
     <link name="on_top_of">
       <virtual_volume name="on_top_of">
@@ -31,11 +28,8 @@
           </box>
         </geometry>
         <pose>0.0 0.0 1.01 0 0 0</pose>
-        <name>on_top_of</name>
       </virtual_volume>
-      <name>on_top_of</name>
     </link>
     <static>true</static>
-    <name>robotics_testlab_B/hallway_cabinet</name>
   </model>
 </sdf>

@@ -8,7 +8,6 @@
             <size>0.54 0.9 0.03</size>
           </box>
         </geometry>
-        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -16,10 +15,8 @@
             <size>0.54 0.9 0.03</size>
           </box>
         </geometry>
-        <name>1</name>
       </visual>
       <pose>0 0 0.015 0 0 0</pose>
-      <name>1</name>
     </link>
     <link name="2">
       <collision name="2">
@@ -28,7 +25,6 @@
             <size>0.1 0.06 1.8</size>
           </box>
         </geometry>
-        <name>2</name>
       </collision>
       <visual name="2">
         <geometry>
@@ -36,10 +32,8 @@
             <size>0.1 0.06 1.8</size>
           </box>
         </geometry>
-        <name>2</name>
       </visual>
       <pose>-0.11 -0.085 0.9 0 0 0</pose>
-      <name>2</name>
     </link>
     <link name="3">
       <collision name="3">
@@ -48,7 +42,6 @@
             <size>0.1 0.06 1.8</size>
           </box>
         </geometry>
-        <name>3</name>
       </collision>
       <visual name="3">
         <geometry>
@@ -56,10 +49,8 @@
             <size>0.1 0.06 1.8</size>
           </box>
         </geometry>
-        <name>3</name>
       </visual>
       <pose>-0.11 0.085 0.9 0 0 0</pose>
-      <name>3</name>
     </link>
     <link name="4">
       <collision name="4">
@@ -68,7 +59,6 @@
             <size>0.1 1.55 0.82</size>
           </box>
         </geometry>
-        <name>4</name>
       </collision>
       <visual name="4">
         <geometry>
@@ -76,10 +66,8 @@
             <size>0.1 1.55 0.82</size>
           </box>
         </geometry>
-        <name>4</name>
       </visual>
       <pose>0.06 0.0 1.67 0 0.04 0</pose>
-      <name>4</name>
     </link>
     <link name="in_front_of">
       <virtual_volume name="in_front_of">
@@ -89,11 +77,8 @@
           </box>
         </geometry>
         <pose>0.6 0.0 0.005 0 0 0</pose>
-        <name>in_front_of</name>
       </virtual_volume>
-      <name>in_front_of</name>
     </link>
     <static>true</static>
-    <name>rgo2019/tv</name>
   </model>
 </sdf>

@@ -8,7 +8,6 @@
             <size>0.1 1.25 0.9</size>
           </box>
         </geometry>
-        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -19,10 +18,8 @@
         <material>
           <ambient>0.75 0.75 0.75 1</ambient>
         </material>
-        <name>1</name>
       </visual>
       <pose>0 0 0.45 0 0 0</pose>
-      <name>1</name>
     </link>
     <link name="on_top_of">
       <virtual_volume name="on_top_of">
@@ -32,9 +29,7 @@
           </box>
         </geometry>
         <pose>0.0 0.0 1.045 0 0 0</pose>
-        <name>on_top_of</name>
       </virtual_volume>
-      <name>on_top_of</name>
     </link>
     <link name="in_front_of">
       <virtual_volume name="in_front_of">
@@ -44,11 +39,8 @@
           </box>
         </geometry>
         <pose>0.55 0.0 0.005 0 0 0</pose>
-        <name>in_front_of</name>
       </virtual_volume>
-      <name>in_front_of</name>
     </link>
     <static>true</static>
-    <name>rwc2017/tv</name>
   </model>
 </sdf>

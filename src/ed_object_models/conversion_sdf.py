@@ -335,7 +335,8 @@ def read_areas(areas, link_names, model_name):
 def parse_to_xml(xml, item, list_name=""):
     # type: (ET.Element, Union[list, dict, str, float, int], str) -> None
     """
-    Extend XML with elements from a dict, list or a string
+    Extend XML with elements from a dict, list or a string.
+    This takes SDF attribute/element rules into account
 
     :param xml: xml element
     :type xml: xml.etree.ElementTree.Element
@@ -355,16 +356,17 @@ def parse_to_xml(xml, item, list_name=""):
     elif isinstance(item, dict):
         for k, v in item.items():
             # attributes
-            attributes = ["version", "type"]
+            attributes = ["version", "type"]  # children that are XML attributes in all SDF elements
             if xml.tag != "include":
-                attributes.append("name")
-            if k in attributes:
+                attributes.append("name")  # In 'include' name is a child element, in other elements it is an attribute
+
+            if k in attributes:  # Write child as attribute
                 xml.set(k, v)
                 continue
 
-            if isinstance(v, list):
+            if isinstance(v, list):  # Write child list
                 parse_to_xml(xml, v, k)
-            else:
+            else:  # Write child as element
                 child = ET.SubElement(xml, k)
                 parse_to_xml(child, v)
     elif isinstance(item, str) or isinstance(item, float) or isinstance(item, int):

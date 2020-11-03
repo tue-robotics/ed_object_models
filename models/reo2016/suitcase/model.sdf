@@ -8,7 +8,6 @@
             <size>0.66 0.17 0.47</size>
           </box>
         </geometry>
-        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -16,12 +15,9 @@
             <size>0.66 0.17 0.47</size>
           </box>
         </geometry>
-        <name>1</name>
       </visual>
       <pose>0.0 0.0 0.235 0 0 0</pose>
-      <name>1</name>
     </link>
     <static>true</static>
-    <name>reo2016/suitcase</name>
   </model>
 </sdf>

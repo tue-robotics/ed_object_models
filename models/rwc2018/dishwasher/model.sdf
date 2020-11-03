@@ -8,7 +8,6 @@
             <size>0.61 0.69 0.91</size>
           </box>
         </geometry>
-        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -16,10 +15,8 @@
             <size>0.61 0.69 0.91</size>
           </box>
         </geometry>
-        <name>1</name>
       </visual>
       <pose>0 0 0.455 0 0 0</pose>
-      <name>1</name>
     </link>
     <link name="on_top_of">
       <virtual_volume name="on_top_of">
@@ -29,9 +26,7 @@
           </box>
         </geometry>
         <pose>0.0 0.0 1.055 0 0 0</pose>
-        <name>on_top_of</name>
       </virtual_volume>
-      <name>on_top_of</name>
     </link>
     <link name="in_front_of">
       <virtual_volume name="in_front_of">
@@ -41,9 +36,7 @@
           </box>
         </geometry>
         <pose>0.805 0.0 0.005 0 0 0</pose>
-        <name>in_front_of</name>
       </virtual_volume>
-      <name>in_front_of</name>
     </link>
     <link name="to_the_side_of">
       <virtual_volume name="to_the_side_of">
@@ -53,11 +46,8 @@
           </box>
         </geometry>
         <pose>0.9125 -0.85 0.005 0 0 0</pose>
-        <name>to_the_side_of</name>
       </virtual_volume>
-      <name>to_the_side_of</name>
     </link>
     <static>true</static>
-    <name>rwc2018/dishwasher</name>
   </model>
 </sdf>

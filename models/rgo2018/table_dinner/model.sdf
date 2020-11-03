@@ -8,7 +8,6 @@
             <size>1.83 0.76 0.018</size>
           </box>
         </geometry>
-        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -19,10 +18,8 @@
         <material>
           <ambient>0.75 0.75 0.75 1</ambient>
         </material>
-        <name>1</name>
       </visual>
       <pose>0 0 0.751 0 0 0</pose>
-      <name>1</name>
     </link>
     <link name="2">
       <collision name="2">
@@ -31,7 +28,6 @@
             <size>1.83 0.01 0.66</size>
           </box>
         </geometry>
-        <name>2</name>
       </collision>
       <visual name="2">
         <geometry>
@@ -42,10 +38,8 @@
         <material>
           <ambient>0.75 0.75 0.75 1</ambient>
         </material>
-        <name>2</name>
       </visual>
       <pose>0 0.375 0.43 0 0 0</pose>
-      <name>2</name>
     </link>
     <link name="3">
       <collision name="3">
@@ -54,7 +48,6 @@
             <size>1.83 0.01 0.66</size>
           </box>
         </geometry>
-        <name>3</name>
       </collision>
       <visual name="3">
         <geometry>
@@ -65,10 +58,8 @@
         <material>
           <ambient>0.75 0.75 0.75 1</ambient>
         </material>
-        <name>3</name>
       </visual>
       <pose>0 -0.375 0.43 0 0 0</pose>
-      <name>3</name>
     </link>
     <link name="4">
       <collision name="4">
@@ -77,7 +68,6 @@
             <size>0.025 0.025 0.742</size>
           </box>
         </geometry>
-        <name>4</name>
       </collision>
       <visual name="4">
         <geometry>
@@ -88,10 +78,8 @@
         <material>
           <ambient>0.75 0.75 0.75 1</ambient>
         </material>
-        <name>4</name>
       </visual>
       <pose>-0.7325 -0.2825 0.371 0 0 0</pose>
-      <name>4</name>
     </link>
     <link name="5">
       <collision name="5">
@@ -100,7 +88,6 @@
             <size>0.025 0.025 0.742</size>
           </box>
         </geometry>
-        <name>5</name>
       </collision>
       <visual name="5">
         <geometry>
@@ -111,10 +98,8 @@
         <material>
           <ambient>0.75 0.75 0.75 1</ambient>
         </material>
-        <name>5</name>
       </visual>
       <pose>0.7325 -0.2825 0.371 0 0 0</pose>
-      <name>5</name>
     </link>
     <link name="6">
       <collision name="6">
@@ -123,7 +108,6 @@
             <size>0.025 0.025 0.742</size>
           </box>
         </geometry>
-        <name>6</name>
       </collision>
       <visual name="6">
         <geometry>
@@ -134,10 +118,8 @@
         <material>
           <ambient>0.75 0.75 0.75 1</ambient>
         </material>
-        <name>6</name>
       </visual>
       <pose>-0.7325 0.2825 0.371 0 0 0</pose>
-      <name>6</name>
     </link>
     <link name="7">
       <collision name="7">
@@ -146,7 +128,6 @@
             <size>0.025 0.025 0.742</size>
           </box>
         </geometry>
-        <name>7</name>
       </collision>
       <visual name="7">
         <geometry>
@@ -157,10 +138,8 @@
         <material>
           <ambient>0.75 0.75 0.75 1</ambient>
         </material>
-        <name>7</name>
       </visual>
       <pose>0.7325 0.2825 0.371 0 0 0</pose>
-      <name>7</name>
     </link>
     <link name="on_top_of">
       <virtual_volume name="on_top_of">
@@ -170,9 +149,7 @@
           </box>
         </geometry>
         <pose>0.0 0.0 0.905 0 0 0</pose>
-        <name>on_top_of</name>
       </virtual_volume>
-      <name>on_top_of</name>
     </link>
     <link name="in_front_of">
       <virtual_volume name="in_front_of">
@@ -182,11 +159,8 @@
           </box>
         </geometry>
         <pose>0.0 0.0 0.005 0 0 0</pose>
-        <name>in_front_of</name>
       </virtual_volume>
-      <name>in_front_of</name>
     </link>
     <static>true</static>
-    <name>rgo2018/table_dinner</name>
   </model>
 </sdf>

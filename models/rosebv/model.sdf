@@ -4,7 +4,6 @@
     <light name="sun" type="directional">
       <direction>0.5 0.1 -0.9</direction>
       <pose>0 0 10 0 0 0</pose>
-      <name>sun</name>
       <specular>0.2 0.2 0.2 1</specular>
       <cast_shadows>true</cast_shadows>
       <diffuse>0.8 0.8 0.8 1</diffuse>
@@ -15,37 +14,37 @@
         <linear>0.01</linear>
       </attenuation>
     </light>
-    <include name="walls">
+    <include>
       <pose>0 0 0 0 0 0</pose>
       <name>walls</name>
       <uri>model://rosebv/walls</uri>
     </include>
-    <include name="floor">
+    <include>
       <pose>0 0 0 0 0 0</pose>
       <name>floor</name>
       <uri>model://floor</uri>
     </include>
-    <include name="office_table1">
+    <include>
       <pose>3 0 0 0 0 0</pose>
       <name>office_table1</name>
       <uri>model://table_200x100x76</uri>
     </include>
-    <include name="desk1">
+    <include>
       <pose>-0.2 -1.1 0 0 0 -1.57</pose>
       <name>desk1</name>
       <uri>model://table_ahrend_180x90x75_with_drawers</uri>
     </include>
-    <include name="desk2">
+    <include>
       <pose>-0.2 -2.9 0 0 0 -1.57</pose>
       <name>desk2</name>
       <uri>model://table_ahrend_180x90x75_with_drawers</uri>
     </include>
-    <include name="desk3">
+    <include>
       <pose>1.7 -3.3 0 0 0 1.57</pose>
       <name>desk3</name>
       <uri>model://table_2legs_180x80x76</uri>
     </include>
-    <include name="desk4">
+    <include>
       <pose>2.5 -3.3 0 0 0 1.57</pose>
       <name>desk4</name>
       <uri>model://table_2legs_180x80x76</uri>
@@ -62,6 +61,5 @@
         </solver>
       </ode>
     </physics>
-    <name>rosebv</name>
   </world>
 </sdf>

@@ -2,6 +2,5 @@
 <sdf version="1.6">
   <model name="waypoint">
     <static>true</static>
-    <name>waypoint</name>
   </model>
 </sdf>

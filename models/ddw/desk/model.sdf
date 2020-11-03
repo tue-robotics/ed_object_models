@@ -8,7 +8,6 @@
             <size>1.18 0.7 0.78</size>
           </box>
         </geometry>
-        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -19,12 +18,9 @@
         <material>
           <ambient>0.8 0.8 0.8 1</ambient>
         </material>
-        <name>1</name>
       </visual>
       <pose>0.0 0.0 0.39 0 0 0</pose>
-      <name>1</name>
     </link>
     <static>true</static>
-    <name>ddw/desk</name>
   </model>
 </sdf>

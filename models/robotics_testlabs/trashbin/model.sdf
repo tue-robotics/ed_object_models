@@ -9,7 +9,6 @@
             <radius>0.15</radius>
           </cylinder>
         </geometry>
-        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -18,13 +17,10 @@
             <radius>0.15</radius>
           </cylinder>
         </geometry>
-        <name>1</name>
       </visual>
       <pose>0 0 0.25 0 0 0</pose>
-      <name>1</name>
     </link>
     <static>true</static>
-    <name>robotics_testlabs/trashbin</name>
     <link name="on_top_of">
       <virtual_volume name="on_top_of">
         <geometry>
@@ -33,21 +29,17 @@
           </box>
         </geometry>
         <pose>0.0 0.0 0.5 0 0 0</pose>
-        <name>on_top_of</name>
       </virtual_volume>
-      <name>on_top_of</name>
     </link>
-        <link name="in_front_of">
+    <link name="in_front_of">
       <virtual_volume name="in_front_of">
         <geometry>
           <box>
             <size>0.05 0.05 0.01</size>
           </box>
         </geometry>
-        <name>in_front_of</name>
       </virtual_volume>
       <pose>0.6 0 0 0 0 0</pose>
-      <name>in_front_of</name>
     </link>
   </model>
 </sdf>

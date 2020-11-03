@@ -4,7 +4,6 @@
     <light name="sun" type="directional">
       <direction>0.5 0.1 -0.9</direction>
       <pose>0 0 10 0 0 0</pose>
-      <name>sun</name>
       <specular>0.2 0.2 0.2 1</specular>
       <cast_shadows>true</cast_shadows>
       <diffuse>0.8 0.8 0.8 1</diffuse>
@@ -15,27 +14,27 @@
         <linear>0.01</linear>
       </attenuation>
     </light>
-    <include name="frame">
+    <include>
       <pose>0 0 0 0 0 0</pose>
       <name>frame</name>
       <uri>model://rgo2015/cupboard/frame</uri>
     </include>
-    <include name="shelf1">
+    <include>
       <pose>0 0 0.91 0 0 0</pose>
       <name>shelf1</name>
       <uri>model://rgo2015/cupboard/shelf</uri>
     </include>
-    <include name="shelf2">
+    <include>
       <pose>0 0 1.265 0 0 0</pose>
       <name>shelf2</name>
       <uri>model://rgo2015/cupboard/shelf</uri>
     </include>
-    <include name="shelf3">
+    <include>
       <pose>0 0 1.555 0 0 0</pose>
       <name>shelf3</name>
       <uri>model://rgo2015/cupboard/shelf</uri>
     </include>
-    <include name="shelf4">
+    <include>
       <pose>0 0 1.795 0 0 0</pose>
       <name>shelf4</name>
       <uri>model://rgo2015/cupboard/shelf</uri>
@@ -52,6 +51,5 @@
         </solver>
       </ode>
     </physics>
-    <name>rgo2015/cupboard</name>
   </world>
 </sdf>

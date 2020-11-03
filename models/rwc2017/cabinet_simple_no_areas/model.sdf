@@ -8,7 +8,6 @@
             <size>0.29 0.01 0.9</size>
           </box>
         </geometry>
-        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -16,10 +15,8 @@
             <size>0.29 0.01 0.9</size>
           </box>
         </geometry>
-        <name>1</name>
       </visual>
       <pose>0 -0.22 0.45 0 0 0</pose>
-      <name>1</name>
     </link>
     <link name="2">
       <collision name="2">
@@ -28,7 +25,6 @@
             <size>0.29 0.01 0.9</size>
           </box>
         </geometry>
-        <name>2</name>
       </collision>
       <visual name="2">
         <geometry>
@@ -36,10 +32,8 @@
             <size>0.29 0.01 0.9</size>
           </box>
         </geometry>
-        <name>2</name>
       </visual>
       <pose>0 0.22 0.45 0 0 0</pose>
-      <name>2</name>
     </link>
     <link name="3">
       <collision name="3">
@@ -48,7 +42,6 @@
             <size>0.01 0.45 0.9</size>
           </box>
         </geometry>
-        <name>3</name>
       </collision>
       <visual name="3">
         <geometry>
@@ -56,10 +49,8 @@
             <size>0.01 0.45 0.9</size>
           </box>
         </geometry>
-        <name>3</name>
       </visual>
       <pose>-0.14 0 0.45 0 0 0</pose>
-      <name>3</name>
     </link>
     <link name="4">
       <collision name="4">
@@ -68,7 +59,6 @@
             <size>0.28 0.43 0.01</size>
           </box>
         </geometry>
-        <name>4</name>
       </collision>
       <visual name="4">
         <geometry>
@@ -76,10 +66,8 @@
             <size>0.28 0.43 0.01</size>
           </box>
         </geometry>
-        <name>4</name>
       </visual>
       <pose>0.005 0 0.895 0 0 0</pose>
-      <name>4</name>
     </link>
     <link name="5">
       <collision name="5">
@@ -88,7 +76,6 @@
             <size>0.28 0.43 0.01</size>
           </box>
         </geometry>
-        <name>5</name>
       </collision>
       <visual name="5">
         <geometry>
@@ -96,10 +83,8 @@
             <size>0.28 0.43 0.01</size>
           </box>
         </geometry>
-        <name>5</name>
       </visual>
       <pose>0.005 0 0.005 0 0 0</pose>
-      <name>5</name>
     </link>
     <link name="6">
       <collision name="6">
@@ -108,7 +93,6 @@
             <size>0.28 0.43 0.01</size>
           </box>
         </geometry>
-        <name>6</name>
       </collision>
       <visual name="6">
         <geometry>
@@ -116,10 +100,8 @@
             <size>0.28 0.43 0.01</size>
           </box>
         </geometry>
-        <name>6</name>
       </visual>
       <pose>0.005 0 0.3 0 0 0</pose>
-      <name>6</name>
     </link>
     <link name="7">
       <collision name="7">
@@ -128,7 +110,6 @@
             <size>0.28 0.43 0.01</size>
           </box>
         </geometry>
-        <name>7</name>
       </collision>
       <visual name="7">
         <geometry>
@@ -136,12 +117,9 @@
             <size>0.28 0.43 0.01</size>
           </box>
         </geometry>
-        <name>7</name>
       </visual>
       <pose>0.005 0 0.595 0 0 0</pose>
-      <name>7</name>
     </link>
     <static>true</static>
-    <name>rwc2017/cabinet_simple_no_areas</name>
   </model>
 </sdf>

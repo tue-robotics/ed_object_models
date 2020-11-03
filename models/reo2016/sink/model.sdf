@@ -9,7 +9,6 @@
             <radius>0.19</radius>
           </cylinder>
         </geometry>
-        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -18,10 +17,8 @@
             <radius>0.19</radius>
           </cylinder>
         </geometry>
-        <name>1</name>
       </visual>
       <pose>0 0 0 0 0 0</pose>
-      <name>1</name>
     </link>
     <link name="in_front_of">
       <virtual_volume name="in_front_of">
@@ -31,11 +28,8 @@
           </box>
         </geometry>
         <pose>-1.1 0.0 -0.865 0 0 0</pose>
-        <name>in_front_of</name>
       </virtual_volume>
-      <name>in_front_of</name>
     </link>
     <static>true</static>
-    <name>reo2016/sink</name>
   </model>
 </sdf>

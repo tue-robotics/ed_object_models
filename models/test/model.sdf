@@ -14,7 +14,6 @@
             <point>0.2 0.5</point>
           </polyline>
         </geometry>
-        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -28,10 +27,8 @@
             <point>0.2 0.5</point>
           </polyline>
         </geometry>
-        <name>1</name>
       </visual>
       <pose>0 0 0 0 0 0</pose>
-      <name>1</name>
     </link>
     <link name="2">
       <collision name="2">
@@ -46,7 +43,6 @@
             <point>0.2 0.5</point>
           </polyline>
         </geometry>
-        <name>2</name>
       </collision>
       <visual name="2">
         <geometry>
@@ -60,10 +56,8 @@
             <point>0.2 0.5</point>
           </polyline>
         </geometry>
-        <name>2</name>
       </visual>
       <pose>0 0 0.1 1.54 0 3.1415</pose>
-      <name>2</name>
     </link>
     <link name="3">
       <collision name="3">
@@ -73,7 +67,6 @@
             <radius>0.1</radius>
           </cylinder>
         </geometry>
-        <name>3</name>
       </collision>
       <visual name="3">
         <geometry>
@@ -82,10 +75,8 @@
             <radius>0.1</radius>
           </cylinder>
         </geometry>
-        <name>3</name>
       </visual>
       <pose>0 0 0 0 0 0</pose>
-      <name>3</name>
     </link>
     <link name="4">
       <collision name="4">
@@ -95,7 +86,6 @@
             <radius>0.05</radius>
           </cylinder>
         </geometry>
-        <name>4</name>
       </collision>
       <visual name="4">
         <geometry>
@@ -104,12 +94,9 @@
             <radius>0.05</radius>
           </cylinder>
         </geometry>
-        <name>4</name>
       </visual>
       <pose>0 0 0 0 0 0</pose>
-      <name>4</name>
     </link>
     <static>true</static>
-    <name>test</name>
   </model>
 </sdf>

@@ -8,7 +8,6 @@
             <size>0.44 0.015 0.9</size>
           </box>
         </geometry>
-        <name>1</name>
       </collision>
       <visual name="1">
         <geometry>
@@ -16,10 +15,8 @@
             <size>0.44 0.015 0.9</size>
           </box>
         </geometry>
-        <name>1</name>
       </visual>
       <pose>0 -0.5925 0.45 0 0 0</pose>
-      <name>1</name>
     </link>
     <link name="2">
       <collision name="2">
@@ -28,7 +25,6 @@
             <size>0.44 0.015 0.9</size>
           </box>
         </geometry>
-        <name>2</name>
       </collision>
       <visual name="2">
         <geometry>
@@ -36,10 +32,8 @@
             <size>0.44 0.015 0.9</size>
           </box>
         </geometry>
-        <name>2</name>
       </visual>
       <pose>0 0.5925 0.45 0 0 0</pose>
-      <name>2</name>
     </link>
     <link name="3">
       <collision name="3">
@@ -48,7 +42,6 @@
             <size>0.015 1.2 0.9</size>
           </box>
         </geometry>
-        <name>3</name>
       </collision>
       <visual name="3">
         <geometry>
@@ -56,10 +49,8 @@
             <size>0.015 1.2 0.9</size>
           </box>
         </geometry>
-        <name>3</name>
       </visual>
       <pose>-0.2125 0 0.45 0 0 0</pose>
-      <name>3</name>
     </link>
     <link name="4">
       <collision name="4">
@@ -68,7 +59,6 @@
             <size>0.425 1.17 0.03</size>
           </box>
         </geometry>
-        <name>4</name>
       </collision>
       <visual name="4">
         <geometry>
@@ -76,10 +66,8 @@
             <size>0.425 1.17 0.03</size>
           </box>
         </geometry>
-        <name>4</name>
       </visual>
       <pose>0.0075 0 0.885 0 0 0</pose>
-      <name>4</name>
     </link>
     <link name="5">
       <collision name="5">
@@ -88,7 +76,6 @@
             <size>0.425 1.17 0.03</size>
           </box>
         </geometry>
-        <name>5</name>
       </collision>
       <visual name="5">
         <geometry>
@@ -96,10 +83,8 @@
             <size>0.425 1.17 0.03</size>
           </box>
         </geometry>
-        <name>5</name>
       </visual>
       <pose>0.0075 0 0.015 0 0 0</pose>
-      <name>5</name>
     </link>
     <link name="6">
       <collision name="6">
@@ -108,7 +93,6 @@
             <size>0.425 1.17 0.045</size>
           </box>
         </geometry>
-        <name>6</name>
       </collision>
       <visual name="6">
         <geometry>
@@ -116,10 +100,8 @@
             <size>0.425 1.17 0.045</size>
           </box>
         </geometry>
-        <name>6</name>
       </visual>
       <pose>0.0075 0 0.4625 0 0 0</pose>
-      <name>6</name>
     </link>
     <link name="7">
       <collision name="7">
@@ -128,7 +110,6 @@
             <size>0.425 0.045 0.855</size>
           </box>
         </geometry>
-        <name>7</name>
       </collision>
       <visual name="7">
         <geometry>
@@ -136,10 +117,8 @@
             <size>0.425 0.045 0.855</size>
           </box>
         </geometry>
-        <name>7</name>
       </visual>
       <pose>0.0075 0.0 0.4575 0 0 0</pose>
-      <name>7</name>
     </link>
     <link name="8">
       <collision name="8">
@@ -148,7 +127,6 @@
             <size>0.44 0.6 0.89</size>
           </box>
         </geometry>
-        <name>8</name>
       </collision>
       <visual name="8">
         <geometry>
@@ -156,10 +134,8 @@
             <size>0.44 0.6 0.89</size>
           </box>
         </geometry>
-        <name>8</name>
       </visual>
       <pose>0.0 -0.3 0.44 0 0 0</pose>
-      <name>8</name>
     </link>
     <link name="9">
       <collision name="9">
@@ -168,7 +144,6 @@
             <size>0.44 0.6 0.43</size>
           </box>
         </geometry>
-        <name>9</name>
       </collision>
       <visual name="9">
         <geometry>
@@ -176,10 +151,8 @@
             <size>0.44 0.6 0.43</size>
           </box>
         </geometry>
-        <name>9</name>
       </visual>
       <pose>0.0 0.3 0.22 0 0 0</pose>
-      <name>9</name>
     </link>
     <link name="in_front_of">
       <virtual_volume name="in_front_of">
@@ -189,9 +162,7 @@
           </box>
         </geometry>
         <pose>0.72 0.15 0.005 0 0 0</pose>
-        <name>in_front_of</name>
       </virtual_volume>
-      <name>in_front_of</name>
     </link>
     <link name="on_top_of">
       <virtual_volume name="on_top_of">
@@ -201,9 +172,7 @@
           </box>
         </geometry>
         <pose>0.0075 0.0 1.0875 0 0 0</pose>
-        <name>on_top_of</name>
       </virtual_volume>
-      <name>on_top_of</name>
     </link>
     <link name="shelf1">
       <virtual_volume name="shelf1">
@@ -213,11 +182,8 @@
           </box>
         </geometry>
         <pose>0.0175 0.305 0.655 0 0 0</pose>
-        <name>shelf1</name>
       </virtual_volume>
-      <name>shelf1</name>
     </link>
     <static>true</static>
-    <name>rwc2017/cabinet_brown_low</name>
   </model>
 </sdf>

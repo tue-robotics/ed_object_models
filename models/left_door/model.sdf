@@ -2,6 +2,5 @@
 <sdf version="1.6">
   <model name="left_door">
     <static>true</static>
-    <name>left_door</name>
   </model>
 </sdf>

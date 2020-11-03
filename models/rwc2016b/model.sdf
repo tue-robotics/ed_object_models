@@ -4,7 +4,6 @@
     <light name="sun" type="directional">
       <direction>0.5 0.1 -0.9</direction>
       <pose>0 0 10 0 0 0</pose>
-      <name>sun</name>
       <specular>0.2 0.2 0.2 1</specular>
       <cast_shadows>true</cast_shadows>
       <diffuse>0.8 0.8 0.8 1</diffuse>
@@ -24,13 +23,10 @@
             </box>
           </geometry>
           <pose>-0.06 1.27 0.005 0 0 0</pose>
-          <name>in</name>
         </virtual_volume>
-        <name>in</name>
       </link>
       <pose>13.45 2.25 0 0 0 0</pose>
       <static>true</static>
-      <name>dining_room</name>
     </model>
     <model name="kitchen" type="room">
       <link name="in">
@@ -41,13 +37,10 @@
             </box>
           </geometry>
           <pose>-0.135 0.075 0.005 0 0 0</pose>
-          <name>in</name>
         </virtual_volume>
-        <name>in</name>
       </link>
       <pose>9.31 2.96 0 0 0 0</pose>
       <static>true</static>
-      <name>kitchen</name>
     </model>
     <model name="living_room" type="room">
       <link name="in">
@@ -58,13 +51,10 @@
             </box>
           </geometry>
           <pose>0.56 0.645 0.005 0 0 0</pose>
-          <name>in</name>
         </virtual_volume>
-        <name>in</name>
       </link>
       <pose>12.85 -0.39 0 0 0 0</pose>
       <static>true</static>
-      <name>living_room</name>
     </model>
     <model name="corridor" type="room">
       <link name="in">
@@ -75,9 +65,7 @@
             </box>
           </geometry>
           <pose>-0.265 2.385 0.005 0 0 0</pose>
-          <name>in1</name>
         </virtual_volume>
-        <name>in</name>
       </link>
       <link name="in">
         <virtual_volume name="in1">
@@ -87,13 +75,10 @@
             </box>
           </geometry>
           <pose>-0.265 2.385 0.005 0 0 0</pose>
-          <name>in1</name>
         </virtual_volume>
-        <name>in</name>
       </link>
       <pose>1.76 -0.64 0 0 0 0</pose>
       <static>true</static>
-      <name>corridor</name>
     </model>
     <model name="bedroom" type="room">
       <link name="in">
@@ -104,265 +89,227 @@
             </box>
           </geometry>
           <pose>-0.125 0.77 0.005 0 0 0</pose>
-          <name>in</name>
         </virtual_volume>
-        <name>in</name>
       </link>
       <pose>5.35 2.25 0 0 0 0</pose>
       <static>true</static>
-      <name>bedroom</name>
     </model>
     <model name="initial_pose_door_a" type="waypoint">
       <pose>-0.5 0.0 0 0 0 0.0</pose>
       <static>true</static>
-      <name>initial_pose_door_a</name>
     </model>
     <model name="initial_pose_door_b" type="waypoint">
       <pose>-0.5 3.0 0 0 0 0.0</pose>
       <static>true</static>
-      <name>initial_pose_door_b</name>
     </model>
     <model name="initial_pose_door_c" type="waypoint">
       <pose>14.66 5.56 0 0 0 -1.57</pose>
       <static>true</static>
-      <name>initial_pose_door_c</name>
     </model>
     <model name="entry_door_a" type="waypoint">
       <pose>1.0 0.0 0 0 0 0.0</pose>
       <static>true</static>
-      <name>entry_door_a</name>
     </model>
     <model name="entry_door_b" type="waypoint">
       <pose>1.0 3.0 0 0 0 0.0</pose>
       <static>true</static>
-      <name>entry_door_b</name>
     </model>
     <model name="entry_door_c" type="waypoint">
       <pose>14.7 4.0 0 0 0 -1.57</pose>
       <static>true</static>
-      <name>entry_door_c</name>
     </model>
     <model name="exit_door_a" type="waypoint">
       <pose>-1.5 0.0 0 0 0 3.14</pose>
       <static>true</static>
-      <name>exit_door_a</name>
     </model>
     <model name="exit_door_b" type="waypoint">
       <pose>-1.5 3.0 0 0 0 3.14</pose>
       <static>true</static>
-      <name>exit_door_b</name>
     </model>
     <model name="exit_door_c" type="waypoint">
       <pose>14.7 6.5 0 0 0 1.57</pose>
       <static>true</static>
-      <name>exit_door_c</name>
     </model>
     <model name="registration_table1" type="waypoint">
       <pose>9.7 -0.6 0 0 0 0</pose>
       <static>true</static>
-      <name>registration_table1</name>
     </model>
     <model name="registration_table2" type="waypoint">
       <pose>9.0 -1.4 0 0 0 0</pose>
       <static>true</static>
-      <name>registration_table2</name>
     </model>
     <model name="registration_table3" type="waypoint">
       <pose>8.4 -0.6 0 0 0 0</pose>
       <static>true</static>
-      <name>registration_table3</name>
     </model>
     <model name="exit_1_rips" type="waypoint">
       <pose>14.7 6.4 0 0 0 1.57</pose>
       <static>true</static>
-      <name>exit_1_rips</name>
     </model>
     <model name="exit_2_rips" type="waypoint">
       <pose>14.7 7.5 0 0 0 1.57</pose>
       <static>true</static>
-      <name>exit_2_rips</name>
     </model>
     <model name="exit_3_rips" type="waypoint">
       <pose>14.7 4.3 0 0 0 1.57</pose>
       <static>true</static>
-      <name>exit_3_rips</name>
     </model>
     <model name="exit_4_rips" type="waypoint">
       <pose>14.7 6.4 0 0 0 1.57</pose>
       <static>true</static>
-      <name>exit_4_rips</name>
     </model>
     <model name="navigation_target1" type="waypoint">
       <pose>9.5 -0.5 0 0 0 -1.57</pose>
       <static>true</static>
-      <name>navigation_target1</name>
     </model>
     <model name="navigation_target2_pre" type="waypoint">
       <pose>12.0 -0.6 0 0 0 -0.87</pose>
       <static>true</static>
-      <name>navigation_target2_pre</name>
     </model>
     <model name="navigation_target2" type="waypoint">
       <pose>13.0 -1.0 0 0 0 -1.57</pose>
       <static>true</static>
-      <name>navigation_target2</name>
     </model>
     <model name="navigation_target3" type="waypoint">
       <pose>2.0 1.5 0 0 0 3.14</pose>
       <static>true</static>
-      <name>navigation_target3</name>
     </model>
     <model name="navigation_door" type="waypoint">
       <pose>-0.7 0.0 0 0 0 0.0</pose>
       <static>true</static>
-      <name>navigation_door</name>
     </model>
     <model name="navigation_door_1" type="waypoint">
       <pose>-0.7 0.0 0 0 0 0.0</pose>
       <static>true</static>
-      <name>navigation_door_1</name>
     </model>
     <model name="navigation_door_2" type="waypoint">
       <pose>-0.7 3.0 0 0 0 0.0</pose>
       <static>true</static>
-      <name>navigation_door_2</name>
     </model>
     <model name="navigation_reentrance_door_1" type="waypoint">
       <pose>0.0 0.0 0 0 0 0.0</pose>
       <static>true</static>
-      <name>navigation_reentrance_door_1</name>
     </model>
     <model name="navigation_reentrance_door_2" type="waypoint">
       <pose>0.0 3.0 0 0 0 0.0</pose>
       <static>true</static>
-      <name>navigation_reentrance_door_2</name>
     </model>
     <model name="navigation_target4" type="waypoint">
       <pose>2.0 1.5 0 0 0 0.0</pose>
       <static>true</static>
-      <name>navigation_target4</name>
     </model>
     <model name="navigation_exit1" type="waypoint">
       <pose>-1.0 0.0 0 0 0 3.1415</pose>
       <static>true</static>
-      <name>navigation_exit1</name>
     </model>
     <model name="navigation_exit2" type="waypoint">
       <pose>-1.0 3.0 0 0 0 3.1415</pose>
       <static>true</static>
-      <name>navigation_exit2</name>
     </model>
     <model name="navigation_exit3" type="waypoint">
       <pose>-2.0 4.5 0 0 0 3.1415</pose>
       <static>true</static>
-      <name>navigation_exit3</name>
     </model>
     <model name="navigation_exit4" type="waypoint">
       <pose>-2.0 -1.0 0 0 0 3.1415</pose>
       <static>true</static>
-      <name>navigation_exit4</name>
     </model>
     <model name="door_opening_start_1" type="waypoint">
       <pose>-0.5 0.0 0 0 0 0</pose>
       <static>true</static>
-      <name>door_opening_start_1</name>
     </model>
     <model name="door_opening_dest_1" type="waypoint">
       <pose>0.9 0.0 0 0 0 0</pose>
       <static>true</static>
-      <name>door_opening_dest_1</name>
     </model>
     <model name="door_opening_start_2" type="waypoint">
       <pose>-0.5 3.0 0 0 0 0</pose>
       <static>true</static>
-      <name>door_opening_start_2</name>
     </model>
     <model name="door_opening_dest_2" type="waypoint">
       <pose>0.9 3.0 0 0 0 0</pose>
       <static>true</static>
-      <name>door_opening_dest_2</name>
     </model>
     <model name="gpsr_meeting_point" type="waypoint">
       <pose>2.006 -1.28 0 0 0 1.57</pose>
       <static>true</static>
-      <name>gpsr_meeting_point</name>
     </model>
-    <include name="floor">
+    <include>
       <pose>0 0 0 0 0 0</pose>
       <name>floor</name>
       <uri>model://floor</uri>
     </include>
-    <include name="walls">
+    <include>
       <pose>0 0 0 0 0 0</pose>
       <name>walls</name>
       <uri>model://rwc2016b/walls</uri>
     </include>
-    <include name="bed">
+    <include>
       <pose>4.2350414095 3.61956635071 0.0 0 0 -1.57079632679</pose>
       <name>bed</name>
       <uri>model://rwc2016/bed_frame</uri>
     </include>
-    <include name="bedside">
+    <include>
       <pose>7.20064872224 3.07295793463 0.0 0 0 3.14159265359</pose>
       <name>bedside</name>
       <uri>model://rwc2016/cabinet_2doors</uri>
     </include>
-    <include name="plant_small_bedroom">
+    <include>
       <pose>3.44435067195 5.07663793686 0.0 0 0 0.0</pose>
       <name>plant_small_bedroom</name>
       <uri>model://rwc2016/plant</uri>
     </include>
-    <include name="plant_small_hall_1">
+    <include>
       <pose>7.34685494228 -0.0256348198448 0.0 0 0 0.0</pose>
       <name>plant_small_hall_1</name>
       <uri>model://rwc2016/plant</uri>
     </include>
-    <include name="sink">
+    <include>
       <pose>7.79068520743 2.35834741039 0.0 0 0 0.0</pose>
       <name>sink</name>
       <uri>model://rwc2016/kitchen_counter</uri>
     </include>
-    <include name="cupboard">
+    <include>
       <pose>9.50542128925 5.24257608022 0.0 0 0 -1.57079632679</pose>
       <name>cupboard</name>
       <uri>model://rwc2016/cabinet_2slides</uri>
     </include>
-    <include name="bar">
+    <include>
       <pose>7.6934243492 3.89551713301 0.0 0 0 0.0</pose>
       <name>bar</name>
       <uri>model://rwc2016/bookcase_noback</uri>
     </include>
-    <include name="cabinet">
+    <include>
       <pose>4.03141751655 0.320342320845 0.0 0 0 -1.57079632679</pose>
       <name>cabinet</name>
       <uri>model://rwc2016/cabinet_2doors</uri>
     </include>
-    <include name="plant_small_hall_2">
+    <include>
       <pose>2.843662104 0.322526422217 0.0 0 0 0.0</pose>
       <name>plant_small_hall_2</name>
       <uri>model://rwc2016/plant</uri>
     </include>
-    <include name="sideshelf">
+    <include>
       <pose>10.6916059274 2.94276122472 0.0 0 0 3.14159265359</pose>
       <name>sideshelf</name>
       <uri>model://rwc2016/cabinet_2doors</uri>
     </include>
-    <include name="table1">
+    <include>
       <pose>14.8 3.1 0.0 0 0 3.14159265359</pose>
       <name>table1</name>
       <uri>model://rwc2016/table_bureau</uri>
     </include>
-    <include name="table2">
+    <include>
       <pose>14.8 0.2 0.0 0 0 3.14159265359</pose>
       <name>table2</name>
       <uri>model://rwc2016/table_bureau</uri>
     </include>
-    <include name="table3">
+    <include>
       <pose>12.0 -1.0 0.0 0 0 1.57079632679</pose>
       <name>table3</name>
       <uri>model://rwc2016/table_bureau</uri>
     </include>
-    <include name="bar">
+    <include>
       <pose>12.0 5.21299446298 0.0 0 0 -1.57079632679</pose>
       <name>bar</name>
       <uri>model://rwc2016/cabinet_open_small</uri>
@@ -379,6 +326,5 @@
         </solver>
       </ode>
     </physics>
-    <name>rwc2016b</name>
   </world>
 </sdf>

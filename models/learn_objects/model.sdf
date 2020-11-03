@@ -4,7 +4,6 @@
     <light name="sun" type="directional">
       <direction>0.5 0.1 -0.9</direction>
       <pose>0 0 10 0 0 0</pose>
-      <name>sun</name>
       <specular>0.2 0.2 0.2 1</specular>
       <cast_shadows>true</cast_shadows>
       <diffuse>0.8 0.8 0.8 1</diffuse>
@@ -15,12 +14,12 @@
         <linear>0.01</linear>
       </attenuation>
     </light>
-    <include name="floor">
+    <include>
       <pose>0 0 0 0 0 0</pose>
       <name>floor</name>
       <uri>model://floor</uri>
     </include>
-    <include name="hero_case">
+    <include>
       <pose>0 -1 0 0 0 1.57</pose>
       <name>hero_case</name>
       <uri>model://hero_case</uri>
@@ -37,6 +36,5 @@
         </solver>
       </ode>
     </physics>
-    <name>learn_objects</name>
   </world>
 </sdf>

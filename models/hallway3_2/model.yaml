@@ -1,0 +1,7 @@
+composition:
+- type: "hallway3_2/walls"
+  id: "walls"
+  pose:
+      x: 0
+      y: 0
+      z: 0

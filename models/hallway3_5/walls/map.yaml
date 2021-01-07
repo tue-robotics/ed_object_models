@@ -1,4 +1,4 @@
-image: shape/heightmap.pgm
+image: shape/heightmap_amcl.pgm
 resolution: 0.025
 origin: [-24.2, -27.8, 0]
 occupied_thresh: 0.65

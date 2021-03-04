@@ -57,6 +57,7 @@ def spawn_sdf_from_yaml(yaml_path):
 
     :param yaml_path: path to a yaml file.
     :type yaml_path: str
+
     The yaml file that yaml_path points to should be a dictonary or a list of dictionaries.
     Each dictionary should at least contain the keys id, type, x, y and z,
     additional optional keys are roll, pitch and yaw. The meaning of the keys are:

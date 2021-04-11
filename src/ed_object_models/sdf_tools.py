@@ -6,7 +6,7 @@ import rospy
 
 from gazebo_msgs.srv import SpawnModel
 from geometry_msgs.msg import Pose, Point, Quaternion
-from tf.transformations import quaternion_from_euler
+from tf_conversions.transformations import quaternion_from_euler
 
 
 def get_sdf_string(model_type):

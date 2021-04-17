@@ -6,7 +6,7 @@ import rospy
 
 from gazebo_msgs.srv import SpawnModel
 from geometry_msgs.msg import Pose, Point, Quaternion
-from tf_conversions.transformations import quaternion_from_euler
+from tf_conversions import transformations
 
 
 def get_sdf_string(model_type):
@@ -97,9 +97,9 @@ def spawn_sdf_from_yaml(yaml_path):
         # Define object pose
         object_pose = Pose()
         object_pose.position = Point(item["x"], item["y"], item["z"])
-        object_pose.orientation = Quaternion(*quaternion_from_euler(item.get("roll", 0),
-                                                                    item.get("pitch", 0),
-                                                                    item.get("yaw", 0)))
+        object_pose.orientation = Quaternion(*transformations.quaternion_from_euler(item.get("roll", 0),
+                                                                                    item.get("pitch", 0),
+                                                                                    item.get("yaw", 0)))
 
         sdf_string = get_sdf_string(item["type"])
         if not sdf_string:

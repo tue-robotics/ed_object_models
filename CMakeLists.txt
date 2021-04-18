@@ -14,3 +14,7 @@ catkin_add_env_hooks(99.ed_object_models SHELLS bash DIRECTORY ${CMAKE_CURRENT_S
 catkin_python_setup()
 
 catkin_package()
+
+if (CATKIN_ENABLE_TESTING)
+  catkin_add_nosetests(test)
+endif()

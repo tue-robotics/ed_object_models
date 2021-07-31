@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="door_biestheuvel">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>0.04 0.93 2.23</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>0.04 0.93 2.23</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 0.0 1.115 0 0 0</pose>
+    </link>
+    <link name="2">
+      <collision name="2">
+        <geometry>
+          <box>
+            <size>0.01 0.11 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="2">
+        <geometry>
+          <box>
+            <size>0.01 0.11 0.02</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.075 0.37 1.06 0 0 0</pose>
+    </link>
+    <link name="3">
+      <collision name="3">
+        <geometry>
+          <box>
+            <size>0.01 0.11 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="3">
+        <geometry>
+          <box>
+            <size>0.01 0.11 0.02</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>-0.075 0.37 1.06 0 0 0</pose>
+    </link>
+    <link name="4">
+      <collision name="4">
+        <geometry>
+          <box>
+            <size>0.15 0.01 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="4">
+        <geometry>
+          <box>
+            <size>0.15 0.01 0.01</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 0.42 1.06 0 0 0</pose>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of">
+        <geometry>
+          <box>
+            <size>0.2 0.35 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.4 0.0 0.0 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="in_front_of2">
+      <virtual_volume name="in_front_of2">
+        <geometry>
+          <box>
+            <size>0.2 0.35 0.01</size>
+          </box>
+        </geometry>
+        <pose>-0.4 0.0 0.0 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="hinge">
+      <virtual_volume name="hinge">
+        <geometry>
+          <box>
+            <size>0.05 0.05 2.23</size>
+          </box>
+        </geometry>
+        <pose>-0.025 -0.465 1.115 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <static>true</static>
+  </model>
+</sdf>

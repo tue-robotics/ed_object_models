@@ -25,7 +25,7 @@
       </attenuation>
     </light>
     <include>
-      <pose>0 0.0 0.0 0 0 0</pose>
+      <pose>0 0 0 0 0 0</pose>
       <name>coffee_table</name>
       <uri>model://rgo2017/table_salon</uri>
     </include>

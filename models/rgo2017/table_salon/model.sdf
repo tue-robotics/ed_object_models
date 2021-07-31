@@ -121,6 +121,46 @@
         <pose>0.8 0.0 0.005 0 0 0</pose>
       </virtual_volume>
     </link>
+    <link name="grasp_pt_1">
+     <virtual_volume name="grasp_pt_1">
+        <geometry>
+          <box>
+           <size>0.05 0.05 0.05</size>
+          </box>
+        </geometry>
+        <pose>0.275 0 0.425 0 0 0</pose>
+       </virtual_volume>
+     </link>
+     <link name="grasp_pt_2">
+      <virtual_volume name="grasp_pt_2">
+         <geometry>
+           <box>
+            <size>0.05 0.05 0.05</size>
+           </box>
+        </geometry>
+        <pose>0 0.275 0.425 0 0 0</pose>
+      </virtual_volume>
+     </link>
+     <link name="grasp_pt_3">
+        <virtual_volume name="grasp_pt_3">
+            <geometry>
+                <box>
+                <size>0.05 0.05 0.05</size>
+                </box>
+            </geometry>
+        <pose>-0.275 0 0.425 0 0 0</pose>
+        </virtual_volume>
+     </link>
+     <link name="grasp_pt_4">
+        <virtual_volume name="grasp_pt_4">
+             <geometry>
+                <box>
+                <size>0.05 0.05 0.05</size>
+                </box>
+            </geometry>
+            <pose>0 -0.275 0.425 0 0 0</pose>
+        </virtual_volume>
+     </link>
     <static>true</static>
   </model>
 </sdf>

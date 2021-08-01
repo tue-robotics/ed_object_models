@@ -64,6 +64,17 @@
       <name>wall7</name>
       <uri>model://robotics_testlabs/block120</uri>
     </include>
+    <include>
+      <pose>0.0 1.0 0.0 0 0 0.20</pose>
+      <name>biestheuvel_door</name>
+      <uri>model://robotics_testlabs/block120</uri>
+    </include>
+    <include>
+      <pose>1.0 -1.5 0.0 0 0 0.0</pose>
+      <name>door</name>
+      <uri>model://door_biestheuvel</uri>
+    </include>
+
     <model name="test_area" type="room">
       <link name="in">
         <virtual_volume name="in">

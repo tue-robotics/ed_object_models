@@ -121,6 +121,16 @@
         <pose>0.8 0.0 0.005 0 0 0</pose>
       </virtual_volume>
     </link>
+    <link name="in_front_of2">
+      <virtual_volume name="in_front_of2">
+        <geometry>
+          <box>
+            <size>0.2 0.35 0.01</size>
+          </box>
+        </geometry>
+        <pose>-0.8 0.0 0.005 0 0 0</pose>
+      </virtual_volume>
+    </link>
     <link name="grasp_pt_1">
      <virtual_volume name="grasp_pt_1">
         <geometry>

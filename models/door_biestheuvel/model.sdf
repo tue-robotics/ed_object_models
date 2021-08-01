@@ -1,74 +1,75 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
   <model name="door_biestheuvel">
-    <link name="1">
-      <collision name="1">
-        <geometry>
-          <box>
-            <size>0.04 0.93 2.23</size>
-          </box>
-        </geometry>
-      </collision>
-      <visual name="1">
-        <geometry>
-          <box>
-            <size>0.04 0.93 2.23</size>
-          </box>
-        </geometry>
-      </visual>
-      <pose>0.0 0.0 1.115 0 0 0</pose>
-    </link>
-    <link name="2">
-      <collision name="2">
-        <geometry>
-          <box>
-            <size>0.01 0.11 0.02</size>
-          </box>
-        </geometry>
-      </collision>
-      <visual name="2">
-        <geometry>
-          <box>
-            <size>0.01 0.11 0.02</size>
-          </box>
-        </geometry>
-      </visual>
-      <pose>0.075 0.37 1.06 0 0 0</pose>
-    </link>
-    <link name="3">
-      <collision name="3">
-        <geometry>
-          <box>
-            <size>0.01 0.11 0.02</size>
-          </box>
-        </geometry>
-      </collision>
-      <visual name="3">
-        <geometry>
-          <box>
-            <size>0.01 0.11 0.02</size>
-          </box>
-        </geometry>
-      </visual>
-      <pose>-0.075 0.37 1.06 0 0 0</pose>
-    </link>
-    <link name="4">
-      <collision name="4">
-        <geometry>
-          <box>
-            <size>0.15 0.01 0.01</size>
-          </box>
-        </geometry>
-      </collision>
-      <visual name="4">
-        <geometry>
-          <box>
-            <size>0.15 0.01 0.01</size>
-          </box>
-        </geometry>
-      </visual>
-      <pose>0.0 0.42 1.06 0 0 0</pose>
-    </link>
+<!-- These links are t=of the moving part which we currently cannot model in ED and thus never move thought -->
+<!--    <link name="1">-->
+<!--      <collision name="1">-->
+<!--        <geometry>-->
+<!--          <box>-->
+<!--            <size>0.04 0.93 2.23</size>-->
+<!--          </box>-->
+<!--        </geometry>-->
+<!--      </collision>-->
+<!--      <visual name="1">-->
+<!--        <geometry>-->
+<!--          <box>-->
+<!--            <size>0.04 0.93 2.23</size>-->
+<!--          </box>-->
+<!--        </geometry>-->
+<!--      </visual>-->
+<!--      <pose>0.0 0.0 1.115 0 0 0</pose>-->
+<!--    </link>-->
+<!--    <link name="2">-->
+<!--      <collision name="2">-->
+<!--        <geometry>-->
+<!--          <box>-->
+<!--            <size>0.01 0.11 0.02</size>-->
+<!--          </box>-->
+<!--        </geometry>-->
+<!--      </collision>-->
+<!--      <visual name="2">-->
+<!--        <geometry>-->
+<!--          <box>-->
+<!--            <size>0.01 0.11 0.02</size>-->
+<!--          </box>-->
+<!--        </geometry>-->
+<!--      </visual>-->
+<!--      <pose>0.075 0.37 1.06 0 0 0</pose>-->
+<!--    </link>-->
+<!--    <link name="3">-->
+<!--      <collision name="3">-->
+<!--        <geometry>-->
+<!--          <box>-->
+<!--            <size>0.01 0.11 0.02</size>-->
+<!--          </box>-->
+<!--        </geometry>-->
+<!--      </collision>-->
+<!--      <visual name="3">-->
+<!--        <geometry>-->
+<!--          <box>-->
+<!--            <size>0.01 0.11 0.02</size>-->
+<!--          </box>-->
+<!--        </geometry>-->
+<!--      </visual>-->
+<!--      <pose>-0.075 0.37 1.06 0 0 0</pose>-->
+<!--    </link>-->
+<!--    <link name="4">-->
+<!--      <collision name="4">-->
+<!--        <geometry>-->
+<!--          <box>-->
+<!--            <size>0.15 0.01 0.01</size>-->
+<!--          </box>-->
+<!--        </geometry>-->
+<!--      </collision>-->
+<!--      <visual name="4">-->
+<!--        <geometry>-->
+<!--          <box>-->
+<!--            <size>0.15 0.01 0.01</size>-->
+<!--          </box>-->
+<!--        </geometry>-->
+<!--      </visual>-->
+<!--      <pose>0.0 0.42 1.06 0 0 0</pose>-->
+<!--    </link>-->
     <link name="in_front_of">
       <virtual_volume name="in_front_of">
         <geometry>
@@ -98,6 +99,168 @@
         </geometry>
         <pose>-0.025 -0.465 1.115 0 0 0</pose>
       </virtual_volume>
+    </link>
+    <link name="frame_right">
+      <collision name="frame_right">
+        <geometry>
+          <box>
+            <size>0.05 0.05 2.23</size>
+          </box>
+        </geometry>
+        <pose>0.0 -0.465 1.115 0 0 0</pose>
+      </collision>
+      <visual name="frame_right">
+        <geometry>
+          <box>
+            <size>0.05 0.05 2.23</size>
+          </box>
+        </geometry>
+        <pose>0.0 -0.465 1.115 0 0 0</pose>
+      </visual>
+    </link>
+    <link name="frame_left">
+      <collision name="frame_left">
+        <geometry>
+          <box>
+            <size>0.05 0.05 2.23</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.465 1.115 0 0 0</pose>
+      </collision>
+      <visual name="frame_left">
+        <geometry>
+          <box>
+            <size>0.05 0.05 2.23</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.465 1.115 0 0 0</pose>
+      </visual>
+    </link>
+    <link name="frame_top">
+      <collision name="frame_top">
+        <geometry>
+          <box>
+            <size>0.05 0.98 0.05</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.465 2.23 0 0 0</pose>
+      </collision>
+      <visual name="frame_top">
+        <geometry>
+          <box>
+            <size>0.05 0.98 0.05</size>
+          </box>
+        </geometry>
+        <pose>0.0 0 2.255 0 0 0</pose>
+      </visual>
+    </link>
+    <link name="brace_1">
+      <collision name="brace_1">
+        <geometry>
+          <box>
+            <size>0.07 0.5 0.07</size>
+          </box>
+        </geometry>
+        <pose>0.25 0.465 0.25 0.7 0 1.57</pose>
+      </collision>
+      <visual name="brace_1">
+        <geometry>
+          <box>
+            <size>0.07 0.5 0.07</size>
+          </box>
+        </geometry>
+        <pose>0.25 0.465 0.25 0.7 0.0 1.57</pose>
+      </visual>
+    </link>
+    <link name="brace_2">
+      <collision name="brace_2">
+        <geometry>
+          <box>
+            <size>0.07 0.5 0.07</size>
+          </box>
+        </geometry>
+        <pose>0.25 -0.465 0.25 0.7 0 1.57</pose>
+      </collision>
+      <visual name="brace_2">
+        <geometry>
+          <box>
+            <size>0.07 0.5 0.07</size>
+          </box>
+        </geometry>
+        <pose>0.25 -0.465 0.25 0.7 0.0 1.57</pose>
+      </visual>
+    </link>
+    <link name="brace_3">
+      <collision name="brace_3">
+        <geometry>
+          <box>
+            <size>0.07 0.5 0.07</size>
+          </box>
+        </geometry>
+        <pose>-0.25 0.465 0.25 -0.7 0 1.57</pose>
+      </collision>
+      <visual name="brace_3">
+        <geometry>
+          <box>
+            <size>0.07 0.5 0.07</size>
+          </box>
+        </geometry>
+        <pose>-0.25 0.465 0.25 -0.7 0.0 1.57</pose>
+      </visual>
+    </link>
+    <link name="brace_4">
+      <collision name="brace_4">
+        <geometry>
+          <box>
+            <size>0.07 0.5 0.07</size>
+          </box>
+        </geometry>
+        <pose>-0.25 -0.465 0.25 -0.7 0 1.57</pose>
+      </collision>
+      <visual name="brace_4">
+        <geometry>
+          <box>
+            <size>0.07 0.5 0.07</size>
+          </box>
+        </geometry>
+        <pose>-0.25 -0.465 0.25 -0.7 0.0 1.57</pose>
+      </visual>
+    </link>
+    <link name="base_left">
+      <collision name="base_left">
+        <geometry>
+          <box>
+            <size>1.0 0.07 0.07</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.465 0.035 0 0 0</pose>
+      </collision>
+      <visual name="base_left">
+        <geometry>
+          <box>
+            <size>1.0 0.07 0.07</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.465 0.035 0 0 0</pose>
+      </visual>
+    </link>
+    <link name="base_right">
+      <collision name="base_right">
+        <geometry>
+          <box>
+            <size>1.0 0.07 0.07</size>
+          </box>
+        </geometry>
+        <pose>0.0 -0.465 0.035 0 0 0</pose>
+      </collision>
+      <visual name="base_right">
+        <geometry>
+          <box>
+            <size>1.0 0.07 0.07</size>
+          </box>
+        </geometry>
+        <pose>0.0 -0.465 0.035 0 0 0</pose>
+      </visual>
     </link>
     <static>true</static>
   </model>

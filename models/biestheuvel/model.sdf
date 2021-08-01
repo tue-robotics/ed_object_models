@@ -3,6 +3,7 @@
   <world name="biestheuvel">
     <include>
       <name>walls</name>
+
       <uri>model://biestheuvel/walls</uri>
       <pose>0 0 0 0 0 0</pose>
     </include>
@@ -27,7 +28,7 @@
     <include>
       <pose>0.0 0.0 0.0 0 0 0</pose>
       <name>coffee_table</name>
-      <uri>model://rgo2017/table_salon</uri>
+      <uri>model://rgo2017/table_salon_biestheuvel</uri>
     </include>
     <include>
       <pose>1.09 -2.2 0.0 0 0 0</pose>

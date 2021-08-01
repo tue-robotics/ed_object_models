@@ -74,6 +74,20 @@
       <name>door</name>
       <uri>model://door_biestheuvel</uri>
     </include>
+    <model name="test_area" type="room">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>3.83 4.0 2.5</size>
+            </box>
+          </geometry>
+          <pose>0.135 -1.1 1.25 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <pose>1.5 1.0 0.0 0 0 0</pose>
+      <static>true</static>
+    </model>
     <physics type="ode">
       <real_time_update_rate>333.0</real_time_update_rate>
       <max_step_size>0.003</max_step_size>

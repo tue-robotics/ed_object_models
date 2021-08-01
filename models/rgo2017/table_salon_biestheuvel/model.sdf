@@ -1,0 +1,176 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rgo2017/table_salon">
+    <link name="1">
+      <virtual_volume name="1">
+        <geometry>
+          <box>
+            <size>0.55 0.55 0.05</size>
+          </box>
+        </geometry>
+      </virtual_volume>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>0.55 0.55 0.05</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+      </visual>
+      <pose>10 0 0.425 0 0 0</pose>
+    </link>
+    <link name="2">
+      <virtual_volume name="2">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.4</size>
+          </box>
+        </geometry>
+      </virtual_volume>
+      <visual name="2">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.4</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+      </visual>
+      <pose>10 -0.25 0.2 0 0 0</pose>
+    </link>
+    <link name="3">
+      <virtual_volume name="3">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.4</size>
+          </box>
+        </geometry>
+      </virtual_volume>
+      <visual name="3">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.4</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+      </visual>
+      <pose>10 -0.25 0.2 0 0 0</pose>
+    </link>
+    <link name="4">
+      <virtual_volume name="4">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.4</size>
+          </box>
+        </geometry>
+      </virtual_volume>
+      <visual name="4">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.4</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+      </visual>
+      <pose>10 0.25 0.2 0 0 0</pose>
+    </link>
+    <link name="5">
+      <virtual_volume name="5">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.4</size>
+          </box>
+        </geometry>
+      </virtual_volume>
+      <visual name="5">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.4</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+      </visual>
+      <pose>10 0.25 0.2 0 0 0</pose>
+    </link>
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of">
+        <geometry>
+          <box>
+            <size>0.49 0.49 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.0 0.595 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of">
+        <geometry>
+          <box>
+            <size>0.2 0.35 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.8 0.0 0.005 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="in_front_of2">
+      <virtual_volume name="in_front_of2">
+        <geometry>
+          <box>
+            <size>0.2 0.35 0.01</size>
+          </box>
+        </geometry>
+        <pose>-0.8 0.0 0.005 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="grasp_pt_1">
+     <virtual_volume name="grasp_pt_1">
+        <geometry>
+          <box>
+           <size>0.05 0.05 0.05</size>
+          </box>
+        </geometry>
+        <pose>0.275 0 0.425 0 0 0</pose>
+       </virtual_volume>
+     </link>
+     <link name="grasp_pt_2">
+      <virtual_volume name="grasp_pt_2">
+         <geometry>
+           <box>
+            <size>0.05 0.05 0.05</size>
+           </box>
+        </geometry>
+        <pose>0 0.275 0.425 0 0 0</pose>
+      </virtual_volume>
+     </link>
+     <link name="grasp_pt_3">
+        <virtual_volume name="grasp_pt_3">
+            <geometry>
+                <box>
+                <size>0.05 0.05 0.05</size>
+                </box>
+            </geometry>
+        <pose>-0.275 0 0.425 0 0 0</pose>
+        </virtual_volume>
+     </link>
+     <link name="grasp_pt_4">
+        <virtual_volume name="grasp_pt_4">
+             <geometry>
+                <box>
+                <size>0.05 0.05 0.05</size>
+                </box>
+            </geometry>
+            <pose>0 -0.275 0.425 0 0 0</pose>
+        </virtual_volume>
+     </link>
+    <static>true</static>
+  </model>
+</sdf>

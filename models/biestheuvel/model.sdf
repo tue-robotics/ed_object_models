@@ -74,7 +74,10 @@
       <name>door</name>
       <uri>model://door_biestheuvel</uri>
     </include>
-
+    <model name="final_pose" type="waypoint">
+      <pose>-2.0 0.0 0 0 0 0</pose>
+      <static>true</static>
+    </model>
     <model name="test_area" type="room">
       <link name="in">
         <virtual_volume name="in">

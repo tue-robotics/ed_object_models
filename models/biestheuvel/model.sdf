@@ -71,7 +71,7 @@
       <uri>model://robotics_testlabs/block120</uri>
     </include>
     <include>
-      <pose>1.0 -1.33 0.0 0 0 0.0</pose>
+      <pose>2.0 -1.33 0.0 0 0 0.0</pose>
       <name>door</name>
       <uri>model://door_biestheuvel</uri>
     </include>

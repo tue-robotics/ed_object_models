@@ -79,13 +79,27 @@
         <virtual_volume name="in">
           <geometry>
             <box>
-              <size>3.83 4.0 2.5</size>
+              <size>2.5 4.0 2.5</size>
             </box>
           </geometry>
-          <pose>0.135 -1.1 1.25 0 0 0</pose>
+          <pose>0.95 -1.1 1.25 0 0 0</pose>
         </virtual_volume>
       </link>
       <pose>1.5 1.0 0.0 0 0 0</pose>
+      <static>true</static>
+    </model>
+    <model name="test_area2" type="room">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>1.23 4.0 2.5</size>
+            </box>
+          </geometry>
+          <pose>-1.05 -1.1 1.25 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <pose>1.4 1.0 0.0 0 0 0</pose>
       <static>true</static>
     </model>
     <physics type="ode">

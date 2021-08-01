@@ -25,7 +25,7 @@
       </attenuation>
     </light>
     <include>
-      <pose>2.0 0.0 0.0 0 0 0</pose>
+      <pose>0.0 0.0 0.0 0 0 0</pose>
       <name>coffee_table</name>
       <uri>model://rgo2017/table_salon</uri>
     </include>
@@ -64,16 +64,6 @@
       <name>wall7</name>
       <uri>model://robotics_testlabs/block120</uri>
     </include>
-    <include>
-      <pose>0.0 1.0 0.0 0 0 0.20</pose>
-      <name>biestheuvel_door</name>
-      <uri>model://robotics_testlabs/block120</uri>
-    </include>
-    <include>
-      <pose>1.0 -1.5 0.0 0 0 0.0</pose>
-      <name>door</name>
-      <uri>model://door_biestheuvel</uri>
-    </include>
     <model name="test_area" type="room">
       <link name="in">
         <virtual_volume name="in">
@@ -97,6 +87,20 @@
             </box>
           </geometry>
           <pose>-1.05 -1.1 1.25 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <pose>1.4 1.0 0.0 0 0 0</pose>
+      <static>true</static>
+    </model>
+    <model name="breakfast_room" type="room">
+      <link name="in">
+        <virtual_volume name="in">
+          <geometry>
+            <box>
+              <size>6.23 3.5 2.5</size>
+            </box>
+          </geometry>
+          <pose>-5 -1.4 1.25 0 0 0</pose>
         </virtual_volume>
       </link>
       <pose>1.4 1.0 0.0 0 0 0</pose>

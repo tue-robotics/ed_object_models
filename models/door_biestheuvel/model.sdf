@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
   <model name="door_biestheuvel">
-    <link name="in_front_of">
-      <virtual_volume name="in_front_of">
+    <link name="outward">
+      <virtual_volume name="outward">
         <geometry>
           <box>
             <size>0.2 0.35 0.01</size>
@@ -11,8 +11,8 @@
         <pose>0.6 0.0 0.0 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="in_front_of2">
-      <virtual_volume name="in_front_of2">
+    <link name="inward">
+      <virtual_volume name="inward">
         <geometry>
           <box>
             <size>0.2 0.35 0.01</size>

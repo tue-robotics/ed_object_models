@@ -1,75 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
   <model name="door_biestheuvel">
-<!-- These links are t=of the moving part which we currently cannot model in ED and thus never move thought -->
-<!--    <link name="1">-->
-<!--      <collision name="1">-->
-<!--        <geometry>-->
-<!--          <box>-->
-<!--            <size>0.04 0.93 2.23</size>-->
-<!--          </box>-->
-<!--        </geometry>-->
-<!--      </collision>-->
-<!--      <visual name="1">-->
-<!--        <geometry>-->
-<!--          <box>-->
-<!--            <size>0.04 0.93 2.23</size>-->
-<!--          </box>-->
-<!--        </geometry>-->
-<!--      </visual>-->
-<!--      <pose>0.0 0.0 1.115 0 0 0</pose>-->
-<!--    </link>-->
-<!--    <link name="2">-->
-<!--      <collision name="2">-->
-<!--        <geometry>-->
-<!--          <box>-->
-<!--            <size>0.01 0.11 0.02</size>-->
-<!--          </box>-->
-<!--        </geometry>-->
-<!--      </collision>-->
-<!--      <visual name="2">-->
-<!--        <geometry>-->
-<!--          <box>-->
-<!--            <size>0.01 0.11 0.02</size>-->
-<!--          </box>-->
-<!--        </geometry>-->
-<!--      </visual>-->
-<!--      <pose>0.075 0.37 1.06 0 0 0</pose>-->
-<!--    </link>-->
-<!--    <link name="3">-->
-<!--      <collision name="3">-->
-<!--        <geometry>-->
-<!--          <box>-->
-<!--            <size>0.01 0.11 0.02</size>-->
-<!--          </box>-->
-<!--        </geometry>-->
-<!--      </collision>-->
-<!--      <visual name="3">-->
-<!--        <geometry>-->
-<!--          <box>-->
-<!--            <size>0.01 0.11 0.02</size>-->
-<!--          </box>-->
-<!--        </geometry>-->
-<!--      </visual>-->
-<!--      <pose>-0.075 0.37 1.06 0 0 0</pose>-->
-<!--    </link>-->
-<!--    <link name="4">-->
-<!--      <collision name="4">-->
-<!--        <geometry>-->
-<!--          <box>-->
-<!--            <size>0.15 0.01 0.01</size>-->
-<!--          </box>-->
-<!--        </geometry>-->
-<!--      </collision>-->
-<!--      <visual name="4">-->
-<!--        <geometry>-->
-<!--          <box>-->
-<!--            <size>0.15 0.01 0.01</size>-->
-<!--          </box>-->
-<!--        </geometry>-->
-<!--      </visual>-->
-<!--      <pose>0.0 0.42 1.06 0 0 0</pose>-->
-<!--    </link>-->
     <link name="in_front_of">
       <virtual_volume name="in_front_of">
         <geometry>
@@ -98,6 +29,36 @@
           </box>
         </geometry>
         <pose>-0.025 -0.465 1.115 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="handle">
+      <virtual_volume name="handle">
+        <geometry>
+          <box>
+            <size>0.2 0.12 0.12</size>
+          </box>
+        </geometry>
+        <pose>0 0.365 1.06 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="frame_right_point">
+      <virtual_volume name="frame_right_point">
+        <geometry>
+          <box>
+            <size>0.02 0.02 0.02</size>
+          </box>
+        </geometry>
+        <pose>0 -0.465 0 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="frame_left_point">
+      <virtual_volume name="frame_left_point">
+        <geometry>
+          <box>
+            <size>0.02 0.02 0.02</size>
+          </box>
+        </geometry>
+        <pose>0 0.465 0 0 0 0</pose>
       </virtual_volume>
     </link>
     <link name="frame_right">

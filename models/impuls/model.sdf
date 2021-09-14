@@ -36,6 +36,26 @@
       <name>black_cabinet4</name>
       <uri>model://robotics_testlab_B/black_cabinet</uri>
     </include>
+    <include>
+      <pose>4.50 1 0 0 0 -3.14</pose>
+      <name>dinner_table</name>
+      <uri>model://table_120x80x76</uri>
+    </include>
+    <include>
+      <pose>1.1 2.200 0 0 0 -1.57079632679</pose>
+      <name>work_bench1</name>
+      <uri>model://table_120x80x76</uri>
+    </include>
+    <include>
+      <pose>1.9 2.200 0 0 0 -1.57079632679</pose>
+      <name>work_bench2</name>
+      <uri>model://table_120x80x76</uri>
+    </include>
+    <include>
+      <pose>6.7 2.600 0 0 0 -1.57079632679</pose>
+      <name>cabinet</name>
+      <uri>model://robotics_testlab_B/corridor_cabinet</uri>
+    </include>
     <light type="directional" name="sun">
       <cast_shadows>true</cast_shadows>
       <pose>0 0 10 0 0 0</pose>

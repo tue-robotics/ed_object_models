@@ -37,7 +37,7 @@
       <uri>model://robotics_testlab_B/black_cabinet</uri>
     </include>
     <include>
-      <pose>4.50 1 0 0 0 -3.14</pose>
+      <pose>4.50 1.15 0 0 0 -3.14</pose>
       <name>dinner_table</name>
       <uri>model://table_120x80x76</uri>
     </include>

@@ -84,7 +84,7 @@
     <include>
       <pose>7.32 0.5 0 0 0 3.14159265359</pose>
       <name>door</name>
-      <uri>model://door_biestheuvel</uri>
+      <uri>model://door_wooden</uri>
     </include>
     <include>
       <pose>8.05 2.56 0 0 0 -1.57079632679</pose>

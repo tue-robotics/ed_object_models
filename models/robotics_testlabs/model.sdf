@@ -22,14 +22,6 @@
       <pose>2.7 5 0 0 0 0</pose>
       <static>true</static>
     </model>
-    <model name="hallway" type="waypoint">
-      <pose>0 5.5 0 0 0 0</pose>
-      <static>true</static>
-    </model>
-    <model name="bedroom" type="waypoint">
-      <pose>-2.0 -1.0 0 0 0 0</pose>
-      <static>true</static>
-    </model>
     <model name="battery_point" type="waypoint">
       <pose>-2.8 2.0 0 0 0 0</pose>
       <static>true</static>

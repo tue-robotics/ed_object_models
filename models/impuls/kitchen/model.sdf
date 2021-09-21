@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="impuls/kitchen">
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>2.44 0.6 0.96</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>2.44 0.6 0.96</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 0.0 0.48 0 0 0</pose>
+    </link>
+    <static>true</static>
+  </model>
+</sdf>

@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="impuls/walls">
+    <static>true</static>
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <mesh>
+            <uri>model://impuls/walls/shape/heightmap.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <mesh>
+            <uri>model://impuls/walls/shape/heightmap.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <pose>0 0 0 0 0 0</pose>
+    </link>
+    <include>
+        <uri>model://robotics_testlabs/block120</uri>
+        <name>impuls/walls/block1</name>
+        <pose>7.17 2.15 0 0 0 -1.57079632679</pose>
+    </include>
+    <include>
+        <uri>model://robotics_testlabs/block120</uri>
+        <name>impuls/walls/block2</name>
+        <pose>8.08 -0.175 0 0 0 0</pose>
+    </include>
+    <include>
+        <uri>model://robotics_testlabs/block120</uri>
+        <name>impuls/walls/block3</name>
+        <pose>9.28 -0.175 0 0 0 0</pose>
+    </include>
+    <include>
+        <uri>model://impuls/thin_wall</uri>
+        <name>impuls/walls/thin_wall</name>
+        <pose>3.305 -0.4625 0 0 0 0</pose>
+    </include>
+  </model>
+</sdf>

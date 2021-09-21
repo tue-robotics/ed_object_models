@@ -19,5 +19,20 @@
       </visual>
       <pose>0 0 0 0 0 0</pose>
     </link>
+    <include>
+        <uri>model://robotics_testlabs/block120</uri>
+        <name>impuls/walls/block1</name>
+        <pose>7.17 2.15 0 0 0 -1.57079632679</pose>
+    </include>
+    <include>
+        <uri>model://robotics_testlabs/block120</uri>
+        <name>impuls/walls/block2</name>
+        <pose>8.08 -0.175 0 0 0 0</pose>
+    </include>
+    <include>
+        <uri>model://robotics_testlabs/block120</uri>
+        <name>impuls/walls/block3</name>
+        <pose>9.28 -0.175 0 0 0 0</pose>
+    </include>
   </model>
 </sdf>

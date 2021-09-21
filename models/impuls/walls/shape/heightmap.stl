@@ -111,81 +111,17 @@ solid AssimpScene
   endloop
  endfacet
 
- facet normal 0.57735026 -0.57735026 0.57735026
+ facet normal -0.57735026 -0.57735026 0.57735026
   outer loop
   vertex 13.4 2.75 0
   vertex 13.4 2.75 2
-  vertex 7.2750001 2.75 0
-  endloop
- endfacet
-
- facet normal 0.44721359 0 0.89442718
-  outer loop
-  vertex 13.4 2.75 2
-  vertex 7.2750001 2.75 2
-  vertex 7.2750001 2.75 0
-  endloop
- endfacet
-
- facet normal 0.57735026 -0.57735026 0.57735026
-  outer loop
-  vertex 7.2750001 2.75 0
-  vertex 7.2750001 2.75 2
-  vertex 7.2750001 1.55 0
-  endloop
- endfacet
-
- facet normal 0 -0.44721359 0.89442718
-  outer loop
-  vertex 7.2750001 2.75 2
-  vertex 7.2750001 1.55 2
-  vertex 7.2750001 1.55 0
-  endloop
- endfacet
-
- facet normal -0.57735026 -0.57735026 0.57735026
-  outer loop
-  vertex 7.2750001 1.55 0
-  vertex 7.2750001 1.55 2
-  vertex 7.0749998 1.55 0
-  endloop
- endfacet
-
- facet normal -0.44721359 0 0.89442718
-  outer loop
-  vertex 7.2750001 1.55 2
-  vertex 7.0749998 1.55 2
-  vertex 7.0749998 1.55 0
-  endloop
- endfacet
-
- facet normal -0.57735026 -0.57735026 0.57735026
-  outer loop
-  vertex 7.0749998 1.55 0
-  vertex 7.0749998 1.55 2
-  vertex 7.0749998 2.75 0
-  endloop
- endfacet
-
- facet normal 0 -0.44721359 0.89442718
-  outer loop
-  vertex 7.0749998 1.55 2
-  vertex 7.0749998 2.75 2
-  vertex 7.0749998 2.75 0
-  endloop
- endfacet
-
- facet normal -0.57735026 -0.57735026 0.57735026
-  outer loop
-  vertex 7.0749998 2.75 0
-  vertex 7.0749998 2.75 2
   vertex -0.30000001 2.75 0
   endloop
  endfacet
 
  facet normal -0.44721359 0 0.89442718
   outer loop
-  vertex 7.0749998 2.75 2
+  vertex 13.4 2.75 2
   vertex -0.30000001 2.75 2
   vertex -0.30000001 2.75 0
   endloop
@@ -442,40 +378,8 @@ solid AssimpScene
  facet normal 0 0 1
   outer loop
   vertex -0.30000001 2.8 2
-  vertex 7.2750001 2.75 2
-  vertex 13.4 2.75 2
-  endloop
- endfacet
-
- facet normal 0 0 1
-  outer loop
-  vertex 7.2750001 2.75 2
-  vertex 7.0749998 1.55 2
-  vertex 7.2750001 1.55 2
-  endloop
- endfacet
-
- facet normal 0 0 1
-  outer loop
-  vertex 7.2750001 2.75 2
-  vertex 7.0749998 2.75 2
-  vertex 7.0749998 1.55 2
-  endloop
- endfacet
-
- facet normal 0 0 1
-  outer loop
-  vertex -0.30000001 2.8 2
-  vertex 7.0749998 2.75 2
-  vertex 7.2750001 2.75 2
-  endloop
- endfacet
-
- facet normal 0 0 1
-  outer loop
-  vertex -0.30000001 2.8 2
   vertex -0.30000001 2.75 2
-  vertex 7.0749998 2.75 2
+  vertex 13.4 2.75 2
   endloop
  endfacet
 
@@ -609,47 +513,15 @@ solid AssimpScene
 
  facet normal 0 0 1
   outer loop
-  vertex 9.875 -0.075000003 0
-  vertex 9.875 -0.075000003 2
-  vertex 9.875 -0.27500001 0
-  endloop
- endfacet
-
- facet normal 0 -0.44721365 0.89442724
-  outer loop
-  vertex 9.875 -0.075000003 2
-  vertex 9.875 -0.27500001 2
-  vertex 9.875 -0.27500001 0
-  endloop
- endfacet
-
- facet normal 0.57735026 -0.57735026 0.5773502
-  outer loop
-  vertex 9.875 -0.27500001 0
-  vertex 9.875 -0.27500001 2
-  vertex 7.4749999 -0.27500001 0
-  endloop
- endfacet
-
- facet normal 0.44721359 0 0.89442718
-  outer loop
-  vertex 9.875 -0.27500001 2
-  vertex 7.4749999 -0.27500001 2
-  vertex 7.4749999 -0.27500001 0
-  endloop
- endfacet
-
- facet normal 0.57735026 -0.57735026 0.57735026
-  outer loop
-  vertex 7.4749999 -0.27500001 0
-  vertex 7.4749999 -0.27500001 2
+  vertex 7.4749999 -0.075000003 0
+  vertex 7.4749999 -0.075000003 2
   vertex 7.4749999 -0.47499999 0
   endloop
  endfacet
 
  facet normal 0 -0.44721359 0.89442718
   outer loop
-  vertex 7.4749999 -0.27500001 2
+  vertex 7.4749999 -0.075000003 2
   vertex 7.4749999 -0.47499999 2
   vertex 7.4749999 -0.47499999 0
   endloop
@@ -691,47 +563,31 @@ solid AssimpScene
   outer loop
   vertex 7.0749998 -0.075000003 0
   vertex 7.0749998 -0.075000003 2
-  vertex 9.875 -0.075000003 0
+  vertex 7.4749999 -0.075000003 0
   endloop
  endfacet
 
  facet normal 0 0.44721359 0.89442718
   outer loop
   vertex 7.0749998 -0.075000003 2
-  vertex 9.875 -0.075000003 2
-  vertex 9.875 -0.075000003 0
+  vertex 7.4749999 -0.075000003 2
+  vertex 7.4749999 -0.075000003 0
   endloop
  endfacet
 
  facet normal 0 0 1
   outer loop
   vertex 7.0749998 -0.075000003 2
-  vertex 9.875 -0.27500001 2
-  vertex 9.875 -0.075000003 2
+  vertex 7.4749999 -0.47499999 2
+  vertex 7.4749999 -0.075000003 2
   endloop
  endfacet
 
  facet normal 0 0 1
   outer loop
   vertex 7.0749998 -0.075000003 2
-  vertex 7.4749999 -0.27500001 2
-  vertex 9.875 -0.27500001 2
-  endloop
- endfacet
-
- facet normal 0 0 1
-  outer loop
-  vertex 7.0749998 -0.47499999 2
-  vertex 7.4749999 -0.27500001 2
-  vertex 7.0749998 -0.075000003 2
-  endloop
- endfacet
-
- facet normal 0 0 1
-  outer loop
   vertex 7.0749998 -0.47499999 2
   vertex 7.4749999 -0.47499999 2
-  vertex 7.4749999 -0.27500001 2
   endloop
  endfacet
 

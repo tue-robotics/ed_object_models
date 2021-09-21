@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="robotics_testlabs/block120">
+    <static>true</static>
+    <link name="1">
+      <collision name="1">
+        <geometry>
+          <box>
+            <size>1.2 0.2 0.8</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="1">
+        <geometry>
+          <box>
+            <size>1.2 0.2 0.8</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 0.0 0.4 0 0 0</pose>
+    </link>
+  </model>
+</sdf>

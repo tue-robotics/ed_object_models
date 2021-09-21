@@ -1,7 +1,6 @@
-#! /usr/bin/python
+#! /usr/bin/env python
 
-from __future__ import print_function
-
+from itertools import chain
 import sys
 import yaml
 import os
@@ -38,7 +37,7 @@ def read_option(message, options=[], default=None, help=None):
     :return: no return
     """
     while True:
-        option = raw_input(message)
+        option = input(message)
         if option:
             if option == "?":
                 if help:
@@ -70,7 +69,7 @@ def read_float(message, default=None, help=None):
     :return: no return
     """
     while True:
-        option = raw_input(message)
+        option = input(message)
         if not option:
             if default is not None:
                 return default
@@ -246,7 +245,7 @@ class ShapeCreator:
         pose = shape['box']['pose']  # type: dict
         size = shape['box']['size']  # type: dict
 
-        for item in pose.values() + size.values():
+        for item in chain(pose.values(), size.values()):
             assert(isinstance(item, float))
 
         boxmin = {'x': round(pose['x'] - size['x'] / 2 + back_clearence, ROUND_LEVEL),

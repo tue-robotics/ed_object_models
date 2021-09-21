@@ -1,0 +1,201 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="table_IKEA_LACK">
+    <link name="top">
+      <collision name="top">
+        <geometry>
+          <box>
+            <size>0.55 0.55 0.05</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="top">
+        <geometry>
+          <box>
+            <size>0.55 0.55 0.05</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+      </visual>
+      <pose>0 0 0.425 0 0 0</pose>
+    </link>
+
+    <link name="leg_1">
+      <collision name="leg_1">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.4</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="leg_1">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.4</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+      </visual>
+      <pose>-0.25 -0.25 0.2 0 0 0</pose>
+    </link>
+
+    <link name="leg_2">
+      <collision name="leg_2">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.4</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="leg_2">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.4</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+      </visual>
+      <pose>0.25 -0.25 0.2 0 0 0</pose>
+    </link>
+
+    <link name="leg_3">
+      <collision name="leg_3">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.4</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="leg_3">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.4</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+      </visual>
+      <pose>-0.25 0.25 0.2 0 0 0</pose>
+    </link>
+
+    <link name="leg_4">
+      <collision name="leg_4">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.4</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="leg_4">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.4</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.75 0.75 1</ambient>
+        </material>
+      </visual>
+      <pose>0.25 0.25 0.2 0 0 0</pose>
+    </link>
+
+    <joint name="top_leg_1_joint" type="fixed">
+      <parent>top</parent>
+      <child>leg_1</child>
+    </joint>
+
+    <joint name="top_leg_2_joint" type="fixed">
+      <parent>top</parent>
+      <child>leg_2</child>
+    </joint>
+
+    <joint name="top_leg_3_joint" type="fixed">
+      <parent>top</parent>
+      <child>leg_3</child>
+    </joint>
+
+    <joint name="top_leg_4_joint" type="fixed">
+      <parent>top</parent>
+      <child>leg_4</child>
+    </joint>
+
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of">
+        <geometry>
+          <box>
+            <size>0.49 0.49 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.0 0.595 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of">
+        <geometry>
+          <box>
+            <size>0.2 0.35 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.8 0.0 0.005 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="in_front_of2">
+      <virtual_volume name="in_front_of2">
+        <geometry>
+          <box>
+            <size>0.2 0.35 0.01</size>
+          </box>
+        </geometry>
+        <pose>-0.8 0.0 0.005 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="grasp_pt_1">
+     <virtual_volume name="grasp_pt_1">
+        <geometry>
+          <box>
+           <size>0.05 0.05 0.05</size>
+          </box>
+        </geometry>
+        <pose>0.275 0 0.425 0 0 0</pose>
+       </virtual_volume>
+     </link>
+     <link name="grasp_pt_2">
+      <virtual_volume name="grasp_pt_2">
+         <geometry>
+           <box>
+            <size>0.05 0.05 0.05</size>
+           </box>
+        </geometry>
+        <pose>0 0.275 0.425 0 0 0</pose>
+      </virtual_volume>
+     </link>
+     <link name="grasp_pt_3">
+        <virtual_volume name="grasp_pt_3">
+            <geometry>
+                <box>
+                <size>0.05 0.05 0.05</size>
+                </box>
+            </geometry>
+        <pose>-0.275 0 0.425 0 0 0</pose>
+        </virtual_volume>
+     </link>
+     <link name="grasp_pt_4">
+        <virtual_volume name="grasp_pt_4">
+             <geometry>
+                <box>
+                <size>0.05 0.05 0.05</size>
+                </box>
+            </geometry>
+            <pose>0 -0.275 0.425 0 0 0</pose>
+        </virtual_volume>
+     </link>
+    <static>false</static>
+  </model>
+</sdf>

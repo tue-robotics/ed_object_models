@@ -1,22 +1,93 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
   <model name="impuls/couch_short">
-    <link name="1">
-      <collision name="1">
+    <link name="back">
+      <collision name="back">
         <geometry>
           <box>
-            <size>1.75 0.85 0.45</size>
+            <size>1.6 0.25 0.79</size>
           </box>
         </geometry>
       </collision>
-      <visual name="1">
+      <visual name="back">
         <geometry>
           <box>
-            <size>1.75 0.85 0.45</size>
+            <size>1.6 0.25 0.79</size>
           </box>
         </geometry>
       </visual>
-      <pose>0.0 0.0 0.225 0 0 0</pose>
+      <pose>0.0 -0.3 0.395 0 0 0</pose>
+    </link>
+    <link name="side_right">
+      <collision name="side_right">
+        <geometry>
+          <box>
+            <size>0.20 0.85 0.65</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="side_right">
+        <geometry>
+          <box>
+            <size>0.20 0.85 0.65</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.80 0 0.325 0 0 0</pose>
+    </link>
+    <link name="side_left">
+      <collision name="side_left">
+        <geometry>
+          <box>
+            <size>0.20 0.85 0.65</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="side_left">
+        <geometry>
+          <box>
+            <size>0.20 0.85 0.65</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>-0.80 0 0.325 0 0 0</pose>
+    </link>
+    <link name="seat">
+      <collision name="seat">
+        <geometry>
+          <box>
+            <size>1.46 0.60 0.42</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="seat">
+        <geometry>
+          <box>
+            <size>1.46 0.60 0.42</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0 0.125 0.21 0 0 0</pose>
+    </link>
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of">
+        <geometry>
+          <box>
+            <size>1.46 0.60 0.3</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.125 0.615 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of">
+        <geometry>
+          <box>
+            <size>1.55 0.2 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.65 0.005 0 0 0</pose>
+      </virtual_volume>
     </link>
     <static>true</static>
   </model>

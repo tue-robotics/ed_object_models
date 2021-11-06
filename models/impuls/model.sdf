@@ -11,6 +11,22 @@
       <name>floor</name>
       <uri>model://floor</uri>
     </include>
+    <model name="near_workbench" type="waypoint">
+      <pose>1.5 0.8 0 0 0 0</pose>
+      <static>true</static>
+    </model>
+    <model name="waypoint1" type="waypoint">
+      <pose>3 0.5 0 0 0 0</pose>
+      <static>true</static>
+    </model>
+    <model name="waypoint2" type="waypoint">
+      <pose>6 1.5 0 0 0 1.57</pose>
+      <static>true</static>
+    </model>
+    <model name="waypoint3" type="waypoint">
+      <pose>9 1.5 0 0 0 0</pose>
+      <static>true</static>
+    </model>
     <include>
       <pose>1.882 -0.2645 0 0 0 1.57079632679</pose>
       <name>bookcase</name>

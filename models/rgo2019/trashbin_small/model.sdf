@@ -1,8 +1,8 @@
-<?xml version="1.0" ?>
-<sdf version="1.6">
+<?xml version="1.0"?>
+<sdf version="1.7">
   <model name="rgo2019/trashbin_small">
     <link name="1">
-      <collision name="1">
+      <collision name="1_col">
         <geometry>
           <cylinder>
             <length>0.295</length>
@@ -10,7 +10,7 @@
           </cylinder>
         </geometry>
       </collision>
-      <visual name="1">
+      <visual name="1_vis">
         <geometry>
           <cylinder>
             <length>0.295</length>

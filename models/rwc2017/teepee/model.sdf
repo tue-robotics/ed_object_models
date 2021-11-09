@@ -1,15 +1,15 @@
-<?xml version="1.0" ?>
-<sdf version="1.6">
+<?xml version="1.0"?>
+<sdf version="1.7">
   <model name="rwc2017/teepee">
     <link name="1">
-      <collision name="1">
+      <collision name="1_col">
         <geometry>
           <box>
             <size>0.84 0.84 1.3</size>
           </box>
         </geometry>
       </collision>
-      <visual name="1">
+      <visual name="1_vis">
         <geometry>
           <box>
             <size>0.84 0.84 1.3</size>

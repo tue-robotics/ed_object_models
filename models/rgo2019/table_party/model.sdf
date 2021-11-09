@@ -1,8 +1,8 @@
-<?xml version="1.0" ?>
-<sdf version="1.6">
+<?xml version="1.0"?>
+<sdf version="1.7">
   <model name="rgo2019/table_party">
     <link name="1">
-      <collision name="1">
+      <collision name="1_col">
         <geometry>
           <cylinder>
             <length>0.03</length>
@@ -10,7 +10,7 @@
           </cylinder>
         </geometry>
       </collision>
-      <visual name="1">
+      <visual name="1_vis">
         <geometry>
           <cylinder>
             <length>0.03</length>
@@ -21,7 +21,7 @@
       <pose>0 0 1.085 0 0 0</pose>
     </link>
     <link name="2">
-      <collision name="2">
+      <collision name="2_col">
         <geometry>
           <cylinder>
             <length>1.08</length>
@@ -29,7 +29,7 @@
           </cylinder>
         </geometry>
       </collision>
-      <visual name="2">
+      <visual name="2_vis">
         <geometry>
           <cylinder>
             <length>1.08</length>
@@ -40,14 +40,14 @@
       <pose>0 0 0.54 0 0 0</pose>
     </link>
     <link name="3">
-      <collision name="3">
+      <collision name="3_col">
         <geometry>
           <box>
             <size>0.775 0.035 0.045</size>
           </box>
         </geometry>
       </collision>
-      <visual name="3">
+      <visual name="3_vis">
         <geometry>
           <box>
             <size>0.775 0.035 0.045</size>
@@ -57,14 +57,14 @@
       <pose>0 0 0.0225 0 0 0</pose>
     </link>
     <link name="4">
-      <collision name="4">
+      <collision name="4_col">
         <geometry>
           <box>
             <size>0.035 0.775 0.045</size>
           </box>
         </geometry>
       </collision>
-      <visual name="4">
+      <visual name="4_vis">
         <geometry>
           <box>
             <size>0.035 0.775 0.045</size>

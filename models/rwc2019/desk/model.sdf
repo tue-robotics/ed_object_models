@@ -1,15 +1,15 @@
-<?xml version="1.0" ?>
-<sdf version="1.6">
+<?xml version="1.0"?>
+<sdf version="1.7">
   <model name="rwc2019/desk">
     <link name="1">
-      <collision name="1">
+      <collision name="1_col">
         <geometry>
           <box>
             <size>1.2 0.6 0.027</size>
           </box>
         </geometry>
       </collision>
-      <visual name="1">
+      <visual name="1_vis">
         <geometry>
           <box>
             <size>1.2 0.6 0.027</size>
@@ -19,14 +19,14 @@
       <pose>0.0 0.0 0.7185 0 0 0</pose>
     </link>
     <link name="2">
-      <collision name="2">
+      <collision name="2_col">
         <geometry>
           <box>
             <size>0.015 0.56 0.705</size>
           </box>
         </geometry>
       </collision>
-      <visual name="2">
+      <visual name="2_vis">
         <geometry>
           <box>
             <size>0.015 0.56 0.705</size>
@@ -36,14 +36,14 @@
       <pose>-0.5725 0.0 0.3525 0 0 0</pose>
     </link>
     <link name="3">
-      <collision name="3">
+      <collision name="3_col">
         <geometry>
           <box>
             <size>0.015 0.56 0.705</size>
           </box>
         </geometry>
       </collision>
-      <visual name="3">
+      <visual name="3_vis">
         <geometry>
           <box>
             <size>0.015 0.56 0.705</size>

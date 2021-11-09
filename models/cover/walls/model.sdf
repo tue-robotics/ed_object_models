@@ -1,15 +1,15 @@
-<?xml version="1.0" ?>
-<sdf version="1.6">
+<?xml version="1.0"?>
+<sdf version="1.7">
   <model name="cover/walls">
     <link name="1">
-      <collision name="1">
+      <collision name="1_col">
         <geometry>
           <mesh>
             <uri>model://cover/walls/covered.stl</uri>
           </mesh>
         </geometry>
       </collision>
-      <visual name="1">
+      <visual name="1_vis">
         <geometry>
           <mesh>
             <uri>model://cover/walls/covered.stl</uri>

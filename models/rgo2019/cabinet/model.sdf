@@ -1,16 +1,16 @@
-<?xml version="1.0" ?>
-<sdf version="1.6">
+<?xml version="1.0"?>
+<sdf version="1.7">
   <model name="rgo2019/cabinet">
     <link name="1">
-      <collision name="1">
+      <collision name="1_col">
         <geometry>
           <box>
-            <size></size>
+            <size/>
           </box>
         </geometry>
         <name>1</name>
       </collision>
-      <visual name="1">
+      <visual name="1_vis">
         <geometry>
           <box>
             <size>0.3 0.62 0.65</size>
@@ -22,7 +22,7 @@
       <name>1</name>
     </link>
     <link name="2">
-      <collision name="2">
+      <collision name="2_col">
         <geometry>
           <box>
             <size>0.02 0.02 0.05</size>
@@ -30,7 +30,7 @@
         </geometry>
         <name>2</name>
       </collision>
-      <visual name="2">
+      <visual name="2_vis">
         <geometry>
           <box>
             <size>0.02 0.02 0.05</size>
@@ -42,7 +42,7 @@
       <name>2</name>
     </link>
     <link name="3">
-      <collision name="3">
+      <collision name="3_col">
         <geometry>
           <box>
             <size>0.02 0.02 0.05</size>
@@ -50,7 +50,7 @@
         </geometry>
         <name>3</name>
       </collision>
-      <visual name="3">
+      <visual name="3_vis">
         <geometry>
           <box>
             <size>0.02 0.02 0.05</size>
@@ -62,7 +62,7 @@
       <name>3</name>
     </link>
     <link name="4">
-      <collision name="4">
+      <collision name="4_col">
         <geometry>
           <box>
             <size>0.02 0.02 0.05</size>
@@ -70,7 +70,7 @@
         </geometry>
         <name>4</name>
       </collision>
-      <visual name="4">
+      <visual name="4_vis">
         <geometry>
           <box>
             <size>0.02 0.02 0.05</size>
@@ -82,7 +82,7 @@
       <name>4</name>
     </link>
     <link name="5">
-      <collision name="5">
+      <collision name="5_col">
         <geometry>
           <box>
             <size>0.02 0.02 0.05</size>
@@ -90,7 +90,7 @@
         </geometry>
         <name>5</name>
       </collision>
-      <visual name="5">
+      <visual name="5_vis">
         <geometry>
           <box>
             <size>0.02 0.02 0.05</size>

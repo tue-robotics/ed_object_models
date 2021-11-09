@@ -1,15 +1,15 @@
-<?xml version="1.0" ?>
-<sdf version="1.6">
+<?xml version="1.0"?>
+<sdf version="1.7">
   <model name="rwc2017/bed">
     <link name="1">
-      <collision name="1">
+      <collision name="1_col">
         <geometry>
           <box>
             <size>1.07 2.04 0.36</size>
           </box>
         </geometry>
       </collision>
-      <visual name="1">
+      <visual name="1_vis">
         <geometry>
           <box>
             <size>1.07 2.04 0.36</size>
@@ -19,14 +19,14 @@
       <pose>0 0 0.18 0 0 0</pose>
     </link>
     <link name="2">
-      <collision name="2">
+      <collision name="2_col">
         <geometry>
           <box>
             <size>1.07 0.02 0.44</size>
           </box>
         </geometry>
       </collision>
-      <visual name="2">
+      <visual name="2_vis">
         <geometry>
           <box>
             <size>1.07 0.02 0.44</size>
@@ -36,14 +36,14 @@
       <pose>0.0 -1.01 0.58 0 0 0</pose>
     </link>
     <link name="3">
-      <collision name="3">
+      <collision name="3_col">
         <geometry>
           <box>
             <size>1.07 0.02 0.14</size>
           </box>
         </geometry>
       </collision>
-      <visual name="3">
+      <visual name="3_vis">
         <geometry>
           <box>
             <size>1.07 0.02 0.14</size>

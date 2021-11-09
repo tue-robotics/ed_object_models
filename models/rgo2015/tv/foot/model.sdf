@@ -1,15 +1,15 @@
-<?xml version="1.0" ?>
-<sdf version="1.6">
+<?xml version="1.0"?>
+<sdf version="1.7">
   <model name="rgo2015/tv/foot">
     <link name="1">
-      <collision name="1">
+      <collision name="1_col">
         <geometry>
           <mesh>
             <uri>model://rgo2015/tv/foot/shape/disc.stl</uri>
           </mesh>
         </geometry>
       </collision>
-      <visual name="1">
+      <visual name="1_vis">
         <geometry>
           <mesh>
             <uri>model://rgo2015/tv/foot/shape/disc.stl</uri>

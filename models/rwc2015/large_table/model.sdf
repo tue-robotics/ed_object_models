@@ -1,15 +1,15 @@
-<?xml version="1.0" ?>
-<sdf version="1.6">
+<?xml version="1.0"?>
+<sdf version="1.7">
   <model name="rwc2015/large_table">
     <link name="1">
-      <collision name="1">
+      <collision name="1_col">
         <geometry>
           <box>
             <size>0.915 1.83 0.3</size>
           </box>
         </geometry>
       </collision>
-      <visual name="1">
+      <visual name="1_vis">
         <geometry>
           <box>
             <size>0.915 1.83 0.3</size>
@@ -22,14 +22,14 @@
       <pose>0.0 0.0 0.625 0 0 0</pose>
     </link>
     <link name="2">
-      <collision name="2">
+      <collision name="2_col">
         <geometry>
           <box>
             <size>0.03 0.03 0.75</size>
           </box>
         </geometry>
       </collision>
-      <visual name="2">
+      <visual name="2_vis">
         <geometry>
           <box>
             <size>0.03 0.03 0.75</size>
@@ -42,14 +42,14 @@
       <pose>-0.4025 -0.79 0.375 0 0 0</pose>
     </link>
     <link name="3">
-      <collision name="3">
+      <collision name="3_col">
         <geometry>
           <box>
             <size>0.03 0.03 0.75</size>
           </box>
         </geometry>
       </collision>
-      <visual name="3">
+      <visual name="3_vis">
         <geometry>
           <box>
             <size>0.03 0.03 0.75</size>
@@ -62,14 +62,14 @@
       <pose>-0.4025 0.79 0.375 0 0 0</pose>
     </link>
     <link name="4">
-      <collision name="4">
+      <collision name="4_col">
         <geometry>
           <box>
             <size>0.03 0.03 0.75</size>
           </box>
         </geometry>
       </collision>
-      <visual name="4">
+      <visual name="4_vis">
         <geometry>
           <box>
             <size>0.03 0.03 0.75</size>
@@ -82,14 +82,14 @@
       <pose>0.4025 -0.79 0.375 0 0 0</pose>
     </link>
     <link name="5">
-      <collision name="5">
+      <collision name="5_col">
         <geometry>
           <box>
             <size>0.03 0.03 0.75</size>
           </box>
         </geometry>
       </collision>
-      <visual name="5">
+      <visual name="5_vis">
         <geometry>
           <box>
             <size>0.03 0.03 0.75</size>
@@ -102,14 +102,14 @@
       <pose>0.4025 0.79 0.375 0 0 0</pose>
     </link>
     <link name="6">
-      <collision name="6">
+      <collision name="6_col">
         <geometry>
           <box>
             <size>0.03 0.03 0.75</size>
           </box>
         </geometry>
       </collision>
-      <visual name="6">
+      <visual name="6_vis">
         <geometry>
           <box>
             <size>0.03 0.03 0.75</size>
@@ -122,14 +122,14 @@
       <pose>-0.055 -0.79 0.375 0 0 0</pose>
     </link>
     <link name="7">
-      <collision name="7">
+      <collision name="7_col">
         <geometry>
           <box>
             <size>0.03 0.03 0.75</size>
           </box>
         </geometry>
       </collision>
-      <visual name="7">
+      <visual name="7_vis">
         <geometry>
           <box>
             <size>0.03 0.03 0.75</size>
@@ -142,14 +142,14 @@
       <pose>-0.055 0.79 0.375 0 0 0</pose>
     </link>
     <link name="8">
-      <collision name="8">
+      <collision name="8_col">
         <geometry>
           <box>
             <size>0.03 0.03 0.75</size>
           </box>
         </geometry>
       </collision>
-      <visual name="8">
+      <visual name="8_vis">
         <geometry>
           <box>
             <size>0.03 0.03 0.75</size>
@@ -162,14 +162,14 @@
       <pose>0.055 -0.79 0.375 0 0 0</pose>
     </link>
     <link name="9">
-      <collision name="9">
+      <collision name="9_col">
         <geometry>
           <box>
             <size>0.03 0.03 0.75</size>
           </box>
         </geometry>
       </collision>
-      <visual name="9">
+      <visual name="9_vis">
         <geometry>
           <box>
             <size>0.03 0.03 0.75</size>

@@ -1,15 +1,15 @@
-<?xml version="1.0" ?>
-<sdf version="1.6">
+<?xml version="1.0"?>
+<sdf version="1.7">
   <model name="reo2016/couch">
     <link name="1">
-      <collision name="1">
+      <collision name="1_col">
         <geometry>
           <box>
             <size>1.6 0.7 0.47</size>
           </box>
         </geometry>
       </collision>
-      <visual name="1">
+      <visual name="1_vis">
         <geometry>
           <box>
             <size>1.6 0.7 0.47</size>
@@ -19,14 +19,14 @@
       <pose>0.0 0.0 0.235 0 0 0</pose>
     </link>
     <link name="2">
-      <collision name="2">
+      <collision name="2_col">
         <geometry>
           <box>
             <size>1.6 0.13 0.37</size>
           </box>
         </geometry>
       </collision>
-      <visual name="2">
+      <visual name="2_vis">
         <geometry>
           <box>
             <size>1.6 0.13 0.37</size>
@@ -36,14 +36,14 @@
       <pose>0.0 0.285 0.655 0 0 0</pose>
     </link>
     <link name="3">
-      <collision name="3">
+      <collision name="3_col">
         <geometry>
           <box>
             <size>0.13 0.7 0.37</size>
           </box>
         </geometry>
       </collision>
-      <visual name="3">
+      <visual name="3_vis">
         <geometry>
           <box>
             <size>0.13 0.7 0.37</size>
@@ -53,14 +53,14 @@
       <pose>-0.735 0.0 0.655 0 0 0</pose>
     </link>
     <link name="4">
-      <collision name="4">
+      <collision name="4_col">
         <geometry>
           <box>
             <size>0.13 0.7 0.37</size>
           </box>
         </geometry>
       </collision>
-      <visual name="4">
+      <visual name="4_vis">
         <geometry>
           <box>
             <size>0.13 0.7 0.37</size>

@@ -1,15 +1,15 @@
-<?xml version="1.0" ?>
-<sdf version="1.6">
+<?xml version="1.0"?>
+<sdf version="1.7">
   <model name="rgo2018/kitchen_counter">
     <link name="1">
-      <collision name="1">
+      <collision name="1_col">
         <geometry>
           <box>
             <size>0.59 0.018 1.02</size>
           </box>
         </geometry>
       </collision>
-      <visual name="1">
+      <visual name="1_vis">
         <geometry>
           <box>
             <size>0.59 0.018 1.02</size>
@@ -22,14 +22,14 @@
       <pose>0.078 -0.5935 0.51 0 0 0</pose>
     </link>
     <link name="2">
-      <collision name="2">
+      <collision name="2_col">
         <geometry>
           <box>
             <size>0.59 0.018 1.02</size>
           </box>
         </geometry>
       </collision>
-      <visual name="2">
+      <visual name="2_vis">
         <geometry>
           <box>
             <size>0.59 0.018 1.02</size>
@@ -42,14 +42,14 @@
       <pose>0.078 0.5935 0.51 0 0 0</pose>
     </link>
     <link name="3">
-      <collision name="3">
+      <collision name="3_col">
         <geometry>
           <box>
             <size>0.078 1.205 2.002</size>
           </box>
         </geometry>
       </collision>
-      <visual name="3">
+      <visual name="3_vis">
         <geometry>
           <box>
             <size>0.078 1.205 2.002</size>
@@ -62,14 +62,14 @@
       <pose>-0.256 0 1.001 0 0 0</pose>
     </link>
     <link name="4">
-      <collision name="4">
+      <collision name="4_col">
         <geometry>
           <box>
             <size>0.6 1.169 0.038</size>
           </box>
         </geometry>
       </collision>
-      <visual name="4">
+      <visual name="4_vis">
         <geometry>
           <box>
             <size>0.6 1.169 0.038</size>
@@ -82,14 +82,14 @@
       <pose>0.083 0 1.001 0 0 0</pose>
     </link>
     <link name="5">
-      <collision name="5">
+      <collision name="5_col">
         <geometry>
           <box>
             <size>0.59 1.169 0.138</size>
           </box>
         </geometry>
       </collision>
-      <visual name="5">
+      <visual name="5_vis">
         <geometry>
           <box>
             <size>0.59 1.169 0.138</size>
@@ -102,14 +102,14 @@
       <pose>0.078 0 0.069 0 0 0</pose>
     </link>
     <link name="6">
-      <collision name="6">
+      <collision name="6_col">
         <geometry>
           <box>
             <size>0.572 1.169 0.018</size>
           </box>
         </geometry>
       </collision>
-      <visual name="6">
+      <visual name="6_vis">
         <geometry>
           <box>
             <size>0.572 1.169 0.018</size>
@@ -122,14 +122,14 @@
       <pose>0.069 0 0.544 0 0 0</pose>
     </link>
     <link name="7">
-      <collision name="7">
+      <collision name="7_col">
         <geometry>
           <box>
             <size>0.572 0.018 1.0</size>
           </box>
         </geometry>
       </collision>
-      <visual name="7">
+      <visual name="7_vis">
         <geometry>
           <box>
             <size>0.572 0.018 1.0</size>
@@ -142,14 +142,14 @@
       <pose>0.069 0 0.5 0 0 0</pose>
     </link>
     <link name="8">
-      <collision name="8">
+      <collision name="8_col">
         <geometry>
           <box>
             <size>0.35 0.018 0.482</size>
           </box>
         </geometry>
       </collision>
-      <visual name="8">
+      <visual name="8_vis">
         <geometry>
           <box>
             <size>0.35 0.018 0.482</size>
@@ -162,14 +162,14 @@
       <pose>-0.042 -0.5935 1.76 0 0 0</pose>
     </link>
     <link name="9">
-      <collision name="9">
+      <collision name="9_col">
         <geometry>
           <box>
             <size>0.35 0.018 0.482</size>
           </box>
         </geometry>
       </collision>
-      <visual name="9">
+      <visual name="9_vis">
         <geometry>
           <box>
             <size>0.35 0.018 0.482</size>
@@ -182,14 +182,14 @@
       <pose>-0.042 0.5935 1.76 0 0 0</pose>
     </link>
     <link name="10">
-      <collision name="10">
+      <collision name="10_col">
         <geometry>
           <box>
             <size>0.35 1.169 0.018</size>
           </box>
         </geometry>
       </collision>
-      <visual name="10">
+      <visual name="10_vis">
         <geometry>
           <box>
             <size>0.35 1.169 0.018</size>
@@ -202,14 +202,14 @@
       <pose>-0.042 0 1.993 0 0 0</pose>
     </link>
     <link name="11">
-      <collision name="11">
+      <collision name="11_col">
         <geometry>
           <box>
             <size>0.35 1.169 0.018</size>
           </box>
         </geometry>
       </collision>
-      <visual name="11">
+      <visual name="11_vis">
         <geometry>
           <box>
             <size>0.35 1.169 0.018</size>
@@ -222,14 +222,14 @@
       <pose>-0.042 0 1.529 0 0 0</pose>
     </link>
     <link name="12">
-      <collision name="12">
+      <collision name="12_col">
         <geometry>
           <box>
             <size>0.35 1.169 0.018</size>
           </box>
         </geometry>
       </collision>
-      <visual name="12">
+      <visual name="12_vis">
         <geometry>
           <box>
             <size>0.35 1.169 0.018</size>
@@ -242,14 +242,14 @@
       <pose>-0.042 0 1.754 0 0 0</pose>
     </link>
     <link name="13">
-      <collision name="13">
+      <collision name="13_col">
         <geometry>
           <box>
             <size>0.35 0.036 0.482</size>
           </box>
         </geometry>
       </collision>
-      <visual name="13">
+      <visual name="13_vis">
         <geometry>
           <box>
             <size>0.35 0.036 0.482</size>

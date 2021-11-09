@@ -1,16 +1,16 @@
-<?xml version="1.0" ?>
-<sdf version="1.6">
+<?xml version="1.0"?>
+<sdf version="1.7">
   <model name="impuls/thin_wall">
     <static>true</static>
     <link name="wall">
-      <collision name="wall">
+      <collision name="wall_col">
         <geometry>
           <box>
             <size>4.01 0.025 1.005</size>
           </box>
         </geometry>
       </collision>
-      <visual name="wall">
+      <visual name="wall_vis">
         <geometry>
           <box>
             <size>4.01 0.025 1.005</size>
@@ -20,14 +20,14 @@
       <pose>0.0 0.0 0.6125 0 0 0</pose>
     </link>
     <link name="block1">
-      <collision name="block1">
+      <collision name="block1_col">
         <geometry>
           <box>
             <size>0.3 0.3 0.11</size>
           </box>
         </geometry>
       </collision>
-      <visual name="block1">
+      <visual name="block1_vis">
         <geometry>
           <box>
             <size>0.3 0.3 0.11</size>
@@ -37,14 +37,14 @@
       <pose>0.0 0.0 0.055 0 0 0</pose>
     </link>
     <link name="block2">
-      <collision name="block2">
+      <collision name="block2_col">
         <geometry>
           <box>
             <size>0.3 0.3 0.11</size>
           </box>
         </geometry>
       </collision>
-      <visual name="block2">
+      <visual name="block2_vis">
         <geometry>
           <box>
             <size>0.3 0.3 0.11</size>
@@ -54,14 +54,14 @@
       <pose>1.855 0.0 0.055 0 0 0</pose>
     </link>
     <link name="block3">
-      <collision name="block3">
+      <collision name="block3_col">
         <geometry>
           <box>
             <size>0.3 0.3 0.11</size>
           </box>
         </geometry>
       </collision>
-      <visual name="block3">
+      <visual name="block3_vis">
         <geometry>
           <box>
             <size>0.3 0.3 0.11</size>

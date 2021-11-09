@@ -1,8 +1,8 @@
-<?xml version="1.0" ?>
-<sdf version="1.6">
+<?xml version="1.0"?>
+<sdf version="1.7">
   <model name="test">
     <link name="1">
-      <collision name="1">
+      <collision name="1_col">
         <geometry>
           <polyline>
             <height>0.1</height>
@@ -15,7 +15,7 @@
           </polyline>
         </geometry>
       </collision>
-      <visual name="1">
+      <visual name="1_vis">
         <geometry>
           <polyline>
             <height>0.1</height>
@@ -31,7 +31,7 @@
       <pose>0 0 0 0 0 0</pose>
     </link>
     <link name="2">
-      <collision name="2">
+      <collision name="2_col">
         <geometry>
           <polyline>
             <height>0.1</height>
@@ -44,7 +44,7 @@
           </polyline>
         </geometry>
       </collision>
-      <visual name="2">
+      <visual name="2_vis">
         <geometry>
           <polyline>
             <height>0.1</height>
@@ -60,7 +60,7 @@
       <pose>0 0 0.1 1.54 0 3.1415</pose>
     </link>
     <link name="3">
-      <collision name="3">
+      <collision name="3_col">
         <geometry>
           <cylinder>
             <length>0.6</length>
@@ -68,7 +68,7 @@
           </cylinder>
         </geometry>
       </collision>
-      <visual name="3">
+      <visual name="3_vis">
         <geometry>
           <cylinder>
             <length>0.6</length>
@@ -79,7 +79,7 @@
       <pose>0 0 0 0 0 0</pose>
     </link>
     <link name="4">
-      <collision name="4">
+      <collision name="4_col">
         <geometry>
           <cylinder>
             <length>1.0</length>
@@ -87,7 +87,7 @@
           </cylinder>
         </geometry>
       </collision>
-      <visual name="4">
+      <visual name="4_vis">
         <geometry>
           <cylinder>
             <length>1.0</length>

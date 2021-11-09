@@ -1,5 +1,5 @@
-<?xml version="1.0" ?>
-<sdf version="1.6">
+<?xml version="1.0"?>
+<sdf version="1.7">
   <model name="door_wooden">
     <link name="outward">
       <virtual_volume name="outward">
@@ -62,7 +62,7 @@
       </virtual_volume>
     </link>
     <link name="frame_right">
-      <collision name="frame_right">
+      <collision name="frame_right_col">
         <geometry>
           <box>
             <size>0.05 0.05 2.23</size>
@@ -70,7 +70,7 @@
         </geometry>
         <pose>0.0 -0.465 1.115 0 0 0</pose>
       </collision>
-      <visual name="frame_right">
+      <visual name="frame_right_vis">
         <geometry>
           <box>
             <size>0.05 0.05 2.23</size>
@@ -80,7 +80,7 @@
       </visual>
     </link>
     <link name="frame_left">
-      <collision name="frame_left">
+      <collision name="frame_left_col">
         <geometry>
           <box>
             <size>0.05 0.05 2.23</size>
@@ -88,7 +88,7 @@
         </geometry>
         <pose>0.0 0.465 1.115 0 0 0</pose>
       </collision>
-      <visual name="frame_left">
+      <visual name="frame_left_vis">
         <geometry>
           <box>
             <size>0.05 0.05 2.23</size>
@@ -98,7 +98,7 @@
       </visual>
     </link>
     <link name="frame_top">
-      <collision name="frame_top">
+      <collision name="frame_top_col">
         <geometry>
           <box>
             <size>0.05 0.98 0.05</size>
@@ -106,7 +106,7 @@
         </geometry>
         <pose>0.0 0.465 2.23 0 0 0</pose>
       </collision>
-      <visual name="frame_top">
+      <visual name="frame_top_vis">
         <geometry>
           <box>
             <size>0.05 0.98 0.05</size>
@@ -116,7 +116,7 @@
       </visual>
     </link>
     <link name="brace_1">
-      <collision name="brace_1">
+      <collision name="brace_1_col">
         <geometry>
           <box>
             <size>0.07 0.5 0.07</size>
@@ -124,7 +124,7 @@
         </geometry>
         <pose>0.25 0.465 0.25 0.7 0 1.57</pose>
       </collision>
-      <visual name="brace_1">
+      <visual name="brace_1_vis">
         <geometry>
           <box>
             <size>0.07 0.5 0.07</size>
@@ -134,7 +134,7 @@
       </visual>
     </link>
     <link name="brace_2">
-      <collision name="brace_2">
+      <collision name="brace_2_col">
         <geometry>
           <box>
             <size>0.07 0.5 0.07</size>
@@ -142,7 +142,7 @@
         </geometry>
         <pose>0.25 -0.465 0.25 0.7 0 1.57</pose>
       </collision>
-      <visual name="brace_2">
+      <visual name="brace_2_vis">
         <geometry>
           <box>
             <size>0.07 0.5 0.07</size>
@@ -152,7 +152,7 @@
       </visual>
     </link>
     <link name="brace_3">
-      <collision name="brace_3">
+      <collision name="brace_3_col">
         <geometry>
           <box>
             <size>0.07 0.5 0.07</size>
@@ -160,7 +160,7 @@
         </geometry>
         <pose>-0.25 0.465 0.25 -0.7 0 1.57</pose>
       </collision>
-      <visual name="brace_3">
+      <visual name="brace_3_vis">
         <geometry>
           <box>
             <size>0.07 0.5 0.07</size>
@@ -170,7 +170,7 @@
       </visual>
     </link>
     <link name="brace_4">
-      <collision name="brace_4">
+      <collision name="brace_4_col">
         <geometry>
           <box>
             <size>0.07 0.5 0.07</size>
@@ -178,7 +178,7 @@
         </geometry>
         <pose>-0.25 -0.465 0.25 -0.7 0 1.57</pose>
       </collision>
-      <visual name="brace_4">
+      <visual name="brace_4_vis">
         <geometry>
           <box>
             <size>0.07 0.5 0.07</size>
@@ -188,7 +188,7 @@
       </visual>
     </link>
     <link name="base_left">
-      <collision name="base_left">
+      <collision name="base_left_col">
         <geometry>
           <box>
             <size>1.0 0.07 0.07</size>
@@ -196,7 +196,7 @@
         </geometry>
         <pose>0.0 0.465 0.035 0 0 0</pose>
       </collision>
-      <visual name="base_left">
+      <visual name="base_left_vis">
         <geometry>
           <box>
             <size>1.0 0.07 0.07</size>
@@ -206,7 +206,7 @@
       </visual>
     </link>
     <link name="base_right">
-      <collision name="base_right">
+      <collision name="base_right_col">
         <geometry>
           <box>
             <size>1.0 0.07 0.07</size>
@@ -214,7 +214,7 @@
         </geometry>
         <pose>0.0 -0.465 0.035 0 0 0</pose>
       </collision>
-      <visual name="base_right">
+      <visual name="base_right_vis">
         <geometry>
           <box>
             <size>1.0 0.07 0.07</size>

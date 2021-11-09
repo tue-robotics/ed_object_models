@@ -13,7 +13,7 @@
     </include>
     <include>
       <pose>1.882 -0.2645 0 0 0 1.57079632679</pose>
-      <name>bookcase</name>
+      <name>closet</name>
       <uri>model://robotics_testlabs/plastic_cabinet</uri>
     </include>
     <include>
@@ -52,11 +52,16 @@
       <uri>model://table_120x80x76</uri>
     </include>
     <include>
-      <pose>6.7 2.600 0 0 0 -1.57079632679</pose>
+      <pose>6.28 2.600 0 0 0 -1.57079632679</pose>
       <name>cabinet</name>
       <uri>model://robotics_testlab_B/corridor_cabinet</uri>
     </include>
-        <include>
+     <include>
+      <pose>6.88 2.600 0 0 0 -1.57079632679</pose>
+      <name>bookcase</name>
+      <uri>model://impuls/wooden_bookcase</uri>
+    </include>
+    <include>
       <pose>13.0 1.3 0 0 0 -1.57079632679</pose>
       <name>kitchen_cabinet</name>
       <uri>model://impuls/kitchen</uri>

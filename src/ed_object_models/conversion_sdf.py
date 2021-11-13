@@ -502,7 +502,7 @@ def convert_model_data(model_data: Union[dict, list], model_name: str, model_dir
                 rename(sdf_model_path, path.join(model_dir, newest_sdf_filename))
                 newest_sdf.text = newest_sdf_filename
             new_sdf = ET.Element("sdf")
-            config_root.insert(config_root.getchildren().index(newest_sdf)+1, new_sdf)
+            config_root.insert(list(config_root).index(newest_sdf)+1, new_sdf)
             new_sdf.set("version", str(sdf_version))
             new_sdf.text = sdf_filename
         elif sdf_version == newest_sdf_version:  # Converting the same version, just make sure the path is correct
@@ -521,8 +521,8 @@ def convert_model_data(model_data: Union[dict, list], model_name: str, model_dir
                 current_sdf.text = sdf_filename
                 # Add tag before the first newer version, so at old index of the first newer version
                 first_newer_version_sdf = [sdf for sdf in config_sdfs if (float(sdf.attrib['version']) > sdf_version)][-1]
-                index_of_newer_vesion = config_root.getchildren().index(first_newer_version_sdf)
-                config_root.insert(index_of_newer_vesion, current_sdf)
+                index_of_newer_version = list(config_root).index(first_newer_version_sdf)
+                config_root.insert(index_of_newer_version, current_sdf)
             elif current_sdf.text != sdf_filename:
                 rename(path.join(model_dir, current_sdf.text),
                        sdf_model_path)

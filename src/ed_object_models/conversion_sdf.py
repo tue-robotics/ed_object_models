@@ -217,7 +217,9 @@ def read_shape_item(shape_item: dict, link_names: List[str], color: OrderedDict,
         sdf_link_item["collision"]["pose"] = geometry_pose
         sdf_link_item["visual"]["pose"] = geometry_pose
     if color:
-        color_str = " ".join(map(str, color.values()+[1]))
+        color_list = list(color.values())
+        color_list.append(1)
+        color_str = " ".join(map(str, color_list))
         sdf_link_item["visual"]["material"] = {"ambient": color_str}
     if "heightmap" in sdf_link_item["visual"]["geometry"]:
         sdf_link_item["visual"]["geometry"]["heightmap"]["texture"] = \

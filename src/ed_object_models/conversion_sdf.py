@@ -610,7 +610,7 @@ def convert_model_name(model_name: str, recursive: bool = False) -> int:
     # get model path
     model_file = get_model_path(model_name, "yaml")
     if not model_file:
-        print (bcolors.FAIL + bcolors.BOLD + "[{}] No model path found".format(model_name) + bcolors.ENDC)
+        print(bcolors.FAIL + bcolors.BOLD + "[{}] No model path found".format(model_name) + bcolors.ENDC)
         return 1
 
     return convert_model_file(model_name, model_file, recursive)

@@ -456,7 +456,7 @@ def convert_model_data(model_data: Union[dict, list], model_name: str, model_dir
     :return: Good: 0, Error: 1
     """
     # declare sdf dict including sdf version
-    sdf_version = 1.6
+    sdf_version = 1.7
     sdf = {"version": str(sdf_version)}
 
     # determine file_type

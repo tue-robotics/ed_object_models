@@ -15,7 +15,7 @@
       </attenuation>
     </light>
     <model name="livingroom" type="room">
-      <link name="in">
+      <link name="in_link">
         <virtual_volume name="in">
           <geometry>
             <box>
@@ -29,7 +29,7 @@
       <static>true</static>
     </model>
     <model name="kitchen" type="room">
-      <link name="in">
+      <link name="in_link">
         <virtual_volume name="in">
           <geometry>
             <box>
@@ -43,7 +43,7 @@
       <static>true</static>
     </model>
     <model name="bedroom" type="room">
-      <link name="in">
+      <link name="in_link">
         <virtual_volume name="in">
           <geometry>
             <box>
@@ -57,7 +57,7 @@
       <static>true</static>
     </model>
     <model name="workshop" type="room">
-      <link name="in">
+      <link name="in_link">
         <virtual_volume name="in">
           <geometry>
             <box>
@@ -71,7 +71,7 @@
       <static>true</static>
     </model>
     <model name="hallway" type="room">
-      <link name="in">
+      <link name="in_link">
         <virtual_volume name="in">
           <geometry>
             <box>

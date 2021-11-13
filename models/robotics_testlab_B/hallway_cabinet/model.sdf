@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <sdf version="1.7">
   <model name="robotics_testlab_B/hallway_cabinet">
-    <link name="1">
+    <link name="1_link">
       <collision name="1_col">
         <geometry>
           <box>
@@ -20,7 +20,7 @@
       </visual>
       <pose>0 0 0 0 0 0</pose>
     </link>
-    <link name="on_top_of">
+    <link name="on_top_of_link">
       <virtual_volume name="on_top_of">
         <geometry>
           <box>

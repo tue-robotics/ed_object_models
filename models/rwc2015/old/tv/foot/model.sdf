@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <sdf version="1.7">
   <model name="rwc2015/old/tv/foot">
-    <link name="1">
+    <link name="1_link">
       <collision name="1_col">
         <geometry>
           <mesh>

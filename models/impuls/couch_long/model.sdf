@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <sdf version="1.7">
   <model name="impuls/couch_long">
-      <link name="back">
+      <link name="back_link">
           <collision name="back_col">
             <geometry>
             <box>
@@ -18,7 +18,7 @@
           </visual>
           <pose>0.0 0.30 0.395 0 0 0</pose>
       </link>
-      <link name="side_left">
+      <link name="side_left_link">
          <collision name="side_left_col">
             <geometry>
             <box>
@@ -35,7 +35,7 @@
           </visual>
           <pose>1.03 0 0.325 0 0 0</pose>
       </link>
-      <link name="side_right">
+      <link name="side_right_link">
           <collision name="side_right_col">
               <geometry>
                <box>
@@ -52,7 +52,7 @@
           </visual>
       <pose>-1.03 0 0.325 0 0 0</pose>
       </link>
-      <link name="seat">
+      <link name="seat_link">
         <collision name="seat_col">
             <geometry>
             <box>
@@ -69,7 +69,7 @@
         </visual>
         <pose>0 -0.125 0.21 0 0 0</pose>
         </link>
-    <link name="on_top_of">
+    <link name="on_top_of_link">
       <virtual_volume name="on_top_of">
         <geometry>
           <box>
@@ -79,7 +79,7 @@
         <pose>0.0 -0.125 0.57 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="in_front_of">
+    <link name="in_front_of_link">
       <virtual_volume name="in_front_of">
         <geometry>
           <box>

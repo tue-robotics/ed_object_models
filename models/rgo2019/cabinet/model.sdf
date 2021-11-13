@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <sdf version="1.7">
   <model name="rgo2019/cabinet">
-    <link name="1">
+    <link name="1_link">
       <collision name="1_col">
         <geometry>
           <box>
@@ -21,7 +21,7 @@
       <pose>0.0 0.0 0.375 0 0 0</pose>
       <name>1</name>
     </link>
-    <link name="2">
+    <link name="2_link">
       <collision name="2_col">
         <geometry>
           <box>
@@ -41,7 +41,7 @@
       <pose>-0.14 -0.3 0.025 0 0 0</pose>
       <name>2</name>
     </link>
-    <link name="3">
+    <link name="3_link">
       <collision name="3_col">
         <geometry>
           <box>
@@ -61,7 +61,7 @@
       <pose>-0.14 0.3 0.025 0 0 0</pose>
       <name>3</name>
     </link>
-    <link name="4">
+    <link name="4_link">
       <collision name="4_col">
         <geometry>
           <box>
@@ -81,7 +81,7 @@
       <pose>0.14 -0.3 0.025 0 0 0</pose>
       <name>4</name>
     </link>
-    <link name="5">
+    <link name="5_link">
       <collision name="5_col">
         <geometry>
           <box>
@@ -101,7 +101,7 @@
       <pose>0.14 0.3 0.025 0 0 0</pose>
       <name>5</name>
     </link>
-    <link name="on_top_of">
+    <link name="on_top_of_link">
       <virtual_volume name="on_top_of">
         <geometry>
           <box>
@@ -113,7 +113,7 @@
       </virtual_volume>
       <name>on_top_of</name>
     </link>
-    <link name="in_front_of">
+    <link name="in_front_of_link">
       <virtual_volume name="in_front_of">
         <geometry>
           <box>

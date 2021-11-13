@@ -75,7 +75,7 @@
       <static>true</static>
     </model>
     <model name="corridor" type="room">
-      <link name="in">
+      <link name="in_link">
         <virtual_volume name="in">
           <geometry>
             <box>
@@ -89,7 +89,7 @@
       <static>true</static>
     </model>
     <model name="kitchen" type="room">
-      <link name="in">
+      <link name="in_link">
         <virtual_volume name="in">
           <geometry>
             <box>
@@ -103,7 +103,7 @@
       <static>true</static>
     </model>
     <model name="bedroom" type="room">
-      <link name="in">
+      <link name="in_link">
         <virtual_volume name="in">
           <geometry>
             <box>
@@ -117,7 +117,7 @@
       <static>true</static>
     </model>
     <model name="dining_room" type="room">
-      <link name="in">
+      <link name="in_link">
         <virtual_volume name="in">
           <geometry>
             <box>
@@ -131,7 +131,7 @@
       <static>true</static>
     </model>
     <model name="living_room" type="room">
-      <link name="in">
+      <link name="in_link">
         <virtual_volume name="in">
           <geometry>
             <box>

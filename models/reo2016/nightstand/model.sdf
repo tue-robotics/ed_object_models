@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <sdf version="1.7">
   <model name="reo2016/nightstand">
-    <link name="1">
+    <link name="1_link">
       <collision name="1_col">
         <geometry>
           <box>
@@ -18,7 +18,7 @@
       </visual>
       <pose>0.0 0.0 0.27 0 0 0</pose>
     </link>
-    <link name="on_top_of">
+    <link name="on_top_of_link">
       <virtual_volume name="on_top_of">
         <geometry>
           <box>
@@ -28,7 +28,7 @@
         <pose>0.0 0.0 0.705 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="in_front_of">
+    <link name="in_front_of_link">
       <virtual_volume name="in_front_of">
         <geometry>
           <box>

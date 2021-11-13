@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <sdf version="1.7">
   <model name="rgo2019/trashbin_large">
-    <link name="1">
+    <link name="1_link">
       <collision name="1_col">
         <geometry>
           <cylinder>
@@ -20,7 +20,7 @@
       </visual>
       <pose>0 0 0.225 0 0 0</pose>
     </link>
-    <link name="on_top_of">
+    <link name="on_top_of_link">
       <virtual_volume name="on_top_of">
         <geometry>
           <cylinder>
@@ -31,7 +31,7 @@
       </virtual_volume>
       <pose>0 0 0.585 0 0 0</pose>
     </link>
-    <link name="in_front_of">
+    <link name="in_front_of_link">
       <virtual_volume name="in_front_of">
         <geometry>
           <box>

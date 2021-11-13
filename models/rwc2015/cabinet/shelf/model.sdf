@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <sdf version="1.7">
   <model name="rwc2015/cabinet/shelf">
-    <link name="1">
+    <link name="1_link">
       <collision name="1_col">
         <geometry>
           <box>
@@ -21,7 +21,7 @@
       </visual>
       <pose>0.0 0.0 0.0 0 0 0</pose>
     </link>
-    <link name="in_front_of">
+    <link name="in_front_of_link">
       <virtual_volume name="in_front_of">
         <geometry>
           <box>
@@ -31,7 +31,7 @@
         <pose>0.91 0.0 0.88 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="in">
+    <link name="in_link">
       <virtual_volume name="in">
         <geometry>
           <box>

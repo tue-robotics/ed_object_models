@@ -2,7 +2,7 @@
 <sdf version="1.7">
   <model name="impuls/walls">
     <static>true</static>
-    <link name="1">
+    <link name="1_link">
       <collision name="1_col">
         <geometry>
           <mesh>

@@ -7,6 +7,7 @@ import rospy
 
 from ed_object_models.sdf_tools import spawn_sdf_from_yaml
 
+
 if __name__ == "__main__":
     my_args = rospy.myargv(sys.argv)
     # Initialize ROS node

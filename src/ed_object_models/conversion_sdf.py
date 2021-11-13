@@ -200,7 +200,7 @@ def read_shape_item(shape_item: dict, link_names: List[str], color: OrderedDict,
         name = shape_item["#"]
     # Unique name should be known here
     name = unique_name(name, link_names)
-    sdf_link_item["name"] = name
+    sdf_link_item["name"] = f"{name}_link"
 
     geometry, link_pose, geometry_pose = read_geometry(shape_item, model_name)
 
@@ -210,9 +210,9 @@ def read_shape_item(shape_item: dict, link_names: List[str], color: OrderedDict,
         return None
 
     # Maybe have a default name for collision and visual instead of link name
-    sdf_link_item["collision"] = {"name": name, "geometry": geometry.copy()}
+    sdf_link_item["collision"] = {"name": f"{name}_col", "geometry": geometry.copy()}
     # Copy to prevent textures in collision
-    sdf_link_item["visual"] = {"name": name, "geometry": geometry.copy()}
+    sdf_link_item["visual"] = {"name": f"{name}_vis", "geometry": geometry.copy()}
     if geometry_pose:
         sdf_link_item["collision"]["pose"] = geometry_pose
         sdf_link_item["visual"]["pose"] = geometry_pose
@@ -284,7 +284,7 @@ def read_areas(areas: List, link_names: List[str], model_name: str) -> Union[dic
         uname = unique_name(name, link_names)
         if not uname == name:
             print(bcolors.BOLD + "Name of area has changed from '{}' to '{}'".format(name, uname) + bcolors.ENDC)
-        sdf_link_item = {"name": uname}
+        sdf_link_item = {"name": f"{uname}_link"}
 
         for shape_item in area["shape"]:
             geometry, link_pose, geometry_pose = read_geometry(shape_item, model_name)

@@ -232,7 +232,7 @@ def read_shape_item(shape_item: dict, link_names: List[str], color: OrderedDict,
     return sdf_link_item
 
 
-def read_shape(shape: dict, link_names: List[str], color: OrderedDict, model_name: str) -> Union[dict, None]:
+def read_shape(shape: dict, link_names: List[str], color: OrderedDict, model_name: str) -> Union[List, None]:
     """
     Convert (array of) shape(s) to list of SDF links
 
@@ -261,7 +261,7 @@ def read_shape(shape: dict, link_names: List[str], color: OrderedDict, model_nam
     return sdf_link
 
 
-def read_areas(areas: List, link_names: List[str], model_name: str) -> Union[dict, None]:
+def read_areas(areas: List, link_names: List[str], model_name: str) -> Union[List, None]:
     """
     Convert areas to links with a virtual area
 

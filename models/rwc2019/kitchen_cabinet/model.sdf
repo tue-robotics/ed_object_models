@@ -1,15 +1,15 @@
-<?xml version="1.0" ?>
-<sdf version="1.6">
+<?xml version="1.0"?>
+<sdf version="1.7">
   <model name="rwc2019/kitchen_cabinet">
-    <link name="1">
-      <collision name="1">
+    <link name="1_link">
+      <collision name="1_col">
         <geometry>
           <box>
             <size>0.34 0.018 1.98</size>
           </box>
         </geometry>
       </collision>
-      <visual name="1">
+      <visual name="1_vis">
         <geometry>
           <box>
             <size>0.34 0.018 1.98</size>
@@ -18,15 +18,15 @@
       </visual>
       <pose>0.0 -0.441 0.99 0 0 0</pose>
     </link>
-    <link name="2">
-      <collision name="2">
+    <link name="2_link">
+      <collision name="2_col">
         <geometry>
           <box>
             <size>0.34 0.018 1.98</size>
           </box>
         </geometry>
       </collision>
-      <visual name="2">
+      <visual name="2_vis">
         <geometry>
           <box>
             <size>0.34 0.018 1.98</size>
@@ -35,15 +35,15 @@
       </visual>
       <pose>0.0 0.441 0.99 0 0 0</pose>
     </link>
-    <link name="3">
-      <collision name="3">
+    <link name="3_link">
+      <collision name="3_col">
         <geometry>
           <box>
             <size>0.018 0.9 1.98</size>
           </box>
         </geometry>
       </collision>
-      <visual name="3">
+      <visual name="3_vis">
         <geometry>
           <box>
             <size>0.018 0.9 1.98</size>
@@ -52,15 +52,15 @@
       </visual>
       <pose>-0.161 0.0 0.99 0 0 0</pose>
     </link>
-    <link name="4">
-      <collision name="4">
+    <link name="4_link">
+      <collision name="4_col">
         <geometry>
           <box>
             <size>0.322 0.864 0.07</size>
           </box>
         </geometry>
       </collision>
-      <visual name="4">
+      <visual name="4_vis">
         <geometry>
           <box>
             <size>0.322 0.864 0.07</size>
@@ -69,15 +69,15 @@
       </visual>
       <pose>0.009 0.0 1.945 0 0 0</pose>
     </link>
-    <link name="5">
-      <collision name="5">
+    <link name="5_link">
+      <collision name="5_col">
         <geometry>
           <box>
             <size>0.322 0.864 0.7</size>
           </box>
         </geometry>
       </collision>
-      <visual name="5">
+      <visual name="5_vis">
         <geometry>
           <box>
             <size>0.322 0.864 0.7</size>
@@ -86,15 +86,15 @@
       </visual>
       <pose>0.009 0.0 0.47 0 0 0</pose>
     </link>
-    <link name="6">
-      <collision name="6">
+    <link name="6_link">
+      <collision name="6_col">
         <geometry>
           <box>
             <size>0.322 0.864 0.018</size>
           </box>
         </geometry>
       </collision>
-      <visual name="6">
+      <visual name="6_vis">
         <geometry>
           <box>
             <size>0.322 0.864 0.018</size>
@@ -103,15 +103,15 @@
       </visual>
       <pose>0.009 0.0 1.143 0 0 0</pose>
     </link>
-    <link name="7">
-      <collision name="7">
+    <link name="7_link">
+      <collision name="7_col">
         <geometry>
           <box>
             <size>0.322 0.864 0.018</size>
           </box>
         </geometry>
       </collision>
-      <visual name="7">
+      <visual name="7_vis">
         <geometry>
           <box>
             <size>0.322 0.864 0.018</size>
@@ -120,15 +120,15 @@
       </visual>
       <pose>0.009 0.0 1.419 0 0 0</pose>
     </link>
-    <link name="8">
-      <collision name="8">
+    <link name="8_link">
+      <collision name="8_col">
         <geometry>
           <box>
             <size>0.322 0.864 0.018</size>
           </box>
         </geometry>
       </collision>
-      <visual name="8">
+      <visual name="8_vis">
         <geometry>
           <box>
             <size>0.322 0.864 0.018</size>
@@ -137,7 +137,7 @@
       </visual>
       <pose>0.009 0.0 1.716 0 0 0</pose>
     </link>
-    <link name="in_front_of">
+    <link name="in_front_of_link">
       <virtual_volume name="in_front_of">
         <geometry>
           <box>
@@ -147,7 +147,7 @@
         <pose>0.67 0.0 0.005 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="shelf1">
+    <link name="shelf1_link">
       <virtual_volume name="shelf1">
         <geometry>
           <box>
@@ -157,7 +157,7 @@
         <pose>0.029 0.0 0.965 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="shelf2">
+    <link name="shelf2_link">
       <virtual_volume name="shelf2">
         <geometry>
           <box>
@@ -167,7 +167,7 @@
         <pose>0.029 0.0 1.297 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="shelf3">
+    <link name="shelf3_link">
       <virtual_volume name="shelf3">
         <geometry>
           <box>
@@ -178,7 +178,7 @@
       </virtual_volume>
       r
     </link>
-    <link name="shelf4">
+    <link name="shelf4_link">
       <virtual_volume name="shelf4">
         <geometry>
           <box>
@@ -188,7 +188,7 @@
         <pose>0.029 0.0 1.82 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="on_top_of">
+    <link name="on_top_of_link">
       <virtual_volume name="on_top_of">
         <geometry>
           <box>

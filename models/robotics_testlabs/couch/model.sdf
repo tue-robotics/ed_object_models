@@ -1,15 +1,15 @@
-<?xml version="1.0" ?>
-<sdf version="1.6">
+<?xml version="1.0"?>
+<sdf version="1.7">
   <model name="couch">
-    <link name="back">
-      <collision name="back">
+    <link name="back_link">
+      <collision name="back_col">
         <geometry>
           <box>
             <size>0.27 1.73 0.75</size>
           </box>
         </geometry>
       </collision>
-      <visual name="back">
+      <visual name="back_vis">
         <geometry>
           <box>
             <size>0.27 1.73 0.75</size>
@@ -18,15 +18,15 @@
       </visual>
       <pose>-0.4 0 0.37 0 0 0</pose>
     </link>
-    <link name="side_left">
-      <collision name="side_left">
+    <link name="side_left_link">
+      <collision name="side_left_col">
         <geometry>
           <box>
             <size>0.57 0.18 0.57</size>
           </box>
         </geometry>
       </collision>
-      <visual name="side_left">
+      <visual name="side_left_vis">
         <geometry>
           <box>
             <size>0.57 0.18 0.57</size>
@@ -35,15 +35,15 @@
       </visual>
       <pose>0 -0.77 0.28 0 0 0</pose>
     </link>
-    <link name="side_right">
-      <collision name="side_right">
+    <link name="side_right_link">
+      <collision name="side_right_col">
         <geometry>
           <box>
             <size>0.57 0.18 0.57</size>
           </box>
         </geometry>
       </collision>
-      <visual name="side_right">
+      <visual name="side_right_vis">
         <geometry>
           <box>
             <size>0.57 0.18 0.57</size>
@@ -52,15 +52,15 @@
       </visual>
       <pose>0 0.77 0.28 0 0 0</pose>
     </link>
-    <link name="seat">
-      <collision name="seat">
+    <link name="seat_link">
+      <collision name="seat_col">
         <geometry>
           <box>
             <size>0.62 1.36 0.17</size>
           </box>
         </geometry>
       </collision>
-      <visual name="seat">
+      <visual name="seat_vis">
         <geometry>
           <box>
             <size>0.62 1.36 0.17</size>
@@ -69,7 +69,7 @@
       </visual>
       <pose>0.05 0 0.26 0 0 0</pose>
     </link>
-    <link name="on_top_of">
+    <link name="on_top_of_link">
       <virtual_volume name="on_top_of">
         <geometry>
           <box>
@@ -79,7 +79,7 @@
         <pose>0.02 0.0 0.44 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="in_front_of">
+    <link name="in_front_of_link">
       <virtual_volume name="in_front_of">
         <geometry>
           <box>

@@ -1,15 +1,15 @@
-<?xml version="1.0" ?>
-<sdf version="1.6">
+<?xml version="1.0"?>
+<sdf version="1.7">
   <model name="rwc2017/sofa">
-    <link name="1">
-      <collision name="1">
+    <link name="1_link">
+      <collision name="1_col">
         <geometry>
           <box>
             <size>0.88 1.45 0.33</size>
           </box>
         </geometry>
       </collision>
-      <visual name="1">
+      <visual name="1_vis">
         <geometry>
           <box>
             <size>0.88 1.45 0.33</size>
@@ -18,15 +18,15 @@
       </visual>
       <pose>0.44 0.0 0.165 0 0 0</pose>
     </link>
-    <link name="2">
-      <collision name="2">
+    <link name="2_link">
+      <collision name="2_col">
         <geometry>
           <box>
             <size>1.55 0.76 0.33</size>
           </box>
         </geometry>
       </collision>
-      <visual name="2">
+      <visual name="2_vis">
         <geometry>
           <box>
             <size>1.55 0.76 0.33</size>
@@ -35,15 +35,15 @@
       </visual>
       <pose>0.775 -1.105 0.165 0 0 0</pose>
     </link>
-    <link name="3">
-      <collision name="3">
+    <link name="3_link">
+      <collision name="3_col">
         <geometry>
           <box>
             <size>0.35 2.21 0.37</size>
           </box>
         </geometry>
       </collision>
-      <visual name="3">
+      <visual name="3_vis">
         <geometry>
           <box>
             <size>0.35 2.21 0.37</size>
@@ -52,7 +52,7 @@
       </visual>
       <pose>0.175 -0.38 0.515 0 0 0</pose>
     </link>
-    <link name="in_front_of">
+    <link name="in_front_of_link">
       <virtual_volume name="in_front_of">
         <geometry>
           <box>

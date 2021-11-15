@@ -1,15 +1,15 @@
-<?xml version="1.0" ?>
-<sdf version="1.6">
+<?xml version="1.0"?>
+<sdf version="1.7">
   <model name="rwc2018/dishwasher">
-    <link name="1">
-      <collision name="1">
+    <link name="1_link">
+      <collision name="1_col">
         <geometry>
           <box>
             <size>0.61 0.69 0.91</size>
           </box>
         </geometry>
       </collision>
-      <visual name="1">
+      <visual name="1_vis">
         <geometry>
           <box>
             <size>0.61 0.69 0.91</size>
@@ -18,7 +18,7 @@
       </visual>
       <pose>0 0 0.455 0 0 0</pose>
     </link>
-    <link name="on_top_of">
+    <link name="on_top_of_link">
       <virtual_volume name="on_top_of">
         <geometry>
           <box>
@@ -28,7 +28,7 @@
         <pose>0.0 0.0 1.055 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="in_front_of">
+    <link name="in_front_of_link">
       <virtual_volume name="in_front_of">
         <geometry>
           <box>
@@ -38,7 +38,7 @@
         <pose>0.805 0.0 0.005 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="to_the_side_of">
+    <link name="to_the_side_of_link">
       <virtual_volume name="to_the_side_of">
         <geometry>
           <box>

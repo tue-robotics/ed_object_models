@@ -1,7 +1,7 @@
-<?xml version="1.0" ?>
-<sdf version="1.6">
+<?xml version="1.0"?>
+<sdf version="1.7">
   <model name="bed">
-    <link name="in_front_of">
+    <link name="in_front_of_link">
       <virtual_volume name="in_front_of">
         <geometry>
           <box>

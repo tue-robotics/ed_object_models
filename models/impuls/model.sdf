@@ -1,5 +1,5 @@
-<?xml version="1.0" ?>
-<sdf version="1.6">
+<?xml version="1.0"?>
+<sdf version="1.7">
   <world name="impuls">
     <include>
       <name>walls</name>
@@ -113,7 +113,8 @@
       <real_time_update_rate>333.0</real_time_update_rate>
       <max_step_size>0.003</max_step_size>
       <ode>
-        <solver type="quick">
+        <solver>
+          <type>quick</type>
           <iters>100</iters>
         </solver>
         <constraints>

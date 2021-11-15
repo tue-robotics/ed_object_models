@@ -1,8 +1,8 @@
-<?xml version="1.0" ?>
-<sdf version="1.6">
+<?xml version="1.0"?>
+<sdf version="1.7">
   <model name="tue_library/desk.corner">
-    <link name="1">
-      <collision name="1">
+    <link name="1_link">
+      <collision name="1_col">
         <geometry>
           <polyline>
             <height>0.8</height>
@@ -19,7 +19,7 @@
           </polyline>
         </geometry>
       </collision>
-      <visual name="1">
+      <visual name="1_vis">
         <geometry>
           <polyline>
             <height>0.8</height>

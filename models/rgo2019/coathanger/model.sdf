@@ -1,15 +1,15 @@
-<?xml version="1.0" ?>
-<sdf version="1.6">
+<?xml version="1.0"?>
+<sdf version="1.7">
   <model name="rgo2019/coathanger">
-    <link name="1">
-      <collision name="1">
+    <link name="1_link">
+      <collision name="1_col">
         <geometry>
           <box>
             <size>0.1 0.1 1.4</size>
           </box>
         </geometry>
       </collision>
-      <visual name="1">
+      <visual name="1_vis">
         <geometry>
           <box>
             <size>0.1 0.1 1.4</size>
@@ -18,7 +18,7 @@
       </visual>
       <pose>0.0 0.0 0.7 0 0 0</pose>
     </link>
-    <link name="in_front_of">
+    <link name="in_front_of_link">
       <virtual_volume name="in_front_of">
         <geometry>
           <box>

@@ -1,10 +1,10 @@
-<?xml version="1.0" ?>
-<sdf version='1.6'>
-  <model name='sergio'>
-    <link name='base_link'>
-      <pose frame=''>0 0 0 0 -0 0</pose>
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="sergio">
+    <link name="base_link">
+      <pose relative_to="">0 0 0 0 -0 0</pose>
       <inertial>
-        <pose frame=''>-0.01024 -0 0.17701 0 -0 0</pose>
+        <pose relative_to="">-0.01024 -0 0.17701 0 -0 0</pose>
         <mass>1.54</mass>
         <inertia>
           <ixx>0.0277523</ixx>
@@ -15,8 +15,8 @@
           <izz>0.127502</izz>
         </inertia>
       </inertial>
-      <collision name='base_link_collision'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+      <collision name="base_link_collision">
+        <pose relative_to="">0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0</length>
@@ -24,40 +24,40 @@
           </cylinder>
         </geometry>
       </collision>
-      <collision name='base_link_fixed_joint_lump__base_collision_1'>
-        <pose frame=''>-0.02 0 0.07 0 -0 0</pose>
+      <collision name="base_link_fixed_joint_lump__base_collision_1">
+        <pose relative_to="">-0.02 0 0.07 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.73 0.65 0.14</size>
           </box>
         </geometry>
       </collision>
-      <collision name='base_link_fixed_joint_lump__back_laser_mount_collision_2'>
-        <pose frame=''>-0.293 0 0.237 0 -0 0</pose>
+      <collision name="base_link_fixed_joint_lump__back_laser_mount_collision_2">
+        <pose relative_to="">-0.293 0 0.237 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.06 0.28 0.01</size>
           </box>
         </geometry>
       </collision>
-      <collision name='base_link_fixed_joint_lump__back_laser_collision_3'>
-        <pose frame=''>-0.293 0 0.276 0 -0 3.14159</pose>
+      <collision name="base_link_fixed_joint_lump__back_laser_collision_3">
+        <pose relative_to="">-0.293 0 0.276 0 -0 3.14159</pose>
         <geometry>
           <box>
             <size>0.06 0.06 0.069</size>
           </box>
         </geometry>
       </collision>
-      <collision name='base_link_fixed_joint_lump__back_lasertop_collision_4'>
-        <pose frame=''>-0.293 0 0.3195 0 -0 3.14159</pose>
+      <collision name="base_link_fixed_joint_lump__back_lasertop_collision_4">
+        <pose relative_to="">-0.293 0 0.3195 0 -0 3.14159</pose>
         <geometry>
           <box>
             <size>0.06 0.06 0.018</size>
           </box>
         </geometry>
       </collision>
-      <collision name='base_link_fixed_joint_lump__base_torso_mount_collision_5'>
-        <pose frame=''>0 0 0.095 0 -0 0</pose>
+      <collision name="base_link_fixed_joint_lump__base_torso_mount_collision_5">
+        <pose relative_to="">0 0 0.095 0 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0</length>
@@ -65,64 +65,64 @@
           </cylinder>
         </geometry>
       </collision>
-      <collision name='base_link_fixed_joint_lump__torso_mounting_frame_collision_6'>
-        <pose frame=''>0 0 0.17 0 -0 0</pose>
+      <collision name="base_link_fixed_joint_lump__torso_mounting_frame_collision_6">
+        <pose relative_to="">0 0 0.17 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.5 0.4 0.05</size>
           </box>
         </geometry>
       </collision>
-      <collision name='base_link_fixed_joint_lump__laser_mount_collision_7'>
-        <pose frame=''>0.3045 -0 0.1065 3.14159 -0 0</pose>
+      <collision name="base_link_fixed_joint_lump__laser_mount_collision_7">
+        <pose relative_to="">0.3045 -0 0.1065 3.14159 -0 0</pose>
         <geometry>
           <box>
             <size>0.01 0.06 0.035</size>
           </box>
         </geometry>
       </collision>
-      <collision name='base_link_fixed_joint_lump__base_laser_collision_8'>
-        <pose frame=''>0.3295 -0 0.09 3.14159 -0 0</pose>
+      <collision name="base_link_fixed_joint_lump__base_laser_collision_8">
+        <pose relative_to="">0.3295 -0 0.09 3.14159 -0 0</pose>
         <geometry>
           <box>
             <size>0.06 0.06 0.069</size>
           </box>
         </geometry>
       </collision>
-      <collision name='base_link_fixed_joint_lump__base_lasertop_collision_9'>
-        <pose frame=''>0.3295 -0 0.0465 3.14159 -0 0</pose>
+      <collision name="base_link_fixed_joint_lump__base_lasertop_collision_9">
+        <pose relative_to="">0.3295 -0 0.0465 3.14159 -0 0</pose>
         <geometry>
           <box>
             <size>0.06 0.06 0.018</size>
           </box>
         </geometry>
       </collision>
-      <collision name='base_link_fixed_joint_lump__sidepot_back_collision_10'>
-        <pose frame=''>-0.305 0 0.195 0 -0 0</pose>
+      <collision name="base_link_fixed_joint_lump__sidepot_back_collision_10">
+        <pose relative_to="">-0.305 0 0.195 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.16 0.65 0.13</size>
           </box>
         </geometry>
       </collision>
-      <collision name='base_link_fixed_joint_lump__sidepot_left_collision_11'>
-        <pose frame=''>-0.01 0.2425 0.195 0 -0 0</pose>
+      <collision name="base_link_fixed_joint_lump__sidepot_left_collision_11">
+        <pose relative_to="">-0.01 0.2425 0.195 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.43 0.165 0.13</size>
           </box>
         </geometry>
       </collision>
-      <collision name='base_link_fixed_joint_lump__sidepot_right_collision_12'>
-        <pose frame=''>-0.01 -0.2425 0.195 0 -0 0</pose>
+      <collision name="base_link_fixed_joint_lump__sidepot_right_collision_12">
+        <pose relative_to="">-0.01 -0.2425 0.195 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.43 0.165 0.13</size>
           </box>
         </geometry>
       </collision>
-      <visual name='base_link_visual'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+      <visual name="base_link_visual">
+        <pose relative_to="">0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0</length>
@@ -130,40 +130,40 @@
           </cylinder>
         </geometry>
       </visual>
-      <visual name='base_link_fixed_joint_lump__base_visual_1'>
-        <pose frame=''>-0.02 0 0.07 0 -0 0</pose>
+      <visual name="base_link_fixed_joint_lump__base_visual_1">
+        <pose relative_to="">-0.02 0 0.07 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.73 0.65 0.14</size>
           </box>
         </geometry>
       </visual>
-      <visual name='base_link_fixed_joint_lump__back_laser_mount_visual_2'>
-        <pose frame=''>-0.293 0 0.237 0 -0 0</pose>
+      <visual name="base_link_fixed_joint_lump__back_laser_mount_visual_2">
+        <pose relative_to="">-0.293 0 0.237 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.06 0.28 0.01</size>
           </box>
         </geometry>
       </visual>
-      <visual name='base_link_fixed_joint_lump__back_laser_visual_3'>
-        <pose frame=''>-0.293 0 0.276 0 -0 3.14159</pose>
+      <visual name="base_link_fixed_joint_lump__back_laser_visual_3">
+        <pose relative_to="">-0.293 0 0.276 0 -0 3.14159</pose>
         <geometry>
           <box>
             <size>0.06 0.06 0.069</size>
           </box>
         </geometry>
       </visual>
-      <visual name='base_link_fixed_joint_lump__back_lasertop_visual_4'>
-        <pose frame=''>-0.293 0 0.3195 0 -0 3.14159</pose>
+      <visual name="base_link_fixed_joint_lump__back_lasertop_visual_4">
+        <pose relative_to="">-0.293 0 0.3195 0 -0 3.14159</pose>
         <geometry>
           <box>
             <size>0.06 0.06 0.018</size>
           </box>
         </geometry>
       </visual>
-      <visual name='base_link_fixed_joint_lump__base_torso_mount_visual_5'>
-        <pose frame=''>0 0 0.095 0 -0 0</pose>
+      <visual name="base_link_fixed_joint_lump__base_torso_mount_visual_5">
+        <pose relative_to="">0 0 0.095 0 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0</length>
@@ -171,56 +171,56 @@
           </cylinder>
         </geometry>
       </visual>
-      <visual name='base_link_fixed_joint_lump__torso_mounting_frame_visual_6'>
-        <pose frame=''>0 0 0.17 0 -0 0</pose>
+      <visual name="base_link_fixed_joint_lump__torso_mounting_frame_visual_6">
+        <pose relative_to="">0 0 0.17 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.5 0.4 0.05</size>
           </box>
         </geometry>
       </visual>
-      <visual name='base_link_fixed_joint_lump__laser_mount_visual_7'>
-        <pose frame=''>0.3045 -0 0.1065 3.14159 -0 0</pose>
+      <visual name="base_link_fixed_joint_lump__laser_mount_visual_7">
+        <pose relative_to="">0.3045 -0 0.1065 3.14159 -0 0</pose>
         <geometry>
           <box>
             <size>0.01 0.06 0.035</size>
           </box>
         </geometry>
       </visual>
-      <visual name='base_link_fixed_joint_lump__base_laser_visual_8'>
-        <pose frame=''>0.3295 -0 0.09 3.14159 -0 0</pose>
+      <visual name="base_link_fixed_joint_lump__base_laser_visual_8">
+        <pose relative_to="">0.3295 -0 0.09 3.14159 -0 0</pose>
         <geometry>
           <box>
             <size>0.06 0.06 0.069</size>
           </box>
         </geometry>
       </visual>
-      <visual name='base_link_fixed_joint_lump__base_lasertop_visual_9'>
-        <pose frame=''>0.3295 -0 0.0465 3.14159 -0 0</pose>
+      <visual name="base_link_fixed_joint_lump__base_lasertop_visual_9">
+        <pose relative_to="">0.3295 -0 0.0465 3.14159 -0 0</pose>
         <geometry>
           <box>
             <size>0.06 0.06 0.018</size>
           </box>
         </geometry>
       </visual>
-      <visual name='base_link_fixed_joint_lump__sidepot_back_visual_10'>
-        <pose frame=''>-0.305 0 0.195 0 -0 0</pose>
+      <visual name="base_link_fixed_joint_lump__sidepot_back_visual_10">
+        <pose relative_to="">-0.305 0 0.195 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.16 0.65 0.13</size>
           </box>
         </geometry>
       </visual>
-      <visual name='base_link_fixed_joint_lump__sidepot_left_visual_11'>
-        <pose frame=''>-0.01 0.2425 0.195 0 -0 0</pose>
+      <visual name="base_link_fixed_joint_lump__sidepot_left_visual_11">
+        <pose relative_to="">-0.01 0.2425 0.195 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.43 0.165 0.13</size>
           </box>
         </geometry>
       </visual>
-      <visual name='base_link_fixed_joint_lump__sidepot_right_visual_12'>
-        <pose frame=''>-0.01 -0.2425 0.195 0 -0 0</pose>
+      <visual name="base_link_fixed_joint_lump__sidepot_right_visual_12">
+        <pose relative_to="">-0.01 -0.2425 0.195 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.43 0.165 0.13</size>
@@ -228,10 +228,10 @@
         </geometry>
       </visual>
     </link>
-    <link name='lower_rear_leg'>
-      <pose frame=''>-0.185 0 0.2015 0 -0 0</pose>
+    <link name="lower_rear_leg">
+      <pose relative_to="">-0.185 0 0.2015 0 -0 0</pose>
       <inertial>
-        <pose frame=''>0.195 0 0 0 -0 0</pose>
+        <pose relative_to="">0.195 0 0 0 -0 0</pose>
         <mass>5</mass>
         <inertia>
           <ixx>0.001</ixx>
@@ -242,16 +242,16 @@
           <izz>0.001</izz>
         </inertia>
       </inertial>
-      <collision name='lower_rear_leg_collision'>
-        <pose frame=''>0.195 0 0 0 -0 0</pose>
+      <collision name="lower_rear_leg_collision">
+        <pose relative_to="">0.195 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.39 0.2 0.05</size>
           </box>
         </geometry>
       </collision>
-      <visual name='lower_rear_leg_visual'>
-        <pose frame=''>0.195 0 0 0 -0 0</pose>
+      <visual name="lower_rear_leg_visual">
+        <pose relative_to="">0.195 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.39 0.2 0.05</size>
@@ -259,11 +259,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='ankle_joint' type='revolute'>
+    <joint name="ankle_joint" type="revolute">
       <child>lower_rear_leg</child>
       <parent>base_link</parent>
       <axis>
-        <xyz>0 -1 0</xyz>
+        <xyz expressed_in="__model__">0 -1 0</xyz>
         <limit>
           <lower>0.152</lower>
           <upper>1</upper>
@@ -276,13 +276,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='upper_leg'>
-      <pose frame=''>0.205 0 0.2015 -0.001593 0.001593 3.14159</pose>
+    <link name="upper_leg">
+      <pose relative_to="">0.205 0 0.2015 -0.001593 0.001593 3.14159</pose>
       <inertial>
-        <pose frame=''>0.20575 0 0 0 -0 0</pose>
+        <pose relative_to="">0.20575 0 0 0 -0 0</pose>
         <mass>5</mass>
         <inertia>
           <ixx>0.001</ixx>
@@ -293,16 +292,16 @@
           <izz>0.001</izz>
         </inertia>
       </inertial>
-      <collision name='upper_leg_collision'>
-        <pose frame=''>0.20575 0 0 0 -0 0</pose>
+      <collision name="upper_leg_collision">
+        <pose relative_to="">0.20575 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.4115 0.2 0.1</size>
           </box>
         </geometry>
       </collision>
-      <visual name='upper_leg_visual'>
-        <pose frame=''>0.20575 0 0 0 -0 0</pose>
+      <visual name="upper_leg_visual">
+        <pose relative_to="">0.20575 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.4115 0.2 0.1</size>
@@ -310,11 +309,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='knee_joint' type='revolute'>
+    <joint name="knee_joint" type="revolute">
       <child>upper_leg</child>
       <parent>lower_rear_leg</parent>
       <axis>
-        <xyz>-3e-06 0.999999 0.001593</xyz>
+        <xyz expressed_in="__model__">-3e-06 0.999999 0.001593</xyz>
         <limit>
           <lower>0.419</lower>
           <upper>2.059</upper>
@@ -327,13 +326,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='trunk'>
-      <pose frame=''>-0.206499 -0 0.200845 -0 -0 3e-06</pose>
+    <link name="trunk">
+      <pose relative_to="">-0.206499 -0 0.200845 -0 -0 3e-06</pose>
       <inertial>
-        <pose frame=''>0.243359 0 -3.3e-05 0 -0 0</pose>
+        <pose relative_to="">0.243359 0 -3.3e-05 0 -0 0</pose>
         <mass>10.35</mass>
         <inertia>
           <ixx>0.0223699</ixx>
@@ -344,24 +342,24 @@
           <izz>0.0433416</izz>
         </inertia>
       </inertial>
-      <collision name='trunk_collision'>
-        <pose frame=''>0.235 0 0 0 -0 0</pose>
+      <collision name="trunk_collision">
+        <pose relative_to="">0.235 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.47 0.2 0.15</size>
           </box>
         </geometry>
       </collision>
-      <collision name='trunk_fixed_joint_lump__head_mount_collision_1'>
-        <pose frame=''>0.555307 0 -0.00689 3.14 0.065 0</pose>
+      <collision name="trunk_fixed_joint_lump__head_mount_collision_1">
+        <pose relative_to="">0.555307 0 -0.00689 3.14 0.065 0</pose>
         <geometry>
           <box>
             <size>0.061 0.08 0.08</size>
           </box>
         </geometry>
       </collision>
-      <collision name='trunk_fixed_joint_lump__shoulder_mount_left_collision_2'>
-        <pose frame=''>0.47 0.065 0.000247 -1.57319 -0 0</pose>
+      <collision name="trunk_fixed_joint_lump__shoulder_mount_left_collision_2">
+        <pose relative_to="">0.47 0.065 0.000247 -1.57319 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0.14</length>
@@ -369,8 +367,8 @@
           </cylinder>
         </geometry>
       </collision>
-      <collision name='trunk_fixed_joint_lump__shoulder_mount_right_collision_3'>
-        <pose frame=''>0.47 -0.065 -0.000247 -1.57319 -0 0</pose>
+      <collision name="trunk_fixed_joint_lump__shoulder_mount_right_collision_3">
+        <pose relative_to="">0.47 -0.065 -0.000247 -1.57319 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0.14</length>
@@ -378,24 +376,24 @@
           </cylinder>
         </geometry>
       </collision>
-      <visual name='trunk_visual'>
-        <pose frame=''>0.235 0 0 0 -0 0</pose>
+      <visual name="trunk_visual">
+        <pose relative_to="">0.235 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.47 0.2 0.15</size>
           </box>
         </geometry>
       </visual>
-      <visual name='trunk_fixed_joint_lump__head_mount_visual_1'>
-        <pose frame=''>0.555307 0 -0.00689 3.14 0.065 0</pose>
+      <visual name="trunk_fixed_joint_lump__head_mount_visual_1">
+        <pose relative_to="">0.555307 0 -0.00689 3.14 0.065 0</pose>
         <geometry>
           <box>
             <size>0.061 0.08 0.08</size>
           </box>
         </geometry>
       </visual>
-      <visual name='trunk_fixed_joint_lump__shoulder_mount_left_visual_2'>
-        <pose frame=''>0.47 0.065 0.000247 -1.57319 -0 0</pose>
+      <visual name="trunk_fixed_joint_lump__shoulder_mount_left_visual_2">
+        <pose relative_to="">0.47 0.065 0.000247 -1.57319 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0.14</length>
@@ -403,8 +401,8 @@
           </cylinder>
         </geometry>
       </visual>
-      <visual name='trunk_fixed_joint_lump__shoulder_mount_right_visual_3'>
-        <pose frame=''>0.47 -0.065 -0.000247 -1.57319 -0 0</pose>
+      <visual name="trunk_fixed_joint_lump__shoulder_mount_right_visual_3">
+        <pose relative_to="">0.47 -0.065 -0.000247 -1.57319 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0.14</length>
@@ -413,11 +411,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='hip_joint' type='revolute'>
+    <joint name="hip_joint" type="revolute">
       <child>trunk</child>
       <parent>upper_leg</parent>
       <axis>
-        <xyz>3e-06 -1 0</xyz>
+        <xyz expressed_in="__model__">3e-06 -1 0</xyz>
         <limit>
           <lower>1.007</lower>
           <upper>2.31</upper>
@@ -430,13 +428,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='neck_pan'>
-      <pose frame=''>0.399201 2e-06 0.190675 -3.11872 1.50577 -3.11708</pose>
+    <link name="neck_pan">
+      <pose relative_to="">0.399201 2e-06 0.190675 -3.11872 1.50577 -3.11708</pose>
       <inertial>
-        <pose frame=''>0 0 -0.01 0 -0 0</pose>
+        <pose relative_to="">0 0 -0.01 0 -0 0</pose>
         <mass>0.05</mass>
         <inertia>
           <ixx>0.0001</ixx>
@@ -447,8 +444,8 @@
           <izz>0.0001</izz>
         </inertia>
       </inertial>
-      <collision name='neck_pan_collision'>
-        <pose frame=''>0 0 -0.01 0 -0 0</pose>
+      <collision name="neck_pan_collision">
+        <pose relative_to="">0 0 -0.01 0 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0.02</length>
@@ -456,8 +453,8 @@
           </cylinder>
         </geometry>
       </collision>
-      <visual name='neck_pan_visual'>
-        <pose frame=''>0 0 -0.01 0 -0 0</pose>
+      <visual name="neck_pan_visual">
+        <pose relative_to="">0 0 -0.01 0 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0.02</length>
@@ -466,11 +463,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='neck_pan_joint' type='revolute'>
+    <joint name="neck_pan_joint" type="revolute">
       <child>neck_pan</child>
       <parent>trunk</parent>
       <axis>
-        <xyz>0.997887 0.001595 -0.06496</xyz>
+        <xyz expressed_in="__model__">0.997887 0.001595 -0.06496</xyz>
         <limit>
           <lower>-1.586</lower>
           <upper>1.586</upper>
@@ -483,13 +480,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='neck_tilt'>
-      <pose frame=''>0.399201 2e-06 0.190675 -3.11872 1.50577 -3.11708</pose>
+    <link name="neck_tilt">
+      <pose relative_to="">0.399201 2e-06 0.190675 -3.11872 1.50577 -3.11708</pose>
       <inertial>
-        <pose frame=''>0.009452 0.002575 0.029027 0 -0 0</pose>
+        <pose relative_to="">0.009452 0.002575 0.029027 0 -0 0</pose>
         <mass>0.073</mass>
         <inertia>
           <ixx>0.00332243</ixx>
@@ -500,40 +496,40 @@
           <izz>0.00331731</izz>
         </inertia>
       </inertial>
-      <collision name='neck_tilt_collision'>
-        <pose frame=''>0 -0 0.018 0 -0 0</pose>
+      <collision name="neck_tilt_collision">
+        <pose relative_to="">0 -0 0.018 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.03 0.03 0.036</size>
           </box>
         </geometry>
       </collision>
-      <collision name='neck_tilt_fixed_joint_lump__head_collision_1'>
-        <pose frame=''>0 0 0.177 0 0 -1.5708</pose>
+      <collision name="neck_tilt_fixed_joint_lump__head_collision_1">
+        <pose relative_to="">0 0 0.177 0 0 -1.5708</pose>
         <geometry>
           <box>
             <size>0.001 0.001 0.001</size>
           </box>
         </geometry>
       </collision>
-      <visual name='neck_tilt_visual'>
-        <pose frame=''>0 -0 0.018 0 -0 0</pose>
+      <visual name="neck_tilt_visual">
+        <pose relative_to="">0 -0 0.018 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.03 0.03 0.036</size>
           </box>
         </geometry>
       </visual>
-      <visual name='neck_tilt_fixed_joint_lump__head_visual_1'>
-        <pose frame=''>0 0 0.177 0 0 -1.5708</pose>
+      <visual name="neck_tilt_fixed_joint_lump__head_visual_1">
+        <pose relative_to="">0 0 0.177 0 0 -1.5708</pose>
         <geometry>
           <box>
             <size>0.001 0.001 0.001</size>
           </box>
         </geometry>
       </visual>
-      <visual name='neck_tilt_fixed_joint_lump__top_kinect/openni_camera_visual_2'>
-        <pose frame=''>0.03 0 0.053 0 -0 0</pose>
+      <visual name="neck_tilt_fixed_joint_lump__top_kinect/openni_camera_visual_2">
+        <pose relative_to="">0.03 0 0.053 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
@@ -542,11 +538,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='neck_tilt_joint' type='revolute'>
+    <joint name="neck_tilt_joint" type="revolute">
       <child>neck_tilt</child>
       <parent>neck_pan</parent>
       <axis>
-        <xyz>-0.001695 0.999997 -0.001486</xyz>
+        <xyz expressed_in="__model__">-0.001695 0.999997 -0.001486</xyz>
         <limit>
           <lower>-0.994</lower>
           <upper>0.994</upper>
@@ -559,13 +555,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='torso_laser_mount'>
-      <pose frame=''>0.100801 1e-06 0.113745 3.14 1.406 3e-06</pose>
+    <link name="torso_laser_mount">
+      <pose relative_to="">0.100801 1e-06 0.113745 3.14 1.406 3e-06</pose>
       <inertial>
-        <pose frame=''>0 0 -0.028587 0 -0 0</pose>
+        <pose relative_to="">0 0 -0.028587 0 -0 0</pose>
         <mass>0.52</mass>
         <inertia>
           <ixx>0.000326884</ixx>
@@ -576,48 +571,48 @@
           <izz>0.0003</izz>
         </inertia>
       </inertial>
-      <collision name='torso_laser_mount_collision'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+      <collision name="torso_laser_mount_collision">
+        <pose relative_to="">0 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0 0 0</size>
           </box>
         </geometry>
       </collision>
-      <collision name='torso_laser_mount_fixed_joint_lump__torso_laser_collision_1'>
-        <pose frame=''>0 0 -0.03 0 -0 0</pose>
+      <collision name="torso_laser_mount_fixed_joint_lump__torso_laser_collision_1">
+        <pose relative_to="">0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.06 0.06 0.069</size>
           </box>
         </geometry>
       </collision>
-      <collision name='torso_laser_mount_fixed_joint_lump__torso_lasertop_collision_2'>
-        <pose frame=''>0 0 0.0135 0 -0 0</pose>
+      <collision name="torso_laser_mount_fixed_joint_lump__torso_lasertop_collision_2">
+        <pose relative_to="">0 0 0.0135 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.06 0.06 0.018</size>
           </box>
         </geometry>
       </collision>
-      <visual name='torso_laser_mount_visual'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+      <visual name="torso_laser_mount_visual">
+        <pose relative_to="">0 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0 0 0</size>
           </box>
         </geometry>
       </visual>
-      <visual name='torso_laser_mount_fixed_joint_lump__torso_laser_visual_1'>
-        <pose frame=''>0 0 -0.03 0 -0 0</pose>
+      <visual name="torso_laser_mount_fixed_joint_lump__torso_laser_visual_1">
+        <pose relative_to="">0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.06 0.06 0.069</size>
           </box>
         </geometry>
       </visual>
-      <visual name='torso_laser_mount_fixed_joint_lump__torso_lasertop_visual_2'>
-        <pose frame=''>0 0 0.0135 0 -0 0</pose>
+      <visual name="torso_laser_mount_fixed_joint_lump__torso_lasertop_visual_2">
+        <pose relative_to="">0 0 0.0135 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.06 0.06 0.018</size>
@@ -625,11 +620,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='laser_tilt_joint' type='revolute'>
+    <joint name="laser_tilt_joint" type="revolute">
       <child>torso_laser_mount</child>
       <parent>trunk</parent>
       <axis>
-        <xyz>0.001574 -0.999999 0.000261</xyz>
+        <xyz expressed_in="__model__">0.001574 -0.999999 0.000261</xyz>
         <limit>
           <lower>0</lower>
           <upper>0.324</upper>
@@ -642,13 +637,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='shoulder_link1_left'>
-      <pose frame=''>0.2635 0.220001 0.200845 -0.002309 1.5692 -1.5731</pose>
+    <link name="shoulder_link1_left">
+      <pose relative_to="">0.2635 0.220001 0.200845 -0.002309 1.5692 -1.5731</pose>
       <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose relative_to="">0 0 0 0 -0 0</pose>
         <mass>0.25</mass>
         <inertia>
           <ixx>6</ixx>
@@ -659,8 +653,8 @@
           <izz>0.01</izz>
         </inertia>
       </inertial>
-      <collision name='shoulder_link1_left_collision'>
-        <pose frame=''>0 0 -0.0525 0 -0 0</pose>
+      <collision name="shoulder_link1_left_collision">
+        <pose relative_to="">0 0 -0.0525 0 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0.015</length>
@@ -668,8 +662,8 @@
           </cylinder>
         </geometry>
       </collision>
-      <visual name='shoulder_link1_left_visual'>
-        <pose frame=''>0 0 -0.0525 0 -0 0</pose>
+      <visual name="shoulder_link1_left_visual">
+        <pose relative_to="">0 0 -0.0525 0 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0.015</length>
@@ -678,11 +672,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='shoulder_yaw_joint_left' type='revolute'>
+    <joint name="shoulder_yaw_joint_left" type="revolute">
       <child>shoulder_link1_left</child>
       <parent>trunk</parent>
       <axis>
-        <xyz>4e-06 0.001593 0.999999</xyz>
+        <xyz expressed_in="__model__">4e-06 0.001593 0.999999</xyz>
         <limit>
           <lower>-1.57</lower>
           <upper>0</upper>
@@ -695,13 +689,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='shoulder_link2_left'>
-      <pose frame=''>0.2635 0.220001 0.200845 -1.57311 1.5692 -1.5731</pose>
+    <link name="shoulder_link2_left">
+      <pose relative_to="">0.2635 0.220001 0.200845 -1.57311 1.5692 -1.5731</pose>
       <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose relative_to="">0 0 0 0 -0 0</pose>
         <mass>0.15</mass>
         <inertia>
           <ixx>0.01</ixx>
@@ -712,16 +705,16 @@
           <izz>0.001</izz>
         </inertia>
       </inertial>
-      <collision name='shoulder_link2_left_collision'>
-        <pose frame=''>0 0.06 -0.05 0 -0 0</pose>
+      <collision name="shoulder_link2_left_collision">
+        <pose relative_to="">0 0.06 -0.05 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.035 0.01 0.1</size>
           </box>
         </geometry>
       </collision>
-      <visual name='shoulder_link2_left_visual'>
-        <pose frame=''>0 0.06 -0.05 0 -0 0</pose>
+      <visual name="shoulder_link2_left_visual">
+        <pose relative_to="">0 0.06 -0.05 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.035 0.01 0.1</size>
@@ -729,11 +722,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='shoulder_pitch_joint_left' type='revolute'>
+    <joint name="shoulder_pitch_joint_left" type="revolute">
       <child>shoulder_link2_left</child>
       <parent>shoulder_link1_left</parent>
       <axis>
-        <xyz>1e-05 -0.999999 0.001593</xyz>
+        <xyz expressed_in="__model__">1e-05 -0.999999 0.001593</xyz>
         <limit>
           <lower>-1.57</lower>
           <upper>1.57</upper>
@@ -746,13 +739,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='upper_arm_left'>
-      <pose frame=''>0.2635 0.220001 0.200845 -0.002309 1.5692 -1.5731</pose>
+    <link name="upper_arm_left">
+      <pose relative_to="">0.2635 0.220001 0.200845 -0.002309 1.5692 -1.5731</pose>
       <inertial>
-        <pose frame=''>0 -0.2 0 0 -0 0</pose>
+        <pose relative_to="">0 -0.2 0 0 -0 0</pose>
         <mass>2.95</mass>
         <inertia>
           <ixx>0.027</ixx>
@@ -763,8 +755,8 @@
           <izz>0.004</izz>
         </inertia>
       </inertial>
-      <collision name='upper_arm_left_collision'>
-        <pose frame=''>-0.00959 -0.19131 -1e-05 0 -0 3.1415</pose>
+      <collision name="upper_arm_left_collision">
+        <pose relative_to="">-0.00959 -0.19131 -1e-05 0 -0 3.1415</pose>
         <geometry>
           <mesh>
             <scale>0.0004 0.0004 0.0004</scale>
@@ -772,8 +764,8 @@
           </mesh>
         </geometry>
       </collision>
-      <visual name='upper_arm_left_visual'>
-        <pose frame=''>-0.00959 -0.19131 -1e-05 0 -0 3.1415</pose>
+      <visual name="upper_arm_left_visual">
+        <pose relative_to="">-0.00959 -0.19131 -1e-05 0 -0 3.1415</pose>
         <geometry>
           <mesh>
             <scale>0.0004 0.0004 0.0004</scale>
@@ -782,11 +774,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='shoulder_roll_joint_left' type='revolute'>
+    <joint name="shoulder_roll_joint_left" type="revolute">
       <child>upper_arm_left</child>
       <parent>shoulder_link2_left</parent>
       <axis>
-        <xyz>-1 -6e-06 4e-06</xyz>
+        <xyz expressed_in="__model__">-1 -6e-06 4e-06</xyz>
         <limit>
           <lower>-1.57</lower>
           <upper>1.57</upper>
@@ -799,13 +791,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='elbow_link4_left'>
-      <pose frame=''>-0.0565 0.219983 0.190846 -1.57311 1.5692 -1.5731</pose>
+    <link name="elbow_link4_left">
+      <pose relative_to="">-0.0565 0.219983 0.190846 -1.57311 1.5692 -1.5731</pose>
       <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose relative_to="">0 0 0 0 -0 0</pose>
         <mass>0.1</mass>
         <inertia>
           <ixx>0.001</ixx>
@@ -816,8 +807,8 @@
           <izz>0.001</izz>
         </inertia>
       </inertial>
-      <collision name='elbow_link4_left_collision'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+      <collision name="elbow_link4_left_collision">
+        <pose relative_to="">0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0</length>
@@ -825,8 +816,8 @@
           </cylinder>
         </geometry>
       </collision>
-      <visual name='elbow_link4_left_visual'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+      <visual name="elbow_link4_left_visual">
+        <pose relative_to="">0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0</length>
@@ -835,11 +826,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='elbow_pitch_joint_left' type='revolute'>
+    <joint name="elbow_pitch_joint_left" type="revolute">
       <child>elbow_link4_left</child>
       <parent>upper_arm_left</parent>
       <axis>
-        <xyz>1e-05 -0.999999 0.001593</xyz>
+        <xyz expressed_in="__model__">1e-05 -0.999999 0.001593</xyz>
         <limit>
           <lower>0</lower>
           <upper>2.23</upper>
@@ -852,13 +843,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='fore_arm_left'>
-      <pose frame=''>-0.0565 0.219983 0.190846 -0.002309 1.5692 -1.5731</pose>
+    <link name="fore_arm_left">
+      <pose relative_to="">-0.0565 0.219983 0.190846 -0.002309 1.5692 -1.5731</pose>
       <inertial>
-        <pose frame=''>0 -0.14 0 0 -0 0</pose>
+        <pose relative_to="">0 -0.14 0 0 -0 0</pose>
         <mass>0.85</mass>
         <inertia>
           <ixx>0.001</ixx>
@@ -869,8 +859,8 @@
           <izz>0.001</izz>
         </inertia>
       </inertial>
-      <collision name='fore_arm_left_collision'>
-        <pose frame=''>0.00425 -0.14868 0.00547 3.14159 -1.57079 3.14159</pose>
+      <collision name="fore_arm_left_collision">
+        <pose relative_to="">0.00425 -0.14868 0.00547 3.14159 -1.57079 3.14159</pose>
         <geometry>
           <mesh>
             <scale>0.0004 0.0004 0.0004</scale>
@@ -878,8 +868,8 @@
           </mesh>
         </geometry>
       </collision>
-      <visual name='fore_arm_left_visual'>
-        <pose frame=''>0.00425 -0.14868 0.00547 3.14159 -1.57079 3.14159</pose>
+      <visual name="fore_arm_left_visual">
+        <pose relative_to="">0.00425 -0.14868 0.00547 3.14159 -1.57079 3.14159</pose>
         <geometry>
           <mesh>
             <scale>0.0004 0.0004 0.0004</scale>
@@ -888,11 +878,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='elbow_roll_joint_left' type='revolute'>
+    <joint name="elbow_roll_joint_left" type="revolute">
       <child>fore_arm_left</child>
       <parent>elbow_link4_left</parent>
       <axis>
-        <xyz>-1 -6e-06 4e-06</xyz>
+        <xyz expressed_in="__model__">-1 -6e-06 4e-06</xyz>
         <limit>
           <lower>-1.83</lower>
           <upper>1.83</upper>
@@ -905,13 +895,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='wrist_link6_left'>
-      <pose frame=''>-0.3365 0.219966 0.180847 -3.14 -7e-06 -3.14159</pose>
+    <link name="wrist_link6_left">
+      <pose relative_to="">-0.3365 0.219966 0.180847 -3.14 -7e-06 -3.14159</pose>
       <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose relative_to="">0 0 0 0 -0 0</pose>
         <mass>0.01</mass>
         <inertia>
           <ixx>0.001</ixx>
@@ -922,8 +911,8 @@
           <izz>0.001</izz>
         </inertia>
       </inertial>
-      <collision name='wrist_link6_left_collision'>
-        <pose frame=''>0 0 0 1.5708 -0 0</pose>
+      <collision name="wrist_link6_left_collision">
+        <pose relative_to="">0 0 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0</length>
@@ -931,8 +920,8 @@
           </cylinder>
         </geometry>
       </collision>
-      <visual name='wrist_link6_left_visual'>
-        <pose frame=''>0 0 0 1.5708 -0 0</pose>
+      <visual name="wrist_link6_left_visual">
+        <pose relative_to="">0 0 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0</length>
@@ -941,11 +930,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='wrist_pitch_joint_left' type='revolute'>
+    <joint name="wrist_pitch_joint_left" type="revolute">
       <child>wrist_link6_left</child>
       <parent>fore_arm_left</parent>
       <axis>
-        <xyz>6e-06 -0.999999 0.001589</xyz>
+        <xyz expressed_in="__model__">6e-06 -0.999999 0.001589</xyz>
         <limit>
           <lower>-0.95</lower>
           <upper>0.95</upper>
@@ -958,13 +947,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='hand_left'>
-      <pose frame=''>-0.3365 0.219966 0.180847 -3.14 -7e-06 -3.14159</pose>
+    <link name="hand_left">
+      <pose relative_to="">-0.3365 0.219966 0.180847 -3.14 -7e-06 -3.14159</pose>
       <inertial>
-        <pose frame=''>0.047619 0 0 0 -0 0</pose>
+        <pose relative_to="">0.047619 0 0 0 -0 0</pose>
         <mass>0.21</mass>
         <inertia>
           <ixx>0.0101</ixx>
@@ -975,32 +963,32 @@
           <izz>0.0623006</izz>
         </inertia>
       </inertial>
-      <collision name='hand_left_collision'>
-        <pose frame=''>0.048 0 0 0 -0 0</pose>
+      <collision name="hand_left_collision">
+        <pose relative_to="">0.048 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.08 0.085 0.038</size>
           </box>
         </geometry>
       </collision>
-      <collision name='hand_left_fixed_joint_lump__grippoint_left_collision_1'>
-        <pose frame=''>0.04 0 0 0 -0 0</pose>
+      <collision name="hand_left_fixed_joint_lump__grippoint_left_collision_1">
+        <pose relative_to="">0.04 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0 0 0</size>
           </box>
         </geometry>
       </collision>
-      <visual name='hand_left_visual'>
-        <pose frame=''>0.048 0 0 0 -0 0</pose>
+      <visual name="hand_left_visual">
+        <pose relative_to="">0.048 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.08 0.085 0.038</size>
           </box>
         </geometry>
       </visual>
-      <visual name='hand_left_fixed_joint_lump__grippoint_left_visual_1'>
-        <pose frame=''>0.04 0 0 0 -0 0</pose>
+      <visual name="hand_left_fixed_joint_lump__grippoint_left_visual_1">
+        <pose relative_to="">0.04 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0 0 0</size>
@@ -1008,11 +996,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='wrist_yaw_joint_left' type='revolute'>
+    <joint name="wrist_yaw_joint_left" type="revolute">
       <child>hand_left</child>
       <parent>wrist_link6_left</parent>
       <axis>
-        <xyz>8.1e-05 0.017479 11</xyz>
+        <xyz expressed_in="__model__">8.1e-05 0.017479 11</xyz>
         <limit>
           <lower>-0.61</lower>
           <upper>0.61</upper>
@@ -1025,13 +1013,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='finger1_left'>
-      <pose frame=''>-0.4115 0.239965 0.180816 -2.03906 1.56902 -2.03905</pose>
+    <link name="finger1_left">
+      <pose relative_to="">-0.4115 0.239965 0.180816 -2.03906 1.56902 -2.03905</pose>
       <inertial>
-        <pose frame=''>0 0 -0.045 0 -0 0</pose>
+        <pose relative_to="">0 0 -0.045 0 -0 0</pose>
         <mass>0.02</mass>
         <inertia>
           <ixx>0.0110045</ixx>
@@ -1042,16 +1029,16 @@
           <izz>0.011</izz>
         </inertia>
       </inertial>
-      <collision name='finger1_left_collision'>
-        <pose frame=''>0 0 -0.03 0 -0 0</pose>
+      <collision name="finger1_left_collision">
+        <pose relative_to="">0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
       </collision>
-      <collision name='finger1_left_fixed_joint_lump__finger1_phalanx_left_collision_1'>
-        <pose frame=''>0 0 -0.06 0 1.57 0</pose>
+      <collision name="finger1_left_fixed_joint_lump__finger1_phalanx_left_collision_1">
+        <pose relative_to="">0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
             <length>0.019</length>
@@ -1059,16 +1046,16 @@
           </cylinder>
         </geometry>
       </collision>
-      <visual name='finger1_left_visual'>
-        <pose frame=''>0 0 -0.03 0 -0 0</pose>
+      <visual name="finger1_left_visual">
+        <pose relative_to="">0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
       </visual>
-      <visual name='finger1_left_fixed_joint_lump__finger1_phalanx_left_visual_1'>
-        <pose frame=''>0 0 -0.06 0 1.57 0</pose>
+      <visual name="finger1_left_fixed_joint_lump__finger1_phalanx_left_visual_1">
+        <pose relative_to="">0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
             <length>0.019</length>
@@ -1077,11 +1064,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='finger1_joint_left' type='revolute'>
+    <joint name="finger1_joint_left" type="revolute">
       <child>finger1_left</child>
       <parent>hand_left</parent>
       <axis>
-        <xyz>-0.000804 -0.001589 -0.999998</xyz>
+        <xyz expressed_in="__model__">-0.000804 -0.001589 -0.999998</xyz>
         <limit>
           <lower>-1.57</lower>
           <upper>1.57</upper>
@@ -1094,13 +1081,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='finger1_tip_left'>
-      <pose frame=''>-0.4715 0.239965 0.180864 -2.03906 1.56902 -2.03905</pose>
+    <link name="finger1_tip_left">
+      <pose relative_to="">-0.4715 0.239965 0.180864 -2.03906 1.56902 -2.03905</pose>
       <inertial>
-        <pose frame=''>0 0 -0.045 0 -0 0</pose>
+        <pose relative_to="">0 0 -0.045 0 -0 0</pose>
         <mass>0.02</mass>
         <inertia>
           <ixx>0.0013745</ixx>
@@ -1111,16 +1097,16 @@
           <izz>0.00152</izz>
         </inertia>
       </inertial>
-      <collision name='finger1_tip_left_collision'>
-        <pose frame=''>0 0 -0.03 0 -0 0</pose>
+      <collision name="finger1_tip_left_collision">
+        <pose relative_to="">0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
       </collision>
-      <collision name='finger1_tip_left_fixed_joint_lump__finger1_tip_phalanx_left_collision_1'>
-        <pose frame=''>0 0 -0.06 0 1.57 0</pose>
+      <collision name="finger1_tip_left_fixed_joint_lump__finger1_tip_phalanx_left_collision_1">
+        <pose relative_to="">0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
             <length>0.017</length>
@@ -1128,16 +1114,16 @@
           </cylinder>
         </geometry>
       </collision>
-      <visual name='finger1_tip_left_visual'>
-        <pose frame=''>0 0 -0.03 0 -0 0</pose>
+      <visual name="finger1_tip_left_visual">
+        <pose relative_to="">0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
       </visual>
-      <visual name='finger1_tip_left_fixed_joint_lump__finger1_tip_phalanx_left_visual_1'>
-        <pose frame=''>0 0 -0.06 0 1.57 0</pose>
+      <visual name="finger1_tip_left_fixed_joint_lump__finger1_tip_phalanx_left_visual_1">
+        <pose relative_to="">0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
             <length>0.017</length>
@@ -1146,11 +1132,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='finger1_tip_joint_left' type='revolute'>
+    <joint name="finger1_tip_joint_left" type="revolute">
       <child>finger1_tip_left</child>
       <parent>finger1_left</parent>
       <axis>
-        <xyz>-0.000804 -0.001589 -0.999998</xyz>
+        <xyz expressed_in="__model__">-0.000804 -0.001589 -0.999998</xyz>
         <limit>
           <lower>-1.57</lower>
           <upper>1.57</upper>
@@ -1163,13 +1149,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='finger2_left'>
-      <pose frame=''>-0.4115 0.199965 0.180879 -2.03906 1.56902 -2.03905</pose>
+    <link name="finger2_left">
+      <pose relative_to="">-0.4115 0.199965 0.180879 -2.03906 1.56902 -2.03905</pose>
       <inertial>
-        <pose frame=''>0 0 -0.045 0 -0 0</pose>
+        <pose relative_to="">0 0 -0.045 0 -0 0</pose>
         <mass>0.02</mass>
         <inertia>
           <ixx>0.0110045</ixx>
@@ -1180,16 +1165,16 @@
           <izz>0.011</izz>
         </inertia>
       </inertial>
-      <collision name='finger2_left_collision'>
-        <pose frame=''>0 0 -0.03 0 -0 0</pose>
+      <collision name="finger2_left_collision">
+        <pose relative_to="">0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
       </collision>
-      <collision name='finger2_left_fixed_joint_lump__finger2_phalanx_left_collision_1'>
-        <pose frame=''>0 0 -0.06 0 1.57 0</pose>
+      <collision name="finger2_left_fixed_joint_lump__finger2_phalanx_left_collision_1">
+        <pose relative_to="">0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
             <length>0.019</length>
@@ -1197,16 +1182,16 @@
           </cylinder>
         </geometry>
       </collision>
-      <visual name='finger2_left_visual'>
-        <pose frame=''>0 0 -0.03 0 -0 0</pose>
+      <visual name="finger2_left_visual">
+        <pose relative_to="">0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
       </visual>
-      <visual name='finger2_left_fixed_joint_lump__finger2_phalanx_left_visual_1'>
-        <pose frame=''>0 0 -0.06 0 1.57 0</pose>
+      <visual name="finger2_left_fixed_joint_lump__finger2_phalanx_left_visual_1">
+        <pose relative_to="">0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
             <length>0.019</length>
@@ -1215,11 +1200,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='finger2_joint_left' type='revolute'>
+    <joint name="finger2_joint_left" type="revolute">
       <child>finger2_left</child>
       <parent>hand_left</parent>
       <axis>
-        <xyz>0.000804 0.001589 0.999998</xyz>
+        <xyz expressed_in="__model__">0.000804 0.001589 0.999998</xyz>
         <limit>
           <lower>-1.57</lower>
           <upper>1.57</upper>
@@ -1232,13 +1217,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='finger2_tip_left'>
-      <pose frame=''>-0.4715 0.199965 0.180927 -2.03906 1.56902 -2.03905</pose>
+    <link name="finger2_tip_left">
+      <pose relative_to="">-0.4715 0.199965 0.180927 -2.03906 1.56902 -2.03905</pose>
       <inertial>
-        <pose frame=''>0 0 -0.045 0 -0 0</pose>
+        <pose relative_to="">0 0 -0.045 0 -0 0</pose>
         <mass>0.02</mass>
         <inertia>
           <ixx>0.0013745</ixx>
@@ -1249,16 +1233,16 @@
           <izz>0.00152</izz>
         </inertia>
       </inertial>
-      <collision name='finger2_tip_left_collision'>
-        <pose frame=''>0 0 -0.03 0 -0 0</pose>
+      <collision name="finger2_tip_left_collision">
+        <pose relative_to="">0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
       </collision>
-      <collision name='finger2_tip_left_fixed_joint_lump__finger2_tip_phalanx_left_collision_1'>
-        <pose frame=''>0 0 -0.06 0 1.57 0</pose>
+      <collision name="finger2_tip_left_fixed_joint_lump__finger2_tip_phalanx_left_collision_1">
+        <pose relative_to="">0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
             <length>0.017</length>
@@ -1266,16 +1250,16 @@
           </cylinder>
         </geometry>
       </collision>
-      <visual name='finger2_tip_left_visual'>
-        <pose frame=''>0 0 -0.03 0 -0 0</pose>
+      <visual name="finger2_tip_left_visual">
+        <pose relative_to="">0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
       </visual>
-      <visual name='finger2_tip_left_fixed_joint_lump__finger2_tip_phalanx_left_visual_1'>
-        <pose frame=''>0 0 -0.06 0 1.57 0</pose>
+      <visual name="finger2_tip_left_fixed_joint_lump__finger2_tip_phalanx_left_visual_1">
+        <pose relative_to="">0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
             <length>0.017</length>
@@ -1284,11 +1268,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='finger2_tip_joint_left' type='revolute'>
+    <joint name="finger2_tip_joint_left" type="revolute">
       <child>finger2_tip_left</child>
       <parent>finger2_left</parent>
       <axis>
-        <xyz>0.000804 0.001589 0.999998</xyz>
+        <xyz expressed_in="__model__">0.000804 0.001589 0.999998</xyz>
         <limit>
           <lower>-1.57</lower>
           <upper>1.57</upper>
@@ -1301,13 +1285,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='shoulder_link1_right'>
-      <pose frame=''>0.263501 -0.219999 0.200845 -0.002309 1.5692 -1.5731</pose>
+    <link name="shoulder_link1_right">
+      <pose relative_to="">0.263501 -0.219999 0.200845 -0.002309 1.5692 -1.5731</pose>
       <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose relative_to="">0 0 0 0 -0 0</pose>
         <mass>0.25</mass>
         <inertia>
           <ixx>6</ixx>
@@ -1318,8 +1301,8 @@
           <izz>0.01</izz>
         </inertia>
       </inertial>
-      <collision name='shoulder_link1_right_collision'>
-        <pose frame=''>0 0 0.0525 0 -0 0</pose>
+      <collision name="shoulder_link1_right_collision">
+        <pose relative_to="">0 0 0.0525 0 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0.015</length>
@@ -1327,8 +1310,8 @@
           </cylinder>
         </geometry>
       </collision>
-      <visual name='shoulder_link1_right_visual'>
-        <pose frame=''>0 0 0.0525 0 -0 0</pose>
+      <visual name="shoulder_link1_right_visual">
+        <pose relative_to="">0 0 0.0525 0 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0.015</length>
@@ -1337,11 +1320,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='shoulder_yaw_joint_right' type='revolute'>
+    <joint name="shoulder_yaw_joint_right" type="revolute">
       <child>shoulder_link1_right</child>
       <parent>trunk</parent>
       <axis>
-        <xyz>-4e-06 -0.001593 -0.999999</xyz>
+        <xyz expressed_in="__model__">-4e-06 -0.001593 -0.999999</xyz>
         <limit>
           <lower>-1.57</lower>
           <upper>0</upper>
@@ -1354,13 +1337,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='shoulder_link2_right'>
-      <pose frame=''>0.263501 -0.219999 0.200845 -1.57311 1.5692 -1.5731</pose>
+    <link name="shoulder_link2_right">
+      <pose relative_to="">0.263501 -0.219999 0.200845 -1.57311 1.5692 -1.5731</pose>
       <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose relative_to="">0 0 0 0 -0 0</pose>
         <mass>0.15</mass>
         <inertia>
           <ixx>0.01</ixx>
@@ -1371,16 +1353,16 @@
           <izz>0.001</izz>
         </inertia>
       </inertial>
-      <collision name='shoulder_link2_right_collision'>
-        <pose frame=''>0 -0.06 -0.05 0 -0 0</pose>
+      <collision name="shoulder_link2_right_collision">
+        <pose relative_to="">0 -0.06 -0.05 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.035 0.01 0.1</size>
           </box>
         </geometry>
       </collision>
-      <visual name='shoulder_link2_right_visual'>
-        <pose frame=''>0 -0.06 -0.05 0 -0 0</pose>
+      <visual name="shoulder_link2_right_visual">
+        <pose relative_to="">0 -0.06 -0.05 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.035 0.01 0.1</size>
@@ -1388,11 +1370,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='shoulder_pitch_joint_right' type='revolute'>
+    <joint name="shoulder_pitch_joint_right" type="revolute">
       <child>shoulder_link2_right</child>
       <parent>shoulder_link1_right</parent>
       <axis>
-        <xyz>1e-05 -0.999999 0.001593</xyz>
+        <xyz expressed_in="__model__">1e-05 -0.999999 0.001593</xyz>
         <limit>
           <lower>-1.57</lower>
           <upper>1.57</upper>
@@ -1405,13 +1387,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='upper_arm_right'>
-      <pose frame=''>0.263501 -0.219999 0.200845 -0.002309 1.5692 -1.5731</pose>
+    <link name="upper_arm_right">
+      <pose relative_to="">0.263501 -0.219999 0.200845 -0.002309 1.5692 -1.5731</pose>
       <inertial>
-        <pose frame=''>0 -0.2 0 0 -0 0</pose>
+        <pose relative_to="">0 -0.2 0 0 -0 0</pose>
         <mass>2.95</mass>
         <inertia>
           <ixx>0.027</ixx>
@@ -1422,8 +1403,8 @@
           <izz>0.004</izz>
         </inertia>
       </inertial>
-      <collision name='upper_arm_right_collision'>
-        <pose frame=''>-0.00959 -0.19131 -1e-05 0 -0 3.1415</pose>
+      <collision name="upper_arm_right_collision">
+        <pose relative_to="">-0.00959 -0.19131 -1e-05 0 -0 3.1415</pose>
         <geometry>
           <mesh>
             <scale>0.0004 0.0004 0.0004</scale>
@@ -1431,8 +1412,8 @@
           </mesh>
         </geometry>
       </collision>
-      <visual name='upper_arm_right_visual'>
-        <pose frame=''>-0.00959 -0.19131 -1e-05 0 -0 3.1415</pose>
+      <visual name="upper_arm_right_visual">
+        <pose relative_to="">-0.00959 -0.19131 -1e-05 0 -0 3.1415</pose>
         <geometry>
           <mesh>
             <scale>0.0004 0.0004 0.0004</scale>
@@ -1441,11 +1422,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='shoulder_roll_joint_right' type='revolute'>
+    <joint name="shoulder_roll_joint_right" type="revolute">
       <child>upper_arm_right</child>
       <parent>shoulder_link2_right</parent>
       <axis>
-        <xyz>1 6e-06 -4e-06</xyz>
+        <xyz expressed_in="__model__">1 6e-06 -4e-06</xyz>
         <limit>
           <lower>-1.57</lower>
           <upper>1.57</upper>
@@ -1458,13 +1439,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='elbow_link4_right'>
-      <pose frame=''>-0.056499 -0.220017 0.190846 -1.57311 1.5692 -1.5731</pose>
+    <link name="elbow_link4_right">
+      <pose relative_to="">-0.056499 -0.220017 0.190846 -1.57311 1.5692 -1.5731</pose>
       <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose relative_to="">0 0 0 0 -0 0</pose>
         <mass>0.1</mass>
         <inertia>
           <ixx>0.001</ixx>
@@ -1475,8 +1455,8 @@
           <izz>0.001</izz>
         </inertia>
       </inertial>
-      <collision name='elbow_link4_right_collision'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+      <collision name="elbow_link4_right_collision">
+        <pose relative_to="">0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0</length>
@@ -1484,8 +1464,8 @@
           </cylinder>
         </geometry>
       </collision>
-      <visual name='elbow_link4_right_visual'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+      <visual name="elbow_link4_right_visual">
+        <pose relative_to="">0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0</length>
@@ -1494,11 +1474,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='elbow_pitch_joint_right' type='revolute'>
+    <joint name="elbow_pitch_joint_right" type="revolute">
       <child>elbow_link4_right</child>
       <parent>upper_arm_right</parent>
       <axis>
-        <xyz>1e-05 -0.999999 0.001593</xyz>
+        <xyz expressed_in="__model__">1e-05 -0.999999 0.001593</xyz>
         <limit>
           <lower>0</lower>
           <upper>2.23</upper>
@@ -1511,13 +1491,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='fore_arm_right'>
-      <pose frame=''>-0.056499 -0.220017 0.190846 -0.002309 1.5692 -1.5731</pose>
+    <link name="fore_arm_right">
+      <pose relative_to="">-0.056499 -0.220017 0.190846 -0.002309 1.5692 -1.5731</pose>
       <inertial>
-        <pose frame=''>0 -0.14 0 0 -0 0</pose>
+        <pose relative_to="">0 -0.14 0 0 -0 0</pose>
         <mass>0.85</mass>
         <inertia>
           <ixx>0.001</ixx>
@@ -1528,8 +1507,8 @@
           <izz>0.001</izz>
         </inertia>
       </inertial>
-      <collision name='fore_arm_right_collision'>
-        <pose frame=''>0.00425 -0.14868 0.00547 3.14159 -1.57079 3.14159</pose>
+      <collision name="fore_arm_right_collision">
+        <pose relative_to="">0.00425 -0.14868 0.00547 3.14159 -1.57079 3.14159</pose>
         <geometry>
           <mesh>
             <scale>0.0004 0.0004 0.0004</scale>
@@ -1537,8 +1516,8 @@
           </mesh>
         </geometry>
       </collision>
-      <visual name='fore_arm_right_visual'>
-        <pose frame=''>0.00425 -0.14868 0.00547 3.14159 -1.57079 3.14159</pose>
+      <visual name="fore_arm_right_visual">
+        <pose relative_to="">0.00425 -0.14868 0.00547 3.14159 -1.57079 3.14159</pose>
         <geometry>
           <mesh>
             <scale>0.0004 0.0004 0.0004</scale>
@@ -1547,11 +1526,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='elbow_roll_joint_right' type='revolute'>
+    <joint name="elbow_roll_joint_right" type="revolute">
       <child>fore_arm_right</child>
       <parent>elbow_link4_right</parent>
       <axis>
-        <xyz>1 6e-06 -4e-06</xyz>
+        <xyz expressed_in="__model__">1 6e-06 -4e-06</xyz>
         <limit>
           <lower>-1.83</lower>
           <upper>1.83</upper>
@@ -1564,13 +1543,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='wrist_link6_right'>
-      <pose frame=''>-0.336499 -0.220034 0.180847 -3.14 -7e-06 -3.14159</pose>
+    <link name="wrist_link6_right">
+      <pose relative_to="">-0.336499 -0.220034 0.180847 -3.14 -7e-06 -3.14159</pose>
       <inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose relative_to="">0 0 0 0 -0 0</pose>
         <mass>0.01</mass>
         <inertia>
           <ixx>0.001</ixx>
@@ -1581,8 +1559,8 @@
           <izz>0.001</izz>
         </inertia>
       </inertial>
-      <collision name='wrist_link6_right_collision'>
-        <pose frame=''>0 0 0 1.5708 -0 0</pose>
+      <collision name="wrist_link6_right_collision">
+        <pose relative_to="">0 0 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0</length>
@@ -1590,8 +1568,8 @@
           </cylinder>
         </geometry>
       </collision>
-      <visual name='wrist_link6_right_visual'>
-        <pose frame=''>0 0 0 1.5708 -0 0</pose>
+      <visual name="wrist_link6_right_visual">
+        <pose relative_to="">0 0 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
             <length>0</length>
@@ -1600,11 +1578,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='wrist_pitch_joint_right' type='revolute'>
+    <joint name="wrist_pitch_joint_right" type="revolute">
       <child>wrist_link6_right</child>
       <parent>fore_arm_right</parent>
       <axis>
-        <xyz>6e-06 -0.999999 0.001589</xyz>
+        <xyz expressed_in="__model__">6e-06 -0.999999 0.001589</xyz>
         <limit>
           <lower>-0.95</lower>
           <upper>0.95</upper>
@@ -1617,13 +1595,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='hand_right'>
-      <pose frame=''>-0.336499 -0.220034 0.180847 -3.14 -7e-06 -3.14159</pose>
+    <link name="hand_right">
+      <pose relative_to="">-0.336499 -0.220034 0.180847 -3.14 -7e-06 -3.14159</pose>
       <inertial>
-        <pose frame=''>0.047619 0 0 0 -0 0</pose>
+        <pose relative_to="">0.047619 0 0 0 -0 0</pose>
         <mass>0.21</mass>
         <inertia>
           <ixx>0.0101</ixx>
@@ -1634,32 +1611,32 @@
           <izz>0.0623006</izz>
         </inertia>
       </inertial>
-      <collision name='hand_right_collision'>
-        <pose frame=''>0.048 0 0 0 -0 0</pose>
+      <collision name="hand_right_collision">
+        <pose relative_to="">0.048 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.08 0.085 0.038</size>
           </box>
         </geometry>
       </collision>
-      <collision name='hand_right_fixed_joint_lump__grippoint_right_collision_1'>
-        <pose frame=''>0.04 0 0 0 -0 0</pose>
+      <collision name="hand_right_fixed_joint_lump__grippoint_right_collision_1">
+        <pose relative_to="">0.04 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0 0 0</size>
           </box>
         </geometry>
       </collision>
-      <visual name='hand_right_visual'>
-        <pose frame=''>0.048 0 0 0 -0 0</pose>
+      <visual name="hand_right_visual">
+        <pose relative_to="">0.048 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.08 0.085 0.038</size>
           </box>
         </geometry>
       </visual>
-      <visual name='hand_right_fixed_joint_lump__grippoint_right_visual_1'>
-        <pose frame=''>0.04 0 0 0 -0 0</pose>
+      <visual name="hand_right_fixed_joint_lump__grippoint_right_visual_1">
+        <pose relative_to="">0.04 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0 0 0</size>
@@ -1667,11 +1644,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='wrist_yaw_joint_right' type='revolute'>
+    <joint name="wrist_yaw_joint_right" type="revolute">
       <child>hand_right</child>
       <parent>wrist_link6_right</parent>
       <axis>
-        <xyz>-8.1e-05 -0.017479 -11</xyz>
+        <xyz expressed_in="__model__">-8.1e-05 -0.017479 -11</xyz>
         <limit>
           <lower>-0.61</lower>
           <upper>0.61</upper>
@@ -1684,13 +1661,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='finger1_right'>
-      <pose frame=''>-0.411499 -0.200035 0.180816 -2.03906 1.56902 -2.03905</pose>
+    <link name="finger1_right">
+      <pose relative_to="">-0.411499 -0.200035 0.180816 -2.03906 1.56902 -2.03905</pose>
       <inertial>
-        <pose frame=''>0 0 -0.045 0 -0 0</pose>
+        <pose relative_to="">0 0 -0.045 0 -0 0</pose>
         <mass>0.02</mass>
         <inertia>
           <ixx>0.0110045</ixx>
@@ -1701,16 +1677,16 @@
           <izz>0.011</izz>
         </inertia>
       </inertial>
-      <collision name='finger1_right_collision'>
-        <pose frame=''>0 0 -0.03 0 -0 0</pose>
+      <collision name="finger1_right_collision">
+        <pose relative_to="">0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
       </collision>
-      <collision name='finger1_right_fixed_joint_lump__finger1_phalanx_right_collision_1'>
-        <pose frame=''>0 0 -0.06 0 1.57 0</pose>
+      <collision name="finger1_right_fixed_joint_lump__finger1_phalanx_right_collision_1">
+        <pose relative_to="">0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
             <length>0.019</length>
@@ -1718,16 +1694,16 @@
           </cylinder>
         </geometry>
       </collision>
-      <visual name='finger1_right_visual'>
-        <pose frame=''>0 0 -0.03 0 -0 0</pose>
+      <visual name="finger1_right_visual">
+        <pose relative_to="">0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
       </visual>
-      <visual name='finger1_right_fixed_joint_lump__finger1_phalanx_right_visual_1'>
-        <pose frame=''>0 0 -0.06 0 1.57 0</pose>
+      <visual name="finger1_right_fixed_joint_lump__finger1_phalanx_right_visual_1">
+        <pose relative_to="">0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
             <length>0.019</length>
@@ -1736,11 +1712,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='finger1_joint_right' type='revolute'>
+    <joint name="finger1_joint_right" type="revolute">
       <child>finger1_right</child>
       <parent>hand_right</parent>
       <axis>
-        <xyz>-0.000804 -0.001589 -0.999998</xyz>
+        <xyz expressed_in="__model__">-0.000804 -0.001589 -0.999998</xyz>
         <limit>
           <lower>-1.57</lower>
           <upper>1.57</upper>
@@ -1753,13 +1729,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='finger1_tip_right'>
-      <pose frame=''>-0.471499 -0.200035 0.180864 -2.03906 1.56902 -2.03905</pose>
+    <link name="finger1_tip_right">
+      <pose relative_to="">-0.471499 -0.200035 0.180864 -2.03906 1.56902 -2.03905</pose>
       <inertial>
-        <pose frame=''>0 0 -0.045 0 -0 0</pose>
+        <pose relative_to="">0 0 -0.045 0 -0 0</pose>
         <mass>0.02</mass>
         <inertia>
           <ixx>0.0013745</ixx>
@@ -1770,16 +1745,16 @@
           <izz>0.00152</izz>
         </inertia>
       </inertial>
-      <collision name='finger1_tip_right_collision'>
-        <pose frame=''>0 0 -0.03 0 -0 0</pose>
+      <collision name="finger1_tip_right_collision">
+        <pose relative_to="">0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
       </collision>
-      <collision name='finger1_tip_right_fixed_joint_lump__finger1_tip_phalanx_right_collision_1'>
-        <pose frame=''>0 0 -0.06 0 1.57 0</pose>
+      <collision name="finger1_tip_right_fixed_joint_lump__finger1_tip_phalanx_right_collision_1">
+        <pose relative_to="">0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
             <length>0.017</length>
@@ -1787,16 +1762,16 @@
           </cylinder>
         </geometry>
       </collision>
-      <visual name='finger1_tip_right_visual'>
-        <pose frame=''>0 0 -0.03 0 -0 0</pose>
+      <visual name="finger1_tip_right_visual">
+        <pose relative_to="">0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
       </visual>
-      <visual name='finger1_tip_right_fixed_joint_lump__finger1_tip_phalanx_right_visual_1'>
-        <pose frame=''>0 0 -0.06 0 1.57 0</pose>
+      <visual name="finger1_tip_right_fixed_joint_lump__finger1_tip_phalanx_right_visual_1">
+        <pose relative_to="">0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
             <length>0.017</length>
@@ -1805,11 +1780,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='finger1_tip_joint_right' type='revolute'>
+    <joint name="finger1_tip_joint_right" type="revolute">
       <child>finger1_tip_right</child>
       <parent>finger1_right</parent>
       <axis>
-        <xyz>-0.000804 -0.001589 -0.999998</xyz>
+        <xyz expressed_in="__model__">-0.000804 -0.001589 -0.999998</xyz>
         <limit>
           <lower>-1.57</lower>
           <upper>1.57</upper>
@@ -1822,13 +1797,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='finger2_right'>
-      <pose frame=''>-0.411499 -0.240035 0.180879 -2.03906 1.56902 -2.03905</pose>
+    <link name="finger2_right">
+      <pose relative_to="">-0.411499 -0.240035 0.180879 -2.03906 1.56902 -2.03905</pose>
       <inertial>
-        <pose frame=''>0 0 -0.045 0 -0 0</pose>
+        <pose relative_to="">0 0 -0.045 0 -0 0</pose>
         <mass>0.02</mass>
         <inertia>
           <ixx>0.0110045</ixx>
@@ -1839,16 +1813,16 @@
           <izz>0.011</izz>
         </inertia>
       </inertial>
-      <collision name='finger2_right_collision'>
-        <pose frame=''>0 0 -0.03 0 -0 0</pose>
+      <collision name="finger2_right_collision">
+        <pose relative_to="">0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
       </collision>
-      <collision name='finger2_right_fixed_joint_lump__finger2_phalanx_right_collision_1'>
-        <pose frame=''>0 0 -0.06 0 1.57 0</pose>
+      <collision name="finger2_right_fixed_joint_lump__finger2_phalanx_right_collision_1">
+        <pose relative_to="">0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
             <length>0.019</length>
@@ -1856,16 +1830,16 @@
           </cylinder>
         </geometry>
       </collision>
-      <visual name='finger2_right_visual'>
-        <pose frame=''>0 0 -0.03 0 -0 0</pose>
+      <visual name="finger2_right_visual">
+        <pose relative_to="">0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
       </visual>
-      <visual name='finger2_right_fixed_joint_lump__finger2_phalanx_right_visual_1'>
-        <pose frame=''>0 0 -0.06 0 1.57 0</pose>
+      <visual name="finger2_right_fixed_joint_lump__finger2_phalanx_right_visual_1">
+        <pose relative_to="">0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
             <length>0.019</length>
@@ -1874,11 +1848,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='finger2_joint_right' type='revolute'>
+    <joint name="finger2_joint_right" type="revolute">
       <child>finger2_right</child>
       <parent>hand_right</parent>
       <axis>
-        <xyz>0.000804 0.001589 0.999998</xyz>
+        <xyz expressed_in="__model__">0.000804 0.001589 0.999998</xyz>
         <limit>
           <lower>-1.57</lower>
           <upper>1.57</upper>
@@ -1891,13 +1865,12 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
-    <link name='finger2_tip_right'>
-      <pose frame=''>-0.471499 -0.240035 0.180927 -2.03906 1.56902 -2.03905</pose>
+    <link name="finger2_tip_right">
+      <pose relative_to="">-0.471499 -0.240035 0.180927 -2.03906 1.56902 -2.03905</pose>
       <inertial>
-        <pose frame=''>0 0 -0.045 0 -0 0</pose>
+        <pose relative_to="">0 0 -0.045 0 -0 0</pose>
         <mass>0.02</mass>
         <inertia>
           <ixx>0.0013745</ixx>
@@ -1908,16 +1881,16 @@
           <izz>0.00152</izz>
         </inertia>
       </inertial>
-      <collision name='finger2_tip_right_collision'>
-        <pose frame=''>0 0 -0.03 0 -0 0</pose>
+      <collision name="finger2_tip_right_collision">
+        <pose relative_to="">0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
       </collision>
-      <collision name='finger2_tip_right_fixed_joint_lump__finger2_tip_phalanx_right_collision_1'>
-        <pose frame=''>0 0 -0.06 0 1.57 0</pose>
+      <collision name="finger2_tip_right_fixed_joint_lump__finger2_tip_phalanx_right_collision_1">
+        <pose relative_to="">0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
             <length>0.017</length>
@@ -1925,16 +1898,16 @@
           </cylinder>
         </geometry>
       </collision>
-      <visual name='finger2_tip_right_visual'>
-        <pose frame=''>0 0 -0.03 0 -0 0</pose>
+      <visual name="finger2_tip_right_visual">
+        <pose relative_to="">0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
       </visual>
-      <visual name='finger2_tip_right_fixed_joint_lump__finger2_tip_phalanx_right_visual_1'>
-        <pose frame=''>0 0 -0.06 0 1.57 0</pose>
+      <visual name="finger2_tip_right_fixed_joint_lump__finger2_tip_phalanx_right_visual_1">
+        <pose relative_to="">0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
             <length>0.017</length>
@@ -1943,11 +1916,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='finger2_tip_joint_right' type='revolute'>
+    <joint name="finger2_tip_joint_right" type="revolute">
       <child>finger2_tip_right</child>
       <parent>finger2_right</parent>
       <axis>
-        <xyz>0.000804 0.001589 0.999998</xyz>
+        <xyz expressed_in="__model__">0.000804 0.001589 0.999998</xyz>
         <limit>
           <lower>-1.57</lower>
           <upper>1.57</upper>
@@ -1960,8 +1933,7 @@
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
-      </axis>
+    </axis>
     </joint>
   </model>
 </sdf>

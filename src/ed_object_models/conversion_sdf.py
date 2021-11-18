@@ -286,7 +286,7 @@ def read_areas(areas: List, link_names: List[str], model_name: str) -> Union[Lis
         uname = unique_name(name, link_names)
         if not uname == name:
             print(bcolors.BOLD + "Name of area has changed from '{}' to '{}'".format(name, uname) + bcolors.ENDC)
-        sdf_link_item = {"name": f"{uname}_link"}
+        sdf_link_item = {"name": uname}
 
         for shape_item in area["shape"]:
             geometry, link_pose, geometry_pose = read_geometry(shape_item, model_name)
@@ -294,7 +294,7 @@ def read_areas(areas: List, link_names: List[str], model_name: str) -> Union[Lis
                 print(bcolors.FAIL + "[{}] Error during geometry parsing of area: {}".format(model_name, uname)
                       + bcolors.ENDC)
                 return None
-            shape_name = unique_name(uname, area_names)
+            shape_name = unique_name(f"{uname}_vv", area_names)
             sdf_link_item["virtual_volume"] = {"name": shape_name, "geometry": geometry}
             if geometry_pose:
                 sdf_link_item["virtual_volume"]["pose"] = geometry_pose

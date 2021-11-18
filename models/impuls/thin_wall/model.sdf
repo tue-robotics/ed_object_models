@@ -2,7 +2,7 @@
 <sdf version="1.7">
   <model name="impuls/thin_wall">
     <static>true</static>
-    <link name="wall_link">
+    <link name="wall">
       <collision name="wall_col">
         <geometry>
           <box>
@@ -19,7 +19,7 @@
       </visual>
       <pose>0.0 0.0 0.6125 0 0 0</pose>
     </link>
-    <link name="block1_link">
+    <link name="block1">
       <collision name="block1_col">
         <geometry>
           <box>
@@ -36,7 +36,7 @@
       </visual>
       <pose>0.0 0.0 0.055 0 0 0</pose>
     </link>
-    <link name="block2_link">
+    <link name="block2">
       <collision name="block2_col">
         <geometry>
           <box>
@@ -53,7 +53,7 @@
       </visual>
       <pose>1.855 0.0 0.055 0 0 0</pose>
     </link>
-    <link name="block3_link">
+    <link name="block3">
       <collision name="block3_col">
         <geometry>
           <box>

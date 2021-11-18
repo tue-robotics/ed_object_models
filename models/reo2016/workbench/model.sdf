@@ -18,8 +18,8 @@
       </visual>
       <pose>0.0 0.0 0.75 0 0 0</pose>
     </link>
-    <link name="on_top_of_link">
-      <virtual_volume name="on_top_of">
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of_vv">
         <geometry>
           <box>
             <size>1.2 0.76 0.3</size>

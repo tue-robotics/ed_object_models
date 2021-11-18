@@ -107,8 +107,8 @@
       <static>true</static>
     </model>
     <model name="kitchen" type="room">
-      <link name="in_link">
-        <virtual_volume name="in">
+      <link name="in">
+        <virtual_volume name="in_vv">
           <geometry>
             <box>
               <size>4.7 4.8 0</size>
@@ -121,8 +121,8 @@
       <static>true</static>
     </model>
     <model name="livingroom" type="room">
-      <link name="in_link">
-        <virtual_volume name="in">
+      <link name="in">
+        <virtual_volume name="in_vv">
           <geometry>
             <box>
               <size>-6.2 -8.45 0</size>
@@ -135,8 +135,8 @@
       <static>true</static>
     </model>
     <model name="bedroom" type="room">
-      <link name="in_link">
-        <virtual_volume name="in">
+      <link name="in">
+        <virtual_volume name="in_vv">
           <geometry>
             <box>
               <size>6.2 3.45 0</size>
@@ -149,8 +149,8 @@
       <static>true</static>
     </model>
     <model name="hallway" type="room">
-      <link name="in_link">
-        <virtual_volume name="in">
+      <link name="in">
+        <virtual_volume name="in_vv">
           <geometry>
             <box>
               <size>4.75 7.55 0</size>

@@ -15,8 +15,8 @@
       </attenuation>
     </light>
     <model name="kitchen" type="room">
-      <link name="in_link">
-        <virtual_volume name="in">
+      <link name="in">
+        <virtual_volume name="in_vv">
           <geometry>
             <box>
               <size>4.87 4.41 0.01</size>
@@ -29,8 +29,8 @@
       <static>true</static>
     </model>
     <model name="living_room" type="room">
-      <link name="in_link">
-        <virtual_volume name="in1">
+      <link name="in">
+        <virtual_volume name="in1_vv">
           <geometry>
             <box>
               <size>4.0 7.42 0.01</size>
@@ -39,8 +39,8 @@
           <pose>2.93 1.19 0.005 0 0 0</pose>
         </virtual_volume>
       </link>
-      <link name="in_link">
-        <virtual_volume name="in1">
+      <link name="in">
+        <virtual_volume name="in1_vv">
           <geometry>
             <box>
               <size>4.0 7.42 0.01</size>
@@ -53,8 +53,8 @@
       <static>true</static>
     </model>
     <model name="office" type="room">
-      <link name="in_link">
-        <virtual_volume name="in">
+      <link name="in">
+        <virtual_volume name="in_vv">
           <geometry>
             <box>
               <size>3.41 2.43 0.01</size>
@@ -67,8 +67,8 @@
       <static>true</static>
     </model>
     <model name="corridor" type="room">
-      <link name="in_link">
-        <virtual_volume name="in1">
+      <link name="in">
+        <virtual_volume name="in1_vv">
           <geometry>
             <box>
               <size>8.0 2.99 0.01</size>
@@ -77,8 +77,8 @@
           <pose>1.83 -0.175 0.005 0 0 0</pose>
         </virtual_volume>
       </link>
-      <link name="in_link">
-        <virtual_volume name="in1">
+      <link name="in">
+        <virtual_volume name="in1_vv">
           <geometry>
             <box>
               <size>8.0 2.99 0.01</size>
@@ -91,8 +91,8 @@
       <static>true</static>
     </model>
     <model name="bedroom" type="room">
-      <link name="in_link">
-        <virtual_volume name="in">
+      <link name="in">
+        <virtual_volume name="in_vv">
           <geometry>
             <box>
               <size>3.5 4.41 0.01</size>

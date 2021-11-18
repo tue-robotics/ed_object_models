@@ -15,8 +15,8 @@
       </attenuation>
     </light>
     <model name="living_room" type="room">
-      <link name="in_link">
-        <virtual_volume name="in1">
+      <link name="in">
+        <virtual_volume name="in1_vv">
           <geometry>
             <box>
               <size>3.0 2.5 0.01</size>
@@ -25,8 +25,8 @@
           <pose>2.5 -1.25 0.005 0 0 0</pose>
         </virtual_volume>
       </link>
-      <link name="in_link">
-        <virtual_volume name="in1">
+      <link name="in">
+        <virtual_volume name="in1_vv">
           <geometry>
             <box>
               <size>3.0 2.5 0.01</size>
@@ -39,8 +39,8 @@
       <static>true</static>
     </model>
     <model name="bedroom" type="room">
-      <link name="in_link">
-        <virtual_volume name="in">
+      <link name="in">
+        <virtual_volume name="in_vv">
           <geometry>
             <box>
               <size>5.0 5.0 0.01</size>
@@ -53,8 +53,8 @@
       <static>true</static>
     </model>
     <model name="dining_room" type="room">
-      <link name="in_link">
-        <virtual_volume name="in">
+      <link name="in">
+        <virtual_volume name="in_vv">
           <geometry>
             <box>
               <size>5 4.8 0.01</size>
@@ -67,8 +67,8 @@
       <static>true</static>
     </model>
     <model name="kitchen" type="room">
-      <link name="in_link">
-        <virtual_volume name="in1">
+      <link name="in">
+        <virtual_volume name="in1_vv">
           <geometry>
             <box>
               <size>5.7 2.5 0.01</size>
@@ -77,8 +77,8 @@
           <pose>-0.15 0.25 0.005 0 0 0</pose>
         </virtual_volume>
       </link>
-      <link name="in_link">
-        <virtual_volume name="in1">
+      <link name="in">
+        <virtual_volume name="in1_vv">
           <geometry>
             <box>
               <size>5.7 2.5 0.01</size>

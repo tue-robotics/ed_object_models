@@ -18,7 +18,7 @@
       </visual>
       <pose>0.0 0.0 0.22 0 0 0</pose>
     </link>
-    <link name="back_link">
+    <link name="back">
       <collision name="back_col">
         <geometry>
           <box>
@@ -35,8 +35,8 @@
       </visual>
       <pose>-0.375 0.0 0.375 0 0 0</pose>
     </link>
-    <link name="on_top_of_link">
-      <virtual_volume name="on_top_of">
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of_vv">
         <geometry>
           <box>
             <size>0.46 0.6 0.25</size>
@@ -45,8 +45,8 @@
         <pose>0.02 0.0 0.685 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="in_front_of_link">
-      <virtual_volume name="in_front_of">
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of_vv">
         <geometry>
           <box>
             <size>0.2 0.46 0.01</size>

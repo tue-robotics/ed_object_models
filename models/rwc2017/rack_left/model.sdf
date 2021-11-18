@@ -120,8 +120,8 @@
       </visual>
       <pose>0.005 0 0.595 0 0 0</pose>
     </link>
-    <link name="in_front_of_link">
-      <virtual_volume name="in_front_of">
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of_vv">
         <geometry>
           <box>
             <size>0.2 0.525 0.01</size>
@@ -130,8 +130,8 @@
         <pose>0.7 0.1375 0.005 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="on_top_of_link">
-      <virtual_volume name="on_top_of">
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of_vv">
         <geometry>
           <box>
             <size>0.22 0.835 0.375</size>
@@ -140,8 +140,8 @@
         <pose>0.005 0.2325 1.1125 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="shelf1_link">
-      <virtual_volume name="shelf1">
+    <link name="shelf1">
+      <virtual_volume name="shelf1_vv">
         <geometry>
           <box>
             <size>0.22 0.37 0.25</size>
@@ -150,8 +150,8 @@
         <pose>0.005 0.0 0.155 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="shelf2_link">
-      <virtual_volume name="shelf2">
+    <link name="shelf2">
+      <virtual_volume name="shelf2_vv">
         <geometry>
           <box>
             <size>0.22 0.37 0.25</size>
@@ -160,8 +160,8 @@
         <pose>0.005 0.0 0.45 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="shelf3_link">
-      <virtual_volume name="shelf3">
+    <link name="shelf3">
+      <virtual_volume name="shelf3_vv">
         <geometry>
           <box>
             <size>0.22 0.37 0.25</size>

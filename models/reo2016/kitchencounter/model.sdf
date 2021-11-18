@@ -18,8 +18,8 @@
       </visual>
       <pose>0.0 0.0 0.475 0 0 0</pose>
     </link>
-    <link name="on_top_of_link">
-      <virtual_volume name="on_top_of">
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of_vv">
         <geometry>
           <box>
             <size>0.58 3.0 0.31</size>
@@ -28,8 +28,8 @@
         <pose>0.0 0.0 1.145 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="left_of_sink_link">
-      <virtual_volume name="left_of_sink">
+    <link name="left_of_sink">
+      <virtual_volume name="left_of_sink_vv">
         <geometry>
           <box>
             <size>0.58 0.75 0.32</size>
@@ -38,8 +38,8 @@
         <pose>0.0 0.875 1.15 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="right_of_sink_link">
-      <virtual_volume name="right_of_sink">
+    <link name="right_of_sink">
+      <virtual_volume name="right_of_sink_vv">
         <geometry>
           <box>
             <size>0.58 0.75 0.32</size>
@@ -48,8 +48,8 @@
         <pose>0.0 -0.875 1.15 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="in_front_of_left_sink_link">
-      <virtual_volume name="in_front_of_left_sink">
+    <link name="in_front_of_left_sink">
+      <virtual_volume name="in_front_of_left_sink_vv">
         <geometry>
           <box>
             <size>0.6 0.75 0.01</size>
@@ -58,8 +58,8 @@
         <pose>-1.1 0.875 0.005 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="in_front_of_right_sink_link">
-      <virtual_volume name="in_front_of_right_sink">
+    <link name="in_front_of_right_sink">
+      <virtual_volume name="in_front_of_right_sink_vv">
         <geometry>
           <box>
             <size>0.6 0.75 0.01</size>
@@ -68,8 +68,8 @@
         <pose>-1.1 -0.875 0.005 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="in_front_of_link">
-      <virtual_volume name="in_front_of">
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of_vv">
         <geometry>
           <box>
             <size>0.6 3.0 0.01</size>

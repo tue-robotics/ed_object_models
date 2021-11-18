@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <sdf version="1.7">
   <model name="sergio">
-    <link name="base_link">
+    <link name="base">
       <pose relative_to="">0 0 0 0 -0 0</pose>
       <inertial>
         <pose relative_to="">-0.01024 -0 0.17701 0 -0 0</pose>

@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <sdf version="1.7">
   <model name="bed">
-    <link name="in_front_of_link">
-      <virtual_volume name="in_front_of">
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of_vv">
         <geometry>
           <box>
             <size>0.6 1.2 1</size>

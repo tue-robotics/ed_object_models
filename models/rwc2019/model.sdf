@@ -25,8 +25,8 @@
       <uri>model://rwc2019/walls</uri>
     </include>
     <model name="office" type="room">
-      <link name="in_link">
-        <virtual_volume name="in">
+      <link name="in">
+        <virtual_volume name="in_vv">
           <geometry>
             <box>
               <size>3.42404 2.90583 2.0</size>
@@ -39,8 +39,8 @@
       <static>true</static>
     </model>
     <model name="living_room" type="room">
-      <link name="in_link">
-        <virtual_volume name="in">
+      <link name="in">
+        <virtual_volume name="in_vv">
           <geometry>
             <box>
               <size>4.389 3.8936 2.0</size>
@@ -53,8 +53,8 @@
       <static>true</static>
     </model>
     <model name="kitchen" type="room">
-      <link name="in_link">
-        <virtual_volume name="in">
+      <link name="in">
+        <virtual_volume name="in_vv">
           <geometry>
             <box>
               <size>4.389 3.40932 2.0</size>
@@ -67,8 +67,8 @@
       <static>true</static>
     </model>
     <model name="bedroom" type="room">
-      <link name="in_link">
-        <virtual_volume name="in">
+      <link name="in">
+        <virtual_volume name="in_vv">
           <geometry>
             <box>
               <size>3.42404 4.36912894249 2.0</size>

@@ -154,8 +154,8 @@
       </visual>
       <pose>0.009 0 1.225 0 0 0</pose>
     </link>
-    <link name="in_front_of_link">
-      <virtual_volume name="in_front_of">
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of_vv">
         <geometry>
           <box>
             <size>0.2 0.4 0.01</size>
@@ -164,8 +164,8 @@
         <pose>0.615 0.0 0.005 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="shelf1_link">
-      <virtual_volume name="shelf1">
+    <link name="shelf1">
+      <virtual_volume name="shelf1_vv">
         <geometry>
           <box>
             <size>0.192 0.504 0.19</size>
@@ -174,8 +174,8 @@
         <pose>0.009 0.0 0.17 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="shelf2_link">
-      <virtual_volume name="shelf2">
+    <link name="shelf2">
+      <virtual_volume name="shelf2_vv">
         <geometry>
           <box>
             <size>0.192 0.504 0.19</size>
@@ -184,8 +184,8 @@
         <pose>0.009 0.0 0.5 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="shelf3_link">
-      <virtual_volume name="shelf3">
+    <link name="shelf3">
+      <virtual_volume name="shelf3_vv">
         <geometry>
           <box>
             <size>0.192 0.504 0.19</size>
@@ -194,8 +194,8 @@
         <pose>0.009 0.0 0.8 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="shelf4_link">
-      <virtual_volume name="shelf4">
+    <link name="shelf4">
+      <virtual_volume name="shelf4_vv">
         <geometry>
           <box>
             <size>0.192 0.504 0.19</size>
@@ -204,8 +204,8 @@
         <pose>0.009 0.0 1.04 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="shelf5_link">
-      <virtual_volume name="shelf5">
+    <link name="shelf5">
+      <virtual_volume name="shelf5_vv">
         <geometry>
           <box>
             <size>0.192 0.504 0.19</size>
@@ -214,8 +214,8 @@
         <pose>0.009 0.0 1.345 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="on_top_of_link">
-      <virtual_volume name="on_top_of">
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of_vv">
         <geometry>
           <box>
             <size>0.192 0.504 0.2</size>

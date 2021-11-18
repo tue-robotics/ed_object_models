@@ -161,8 +161,8 @@
       </visual>
       <pose>0 0 1.431 0 0 0</pose>
     </link>
-    <link name="in_front_of_link">
-      <virtual_volume name="in_front_of">
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of_vv">
         <geometry>
           <box>
             <size>0.2 0.2 0.01</size>
@@ -171,8 +171,8 @@
         <pose>0.675 0.0 0.005 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="shelf1_link">
-      <virtual_volume name="shelf1">
+    <link name="shelf1">
+      <virtual_volume name="shelf1_vv">
         <geometry>
           <box>
             <size>0.27 0.7 0.174</size>
@@ -181,8 +181,8 @@
         <pose>0.01 0.0 0.232 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="shelf2_link">
-      <virtual_volume name="shelf2">
+    <link name="shelf2">
+      <virtual_volume name="shelf2_vv">
         <geometry>
           <box>
             <size>0.27 0.7 0.258</size>
@@ -191,8 +191,8 @@
         <pose>0.01 0.0 0.539 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="shelf3_link">
-      <virtual_volume name="shelf3">
+    <link name="shelf3">
+      <virtual_volume name="shelf3_vv">
         <geometry>
           <box>
             <size>0.27 0.7 0.255</size>
@@ -201,8 +201,8 @@
         <pose>0.01 0.0 0.8875 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="shelf4_link">
-      <virtual_volume name="shelf4">
+    <link name="shelf4">
+      <virtual_volume name="shelf4_vv">
         <geometry>
           <box>
             <size>0.27 0.7 0.247</size>
@@ -211,8 +211,8 @@
         <pose>0.01 0.0 1.2335 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="shelf5_link">
-      <virtual_volume name="shelf5">
+    <link name="shelf5">
+      <virtual_volume name="shelf5_vv">
         <geometry>
           <box>
             <size>0.27 0.7 0.242</size>

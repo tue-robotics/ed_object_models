@@ -96,7 +96,8 @@
       <name>hallway_table</name>
       <uri>model://ddw/table</uri>
     </include>
-    <model name="operator">
+    <model name="operator" type="waypoint">
+      <pose>2.0 1.0 0 0 0 0</pose>
       <static>true</static>
     </model>
     <light type="directional" name="sun">

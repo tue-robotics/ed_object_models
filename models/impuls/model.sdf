@@ -96,7 +96,7 @@
       <name>hallway_table</name>
       <uri>model://ddw/table</uri>
     </include>
-    <model name="operator" type="waypoint">
+    <model name="operator" type="waypoint"> <!-- hotfix! operator should not need to be predefined. Fix in action server -->
       <pose>2.0 1.0 0 0 0 0</pose>
       <static>true</static>
     </model>

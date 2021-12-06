@@ -19,7 +19,6 @@
   <exec_depend>ed_msgs</exec_depend>
   <exec_depend>gazebo_models</exec_depend>
   <exec_depend>gazebo_msgs</exec_depend>
-  <exec_depend>geolib2</exec_depend>
   <exec_depend>geometry_msgs</exec_depend>
   <exec_depend>python_orocos_kdl</exec_depend>
   <exec_depend>python3-rospkg</exec_depend>

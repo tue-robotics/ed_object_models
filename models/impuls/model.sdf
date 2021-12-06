@@ -97,7 +97,7 @@
       <uri>model://ddw/table</uri>
     </include>
     <model name="operator" type="waypoint"> <!-- hotfix! operator should not need to be predefined. Fix in action server -->
-      <pose>2.0 1.0 0 0 0 0</pose> <!-- 2021-12-20 The pose will be reset to origin; 2022-01-17 The entire waypoint will be deleted -->
+      <pose>0 0 0 0 0 0</pose> <!-- 2021-12-20 The pose will be reset to origin; 2022-01-17 The entire waypoint will be deleted -->
       <static>true</static>
     </model>
     <light type="directional" name="sun">

@@ -12,7 +12,7 @@
       <uri>model://floor</uri>
     </include>
     <include>
-      <pose>1.882 -0.2645 0 0 0 1.57079632679</pose>
+      <pose>1.882 -0.24 0 0 0 1.57079632679</pose>
       <name>closet</name>
       <uri>model://robotics_testlabs/plastic_cabinet</uri>
     </include>

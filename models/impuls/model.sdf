@@ -42,12 +42,12 @@
       <uri>model://table_120x80x76</uri>
     </include>
     <include>
-      <pose>1.1 2.200 0 0 0 -1.57079632679</pose>
+      <pose>1.1 2.15 0 0 0 -1.57079632679</pose>
       <name>work_bench1</name>
       <uri>model://table_120x80x76</uri>
     </include>
     <include>
-      <pose>1.9 2.200 0 0 0 -1.57079632679</pose>
+      <pose>1.9 2.15 0 0 0 -1.57079632679</pose>
       <name>work_bench2</name>
       <uri>model://table_120x80x76</uri>
     </include>

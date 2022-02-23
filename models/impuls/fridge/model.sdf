@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <sdf version="1.6">
-  <model name="impuls/fridge">
+  <model name="impuls/fridge" type="refrigerator">
     <link name="1_link">
       <collision name="1_col">
         <geometry>

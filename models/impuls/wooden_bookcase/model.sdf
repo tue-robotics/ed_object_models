@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
-  <model name="impuls/wooden_bookcase">
+  <model name="impuls/wooden_bookcase" type="cabinet">
     <static>true</static>
     <link name="1_link">
       <collision name="1_col">

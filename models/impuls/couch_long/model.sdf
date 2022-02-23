@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <sdf version="1.6">
-  <model name="impuls/couch_long">
+  <model name="impuls/couch_long" type="couch">
     <link name="back">
       <collision name="back_col">
         <geometry>

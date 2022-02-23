@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <sdf version="1.6">
-  <model name="impuls/thin_wall">
+  <model name="impuls/thin_wall" type="wall">
     <static>true</static>
     <link name="wall">
       <collision name="wall_col">

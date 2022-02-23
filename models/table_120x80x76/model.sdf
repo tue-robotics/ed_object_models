@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <sdf version="1.6">
-  <model name="table_120x80x76">
+  <model name="table_120x80x76" type="table">
     <link name="1_link">
       <collision name="1_col">
         <geometry>

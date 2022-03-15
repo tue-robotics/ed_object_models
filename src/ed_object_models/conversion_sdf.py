@@ -1,4 +1,4 @@
-from typing import List, Tuple, Union
+from typing import List, Optional, Tuple, Union
 
 from os import getenv, path, rename, pathsep, makedirs
 import glob
@@ -182,7 +182,7 @@ def read_geometry(shape_item: dict, model_name: str) -> Union[Tuple[dict, str, s
     return geometry, link_pose, geometry_pose
 
 
-def read_shape_item(shape_item: dict, link_names: List[str], color: OrderedDict, model_name: str) -> Union[dict, None]:
+def read_shape_item(shape_item: dict, link_names: List[str], color: OrderedDict, model_name: str) -> Optional[dict]:
     """
     Convert shape item to a link with collision and visual elements
 
@@ -234,7 +234,7 @@ def read_shape_item(shape_item: dict, link_names: List[str], color: OrderedDict,
     return sdf_link_item
 
 
-def read_shape(shape: dict, link_names: List[str], color: OrderedDict, model_name: str) -> Union[List, None]:
+def read_shape(shape: dict, link_names: List[str], color: OrderedDict, model_name: str) -> Optional[List]:
     """
     Convert (array of) shape(s) to list of SDF links
 
@@ -263,7 +263,7 @@ def read_shape(shape: dict, link_names: List[str], color: OrderedDict, model_nam
     return sdf_link
 
 
-def read_areas(areas: List, link_names: List[str], model_name: str) -> Union[List, None]:
+def read_areas(areas: List, link_names: List[str], model_name: str) -> Optional[List]:
     """
     Convert areas to links with a virtual area
 

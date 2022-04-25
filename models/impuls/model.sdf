@@ -96,6 +96,11 @@
       <name>hallway_table</name>
       <uri>model://ddw/table</uri>
     </include>
+    <include>
+      <pose>4.51 2.75 0 0 0 -1.57079632679</pose>
+      <name>tv</name>
+      <uri>model://impuls/tv</uri>
+    </include>
     <light type="directional" name="sun">
       <cast_shadows>true</cast_shadows>
       <pose>0 0 10 0 0 0</pose>

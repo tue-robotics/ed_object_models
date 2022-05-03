@@ -97,6 +97,11 @@
       <uri>model://ddw/table</uri>
     </include>
     <include>
+      <pose>4.51 2.75 0 0 0 -1.57079632679</pose>
+      <name>tv</name>
+      <uri>model://impuls/tv</uri>
+    </include>
+    <include>
       <pose>2.5 -0.15 0 0 0 0.9</pose>
       <name>trashbin</name>
       <uri>model://robotics_testlabs/trashbin</uri>

@@ -134,7 +134,7 @@
       <static>true</static>
     </model>
     <model name="initial_pose" type="waypoint">
-      <pose>0.0 0.0 0 0 0 0</pose>
+      <pose>1.0 0.3 0 0 0 0</pose>
       <static>true</static>
     </model>
     <model name="entry_door" type="waypoint">

@@ -129,13 +129,13 @@
         <virtual_volume name="in_vv">
           <geometry>
             <box>
-              <size>4.5 2.7 2.0</size>
+              <size>4.5 2.7 2.5</size>
             </box>
           </geometry>
-          <pose>0.0 0.0 0.0 0 0 0</pose>
+          <pose>-1.0 0.1 0.0 0 0 0</pose>
         </virtual_volume>
       </link>
-      <pose>9.6 1.35 1.0 0 0 0</pose>
+      <pose>10.6 1.25 1.25 0 0 0</pose>
       <static>true</static>
     </model>
     <model name="initial_pose" type="waypoint">

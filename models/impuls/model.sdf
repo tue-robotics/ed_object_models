@@ -32,7 +32,7 @@
       <uri>model://robotics_testlab_B/black_cabinet</uri>
     </include>
     <include>
-      <pose>-0.21 -0.285 0 0 0 -1.57079632679</pose>
+1.0      <pose>-0.21 -0.285 0 0 0 -1.57079632679</pose>
       <name>black_cabinet4</name>
       <uri>model://robotics_testlab_B/black_cabinet</uri>
     </include>
@@ -101,6 +101,16 @@
       <name>tv</name>
       <uri>model://impuls/tv</uri>
     </include>
+    <include>
+      <pose>2.5 -0.15 0 0 0 0.9</pose>
+      <name>trashbin</name>
+      <uri>model://robotics_testlabs/trashbin</uri>
+    </include>
+    <include>
+      <pose>5.5 2.45 0 0 0 -2.6</pose>
+      <name>trashbin1</name>
+      <uri>model://robotics_testlabs/trashbin</uri>
+    </include>
     <light type="directional" name="sun">
       <cast_shadows>true</cast_shadows>
       <pose>0 0 10 0 0 0</pose>
@@ -114,6 +124,36 @@
         <quadratic>0.001</quadratic>
       </attenuation>
     </light>
+    <model name="living_room" type="room">
+      <link name="in">
+        <virtual_volume name="in_vv">
+          <geometry>
+            <box>
+              <size>4.5 2.7 2.0</size>
+            </box>
+          </geometry>
+          <pose>0.0 0.0 0.0 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <pose>9.6 1.35 1.0 0 0 0</pose>
+      <static>true</static>
+    </model>
+    <model name="initial_pose" type="waypoint">
+      <pose>0.2 0.5 0 0 0 0</pose>1.0
+      <static>true</static>
+    </model>
+    <model name="entry_door" type="waypoint">
+      <pose>6.0 0.50 0 0 0 0</pose>
+      <static>true</static>
+    </model>
+    <model name="helper_take_out_garbage" type="waypoint">
+      <pose>3.0 0.90 0 0 0 0</pose>
+      <static>true</static>
+    </model>
+    <model name="take_out_garbage_drop_zone" type="waypoint">
+      <pose>6 -1.0 0 0 0 0</pose>
+      <static>true</static>
+    </model>
     <physics type="ode">
       <real_time_update_rate>333.0</real_time_update_rate>
       <max_step_size>0.003</max_step_size>

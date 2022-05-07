@@ -5,18 +5,69 @@
       <collision name="1_col">
         <geometry>
           <box>
-            <size>0.6 2.44 0.96</size>
+            <size>0.525 2.40 0.21</size>
           </box>
         </geometry>
       </collision>
       <visual name="1_vis">
         <geometry>
           <box>
-            <size>0.6 2.44 0.96</size>
+            <size>0.525 2.40 0.21</size>
           </box>
         </geometry>
       </visual>
-      <pose>0.0 0.0 0.48 0 0 0</pose>
+      <pose>-0.0375 0.0 0.105 0 0 0</pose>
+    </link>
+    <link name="2_link">
+      <collision name="2_col">
+        <geometry>
+          <box>
+            <size>0.6 2.44 0.75</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="2_vis">
+        <geometry>
+          <box>
+            <size>0.6 2.44 0.75</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 0.0 0.585 0 0 0</pose>
+    </link>
+    <link name="3_link">
+      <collision name="3_col">
+        <geometry>
+          <box>
+            <size>0.6 0.02 0.21</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="3_vis">
+        <geometry>
+          <box>
+            <size>0.6 0.02 0.21</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 1.21 0.105 0 0 0</pose>
+    </link>
+    <link name="4_link">
+      <collision name="4_col">
+        <geometry>
+          <box>
+            <size>0.6 0.02 0.21</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="4_vis">
+        <geometry>
+          <box>
+            <size>0.6 0.02 0.21</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 -1.21 0.105 0 0 0</pose>
     </link>
     <link name="in_front_of">
       <virtual_volume name="in_front_of_vv">

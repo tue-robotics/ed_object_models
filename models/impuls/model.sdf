@@ -194,6 +194,30 @@
       <pose>6.0 0.50 0 0 0 0</pose>
       <static>true</static>
     </model>
+    <model name="rips_point_1" type="waypoint">
+      <pose>3.0 1.0 0 0 0 0</pose>
+      <static>true</static>
+    </model>
+    <model name="rips_point_2" type="waypoint">
+      <pose>2.5 1.0 0 0 0 0</pose>
+      <static>true</static>
+    </model>
+    <model name="rips_point_3" type="waypoint">
+      <pose>3.0 0.0 0 0 0 0</pose>
+      <static>true</static>
+    </model>
+    <model name="exit_1_rips" type="waypoint">
+      <pose>0.5 -1.0 0 0 0 0</pose>
+      <static>true</static>
+    </model>
+    <model name="exit_2_rips" type="waypoint">
+      <pose>6.0 -1.0 0 0 0 0</pose>
+      <static>true</static>
+    </model>
+    <model name="exit_2_rips" type="waypoint">
+      <pose>7.0 -1.0 0 0 0 0</pose>
+      <static>true</static>
+    </model>
     <model name="helper_take_out_garbage" type="waypoint">
       <pose>3.0 0.90 0 0 0 0</pose>
       <static>true</static>

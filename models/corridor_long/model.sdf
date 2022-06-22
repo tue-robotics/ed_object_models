@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <sdf version="1.7">
   <world name="corridor_long">
-    <model name="wall_r">
+    <model name="wall_r" type="wall">
       <pose>1.1 0 0 0 0 -1.57079632679</pose>
       <static>true</static>
       <link name="1_link">
@@ -22,7 +22,7 @@
         <pose>0.0 0.0 0.4 0 0 0</pose>
       </link>
     </model>
-    <model name="wall_l">
+    <model name="wall_l" type="wall">
       <pose>-1.1 0 0 0 0 -1.57079632679</pose>
       <static>true</static>
       <link name="1_link">

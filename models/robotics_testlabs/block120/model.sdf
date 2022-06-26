@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<sdf version="1.7">
+<sdf version="1.6">
   <model name="robotics_testlabs/block120">
     <static>true</static>
     <link name="1_link">

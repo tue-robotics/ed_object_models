@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<sdf version="1.7">
+<sdf version="1.6">
   <model name="impuls/couch_long">
       <link name="back">
           <collision name="back_col">

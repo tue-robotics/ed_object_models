@@ -56,6 +56,21 @@
       <name>desk</name>
       <uri>model://rwc2022/dinner_table</uri>
     </include>
+    <include>
+      <pose>1.39 0.34 0 0 0 1.57079632679</pose>
+      <name>couch</name>
+      <uri>model://rwc2022/couch</uri>
+    </include>
+    <include>
+      <pose>2.65 0.29 0 0 0 1.57079632679</pose>
+      <name>side_table1</name>
+      <uri>model://rgo2017/table_salon</uri>
+    </include>
+    <include>
+      <pose>3.87 0.29 0 0 0 1.57079632679</pose>
+      <name>side_table2</name>
+      <uri>model://rgo2017/table_salon</uri>
+    </include>
     <light type="directional" name="sun">
       <cast_shadows>true</cast_shadows>
       <pose>0 0 10 0 0 0</pose>

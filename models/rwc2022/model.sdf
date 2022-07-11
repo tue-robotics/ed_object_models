@@ -86,6 +86,51 @@
       <name>side_table2</name>
       <uri>model://rgo2017/table_salon</uri>
     </include>
+    <include>
+      <pose>6.745 3.275 0 0 0 3.14159265359</pose>
+      <name>dinner_table</name>
+      <uri>model://rwc2022/dinner_table</uri>
+    </include>
+    <include>
+      <pose>8.65 4.67 0 0 0 3.14159265359</pose>
+      <name>sink</name>
+      <uri>model://rwc2022/sink</uri>
+    </include>
+    <include>
+      <pose>8.66 3.45 0 0 0 3.14159265359</pose>
+      <name>dishwasher</name>
+      <uri>model://rwc2022/washing_machine</uri>
+    </include>
+    <include>
+      <pose>8.89 0.21 0 0 0 3.14159265359</pose>
+      <name>trashbin</name>
+      <uri>model://rwc2022/trashbin</uri>
+    </include>
+    <include>
+      <pose>8.66 1.39 0 0 0 3.14159265359</pose>
+      <name>fridge</name>
+      <uri>model://rwc2022/fridge</uri>
+    </include>
+    <include>
+      <pose>4.75 5.16 0 0 0 -1.57079632679</pose>
+      <name>black_cabinet_3</name>
+      <uri>model://rwc2022/black_cabinet</uri>
+    </include>
+    <include>
+      <pose>5.25 5.16 0 0 0 -1.57079632679</pose>
+      <name>black_cabinet_4</name>
+      <uri>model://rwc2022/black_cabinet</uri>
+    </include>
+    <include>
+      <pose>5.75 5.16 0 0 0 -1.57079632679</pose>
+      <name>black_cabinet_5</name>
+      <uri>model://rwc2022/black_cabinet</uri>
+    </include>
+    <include>
+      <pose>4.7 0.6 0 0 0 0</pose>
+      <name>pantry_kitchen</name>
+      <uri>model://rwc2022/pantry</uri>
+    </include>
     <light type="directional" name="sun">
       <cast_shadows>true</cast_shadows>
       <pose>0 0 10 0 0 0</pose>

@@ -42,6 +42,11 @@
       <uri>model://rwc2022/pantry</uri>
     </include>
     <include>
+      <pose>4.34 4.16 0 0 0 3.14159265359</pose>
+      <name>pantry_livingroom</name>
+      <uri>model://rwc2022/pantry</uri>
+    </include>
+    <include>
       <pose>7.905 8.675 0 0 0 -1.57079632679</pose>
       <name>wardrobe</name>
       <uri>model://rwc2022/wardrobe</uri>
@@ -57,17 +62,22 @@
       <uri>model://rwc2022/dinner_table</uri>
     </include>
     <include>
-      <pose>1.39 0.34 0 0 0 1.57079632679</pose>
+      <pose>1.85 0.40 0 0 0 1.57079632679</pose>
       <name>couch</name>
       <uri>model://rwc2022/couch</uri>
     </include>
     <include>
-      <pose>2.65 0.29 0 0 0 1.57079632679</pose>
+      <pose>3.77 0.30 0 0 0 1.57079632679</pose>
       <name>side_table1</name>
       <uri>model://rgo2017/table_salon</uri>
     </include>
     <include>
-      <pose>3.87 0.29 0 0 0 1.57079632679</pose>
+      <pose>1.85 1.74 0 0 0 0</pose>
+      <name>salon_table</name>
+      <uri>model://rwc2022/salon_table</uri>
+    </include>
+    <include>
+      <pose>3.22 0.30 0 0 0 1.57079632679</pose>
       <name>side_table2</name>
       <uri>model://rgo2017/table_salon</uri>
     </include>

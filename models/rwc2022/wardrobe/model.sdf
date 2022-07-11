@@ -87,6 +87,40 @@
       </visual>
       <pose>0.0075 0.0 0.455 0 0 0</pose>
     </link>
+    <link name="6_link">
+      <collision name="6_col">
+        <geometry>
+          <box>
+            <size>0.535 0.765 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="6_vis">
+        <geometry>
+          <box>
+            <size>0.535 0.765 0.02</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0075 0.0 0.095 0 0 0</pose>
+    </link>
+    <link name="7_link">
+      <collision name="7_col">
+        <geometry>
+          <box>
+            <size>0.02 0.77 0.9</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="7_vis">
+        <geometry>
+          <box>
+            <size>0.02 0.77 0.09</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.26 0.0 0.045 0 0 0</pose>
+    </link>
     <link name="in_front_of">
       <virtual_volume name="in_front_of_vv">
         <geometry>
@@ -105,6 +139,16 @@
           </box>
         </geometry>
         <pose>0.007500000000000007 0.0 0.61 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="shelf2">
+      <virtual_volume name="shelf2_vv">
+        <geometry>
+          <box>
+            <size>0.515 0.705 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.007500000000000007 0.0 0.25 0 0 0</pose>
       </virtual_volume>
     </link>
   </model>

@@ -187,7 +187,7 @@
       <static>true</static>
     </model>
     <model name="hand_me_that_home_location" type="waypoint">
-      <pose>7 1 0 0 0 0</pose>
+      <pose>1 7 0 0 0 0</pose>
       <static>true</static>
     </model>
 

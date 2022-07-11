@@ -11,6 +11,21 @@
       <name>floor</name>
       <uri>model://floor</uri>
     </include>
+    <include>
+      <pose>0 0 0 0 0 0</pose>
+      <name>bed</name>
+      <uri>model://rwc2022/bed</uri>
+    </include>
+    <include>
+      <pose>0 0 0 0 0 0</pose>
+      <name>black_cabinet</name>
+      <uri>model://rwc2022/black_cabinet</uri>
+    </include>
+    <include>
+      <pose>0 0 0 0 0 0</pose>
+      <name>couch</name>
+      <uri>model://rwc2022/couch</uri>
+    </include>
     <light type="directional" name="sun">
       <cast_shadows>true</cast_shadows>
       <pose>0 0 10 0 0 0</pose>

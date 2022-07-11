@@ -62,6 +62,11 @@
       <uri>model://rwc2022/dinner_table</uri>
     </include>
     <include>
+      <pose>1.52 5.49 0 0 0 1.57079632679</pose>
+      <name>trashbin1</name>
+      <uri>model://rwc2022/trashbin</uri>
+    </include>
+    <include>
       <pose>1.85 0.40 0 0 0 1.57079632679</pose>
       <name>couch</name>
       <uri>model://rwc2022/couch</uri>

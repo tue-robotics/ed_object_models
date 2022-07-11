@@ -104,7 +104,7 @@
             <size>0.20000000000000018 0.55 0.01</size>
           </box>
         </geometry>
-        <pose>1.125 0.0 0.005 0 0 0</pose>
+        <pose>0 0.8 0.005 0 0 1.57079632679</pose>
       </virtual_volume>
     </link>
   </model>

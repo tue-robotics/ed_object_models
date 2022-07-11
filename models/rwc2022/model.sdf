@@ -77,6 +77,11 @@
       <uri>model://rwc2022/salon_table</uri>
     </include>
     <include>
+      <pose>0.85 5.125 0 0 0 0</pose>
+      <name>black_cabinet_tv</name>
+      <uri>model://rwc2022/black_cabinet2</uri>
+    </include>
+    <include>
       <pose>3.22 0.30 0 0 0 1.57079632679</pose>
       <name>side_table2</name>
       <uri>model://rgo2017/table_salon</uri>

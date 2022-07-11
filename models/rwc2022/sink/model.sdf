@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <model name="rwc2022/sink">
+    <static>true</static>
+    <link name="1_link">
+      <collision name="1_col">
+        <geometry>
+          <box>
+            <size>0.54 1.0 0.82</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="1_vis">
+        <geometry>
+          <box>
+            <size>0.54 1.0 0.82</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 0.0 0.41 0 0 0</pose>
+    </link>
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of_vv">
+        <geometry>
+          <box>
+            <size>0.52 0.94 0.2500000000000001</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.0 0.9650000000000001 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of_vv">
+        <geometry>
+          <box>
+            <size>0.19999999999999996 0.8 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.77 0.0 0.005 0 0 0</pose>
+      </virtual_volume>
+    </link>
+  </model>
+</sdf>

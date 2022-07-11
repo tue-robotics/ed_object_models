@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<sdf version="1.7">
+<sdf version="1.6">
   <model name="door_wooden">
     <link name="outward">
       <virtual_volume name="outward_vv">

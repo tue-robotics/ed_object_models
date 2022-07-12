@@ -67,12 +67,12 @@
       <uri>model://rwc2022/trashbin</uri>
     </include>
     <include>
-      <pose>1.85 0.40 0 0 0 1.57079632679</pose>
+      <pose>1.85 0.45 0 0 0 1.57079632679</pose>
       <name>couch</name>
       <uri>model://rwc2022/couch</uri>
     </include>
     <include>
-      <pose>3.77 0.30 0 0 0 1.57079632679</pose>
+      <pose>3.77 0.33 0 0 0 1.57079632679</pose>
       <name>side_table1</name>
       <uri>model://rgo2017/table_salon</uri>
     </include>
@@ -82,12 +82,12 @@
       <uri>model://rwc2022/salon_table</uri>
     </include>
     <include>
-      <pose>0.85 5.125 0 0 0 0</pose>
+      <pose>0.85 5.10 0 0 0 0</pose>
       <name>black_cabinet_tv</name>
       <uri>model://rwc2022/black_cabinet2</uri>
     </include>
     <include>
-      <pose>3.22 0.30 0 0 0 1.57079632679</pose>
+      <pose>3.22 0.33 0 0 0 1.57079632679</pose>
       <name>side_table2</name>
       <uri>model://rgo2017/table_salon</uri>
     </include>
@@ -132,7 +132,7 @@
       <uri>model://rwc2022/black_cabinet</uri>
     </include>
     <include>
-      <pose>4.7 0.6 0 0 0 0</pose>
+      <pose>4.7 0.65 0 0 0 0</pose>
       <name>pantry_kitchen</name>
       <uri>model://rwc2022/pantry</uri>
     </include>

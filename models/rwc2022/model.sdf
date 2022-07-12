@@ -69,12 +69,12 @@
     <include>
       <pose>1.85 0.45 0 0 0 1.57079632679</pose>
       <name>sofa</name>
-      <uri>model://rwc2022/sofa</uri>
+      <uri>model://rwc2022/couch</uri>
     </include>
     <include>
-      <pose>3.77 0.33 0 0 0 1.57079632679</pose>
-      <name>side_table1</name>
-      <uri>model://rgo2017/table_salon</uri>
+      <pose>3.495 0.33 0 0 0 1.57079632679</pose>
+     <name>side_table</name>
+      <uri>model://rwc2022/couch_table</uri>
     </include>
     <include>
       <pose>1.85 1.74 0 0 0 0</pose>
@@ -85,11 +85,6 @@
       <pose>0.85 5.10 0 0 0 0</pose>
       <name>tv</name>
       <uri>model://rwc2022/black_cabinet2</uri>
-    </include>
-    <include>
-      <pose>3.22 0.33 0 0 0 1.57079632679</pose>
-      <name>side_table2</name>
-      <uri>model://rgo2017/table_salon</uri>
     </include>
     <include>
       <pose>6.745 3.275 0 0 0 3.14159265359</pose>

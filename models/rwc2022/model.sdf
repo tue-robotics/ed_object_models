@@ -17,19 +17,9 @@
       <uri>model://rwc2022/bed</uri>
     </include>
     <include>
-      <pose>1 8.81 0 0 0 -1.57079632679</pose>
-      <name>black_cabinet_1</name>
-      <uri>model://rwc2022/black_cabinet</uri>
-    </include>
-    <include>
-      <pose>1.49 8.81 0 0 0 -1.57079632679</pose>
-      <name>black_cabinet_2</name>
-      <uri>model://rwc2022/black_cabinet</uri>
-    </include>
-    <include>
-      <pose>1.99 8.81 0 0 0 -1.57079632679</pose>
-      <name>black_cabinet_3</name>
-      <uri>model://rwc2022/black_cabinet</uri>
+      <pose>1.0 8.81 0 0 0 -1.57079632679</pose>
+      <name>show_rack</name>
+      <uri>model://rwc2022/show_rack</uri>
     </include>
     <include>
       <pose>0.67 5.49 0 0 0 1.57079632679</pose>
@@ -112,19 +102,9 @@
       <uri>model://rwc2022/fridge</uri>
     </include>
     <include>
-      <pose>4.75 5.16 0 0 0 -1.57079632679</pose>
-      <name>black_cabinet_4</name>
-      <uri>model://rwc2022/black_cabinet</uri>
-    </include>
-    <include>
       <pose>5.25 5.16 0 0 0 -1.57079632679</pose>
-      <name>black_cabinet_5</name>
-      <uri>model://rwc2022/black_cabinet</uri>
-    </include>
-    <include>
-      <pose>5.75 5.16 0 0 0 -1.57079632679</pose>
-      <name>black_cabinet_6</name>
-      <uri>model://rwc2022/black_cabinet</uri>
+      <name>pantry</name>
+      <uri>model://rwc2022/official_pantry</uri>
     </include>
     <include>
       <pose>4.7 0.65 0 0 0 0</pose>

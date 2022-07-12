@@ -195,15 +195,15 @@
       <static>true</static>
     </model>
     <model name="rips_point_1" type="waypoint">
-      <pose>5.0 5.0 0 0 0 0</pose>
+      <pose>4.0 2.5 0 0 0 0</pose>
       <static>true</static>
     </model>
     <model name="rips_point_2" type="waypoint">
-      <pose>5.0 5.0 0 0 0 0</pose>
+      <pose>4.0 2.0 0 0 0 0</pose>
       <static>true</static>
     </model>
     <model name="rips_point_3" type="waypoint">
-      <pose>5.0 5.0 0 0 0 0</pose>
+      <pose>3.0 2.0.0 0 0 0 0</pose>
       <static>true</static>
     </model>
     <model name="exit_1_rips" type="waypoint">

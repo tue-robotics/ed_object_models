@@ -118,17 +118,17 @@
     </include>
     <include>
       <pose>4.75 5.16 0 0 0 -1.57079632679</pose>
-      <name>black_cabinet_3</name>
-      <uri>model://rwc2022/black_cabinet</uri>
-    </include>
-    <include>
-      <pose>5.25 5.16 0 0 0 -1.57079632679</pose>
       <name>black_cabinet_4</name>
       <uri>model://rwc2022/black_cabinet</uri>
     </include>
     <include>
-      <pose>5.75 5.16 0 0 0 -1.57079632679</pose>
+      <pose>5.25 5.16 0 0 0 -1.57079632679</pose>
       <name>black_cabinet_5</name>
+      <uri>model://rwc2022/black_cabinet</uri>
+    </include>
+    <include>
+      <pose>5.75 5.16 0 0 0 -1.57079632679</pose>
+      <name>black_cabinet_6</name>
       <uri>model://rwc2022/black_cabinet</uri>
     </include>
     <include>

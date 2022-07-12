@@ -244,11 +244,11 @@
       <static>true</static>
     </model>
     <model name="helper_take_out_garbage" type="waypoint">
-      <pose>3.0 0.90 0 0 0 0</pose>
+      <pose>3.0 3.0 0 0 0 0</pose>
       <static>true</static>
     </model>
     <model name="take_out_garbage_drop_zone" type="waypoint">
-      <pose>-1.0 7.0 0 0 0 -1.57079632679</pose>
+      <pose>-1.5 7.0 0 0 0 -1.57079632679</pose>
       <static>true</static>
     </model>
     <model name="hand_me_that_home_location" type="waypoint">

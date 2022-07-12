@@ -225,7 +225,11 @@
     <model name="hand_me_that_home_location" type="waypoint">
       <pose>1 7 0 0 0 0</pose>
       <static>true</static>
-    </model>3.0 0.90 0 0 0 0
+    </model> <!-- 3.0 0.90 0 0 0 0 -->
+    <model name="carry_my_luggage_starting_point" type="waypoint">
+      <pose>2 7.5 0 0 0 0</pose>
+      <static>true</static>
+    </model>
 
     <physics type="ode">
       <real_time_update_rate>333.0</real_time_update_rate>

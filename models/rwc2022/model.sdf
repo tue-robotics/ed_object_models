@@ -230,6 +230,10 @@
       <pose>2 7.5 0 0 0 0</pose>
       <static>true</static>
     </model>
+    <model name="find_my_mates_operator" type="waypoint">
+      <pose>4 3 0 0 0 3.14159265359</pose>
+      <static>true</static>
+    </model>
 
     <physics type="ode">
       <real_time_update_rate>333.0</real_time_update_rate>

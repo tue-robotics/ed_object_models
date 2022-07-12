@@ -234,6 +234,10 @@
       <pose>4 3 0 0 0 3.14159265359</pose>
       <static>true</static>
     </model>
+    <model name="initial_pose_take_out_the_garbage" type="waypoint">
+      <pose>1 3.25 0 0 0 0</pose>
+      <static>true</static>
+    </model>
 
     <physics type="ode">
       <real_time_update_rate>333.0</real_time_update_rate>

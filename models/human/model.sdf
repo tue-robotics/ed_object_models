@@ -1,6 +1,24 @@
 <?xml version="1.0"?>
 <sdf version="1.6">
   <model name="human">
+    <link name="human_link">
+      <collision name="human_col">
+        <geometry>
+          <mesh>
+            <uri>model://human/human.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="human_vis">
+        <geometry>
+          <mesh>
+            <uri>model://human/human.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <pose>0 0 0 0 0 3.14</pose>
+    </link>
     <static>true</static>
   </model>
+
 </sdf>

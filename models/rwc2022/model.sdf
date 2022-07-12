@@ -92,6 +92,11 @@
       <uri>model://rwc2022/washing_machine</uri>
     </include>
     <include>
+      <pose>8.66 2.63 0 0 0 3.14159265359</pose>
+      <name>dishwasher</name>
+      <uri>model://rwc2022/dishwasher</uri>
+    </include>
+    <include>
       <pose>8.77 0.25 0 0 0 3.14159265359</pose>
       <name>kitchen_bin</name>
       <uri>model://rwc2022/trashbin</uri>

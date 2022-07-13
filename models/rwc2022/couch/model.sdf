@@ -77,7 +77,7 @@
             <size>0.46 0.4 0.25</size>
           </box>
         </geometry>
-        <pose>0.15 -0.44 0.555 0 0 0</pose>
+        <pose>0.15 -0.44 0.6 0 0 0</pose>
       </virtual_volume>
     </link>
     <link name="on_top_of_m">
@@ -87,7 +87,7 @@
             <size>0.46 0.4 0.25</size>
           </box>
         </geometry>
-        <pose>0.15 0.0 0.555 0 0 0</pose>
+        <pose>0.15 0.0 0.6 0 0 0</pose>
       </virtual_volume>
     </link>
     <link name="on_top_of_r">
@@ -97,7 +97,7 @@
             <size>0.46 0.4 0.25</size>
           </box>
         </geometry>
-        <pose>0.15 0.44 0.555 0 0 0</pose>
+        <pose>0.15 0.44 0.6 0 0 0</pose>
       </virtual_volume>
     </link>
     <link name="in_front_of">

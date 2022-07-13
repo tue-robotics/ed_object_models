@@ -52,7 +52,7 @@
       <uri>model://rwc2022/dinner_table</uri>
     </include>
     <include>
-      <pose>1.59 5.59 0 0 0 1.57079632679</pose>
+      <pose>1.63 5.59 0 0 0 1.57079632679</pose>
       <name>bin</name>
       <uri>model://rwc2022/trashbin</uri>
     </include>
@@ -97,7 +97,7 @@
       <uri>model://rwc2022/dishwasher</uri>
     </include>
     <include>
-      <pose>8.35 0.5 0 0 0 3.14159265359</pose>
+      <pose>8.43 0.55 0 0 0 3.14159265359</pose>
       <name>kitchen_bin</name>
       <uri>model://rwc2022/trashbin</uri>
     </include>

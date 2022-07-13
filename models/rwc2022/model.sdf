@@ -243,6 +243,10 @@
       <pose>1 3.25 0 0 0 0</pose>
       <static>true</static>
     </model>
+    <model name="where_is_this_information_point" type="waypoint">
+      <pose>1 3.25 0 0 0 0</pose> <!-- Update pose when challenge pose is defined -->
+      <static>true</static>
+    </model>
 
     <physics type="ode">
       <real_time_update_rate>333.0</real_time_update_rate>

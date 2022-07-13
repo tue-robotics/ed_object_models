@@ -32,7 +32,7 @@
       <uri>model://rwc2022/pantry</uri>
     </include>
     <include>
-      <pose>4.34 4.16 0 0 0 3.14159265359</pose>
+      <pose>4.34 4.16 0 0 0 3.14159265358979323846</pose>
       <name>book_shelf</name>
       <uri>model://rwc2022/pantry</uri>
     </include>
@@ -42,7 +42,7 @@
       <uri>model://rwc2022/wardrobe</uri>
     </include>
     <include>
-      <pose>8.82 5.97 0 0 0 3.14159265359</pose>
+      <pose>8.82 5.97 0 0 0 3.14159265358979323846</pose>
       <name>small_shelf</name>
       <uri>model://rwc2022/shelves120x28x107</uri>
     </include>
@@ -77,32 +77,32 @@
       <uri>model://rwc2022/black_cabinet2</uri>
     </include>
     <include>
-      <pose>6.745 3.275 0 0 0 3.14159265359</pose>
+      <pose>6.745 3.275 0 0 0 3.14159265358979323846</pose>
       <name>dinner_table</name>
       <uri>model://rwc2022/dinner_table</uri>
     </include>
     <include>
-      <pose>8.65 4.54 0 0 0 3.14159265359</pose>
+      <pose>8.65 4.54 0 0 0 3.14159265358979323846</pose>
       <name>sink</name>
       <uri>model://rwc2022/sink</uri>
     </include>
     <include>
-      <pose>8.66 3.49 0 0 0 3.14159265359</pose>
+      <pose>8.66 3.49 0 0 0 3.14159265358979323846</pose>
       <name>washing_machine</name>
       <uri>model://rwc2022/washing_machine</uri>
     </include>
     <include>
-      <pose>8.66 2.63 0 0 0 3.14159265359</pose>
+      <pose>8.66 2.63 0 0 0 3.14159265358979323846</pose>
       <name>dishwasher</name>
       <uri>model://rwc2022/dishwasher</uri>
     </include>
     <include>
-      <pose>8.43 0.55 0 0 0 3.14159265359</pose>
+      <pose>8.43 0.55 0 0 0 3.14159265358979323846</pose>
       <name>kitchen_bin</name>
       <uri>model://rwc2022/trashbin</uri>
     </include>
     <include>
-      <pose>8.66 1.39 0 0 0 3.14159265359</pose>
+      <pose>8.66 1.39 0 0 0 3.14159265358979323846</pose>
       <name>fridge</name>
       <uri>model://rwc2022/fridge</uri>
     </include>
@@ -224,7 +224,7 @@
       <static>true</static>
     </model>
     <model name="take_out_garbage_drop_zone" type="waypoint">
-      <pose>0.5 6.5 0 0 0 3.14159265359</pose>
+      <pose>0.5 6.5 0 0 0 3.14159265358979323846</pose>
       <static>true</static>
     </model>
     <model name="hand_me_that_home_location" type="waypoint">

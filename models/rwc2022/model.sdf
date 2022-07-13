@@ -227,7 +227,7 @@
       <static>true</static>
     </model> <!-- 3.0 0.90 0 0 0 0 -->
     <model name="carry_my_luggage_starting_point" type="waypoint">
-      <pose>2 7.5 0 0 0 0</pose>
+      <pose>2 6.5 0 0 0 1.57</pose>
       <static>true</static>
     </model>
     <model name="find_my_mates_operator" type="waypoint">

@@ -589,7 +589,7 @@ def convert_model_file(model_name: str, model_file: str, recursive: bool = False
     # read yaml file
     with open(model_file, "r") as stream:
         try:
-            yml = yaml.load(stream)
+            yml = yaml.safe_load(stream)
         except yaml.YAMLError as e:
             print(bcolors.FAIL + bcolors.BOLD + "[{}] (YAML) ".format(model_name) + str(e) + bcolors.ENDC)
             return 1

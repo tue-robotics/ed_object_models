@@ -7,6 +7,11 @@
       <pose>0 0 0 0 0 0</pose>
     </include>
     <include>
+      <name>table_salon</name>
+      <uri>model://rwc2022/table_salon</uri>
+      <pose>8.66 2.915 0 0 0 3.14159265358979323846</pose>
+    </include>
+    <include>
       <pose>0 0 0 0 0 0</pose>
       <name>floor</name>
       <uri>model://floor</uri>
@@ -75,11 +80,6 @@
       <pose>0.85 5.10 0 0 0 0</pose>
       <name>tv</name>
       <uri>model://rwc2022/black_cabinet2</uri>
-    </include>
-    <include>
-      <pose>6.745 3.275 0 0 0 3.14159265358979323846</pose>
-      <name>dinner_table</name>
-      <uri>model://rwc2022/dinner_table</uri>
     </include>
     <include>
       <pose>8.65 4.54 0 0 0 3.14159265358979323846</pose>

@@ -82,7 +82,7 @@
       <uri>model://rwc2022/dinner_table</uri>
     </include>
     <include>
-      <pose>8.65 4.54 0 0 0 3.14159265358979323846</pose>
+      <pose>8.70 4.77 0 0 0 3.14159265358979323846</pose>
       <name>sink</name>
       <uri>model://rwc2022/sink</uri>
     </include>
@@ -102,7 +102,7 @@
       <uri>model://rwc2022/fridge</uri>
     </include>
     <include>
-      <pose>5.25 5.16 0 0 0 -1.57079632679</pose>
+      <pose>5.30 5.16 0 0 0 -1.57079632679</pose>
       <name>pantry</name>
       <uri>model://rwc2022/official_pantry</uri>
     </include>

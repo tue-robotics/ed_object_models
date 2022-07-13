@@ -247,6 +247,10 @@
       <pose>1 3.25 0 0 0 0</pose> <!-- Update pose when challenge pose is defined -->
       <static>true</static>
     </model>
+    <model name="initial_pose_receptionist" type="waypoint">
+      <pose>3 4 0 0 0 0</pose>
+      <static>true</static>
+    </model>
 
     <physics type="ode">
       <real_time_update_rate>333.0</real_time_update_rate>

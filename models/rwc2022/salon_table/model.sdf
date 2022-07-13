@@ -101,10 +101,10 @@
       <virtual_volume name="in_front_of_vv">
         <geometry>
           <box>
-            <size>0.20000000000000007 0.35 0.01</size>
+            <size>0.35 0.2 0.01</size>
           </box>
         </geometry>
-        <pose>0.95 0.0 0.005 0 0 0</pose>
+        <pose>0 0.775 0.005 0 0 0</pose>
       </virtual_volume>
     </link>
   </model>

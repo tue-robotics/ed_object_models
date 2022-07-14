@@ -267,7 +267,7 @@
       <static>true</static>
     </model>
     <model name="hand_me_that_living_room" type="waypoint">
-      <pose>2.5 4.5 0 0 0 -1.57</pose>
+      <pose>3.7 4.7 0 0 0 -2.33</pose>
       <static>true</static>
     </model>
     <physics type="ode">

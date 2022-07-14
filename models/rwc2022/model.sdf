@@ -222,7 +222,7 @@
       <pose>0.5 6.5 0 0 0 3.14159265358979323846</pose>
       <static>true</static>
     </model>
-    <model name="hand_me_that_home_location" type="waypoint">
+    <model name="hand_me_that_office" type="waypoint">
       <pose>1 7 0 0 0 0</pose>
       <static>true</static>
     </model> <!-- 3.0 0.90 0 0 0 0 -->
@@ -256,6 +256,18 @@
     </model>
     <model name="helper_waypoint_take_out_the_garbage" type="waypoint">
       <pose>2 3 0 0 0 0</pose>
+      <static>true</static>
+    </model>
+    <model name="hand_me_that_bedroom" type="waypoint">
+      <pose>7.5 6 0 0 0 1.57</pose>
+      <static>true</static>
+    </model>
+    <model name="hand_me_that_kitchen" type="waypoint">
+      <pose>6.5 0.5 0 0 0 1.57</pose>
+      <static>true</static>
+    </model>
+    <model name="hand_me_that_living_room" type="waypoint">
+      <pose>2.5 4.5 0 0 0 -1.57</pose>
       <static>true</static>
     </model>
     <physics type="ode">

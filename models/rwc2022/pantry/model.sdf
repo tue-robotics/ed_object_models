@@ -234,6 +234,104 @@
           </box>
         </geometry>
         <pose>0.64 0.0 0.005 0 0 0</pose>
+     <link name="on_top_of_shelf1_r">
+      <virtual_volume name="on_top_of_sh1_r_vv">
+        <geometry>r
+          <box>
+            <size>0.26 0.62 0.15</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.2 0.21 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="on_top_of_shelf2_r">
+      <virtual_volume name="on_top_of_sh2_r_vv">
+        <geometry>r
+          <box>
+            <size>0.26 0.62 0.21</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.2 0.61 0 0 0</pose>
+      </virtual_volume>
+    </link>
+     <link name="on_top_of_shelf3_r">
+      <virtual_volume name="on_top_of_sh3_r_vv">
+        <geometry>r
+          <box>
+            <size>0.26 0.62 0.22</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.2 0.9 0 0 0</pose>
+      </virtual_volume>
+    </link>
+     <link name="on_top_of_shelf4_r">
+      <virtual_volume name="on_top_of_sh4_r_vv">
+        <geometry>r
+          <box>
+            <size>0.26 0.62 0.26</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.2 1.25 0 0 0</pose>
+      </virtual_volume>
+    </link>
+     <link name="on_top_of_shelf5_r">
+      <virtual_volume name="on_top_of_sh5_r_vv">
+        <geometry>r
+          <box>
+            <size>0.26 0.62 0.15</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.2 1.53 0 0 0</pose>
+      </virtual_volume>
+    </link>
+     <link name="on_top_of_shelf1_l">
+      <virtual_volume name="on_top_of_sh1_l_vv">
+        <geometry>r
+          <box>
+            <size>0.26 0.27 0.15</size>
+          </box>
+        </geometry>
+        <pose>0.0 -0.41 0.21 0 0 0</pose>
+      </virtual_volume>
+    </link>
+     <link name="on_top_of_shelf2_l">
+      <virtual_volume name="on_top_of_sh2_l_vv">
+        <geometry>r
+          <box>
+            <size>0.26 0.27 0.21</size>
+          </box>
+        </geometry>
+        <pose>0.0 -0.4 0.61 0 0 0</pose>
+      </virtual_volume>
+    </link>
+     <link name="on_top_of_shelf3_l">
+      <virtual_volume name="on_top_of_sh3_l_vv">
+        <geometry>r
+          <box>
+            <size>0.26 0.27 0.22</size>
+          </box>
+        </geometry>
+        <pose>0.0 -0.4 0.9 0 0 0</pose>
+      </virtual_volume>
+    </link>
+     <link name="on_top_of_shelf4_l">
+      <virtual_volume name="on_top_of_sh4_l_vv">
+        <geometry>r
+          <box>
+            <size>0.26 0.27 0.26</size>
+          </box>
+        </geometry>
+        <pose>0.0 -0.4 1.25 0 0 0</pose>
+      </virtual_volume>
+    </link>
+     <link name="on_top_of_shelf5_l">
+      <virtual_volume name="on_top_of_sh5_l_vv">
+        <geometry>r
+          <box>
+            <size>0.26 0.27 0.15</size>
+          </box>
+        </geometry>
+        <pose>0.0 -0.4 1.53 0 0 0</pose>
       </virtual_volume>
     </link>
   </model>

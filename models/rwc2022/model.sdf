@@ -284,6 +284,10 @@
       <pose>3.7 4.7 0 0 0 -2.33</pose>
       <static>true</static>
     </model>
+    <model name="outro_point" type="waypoint">
+      <pose>3.0 3.0 0 0 0 3.14159265358979323846</pose>
+      <static>true</static>
+    </model>
     <physics type="ode">
       <real_time_update_rate>333.0</real_time_update_rate>
       <max_step_size>0.003</max_step_size>

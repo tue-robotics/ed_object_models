@@ -218,9 +218,19 @@
       <pose>0.5 3.25 0 0 0 0</pose>
       <static>true</static>
     </model>
-    <model name="victim" type="waypoint">
-      <pose>6.7 1.7 0 0 0 0</pose>
-      <static>true</static>
+    <model name="victim" type="waypoint">   
+      <link name="in_front_of">
+        <virtual_volume name="in_front_of">
+          <geometry>
+            <cylinder>
+              <length>1.8</length>
+              <radius>0.5</radius>
+            </cylinder>
+          </geometry>
+          <pose>0.0 0.0 0.0 0 0 0</pose>
+        </virtual_volume>
+      </link>
+    <pose>6.7 1.7 0 0 0 0</pose>
     </model>
     <model name="take_out_garbage_drop_zone" type="waypoint">
       <pose>0.5 6.5 0 0 0 3.14159265358979323846</pose>

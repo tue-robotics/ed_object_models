@@ -23,10 +23,10 @@
       <virtual_volume name="on_top_of_vv">
         <geometry>
           <box>
-            <size>0.26 1.41 0.25</size>
+            <size>0.26 1.41 0.35</size>
           </box>
         </geometry>
-        <pose>0.0 0.0 1.075 0 0 0</pose>
+        <pose>0.0 0.0 1.125 0 0 0</pose>
       </virtual_volume>
     </link>
     <link name="in_front_of">

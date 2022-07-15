@@ -247,7 +247,7 @@
       <static>true</static>
     </model>
     <model name="where_is_this_information_point" type="waypoint">
-      <pose>2 3.25 0 0 0 0</pose> <!-- Update pose when challenge pose is defined -->
+      <pose>3.5 8.5 0 0 0 1.57</pose>
       <static>true</static>
     </model>
     <model name="initial_pose_receptionist" type="waypoint">

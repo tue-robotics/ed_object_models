@@ -216,5 +216,25 @@
         <pose>0.64 0.0 0.005 0 0 0</pose>
       </virtual_volume>
     </link>
+    <link name="in_front_of_l">
+      <virtual_volume name="in_front_of_r_vv">
+        <geometry>
+          <box>
+            <size>0.19999999999999996 0.5 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.64 0.0 0.005 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="in_front_of_r">
+      <virtual_volume name="in_front_of_r_vv">
+        <geometry>
+          <box>
+            <size>0.19999999999999996 0.5 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.64 0.0 0.005 0 0 0</pose>
+      </virtual_volume>
+    </link>
   </model>
 </sdf>

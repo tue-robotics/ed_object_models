@@ -285,11 +285,11 @@
       <static>true</static>
     </model>
     <model name="outro_point" type="waypoint">
-      <pose>3.0 3.0 0 0 0 3.14159265358979323846</pose>
+      <pose>1.0 3.25 0 0 0 3.14159265358979323846</pose>
       <static>true</static>
     </model>
     <model name="outro_exit_point" type="waypoint">
-      <pose>0.0 3.25 0 0 0 3.14159265358979323846</pose>
+      <pose>-1.0 3.25 0 0 0 3.14159265358979323846</pose>
       <static>true</static>
     </model>
     <physics type="ode">

@@ -72,7 +72,7 @@
       <uri>model://rwc2022/salon_table</uri>
     </include>
     <include>
-      <pose>0.85 5.10 0 0 0 0</pose>
+      <pose>5.2 0.9 0 0 0 1.57079632679</pose>
       <name>tv</name>
       <uri>model://rwc2022/black_cabinet2</uri>
     </include>

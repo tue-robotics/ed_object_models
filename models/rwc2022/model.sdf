@@ -230,7 +230,7 @@
           <pose>0.0 0.0 0.0 0 0 0</pose>
         </virtual_volume>
       </link>
-    <pose>6.7 1.7 0 0 0 0</pose>
+    <pose>7.6 4.2 0 0 0 0</pose>
     </model>
     <model name="take_out_garbage_drop_zone" type="waypoint">
       <pose>0.5 6.5 0 0 0 3.14159265358979323846</pose>

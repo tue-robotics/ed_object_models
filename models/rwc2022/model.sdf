@@ -181,6 +181,20 @@
       <pose>6.75 7.15 0.0 0 0 0</pose>
       <static>true</static>
     </model>
+        <model name="final" type="room">
+      <link name="in">
+        <virtual_volume name="in_vv">
+          <geometry>
+            <box>
+              <size>4.4 9.0 2.5</size>
+            </box>
+          </geometry>
+          <pose> 0.0 0.0 0.8 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <pose>6.8 4.5 0.0 0 0 0</pose>
+      <static>true</static>
+    </model>
     <!-- waypoints -->
     <model name="initial_pose" type="waypoint">
       <pose>-0.5 3.25 0 0 0 0</pose>
@@ -218,7 +232,7 @@
       <pose>0.5 3.25 0 0 0 0</pose>
       <static>true</static>
     </model>
-    <model name="victim" type="waypoint">   
+    <model name="victim" type="waypoint">
       <link name="in_front_of">
         <virtual_volume name="in_front_of">
           <geometry>

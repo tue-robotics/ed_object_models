@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<sdf version="1.7">
+<sdf version="1.6">
   <model name="table_ahrend_180x90x75_with_drawers">
     <link name="1_link">
       <collision name="1_col">

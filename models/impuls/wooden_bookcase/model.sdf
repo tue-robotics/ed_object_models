@@ -1,0 +1,192 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="impuls/wooden_bookcase">
+    <static>true</static>
+    <link name="1_link">
+      <collision name="1_col">
+        <geometry>
+          <box>
+            <size>0.328 0.025 1.415</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="1_vis">
+        <geometry>
+          <box>
+            <size>0.328 0.025 1.415</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 -0.1785 0.7075 0 0 0</pose>
+    </link>
+    <link name="2_link">
+      <collision name="2_col">
+        <geometry>
+          <box>
+            <size>0.328 0.025 1.415</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="2_vis">
+        <geometry>
+          <box>
+            <size>0.328 0.025 1.415</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 0.1785 0.7075 0 0 0</pose>
+    </link>
+    <link name="3_link">
+      <collision name="3_col">
+        <geometry>
+          <box>
+            <size>0.025 0.382 1.415</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="3_vis">
+        <geometry>
+          <box>
+            <size>0.025 0.382 1.415</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>-0.1515 0.0 0.7075 0 0 0</pose>
+    </link>
+    <link name="4_link">
+      <collision name="4_col">
+        <geometry>
+          <box>
+            <size>0.303 0.332 0.025</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="4_vis">
+        <geometry>
+          <box>
+            <size>0.303 0.332 0.025</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0125 0.0 1.4025 0 0 0</pose>
+    </link>
+    <link name="5_link">
+      <collision name="5_col">
+        <geometry>
+          <box>
+            <size>0.303 0.332 0.025</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="5_vis">
+        <geometry>
+          <box>
+            <size>0.303 0.332 0.025</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0125 0.0 0.0125 0 0 0</pose>
+    </link>
+    <link name="6_link">
+      <collision name="6_col">
+        <geometry>
+          <box>
+            <size>0.303 0.332 0.015</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="6_vis">
+        <geometry>
+          <box>
+            <size>0.303 0.332 0.015</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0125 0.0 0.3655 0 0 0</pose>
+    </link>
+    <link name="7_link">
+      <collision name="7_col">
+        <geometry>
+          <box>
+            <size>0.303 0.332 0.015</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="7_vis">
+        <geometry>
+          <box>
+            <size>0.303 0.332 0.015</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0125 0.0 0.7115 0 0 0</pose>
+    </link>
+    <link name="8_link">
+      <collision name="8_col">
+        <geometry>
+          <box>
+            <size>0.303 0.332 0.015</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="8_vis">
+        <geometry>
+          <box>
+            <size>0.303 0.332 0.015</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0125 0.0 1.0575 0 0 0</pose>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of_vv">
+        <geometry>
+          <box>
+            <size>0.20000000000000007 0.182 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.6639999999999999 0.0 0.005 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="shelf1">
+      <virtual_volume name="shelf1_vv">
+        <geometry>
+          <box>
+            <size>0.28300000000000003 0.272 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.012500000000000011 0.0 0.16999999999999998 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="shelf2">
+      <virtual_volume name="shelf2_vv">
+        <geometry>
+          <box>
+            <size>0.28300000000000003 0.272 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.012500000000000011 0.0 0.518 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="shelf3">
+      <virtual_volume name="shelf3_vv">
+        <geometry>
+          <box>
+            <size>0.28300000000000003 0.272 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.012500000000000011 0.0 0.864 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="shelf4">
+      <virtual_volume name="shelf4_vv">
+        <geometry>
+          <box>
+            <size>0.28300000000000003 0.272 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.012500000000000011 0.0 1.21 0 0 0</pose>
+      </virtual_volume>
+    </link>
+  </model>
+</sdf>

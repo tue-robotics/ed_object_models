@@ -1,15 +1,15 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <sdf version="1.6">
   <model name="rwc2019/bed">
-    <link name="1">
-      <collision name="1">
+    <link name="1_link">
+      <collision name="1_col">
         <geometry>
           <box>
             <size>0.76 2.42 0.1</size>
           </box>
         </geometry>
       </collision>
-      <visual name="1">
+      <visual name="1_vis">
         <geometry>
           <box>
             <size>0.76 2.42 0.1</size>
@@ -18,15 +18,15 @@
       </visual>
       <pose>0.0 0.0 0.75 0 0 0</pose>
     </link>
-    <link name="2">
-      <collision name="2">
+    <link name="2_link">
+      <collision name="2_col">
         <geometry>
           <box>
             <size>0.1 2.42 0.7</size>
           </box>
         </geometry>
       </collision>
-      <visual name="2">
+      <visual name="2_vis">
         <geometry>
           <box>
             <size>0.1 2.42 0.7</size>
@@ -36,7 +36,7 @@
       <pose>0.33 0.0 0.45 0 0 0</pose>
     </link>
     <link name="on_top_of">
-      <virtual_volume name="on_top_of">
+      <virtual_volume name="on_top_of_vv">
         <geometry>
           <box>
             <size>0.72 2.36 0.25</size>
@@ -46,7 +46,7 @@
       </virtual_volume>
     </link>
     <link name="in_front_of">
-      <virtual_volume name="in_front_of">
+      <virtual_volume name="in_front_of_vv">
         <geometry>
           <box>
             <size>0.2 2.22 0.01</size>

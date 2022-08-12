@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <sdf version="1.6">
   <world name="rgo2017">
     <light name="sun" type="directional">
@@ -16,7 +16,7 @@
     </light>
     <model name="living_room" type="room">
       <link name="in">
-        <virtual_volume name="in">
+        <virtual_volume name="in_vv">
           <geometry>
             <box>
               <size>3.95 3.7 0.01</size>
@@ -30,7 +30,7 @@
     </model>
     <model name="bedroom" type="room">
       <link name="in">
-        <virtual_volume name="in">
+        <virtual_volume name="in_vv">
           <geometry>
             <box>
               <size>4.5 4.65 0.01</size>
@@ -44,7 +44,7 @@
     </model>
     <model name="dining_room" type="room">
       <link name="in">
-        <virtual_volume name="in">
+        <virtual_volume name="in_vv">
           <geometry>
             <box>
               <size>4.76 4.79 0.01</size>
@@ -58,7 +58,7 @@
     </model>
     <model name="kitchen" type="room">
       <link name="in">
-        <virtual_volume name="in">
+        <virtual_volume name="in_vv">
           <geometry>
             <box>
               <size>6.0 3.3 0.01</size>
@@ -131,8 +131,8 @@
       <static>true</static>
     </model>
     <model name="trashbin">
-      <link name="1">
-        <collision name="1">
+      <link name="1_link">
+        <collision name="1_col">
           <geometry>
             <box>
               <size>0.43 0.33 0.33</size>
@@ -140,7 +140,7 @@
           </geometry>
           <pose>0.0 0.0 0.165 0 0 0</pose>
         </collision>
-        <visual name="1">
+        <visual name="1_vis">
           <geometry>
             <box>
               <size>0.43 0.33 0.33</size>
@@ -249,7 +249,8 @@
         <constraints>
           <cfm>0.0001</cfm>
         </constraints>
-        <solver type="quick">
+        <solver>
+          <type>quick</type>
           <iters>100</iters>
         </solver>
       </ode>

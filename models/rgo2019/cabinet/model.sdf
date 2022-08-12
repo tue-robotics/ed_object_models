@@ -1,16 +1,16 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <sdf version="1.6">
   <model name="rgo2019/cabinet">
-    <link name="1">
-      <collision name="1">
+    <link name="1_link">
+      <collision name="1_col">
         <geometry>
           <box>
-            <size></size>
+            <size/>
           </box>
         </geometry>
         <name>1</name>
       </collision>
-      <visual name="1">
+      <visual name="1_vis">
         <geometry>
           <box>
             <size>0.3 0.62 0.65</size>
@@ -21,8 +21,8 @@
       <pose>0.0 0.0 0.375 0 0 0</pose>
       <name>1</name>
     </link>
-    <link name="2">
-      <collision name="2">
+    <link name="2_link">
+      <collision name="2_col">
         <geometry>
           <box>
             <size>0.02 0.02 0.05</size>
@@ -30,7 +30,7 @@
         </geometry>
         <name>2</name>
       </collision>
-      <visual name="2">
+      <visual name="2_vis">
         <geometry>
           <box>
             <size>0.02 0.02 0.05</size>
@@ -41,8 +41,8 @@
       <pose>-0.14 -0.3 0.025 0 0 0</pose>
       <name>2</name>
     </link>
-    <link name="3">
-      <collision name="3">
+    <link name="3_link">
+      <collision name="3_col">
         <geometry>
           <box>
             <size>0.02 0.02 0.05</size>
@@ -50,7 +50,7 @@
         </geometry>
         <name>3</name>
       </collision>
-      <visual name="3">
+      <visual name="3_vis">
         <geometry>
           <box>
             <size>0.02 0.02 0.05</size>
@@ -61,8 +61,8 @@
       <pose>-0.14 0.3 0.025 0 0 0</pose>
       <name>3</name>
     </link>
-    <link name="4">
-      <collision name="4">
+    <link name="4_link">
+      <collision name="4_col">
         <geometry>
           <box>
             <size>0.02 0.02 0.05</size>
@@ -70,7 +70,7 @@
         </geometry>
         <name>4</name>
       </collision>
-      <visual name="4">
+      <visual name="4_vis">
         <geometry>
           <box>
             <size>0.02 0.02 0.05</size>
@@ -81,8 +81,8 @@
       <pose>0.14 -0.3 0.025 0 0 0</pose>
       <name>4</name>
     </link>
-    <link name="5">
-      <collision name="5">
+    <link name="5_link">
+      <collision name="5_col">
         <geometry>
           <box>
             <size>0.02 0.02 0.05</size>
@@ -90,7 +90,7 @@
         </geometry>
         <name>5</name>
       </collision>
-      <visual name="5">
+      <visual name="5_vis">
         <geometry>
           <box>
             <size>0.02 0.02 0.05</size>
@@ -102,7 +102,7 @@
       <name>5</name>
     </link>
     <link name="on_top_of">
-      <virtual_volume name="on_top_of">
+      <virtual_volume name="on_top_of_vv">
         <geometry>
           <box>
             <size>0.24 0.6 0.25</size>
@@ -114,7 +114,7 @@
       <name>on_top_of</name>
     </link>
     <link name="in_front_of">
-      <virtual_volume name="in_front_of">
+      <virtual_volume name="in_front_of_vv">
         <geometry>
           <box>
             <size>0.2 0.2 0.01</size>

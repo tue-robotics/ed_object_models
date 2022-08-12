@@ -9,14 +9,12 @@ from geometry_msgs.msg import Pose, Point, Quaternion
 from tf_conversions import transformations
 
 
-def get_sdf_string(model_type):
+def get_sdf_string(model_type: str) -> str:
     """
     Get sdf string of a specific model. Searching in GAZEBO_MODEL_PATH
 
     :param model_type: name of the model
-    :type model_type: str
     :return: xml string, empty in case of error
-    :rtype: str
     """
     # Get paths in $GAZEBO_MODEL_PATH
     model_paths = os.environ["GAZEBO_MODEL_PATH"].split(os.pathsep)
@@ -51,12 +49,11 @@ def get_sdf_string(model_type):
         return f.read()
 
 
-def spawn_sdf_from_yaml(yaml_path):
+def spawn_sdf_from_yaml(yaml_path: str) -> None:
     """
     Spawns a list of sdf models from a yaml file into Gazebo.
 
     :param yaml_path: path to a yaml file.
-    :type yaml_path: str
 
     The yaml file that yaml_path points to should be a dictonary or a list of dictionaries.
     Each dictionary should at least contain the keys id, type, x, y and z,

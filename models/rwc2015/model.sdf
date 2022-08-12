@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <sdf version="1.6">
   <world name="rwc2015">
     <light name="sun" type="directional">
@@ -104,7 +104,7 @@
     </model>
     <model name="kitchen" type="room">
       <link name="in">
-        <virtual_volume name="in">
+        <virtual_volume name="in_vv">
           <geometry>
             <box>
               <size>4.1 4.2 0</size>
@@ -118,7 +118,7 @@
     </model>
     <model name="livingroom" type="room">
       <link name="in">
-        <virtual_volume name="in">
+        <virtual_volume name="in_vv">
           <geometry>
             <box>
               <size>5.6 7.85 0</size>
@@ -132,7 +132,7 @@
     </model>
     <model name="bedroom" type="room">
       <link name="in">
-        <virtual_volume name="in">
+        <virtual_volume name="in_vv">
           <geometry>
             <box>
               <size>5.6 2.85 0</size>
@@ -146,7 +146,7 @@
     </model>
     <model name="hallway" type="room">
       <link name="in">
-        <virtual_volume name="in">
+        <virtual_volume name="in_vv">
           <geometry>
             <box>
               <size>4.15 6.95 0</size>
@@ -291,7 +291,8 @@
         <constraints>
           <cfm>0.0001</cfm>
         </constraints>
-        <solver type="quick">
+        <solver>
+          <type>quick</type>
           <iters>100</iters>
         </solver>
       </ode>

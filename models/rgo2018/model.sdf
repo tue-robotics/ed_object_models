@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <sdf version="1.6">
   <world name="rgo2018">
     <light name="sun" type="directional">
@@ -16,7 +16,7 @@
     </light>
     <model name="living_room" type="room">
       <link name="in">
-        <virtual_volume name="in1">
+        <virtual_volume name="in1_vv">
           <geometry>
             <box>
               <size>3.0 2.5 0.01</size>
@@ -26,7 +26,7 @@
         </virtual_volume>
       </link>
       <link name="in">
-        <virtual_volume name="in1">
+        <virtual_volume name="in1_vv">
           <geometry>
             <box>
               <size>3.0 2.5 0.01</size>
@@ -40,7 +40,7 @@
     </model>
     <model name="bedroom" type="room">
       <link name="in">
-        <virtual_volume name="in">
+        <virtual_volume name="in_vv">
           <geometry>
             <box>
               <size>5.0 5.0 0.01</size>
@@ -54,7 +54,7 @@
     </model>
     <model name="dining_room" type="room">
       <link name="in">
-        <virtual_volume name="in">
+        <virtual_volume name="in_vv">
           <geometry>
             <box>
               <size>5 4.8 0.01</size>
@@ -68,7 +68,7 @@
     </model>
     <model name="kitchen" type="room">
       <link name="in">
-        <virtual_volume name="in1">
+        <virtual_volume name="in1_vv">
           <geometry>
             <box>
               <size>5.7 2.5 0.01</size>
@@ -78,7 +78,7 @@
         </virtual_volume>
       </link>
       <link name="in">
-        <virtual_volume name="in1">
+        <virtual_volume name="in1_vv">
           <geometry>
             <box>
               <size>5.7 2.5 0.01</size>
@@ -296,7 +296,8 @@
         <constraints>
           <cfm>0.0001</cfm>
         </constraints>
-        <solver type="quick">
+        <solver>
+          <type>quick</type>
           <iters>100</iters>
         </solver>
       </ode>

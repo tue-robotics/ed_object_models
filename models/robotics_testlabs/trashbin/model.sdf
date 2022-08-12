@@ -1,8 +1,8 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <sdf version="1.6">
   <model name="robotics_testlabs/trashbin">
-    <link name="1">
-      <collision name="1">
+    <link name="1_link">
+      <collision name="1_col">
         <geometry>
           <cylinder>
             <length>0.5</length>
@@ -10,7 +10,7 @@
           </cylinder>
         </geometry>
       </collision>
-      <visual name="1">
+      <visual name="1_vis">
         <geometry>
           <cylinder>
             <length>0.5</length>
@@ -22,7 +22,7 @@
     </link>
     <static>true</static>
     <link name="on_top_of">
-      <virtual_volume name="on_top_of">
+      <virtual_volume name="on_top_of_vv">
         <geometry>
           <box>
             <size>0.3 0.3 0.17</size>
@@ -32,7 +32,7 @@
       </virtual_volume>
     </link>
     <link name="in_front_of">
-      <virtual_volume name="in_front_of">
+      <virtual_volume name="in_front_of_vv">
         <geometry>
           <box>
             <size>0.05 0.05 0.01</size>

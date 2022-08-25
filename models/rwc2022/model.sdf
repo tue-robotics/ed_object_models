@@ -130,10 +130,10 @@
         <virtual_volume name="in_vv">
           <geometry>
             <box>
-              <size>4.20 5.00 2.5</size>
+              <size>4.50 5.30 2.5</size>
             </box>
           </geometry>
-          <pose> 0.15 0.15 0.8 0 0 0</pose>
+          <pose> 0.0 0.0 1.25 0 0 0</pose>
         </virtual_volume>
       </link>
       <pose>2.25 2.65 0.0 0 0 0</pose>

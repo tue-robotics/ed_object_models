@@ -251,6 +251,10 @@
       <static>true</static>
     </model>
     <model name="hand_me_that_office" type="waypoint">
+      <pose>4 8.6 0 0 0 -2.4</pose>
+      <static>true</static>
+    </model>
+    <model name="waypoint_office_final" type="waypoint">
       <pose>1 7 0 0 0 0</pose>
       <static>true</static>
     </model> <!-- 3.0 0.90 0 0 0 0 -->
@@ -291,10 +295,18 @@
       <static>true</static>
     </model>
     <model name="hand_me_that_kitchen" type="waypoint">
+      <pose>7.7 0.5 0 0 0 2.1</pose>
+      <static>true</static>
+    </model>
+    <model name="waypoint_final_kitchen" type="waypoint">
       <pose>5 2.5 0 0 0 1.57</pose>
       <static>true</static>
     </model>
     <model name="hand_me_that_living_room" type="waypoint">
+      <pose>3.7 4.7 0 0 0 -2.33</pose>
+      <static>true</static>
+    </model>
+    <model name="waypoint_final_living_room" type="waypoint">
       <pose>3.7 4.7 0 0 0 -2.33</pose>
       <static>true</static>
     </model>

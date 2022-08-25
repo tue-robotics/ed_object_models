@@ -128,7 +128,7 @@
             <size>0.19999999999999996 0.2975 0.01</size>
           </box>
         </geometry>
-        <pose>1.375 0.0 0.005 0 0 0</pose>
+        <pose>1.075 0.0 0.005 0 0 0</pose>
       </virtual_volume>
     </link>
     <link name="shelf1">

@@ -97,6 +97,11 @@
       <uri>model://rwc2022/trashbin</uri>
     </include>
     <include>
+      <pose>8.66 1.39 0 0 0 3.14159265358979323846</pose>
+      <name>fridge</name>
+      <uri>model://rwc2022/fridge</uri>
+    </include>
+    <include>
       <pose>5.30 5.16 0 0 0 -1.57079632679</pose>
       <name>pantry</name>
       <uri>model://rwc2022/official_pantry</uri>

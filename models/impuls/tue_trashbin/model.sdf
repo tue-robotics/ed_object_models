@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="impuls/tue_trashbin">
+    <static>true</static>
+    <link name="1_link">
+      <collision name="1_col">
+        <geometry>
+          <box>
+            <size>0.55 0.4 0.04</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="1_vis">
+        <geometry>
+          <box>
+            <size>0.55 0.4 0.04</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 0.0 0.02 0 0 0</pose>
+    </link>
+    <link name="2_link">
+      <collision name="2_col">
+        <geometry>
+          <box>
+            <size>0.59 0.46 0.505</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="2_vis">
+        <geometry>
+          <box>
+            <size>0.59 0.46 0.505</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 0.0 0.2925 0 0 0</pose>
+    </link>
+    <link name="3_link">
+      <collision name="3_col">
+        <geometry>
+          <box>
+            <size>0.59 0.26 0.94</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="3_vis">
+        <geometry>
+          <box>
+            <size>0.59 0.26 0.94</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 -0.143 0.52 0.09 0 0</pose>
+    </link>
+    <link name="4_link">
+      <collision name="4_col">
+        <geometry>
+          <box>
+            <size>0.59 0.26 0.88</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="4_vis">
+        <geometry>
+          <box>
+            <size>0.59 0.26 0.88</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 0.14 0.49 -0.09 0 0</pose>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of_vv">
+        <geometry>
+          <box>
+            <size>0.2 0.25 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.795 0.0 0.005 0 0 0</pose>
+      </virtual_volume>
+    </link>
+  </model>
+</sdf>

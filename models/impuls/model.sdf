@@ -77,7 +77,7 @@
       <uri>model://impuls/couch_long</uri>
     </include>
     <include>
-      <pose>10.80 0.0 0 0 0 0</pose>
+      <pose>10.80 0.0 0 0 0 1.57079632679</pose>
       <name>couch_short</name>
       <uri>model://impuls/couch_short</uri>
     </include>

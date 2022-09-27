@@ -87,6 +87,11 @@
       <uri>model://rgo2017/table_salon</uri>
     </include>
     <include>
+      <pose>9.30 2.43 0 0 0 -1.57079632679</pose>
+      <name>trashbin_high</name>
+      <uri>model://impuls/tue_trashbin</uri>
+    </include>
+    <include>
       <pose>7.32 0.5 0 0 0 3.14159265359</pose>
       <name>door</name>
       <uri>model://door_wooden</uri>

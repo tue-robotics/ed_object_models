@@ -67,12 +67,12 @@
       <uri>model://impuls/kitchen</uri>
     </include>
     <include>
-      <pose>12.9 -0.25 0 0 0 0</pose>
+      <pose>12.9 -0.25 0 0 0 3.14159265359</pose>
       <name>fridge</name>
       <uri>model://impuls/fridge</uri>
     </include>
     <include>
-      <pose>10.80 2.36 0 0 0 0</pose>
+      <pose>10.80 2.30 0 0 0 0</pose>
       <name>couch_long</name>
       <uri>model://impuls/couch_long</uri>
     </include>
@@ -82,7 +82,7 @@
       <uri>model://impuls/couch_short</uri>
     </include>
     <include>
-      <pose>10.80 1.15 0 0 0 0</pose>
+      <pose>10.80 1.15 0 0 0 3.14159265359</pose>
       <name>salon_table</name>
       <uri>model://rgo2017/table_salon</uri>
     </include>

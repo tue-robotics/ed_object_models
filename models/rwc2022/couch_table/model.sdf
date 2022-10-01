@@ -135,7 +135,7 @@
       <virtual_volume name="in_front_of_vv">
         <geometry>
           <box>
-            <size>0.19999999999999996 0.45 0.01</size>
+            <size>0.2 0.45 0.01</size>
           </box>
         </geometry>
         <pose>0.775 0.0 0.005 0 0 0</pose>

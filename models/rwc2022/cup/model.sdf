@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="rwc2022/cup">
+    <link name="1_link">
+      <collision name="1_col">
+        <geometry>
+          <cylinder>
+            <length>0.10</length>
+            <radius>0.04</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="1_vis">
+        <geometry>
+          <cylinder>
+            <length>0.10</length>
+            <radius>0.04</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+      <pose>0 0 0.05 0 0 0</pose>
+    </link>
+    <link name="2_link">
+      <collision name="2_col">
+        <geometry>
+          <box>
+            <size>0.03 0.01 0.05</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="2_vis">
+        <geometry>
+          <box>
+            <size>0.04 0.01 0.05</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.06 0 0.075 0 0 0</pose>
+    </link>
+    <static>true</static>
+  </model>
+</sdf>

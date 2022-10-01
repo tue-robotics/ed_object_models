@@ -12,6 +12,9 @@ from subprocess import check_call
 from collections import OrderedDict
 
 
+ROUND_LEVEL = 4  # Level of rounding
+
+
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -120,13 +123,13 @@ def read_geometry(shape_item: dict, model_name: str) -> Union[Tuple[dict, str, s
             size_x = yml_box_max["x"] - yml_box_min["x"]
             size_y = yml_box_max["y"] - yml_box_min["y"]
             size_z = yml_box_max["z"] - yml_box_min["z"]
-            box_size_list = [size_x, size_y, size_z]
+            box_size_list = map(lambda x: round(x, ROUND_LEVEL), [size_x, size_y, size_z])
             box_size = " ".join(map(str, box_size_list))
 
             pos_x = yml_box_min["x"] + float(size_x)/2
             pos_y = yml_box_min["y"] + float(size_y)/2
             pos_z = yml_box_min["z"] + float(size_z)/2
-            box_pose_list = [pos_x, pos_y, pos_z, 0, 0, 0]
+            box_pose_list = map(lambda x: round(x, ROUND_LEVEL), [pos_x, pos_y, pos_z, 0, 0, 0])
             geometry_pose = " ".join(map(str, box_pose_list))
 
             geometry["box"] = {"size": box_size}
@@ -589,7 +592,7 @@ def convert_model_file(model_name: str, model_file: str, recursive: bool = False
     # read yaml file
     with open(model_file, "r") as stream:
         try:
-            yml = yaml.load(stream)
+            yml = yaml.safe_load(stream)
         except yaml.YAMLError as e:
             print(bcolors.FAIL + bcolors.BOLD + "[{}] (YAML) ".format(model_name) + str(e) + bcolors.ENDC)
             return 1

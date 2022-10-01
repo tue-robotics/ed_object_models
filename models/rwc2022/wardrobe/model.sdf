@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rwc2022/wardrobe">
+    <static>true</static>
+    <link name="1_link">
+      <collision name="1_col">
+        <geometry>
+          <box>
+            <size>0.55 0.015 1.76</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="1_vis">
+        <geometry>
+          <box>
+            <size>0.55 0.015 1.76</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 -0.39 0.88 0 0 0</pose>
+    </link>
+    <link name="2_link">
+      <collision name="2_col">
+        <geometry>
+          <box>
+            <size>0.55 0.015 1.76</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="2_vis">
+        <geometry>
+          <box>
+            <size>0.55 0.015 1.76</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 0.39 0.88 0 0 0</pose>
+    </link>
+    <link name="3_link">
+      <collision name="3_col">
+        <geometry>
+          <box>
+            <size>0.015 0.795 1.76</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="3_vis">
+        <geometry>
+          <box>
+            <size>0.015 0.795 1.76</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>-0.2675 0.0 0.88 0 0 0</pose>
+    </link>
+    <link name="4_link">
+      <collision name="4_col">
+        <geometry>
+          <box>
+            <size>0.535 0.765 0.015</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="4_vis">
+        <geometry>
+          <box>
+            <size>0.535 0.765 0.015</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0075 0.0 1.7525 0 0 0</pose>
+    </link>
+    <link name="5_link">
+      <collision name="5_col">
+        <geometry>
+          <box>
+            <size>0.535 0.765 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="5_vis">
+        <geometry>
+          <box>
+            <size>0.535 0.765 0.02</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0075 0.0 0.455 0 0 0</pose>
+    </link>
+    <link name="6_link">
+      <collision name="6_col">
+        <geometry>
+          <box>
+            <size>0.535 0.765 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="6_vis">
+        <geometry>
+          <box>
+            <size>0.535 0.765 0.02</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0075 0.0 0.095 0 0 0</pose>
+    </link>
+    <link name="7_link">
+      <collision name="7_col">
+        <geometry>
+          <box>
+            <size>0.02 0.77 0.9</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="7_vis">
+        <geometry>
+          <box>
+            <size>0.02 0.77 0.09</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.26 0.0 0.045 0 0 0</pose>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of_vv">
+        <geometry>
+          <box>
+            <size>0.2 0.2975 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.775 0.0 0.005 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="shelf1">
+      <virtual_volume name="shelf1_vv">
+        <geometry>
+          <box>
+            <size>0.515 0.705 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.0075 0.0 0.25 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="shelf2">
+      <virtual_volume name="shelf2_vv">
+        <geometry>
+          <box>
+            <size>0.515 0.705 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.0075 0.0 0.61 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of_vv">
+        <geometry>
+          <box>
+            <size>0.515 0.705 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.0075 0.0 0.61 0 0 0</pose>
+      </virtual_volume>
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+    <model name="impuls/axis_rotation_door">
+        <static>false</static>
+        <!--make a heavy base for the rotation of the door-->
+        <link name="heavy_base">
+			<!-- position the base such that the bottom touches the floor -->
+			<pose>0 -0.35 0.05 0 0 0</pose>
+			<inertial>
+				<mass>200</mass>
+				<!-- kg -->
+				<inertia>
+					<!-- (mass / 12) * (y*y + z*z) -->
+					<ixx>8.4167</ixx>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<!-- (mass / 12) * (x*x + z*z) -->
+					<iyy>40.417</iyy>
+					<iyz>0</iyz>
+					<!-- (mass / 12) * (y*y + x*x) -->
+					<izz>48.667</izz>
+				</inertia>
+			</inertial>
+			<!-- Same geometry as visual -->
+			<collision name="heavy_base_collision">
+				<geometry>
+					<box>
+						<size>0.3 0.1 0.1</size>
+					</box>
+				</geometry>
+			</collision>
+			<!-- Same geometry as collision -->
+			<visual name="heavy_base_visual">
+				<geometry>
+					<box>
+						<size>0.3 0.1 0.1</size>
+					</box>
+				</geometry>
+			</visual>
+		</link>
+        <!--make an axis of rotation-->
+        <link name="axis_rotation_link">
+            <pose>0 -0.35 1.05 0 0 0</pose>
+            <collision name="axis_rotation_visual">
+                <geometry>
+                    <cylinder>
+                            <length>1.90</length>
+                            <radius>0.01</radius>
+                    </cylinder>
+                </geometry>
+            </collision> 
+            <visual name="axis_rotation_visual">
+                <geometry>
+                    <cylinder>
+                            <length>1.90</length>
+                            <radius>0.01</radius>
+                    </cylinder>
+                </geometry>
+            </visual> 
+        </link>
+        <!--joint between axis of rotation and heavy base. They are fixed according to each other-->
+        <joint name="avis_totation_link_to_heavy_base" type="fixed">
+			<parent>heavy_base</parent>
+			<child>axis_rotation_link</child>
+		</joint>
+        <!--make the door, it is juste a rectangle-->
+        <link name="door_link"> 
+            <pose>0 0.01 1.05 0 0 0</pose>
+            <collision name="door_collision">
+                <geometry>
+                    <box>
+                        <size>0.05 0.8 1.80</size>
+                    </box>
+                </geometry>
+            </collision>
+            <visual name="door_visual">
+                <geometry>
+                <box>
+                    <size>0.05 0.8 1.80</size>
+                </box>
+                </geometry>
+            </visual>
+        </link>
+        <!--joint between the door and the axis of rotation. There is a rotation according to the z axis-->
+        <joint name="door_link_to_axis_link" type="revolute">
+			<parent>axis_rotation_link</parent>
+			<child>door_link</child>
+            <axis>
+                <xyz>0 0 1</xyz>
+                <dynamics>
+                    <damping>0.5</damping>
+                </dynamics>
+                <!-- <use_parent_model_frame>1</use_parent_model_frame> -->
+                <limit>
+                    <lower>-0.1</lower>
+                    <upper>3.14159265</upper>
+                    <effort>10</effort>
+                    <velocity>-1</velocity>
+                </limit>
+            </axis>
+            <pose>0 -0.35 0 0 0 0</pose>
+		</joint>
+        <!--make a handle-->
+        <!--axis of rotation of the handle-->
+        <link name="handle_rotation_link">
+            <pose>0.065 0.35 0.9 0 1.6 0</pose>
+            <collision name="handle_rotation_collision">
+                <geometry>
+                    <cylinder>
+                        <length>0.08</length>
+                        <radius>0.02</radius>
+                    </cylinder>     
+                </geometry>
+            </collision>
+            <visual name="handle_rotation_visual">
+                <geometry>
+                    <cylinder>
+                        <length>0.08</length>
+                        <radius>0.02</radius>
+                    </cylinder>
+                </geometry>
+            </visual>
+        </link>
+        <!--joint between the rotation axis of the handle and the door-->
+        <joint name="handle_rotation_link_to_door_link" type="fixed">
+			<parent>door_link</parent>
+			<child>handle_rotation_link</child>
+		</joint>
+        <!--grabbing part of the handle-->
+        <link name="handle_grabbing_link">
+            <pose>0.125 0.22 0.9 1.6 0 0</pose>
+            <collision name="handle_collision">
+                <geometry>
+                    <cylinder>
+                        <length>0.3</length>
+                        <radius>0.02</radius>
+                    </cylinder>
+                </geometry>
+            </collision>
+            <visual name="handle_visual">
+                <geometry>
+                    <cylinder>
+                        <length>0.3</length>
+                        <radius>0.02</radius>
+                    </cylinder>
+                </geometry>
+            </visual>
+        </link>
+        <!--joint between the axis of the handle and the grabbing part of the handle-->
+        <joint name="handle_grabbing_link_to_handle_rotation_link" type="revolute">
+			<parent>handle_rotation_link</parent>
+			<child>handle_grabbing_link</child>
+            <axis>
+                <xyz>1 0 0</xyz>
+                <dynamics>
+                    <damping>0.5</damping>
+                </dynamics>
+                <use_parent_model_frame>1</use_parent_model_frame>
+                <limit>
+                    <lower>-0.1</lower>
+                    <upper>3.14159265</upper>
+                    <effort>10</effort>
+                    <velocity>-1</velocity>
+                </limit>
+            </axis>
+            <pose>0.125 0.35 0 0 0 0</pose>
+		</joint>
+
+    </model>
+</sdf>

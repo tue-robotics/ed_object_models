@@ -1,5 +1,6 @@
 from typing import List, Mapping, Optional, Tuple, Union
 
+from contextlib import contextmanager
 from os import getenv, path, rename, pathsep, makedirs
 import glob
 import re
@@ -13,6 +14,7 @@ from collections import OrderedDict
 
 
 ROUND_LEVEL = 4  # Level of rounding
+LAST_MODEL_FILE = ""
 
 
 class bcolors:
@@ -26,6 +28,15 @@ class bcolors:
     UNDERLINE = "\033[4m"
 
 
+@contextmanager
+def last_model_file(model_file: str):
+    global LAST_MODEL_FILE
+    old_last_model_file = LAST_MODEL_FILE
+    LAST_MODEL_FILE = model_file
+    yield
+    LAST_MODEL_FILE = old_last_model_file
+
+
 def get_model_path(model_name: str, ext: str = "yaml") -> str:
     """
     Checks for model file in ED_MODEL_PATH
@@ -37,18 +48,34 @@ def get_model_path(model_name: str, ext: str = "yaml") -> str:
     ed_model_paths = getenv("ED_MODEL_PATH").split(pathsep)
     if ext == "sdf":
         for ed_model_path in ed_model_paths:
-            model_path = ed_model_path + "/{}/model*.{}".format(model_name, ext)
+            model_path = path.join(ed_model_path, model_name, f"model*.{ext}")
             files = glob.glob(model_path)
             if len(files) != 0:
                 return files[-1]
 
     else:
         for ed_model_path in ed_model_paths:
-            model_path = ed_model_path + "/{}/model.{}".format(model_name, ext)
+            model_path = path.join(ed_model_path, model_name, f"model.{ext}")
             if path.isfile(model_path):
                 return model_path
 
     return ""
+
+
+def resolve_file(file_str: str) -> str:
+    """
+    Resolve filepaths with possible '$(file REL_FILE_PATH)'. Relative paths are resolved to last opened yaml file
+
+    :param file_str: string to resolve
+    :return: Resolved file path
+    """
+    file_str = file_str.strip()
+    if not file_str.startswith("$(file"):
+        return file_str
+
+    rel_file = file_str.lstrip("$(file").lstrip().rstrip(")")
+    global LAST_MODEL_FILE
+    return path.join(path.dirname(LAST_MODEL_FILE), rel_file)
 
 
 def unique_name(name: str, names: List[str]) -> str:
@@ -89,6 +116,21 @@ def read_pose(yaml_data: Mapping) -> str:
                 pose[v] = yaml_data["pose"][k]
 
     return " ".join(map(str, pose))
+
+
+def create_heightmap(model_name: str, image_path: str, resolution: float, height: float, x: float, y: float) -> str:
+    mesh_path = f"{path.splitext(image_path)[0]}.stl"
+    try:
+        check_call(
+            f"rosrun ed ed_heightmap_to_mesh {image_path} {mesh_path} {resolution} {height} {x} {y}",
+            executable="/bin/bash",
+            shell=True,
+        )
+    except Exception as e:
+        print(f"{bcolors.FAIL}{bcolors.BOLD}[{model_name}] {e}{bcolors.ENDC}")
+        raise
+
+    return mesh_path
 
 
 def read_geometry(shape_item: Mapping, model_name: str) -> Union[Tuple[Mapping, str, str], Tuple[None, None, None]]:
@@ -145,30 +187,40 @@ def read_geometry(shape_item: Mapping, model_name: str) -> Union[Tuple[Mapping, 
             points.append(" ".join(map(str, point.values())))
         geometry["polyline"] = {"point": points, "height": yml_polygon["height"]}
 
-    elif "path" in shape_item and "blockheight" in shape_item:
+    elif "heightmap" in shape_item:
+        heightmap = shape_item["heightmap"]
+        model_folder = path.dirname(get_model_path(model_name))
+        image_path = resolve_file(heightmap["image"])
+        if not image_path.startswith("/"):
+            image_path = path.join(model_folder, image_path)
 
+        mesh_path = create_heightmap(
+            model_name,
+            image_path,
+            heightmap["resolution"],
+            heightmap["height"],
+            heightmap["pose"]["x"],
+            heightmap["pose"]["y"],
+        )
+
+        sdf_mesh = {"uri": f"model://{model_name}/{path.relpath(mesh_path, model_folder)}"}
+        geometry["mesh"] = sdf_mesh
+
+    elif "path" in shape_item and "blockheight" in shape_item:
         # If there is a path and a blockheight in the shape_item, then there is a heightmap included in the yaml file
         model_folder = path.dirname(get_model_path(model_name))
-        image_path = model_folder + "/{}".format(shape_item["path"])
-        mesh_path = "{}.stl".format(path.splitext(image_path)[0])
+        image_path = resolve_file(shape_item["path"])
+        if not image_path.startswith("/"):
+            image_path = path.join(model_folder, image_path)
 
-        # Execute ImageMagick command to invert the image
-        try:
-            check_call(
-                "rosrun ed ed_heightmap_to_mesh {} {} {} {} {} {}".format(
-                    image_path,
-                    mesh_path,
-                    shape_item["resolution"],
-                    shape_item["blockheight"],
-                    shape_item["origin_x"],
-                    shape_item["origin_y"],
-                ),
-                executable="/bin/bash",
-                shell=True,
-            )
-        except Exception as e:
-            print(f"{bcolors.FAIL}{bcolors.BOLD}[{model_name}] {e}{bcolors.ENDC}")
-            raise
+        mesh_path = create_heightmap(
+            model_name,
+            image_path,
+            shape_item["resolution"],
+            shape_item["blockheight"],
+            shape_item["origin_x"],
+            shape_item["origin_y"],
+        )
 
         sdf_mesh = {"uri": f"model://{model_name}/{path.relpath(mesh_path, model_folder)}"}
         geometry["mesh"] = sdf_mesh
@@ -253,8 +305,15 @@ def read_shape(shape: Mapping, link_names: List[str], color: OrderedDict, model_
     """
     sdf_link = []
     # Check if compound type has name (inserted as comment in yaml)
-    if "compound" in shape:
-        for item in shape["compound"]:
+    keys = [key for key in ["compound", "group"] if key in shape]
+    if keys:
+        if len(keys) > 1:
+            print(
+                f"{bcolors.FAIL}[{model_name}] Error during reading shape data: Both 'compound' and 'group' "
+                f"are defined{bcolors.ENDC}"
+            )
+            return None
+        for item in shape[keys[0]]:
             shape_item = read_shape_item(item, link_names, color, model_name)
             if shape_item is None:
                 print(f"{bcolors.FAIL}[{model_name}] Error during compound shape parsing{bcolors.ENDC}")
@@ -607,14 +666,15 @@ def convert_model_file(model_name: str, model_file: str, recursive: bool = False
     model_dir = path.dirname(model_file)
 
     # read yaml file
-    with open(model_file, "r") as stream:
-        try:
-            yml = yaml.safe_load(stream)
-        except yaml.YAMLError as e:
-            print(f"{bcolors.FAIL}{bcolors.BOLD}[{model_name}] (YAML) {e}{bcolors.ENDC}")
-            return 1
+    with last_model_file(model_file):
+        with open(model_file, "r") as stream:
+            try:
+                yml = yaml.safe_load(stream)
+            except yaml.YAMLError as e:
+                print(f"{bcolors.FAIL}{bcolors.BOLD}[{model_name}] (YAML) {e}{bcolors.ENDC}")
+                return 1
 
-    return convert_model_data(yml, model_name, model_dir, recursive)
+        return convert_model_data(yml, model_name, model_dir, recursive)
 
 
 def convert_model_name(model_name: str, recursive: bool = False) -> int:

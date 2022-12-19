@@ -1,4 +1,4 @@
-from typing import List, Optional, Tuple, Union
+from typing import List, Mapping, Optional, Tuple, Union
 
 from os import getenv, path, rename, pathsep, makedirs
 import glob
@@ -16,14 +16,14 @@ ROUND_LEVEL = 4  # Level of rounding
 
 
 class bcolors:
-    HEADER = '\033[95m'
-    OKBLUE = '\033[94m'
-    OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
-    FAIL = '\033[91m'
-    ENDC = '\033[0m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
+    HEADER = "\033[95m"
+    OKBLUE = "\033[94m"
+    OKGREEN = "\033[92m"
+    WARNING = "\033[93m"
+    FAIL = "\033[91m"
+    ENDC = "\033[0m"
+    BOLD = "\033[1m"
+    UNDERLINE = "\033[4m"
 
 
 def get_model_path(model_name: str, ext: str = "yaml") -> str:
@@ -62,7 +62,7 @@ def unique_name(name: str, names: List[str]) -> str:
     :return: unique name
     """
     while name in names or not name:
-        digits = re.search(r'\d+$', name)
+        digits = re.search(r"\d+$", name)
         if name and digits:
             digits = digits.group()
             n_digits = len(digits)
@@ -73,30 +73,30 @@ def unique_name(name: str, names: List[str]) -> str:
     return name
 
 
-def read_pose(yaml_dict: dict) -> str:
+def read_pose(yaml_data: Mapping) -> str:
     """
     converts pose in yaml dict to string of 6 coordinates.
 
-    :param yaml_dict: dict with possible pose as key on first level in dict
+    :param yaml_data: mapping with possible pose as key on first level
     :return: string with 6 coordinates
     """
     pose = [0, 0, 0, 0, 0, 0]
-    if "pose" in yaml_dict:
+    if "pose" in yaml_data:
         # Check if coordinates are in pose, if so overwrite default 0
         options = {"x": 0, "y": 1, "z": 2, "rx": 3, "ry": 4, "rz": 5, "X": 3, "Y": 4, "Z": 5}
         for k, v in options.items():
-            if k in yaml_dict["pose"]:
-                pose[v] = yaml_dict["pose"][k]
+            if k in yaml_data["pose"]:
+                pose[v] = yaml_data["pose"][k]
 
     return " ".join(map(str, pose))
 
 
-def read_geometry(shape_item: dict, model_name: str) -> Union[Tuple[dict, str, str], Tuple[None, None, None]]:
+def read_geometry(shape_item: Mapping, model_name: str) -> Union[Tuple[Mapping, str, str], Tuple[None, None, None]]:
     """
     Convert a shape item to a SDF geometry. With a possible pose offset. Which should be added to
     visual/collision/virtual_volume
 
-    :param shape_item: dict with shape description
+    :param shape_item: mapping with shape description
     :param model_name: name of current model being converted
     :return: tuple of geometry, link_pose and geometry_pose OR tuple of 3x None in case of error
     """
@@ -126,9 +126,9 @@ def read_geometry(shape_item: dict, model_name: str) -> Union[Tuple[dict, str, s
             box_size_list = map(lambda x: round(x, ROUND_LEVEL), [size_x, size_y, size_z])
             box_size = " ".join(map(str, box_size_list))
 
-            pos_x = yml_box_min["x"] + float(size_x)/2
-            pos_y = yml_box_min["y"] + float(size_y)/2
-            pos_z = yml_box_min["z"] + float(size_z)/2
+            pos_x = yml_box_min["x"] + float(size_x) / 2
+            pos_y = yml_box_min["y"] + float(size_y) / 2
+            pos_z = yml_box_min["z"] + float(size_z) / 2
             box_pose_list = map(lambda x: round(x, ROUND_LEVEL), [pos_x, pos_y, pos_z, 0, 0, 0])
             geometry_pose = " ".join(map(str, box_pose_list))
 
@@ -143,8 +143,7 @@ def read_geometry(shape_item: dict, model_name: str) -> Union[Tuple[dict, str, s
         for point in yml_polygon["points"]:
             point = OrderedDict(sorted(point.items()))
             points.append(" ".join(map(str, point.values())))
-        geometry["polyline"] = {"point": points,
-                                "height": yml_polygon["height"]}
+        geometry["polyline"] = {"point": points, "height": yml_polygon["height"]}
 
     elif "path" in shape_item and "blockheight" in shape_item:
 
@@ -155,41 +154,46 @@ def read_geometry(shape_item: dict, model_name: str) -> Union[Tuple[dict, str, s
 
         # Execute ImageMagick command to invert the image
         try:
-            check_call("rosrun ed ed_heightmap_to_mesh {} {} {} {} {} {}".
-                       format(image_path,
-                              mesh_path,
-                              shape_item["resolution"],
-                              shape_item["blockheight"],
-                              shape_item["origin_x"],
-                              shape_item["origin_y"]),
-                       executable="/bin/bash",
-                       shell=True)
+            check_call(
+                "rosrun ed ed_heightmap_to_mesh {} {} {} {} {} {}".format(
+                    image_path,
+                    mesh_path,
+                    shape_item["resolution"],
+                    shape_item["blockheight"],
+                    shape_item["origin_x"],
+                    shape_item["origin_y"],
+                ),
+                executable="/bin/bash",
+                shell=True,
+            )
         except Exception as e:
-            print(bcolors.FAIL + bcolors.BOLD + "[{}] ".format(model_name) + str(e) + bcolors.ENDC)
+            print(f"{bcolors.FAIL}{bcolors.BOLD}[{model_name}] {e}{bcolors.ENDC}")
             raise
 
-        sdf_mesh = {"uri": "model://{}/{}".format(model_name, path.relpath(mesh_path, model_folder))}
+        sdf_mesh = {"uri": f"model://{model_name}/{path.relpath(mesh_path, model_folder)}"}
         geometry["mesh"] = sdf_mesh
 
     elif "path" in shape_item and ".xml" in shape_item["path"]:
-        print(bcolors.WARNING +
-              "[{}] Conversion of XML shapes is not implemented, please convert to yaml manually first"
-              .format(model_name)
-              + bcolors.ENDC)
+        print(
+            f"{bcolors.WARNING}[{model_name}] Conversion of XML shapes is not implemented,"
+            f" please convert to yaml manually first{bcolors.ENDC}"
+        )
         return None, None, None
 
     else:
-        print(bcolors.FAIL + "[{}] No parsable shapes found".format(model_name) + bcolors.ENDC)
+        print(f"{bcolors.FAIL}[{model_name}] No parsable shapes found{bcolors.ENDC}")
         return None, None, None
 
     return geometry, link_pose, geometry_pose
 
 
-def read_shape_item(shape_item: dict, link_names: List[str], color: OrderedDict, model_name: str) -> Optional[dict]:
+def read_shape_item(
+    shape_item: Mapping, link_names: List[str], color: OrderedDict, model_name: str
+) -> Optional[Mapping]:
     """
     Convert shape item to a link with collision and visual elements
 
-    :param shape_item: dict of one shape item
+    :param shape_item: mapping of one shape item
     :param link_names: list of link names already used
     :param color: None or dict of rgb values (0-1.0)
     :param model_name: name of current model being converted
@@ -208,8 +212,7 @@ def read_shape_item(shape_item: dict, link_names: List[str], color: OrderedDict,
     geometry, link_pose, geometry_pose = read_geometry(shape_item, model_name)
 
     if geometry is None:
-        print(bcolors.FAIL + "[{}] Error during geometry parsing of shape:".format(model_name))
-        print(str(shape_item) + bcolors.ENDC)
+        print(f"{bcolors.FAIL}[{model_name}] Error during geometry parsing of shape:\n{shape_item}{bcolors.ENDC}")
         return None
 
     # Maybe have a default name for collision and visual instead of link name
@@ -225,10 +228,11 @@ def read_shape_item(shape_item: dict, link_names: List[str], color: OrderedDict,
         color_str = " ".join(map(str, color_list))
         sdf_link_item["visual"]["material"] = {"ambient": color_str}
     if "heightmap" in sdf_link_item["visual"]["geometry"]:
-        sdf_link_item["visual"]["geometry"]["heightmap"]["texture"] = \
-            {"diffuse": "file://media/materials/textures/grey.png",
-             "normal": "file://media/materials/textures/normal.png",
-             "size": 1}
+        sdf_link_item["visual"]["geometry"]["heightmap"]["texture"] = {
+            "diffuse": "file://media/materials/textures/grey.png",
+            "normal": "file://media/materials/textures/normal.png",
+            "size": 1,
+        }
         sdf_link_item["visual"]["geometry"]["heightmap"]["use_terrain_paging"] = "false"
 
     # pose
@@ -237,7 +241,7 @@ def read_shape_item(shape_item: dict, link_names: List[str], color: OrderedDict,
     return sdf_link_item
 
 
-def read_shape(shape: dict, link_names: List[str], color: OrderedDict, model_name: str) -> Optional[List]:
+def read_shape(shape: Mapping, link_names: List[str], color: OrderedDict, model_name: str) -> Optional[List]:
     """
     Convert (array of) shape(s) to list of SDF links
 
@@ -253,13 +257,13 @@ def read_shape(shape: dict, link_names: List[str], color: OrderedDict, model_nam
         for item in shape["compound"]:
             shape_item = read_shape_item(item, link_names, color, model_name)
             if shape_item is None:
-                print(bcolors.FAIL + "[{}] Error during compound shape parsing".format(model_name) + bcolors.ENDC)
+                print(f"{bcolors.FAIL}[{model_name}] Error during compound shape parsing{bcolors.ENDC}")
                 return None
             sdf_link.append(shape_item)
     else:
         shape_item = read_shape_item(shape, link_names, color, model_name)
         if shape_item is None:
-            print(bcolors.FAIL + "[{}] Error during single shape parsing".format(model_name) + bcolors.ENDC)
+            print(f"{bcolors.FAIL}[{model_name}] Error during single shape parsing{bcolors.ENDC}")
             return None
         sdf_link.append(shape_item)
 
@@ -277,7 +281,7 @@ def read_areas(areas: List, link_names: List[str], model_name: str) -> Optional[
     """
     sdf_link = []
     if not isinstance(areas, list):
-        print(bcolors.FAIL + "[{}] Areas should be a list".format(model_name) + bcolors.ENDC)
+        print(f"{bcolors.FAIL}[{model_name}] Areas should be a list{bcolors.FAIL}")
         return None
 
     area_names = []
@@ -288,14 +292,13 @@ def read_areas(areas: List, link_names: List[str], model_name: str) -> Optional[
 
         uname = unique_name(name, link_names)
         if not uname == name:
-            print(bcolors.BOLD + "Name of area has changed from '{}' to '{}'".format(name, uname) + bcolors.ENDC)
+            print(f"{bcolors.BOLD}Name of area has changed from '{name}' to '{uname}'{bcolors.ENDC}")
         sdf_link_item = {"name": uname}
 
         for shape_item in area["shape"]:
             geometry, link_pose, geometry_pose = read_geometry(shape_item, model_name)
             if geometry is None:
-                print(bcolors.FAIL + "[{}] Error during geometry parsing of area: {}".format(model_name, uname)
-                      + bcolors.ENDC)
+                print(f"{bcolors.FAIL}[{model_name}] Error during geometry parsing of area: {uname}{bcolors.ENDC}")
                 return None
             shape_name = unique_name(f"{uname}_vv", area_names)
             sdf_link_item["virtual_volume"] = {"name": shape_name, "geometry": geometry}
@@ -307,7 +310,7 @@ def read_areas(areas: List, link_names: List[str], model_name: str) -> Optional[
     return sdf_link
 
 
-def parse_to_xml(xml: ET.Element, item: Union[list, dict, str, float, int], list_name: str = "") -> None:
+def parse_to_xml(xml: ET.Element, item: Union[List, Mapping, str, float, int], list_name: str = "") -> None:
     """
     Extend XML with elements from a dict, list or a string.
     This takes SDF attribute/element rules into account
@@ -317,14 +320,15 @@ def parse_to_xml(xml: ET.Element, item: Union[list, dict, str, float, int], list
     :param list_name: name of list, needs to be passed on by parent for each element
     :raises: Exception: incorrect usage of argument or unknown class type
     """
-    if isinstance(item, list):
+    if isinstance(item, List):
         if not list_name:
-            raise Exception(bcolors.FAIL + "(parse_to_xml) list_name should be passed on by parent in case of a list"
-                            + bcolors.ENDC)
+            raise Exception(
+                bcolors.FAIL + "(parse_to_xml) list_name should be passed on by parent in case of a list" + bcolors.ENDC
+            )
         for v in item:
             child = ET.SubElement(xml, list_name)
             parse_to_xml(child, v)
-    elif isinstance(item, dict):
+    elif isinstance(item, Mapping):
         for k, v in item.items():
             # attributes
             attributes = ["version", "type"]  # children that are XML attributes in all SDF elements
@@ -343,8 +347,7 @@ def parse_to_xml(xml: ET.Element, item: Union[list, dict, str, float, int], list
     elif isinstance(item, str) or isinstance(item, float) or isinstance(item, int):
         xml.text = str(item)
     else:
-        raise Exception(bcolors.WARNING + "(parse_to_xml) Cannot not parse object type: '{}'".format(type(item))
-                        + bcolors.ENDC)
+        raise Exception(f"{bcolors.WARNING}(parse_to_xml) Cannot not parse object type: '{type(item)}'{bcolors.ENDC}")
 
 
 def write_xml_to_file(xml_element: ET.Element, filepath: str) -> None:
@@ -366,7 +369,7 @@ def write_xml_to_file(xml_element: ET.Element, filepath: str) -> None:
         f.write(pretty_xml_string)
 
 
-def convert_world(yml: dict, model_name: str, recursive: bool = False) -> dict:
+def convert_world(yml: Mapping, model_name: str, recursive: bool = False) -> Mapping:
     """
     Convert world yaml to sdf world dict
 
@@ -375,23 +378,33 @@ def convert_world(yml: dict, model_name: str, recursive: bool = False) -> dict:
     :param recursive: If true all included models are also converted
     :return: sdf dict of the model
     """
-    light = {"type": "directional", "name": "sun",
-             "cast_shadows": "true", "pose": "0 0 10 0 0 0", "diffuse": "0.8 0.8 0.8 1",
-             "specular": "0.2 0.2 0.2 1", "direction": "0.5 0.1 -0.9",
-             "attenuation": {"range": 1000, "constant": 0.9, "linear": 0.01, "quadratic": 0.001}}
-    physics = {"type": "ode", "real_time_update_rate": 333.0, "max_step_size": 0.003,
-               "ode": {"solver": {"type": "quick", "iters": 100}, "constraints": {"cfm": 0.0001}}}
+    light = {
+        "type": "directional",
+        "name": "sun",
+        "cast_shadows": "true",
+        "pose": "0 0 10 0 0 0",
+        "diffuse": "0.8 0.8 0.8 1",
+        "specular": "0.2 0.2 0.2 1",
+        "direction": "0.5 0.1 -0.9",
+        "attenuation": {"range": 1000, "constant": 0.9, "linear": 0.01, "quadratic": 0.001},
+    }
+    physics = {
+        "type": "ode",
+        "real_time_update_rate": 333.0,
+        "max_step_size": 0.003,
+        "ode": {"solver": {"type": "quick", "iters": 100}, "constraints": {"cfm": 0.0001}},
+    }
     world = {"name": model_name, "include": [], "model": [], "light": light, "physics": physics}
 
     world_include = world["include"]
     world_model = world["model"]
     if not isinstance(yml["composition"], list):
-        raise Exception(bcolors.FAIL + bcolors.BOLD + "[{}] composition should be a list".format(model_name)
-                        + bcolors.ENDC)
+        raise Exception(f"{bcolors.FAIL}{bcolors.BOLD}[{model_name}] composition should be a list{bcolors.ENDC}")
     for item in yml["composition"]:
-        if not isinstance(item, dict):
-            raise Exception(bcolors.FAIL + bcolors.BOLD +
-                            "[{}] Items in composition should be a dict".format(model_name) + bcolors.ENDC)
+        if not isinstance(item, Mapping):
+            raise Exception(
+                f"{bcolors.FAIL}{bcolors.BOLD}[{model_name}] Items in composition should be a mapping{bcolors.ENDC}"
+            )
         include = {"name": item["id"]}
         if "type" in item:
             if recursive:
@@ -405,7 +418,7 @@ def convert_world(yml: dict, model_name: str, recursive: bool = False) -> dict:
                 model["type"] = item["type"]
                 world_model.append(model)
             else:
-                include["uri"] = "model://{}".format(item["type"])
+                include["uri"] = f"model://{item['type']}"
                 include["pose"] = read_pose(item)
                 world_include.append(include)
         else:
@@ -416,7 +429,7 @@ def convert_world(yml: dict, model_name: str, recursive: bool = False) -> dict:
     return world
 
 
-def convert_model(yml: dict, model_name: str) -> dict:
+def convert_model(yml: Mapping, model_name: str) -> Mapping:
     """
     Convert model yaml to sdf model dict
 
@@ -435,21 +448,21 @@ def convert_model(yml: dict, model_name: str) -> dict:
     if "shape" in yml:
         shape = read_shape(yml["shape"], link_names, color, model_name)
         if shape is None:
-            raise Exception(bcolors.FAIL + bcolors.BOLD + "[{}] Error during shape parsing".format(model_name)
-                            + bcolors.ENDC)
+            raise Exception(f"{bcolors.FAIL}{bcolors.BOLD}[{model_name}] Error during shape parsing{bcolors.ENDC}")
         model["link"].extend(shape)
 
     if "areas" in yml:
         areas = read_areas(yml["areas"], link_names, model_name)
         if areas is None:
-            raise Exception(bcolors.FAIL + bcolors.BOLD + "[{}] Error during areas parsing".format(model_name)
-                            + bcolors.ENDC)
+            raise Exception(f"{bcolors.FAIL}{bcolors.BOLD}[{model_name}] Error during areas parsing{bcolors.ENDC}")
         model["link"].extend(areas)
 
     return model
 
 
-def convert_model_data(model_data: Union[dict, list], model_name: str, model_dir: str, recursive: bool = False) -> int:
+def convert_model_data(
+    model_data: Union[Mapping, List], model_name: str, model_dir: str, recursive: bool = False
+) -> int:
     """
     Convert model data to SDF with the name 'model_name' in directory 'model_dir'.
     Most of the times model_dir=ROOT/model_name for a ROOT in ED_MODEL_PATH
@@ -471,7 +484,7 @@ def convert_model_data(model_data: Union[dict, list], model_name: str, model_dir
         else:
             sdf["model"] = convert_model(model_data, model_name)
     except Exception as e:
-        print(bcolors.FAIL + bcolors.BOLD + "[{}] (CONVERSION) ".format(model_name) + str(e) + bcolors.ENDC)
+        print(f"{bcolors.FAIL}{bcolors.BOLD}[{model_name}] (CONVERSION) {e}{bcolors.ENDC}")
         return 1
 
     # convert combination of dicts and lists to ET Elements
@@ -479,7 +492,7 @@ def convert_model_data(model_data: Union[dict, list], model_name: str, model_dir
     try:
         parse_to_xml(xml, sdf)
     except Exception as e:
-        print(bcolors.FAIL + bcolors.BOLD + "[{}] (XML) ".format(model_name) + str(e) + bcolors.ENDC)
+        print(f"{bcolors.FAIL}{bcolors.BOLD}[{model_name}] (XML) {e}{bcolors.ENDC}")
         return 1
 
     # write to sdf file
@@ -499,38 +512,38 @@ def convert_model_data(model_data: Union[dict, list], model_name: str, model_dir
         config_sdfs = config_root.findall("sdf")
         # if all([config_sdf.attrib['version'] != str(sdf_version) for config_sdf in config_sdfs]):
         #         config_sdf.text = sdf_filename
-        newest_sdf = sorted(config_sdfs, key=lambda x: x.attrib['version'], reverse=True)[0]
-        newest_sdf_version = float(newest_sdf.attrib['version'])
+        newest_sdf = sorted(config_sdfs, key=lambda x: x.attrib["version"], reverse=True)[0]
+        newest_sdf_version = float(newest_sdf.attrib["version"])
         if sdf_version > newest_sdf_version:  # Converting a newer version
-            if newest_sdf.text == sdf_filename:   # Rename current newest version, if the same
-                newest_sdf_filename = "model-{}.sdf".format(str(newest_sdf_version).replace('.', '_'))
+            if newest_sdf.text == sdf_filename:  # Rename current newest version, if the same
+                newest_sdf_filename = f"model-{str(newest_sdf_version).replace('.', '_')}.sdf"
                 rename(sdf_model_path, path.join(model_dir, newest_sdf_filename))
                 newest_sdf.text = newest_sdf_filename
             new_sdf = ET.Element("sdf")
-            config_root.insert(list(config_root).index(newest_sdf)+1, new_sdf)
+            config_root.insert(list(config_root).index(newest_sdf) + 1, new_sdf)
             new_sdf.set("version", str(sdf_version))
             new_sdf.text = sdf_filename
         elif sdf_version == newest_sdf_version:  # Converting the same version, just make sure the path is correct
             if newest_sdf.text != sdf_filename:
-                rename(path.join(model_dir, newest_sdf.text),
-                       sdf_model_path)
+                rename(path.join(model_dir, newest_sdf.text), sdf_model_path)
                 newest_sdf.text = sdf_filename
         else:  # Converting not to the newest version
-            sdf_filename = "model-{}.sdf".format(str(sdf_version).replace('.', '_'))
+            sdf_filename = f"model-{str(sdf_version).replace('.', '_')}.sdf"
             sdf_model_path = path.join(model_dir, sdf_filename)
             # Check if older version exists in model.config
-            current_sdf = next((x for x in config_sdfs if x.attrib['version'] == str(sdf_version)), None)
+            current_sdf = next((x for x in config_sdfs if x.attrib["version"] == str(sdf_version)), None)
             if current_sdf is None:  # Version doesn't exist yet, so add it
                 current_sdf = ET.Element("sdf")
-                current_sdf.attrib['version'] = str(sdf_version)
+                current_sdf.attrib["version"] = str(sdf_version)
                 current_sdf.text = sdf_filename
                 # Add tag before the first newer version, so at old index of the first newer version
-                first_newer_version_sdf = [sdf for sdf in config_sdfs if (float(sdf.attrib['version']) > sdf_version)][-1]
+                first_newer_version_sdf = [sdf for sdf in config_sdfs if (float(sdf.attrib["version"]) > sdf_version)][
+                    -1
+                ]
                 index_of_newer_version = list(config_root).index(first_newer_version_sdf)
                 config_root.insert(index_of_newer_version, current_sdf)
             elif current_sdf.text != sdf_filename:
-                rename(path.join(model_dir, current_sdf.text),
-                       sdf_model_path)
+                rename(path.join(model_dir, current_sdf.text), sdf_model_path)
                 current_sdf.text = sdf_filename
 
         # Always write model name for the case a model has been moved, so its name needs to changed.
@@ -542,17 +555,21 @@ def convert_model_data(model_data: Union[dict, list], model_name: str, model_dir
     else:  # SDF model doesn't exist yet
         test_model_path = get_model_path("test_sdf", "sdf")
         if not test_model_path:
-            print(bcolors.FAIL + bcolors.BOLD + "Can't find 'test_sdf' model. "
-                                                "Which is used for generation of 'model.config'")
-            print("model.config not generated. Gazebo will not be able to find the model: '{}'".format(model_name)
-                  + bcolors.ENDC)
+            print(
+                f"{bcolors.FAIL}{bcolors.BOLD}Can't find 'test_sdf' model. "
+                "Which is used for generation of 'model.config'"
+            )
+            print(
+                f"model.config not generated. Gazebo will not be able to find the model: '{model_name}'{bcolors.ENDC}"
+            )
             return 1
 
         test_config_path = path.join(path.dirname(test_model_path), "model.config")
         if not path.exists(test_config_path):
-            print(bcolors.FAIL + bcolors.BOLD + "model.config path: '{}' doesn't exist".format(test_config_path))
-            print("model.config not generated. Gazebo will not be able to find the model: '{}'".format(model_name)
-                  + bcolors.ENDC)
+            print(f"{bcolors.FAIL}{bcolors.BOLD}model.config path: '{test_config_path}' doesn't exist")
+            print(
+                f"model.config not generated. Gazebo will not be able to find the model: '{model_name}'{bcolors.ENDC}"
+            )
             return 1
 
         # xml parsing doesn't ignore whitespace, so reading the file manually
@@ -565,7 +582,7 @@ def convert_model_data(model_data: Union[dict, list], model_name: str, model_dir
         config_root.find("name").text = model_name
         config_root.find("description").text = model_name
         config_sdf = config_root.find("sdf")
-        config_sdf.attrib['version'] = str(sdf_version)
+        config_sdf.attrib["version"] = str(sdf_version)
         config_sdf.text = sdf_filename
 
         # write model.config
@@ -574,7 +591,7 @@ def convert_model_data(model_data: Union[dict, list], model_name: str, model_dir
     # Write SDF file
     write_xml_to_file(xml, sdf_model_path)
 
-    print(bcolors.OKGREEN + "[{}] Successfully converted to SDF".format(model_name) + bcolors.ENDC)
+    print(f"{bcolors.OKGREEN}[{model_name}] Successfully converted to SDF{bcolors.ENDC}")
     return 0
 
 
@@ -594,7 +611,7 @@ def convert_model_file(model_name: str, model_file: str, recursive: bool = False
         try:
             yml = yaml.safe_load(stream)
         except yaml.YAMLError as e:
-            print(bcolors.FAIL + bcolors.BOLD + "[{}] (YAML) ".format(model_name) + str(e) + bcolors.ENDC)
+            print(f"{bcolors.FAIL}{bcolors.BOLD}[{model_name}] (YAML) {e}{bcolors.ENDC}")
             return 1
 
     return convert_model_data(yml, model_name, model_dir, recursive)
@@ -615,7 +632,7 @@ def convert_model_name(model_name: str, recursive: bool = False) -> int:
     # get model path
     model_file = get_model_path(model_name, "yaml")
     if not model_file:
-        print(bcolors.FAIL + bcolors.BOLD + "[{}] No model path found".format(model_name) + bcolors.ENDC)
+        print(f"{bcolors.FAIL}{bcolors.BOLD}[{model_name}] No model path found{bcolors.ENDC}")
         return 1
 
     return convert_model_file(model_name, model_file, recursive)

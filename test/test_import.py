@@ -9,5 +9,5 @@ class TestImport(unittest.TestCase):
         import ed_object_models
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

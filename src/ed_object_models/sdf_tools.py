@@ -29,7 +29,7 @@ def get_sdf_string(model_type: str) -> str:
 
     # Return error when folder could not be found
     if model_dir is None:
-        rospy.logwarn("Couldn't find model directory of model type: '{}' in GAZEBO_MODEL_PATH".format(model_type))
+        rospy.logwarn(f"Couldn't find model directory of model type: '{model_type}' in GAZEBO_MODEL_PATH")
         return ""
 
     # Search for sdf file
@@ -42,7 +42,7 @@ def get_sdf_string(model_type: str) -> str:
             sdf_model_path = max(sdf_list)
         else:
             # Return error when no sdf file could be found
-            rospy.logwarn("No sdf file was found for type: '{}'".format(model_type))
+            rospy.logwarn(f"No sdf file was found for type: '{model_type}'")
             return ""
 
     with open(sdf_model_path, "r") as f:
@@ -70,7 +70,7 @@ def spawn_sdf_from_yaml(yaml_path: str) -> None:
     rospy.wait_for_service("gazebo/spawn_sdf_model", 30)
     spawn_model_srv = rospy.ServiceProxy("gazebo/spawn_sdf_model", SpawnModel)
 
-    if not os.path.isfile(yaml_path):   # Check if yaml_path is a path to a file.
+    if not os.path.isfile(yaml_path):  # Check if yaml_path is a path to a file.
         if os.path.isfile(yaml_path + ".yaml"):
             yaml_path = yaml_path + ".yaml"
         elif os.path.isfile(yaml_path + ".yml"):
@@ -86,17 +86,18 @@ def spawn_sdf_from_yaml(yaml_path: str) -> None:
         if isinstance(items, dict):
             items = [items]
         else:
-            rospy.logfatal("Loaded yaml file: {}, but it didn't result in a 'list' or a 'dict' but in a: '{}'").format(
-                yaml_path, type(items))
+            rospy.logfatal(
+                f"Loaded yaml file: {yaml_path}, but it didn't result in a 'list' or a 'dict' but in a: '{type(items)}'"
+            )
 
     # Iterate over objects and spawn
     for item in items:
         # Define object pose
         object_pose = Pose()
         object_pose.position = Point(item["x"], item["y"], item["z"])
-        object_pose.orientation = Quaternion(*transformations.quaternion_from_euler(item.get("roll", 0),
-                                                                                    item.get("pitch", 0),
-                                                                                    item.get("yaw", 0)))
+        object_pose.orientation = Quaternion(
+            *transformations.quaternion_from_euler(item.get("roll", 0), item.get("pitch", 0), item.get("yaw", 0))
+        )
 
         sdf_string = get_sdf_string(item["type"])
         if not sdf_string:

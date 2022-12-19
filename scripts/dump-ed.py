@@ -15,9 +15,9 @@ if __name__ == "__main__":
 
     rospy.init_node("dump_ed")
 
-    rospy.wait_for_service('/{}/ed/simple_query'.format(robot_name))
+    rospy.wait_for_service(f"/{robot_name}/ed/simple_query")
     try:
-        ed_query = rospy.ServiceProxy('/{}/ed/simple_query'.format(robot_name), SimpleQuery)
+        ed_query = rospy.ServiceProxy(f"/{robot_name}/ed/simple_query", SimpleQuery)
         res = ed_query()
 
         for e in res.entities:
@@ -32,13 +32,14 @@ if __name__ == "__main__":
 
             yaw = q.GetRPY()[2]  # 0:.2f
 
-            print("- id: {}".format(e.id))
-            print("  type: {}".format(e.type))
+            print(f"- id: {e.id}")
+            print(f"  type: {e.type}")
 
+            pose = e.pose.position
             if abs(yaw) > 0.001:
-                print("  pose: {{ x: {}, y: {}, z: {}, Z: {:.3f} }}".format(e.pose.position.x, e.pose.position.y, e.pose.position.z, yaw))
+                print(f"  pose: {{ x: {pose.x}, y: {pose.y}, z: {pose.z}, Z: {yaw:.3f} }}")
             else:
-                print("  pose: {{ x: {}, y: {}, z: {} }}".format(e.pose.position.x, e.pose.position.y, e.pose.position.z))
+                print(f"  pose: {{ x: {pose.x}, y: {pose.y}, z: {pose.z} }}")
 
     except rospy.ServiceException as e:
-        print("Service call failed: %s" % e)
+        print(f"Service call failed: e")

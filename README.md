@@ -1,6 +1,7 @@
 # ED Object Models
 
 [![CI](https://github.com/tue-robotics/ed_object_models/actions/workflows/main.yml/badge.svg)](https://github.com/tue-robotics/ed_object_models/actions/workflows/main.yml)
+[![Lint](https://github.com/tue-robotics/ed_object_models/actions/workflows/lint.yml/badge.svg)](https://github.com/tue-robotics/ed_object_models/actions/workflows/lint.yml)
 
 Models of entities in our world model [ED](https://github.com/tue-robotics/ed/)
 

@@ -78,6 +78,25 @@ def resolve_file(file_str: str) -> str:
     return path.join(path.dirname(LAST_MODEL_FILE), rel_file)
 
 
+def last_opened_model_name() -> str:
+    """
+    Get the model name based on the last opened file. This is useful for nested model definitions inside a single file.
+
+    :return: Resolved model name
+    """
+    global LAST_MODEL_FILE
+    if not LAST_MODEL_FILE:
+        return ""
+
+    ed_model_paths = getenv("ED_MODEL_PATH").split(pathsep)
+    for ed_model_path in ed_model_paths:
+        shared_path = path.commonprefix([ed_model_path, LAST_MODEL_FILE])
+        if shared_path == ed_model_path:
+            return path.dirname(path.relpath(LAST_MODEL_FILE, shared_path))
+
+    return ""
+
+
 def unique_name(name: str, names: List[str]) -> str:
     """
     Provide a unique name based on name. If name already in names, the name is changed.
@@ -189,9 +208,11 @@ def read_geometry(shape_item: Mapping, model_name: str) -> Union[Tuple[Mapping, 
 
     elif "heightmap" in shape_item:
         heightmap = shape_item["heightmap"]
-        model_folder = path.dirname(get_model_path(model_name))
+        model_folder = resolve_file("$(file .)")
+        if not path.isabs(model_folder):
+            raise RuntimeError(f"model_folder should be an absolute path: '{model_folder}'")
         image_path = resolve_file(heightmap["image"])
-        if not image_path.startswith("/"):
+        if not path.isabs(image_path):
             image_path = path.join(model_folder, image_path)
 
         mesh_path = create_heightmap(
@@ -203,14 +224,16 @@ def read_geometry(shape_item: Mapping, model_name: str) -> Union[Tuple[Mapping, 
             heightmap["pose"]["y"],
         )
 
-        sdf_mesh = {"uri": f"model://{model_name}/{path.relpath(mesh_path, model_folder)}"}
+        sdf_mesh = {"uri": f"model://{last_opened_model_name()}/{path.relpath(mesh_path, model_folder)}"}
         geometry["mesh"] = sdf_mesh
 
     elif "path" in shape_item and "blockheight" in shape_item:
         # If there is a path and a blockheight in the shape_item, then there is a heightmap included in the yaml file
-        model_folder = path.dirname(get_model_path(model_name))
+        model_folder = resolve_file("$(file .)")
+        if not model_folder.startswith("/"):
+            raise RuntimeError(f"model_folder should be an absolute path: '{model_folder}'")
         image_path = resolve_file(shape_item["path"])
-        if not image_path.startswith("/"):
+        if not path.isabs(image_path):
             image_path = path.join(model_folder, image_path)
 
         mesh_path = create_heightmap(
@@ -222,7 +245,7 @@ def read_geometry(shape_item: Mapping, model_name: str) -> Union[Tuple[Mapping, 
             shape_item["origin_y"],
         )
 
-        sdf_mesh = {"uri": f"model://{model_name}/{path.relpath(mesh_path, model_folder)}"}
+        sdf_mesh = {"uri": f"model://{last_opened_model_name()}/{path.relpath(mesh_path, model_folder)}"}
         geometry["mesh"] = sdf_mesh
 
     elif "path" in shape_item and ".xml" in shape_item["path"]:

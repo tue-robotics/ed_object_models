@@ -31,7 +31,7 @@
         <pose>-0.025 -0.465 1.115 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="handle">
+    <!-- <link name="handle">
       <virtual_volume name="handle_vv">
         <geometry>
           <box>
@@ -60,7 +60,7 @@
         </geometry>
         <pose>0 0.465 0 0 0 0</pose>
       </virtual_volume>
-    </link>
+    </link> -->
     <link name="frame_right">
       <collision name="frame_right_col">
         <geometry>

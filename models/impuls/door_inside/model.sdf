@@ -152,14 +152,6 @@
                     </cylinder>
                 </geometry>
             </visual>
-             <!-- <virtual_volume name = "handle_vv">
-                <geometry>
-                    <cylinder>
-                        <length>0.3</length>
-                        <radius>0.02</radius>
-                    </cylinder>
-                </geometry>
-            </virtual_volume> -->
         </link>
         <link name="handle_volume">
             <virtual_volume name="handle_vv">
@@ -211,6 +203,68 @@
             </axis>
             <pose>0.125 0.35 0 0 0 0</pose>
 		</joint>
-
+        <!--make a handle on the other side-->
+        <!--axis of rotation of the handle-->
+        <link name="handle_rotation_link_side2">
+            <pose>-0.065 0.35 0.9 0 1.6 0</pose>
+            <collision name="handle_rotation_collision_side2">
+                <geometry>
+                    <cylinder>
+                        <length>0.08</length>
+                        <radius>0.02</radius>
+                    </cylinder>     
+                </geometry>
+            </collision>
+            <visual name="handle_rotation_visual_side2">
+                <geometry>
+                    <cylinder>
+                        <length>0.08</length>
+                        <radius>0.02</radius>
+                    </cylinder>
+                </geometry>
+            </visual>
+        </link>
+        <!--joint between the rotation axis of the handle and the door-->
+        <joint name="handle_rotation_link_to_door_link_side2" type="fixed">
+			<parent>door_link</parent>
+			<child>handle_rotation_link_side2</child>
+        </joint>
+        <link name="handle_grabbing_link_side2">
+            <pose>-0.125 0.22 0.9 1.6 0 0</pose>
+            <collision name="handle_collision_side2">
+                <geometry>
+                    <cylinder>
+                        <length>0.3</length>
+                        <radius>0.02</radius>
+                    </cylinder>
+                </geometry>
+            </collision>
+            <visual name="handle_visual_side2">
+                <geometry>
+                    <cylinder>
+                        <length>0.3</length>
+                        <radius>0.02</radius>
+                    </cylinder>
+                </geometry>
+            </visual>
+        </link>
+        <joint name="handle_grabbing_link_to_handle_rotation_link_side2" type="revolute">
+			<parent>handle_rotation_link_side2</parent>
+			<child>handle_grabbing_link_side2</child>
+            <axis>
+                <xyz>1 0 0</xyz>
+                <dynamics>
+                    <damping>0.5</damping>
+                </dynamics>
+                <use_parent_model_frame>1</use_parent_model_frame>
+                <limit>
+                    <lower>-0.1</lower>
+                    <upper>3.14159265</upper>
+                    <effort>10</effort>
+                    <velocity>-1</velocity>
+                </limit>
+            </axis>
+            <pose>-0.125 0.35 0 0 0 0</pose>
+		</joint>
     </model>
 </sdf>

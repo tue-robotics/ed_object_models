@@ -16,7 +16,6 @@ model_path = os.path.join(rospack.get_path("ed_object_models"), "models")
 p = canvas.Canvas(os.path.join(model_path, "qr_codes.pdf"))
 
 for model_name in os.listdir(model_path):
-
     # Only visible dirs
     if model_name[0] == ".":
         continue

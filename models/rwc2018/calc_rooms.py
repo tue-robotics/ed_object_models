@@ -24,8 +24,7 @@ with open(room_filename) as f:
 
         data[room][args[1]] = (float(args[2].replace(",", ".")), float(args[3].replace(",", ".")))
 
-for (room, info) in data.iteritems():
-
+for room, info in data.iteritems():
     center = info["center"]
 
     print(
@@ -38,7 +37,6 @@ for (room, info) in data.iteritems():
     )
 
     if "min1" in info:
-
         n = 1
         while True:
             if not f"min{n}" in info:

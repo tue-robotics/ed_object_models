@@ -92,12 +92,12 @@
       <uri>model://impuls/tue_trashbin</uri>
     </include>
     <include>
-      <pose>7.32 0.5 0 0 0 3.14159265359</pose>
+      <pose>7.32 0.43 0 0 0 3.14159265359</pose>
       <name>door</name>
       <uri>model://door_wooden</uri>
     </include>
     <include>
-      <pose>7.32 0.5 0 0 0 3.14159265359</pose>
+      <pose>7.32 0.43 0 0 0 3.14159265359</pose>
       <name>door_inside</name>
       <uri>model://impuls/door_inside</uri>
     </include>

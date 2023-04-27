@@ -37,6 +37,11 @@
       <pose>5.273 10.06 0 0 0 -1.57</pose>
 >>>>>>> a6264444 (cabinet in world model)
     </include>
+    <include>
+      <name>tv_stand</name>
+      <uri>model://rpo2023/tv_stand</uri>
+      <pose>10.18 2.41 0 0 0 3.14159265358979323846</pose>
+    </include>
     <light type="directional" name="sun">
       <cast_shadows>true</cast_shadows>
       <pose>0 0 10 0 0 0</pose>

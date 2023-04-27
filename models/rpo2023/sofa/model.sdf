@@ -16,7 +16,7 @@
           </box>
         </geometry>
       </visual>
-      <pose>-0.30 0.0 0.335 0 0 0</pose>
+      <pose>-0.275 0.0 0.335 0 0 0</pose>
     </link>
     <link name="side_left">
      <collision name="side_left_col">
@@ -67,7 +67,7 @@
           </box>
         </geometry>
       </visual>
-      <pose>0.125 0 0.2025 0 0 0</pose>
+      <pose>0.1625 0 0.2025 0 0 0</pose>
     </link>
     <link name="on_top_of">
       <virtual_volume name="on_top_of_vv">
@@ -76,7 +76,7 @@
             <size>0.55 1.39 0.3</size>
           </box>
         </geometry>
-        <pose>0.125 0.0 0.57 0 0 0</pose>
+        <pose>0.1625 0.0 0.57 0 0 0</pose>
       </virtual_volume>
     </link>
     <link name="in_front_of">

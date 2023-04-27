@@ -186,60 +186,60 @@
       <virtual_volume name="shelf1_vv">
         <geometry>
           <box>
-            <size>0.265 0.66 0.25</size>
+            <size>0.265 0.66 0.30</size>
           </box>
         </geometry>
-        <pose>0.0075 0.0 0.21 0 0 0</pose>
+        <pose>0.0075 0.0 0.23 0 0 0</pose>
       </virtual_volume>
     </link>
     <link name="shelf2">
       <virtual_volume name="shelf2_vv">
         <geometry>
           <box>
-            <size>0.265 0.66 0.25</size>
+            <size>0.265 0.66 0.24</size>
           </box>
         </geometry>
-        <pose>0.0075 0.0 0.565 0 0 0</pose>
+        <pose>0.0075 0.0 0.555 0 0 0</pose>
       </virtual_volume>
     </link>
     <link name="shelf3">
       <virtual_volume name="shelf3_vv">
         <geometry>
           <box>
-            <size>0.265 0.66 0.25</size>
+            <size>0.265 0.66 0.18</size>
           </box>
         </geometry>
-        <pose>0.0075 0.0 0.855 0 0 0</pose>
+        <pose>0.0075 0.0 0.815 0 0 0</pose>
       </virtual_volume>
     </link>
     <link name="shelf4">
       <virtual_volume name="shelf4_vv">
         <geometry>
           <box>
-            <size>0.265 0.66 0.25</size>
+            <size>0.265 0.66 0.30</size>
           </box>
         </geometry>
-        <pose>0.0075 0.0 1.095 0 0 0</pose>
+        <pose>0.0075 0.0 1.11 0 0 0</pose>
       </virtual_volume>
     </link>
     <link name="shelf5">
       <virtual_volume name="shelf5_vv">
         <geometry>
           <box>
-            <size>0.265 0.66 0.25</size>
+            <size>0.265 0.66 0.24</size>
           </box>
         </geometry>
-        <pose>0.0075 0.0 1.45 0 0 0</pose>
+        <pose>0.0075 0.0 1.44 0 0 0</pose>
       </virtual_volume>
     </link>
     <link name="shelf6">
       <virtual_volume name="shelf6_vv">
         <geometry>
           <box>
-            <size>0.265 0.66 0.25</size>
+            <size>0.265 0.66 0.18</size>
           </box>
         </geometry>
-        <pose>0.0075 0.0 1.735 0 0 0</pose>
+        <pose>0.0075 0.0 1.69 0 0 0</pose>
       </virtual_volume>
     </link>
   </model>

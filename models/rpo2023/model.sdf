@@ -22,12 +22,12 @@
       <pose>7.0635 2.785 0 0 0 0</pose>
     </include>
     <include>
-      <name>easy_chair</name>
+      <name>easy_chair</name> <!-- needs to be changed due to change in walls -->
       <uri>model://rpo2023/easy_chair</uri>
       <pose>9.5 0.8 0 0 0 2.356194490185</pose>
     </include>
     <include>
-      <name>arm_chair</name>
+      <name>arm_chair</name> <!-- needs to be changed due to change in walls -->
       <uri>model://rpo2023/easy_chair</uri>
       <pose>9.5 4.2 0 0 0 -2.356194490185</pose>
     </include>
@@ -42,9 +42,14 @@
       <pose>5.783 8.9 0 0 0 3.14</pose>
     </include>
     <include>
-      <name>tv_stand</name>
+       <name>tv_stand</name> <!-- needs to be changed due to change in walls -->
       <uri>model://rpo2023/tv_stand</uri>
       <pose>10.18 2.41 0 0 0 3.14159265358979323846</pose>
+    </include>
+    <include>
+      <name>tv_table</name> <!-- needs to be changed due to change in walls -->
+      <uri>model://rpo2023/tv_table</uri>
+      <pose>9.0 2.41 0 0 0 1.57</pose>
     </include>
     <light type="directional" name="sun">
       <cast_shadows>true</cast_shadows>

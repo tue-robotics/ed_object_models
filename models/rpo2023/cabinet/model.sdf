@@ -132,11 +132,11 @@
       <visual name="8_vis">
         <geometry>
           <box>
-            <size>0.285 0.72 0.02</size>
+            <size>0.31 0.72 0.02</size>
           </box>
         </geometry>
       </visual>
-      <pose>0.0075 0.0 0.94 0 0 0</pose>
+      <pose>0.00875 0.0 0.94 0 0 0</pose>
     </link>
     <link name="9_link">
       <collision name="9_col">
@@ -171,6 +171,40 @@
         </geometry>
       </visual>
       <pose>0.0075 0.0 1.58 0 0 0</pose>
+    </link>
+    <link name="right_door_vis">
+      <collision name="right_door_col">
+        <geometry>
+          <box>
+            <size>0.37 0.017 0.863</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="right_door_vis">
+        <geometry>
+          <box>
+            <size>0.37 0.017 0.863</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.34 0.3775 0.47 0 0 0.1</pose>
+    </link>
+    <link name="left_door_vis">
+      <collision name="left_door_col">
+        <geometry>
+          <box>
+            <size>0.37 0.017 0.863</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="left_door_vis">
+        <geometry>
+          <box>
+            <size>0.37 0.017 0.863</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.34 -0.3775 0.47 0 0 -0.1</pose>
     </link>
     <link name="in_front_of">
       <virtual_volume name="in_front_of_vv">

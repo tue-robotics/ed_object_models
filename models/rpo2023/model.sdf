@@ -22,7 +22,6 @@
       <pose>7.0635 2.785 0 0 0 0</pose>
     </include>
     <include>
-<<<<<<< HEAD
       <name>easy_chair</name>
       <uri>model://rpo2023/easy_chair</uri>
       <pose>9.5 0.8 0 0 0 2.356194490185</pose>
@@ -31,11 +30,16 @@
       <name>arm_chair</name>
       <uri>model://rpo2023/easy_chair</uri>
       <pose>9.5 4.2 0 0 0 -2.356194490185</pose>
-=======
+    </include>
+    <include>
       <name>cabinet</name>
       <uri>model://rpo2023/cabinet</uri>
       <pose>5.273 10.06 0 0 0 -1.57</pose>
->>>>>>> a6264444 (cabinet in world model)
+    </include>
+    <include>
+      <name>side_board</name>
+      <uri>model://rpo2023/side_board</uri>
+      <pose>5.783 8.9 0 0 0 3.14</pose>
     </include>
     <include>
       <name>tv_stand</name>

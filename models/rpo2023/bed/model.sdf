@@ -53,7 +53,7 @@
             <size>0.2 1.26 0.01</size>
           </box>
         </geometry>
-        <pose>1.55 0.0 0.005 0 0 0</pose>
+        <pose>-1.55 0.0 0.005 0 0 0</pose>
       </virtual_volume>
     </link>
   </model>

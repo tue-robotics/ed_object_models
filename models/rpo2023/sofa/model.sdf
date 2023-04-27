@@ -56,14 +56,14 @@
       <collision name="seat_col">
         <geometry>
           <box>
-            <size>0.55 1.39 0.405</size>
+            <size>0.55 1.4 0.405</size>
           </box>
         </geometry>
       </collision>
       <visual name="seat_vis">
         <geometry>
           <box>
-              <size>0.55 1.39 0.405</size>
+              <size>0.55 1.4 0.405</size>
           </box>
         </geometry>
       </visual>
@@ -73,7 +73,7 @@
       <virtual_volume name="on_top_of_vv">
         <geometry>
           <box>
-            <size>0.55 1.39 0.3</size>
+            <size>0.50 1.34 0.28</size>
           </box>
         </geometry>
         <pose>0.1625 0.0 0.57 0 0 0</pose>

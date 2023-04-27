@@ -85,7 +85,7 @@
           </box>
         </geometry>
       </visual>
-      <pose>-0.075 -0.373 0.45 0 0.2 0</pose>
+      <pose>-0.075 -0.373 0.47 0 0.2 0</pose>
     </link>
     <link name="right_arm_link">
       <collision name="right_arm_col">
@@ -102,16 +102,16 @@
           </box>
         </geometry>
       </visual>
-      <pose>-0.075 0.373 0.45 0 0.2 0</pose>
+      <pose>-0.075 0.373 0.47 0 0.2 0</pose>
     </link>
     <link name="on_top_of">
       <virtual_volume name="on_top_of_vv">
         <geometry>
           <box>
-            <size>0.662 0.84 0.25</size>
+            <size>0.4 0.63 0.25</size>
           </box>
         </geometry>
-        <pose>0.0 0.0 0.535 0 0 0</pose>
+        <pose>0.0 0.0 0.5 0 -0.2 0</pose>
       </virtual_volume>
     </link>
     <link name="in_front_of">

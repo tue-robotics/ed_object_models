@@ -11,6 +11,11 @@
       <name>floor</name>
       <uri>model://floor</uri>
     </include>
+    <include>
+      <name>bed</name>
+      <uri>model://rpo2023/bed</uri>
+      <pose>8.781 9.19 0 0 0 1.57</pose>
+    </include>
     <light type="directional" name="sun">
       <cast_shadows>true</cast_shadows>
       <pose>0 0 10 0 0 0</pose>

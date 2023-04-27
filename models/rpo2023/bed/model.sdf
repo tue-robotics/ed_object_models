@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rpo2023/bed">
+    <static>true</static>
+    <link name="1_link">
+      <collision name="1_col">
+        <geometry>
+          <box>
+            <size>0.04 1.55 0.46</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="1_vis">
+        <geometry>
+          <box>
+            <size>0.04 1.55 0.46</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>-1.03 0.0 0.23 0 0 0</pose>
+    </link>
+    <link name="2_link">
+      <collision name="2_col">
+        <geometry>
+          <box>
+            <size>2.1 1.46 0.46</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="2_vis">
+        <geometry>
+          <box>
+            <size>2.1 1.46 0.46</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 0.0 0.23 0 0 0</pose>
+    </link>
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of_vv">
+        <geometry>
+          <box>
+            <size>2.08 1.4 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.0 0.605 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of_vv">
+        <geometry>
+          <box>
+            <size>0.2 1.26 0.01</size>
+          </box>
+        </geometry>
+        <pose>1.55 0.0 0.005 0 0 0</pose>
+      </virtual_volume>
+    </link>
+  </model>
+</sdf>

@@ -17,6 +17,11 @@
       <pose>8.781 9.19 0 0 0 1.57079632679</pose>
     </include>
     <include>
+      <name>closet</name>
+      <uri>model://rpo2023/closet</uri>
+      <pose>9.2 5.46 0 0 0 1.57079632679</pose>
+    </include>    
+    <include>
       <name>sofa</name>
       <uri>model://rpo2023/sofa</uri>
       <pose>7.0635 2.785 0 0 0 0</pose>

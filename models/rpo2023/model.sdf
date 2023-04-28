@@ -220,7 +220,7 @@
       <static>true</static>
     </model>
     <model name="living_room" type="waypoint">
-      <pose>8.5 1.1 0 0 0 -2.33</pose>
+      <pose>8.5 1.1 0 0 0 0.812</pose>
       <static>true</static>
     </model>
     <model name="outro_point" type="waypoint">

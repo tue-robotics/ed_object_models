@@ -44,12 +44,12 @@
     <include>
        <name>tv_stand</name> <!-- needs to be changed due to change in walls -->
       <uri>model://rpo2023/tv_stand</uri>
-      <pose>10.18 2.41 0 0 0 3.14159265358979323846</pose>
+      <pose>9.98 2.785 0 0 0 3.14159265358979323846</pose>
     </include>
     <include>
       <name>tv_table</name> <!-- needs to be changed due to change in walls -->
       <uri>model://rpo2023/tv_table</uri>
-      <pose>9.0 2.41 0 0 0 1.57</pose>
+      <pose>8.65 2.785 0 0 0 1.57</pose>
     </include>
     <light type="directional" name="sun">
       <cast_shadows>true</cast_shadows>

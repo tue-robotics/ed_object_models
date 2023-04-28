@@ -20,7 +20,7 @@
       <name>closet</name>
       <uri>model://rpo2023/closet</uri>
       <pose>9.2 5.46 0 0 0 1.57079632679</pose>
-    </include>    
+    </include>
     <include>
       <name>sofa</name>
       <uri>model://rpo2023/sofa</uri>
@@ -112,7 +112,7 @@
       <pose>2.0575 2.56 0.0 0 0 0</pose>
       <static>true</static>
     </model>
-    <model name="bedroom" type="room">
+    <model name="bed_room" type="room">
       <link name="in">
         <virtual_volume name="in_vv">
           <geometry>

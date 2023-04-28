@@ -171,7 +171,7 @@
         </geometry>
       </visual>
       <pose>0.0075 0.0 1.58 0 0 0</pose>
-    </link>
+    <!-- </link>
     <link name="right_door_vis">
       <collision name="right_door_col">
         <geometry>
@@ -204,7 +204,7 @@
           </box>
         </geometry>
       </visual>
-      <pose>0.34 -0.3775 0.47 0 0 -0.1</pose>
+      <pose>0.34 -0.3775 0.47 0 0 -0.1</pose> -->
     </link>
     <link name="in_front_of">
       <virtual_volume name="in_front_of_vv">

@@ -44,7 +44,7 @@
     <include>
       <name>side_board</name>
       <uri>model://rpo2023/side_board</uri>
-      <pose>5.783 8.9 0 0 0 3.14</pose>
+      <pose>5.783 9.2 0 0 0 3.14</pose>
     </include>
     <include>
        <name>tv_stand</name> <!-- needs to be changed due to change in walls -->

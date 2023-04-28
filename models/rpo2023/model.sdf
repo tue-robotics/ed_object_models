@@ -219,8 +219,8 @@
       <pose>3.7 4.7 0 0 0 -2.33</pose>
       <static>true</static>
     </model>
-    <model name="waypoint_final_living_room" type="waypoint">
-      <pose>3.7 4.7 0 0 0 -2.33</pose>
+    <model name="living_room" type="waypoint">
+      <pose>8.5 1.1 0 0 0 -2.33</pose>
       <static>true</static>
     </model>
     <model name="outro_point" type="waypoint">

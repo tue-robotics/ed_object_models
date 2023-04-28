@@ -107,5 +107,15 @@
         <pose>0.775 0.0 0.005 0 0 0</pose>
       </virtual_volume>
     </link>
+    <link name="inspect_area">
+      <virtual_volume name="inspect_area_vv">
+        <geometry>
+          <box>
+            <size>0.2 0.2 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.775 0.375 0.005 0 0 0</pose>
+      </virtual_volume>
+    </link>
   </model>
 </sdf>

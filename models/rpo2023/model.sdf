@@ -191,7 +191,7 @@
       <static>true</static>
     </model>
     <model name="initial_pose_receptionist" type="waypoint">
-      <pose>3 4 0 0 0 0</pose>
+      <pose>5.115 1.1 0 0 0 0</pose>
       <static>true</static>
     </model>
     <model name="helper_waypoint_take_out_the_garbage" type="waypoint">

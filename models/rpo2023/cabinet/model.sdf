@@ -250,7 +250,7 @@
       <virtual_volume name="shelf4_vv">
         <geometry>
           <box>
-            <size>0.265 0.66 0.30</size>
+            <size>0.265 0.3 0.30</size>
           </box>
         </geometry>
         <pose>0.0075 0.0 1.11 0 0 0</pose>

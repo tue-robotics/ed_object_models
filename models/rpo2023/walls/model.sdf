@@ -6,16 +6,16 @@
       <collision name="1_col">
         <geometry>
           <mesh>
-            <uri>model://rpo2023/walls/shape/heightmap.stl</uri>
-            <!--<uri>model://rpo2023/walls/shape/heightmap_cml.stl</uri>-->
+            <!--<uri>model://rpo2023/walls/shape/heightmap.stl</uri>-->
+            <uri>model://rpo2023/walls/shape/heightmap_cml.stl</uri>
           </mesh>
         </geometry>
       </collision>
       <visual name="1_vis">
         <geometry>
           <mesh>
-            <uri>model://rpo2023/walls/shape/heightmap.stl</uri>
-            <!--<uri>model://rpo2023/walls/shape/heightmap_cml.stl</uri>-->
+            <!--<uri>model://rpo2023/walls/shape/heightmap.stl</uri>-->
+            <uri>model://rpo2023/walls/shape/heightmap_cml.stl</uri>
           </mesh>
         </geometry>
       </visual>

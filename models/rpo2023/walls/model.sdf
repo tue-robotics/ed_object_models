@@ -7,6 +7,7 @@
         <geometry>
           <mesh>
             <uri>model://rpo2023/walls/shape/heightmap.stl</uri>
+            <!--<uri>model://rpo2023/walls/shape/heightmap_cml.stl</uri>-->
           </mesh>
         </geometry>
       </collision>
@@ -14,6 +15,7 @@
         <geometry>
           <mesh>
             <uri>model://rpo2023/walls/shape/heightmap.stl</uri>
+            <!--<uri>model://rpo2023/walls/shape/heightmap_cml.stl</uri>-->
           </mesh>
         </geometry>
       </visual>

@@ -1,0 +1,135 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rpo2023/tv_stand">
+    <static>true</static>
+    <link name="1_link">
+      <collision name="1_col">
+        <geometry>
+          <box>
+            <size>0.395 0.018 0.393</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="1_vis">
+        <geometry>
+          <box>
+            <size>0.395 0.018 0.393</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 -0.591 0.1965 0 0 0</pose>
+    </link>
+    <link name="2_link">
+      <collision name="2_col">
+        <geometry>
+          <box>
+            <size>0.395 0.018 0.393</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="2_vis">
+        <geometry>
+          <box>
+            <size>0.395 0.018 0.393</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 0.591 0.1965 0 0 0</pose>
+    </link>
+    <link name="3_link">
+      <collision name="3_col">
+        <geometry>
+          <box>
+            <size>0.018 1.2 0.393</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="3_vis">
+        <geometry>
+          <box>
+            <size>0.018 1.2 0.393</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>-0.1885 0.0 0.1965 0 0 0</pose>
+    </link>
+    <link name="4_link">
+      <collision name="4_col">
+        <geometry>
+          <box>
+            <size>0.377 1.164 0.03</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="4_vis">
+        <geometry>
+          <box>
+            <size>0.377 1.164 0.03</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.009 0.0 0.378 0 0 0</pose>
+    </link>
+    <link name="5_link">
+      <collision name="5_col">
+        <geometry>
+          <box>
+            <size>0.377 1.164 0.03</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="5_vis">
+        <geometry>
+          <box>
+            <size>0.377 1.164 0.03</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.009 0.0 0.055 0 0 0</pose>
+    </link>
+    <link name="6_link">
+      <collision name="6_col">
+        <geometry>
+          <box>
+            <size>0.377 1.164 0.018</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="6_vis">
+        <geometry>
+          <box>
+            <size>0.377 1.164 0.018</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.009 0.0 0.179 0 0 0</pose>
+    </link>
+    <link name="7_link">
+      <collision name="7_col">
+        <geometry>
+          <box>
+            <size>0.377 0.037 0.305</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="7_vis">
+        <geometry>
+          <box>
+            <size>0.377 0.037 0.305</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.009 0.0015 0.1825 0 0 0</pose>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of_vv">
+        <geometry>
+          <box>
+            <size>0.2 1.0 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.6975 0.0 0.005 0 0 0</pose>
+      </virtual_volume>
+    </link>
+  </model>
+</sdf>

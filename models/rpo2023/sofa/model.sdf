@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="impuls/couch_long">
+    <link name="back">
+      <collision name="back_col">
+        <geometry>
+          <box>
+            <size>0.325 1.79 0.67</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="back_vis">
+        <geometry>
+          <box>
+            <size>0.325 1.79 0.67</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>-0.275 0.0 0.335 0 0 0</pose>
+    </link>
+    <link name="side_left">
+     <collision name="side_left_col">
+        <geometry>
+          <box>
+            <size>0.875 0.20 0.67</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="side_left_vis">
+        <geometry>
+          <box>
+            <size>0.875 0.20 0.67</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0 -0.8 0.335 0 0 0</pose>
+    </link>
+    <link name="side_right">
+      <collision name="side_right_col">
+        <geometry>
+          <box>
+            <size>0.875 0.20 0.67</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="side_right_vis">
+        <geometry>
+          <box>
+            <size>0.875 0.20 0.67</size>
+          </box>
+        </geometry>
+      </visual>
+    <pose>0 0.8 0.335 0 0 0</pose>
+    </link>
+    <link name="seat">
+      <collision name="seat_col">
+        <geometry>
+          <box>
+            <size>0.55 1.4 0.405</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="seat_vis">
+        <geometry>
+          <box>
+              <size>0.55 1.4 0.405</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.1625 0 0.2025 0 0 0</pose>
+    </link>
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of_vv">
+        <geometry>
+          <box>
+            <size>0.3 1 0.2</size>
+          </box>
+        </geometry>
+        <pose>0.2 0.0 0.62 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of_vv">
+        <geometry>
+          <box>
+            <size>0.2 1.6 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.65 0.0 0.005 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <static>true</static>
+  </model>
+</sdf>

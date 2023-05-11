@@ -37,9 +37,9 @@
       <uri>model://robotics_testlab_B/black_cabinet</uri>
     </include>
     <include>
-      <pose>4.50 1.15 0 0 0 3.14159265359</pose>
+      <pose>4.275 1.125 0 0 0 3.14159265359</pose>
       <name>dinner_table</name>
-      <uri>model://table_120x80x76</uri>
+      <uri>model://impuls/puck_table</uri>
     </include>
     <include>
       <pose>1.1 2.15 0 0 0 -1.57079632679</pose>

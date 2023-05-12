@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <sdf version="1.6">
-  <model name="robotics_testlabs/plastic_cabinet" type="cabinet">
+  <model name="robotics_testlabs/plastic_cabinet" type="shelf">
     <link name="1_link">
       <collision name="1_col">
         <geometry>

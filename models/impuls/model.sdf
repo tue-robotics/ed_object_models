@@ -135,13 +135,13 @@
         <virtual_volume name="in_vv">
           <geometry>
             <box>
-              <size>4.58 2.7 2.5</size>
+              <size>5.58 2.7 2.5</size>
             </box>
           </geometry>
-          <pose>-1.04 0.1 0.0 0 0 0</pose>
+          <pose>0.0 0.0 0.0 0 0 0</pose>
         </virtual_volume>
       </link>
-      <pose>10.6 1.25 1.25 0 0 0</pose>
+      <pose>5.5 1.35 1.25 0 0 0</pose>
       <static>true</static>
     </model>
     <model name="kitchen" type="room">
@@ -156,20 +156,6 @@
         </virtual_volume>
       </link>
       <pose>13.0 1.3 1.25 0 0 0</pose>
-      <static>true</static>
-    </model>
-    <model name="dining_room" type="room">
-      <link name="in">
-        <virtual_volume name="in_vv">
-          <geometry>
-            <box>
-              <size>4.07 2.7 2.5</size>
-            </box>
-          </geometry>
-          <pose>0.035 0.1 0.0 0 0 0</pose>
-        </virtual_volume>
-      </link>
-      <pose>5.0 1.25 1.25 0 0 0</pose>
       <static>true</static>
     </model>
     <model name="office" type="room">

@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rwc2023/desk">
+    <static>true</static>
+    <link name="1_link">
+      <collision name="1_col">
+        <geometry>
+          <box>
+            <size>0.705 1.505 0.085</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="1_vis">
+        <geometry>
+          <box>
+            <size>0.705 1.505 0.085</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 0.0 0.7625 0 0 0</pose>
+    </link>
+    <link name="2_link">
+      <collision name="2_col">
+        <geometry>
+          <box>
+            <size>0.028 0.102 0.72</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="2_vis">
+        <geometry>
+          <box>
+            <size>0.028 0.102 0.72</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>-0.3385 -0.7015 0.36 0 0 0</pose>
+    </link>
+    <link name="3_link">
+      <collision name="3_col">
+        <geometry>
+          <box>
+            <size>0.028 0.102 0.72</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="3_vis">
+        <geometry>
+          <box>
+            <size>0.028 0.102 0.72</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.3385 -0.7015 0.36 0 0 0</pose>
+    </link>
+    <link name="4_link">
+      <collision name="4_col">
+        <geometry>
+          <box>
+            <size>0.028 0.102 0.72</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="4_vis">
+        <geometry>
+          <box>
+            <size>0.028 0.102 0.72</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>-0.3385 0.7015 0.36 0 0 0</pose>
+    </link>
+    <link name="5_link">
+      <collision name="5_col">
+        <geometry>
+          <box>
+            <size>0.028 0.102 0.72</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="5_vis">
+        <geometry>
+          <box>
+            <size>0.028 0.102 0.72</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.3385 0.7015 0.36 0 0 0</pose>
+    </link>
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of_vv">
+        <geometry>
+          <box>
+            <size>0.685 1.445 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.0 0.95 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of_vv">
+        <geometry>
+          <box>
+            <size>0.2 1.305 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.8525 0.0 0.005 0 0 0</pose>
+      </virtual_volume>
+    </link>
+  </model>
+</sdf>

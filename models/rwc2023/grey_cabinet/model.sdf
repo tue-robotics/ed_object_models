@@ -1,0 +1,169 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rwc2023/grey_cabinet">
+    <static>true</static>
+    <link name="1_link">
+      <collision name="1_col">
+        <geometry>
+          <box>
+            <size>0.45 0.02 1.64</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="1_vis">
+        <geometry>
+          <box>
+            <size>0.45 0.02 1.64</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 -0.44 0.82 0 0 0</pose>
+    </link>
+    <link name="2_link">
+      <collision name="2_col">
+        <geometry>
+          <box>
+            <size>0.45 0.02 1.64</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="2_vis">
+        <geometry>
+          <box>
+            <size>0.45 0.02 1.64</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 0.44 0.82 0 0 0</pose>
+    </link>
+    <link name="3_link">
+      <collision name="3_col">
+        <geometry>
+          <box>
+            <size>0.02 0.9 1.64</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="3_vis">
+        <geometry>
+          <box>
+            <size>0.02 0.9 1.64</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>-0.215 0.0 0.82 0 0 0</pose>
+    </link>
+    <link name="4_link">
+      <collision name="4_col">
+        <geometry>
+          <box>
+            <size>0.43 0.86 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="4_vis">
+        <geometry>
+          <box>
+            <size>0.43 0.86 0.02</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.01 0.0 1.63 0 0 0</pose>
+    </link>
+    <link name="5_link">
+      <collision name="5_col">
+        <geometry>
+          <box>
+            <size>0.43 0.86 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="5_vis">
+        <geometry>
+          <box>
+            <size>0.43 0.86 0.02</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.01 0.0 0.09 0 0 0</pose>
+    </link>
+    <link name="6_link">
+      <collision name="6_col">
+        <geometry>
+          <box>
+            <size>0.43 0.86 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="6_vis">
+        <geometry>
+          <box>
+            <size>0.43 0.86 0.02</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.01 0.0 0.635 0 0 0</pose>
+    </link>
+    <link name="7_link">
+      <collision name="7_col">
+        <geometry>
+          <box>
+            <size>0.43 0.86 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="7_vis">
+        <geometry>
+          <box>
+            <size>0.43 0.86 0.02</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.01 0.0 1.135 0 0 0</pose>
+    </link>
+    <link name="8_link">
+      <collision name="8_col">
+        <geometry>
+          <box>
+            <size>0.43 0.86 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="8_vis">
+        <geometry>
+          <box>
+            <size>0.43 0.86 0.02</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.01 0.0 1.655 0 0 0</pose>
+    </link>
+    <link name="9_link">
+      <collision name="9_col">
+        <geometry>
+          <box>
+            <size>0.43 0.02 1.52</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="9_vis">
+        <geometry>
+          <box>
+            <size>0.43 0.02 1.52</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.01 -0.44 0.78 0 0 0</pose>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of_vv">
+        <geometry>
+          <box>
+            <size>0.2 0.7 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.725 0.0 0.005 0 0 0</pose>
+      </virtual_volume>
+    </link>
+  </model>
+</sdf>

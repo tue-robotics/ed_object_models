@@ -3,8 +3,8 @@
   <world name="rwc2023">
     <include>
       <name>walls</name>
-      <uri>model://impuls/walls</uri>
-      <pose>0 0 0 0 0 0</pose>
+      <uri>model://rwc2023/walls</uri>
+      <pose>0 0 0 0 0 -1.57079632679</pose>
     </include>
     <include>
       <pose>0 0 0 0 0 0</pose>

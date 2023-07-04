@@ -1,5 +1,5 @@
 solid AssimpScene
- facet normal 0 5.9604652e-08 1
+ facet normal 0 0 1
   outer loop
   vertex 2.7750001 9.0249996 0
   vertex 2.7750001 9.0249996 1
@@ -7,7 +7,7 @@ solid AssimpScene
   endloop
  endfacet
 
- facet normal 0 -0.44721356 0.89442718
+ facet normal 0 -0.44721359 0.89442718
   outer loop
   vertex 2.7750001 9.0249996 1
   vertex 2.7750001 -0.025 1
@@ -15,49 +15,49 @@ solid AssimpScene
   endloop
  endfacet
 
- facet normal -0.57735026 -0.5773502 0.57735026
+ facet normal -0.57735026 -0.57735026 0.57735026
   outer loop
   vertex 2.7750001 -0.025 0
   vertex 2.7750001 -0.025 1
-  vertex 0.25 -0.025 0
+  vertex 0.75 -0.025 0
   endloop
  endfacet
 
  facet normal -0.44721359 0 0.89442718
   outer loop
   vertex 2.7750001 -0.025 1
-  vertex 0.25 -0.025 1
-  vertex 0.25 -0.025 0
+  vertex 0.75 -0.025 1
+  vertex 0.75 -0.025 0
   endloop
  endfacet
 
- facet normal -0.57735026 0.57735026 0.57735026
+ facet normal -0.57735026 0.57735026 0.5773502
   outer loop
-  vertex 0.25 -0.025 0
-  vertex 0.25 -0.025 1
-  vertex 0.25 0 0
+  vertex 0.75 -0.025 0
+  vertex 0.75 -0.025 1
+  vertex 0.75 0 0
   endloop
  endfacet
 
  facet normal 0 0.44721359 0.89442718
   outer loop
-  vertex 0.25 -0.025 1
-  vertex 0.25 0 1
-  vertex 0.25 0 0
+  vertex 0.75 -0.025 1
+  vertex 0.75 0 1
+  vertex 0.75 0 0
   endloop
  endfacet
 
  facet normal -0.57735026 0.57735026 0.57735026
   outer loop
-  vertex 0.25 0 0
-  vertex 0.25 0 1
+  vertex 0.75 0 0
+  vertex 0.75 0 1
   vertex 1.25 0 0
   endloop
  endfacet
 
  facet normal -0.44721359 0 0.89442718
   outer loop
-  vertex 0.25 0 1
+  vertex 0.75 0 1
   vertex 1.25 0 1
   vertex 1.25 0 0
   endloop
@@ -642,8 +642,8 @@ solid AssimpScene
  facet normal 0 0 1
   outer loop
   vertex 2.7750001 -0.025 1
-  vertex 0.25 0 1
-  vertex 0.25 -0.025 1
+  vertex 0.75 0 1
+  vertex 0.75 -0.025 1
   endloop
  endfacet
 
@@ -651,7 +651,7 @@ solid AssimpScene
   outer loop
   vertex 2.7750001 -0.025 1
   vertex 1.25 0 1
-  vertex 0.25 0 1
+  vertex 0.75 0 1
   endloop
  endfacet
 

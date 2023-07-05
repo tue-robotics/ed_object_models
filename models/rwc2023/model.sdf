@@ -12,12 +12,33 @@
       <uri>model://floor</uri>
     </include>
 
+    <!-- bedroom -->
+    <include>
+      <name>bed</name>
+      <uri>model://rwc2023/bed</uri>
+      <pose>8.07 -2 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>bedside_table</name>
+      <uri>model://rwc2023/bedside_table</uri>
+      <pose>8.79 -1.05 0 0 0 3.14</pose>
+    </include>
+
     <include>
       <name>shelf</name>
       <uri>model://rwc2023/shelf</uri>
       <pose>5.37 -2.36 0 0 0 1.57</pose>
     </include>
 
+    <!-- kitchen -->
+    <include>
+      <name>kitchen_table</name>
+      <uri>model://rwc2023/kitchen_table</uri>
+      <pose>7.32 4.45 0 0 0 0</pose>
+    </include>
+
+    <!-- study -->
     <include>
       <name>desk</name>
       <uri>model://rwc2023/desk</uri>
@@ -25,10 +46,12 @@
     </include>
 
     <include>
-      <name>kitchen_table</name>
-      <uri>model://rwc2023/kitchen_table</uri>
-      <pose>7.32 4.45 0 0 0 0</pose>
+      <name>cabinet</name>
+      <uri>model://rwc2023/cabinet</uri>
+      <pose>4.3 -1.14 0 0 0 3.14</pose>
     </include>
+
+
 
 
     <light type="directional" name="sun">

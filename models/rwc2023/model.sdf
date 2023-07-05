@@ -11,24 +11,23 @@
       <name>floor</name>
       <uri>model://floor</uri>
     </include>
-<!--
-    <include>
-      <pose>1.882 -0.24 0 0 0 1.57079632679</pose>
-      <name>closet</name>
-      <uri>model://robotics_testlabs/plastic_cabinet</uri>
-    </include>
--->
 
     <include>
-      <name>table</name>
+      <name>shelf</name>
+      <uri>model://rwc2023/shelf</uri>
+      <pose>5.37 -2.36 0 0 0 1.57</pose>
+    </include>
+
+    <include>
+      <name>desk</name>
       <uri>model://rwc2023/desk</uri>
       <pose>2.25 -0.8 0 0 0 3.14159265359</pose>
     </include>
 
     <include>
-      <name>black_cabinet</name>
-      <uri>model://rwc2023/black_cabinet</uri>
-      <pose>2.25 -0.8 0 0 0 3.14159265359</pose>
+      <name>kitchen_table</name>
+      <uri>model://rwc2023/kitchen_table</uri>
+      <pose>7.32 4.45 0 0 0 0</pose>
     </include>
 
 

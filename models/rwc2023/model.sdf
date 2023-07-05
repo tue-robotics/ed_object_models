@@ -57,6 +57,12 @@
       <uri>model://rwc2023/pantry</uri>
       <pose>6.22 6.35 0 0 0 -1.57</pose>
     </include>
+    <!-- Storing Groceries -->
+    <include>
+      <name>storing_groceries_table</name>
+      <uri>model://rwc2023/side_table</uri>
+      <pose>5.5 5.5 0 0 0 0</pose>
+    </include>
     <!-- study -->
     <include>
       <name>desk</name>

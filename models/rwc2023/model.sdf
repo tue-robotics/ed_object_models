@@ -61,7 +61,7 @@
       <name>sink</name>
       <uri>model://rwc2023/sink</uri>
       <pose>4.87 2.56 0 0 0 0.00</pose>
-    </include>
+  </include>
     <include>
         <name>chair1</name>
         <uri>model://rwc2023/chair</uri>
@@ -73,6 +73,19 @@
         <pose>7.75 5.2 0 0 0 3.8</pose>
     </include>
 
+    <!-- Challenge_receptionist -->
+<!--
+      <include>
+        <name>chair1</name>
+        <uri>model://rwc2023/chair</uri>
+        <pose>3.55 4.9 0 0 0 2.5</pose>
+    </include>
+    <include>
+        <name>chair2</name>
+        <uri>model://rwc2023/chair</uri>
+        <pose>1.1 4.6 0 0 0 1.2</pose>
+    </include>
+-->
     <!-- study -->
     <include>
       <name>desk</name>
@@ -107,6 +120,17 @@
       <uri>model://rwc2023/bookshelf</uri>
       <pose>0.3 5.1 0 0 0 0.0</pose>
     </include>
+    <include>
+        <name>side_table1</name>
+        <uri>model://rwc2023/side_table</uri>
+        <pose>1.95 5 0 0 0 -1.570796326795</pose>
+    </include>
+    <include>
+        <name>side_table2</name>
+        <uri>model://rwc2023/side_table</uri>
+        <pose>2.5 5 0 0 0 -1.570796326795</pose>
+    </include>
+
     <light type="directional" name="sun">
       <cast_shadows>true</cast_shadows>
       <pose>0 0 10 0 0 0</pose>

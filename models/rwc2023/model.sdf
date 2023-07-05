@@ -222,7 +222,7 @@
       <static>true</static>
     </model>
     <model name="entrance" type="waypoint">
-      <pose>0.5 3.5 0 0 0 2.355</pose>
+      <pose>0.5 4 0 0 0 3.14</pose>
       <static>true</static>
     </model>
     <model name="initial_pose" type="waypoint">

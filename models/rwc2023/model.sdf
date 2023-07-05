@@ -35,9 +35,28 @@
     <include>
       <name>kitchen_table</name>
       <uri>model://rwc2023/kitchen_table</uri>
-      <pose>7.32 4.45 0 0 0 0</pose>
+      <pose>7.32 4.45 0 0 0 3.14</pose>
     </include>
-
+    <include>
+      <name>refrigerator</name>
+      <uri>model://rwc2023/refrigerator</uri>
+      <pose>4.87 2.55 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>dishwasher</name>
+      <uri>model://rwc2023/dishwasher</uri>
+      <pose>8.7 2.55 0 0 0 3.14</pose>
+    </include>
+    <include>
+      <name>microwave</name>
+      <uri>model://rwc2023/microwave</uri>
+      <pose>8.79 2.55 0.84 0 0 3.14</pose>
+    </include>
+    <include>
+      <name>pantry</name>
+      <uri>model://rwc2023/pantry</uri>
+      <pose>6.22 6.35 0 0 0 -1.57</pose>
+    </include>
     <!-- study -->
     <include>
       <name>desk</name>
@@ -57,8 +76,11 @@
       <uri>model://rwc2023/sofa</uri>
       <pose>1.92 5.9 0 0 0 -1.57</pose>
     </include>
-
-
+    <include>
+      <name>bookshelf</name>
+      <uri>model://rwc2023/bookshelf</uri>
+      <pose>1.92 5.9 0 0 0 </pose>
+    </include>
     <light type="directional" name="sun">
       <cast_shadows>true</cast_shadows>
       <pose>0 0 10 0 0 0</pose>

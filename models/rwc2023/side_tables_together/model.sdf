@@ -17,7 +17,7 @@
           </box>
         </geometry>
       </visual>
-      <pose>0.0 0.2625 0.41 0 0 0</pose>
+      <pose>0.0 0.2525 0.41 0 0 0</pose>
     </link>
     <link name="2_link">
       <collision name="2_col">
@@ -34,7 +34,7 @@
           </box>
         </geometry>
       </visual>
-      <pose>-0.2425 0.505 0.215 0 0 0</pose>
+      <pose>-0.2425 0.495 0.215 0 0 0</pose>
     </link>
     <link name="3_link">
       <collision name="3_col">
@@ -51,7 +51,7 @@
           </box>
         </geometry>
       </visual>
-      <pose>0.2425 0.505 0.215 0 0 0</pose>
+      <pose>0.2425 0.495 0.215 0 0 0</pose>
     </link>
     <link name="4_link">
       <collision name="4_col">
@@ -68,7 +68,7 @@
           </box>
         </geometry>
       </visual>
-      <pose>-0.2425 0.02 0.215 0 0 0</pose>
+      <pose>-0.2425 0.01 0.215 0 0 0</pose>
     </link>
     <link name="5_link">
       <collision name="5_col">
@@ -85,7 +85,7 @@
           </box>
         </geometry>
       </visual>
-      <pose>0.2425 0.02 0.215 0 0 0</pose>
+      <pose>0.2425 0.01 0.215 0 0 0</pose>
     </link>
 
     <link name="1_link_second_table">
@@ -103,7 +103,7 @@
           </box>
         </geometry>
       </visual>
-      <pose>0 -0.2625 0.41 0 0 0</pose>
+      <pose>0 -0.2525 0.41 0 0 0</pose>
     </link>
     <link name="2_link_second_table">
       <collision name="2_col_second_table">
@@ -120,7 +120,7 @@
           </box>
         </geometry>
       </visual>
-      <pose>-0.2425 -0.505 0.215 0 0 0</pose>
+      <pose>-0.2425 -0.495 0.215 0 0 0</pose>
     </link>
     <link name="3_link_second_table">
       <collision name="3_col_second_table">
@@ -137,7 +137,7 @@
           </box>
         </geometry>
       </visual>
-      <pose>0.2425 -0.505 0.215 0 0 0</pose>
+      <pose>0.2425 -0.495 0.215 0 0 0</pose>
     </link>
     <link name="4_link_second_table">
       <collision name="4_col_second_table">
@@ -154,7 +154,7 @@
           </box>
         </geometry>
       </visual>
-      <pose>-0.2425 -0.02 0.215 0 0 0</pose>
+      <pose>-0.2425 -0.01 0.215 0 0 0</pose>
     </link>
     <link name="5_link_second_table">
       <collision name="5_col_second_table">
@@ -171,7 +171,7 @@
           </box>
         </geometry>
       </visual>
-      <pose>0.2425 -0.02 0.215 0 0 0</pose>
+      <pose>0.2425 -0.01 0.215 0 0 0</pose>
     </link>
 
 

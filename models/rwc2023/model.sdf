@@ -83,9 +83,9 @@
       <pose>1.92 5.9 0 0 0 -1.57</pose>
     </include>
     <include>
-      <name>bookshelf</name>
-      <uri>model://rwc2023/bookshelf</uri>
-      <pose>1.92 5.9 0 0 0 </pose>
+      <name>tv_stand</name>
+      <uri>model://rwc2023/tv_stand</uri>
+      <pose>1.25 1.25 0 0 0 1.57</pose>
     </include>
     <light type="directional" name="sun">
       <cast_shadows>true</cast_shadows>

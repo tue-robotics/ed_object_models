@@ -186,7 +186,7 @@
       <pose>1.3 4.5 0 0 0 0</pose>gedit
       <static>true</static>
     </model>
-    <model name="Entrance" type="waypoint">
+    <model name="entrance" type="waypoint">
       <pose>0.0 4.0 0 0 0 0</pose>
       <static>true</static>
     </model>

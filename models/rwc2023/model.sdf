@@ -167,6 +167,10 @@
       <static>true</static>
     </model>
     <!-- waypoints -->
+    <model name="initial_pose_receptionist" type="waypoint">
+      <pose>1.6 1.85 0 0 0 0</pose>gedit 
+      <static>true</static>
+    </model>
     <model name="initial_pose" type="waypoint">
       <pose>0.0 4.0 0 0 0 0</pose>
       <static>true</static>

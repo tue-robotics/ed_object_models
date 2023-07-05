@@ -18,13 +18,20 @@
       <uri>model://robotics_testlabs/plastic_cabinet</uri>
     </include>
 -->
-<!--
+
     <include>
-      <pose>4.275 1.125 0 0 0 3.14159265359</pose>
-      <name>dinner_table</name>
-      <uri>model://impuls/puck_table</uri>
+      <name>table</name>
+      <uri>model://rwc2023/desk</uri>
+      <pose>2.25 -0.8 0 0 0 3.14159265359</pose>
     </include>
--->
+
+    <include>
+      <name>black_cabinet</name>
+      <uri>model://rwc2023/black_cabinet</uri>
+      <pose>2.25 -0.8 0 0 0 3.14159265359</pose>
+    </include>
+
+
     <light type="directional" name="sun">
       <cast_shadows>true</cast_shadows>
       <pose>0 0 10 0 0 0</pose>

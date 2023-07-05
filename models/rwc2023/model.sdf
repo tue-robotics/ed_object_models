@@ -62,6 +62,7 @@
       <uri>model://rwc2023/sink</uri>
       <pose>4.87 2.56 0 0 0 0.00</pose>
   </include>
+<!--
     <include>
         <name>chair1</name>
         <uri>model://rwc2023/chair</uri>
@@ -72,9 +73,8 @@
         <uri>model://rwc2023/chair</uri>
         <pose>7.75 5.2 0 0 0 3.8</pose>
     </include>
-
+-->
     <!-- Challenge_receptionist -->
-<!--
       <include>
         <name>chair1</name>
         <uri>model://rwc2023/chair</uri>
@@ -85,7 +85,6 @@
         <uri>model://rwc2023/chair</uri>
         <pose>1.1 4.6 0 0 0 1.2</pose>
     </include>
--->
 
 
     <!-- Challenge_storing_groceries -->

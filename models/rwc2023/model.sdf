@@ -35,7 +35,7 @@
     <include>
       <name>kitchen_table</name>
       <uri>model://rwc2023/kitchen_table</uri>
-      <pose>7.32 4.45 0 0 0 3.14</pose>
+      <pose>7.32 4.45 0 0 0 -1.57</pose>
     </include>
     <include>
       <name>refrigerator</name>
@@ -45,13 +45,15 @@
     <include>
       <name>dishwasher</name>
       <uri>model://rwc2023/dishwasher</uri>
-      <pose>8.7 2.55 0 0 0 3.14</pose>
+      <pose>8.6 3 0 0 0 3.14</pose>
     </include>
+    <!--
     <include>
       <name>microwave</name>
       <uri>model://rwc2023/microwave</uri>
       <pose>8.79 2.55 0.84 0 0 3.14</pose>
     </include>
+    -->
     <include>
       <name>pantry</name>
       <uri>model://rwc2023/pantry</uri>
@@ -62,7 +64,8 @@
       <uri>model://rwc2023/sink</uri>
       <pose>4.87 2.56 0 0 0 0.00</pose>
   </include>
-<!--
+  <!-- Challenge Serve Breakfast -->
+ 
     <include>
         <name>chair1</name>
         <uri>model://rwc2023/chair</uri>
@@ -73,7 +76,7 @@
         <uri>model://rwc2023/chair</uri>
         <pose>7.75 5.2 0 0 0 3.8</pose>
     </include>
--->
+
 <!--
     <!-- Challenge_receptionist -->
 <!--

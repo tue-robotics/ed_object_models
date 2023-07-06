@@ -214,10 +214,10 @@
       <virtual_volume name="shelf2_vv">
         <geometry>
           <box>
-            <size>0.222 0.704 0.25</size>
+            <size>0.222 0.704 0.17</size>
           </box>
         </geometry>
-        <pose>0.029 0.0 0.643 0 0 0</pose>
+        <pose>0.029 0.0 0.603 0 0 0</pose>
       </virtual_volume>
     </link>
     <link name="shelf3">

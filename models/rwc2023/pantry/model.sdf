@@ -18,6 +18,7 @@
       </visual>
       <pose>0.0 -0.391 1.01 0 0 0</pose>
     </link>
+<!--
     <link name="door_link">
       <collision name="door_col">
         <geometry>
@@ -35,6 +36,7 @@
       </visual>
       <pose>0.3355 -0.391 0.505 0 0 0</pose>
     </link>
+-->
     <link name="2_link">
       <collision name="2_col">
         <geometry>

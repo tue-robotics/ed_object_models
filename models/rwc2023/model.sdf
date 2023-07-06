@@ -75,6 +75,7 @@
     </include>
 -->
     <!-- Challenge_receptionist -->
+<!--
       <include>
         <name>chair1</name>
         <uri>model://rwc2023/chair</uri>
@@ -85,16 +86,16 @@
         <uri>model://rwc2023/chair</uri>
         <pose>1.1 4.6 0 0 0 1</pose>
     </include>
-
+-->
 
     <!-- Challenge_storing_groceries -->
-<!--
+
     <include>
         <name>side_tables</name>
         <uri>model://rwc2023/side_tables_together</uri>
         <pose>5.5 5.4 0 0 0 0</pose>
     </include>
--->
+
 
     <!-- study -->
     <include>
@@ -130,6 +131,7 @@
       <uri>model://rwc2023/bookshelf</uri>
       <pose>0.3 5.1 0 0 0 0.0</pose>
     </include>
+<!--
     <include>
         <name>side_table1</name>
         <uri>model://rwc2023/side_table</uri>
@@ -140,6 +142,7 @@
         <uri>model://rwc2023/side_table</uri>
         <pose>2.5 5 0 0 0 -1.570796326795</pose>
     </include>
+-->
 
     <light type="directional" name="sun">
       <cast_shadows>true</cast_shadows>

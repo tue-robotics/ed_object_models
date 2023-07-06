@@ -90,7 +90,7 @@
 -->
 
     <!-- Challenge_storing_groceries -->
-
+<!--
     <include>
         <name>side_tables</name>
         <uri>model://rwc2023/side_tables_together</uri>
@@ -101,6 +101,7 @@
         <uri>model://rwc2023/kitchen_shelf</uri>
         <pose>4.78 4.99 0 0 0 0</pose>
     </include>
+-->
     <!-- study -->
     <include>
       <name>desk</name>

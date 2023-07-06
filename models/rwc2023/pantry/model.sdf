@@ -126,18 +126,18 @@
       <collision name="7_col">
         <geometry>
           <box>
-            <size>0.262 0.764 0.018</size>
+            <size>0.262 0.764 0.038</size>
           </box>
         </geometry>
       </collision>
       <visual name="7_vis">
         <geometry>
           <box>
-            <size>0.262 0.764 0.018</size>
+            <size>0.262 0.764 0.038</size>
           </box>
         </geometry>
       </visual>
-      <pose>0.009 0.0 0.749 0 0 0</pose>
+      <pose>0.009 0.0 0.739 0 0 0</pose>
     </link>
     <link name="8_link">
       <collision name="8_col">

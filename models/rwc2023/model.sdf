@@ -35,7 +35,7 @@
     <include>
       <name>kitchen_table</name>
       <uri>model://rwc2023/kitchen_table</uri>
-      <pose>7.32 4.45 0 0 0 -1.57</pose>
+      <pose>7.32 4.45 0 0 0 -1.9</pose>
     </include>
     <include>
       <name>refrigerator</name>

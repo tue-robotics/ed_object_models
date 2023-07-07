@@ -276,6 +276,16 @@
       <static>true</static>
     </model>
  -->
+    <model name="gpsr_meeting_point" type="waypoint">
+      <pose>2 4 0 0 0 -1.57079632679</pose>
+      <static>true</static>
+    </model>
+
+    <model name="gpsr_exit_door_2" type="waypoint">
+      <pose>0 0 0 0 0 3.14</pose>
+      <static>true</static>
+    </model>
+
 
     <physics type="ode">
       <real_time_update_rate>333.0</real_time_update_rate>

@@ -26,17 +26,17 @@
             <size>0.2 0.4 0.01</size>
           </box>
         </geometry>
-        <pose>0.79 0.3 0.005 0 0 0</pose>
+        <pose>0.79 0.0 0.005 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="in_front_of2">
+    <link name="in_front_of_ctt">
       <virtual_volume name="in_front_of_vv">
         <geometry>
           <box>
-            <size>0.8 0.4 0.01</size>
+            <size>0.2 0.4 0.01</size>
           </box>
         </geometry>
-        <pose>0.79 0.3 0.005 0 0 0</pose>
+        <pose>1.39 0.0 0.005 0 0 0</pose>
       </virtual_volume>
     </link>
   </model>

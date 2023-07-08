@@ -263,6 +263,10 @@
       <pose>1 2.5 0 0 0 1.35</pose>
       <static>true</static>
     </model>
+    <model name="stickler_for_rules_starting_point" type="waypoint">
+      <pose>6.35 4 0 0 0 -1.57</pose>
+      <static>true</static>
+    </model>
 
 
 

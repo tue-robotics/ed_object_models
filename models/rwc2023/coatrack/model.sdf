@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
-  <model name="rwc2023/round_table">
+  <model name="rwc2023/coatrack">
     <static>true</static>
     <link name="2_link">
       <collision name="2_col">

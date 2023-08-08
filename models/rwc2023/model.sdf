@@ -47,21 +47,16 @@
       <uri>model://rwc2023/trashbin</uri>
       <pose>8.84 1.19 0 0 0 0</pose>
     </include>
-
     <include>
       <name>dishwasher</name>
       <uri>model://rwc2023/dishwasher</uri>
       <pose>8.6 3 0 0 0 3.14</pose>
     </include>
-
-<!--
     <include>
       <name>microwave</name>
       <uri>model://rwc2023/microwave</uri>
       <pose>8.79 2.55 0.84 0 0 3.14</pose>
     </include>
--->
-
     <include>
       <name>pantry</name>
       <uri>model://rwc2023/pantry</uri>
@@ -246,7 +241,6 @@
     </model>
 
     <!-- waypoints -->
-<!--
     <model name="initial_pose_receptionist" type="waypoint">
       <pose>1.3 2.0 0 0 0 0</pose>
       <static>true</static>
@@ -259,7 +253,6 @@
       <pose>0.5 4 0 0 0 3.14</pose>
       <static>true</static>
     </model>
- -->
 
     <model name="initial_pose" type="waypoint">
       <pose>0.0 4.0 0 0 0 0</pose>
@@ -278,9 +271,6 @@
       <static>true</static>
     </model>
 
-
-
-<!--
     <model name="rips_point_1" type="waypoint">
       <pose>2.5 0.5 0 0 0 -1.57079632679</pose>
       <static>true</static>
@@ -305,7 +295,7 @@
       <pose>0.5 0.0 0 0 0 3.14159265359</pose>
       <static>true</static>
     </model>
- -->
+
     <model name="gpsr_meeting_point" type="waypoint">
       <pose>1.5 4 0 0 0 -1.57079632679</pose>
       <static>true</static>

@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rwc2023/coatrack">
+    <static>true</static>
+    <link name="2_link">
+      <collision name="2_col">
+        <geometry>
+            <cylinder>
+                <radius>0.06</radius>
+                <length>1.5</length>
+            </cylinder>
+        </geometry>
+      </collision>
+      <visual name="2_vis">
+        <geometry>
+            <cylinder>
+                <radius>0.06</radius>
+                <length>1.5</length>
+            </cylinder>
+        </geometry>
+      </visual>
+      <pose>0.0 0.0 0.75 0 0 0</pose>
+    </link>
+  </model>
+</sdf>

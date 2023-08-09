@@ -1,0 +1,199 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rwc2023/small_table">
+    <static>true</static>
+    <link name="1_link">
+      <collision name="1_col">
+        <geometry>
+          <box>
+            <size>0.495 0.495 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="1_vis">
+        <geometry>
+          <box>
+            <size>0.495 0.495 0.01</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 0.2525 0.41 0 0 0</pose>
+    </link>
+    <link name="2_link">
+      <collision name="2_col">
+        <geometry>
+          <box>
+            <size>0.01 0.01 0.43</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="2_vis">
+        <geometry>
+          <box>
+            <size>0.01 0.01 0.43</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>-0.2425 0.495 0.215 0 0 0</pose>
+    </link>
+    <link name="3_link">
+      <collision name="3_col">
+        <geometry>
+          <box>
+            <size>0.01 0.01 0.43</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="3_vis">
+        <geometry>
+          <box>
+            <size>0.01 0.01 0.43</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.2425 0.495 0.215 0 0 0</pose>
+    </link>
+    <link name="4_link">
+      <collision name="4_col">
+        <geometry>
+          <box>
+            <size>0.01 0.01 0.43</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="4_vis">
+        <geometry>
+          <box>
+            <size>0.01 0.01 0.43</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>-0.2425 0.01 0.215 0 0 0</pose>
+    </link>
+    <link name="5_link">
+      <collision name="5_col">
+        <geometry>
+          <box>
+            <size>0.01 0.01 0.43</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="5_vis">
+        <geometry>
+          <box>
+            <size>0.01 0.01 0.43</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.2425 0.01 0.215 0 0 0</pose>
+    </link>
+
+    <link name="1_link_second_table">
+      <collision name="1_col_second_table">
+        <geometry>
+          <box>
+            <size>0.495 0.495 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="1_vis_second_table">
+        <geometry>
+          <box>
+            <size>0.495 0.495 0.01</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0 -0.2525 0.41 0 0 0</pose>
+    </link>
+    <link name="2_link_second_table">
+      <collision name="2_col_second_table">
+        <geometry>
+          <box>
+            <size>0.01 0.01 0.43</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="2_vis_second_table">
+        <geometry>
+          <box>
+            <size>0.01 0.01 0.43</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>-0.2425 -0.495 0.215 0 0 0</pose>
+    </link>
+    <link name="3_link_second_table">
+      <collision name="3_col_second_table">
+        <geometry>
+          <box>
+            <size>0.01 0.01 0.43</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="3_vis_second_table">
+        <geometry>
+          <box>
+            <size>0.01 0.01 0.43</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.2425 -0.495 0.215 0 0 0</pose>
+    </link>
+    <link name="4_link_second_table">
+      <collision name="4_col_second_table">
+        <geometry>
+          <box>
+            <size>0.01 0.01 0.43</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="4_vis_second_table">
+        <geometry>
+          <box>
+            <size>0.01 0.01 0.43</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>-0.2425 -0.01 0.215 0 0 0</pose>
+    </link>
+    <link name="5_link_second_table">
+      <collision name="5_col_second_table">
+        <geometry>
+          <box>
+            <size>0.01 0.01 0.43</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="5_vis_second_table">
+        <geometry>
+          <box>
+            <size>0.01 0.01 0.43</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.2425 -0.01 0.215 0 0 0</pose>
+    </link>
+
+
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of_vv">
+        <geometry>
+          <box>
+            <size>0.475 0.95 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.0 0.56 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of_vv">
+        <geometry>
+          <box>
+            <size>0.2 0.4 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.7475 0.0 0.005 0 0 0</pose>
+      </virtual_volume>
+    </link>
+  </model>
+</sdf>

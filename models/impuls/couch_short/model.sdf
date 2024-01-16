@@ -69,6 +69,16 @@
       </visual>
       <pose>0.125 0 0.21 0 0 0</pose>
     </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of_vv">
+        <geometry>
+          <box>
+            <size>0.2 1.55 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.65 0.0 0.005 0 0 0</pose>
+      </virtual_volume>
+    </link>
     <link name="on_top_of">
       <virtual_volume name="on_top_of_vv">
         <geometry>
@@ -79,14 +89,24 @@
         <pose>0.125 0.0 0.57 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="in_front_of">
-      <virtual_volume name="in_front_of_vv">
+    <link name="on_top_of_left">
+      <virtual_volume name="on_top_of_left_vv">
         <geometry>
           <box>
-            <size>0.2 1.55 0.01</size>
+            <size>0.60 0.69 0.3</size>
           </box>
         </geometry>
-        <pose>0.65 0.0 0.005 0 0 0</pose>
+        <pose>0.125 0.35 0.57 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="on_top_of_right">
+      <virtual_volume name="on_top_of_right_vv">
+        <geometry>
+          <box>
+            <size>0.60 0.69 0.3</size>
+          </box>
+        </geometry>
+        <pose>0.125 -0.35 0.57 0 0 0</pose>
       </virtual_volume>
     </link>
     <static>true</static>

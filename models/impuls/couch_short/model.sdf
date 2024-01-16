@@ -89,8 +89,8 @@
         <pose>0.125 0.0 0.57 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="on_top_of_couch_short_left">
-      <virtual_volume name="on_top_of_on_top_of_couch_short_left_vv">
+    <link name="on_top_of_left">
+      <virtual_volume name="on_top_of_left_vv">
         <geometry>
           <box>
             <size>0.60 0.69 0.3</size>
@@ -99,8 +99,8 @@
         <pose>0.125 0.35 0.57 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="on_top_of_couch_short_right">
-      <virtual_volume name="on_top_of_on_top_of_couch_short_right_vv">
+    <link name="on_top_of_right">
+      <virtual_volume name="on_top_of_right_vv">
         <geometry>
           <box>
             <size>0.60 0.69 0.3</size>

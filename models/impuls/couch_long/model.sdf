@@ -18,6 +18,16 @@
       </visual>
       <pose>-0.30 0.0 0.395 0 0 0</pose>
     </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of_vv">
+        <geometry>
+          <box>
+            <size>0.2 1.6 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.65 0.0 0.005 0 0 0</pose>
+      </virtual_volume>
+    </link>
     <link name="side_left">
      <collision name="side_left_col">
         <geometry>
@@ -69,18 +79,18 @@
       </visual>
       <pose>0.125 0 0.21 0 0 0</pose>
     </link>
-    <link name="on_top_of_couch_long_right">
+    <link name="on_top_of">
       <virtual_volume name="on_top_of_vv">
         <geometry>
           <box>
-            <size>0.60 0.80 0.3</size>
+            <size>0.60 1.64 0.3</size>
           </box>
         </geometry>
-        <pose>0.125 -0.41 0.57 0 0 0</pose>
+        <pose>0.125 0.0 0.57 0 0 0</pose>
       </virtual_volume>
     </link>
     <link name="on_top_of_couch_long_left">
-      <virtual_volume name="on_top_of_vv">
+     <virtual_volume name="on_top_of_couch_long_left_vv">
         <geometry>
           <box>
             <size>0.60 0.80 0.3</size>
@@ -89,14 +99,14 @@
         <pose>0.125 0.41 0.57 0 0 0</pose>
       </virtual_volume>
     </link>
-    <link name="in_front_of">
-      <virtual_volume name="in_front_of_vv">
+    <link name="on_top_of_couch_long_right">
+      <virtual_volume name="on_top_of_couch_long_right_vv">
         <geometry>
           <box>
-            <size>0.2 1.6 0.01</size>
+            <size>0.60 0.80 0.3</size>
           </box>
         </geometry>
-        <pose>0.65 0.0 0.005 0 0 0</pose>
+        <pose>0.125 -0.41 0.57 0 0 0</pose>
       </virtual_volume>
     </link>
     <static>true</static>

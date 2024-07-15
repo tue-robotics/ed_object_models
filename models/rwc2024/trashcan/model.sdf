@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
-  <model name="rwc2024/trashbin">
+  <model name="rwc2024/trashcan">
     <static>true</static>
     <link name="1_link">
       <collision name="1_col">

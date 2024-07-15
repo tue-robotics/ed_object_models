@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <sdf version="1.6">
-  <world name="rwc2023">
+  <world name="rwc2024">
     <include>
       <name>walls</name>
       <uri>model://rwc2024/walls</uri>

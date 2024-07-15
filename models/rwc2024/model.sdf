@@ -12,6 +12,13 @@
       <uri>model://floor</uri>
     </include>
 
+    <!-- office -->
+    <include>
+      <name>shelf</name>
+      <uri>model://rwc2024/shelf</uri>
+      <pose>0.135 4.10 0 0 0 0</pose>
+    </include>
+
     <!-- waypoints -->
     <model name="initial_pose" type="waypoint">
       <pose>0.0 0.0 0 0 0 0</pose>

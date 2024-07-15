@@ -18,13 +18,41 @@
       <uri>model://rwc2024/shelf</uri>
       <pose>0.135 4.10 0 0 0 0</pose>
     </include>
-    
+
+    <include>
+      <name>desk</name>
+      <uri>model://rwc2024/desk</uri>
+      <pose>1.3625 1.55 0 0 0 1.57079632679</pose>
+    </include>
+
     <!-- hallway -->
     <include>
       <name>coat_hanger</name>
       <uri>model://rwc2024/coat_hanger</uri>
       <pose>1.85 0.8 0 0 0 0</pose>
     </include>
+
+    <!-- living room -->
+    <include>
+      <name>lamp</name>
+      <uri>model://rwc2024/lamp</uri>
+      <pose>8.545 -2.5425 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>coffee_table</name>
+      <uri>model://rwc2024/coffee_table</uri>
+      <pose>7.335 -1.0725 0 0 0 -0.523598775</pose>
+    </include>
+
+    <!-- kitchen -->
+    <include>
+      <name>trashcan</name>
+      <uri>model://rwc2024/trashcan</uri>
+      <pose>3.75 1.3775 0 0 0 0.785398163</pose>
+    </include>
+
+
 
     <!-- waypoints -->
     <model name="initial_pose" type="waypoint">

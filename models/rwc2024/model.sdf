@@ -18,6 +18,13 @@
       <uri>model://rwc2024/shelf</uri>
       <pose>0.135 4.10 0 0 0 0</pose>
     </include>
+    
+    <!-- hallway -->
+    <include>
+      <name>coat_hanger</name>
+      <uri>model://rwc2024/coat_hanger</uri>
+      <pose>1.85 0.8 0 0 0 0</pose>
+    </include>
 
     <!-- waypoints -->
     <model name="initial_pose" type="waypoint">

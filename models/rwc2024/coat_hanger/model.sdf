@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="rwc2024/coat_hanger">
+    <link name="1_link">
+      <collision name="1_col">
+        <geometry>
+          <box>
+            <size>0.47 0.47 0.52</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="1_vis">
+        <geometry>
+          <box>
+            <size>0.47 0.47 0.52</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 0.0 0.26 0 0 0</pose>
+    </link>
+    <link name="2_link">
+      <collision name="2_col">
+        <geometry>
+          <cylinder>
+            <radius>0.045</radius>
+            <length>1.86</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="2_vis">
+        <geometry>
+          <cylinder>
+            <radius>0.045</radius>
+            <length>1.86</length>
+          </cylinder>
+        </geometry>
+      </visual>
+      <pose>0.0 0.0 0.93 0 0 0</pose>
+    </link>
+  </model>
+</sdf>

@@ -70,6 +70,13 @@
       <pose>8.5285 3.8565 0 0 0 3.14159265359</pose>
     </include>
 
+    <include>
+      <name>kitchen_cabinet</name>
+      <uri>model://rwc2024/kitchen_cabinet</uri>
+      <pose>3.64 5.55 0 0 0 0</pose>
+    </include>
+
+
     <!-- waypoints -->
     <model name="initial_pose" type="waypoint">
       <pose>0.0 0.0 0 0 0 0</pose>

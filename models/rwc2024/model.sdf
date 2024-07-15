@@ -56,22 +56,20 @@
       <name>dinner_table</name>
       <uri>model://rwc2024/dinner_table</uri>
       <pose>5.99 3.873 0 0 0 -1.57079632679</pose>
-      <!-- x,y,z,r,p,y-->
     </include>
 
-  <include>
+    <include>
       <name>kitchen_counter</name>
       <uri>model://rwc2024/kitchen_counter</uri>
-      <pose>8.496 5.0525 0 0 0 3.14</pose>
-      <!-- x,y,z,r,p,y-->
+      <pose>8.496 5.0525 0 0 0 3.14159265359</pose>
     </include>
 
-  <include>
+    <include>
       <name>dishwasher</name>
       <uri>model://rwc2024/dishwasher</uri>
-      <pose>8.5285 3.8565 0 0 0 3.14</pose>
-      <!-- x,y,z,r,p,y-->
+      <pose>8.5285 3.8565 0 0 0 3.14159265359</pose>
     </include>
+
     <!-- waypoints -->
     <model name="initial_pose" type="waypoint">
       <pose>0.0 0.0 0 0 0 0</pose>

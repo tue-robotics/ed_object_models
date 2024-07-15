@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rwc2024/kitchen_counter">
+    <static>true</static>
+    <link name="1_link">
+      <collision name="1_col">
+        <geometry>
+          <box>
+            <size>0.595 1.795 0.908</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="1_vis">
+        <geometry>
+          <box>
+            <size>0.595 1.795 0.908</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 0.0 0.454 0 0 0</pose>
+    </link>
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of_vv">
+        <geometry>
+          <box>
+            <size>0.575 1.735 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.0 1.053 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of_vv">
+        <geometry>
+          <box>
+            <size>0.2 1.595 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.7975 0.0 0.005 0 0 0</pose>
+      </virtual_volume>
+    </link>
+  </model>
+</sdf>

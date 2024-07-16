@@ -156,7 +156,7 @@
     <include>
       <name>kitchen_cabinet</name>
       <uri>model://rwc2024/kitchen_cabinet</uri>
-      <pose>3.64 5.07 0 0 0 0</pose>
+      <pose>3.65 5.07 0 0 0 0</pose>
     </include>
 
     <!-- Light for Gazebo -->

@@ -61,7 +61,7 @@
     <include>
       <name>dinner_table</name>
       <uri>model://rwc2024/dinner_table</uri>
-      <pose>5.99 3.873 0 0 0 -1.57079632679</pose>
+      <pose>5.99 3.873 0 0 0 1.57079632679</pose>
     </include>
 
     <include>

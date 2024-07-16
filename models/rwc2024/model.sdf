@@ -50,6 +50,18 @@
       <uri>model://rwc2024/coffee_table</uri>
       <pose>7.335 -1.0725 0 0 0 -0.523598775</pose>
     </include>
+    
+    <include>
+      <name>couch</name>
+      <uri>model://rwc2024/couch</uri>
+      <pose>8.535 -1.0925 0 0 0 -3.14</pose>
+    </include>
+    
+    <include>
+      <name>tv_table</name>
+      <uri>model://rwc2024/tv_table</uri>
+      <pose>3.813 -1.623 0 0 0 0</pose>
+    </include>
 
     <!-- kitchen -->
     <include>

@@ -170,6 +170,16 @@
       <pose>1.75 0.0 0 0 0 -3.14</pose>
       <static>true</static>
     </model>
+    
+    <model name="entrance" type="waypoint">
+      <pose>0.78 0.0 0 0 0 -3.14</pose>
+      <static>true</static>
+    </model>
+    
+    <model name="receptionist_living_room" type="waypoint">
+      <pose>6 -1 0 0 0 0</pose>
+      <static>true</static>
+    </model>
 
     <model name="rips_point_1" type="waypoint">
       <pose>4.25 0.25 0 0 0 0.78539816339</pose>

@@ -74,20 +74,20 @@
       <virtual_volume name="on_top_of_vv">
         <geometry>
           <box>
-            <size>0.4 0.60 0.3</size>
+            <size>0.35 0.50 0.3</size>
           </box>
         </geometry>
-        <pose>0.075 0.31 0.6 0 0 0</pose>
+        <pose>0.075 0.26 0.65 0 0 0</pose>
       </virtual_volume>
     </link>
     <link name="on_top_of_couch_right">
       <virtual_volume name="on_top_of_vv">
         <geometry>
           <box>
-            <size>0.4 0.60 0.3</size>
+            <size>0.35 0.50 0.3</size>
           </box>
         </geometry>
-        <pose>0.075 -0.31 0.6 0 0 0</pose>
+        <pose>0.075 -0.26 0.65 0 0 0</pose>
       </virtual_volume>
     </link>
 

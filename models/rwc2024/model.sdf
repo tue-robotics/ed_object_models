@@ -224,6 +224,15 @@
       <pose>3 5.25 0 0 0 1.57079632679</pose>
       <static>true</static>
     </model>
+    <model name="initial_pose_serve_breakfast" type="waypoint">
+      <pose>-0.75 0.0 0 0 0 0</pose>
+      <static>true</static>
+    </model>
+
+    <model name="test_pose_serve_breakfast" type="waypoint">
+      <pose>5 5.07 0 0 0 0</pose>
+      <static>true</static>
+    </model>
 
     <physics type="ode">
       <real_time_update_rate>333.0</real_time_update_rate>

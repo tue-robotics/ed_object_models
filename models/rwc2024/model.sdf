@@ -184,6 +184,16 @@
       <pose>1.75 0.0 0 0 0 -3.14</pose>
       <static>true</static>
     </model>
+    
+    <model name="initial_pose_stickler_for_the_rules" type="waypoint">
+      <pose>1.75 0.0 0 0 0 0</pose>
+      <static>true</static>
+    </model>
+    
+    <model name="forbidden_room_waypoint" type="waypoint">
+      <pose>2.3625 1.55 0 0 0 -0.78</pose>
+      <static>true</static>
+    </model>
 
     <model name="entrance" type="waypoint">
       <pose>0.78 0.0 0 0 0 -3.14</pose>

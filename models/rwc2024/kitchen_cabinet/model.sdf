@@ -216,6 +216,16 @@
         <pose>0.009 0.0 0.878 0 0 0</pose>
       </virtual_volume>
     </link>
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of_vv">
+        <geometry>
+          <box>
+            <size>0.242 0.704 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.009 0.0 1.206 0 0 0</pose>
+      </virtual_volume>
+    </link>
     <link name="shelf4">
       <virtual_volume name="shelf4_vv">
         <geometry>

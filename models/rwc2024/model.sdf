@@ -28,10 +28,60 @@
         <virtual_volume name="on_top_of_vv">
           <geometry>
             <box>
-              <size>2.7 3.25 0.25</size>
+              <size>2.0 1.5 0.25</size>
             </box>
           </geometry>
-          <pose>0.2 -0.25 -1.10 0 0 0</pose>
+          <pose>0.3 -0.75 -1.10 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of_nav">
+        <virtual_volume name="on_top_of_nav_vv">
+          <geometry>
+            <box>
+              <size>1.0 1.0 2.5</size>
+            </box>
+          </geometry>
+          <pose>0.75 0.75 0 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of2">
+        <virtual_volume name="on_top_of2_vv">
+          <geometry>
+            <box>
+              <size>1.25 2.0 0.25</size>
+            </box>
+          </geometry>
+          <pose>-0.6 0.3 -1.10 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of2_nav">
+        <virtual_volume name="on_top_of2_nav_vv">
+          <geometry>
+            <box>
+              <size>1.0 1.0 2.5</size>
+            </box>
+          </geometry>
+          <pose>0.75 0.75 0 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of3">
+        <virtual_volume name="on_top_of3_vv">
+          <geometry>
+            <box>
+              <size>1.5 1.8 0.25</size>
+            </box>
+          </geometry>
+          <pose>0.85 0.42 -1.10 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of3_nav">
+        <virtual_volume name="on_top_of3_nav_vv">
+          <geometry>
+            <box>
+              <size>0.75 0.75 2.5</size>
+            </box>
+          </geometry>
+          <pose>-1.0 -1.0 0 0 0 0</pose>
         </virtual_volume>
       </link>
       <pose>1.7 -0.95 1.25 0 0 0</pose>

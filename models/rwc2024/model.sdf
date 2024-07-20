@@ -381,7 +381,7 @@
     </model>
 
     <model name="forbidden_room_waypoint" type="waypoint">
-      <pose>3 2 0 0 0 1.8</pose>
+      <pose>3 2.7 0 0 0 1.8</pose>
       <static>true</static>
     </model>
 

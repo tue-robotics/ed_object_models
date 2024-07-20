@@ -52,10 +52,10 @@
         <virtual_volume name="on_top_of_vv">
           <geometry>
             <box>
-              <size>2.5 3.5 0.25</size>
+              <size>2.5 1.75 0.25</size>
             </box>
           </geometry>
-          <pose>-0.7 -0.5 -1.10 0 0 0</pose>
+          <pose>-0.7 -1.4 -1.10 0 0 0</pose>
         </virtual_volume>
       </link>
       <link name="on_top_of_nav">
@@ -68,26 +68,6 @@
           <pose>-1.25 -1.5 0 0 0 0</pose>
         </virtual_volume>
       </link>
-      <link name="on_top_of2_nav">
-        <virtual_volume name="on_top_of2_nav_vv">
-          <geometry>
-            <box>
-              <size>1 1 2.5</size>
-            </box>
-          </geometry>
-          <pose>-1.25 0.5 0 0 0 0</pose>
-        </virtual_volume>
-      </link>
-       <link name="on_top_of3_nav">
-        <virtual_volume name="on_top_of3_nav_vv">
-          <geometry>
-            <box>
-              <size>1 1 2.5</size>
-            </box>
-          </geometry>
-          <pose>0 -1.5 0 0 0 0</pose>
-        </virtual_volume>
-      </link>
       <link name="on_top_of2">
         <virtual_volume name="on_top_of2_vv">
           <geometry>
@@ -96,6 +76,36 @@
             </box>
           </geometry>
           <pose>1.25 1 -1.10 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of2_nav">
+        <virtual_volume name="on_top_of2_nav_vv">
+          <geometry>
+            <box>
+              <size>1 1 2.5</size>
+            </box>
+          </geometry>
+          <pose>1.75 1 0 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of3">
+        <virtual_volume name="on_top_of3_vv">
+          <geometry>
+            <box>
+              <size>2.5 1.75 0.25</size>
+            </box>
+          </geometry>
+          <pose>-1 0.3 -1.10 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of3_nav">
+        <virtual_volume name="on_top_of3_nav_vv">
+          <geometry>
+            <box>
+              <size>1 1 2.5</size>
+            </box>
+          </geometry>
+          <pose>-1.5 0.3 0 0 0 0</pose>
         </virtual_volume>
       </link>
       <pose>6.225 -0.5 1.25 0 0 0</pose>

@@ -31,7 +31,7 @@
               <size>2.0 1.5 0.25</size>
             </box>
           </geometry>
-          <pose>0.3 -0.75 -1.10 0 0 0</pose>
+          <pose>0.3 -0.75 -1.09 0 0 0</pose>
         </virtual_volume>
       </link>
       <link name="on_top_of_nav">
@@ -51,7 +51,7 @@
               <size>1.25 2.0 0.25</size>
             </box>
           </geometry>
-          <pose>-0.6 0.3 -1.10 0 0 0</pose>
+          <pose>-0.6 0.3 -1.09 0 0 0</pose>
         </virtual_volume>
       </link>
       <link name="on_top_of2_nav">
@@ -71,7 +71,7 @@
               <size>1.5 1.8 0.25</size>
             </box>
           </geometry>
-          <pose>0.85 0.42 -1.10 0 0 0</pose>
+          <pose>0.85 0.42 -1.09 0 0 0</pose>
         </virtual_volume>
       </link>
       <link name="on_top_of3_nav">
@@ -105,7 +105,7 @@
               <size>2.5 1.75 0.25</size>
             </box>
           </geometry>
-          <pose>-0.7 -1.4 -1.10 0 0 0</pose>
+          <pose>-0.7 -1.4 -1.09 0 0 0</pose>
         </virtual_volume>
       </link>
       <link name="on_top_of_nav">
@@ -125,7 +125,7 @@
               <size>2.5 1.25 0.25</size>
             </box>
           </geometry>
-          <pose>1.25 1 -1.10 0 0 0</pose>
+          <pose>1.25 1 -1.09 0 0 0</pose>
         </virtual_volume>
       </link>
       <link name="on_top_of2_nav">
@@ -145,7 +145,7 @@
               <size>2.5 1.75 0.25</size>
             </box>
           </geometry>
-          <pose>-1 0.3 -1.10 0 0 0</pose>
+          <pose>-1 0.3 -1.09 0 0 0</pose>
         </virtual_volume>
       </link>
       <link name="on_top_of3_nav">
@@ -179,7 +179,7 @@
               <size>2.8 3.3 0.25</size>
             </box>
           </geometry>
-          <pose>0.15 0.3 -1.10 0 0 0</pose>
+          <pose>0.15 0.3 -1.09 0 0 0</pose>
         </virtual_volume>
       </link>
       <pose>1.7 3.525 1.25 0 0 0</pose>
@@ -203,7 +203,7 @@
               <size>1.5 4.5 0.25</size>
             </box>
           </geometry>
-          <pose>1 0 -1.10 0 0 0</pose>
+          <pose>1 0 -1.09 0 0 0</pose>
         </virtual_volume>
       </link>
       <link name="on_top_of_nav">
@@ -223,7 +223,7 @@
               <size>4 1.5 0.25</size>
             </box>
           </geometry>
-          <pose>0 -1.5 -1.10 0 0 0</pose>
+          <pose>0 -1.5 -1.09 0 0 0</pose>
         </virtual_volume>
       </link>
       <link name="on_top_of2_nav">
@@ -243,7 +243,7 @@
               <size>1.5 4 0.25</size>
             </box>
           </geometry>
-          <pose>-1.5 0.25 -1.10 0 0 0</pose>
+          <pose>-1.5 0.25 -1.09 0 0 0</pose>
         </virtual_volume>
       </link>
       <link name="on_top_of3_nav">

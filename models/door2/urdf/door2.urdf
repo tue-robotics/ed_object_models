@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="door2">
+  <link
+    name="door_frame">
+    <inertial>
+      <origin
+        xyz="-3.1831E-05 0.57447 0.83303"
+        rpy="0 0 0" />
+      <mass
+        value="51.073" />
+      <inertia
+        ixx="50.017"
+        ixy="-0.00079296"
+        ixz="0.00067786"
+        iyy="38.461"
+        iyz="0.01138"
+        izz="15.722" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://door2/meshes/door_frame.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+        <texture
+          filename="package://door2/textures/door.jpg" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://door2/meshes/door_frame.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="door_plate">
+    <inertial>
+      <origin
+        xyz="-0.68687 -0.47146 0.021993"
+        rpy="0 0 0" />
+      <mass
+        value="7.0461" />
+      <inertia
+        ixx="0.52401"
+        ixy="0.0023739"
+        ixz="2.9981E-05"
+        iyy="3.6487"
+        iyz="0.00024247"
+        izz="4.1716" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://door2/meshes/door_plate.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+        <texture
+          filename="package://door2/textures/door.jpg" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://door2/meshes/door_plate.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rot_plate"
+    type="revolute">
+    <origin
+      xyz="-0.032 0.1 1.94"
+      rpy="3.1415 -1.5708 0" />
+    <parent
+      link="door_frame" />
+    <child
+      link="door_plate" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.1"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+    <dynamics
+      damping="0.1"
+      friction="1" />
+    <safety_controller
+      soft_upper="1.57"
+      soft_lower="-0.1"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="door_locker">
+    <inertial>
+      <origin
+        xyz="-0.02 -2.2204E-16 -0.043212"
+        rpy="0 0 0" />
+      <mass
+        value="0.22261" />
+      <inertia
+        ixx="0.00060353"
+        ixy="-1.3082E-19"
+        ixz="-8.4258E-19"
+        iyy="0.0006163"
+        iyz="-1.6394E-18"
+        izz="5.3768E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://door2/meshes/door_locker.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+        <texture
+          filename="package://door2/textures/handle.jpg" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://door2/meshes/door_locker.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fix_locker"
+    type="fixed">
+    <origin
+      xyz="-0.69495 -0.865 0.042"
+      rpy="3.1415 -1.5708 0" />
+    <parent
+      link="door_plate" />
+    <child
+      link="door_locker" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="door_handle">
+    <inertial>
+      <origin
+        xyz="-0.02 0.023356 -5.5511E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.046826" />
+      <inertia
+        ixx="4.8725E-05"
+        ixy="3.3286E-19"
+        ixz="4.449E-19"
+        iyy="0.0001374"
+        iyz="1.7087E-19"
+        izz="0.00018447" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://door2/meshes/door_handle.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+        <texture
+          filename="package://door2/textures/handle.jpg" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://door2/meshes/door_handle.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rot_handle"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="3.1415 0 0" />
+    <parent
+      link="door_locker" />
+    <child
+      link="door_handle" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.1"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+    <dynamics
+      damping="0.1"
+      friction="1" />
+    <safety_controller
+      soft_upper="1.57"
+      soft_lower="-0.1"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+</robot>

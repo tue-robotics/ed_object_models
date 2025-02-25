@@ -103,7 +103,7 @@
         </geometry>
       </collision>
       <collision name='door_plate_fixed_joint_lump__door_locker_collision_1'>
-        <pose>-0.69495 -0.865 0.042 3.1415 -1.5708 0</pose>
+        <pose>-0.69495 -0.665 0.042 3.1415 -1.5708 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
@@ -128,7 +128,7 @@
         </material>
       </visual>
       <visual name='door_plate_fixed_joint_lump__door_locker_visual_1'>
-        <pose>-0.69495 -0.865 0.042 3.1415 -1.5708 0</pose>
+        <pose>-0.69495 -0.665 0.042 3.1415 -1.5708 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
@@ -145,7 +145,7 @@
       </visual>
     </link>
     <joint name='rot_handle' type='revolute'>
-      <pose relative_to='door_plate'>-0.69495 -0.865 0.042 3.14141 -1.57079 -3.14159</pose>
+      <pose relative_to='door_plate'>-0.69495 -0.665 0.042 3.14141 -1.57079 -3.14159</pose>
       <parent>door_plate</parent>
       <child>door_handle</child>
       <axis>
@@ -171,7 +171,7 @@
             <size>0.2 0.12 0.12</size>
           </box>
         </geometry>
-        <pose>0 0.965 1.26 0 0 0</pose>
+        <pose>0 0.965 1.0 0 0 0</pose>
       </virtual_volume>
       <pose relative_to='rot_handle'>0 0 0 0 -0 0</pose>
       <inertial>

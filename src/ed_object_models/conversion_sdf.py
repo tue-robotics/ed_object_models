@@ -12,7 +12,6 @@ import xml.etree.ElementTree as ET
 from subprocess import check_call
 from collections import OrderedDict
 
-
 ROUND_LEVEL = 4  # Level of rounding
 LAST_MODEL_FILE = ""
 

@@ -27,14 +27,12 @@ with open(room_filename) as f:
 for room, info in data.iteritems():
     center = info["center"]
 
-    print(
-        f"""- type: "room"
+    print(f"""- type: "room"
   id: "{room}"
   pose: { x: {center[0]:.2f}, y: {center[1]:.2f}, z: 0 }
   areas:
   - name: in
-    shape:"""
-    )
+    shape:""")
 
     if "min1" in info:
         n = 1
@@ -48,11 +46,9 @@ for room, info in data.iteritems():
             rel_min = (min[0] - center[0], min[1] - center[1])
             rel_max = (max[0] - center[0], max[1] - center[1])
 
-            print(
-                """    - box:
+            print("""    - box:
         min: { x: {rel_min[0]:.2f}, y: {rel_min[1]:.2f}, z: 0 }
-        max: { x: {rel_max[0]:.2f}, y: {rel_max[1]:.2f}, z: 2.0 }"""
-            )
+        max: { x: {rel_max[0]:.2f}, y: {rel_max[1]:.2f}, z: 2.0 }""")
 
             n += 1
     else:
@@ -66,10 +62,8 @@ for room, info in data.iteritems():
             n += 1
 
         if points:
-            print(
-                """    - polygon:
-        points:"""
-            )
+            print("""    - polygon:
+        points:""")
 
             for p in points:
                 print(f"        - { x: {p[0]:.2f}, y: {p[1]:.2f} }")

@@ -1,0 +1,451 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <world name="rwc2024">
+    <include>
+      <name>walls</name>
+      <uri>model://rwc2024/walls</uri>
+      <pose>0 0 0 0 0 -1.57079632679</pose>
+    </include>
+    <include>
+      <pose>0 0 0 0 0 0</pose>
+      <name>floor</name>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- rooms -->
+    <model name="hallway" type="room">
+      <link name="in">
+        <virtual_volume name="in_vv">
+          <geometry>
+            <box>
+              <size>3.4 4 2.5</size>
+            </box>
+          </geometry>
+          <pose>0.0 0.0 0.0 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of">
+        <virtual_volume name="on_top_of_vv">
+          <geometry>
+            <box>
+              <size>2.0 1.5 0.25</size>
+            </box>
+          </geometry>
+          <pose>0.3 -0.75 -1.09 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of_nav">
+        <virtual_volume name="on_top_of_nav_vv">
+          <geometry>
+            <box>
+              <size>1.0 1.0 2.5</size>
+            </box>
+          </geometry>
+          <pose>0.75 0.75 0 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of2">
+        <virtual_volume name="on_top_of2_vv">
+          <geometry>
+            <box>
+              <size>1.15 2.0 0.25</size>
+            </box>
+          </geometry>
+          <pose>-0.3 0.3 -1.09 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of2_nav">
+        <virtual_volume name="on_top_of2_nav_vv">
+          <geometry>
+            <box>
+              <size>1.0 1.0 2.5</size>
+            </box>
+          </geometry>
+          <pose>0.75 0.75 0 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of3">
+        <virtual_volume name="on_top_of3_vv">
+          <geometry>
+            <box>
+              <size>1.5 1.8 0.25</size>
+            </box>
+          </geometry>
+          <pose>0.85 0.42 -1.09 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of3_nav">
+        <virtual_volume name="on_top_of3_nav_vv">
+          <geometry>
+            <box>
+              <size>0.75 0.75 2.5</size>
+            </box>
+          </geometry>
+          <pose>-1.0 -1.0 0 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <pose>1.7 -0.95 1.25 0 0 0</pose>
+      <static>true</static>
+    </model>
+    <model name="living_room" type="room">
+      <link name="in">
+        <virtual_volume name="in_vv">
+          <geometry>
+            <box>
+              <size>5.45 4 2.5</size>
+            </box>
+          </geometry>
+          <pose>0.0 -0.45 0.0 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of">
+        <virtual_volume name="on_top_of_vv">
+          <geometry>
+            <box>
+              <size>2.5 1.75 0.25</size>
+            </box>
+          </geometry>
+          <pose>-0.7 -1.4 -1.09 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of_nav">
+        <virtual_volume name="on_top_of_nav_vv">
+          <geometry>
+            <box>
+              <size>1 1 2.5</size>
+            </box>
+          </geometry>
+          <pose>-1.25 -1.5 0 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of2">
+        <virtual_volume name="on_top_of2_vv">
+          <geometry>
+            <box>
+              <size>2.5 1.25 0.25</size>
+            </box>
+          </geometry>
+          <pose>1.25 1 -1.09 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of2_nav">
+        <virtual_volume name="on_top_of2_nav_vv">
+          <geometry>
+            <box>
+              <size>1 1 2.5</size>
+            </box>
+          </geometry>
+          <pose>1.75 1 0 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of3">
+        <virtual_volume name="on_top_of3_vv">
+          <geometry>
+            <box>
+              <size>2.5 1.75 0.25</size>
+            </box>
+          </geometry>
+          <pose>-1 0.3 -1.09 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of3_nav">
+        <virtual_volume name="on_top_of3_nav_vv">
+          <geometry>
+            <box>
+              <size>1 1 2.5</size>
+            </box>
+          </geometry>
+          <pose>-1.5 0.3 0 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <pose>6.225 -0.5 1.25 0 0 0</pose>
+      <static>true</static>
+    </model>
+    <model name="office" type="room">
+      <link name="in">
+        <virtual_volume name="in_vv">
+          <geometry>
+            <box>
+              <size>3.4 4.85 2.5</size>
+            </box>
+          </geometry>
+          <pose>0.0 0.0 0.0 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of">
+        <virtual_volume name="on_top_of_vv">
+          <geometry>
+            <box>
+              <size>2.8 3.3 0.25</size>
+            </box>
+          </geometry>
+          <pose>0.15 0.3 -1.09 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <pose>1.7 3.525 1.25 0 0 0</pose>
+      <static>true</static>
+    </model>
+    <model name="kitchen" type="room">
+      <link name="in">
+        <virtual_volume name="in_vv">
+          <geometry>
+            <box>
+              <size>5.45 4.85 2.5</size>
+            </box>
+          </geometry>
+          <pose>0.0 0.0 0.0 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of">
+        <virtual_volume name="on_top_of_vv">
+          <geometry>
+            <box>
+              <size>1.5 4.5 0.25</size>
+            </box>
+          </geometry>
+          <pose>1 0 -1.09 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of_nav">
+        <virtual_volume name="on_top_of_nav_vv">
+          <geometry>
+            <box>
+              <size>1 1 2.5</size>
+            </box>
+          </geometry>
+          <pose>1 -1.5 0 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of2">
+        <virtual_volume name="on_top_of2_vv">
+          <geometry>
+            <box>
+              <size>4 1.5 0.25</size>
+            </box>
+          </geometry>
+          <pose>0 -1.5 -1.09 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of2_nav">
+        <virtual_volume name="on_top_of_nav2_vv">
+          <geometry>
+            <box>
+              <size>1 1 2.5</size>
+            </box>
+          </geometry>
+          <pose>1 -1.5 0 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of3">
+        <virtual_volume name="on_top_of3_vv">
+          <geometry>
+            <box>
+              <size>1.5 4 0.25</size>
+            </box>
+          </geometry>
+          <pose>-1.5 0.25 -1.09 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <link name="on_top_of3_nav">
+        <virtual_volume name="on_top_of3_nav_vv">
+          <geometry>
+            <box>
+              <size>1 1 2.5</size>
+            </box>
+          </geometry>
+          <pose>-1.5 -1.5 0 0 0 0</pose>
+        </virtual_volume>
+      </link>
+      <pose>6.225 3.525 1.25 0 0 0</pose>
+      <static>true</static>
+    </model>
+
+
+    <!-- office -->
+    <include>
+      <name>shelf</name>
+      <uri>model://rwc2024/shelf</uri>
+      <pose>0.135 4.10 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>desk</name>
+      <uri>model://rwc2024/desk</uri>
+      <pose>1.3625 1.55 0 0 0 1.57079632679</pose>
+    </include>
+
+    <!-- hallway -->
+    <include>
+      <name>coat_hanger</name>
+      <uri>model://rwc2024/coat_hanger</uri>
+      <pose>1.85 0.8 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>hallway_cabinet</name>
+      <uri>model://rwc2024/hallway_cabinet</uri>
+      <pose>0.2075 -1.6 0 0 0 0</pose>
+    </include>
+
+    <!-- living room -->
+    <include>
+      <name>lamp</name>
+      <uri>model://rwc2024/lamp</uri>
+      <pose>8.545 -2.5425 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>coffee_table</name>
+      <uri>model://rwc2024/coffee_table</uri>
+      <pose>7.335 -1.0725 0 0 0 -0.523598775</pose>
+    </include>
+
+    <include>
+      <name>couch</name>
+      <uri>model://rwc2024/couch</uri>
+      <pose>8.535 -1.0925 0 0 0 -3.14</pose>
+    </include>
+
+    <include>
+      <name>tv_table</name>
+      <uri>model://rwc2024/tv_table</uri>
+      <pose>3.813 -1.623 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>lounge_chair</name>
+      <uri>model://rwc2024/lounge_chair</uri>
+      <pose>7.335 -2.25 0 0 0 2.355</pose>
+    </include>
+
+    <!-- kitchen -->
+    <include>
+      <name>trashcan</name>
+      <uri>model://rwc2024/trashcan</uri>
+      <pose>3.75 1.3775 0 0 0 0.785398163</pose>
+    </include>
+
+    <include>
+      <name>dinner_table</name>
+      <uri>model://rwc2024/dinner_table</uri>
+      <pose>5.95 3.94 0 0 0 1.57079632679</pose>
+    </include>
+
+    <include>
+      <name>kitchen_counter</name>
+      <uri>model://rwc2024/kitchen_counter</uri>
+      <pose>8.496 5.0525 0 0 0 3.14159265359</pose>
+    </include>
+
+    <include>
+      <name>dishwasher</name>
+      <uri>model://rwc2024/dishwasher</uri>
+      <pose>8.5285 3.8565 0 0 0 3.14159265359</pose>
+    </include>
+
+    <include>
+      <name>kitchen_cabinet</name>
+      <uri>model://rwc2024/kitchen_cabinet</uri>
+      <pose>3.65 5.07 0 0 0 0</pose>
+    </include>
+
+    <!-- Light for Gazebo -->
+    <light type="directional" name="sun">
+        <cast_shadows>true</cast_shadows>
+        <pose>0 0 10 0 0 0</pose>
+        <diffuse>0.8 0.8 0.8 1</diffuse>
+        <specular>0.2 0.2 0.2 1</specular>
+        <direction>0.5 0.1 -0.9</direction>
+        <attenuation>
+            <range>1000</range>
+            <constant>0.9</constant>
+            <linear>0.01</linear>
+            <quadratic>0.001</quadratic>
+        </attenuation>
+    </light>
+
+    <!-- waypoints -->
+    <model name="initial_pose" type="waypoint">
+      <pose>0.0 0.0 0 0 0 0</pose>
+      <static>true</static>
+    </model>
+
+    <model name="initial_pose_receptionist" type="waypoint">
+      <pose>1.75 0.0 0 0 0 -3.14</pose>
+      <static>true</static>
+    </model>
+
+    <model name="initial_pose_stickler_for_the_rules" type="waypoint">
+      <pose>1.75 0.0 0 0 0 0</pose>
+      <static>true</static>
+    </model>
+
+    <model name="forbidden_room_waypoint" type="waypoint">
+      <pose>3 2.7 0 0 0 1.8</pose>
+      <static>true</static>
+    </model>
+
+    <model name="entrance" type="waypoint">
+      <pose>0.78 0.0 0 0 0 -3.14</pose>
+      <static>true</static>
+    </model>
+
+    <model name="receptionist_living_room" type="waypoint">
+      <pose>6 -1 0 0 0 0</pose>
+      <static>true</static>
+    </model>
+
+    <model name="instruction_pose_gpsr" type="waypoint">
+        <pose>4.25 0.5 0 0 0 -0.785</pose>
+        <static>true</static>
+    </model>
+
+    <model name="rips_point_1" type="waypoint">
+      <pose>4.25 0.25 0 0 0 0.78539816339</pose>
+      <static>true</static>
+    </model>
+    <model name="rips_point_2" type="waypoint">
+      <pose>4.5 0.0 0 0 0 0.78539816339</pose>
+      <static>true</static>
+    </model>
+    <model name="rips_point_3" type="waypoint">
+      <pose>4.0 -0.5 0 0 0 0.78539816339</pose>
+      <static>true</static>
+    </model>
+    <model name="exit_1_rips" type="waypoint">
+      <pose>3 6.75 0 0 0 1.57079632679</pose>
+      <static>true</static>
+    </model>
+    <model name="exit_2_rips" type="waypoint">
+      <pose>3 6.0 0 0 0 1.57079632679</pose>
+      <static>true</static>
+    </model>
+    <model name="exit_3_rips" type="waypoint">
+      <pose>3 5.25 0 0 0 1.57079632679</pose>
+      <static>true</static>
+    </model>
+    <model name="initial_pose_serve_breakfast" type="waypoint">
+      <pose>-0.75 0.0 0 0 0 0</pose>
+      <static>true</static>
+    </model>
+
+    <model name="test_pose_serve_breakfast" type="waypoint">
+      <pose>5 5.07 0 0 0 0</pose>
+      <static>true</static>
+    </model>
+
+    <physics type="ode">
+      <real_time_update_rate>333.0</real_time_update_rate>
+      <max_step_size>0.003</max_step_size>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>100</iters>
+        </solver>
+        <constraints>
+          <cfm>0.0001</cfm>
+        </constraints>
+      </ode>
+    </physics>
+  </world>
+</sdf>

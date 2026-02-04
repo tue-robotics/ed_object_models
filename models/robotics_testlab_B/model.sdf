@@ -102,7 +102,7 @@
     <include>
       <pose>0 0 0 0 0 0</pose>
       <name>floor</name>
-      <uri>model://floor</uri>
+      <uri>model://ground_plane</uri>
     </include>
     <include>
       <pose>4.05 2 0 0 0 0</pose>

@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="rwc2024/dishwasher">
+    <static>true</static>
+    <link name="1_link">
+      <collision name="1_col">
+        <geometry>
+          <box>
+            <size>0.593 0.597 0.843</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="1_vis">
+        <geometry>
+          <box>
+            <size>0.593 0.597 0.843</size>
+          </box>
+        </geometry>
+      </visual>
+      <pose>0.0 0.0 0.4215 0 0 0</pose>
+    </link>
+    <link name="on_top_of">
+      <virtual_volume name="on_top_of_vv">
+        <geometry>
+          <box>
+            <size>0.573 0.537 0.25</size>
+          </box>
+        </geometry>
+        <pose>0.0 0.0 0.988 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="in_front_of">
+      <virtual_volume name="in_front_of_vv">
+        <geometry>
+          <box>
+            <size>0.2 0.397 0.01</size>
+          </box>
+        </geometry>
+        <pose>0.7965 0.0 0.005 0 0 0</pose>
+      </virtual_volume>
+    </link>
+    <link name="in_front_of_ctt">
+      <virtual_volume name="in_front_of_vv">
+        <geometry>
+          <box>
+            <size>0.2 0.397 0.01</size>
+          </box>
+        </geometry>
+        <pose>1.69 0.0 0.005 0 0 0</pose>
+      </virtual_volume>
+    </link>
+  </model>
+</sdf>
+
+

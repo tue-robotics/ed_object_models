@@ -17,7 +17,7 @@
     <include>
       <pose>0 0 0.74 0 0 0</pose>
       <name>infinite_table</name>
-      <uri>model://floor</uri>
+      <uri>model://ground_plane</uri>
     </include>
     <physics type="ode">
       <real_time_update_rate>333.0</real_time_update_rate>

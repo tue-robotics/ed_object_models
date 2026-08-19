@@ -17,11 +17,11 @@
   <exec_depend>ed</exec_depend>
   <exec_depend>ed_interfaces</exec_depend>
   <exec_depend>gazebo_models</exec_depend>
-  <exec_depend>gazebo_msgs</exec_depend>
   <exec_depend>geometry_msgs</exec_depend>
   <exec_depend>python3-yaml</exec_depend>
   <exec_depend>python_orocos_kdl_vendor</exec_depend>
   <exec_depend>rclpy</exec_depend>
+  <exec_depend>ros_gz_interfaces</exec_depend>
   <exec_depend>tf_transformations</exec_depend>
 
   <test_depend>ament_cmake_lint_cmake</test_depend>

@@ -21,8 +21,12 @@ install(DIRECTORY models DESTINATION share/${PROJECT_NAME})
 # Sets ED_MODEL_PATH so 'ed' can find the models installed by this package.
 set(AMENT_CMAKE_ENVIRONMENT_HOOKS_DESC_ed_object_models_model_path
   "prepend-non-duplicate-if-exists;ED_MODEL_PATH;share/${PROJECT_NAME}/models")
+# Sets GZ_SIM_RESOURCE_PATH so Gazebo can find the models installed by this package.
+set(AMENT_CMAKE_ENVIRONMENT_HOOKS_DESC_ed_object_models_gz_resource_path
+  "prepend-non-duplicate-if-exists;GZ_SIM_RESOURCE_PATH;share/${PROJECT_NAME}/models")
 ament_environment_hooks(
   "${CMAKE_CURRENT_SOURCE_DIR}/env-hooks/ed_object_models_model_path.sh.in"
+  "${CMAKE_CURRENT_SOURCE_DIR}/env-hooks/ed_object_models_gz_resource_path.sh.in"
 )
 
 if(BUILD_TESTING)

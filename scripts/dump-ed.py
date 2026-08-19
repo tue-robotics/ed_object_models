@@ -1,9 +1,11 @@
-#! /usr/bin/env python
+#!/usr/bin/env python3
 
-from ed_msgs.srv import SimpleQuery
-import rospy
-import PyKDL as kdl
 import sys
+
+from ed_interfaces.srv import SimpleQuery
+import PyKDL as kdl
+import rclpy
+from rclpy.node import Node
 
 if __name__ == "__main__":
     if len(sys.argv) <= 1:
@@ -12,33 +14,42 @@ if __name__ == "__main__":
 
     robot_name = sys.argv[1]
 
-    rospy.init_node("dump_ed")
+    rclpy.init(args=sys.argv)
+    node = Node("dump_ed")
 
-    rospy.wait_for_service(f"/{robot_name}/ed/simple_query")
-    try:
-        ed_query = rospy.ServiceProxy(f"/{robot_name}/ed/simple_query", SimpleQuery)
-        res = ed_query()
+    client = node.create_client(SimpleQuery, f"/{robot_name}/ed/simple_query")
+    if not client.wait_for_service(timeout_sec=30):
+        print(f"Service call failed: /{robot_name}/ed/simple_query not available")
+        rclpy.shutdown()
+        sys.exit(1)
 
-        for e in res.entities:
-            if not e.has_shape:
-                continue
+    future = client.call_async(SimpleQuery.Request())
+    rclpy.spin_until_future_complete(node, future)
+    res = future.result()
+    if res is None:
+        print(f"Service call failed: {future.exception()}")
+        rclpy.shutdown()
+        sys.exit(1)
 
-            if e.id.startswith(robot_name):
-                continue
+    for e in res.entities:
+        if not e.has_shape:
+            continue
 
-            q_msg = e.pose.orientation
-            q = kdl.Rotation.Quaternion(q_msg.x, q_msg.y, q_msg.z, q_msg.w)
+        if e.id.startswith(robot_name):
+            continue
 
-            yaw = q.GetRPY()[2]  # 0:.2f
+        q_msg = e.pose.orientation
+        q = kdl.Rotation.Quaternion(q_msg.x, q_msg.y, q_msg.z, q_msg.w)
 
-            print(f"- id: {e.id}")
-            print(f"  type: {e.type}")
+        yaw = q.GetRPY()[2]  # 0:.2f
 
-            pose = e.pose.position
-            if abs(yaw) > 0.001:
-                print(f"  pose: {{ x: {pose.x}, y: {pose.y}, z: {pose.z}, Z: {yaw:.3f} }}")
-            else:
-                print(f"  pose: {{ x: {pose.x}, y: {pose.y}, z: {pose.z} }}")
+        print(f"- id: {e.id}")
+        print(f"  type: {e.type}")
 
-    except rospy.ServiceException as e:
-        print(f"Service call failed: e")
+        pose = e.pose.position
+        if abs(yaw) > 0.001:
+            print(f"  pose: {{ x: {pose.x}, y: {pose.y}, z: {pose.z}, Z: {yaw:.3f} }}")
+        else:
+            print(f"  pose: {{ x: {pose.x}, y: {pose.y}, z: {pose.z} }}")
+
+    rclpy.shutdown()

@@ -140,7 +140,7 @@ def create_heightmap(model_name: str, image_path: str, resolution: float, height
     mesh_path = f"{path.splitext(image_path)[0]}.stl"
     try:
         check_call(
-            f"rosrun ed ed_heightmap_to_mesh {image_path} {mesh_path} {resolution} {height} {x} {y}",
+            f"ros2 run ed ed_heightmap_to_mesh {image_path} {mesh_path} {resolution} {height} {x} {y}",
             executable="/bin/bash",
             shell=True,
         )

@@ -1,0 +1,3 @@
+# generated from ed_object_models/env-hooks/ed_object_models_model_path.sh.in
+
+ament_prepend_unique_value ED_MODEL_PATH "$AMENT_CURRENT_PREFIX/share/@PROJECT_NAME@/models"

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from reportlab.pdfgen import canvas
 from reportlab.graphics.shapes import Drawing, Rect
@@ -6,11 +6,9 @@ from reportlab.graphics.barcode.qr import QrCodeWidget
 from reportlab.graphics import renderPDF
 
 import os
-import rospkg
+from ament_index_python.packages import get_package_share_directory
 
-rospack = rospkg.RosPack()
-
-model_path = os.path.join(rospack.get_path("ed_object_models"), "models")
+model_path = os.path.join(get_package_share_directory("ed_object_models"), "models")
 
 # Create page
 p = canvas.Canvas(os.path.join(model_path, "qr_codes.pdf"))

@@ -1,20 +1,40 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.8)
 project(ed_object_models)
 
-## Find catkin macros and libraries
-find_package(catkin REQUIRED COMPONENTS
+find_package(ament_cmake REQUIRED)
+find_package(ament_cmake_python REQUIRED)
+
+ament_python_install_package(${PROJECT_NAME})
+
+install(
+  PROGRAMS
+    scripts/convert_yaml_to_sdf
+    scripts/create-model
+    scripts/dump-ed.py
+    scripts/generate_qr_codes.py
+    scripts/spawn_sdf_in_gazebo.py
+  DESTINATION lib/${PROJECT_NAME}
 )
 
-catkin_add_env_hooks(99.ed_object_models SHELLS bash DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/env-hooks)
+install(DIRECTORY models DESTINATION share/${PROJECT_NAME})
 
+# Sets ED_MODEL_PATH so 'ed' can find the models installed by this package.
+set(AMENT_CMAKE_ENVIRONMENT_HOOKS_DESC_ed_object_models_model_path
+  "prepend-non-duplicate-if-exists;ED_MODEL_PATH;share/${PROJECT_NAME}/models")
+# Sets GZ_SIM_RESOURCE_PATH so Gazebo can find the models installed by this package.
+set(AMENT_CMAKE_ENVIRONMENT_HOOKS_DESC_ed_object_models_gz_resource_path
+  "prepend-non-duplicate-if-exists;GZ_SIM_RESOURCE_PATH;share/${PROJECT_NAME}/models")
+ament_environment_hooks(
+  "${CMAKE_CURRENT_SOURCE_DIR}/env-hooks/ed_object_models_model_path.sh.in"
+  "${CMAKE_CURRENT_SOURCE_DIR}/env-hooks/ed_object_models_gz_resource_path.sh.in"
+)
 
-###################################
-## catkin specific configuration ##
-###################################
-catkin_python_setup()
+if(BUILD_TESTING)
+  find_package(ament_lint_auto REQUIRED)
+  ament_lint_auto_find_test_dependencies()
 
-catkin_package()
-
-if (CATKIN_ENABLE_TESTING)
-  catkin_add_nosetests(test)
+  find_package(ament_cmake_pytest REQUIRED)
+  ament_add_pytest_test(test_import test/test_import.py)
 endif()
+
+ament_package()

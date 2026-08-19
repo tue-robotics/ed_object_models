@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#!/usr/bin/env python3
 from typing import List, Union
 
 from itertools import chain
@@ -6,10 +6,10 @@ import sys
 import yaml
 import os
 
-import rospkg
+from ament_index_python.packages import get_package_share_directory
 from ed_object_models.conversion_sdf import convert_model_data as convert_sdf
 
-ROOT = os.path.join(rospkg.RosPack().get_path("ed_object_models"), "models")
+ROOT = os.path.join(get_package_share_directory("ed_object_models"), "models")
 DEFAULT_BOTTOM_CLEARANCE = 0.02  # The 'onTopOff' area will start DEFAULT_BOTTOM_CLEARANCE above an object
 DEFAULT_SIDE_CLEARANCE = 0.03  # The 'onTopOff' area will be DEFAULT_SIDE_CLEARANCE smaller than an object in side dir
 DEFAULT_FRONT_CLEARANCE = 0.01  # The 'onTopOff' area will be DEFAULT_SIDE_CLEARANCE smaller than an object in front

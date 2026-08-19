@@ -1,11 +1,10 @@
 # ED Object Models
 
 [![CI](https://github.com/tue-robotics/ed_object_models/actions/workflows/main.yml/badge.svg)](https://github.com/tue-robotics/ed_object_models/actions/workflows/main.yml)
-[![Lint](https://github.com/tue-robotics/ed_object_models/actions/workflows/lint.yml/badge.svg)](https://github.com/tue-robotics/ed_object_models/actions/workflows/lint.yml)
 
 Models of entities in our world model [ED](https://github.com/tue-robotics/ed/)
 
-Models can be created with the `create-model.py` script. Only Tables, cabinets and boxes are supported by the script at the moment.
+Models can be created with the `create-model` script (`ros2 run ed_object_models create-model`). Only Tables, cabinets and boxes are supported by the script at the moment.
 The object comes with multiple areas:
 
 - in_front_of

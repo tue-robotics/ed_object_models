@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <!--
+  Example/test model. It is also the template that ed_object_models' yaml to sdf conversion
+  (conversion_sdf.py) copies 'model.config' from, so keep a 'model*.sdf' file present here.
+
+  The sub-model it includes demonstrates the <heightmap> geometry; see heightmap_walls/model.sdf.
+  -->
+  <world name="test_sdf">
+    <include>
+      <pose>0 0 0 0 0 0</pose>
+      <name>heightmap_walls</name>
+      <uri>model://test_sdf/heightmap_walls</uri>
+    </include>
+  </world>
+</sdf>

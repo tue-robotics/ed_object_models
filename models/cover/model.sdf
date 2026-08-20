@@ -37,7 +37,7 @@
     <include>
       <pose>1.6725 0.915 0.5875 0.0 0.0 1.57</pose>
       <name>expedit_door_right</name>
-      <uri>model://expedit.door</uri>
+      <uri>model://expedit/door</uri>
     </include>
     <include>
       <pose>2.0 -1.3 0.0 0.0 0.0 1.5708</pose>
